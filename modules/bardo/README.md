@@ -1,12 +1,16 @@
-# Módulo Bardo — MVP (tocar um link do YouTube)
+# Módulo Bardo — link direto, dataset com tags, fila e busca booleana
 
-**Status:** ✅ Implementado (MVP mínimo) · não testado em produção (só localmente, sem rede pra YouTube)
+**Status:** ✅ Playback por link testado em produção. Busca por tags + fila
+implementadas e com testes automatizados; ainda não testadas em produção de
+verdade (rede bloqueada no ambiente onde foram escritas).
 
 ## O que faz, hoje
 
 A Natty reconhece um pedido de música em linguagem natural — igual ao
 módulo Dice reconhece "1d20 com vantagem" em vez de exigir um comando
-formal — e toca o link do YouTube no canal de voz de quem pediu.
+formal — de dois jeitos:
+
+**1. Link direto do YouTube** — toca na hora, interrompe o que tava tocando:
 
 ```
 @Natty toca https://youtube.com/watch?v=...
@@ -15,10 +19,37 @@ formal — e toca o link do YouTube no canal de voz de quem pediu.
 @Natty play https://youtube.com/watch?v=...
 ```
 
-Não tem busca por tags, não tem dataset, não tem fila, não tem `/comando`.
-É só: reconhece o pedido, pega o link, toca. Tudo o resto (dataset de
-tags, playlist dinâmica, fontes além de YouTube) é trabalho futuro descrito
-em outros documentos do projeto.
+**2. Busca por tema/origem em linguagem natural** — procura no dataset
+local (`dataset/musicas.json`, ~490 faixas taggeadas hoje) e enfileira o
+que encontrar:
+
+```
+@Natty toca triste e bloodborne
+@Natty toca boss fight e elden ring ou hollow knight
+@Natty toca calmo e fire emblem sem batalha
+```
+
+Gramática da busca: `e` = E, `ou` = OU (separa grupos alternativos),
+`sem`/`não` antes de um termo = exclui esse termo. Cada termo é comparado
+(sem acento, case-insensitive, por substring) contra nome da faixa, nome
+da origem, tipo da origem (jogo/visual novel) e temas da faixa. Se a busca
+achar mais de 15 resultados, sorteia 15 pra não lotar a fila inteira com
+uma franquia só (avisa quantas achou vs. quantas entrou).
+
+## Fila
+
+Uma fila por servidor (`guild_id`), em memória (zera se o bot reiniciar —
+aceitável pra uma mesa de D&D, não é requisito de persistência). Quando
+uma faixa termina, a próxima da fila toca sozinha (via callback `after=`
+do `voice_client.play()`, que discord.py chama numa thread separada — por
+isso o uso de `asyncio.run_coroutine_threadsafe` em vez de `await` direto
+em `cog.py`). Um pedido por link direto interrompe e limpa a fila (é
+pedido explícito do usuário); um pedido por busca só enfileira.
+
+Não tem ainda: comando pra pular faixa, ver o que tá na fila, ou limpar
+manualmente — as funções (`service.proxima_da_fila`, `service.ver_fila`,
+`service.limpar_fila`) já existem, só falta o gatilho de linguagem natural
+no `cog.py` chamando elas.
 
 ## Por que não usa Lavalink
 
@@ -29,7 +60,7 @@ central é que ambos trocam "sem processo extra" por "um processo extra"
 (JVM ou Electron) — e o Natty hoje é um monólito modular Python puro (ver
 `CLAUDE.md` da raiz).
 
-Este MVP usa a abordagem mais simples possível: `discord.py`'s
+Este módulo usa a abordagem mais simples possível: `discord.py`'s
 `voice_client` nativo + `yt-dlp` (resolve o link em URL de áudio direto) +
 FFmpeg (decodifica o stream pro formato que o Discord espera). Zero
 processo extra, zero JVM.
@@ -43,9 +74,12 @@ demais no processo principal — sem precisar reescrever `cog.py`.
 ```
 modules/bardo/
 ├── __init__.py
-├── youtube.py     # acesso cru ao YouTube via yt-dlp (equivalente a sheets.py no core)
-├── service.py      # lógica pura: reconhece gatilho, extrai link, orquestra resolução
-├── cog.py           # interface Discord: on_message, conecta em voz, toca
+├── youtube.py         # acesso cru ao YouTube via yt-dlp (equivalente a sheets.py no core)
+├── service.py          # lógica pura: gatilho, link, busca booleana, fila
+├── cog.py                # interface Discord: on_message, conecta em voz, toca, avança fila
+├── test_service.py       # testes automatizados (unittest, nos moldes do módulo Dice)
+├── dataset/
+│   └── musicas.json       # ~490 faixas taggeadas (origem + temas), curadoria em andamento
 └── README.md
 ```
 
@@ -64,32 +98,55 @@ modules/bardo/
 
 ```
 Usuário: "@Natty toca https://youtube.com/watch?v=xxx"
+     ou: "@Natty toca triste e bloodborne"
         ↓
 cog.py (on_message)
-  ├─ eh_pedido_de_musica(texto)?           → service.py (regex: toca/toque/play/bota)
-  ├─ extrair_link_youtube(texto)           → service.py (regex de URL)
-  ├─ usuário está em canal de voz?         → discord.py (message.author.voice)
-  ├─ resolver_musica(link)                 → service.py → youtube.py → yt-dlp
-  ├─ conecta/move pro canal de voz         → discord.py (voice_client)
-  └─ toca via FFmpegPCMAudio               → discord.py + FFmpeg
+  ├─ eh_pedido_de_musica(texto)?             → service.py (regex: toca/toque/play/bota)
+  ├─ tem link do YouTube?
+  │    ├─ sim → resolver_musica(link)         → service.py → youtube.py → yt-dlp
+  │    │        limpa fila, toca na hora
+  │    └─ não → extrair_texto_de_busca(texto) → service.py
+  │             buscar_por_tags(texto)         → service.py (dataset/musicas.json)
+  │             adicionar_varias_na_fila(...)  → service.py
+  ├─ conecta/move pro canal de voz            → discord.py (voice_client)
+  ├─ toca via FFmpegPCMAudio                  → discord.py + FFmpeg
+  └─ ao terminar, toca a próxima da fila       → cog.py (after=) + service.py (proxima_da_fila)
 ```
+
+## Conhecido: limitações do dataset de tags
+
+A busca é por substring exato, não por sinônimo — "triste" não bate com
+"trágico"/"melancólico" mesmo sendo parecido, e um tema em português não
+bate com uma palavra em inglês que só aparece no nome da faixa (ex:
+"sem chuva" não filtra faixas cujo nome tem "(Rain)"). Não é bug do motor
+de busca — é o dataset ainda precisando de curadoria/padronização de
+vocabulário, o que é trabalho contínuo, não travado por código.
 
 ## Testado
 
-- ✅ Sintaxe (`py_compile`) de todos os arquivos
-- ✅ Reconhecimento de gatilho + extração de link (testado localmente com
-  4 casos: PT com gatilho, EN com gatilho, sem gatilho, link com querystring
-  de playlist)
-- ⚠️ **Não testado**: resolução real via yt-dlp e playback no Discord. O
-  ambiente onde este código foi escrito não tem acesso de rede a
-  youtube.com (só GitHub e registries de pacote). Precisa ser validado
-  rodando o bot de verdade.
+- ✅ Playback por link direto, em produção real (canal de voz, música tocando de fato).
+- ✅ Sintaxe (`py_compile`) de todos os arquivos.
+- ✅ Reconhecimento de gatilho + extração de link.
+- ✅ Busca booleana (AND/OR/NOT, filler words, acentuação) — 18 testes
+  automatizados em `test_service.py`, todos passando
+  (`python -m unittest discover -s modules/bardo -t .`).
+- ✅ Fila (FIFO, múltiplos servidores isolados, fila vazia) — cobertos nos
+  mesmos testes.
+- ⚠️ **Não testado em produção ainda**: busca por tags + fila + avanço
+  automático via `after=`. A lógica pura (service.py) está testada; o que
+  falta validar é o comportamento real dentro do Discord (múltiplas
+  faixas em sequência, thread-safety do callback).
 
-## O que falta pro próximo passo (fora do escopo deste MVP)
+## O que falta pro próximo passo (fora do escopo atual)
 
-- Dataset de tags + busca booleana (`música triste e deserto`)
-- Fila / próxima música
-- Fontes além de YouTube (Freesound, local files)
-- Testes automatizados (`test_service.py`, nos moldes do módulo Dice)
+- Comando de linguagem natural pra pular faixa / ver fila / limpar fila
+  (as funções de service.py já existem, falta o gatilho em cog.py)
+- Sinônimos/normalização de tema pra busca não depender de match exato
+- Completar Dark Souls e Hollow Knight no dataset (hoje só têm 3 e 4
+  faixas manuais, o resto das franquias tem trilha completa)
+- Fontes além de YouTube (Freesound, arquivos locais)
+- Sonoplastia / múltiplas camadas de áudio simultâneas (música + ambiente
+  + efeito pontual) — precisa de um mixer de PCM próprio, discutido mas
+  não iniciado (Discord só aceita um stream de áudio por conexão de voz)
 - Tratamento de erro mais fino (vídeo privado, idade-restrito, etc. — hoje
   cai tudo no mesmo `except Exception`)
