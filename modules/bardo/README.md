@@ -18,6 +18,7 @@ que o Discord oferece com o mesmo nome).
 |------|----------|---------------|
 | Tocar (ou pôr na fila) | `natty toca <link>`, `@Natty bota <link>`, `natty adiciona <link>` | `/tocar pedido:<link>` |
 | Buscar no dataset | `natty toca triste e fire emblem`, `@Natty toca boss fight sem elden ring` | `/tocar pedido:<busca>` |
+| Buscar no YouTube (quando o dataset não tem) | `natty toca ragnar the red skyrim` | `/tocar pedido:<busca>` |
 | Pular | `natty pula`, `natty próxima`, `natty skip` | `/pular` |
 | Ver a fila | `natty fila`, `natty mostra a playlist` | `/fila` |
 | Limpar a fila | `natty limpa a fila`, `natty esvazia a fila` | `/limpar-fila` |
@@ -36,12 +37,40 @@ que o Discord oferece com o mesmo nome).
   Vale por servidor e zera quando a Natty reinicia.
 - Os slash commands não dependem de menção nem da Message Content Intent.
 
+## Busca livre no YouTube e aprendizado por confirmação
+
+Se "natty toca <texto>" não acha nada no dataset, a Natty busca o texto
+direto no YouTube, toca o primeiro resultado (ou põe na fila, como um link)
+e pergunta no mesmo canal: *"Era essa mesmo? Me diz uns temas dela"*.
+
+- A próxima mensagem **naquele canal**, de qualquer pessoa (a mesa é
+  coletiva), vale como resposta — não precisa chamar a Natty.
+  - `"não"` (em qualquer lugar da frase) → descarta, nada é gravado.
+  - `"sim, é triste e épico"` → grava a faixa com os temas `triste`,
+    `épico` (separa por vírgula e por " e "; ignora "sim", "é", "essa",
+    "mesmo"...; no máximo 5 temas).
+  - `"sim"` sem tema → grava como `"não classificado"`: a música é a certa,
+    só ninguém opinou sobre o clima.
+- A pergunta vale 3 minutos (`SEGUNDOS_PARA_RESPONDER`); depois disso
+  ninguém respondeu, e a próxima mensagem é só conversa. Uma pergunta
+  por servidor: uma busca nova substitui a anterior.
+- Pedido pra Natty (`natty pula`, `natty toca ...`) nunca conta como resposta.
+- A faixa entra no `musicas.json` com origem `Descoberta em mesa` (tipo
+  `outro`), id `descoberta-em-mesa-<título>`, e já com as categorias
+  calculadas pelo vocabulário. A busca acha ela na hora, sem reiniciar.
+  Vídeo que já está no dataset não é gravado de novo.
+- Grava o link de watch do vídeo, não a URL de áudio (essa expira).
+- **Cuidado:** qualquer mensagem no canal durante esses 3 minutos vira
+  resposta — um "kkkk" vira o tema "kkkk". Vale conferir de tempos em
+  tempos as faixas `Descoberta em mesa` no `musicas.json` e corrigir à mão.
+
 ## Busca no dataset
 
-"natty toca <texto>" sem link procura no `dataset/musicas.json` (~490
+"natty toca <texto>" sem link procura no `dataset/musicas.json` (~580
 faixas de Elden Ring, Dark Souls, Bloodborne, Fire Emblem: Three Houses,
-Umineko, Subahibi e Hollow Knight, cada uma com origem e temas em
-português) e põe o resultado na fila. Se nada tocava, a primeira já começa.
+Umineko, Subahibi, Hollow Knight e NieR:Automata, cada uma com origem e
+temas em português) e põe o resultado na fila. Se nada tocava, a primeira
+já começa. Se não acha nada, cai na busca livre no YouTube (acima).
 
 - `e` = E, `ou` = OU, `sem`/`não` antes de um termo = exclui o termo.
 - O `ou` separa grupos inteiros: `boss fight e elden ring ou hollow knight`
@@ -86,8 +115,9 @@ O script só acrescenta categorias; dá pra pôr uma à mão numa faixa (ex:
 "taverna" onde o vocabulário não pegou) e ela fica. Pra tirar, apaga à mão.
 
 **Ainda falta curadoria:**
-- 33 faixas (quase todas do Umineko, nomes abstratos como "Core", "Mind")
-  estão como "não classificado" — precisa ouvir pra marcar.
+- 37 faixas (24 do Umineko, com nomes abstratos como "Core" e "Mind", 9 da
+  NieR:Automata e 4 do Subahibi) estão como "não classificado" — precisa
+  ouvir pra marcar.
 - Não há faixa de taverna de verdade: "taverna" cai em *cidade* (hubs,
   cotidiano, mercado), que é a aproximação mais próxima.
 - Tema em português não bate com palavra em inglês que só está no nome
@@ -116,8 +146,8 @@ demais no processo principal — sem precisar reescrever `cog.py`.
 ```
 modules/bardo/
 ├── __init__.py
-├── youtube.py     # acesso cru ao YouTube via yt-dlp (equivalente a sheets.py no core)
-├── service.py      # lógica pura: interpreta o pedido, fila, volume, busca booleana
+├── youtube.py     # acesso cru ao YouTube via yt-dlp: link ou busca (equivalente a sheets.py no core)
+├── service.py      # lógica pura: pedido, fila, volume, busca booleana, busca livre + aprendizado
 ├── cog.py           # interface Discord: on_message + slash commands, voz, playback
 ├── test_service.py  # testes de pedidos, fila e busca
 ├── dataset/
@@ -149,6 +179,8 @@ cog.py (on_message)
   ├─ interpretar_pedido(texto) → Pedido      → service.py (regex: tocar/pausar/continuar/parar/volume)
   ├─ usuário está em canal de voz?            → discord.py (message.author.voice)
   ├─ sem link? buscar_musicas(busca)            → service.py (dataset/musicas.json) → fila
+  ├─ nada no dataset? resolver_por_busca_livre → youtube.py (ytsearch1:) → toca + criar_pendencia()
+  ├─ mensagem seguinte no canal? interpretar_resposta_de_pendencia → adicionar_descoberta_ao_dataset
   ├─ resolver_musica(link)                    → service.py → youtube.py → yt-dlp
   ├─ conecta/move pro canal de voz            → discord.py (voice_client)
   └─ toca via FFmpegPCMAudio + volume         → discord.py + FFmpeg
@@ -160,14 +192,16 @@ cog.py (on_message)
 python -m unittest discover -s modules/bardo -t .
 ```
 
-Cobrem o reconhecimento de pedidos, a fila e a busca booleana
+Cobrem o reconhecimento de pedidos, a fila, a busca booleana e o
+aprendizado por confirmação (resposta, prazo, gravação sem duplicar)
 (`service.py`), inclusive um teste que valida o dataset real. A parte de voz foi
 validada à mão no Discord.
 
 ## O que falta pro próximo passo
 
-- Classificar as 33 faixas "não classificado" e trilhas de taverna de verdade
-- Completar Dark Souls e Hollow Knight no dataset (hoje 3 e 4 faixas)
+- Classificar as 37 faixas "não classificado" e trilhas de taverna de verdade
+- Completar Dark Souls no dataset (hoje 3 faixas)
+- Validar a busca livre + aprendizado numa mesa de verdade
 - Loop (repetir a música ou a fila), remover um item da fila, colar playlist do YouTube
 - Sair sozinha do canal quando ficar vazio
 - Fontes além de YouTube (Freesound, local files)

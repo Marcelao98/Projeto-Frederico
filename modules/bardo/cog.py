@@ -47,10 +47,13 @@ class BardoCog(commands.Cog):
         if message.author.bot or message.guild is None:
             return
         if not self._falou_com_a_natty(message):
+            await self._responder_pendencia(message)
             return
 
         pedido = service.interpretar_pedido(message.content)
         if pedido is None:
+            # "natty, é essa sim, triste" responde a pergunta em aberto.
+            await self._responder_pendencia(message)
             return
 
         guild = message.guild
@@ -144,9 +147,17 @@ class BardoCog(commands.Cog):
         await interaction.response.send_message(self._mudar_volume(interaction.guild, pedido))
 
     async def _tocar(
-        self, guild: discord.Guild, membro: discord.Member, canal_de_texto: discord.abc.Messageable, link: str
+        self,
+        guild: discord.Guild,
+        membro: discord.Member,
+        canal_de_texto: discord.abc.Messageable,
+        link: str,
+        info: dict | None = None,
     ) -> str:
-        """Toca `link` no canal de voz de `membro`, ou põe na fila se já tiver música. Devolve a resposta."""
+        """Toca `link` no canal de voz de `membro`, ou põe na fila se já tiver música. Devolve a resposta.
+
+        `info` é o link já resolvido (ex: pela busca livre), pra não resolver duas vezes.
+        """
         voice_state = membro.voice
         if not voice_state or not voice_state.channel:
             return "Entra num canal de voz primeiro, aí eu toco."
@@ -154,11 +165,12 @@ class BardoCog(commands.Cog):
         canal = voice_state.channel
         self._canais_de_aviso[guild.id] = canal_de_texto
 
-        try:
-            info = await asyncio.to_thread(service.resolver_musica, link)
-        except Exception:
-            log.exception("Bardo: falha ao resolver %s", link)
-            return "Não consegui pegar essa música. Confere o link?"
+        if info is None:
+            try:
+                info = await asyncio.to_thread(service.resolver_musica, link)
+            except Exception:
+                log.exception("Bardo: falha ao resolver %s", link)
+                return "Não consegui pegar essa música. Confere o link?"
 
         musica = service.Musica(info["titulo"], link, info["duracao_segundos"])
         fila = self._fila(guild)
@@ -198,7 +210,7 @@ class BardoCog(commands.Cog):
 
         musicas, achadas = service.buscar_musicas(busca)
         if not musicas:
-            return f'Não achei nada pra "{escape_markdown(busca)}" no dataset. Tenta outros termos?'
+            return await self._tocar_do_youtube(guild, membro, canal_de_texto, busca)
 
         self._canais_de_aviso[guild.id] = canal_de_texto
         aviso = f" (achei {achadas}, sorteei {len(musicas)})" if achadas > len(musicas) else ""
@@ -222,6 +234,64 @@ class BardoCog(commands.Cog):
         resto = len(fila.proximas)
         complemento = f" — mais {resto} na fila" if resto else ""
         return f"Tocando **{escape_markdown(tocando.titulo)}** 🎵{complemento}{aviso}"
+
+    async def _tocar_do_youtube(
+        self, guild: discord.Guild, membro: discord.Member, canal_de_texto: discord.abc.Messageable, busca: str
+    ) -> str:
+        """Busca que não achou nada no dataset: toca o 1º resultado do YouTube e pergunta se era essa."""
+        try:
+            info = await asyncio.to_thread(service.resolver_por_busca_livre, busca)
+        except Exception:
+            log.exception("Bardo: falha na busca livre por %r", busca)
+            return f'Não achei nada pra "{escape_markdown(busca)}", nem no dataset nem no YouTube. Tenta outros termos?'
+
+        link = info["link"]
+        resposta = await self._tocar(guild, membro, canal_de_texto, link, info)
+        fila = self._fila(guild)
+        entrou = any(m.link == link for m in (fila.tocando, *fila.proximas) if m is not None)
+        if not entrou:  # não conseguiu tocar nem enfileirar: não tem o que perguntar
+            return resposta
+
+        service.criar_pendencia(guild.id, info["titulo"], link, canal_id=getattr(canal_de_texto, "id", None))
+        return (
+            f"Não achei no dataset, mas achei no YouTube. {resposta}\n"
+            "Era essa mesmo? Me diz uns temas dela (ex: triste, épico, taverna...) que eu aprendo — "
+            'ou "não" se não for.'
+        )
+
+    async def _responder_pendencia(self, message: discord.Message) -> None:
+        """Se o servidor tem pergunta "era essa?" em aberto neste canal, trata a mensagem como resposta."""
+        pendencia = service.pendencia_do_servidor(message.guild.id)  # já some se venceu
+        if pendencia is None or pendencia["canal_id"] != message.channel.id:
+            return
+
+        temas = service.interpretar_resposta_de_pendencia(message.content)
+        service.limpar_pendencia(message.guild.id)
+        titulo = escape_markdown(pendencia["titulo"])
+        if temas is None:
+            await message.reply(f"Ok, não guardei **{titulo}** 👍", mention_author=False)
+            return
+
+        try:
+            entrada = await asyncio.to_thread(
+                service.adicionar_descoberta_ao_dataset, pendencia["titulo"], pendencia["link"], temas
+            )
+        except service.MusicaJaNoDataset as e:
+            await message.reply(
+                f"**{escape_markdown(e.musica['nome'])}** já estava no dataset, deixei como está.",
+                mention_author=False,
+            )
+            return
+        except Exception:
+            log.exception("Bardo: falha ao gravar descoberta %s", pendencia["link"])
+            await message.reply("Não consegui salvar no dataset, deu erro aqui 😕", mention_author=False)
+            return
+
+        if entrada["temas"] == [service.NAO_CLASSIFICADO]:
+            detalhe = 'como "não classificado" (sem temas por enquanto)'
+        else:
+            detalhe = "com os temas " + ", ".join(entrada["temas"])
+        await message.reply(f"Adicionei **{titulo}** ao dataset {detalhe} 🎉", mention_author=False)
 
     async def _conectar(self, guild: discord.Guild, canal: discord.VoiceChannel) -> discord.VoiceClient:
         voice_client = guild.voice_client

@@ -16,6 +16,7 @@ import json
 import random
 import re
 import shlex
+import time
 import unicodedata
 from collections import deque
 from dataclasses import dataclass
@@ -437,3 +438,172 @@ def resolver_musica(url: str) -> dict:
     "http_headers": dict} — os headers vão pro FFmpeg via opcoes_ffmpeg().
     """
     return youtube.resolver_stream(url)
+
+
+# ---------------------------------------------------------------------------
+# Busca livre no YouTube e aprendizado por confirmação
+#
+# Quando a busca no dataset não acha nada, o cog busca o texto direto no
+# YouTube, toca, e pergunta no canal se era essa e quais temas ela tem. A
+# pergunta fica "em aberto" por servidor (uma pendência); a próxima mensagem
+# no canal responde. Confirmando, a faixa entra no dataset.
+# ---------------------------------------------------------------------------
+
+SEGUNDOS_PARA_RESPONDER = 180  # depois disso a pendência vence sem resposta
+MAX_TEMAS_DESCOBERTA = 5
+NAO_CLASSIFICADO = "não classificado"
+ORIGEM_DESCOBERTA = {"nome": "Descoberta em mesa", "tipo": "outro"}
+
+_NEGACAO_RE = re.compile(r"\bn[ãa]o\b", re.IGNORECASE)
+_SEPARADOR_DE_TEMAS_RE = re.compile(r"\s*(?:[,;/\n]|\s\be\b\s)\s*", re.IGNORECASE)
+# Confirmação e conversa que não é tema ("sim, é essa mesmo").
+_PALAVRAS_DE_CONFIRMACAO = {
+    "sim", "s", "isso", "isso ai", "é", "e", "era", "essa", "esse", "ela", "ele", "mesmo", "mesma",
+    "exato", "exatamente", "certo", "certa", "aham", "uhum", "ok", "okay", "yes", "sure", "natty",
+    "ai", "aí", "tem", "temas", "tema", "ela é", "seria", "acho", "que", "boa", "ótima", "otima",
+}
+_TEM_PALAVRA_RE = re.compile(r"[^\W\d_]{3,}")  # "1d20" ou "ss" não viram tema
+
+
+class MusicaJaNoDataset(Exception):
+    """A descoberta já está no dataset (mesmo vídeo); .musica é a entrada que existe."""
+
+    def __init__(self, musica: dict):
+        super().__init__(musica["nome"])
+        self.musica = musica
+
+
+_pendencias: dict[int, dict] = {}  # guild_id → pergunta em aberto
+
+
+def resolver_por_busca_livre(texto: str) -> dict:
+    """Busca `texto` no YouTube e resolve o primeiro resultado em algo tocável.
+
+    Mesmo retorno de resolver_musica(), mais "link" (o link de watch, que
+    não expira — é ele que vai pro dataset). LookupError se não achar nada.
+    """
+    return youtube.buscar_stream(texto)
+
+
+def criar_pendencia(
+    guild_id: int, titulo: str, link: str, canal_id: int | None = None, agora: float | None = None
+) -> dict:
+    """Abre (ou substitui) a pergunta "era essa?" do servidor e a devolve."""
+    pendencia = {
+        "titulo": titulo,
+        "link": link,
+        "canal_id": canal_id,
+        "criado_em": time.time() if agora is None else agora,
+    }
+    _pendencias[guild_id] = pendencia
+    return pendencia
+
+
+def pendencia_do_servidor(guild_id: int, agora: float | None = None) -> dict | None:
+    """A pergunta em aberto do servidor; None se não tem, ou se venceu (aí já limpa)."""
+    pendencia = _pendencias.get(guild_id)
+    if pendencia is None:
+        return None
+    agora = time.time() if agora is None else agora
+    if agora - pendencia["criado_em"] > SEGUNDOS_PARA_RESPONDER:
+        limpar_pendencia(guild_id)
+        return None
+    return pendencia
+
+
+def limpar_pendencia(guild_id: int) -> None:
+    _pendencias.pop(guild_id, None)
+
+
+def interpretar_resposta_de_pendencia(texto: str) -> list[str] | None:
+    """Resposta a "era essa? que temas ela tem?" → temas, ou None se disseram que não.
+
+    "sim, é triste e épico" → ["triste", "épico"]; "não" → None; "sim" → []
+    (confirmou a música, mas não deu tema).
+    """
+    if _NEGACAO_RE.search(texto):
+        return None
+    # Tira menção (<@123>), emoji e pontuação; mantém letras, números, hífen.
+    limpo = re.sub(r"<[@#:][^>]*>", " ", texto.lower())
+    limpo = re.sub(r"[^\w\s,;/\n-]", " ", limpo)
+    temas: list[str] = []
+    for pedaco in _SEPARADOR_DE_TEMAS_RE.split(limpo):
+        palavras = [p for p in pedaco.split() if p not in _PALAVRAS_DE_CONFIRMACAO and p not in _FILLER_WORDS]
+        tema = " ".join(palavras)
+        if tema and tema not in _PALAVRAS_DE_CONFIRMACAO and _TEM_PALAVRA_RE.search(tema) and tema not in temas:
+            temas.append(tema)
+    return temas[:MAX_TEMAS_DESCOBERTA]
+
+
+def adicionar_descoberta_ao_dataset(
+    titulo: str, link: str, temas: list[str], caminho: Path | None = None
+) -> dict:
+    """Grava uma música descoberta em mesa no musicas.json e devolve a entrada.
+
+    Sem temas, entra como "não classificado". Levanta MusicaJaNoDataset se o
+    vídeo já estiver lá. Com `caminho` (teste), não mexe no cache da busca.
+    """
+    arquivo = caminho or _DATASET_PATH
+    dataset = json.loads(arquivo.read_text(encoding="utf-8"))
+    musicas = dataset["musicas"]
+
+    video = video_id(link)
+    for m in musicas:
+        if video_id(m["link"]) == video:
+            raise MusicaJaNoDataset(m)
+
+    ids = {m["id"] for m in musicas}
+    base = f"{slug(ORIGEM_DESCOBERTA['nome'])}-{slug(titulo) or video.lower()}"
+    id_, n = base, 2
+    while id_ in ids:
+        id_, n = f"{base}-{n}", n + 1
+
+    temas = temas or [NAO_CLASSIFICADO]
+    entrada = {
+        "id": id_,
+        "nome": titulo,
+        "link": f"https://www.youtube.com/watch?v={video}",
+        "escopo": "faixa_individual",
+        "origem": dict(ORIGEM_DESCOBERTA),
+        "temas": temas,
+        "categorias": categorias_dos_temas(temas),
+        "comentario_pessoal": "",
+    }
+    musicas.append(entrada)
+    arquivo.write_text(formatar_dataset(dataset), encoding="utf-8")
+
+    if caminho is None and _dataset_cache is not None:
+        _dataset_cache.append(entrada)  # a busca já acha a faixa, sem reiniciar
+    return entrada
+
+
+# ---------------------------------------------------------------------------
+# Utilitários do dataset (também usados pelos scripts/ de manutenção)
+# ---------------------------------------------------------------------------
+
+# Ordem dos campos de cada faixa no arquivo, pra ficar legível no diff.
+_ORDEM_DOS_CAMPOS = ["id", "nome", "link", "escopo", "origem", "temas", "categorias", "comentario_pessoal"]
+
+
+def formatar_dataset(dataset: dict) -> str:
+    """musicas.json no formato do arquivo à mão: uma faixa por bloco, um campo por linha."""
+    faixas = []
+    for m in dataset["musicas"]:
+        chaves = [k for k in _ORDEM_DOS_CAMPOS if k in m] + [k for k in m if k not in _ORDEM_DOS_CAMPOS]
+        campos = ",\n".join(f"      {json.dumps(k)}: {json.dumps(m[k], ensure_ascii=False)}" for k in chaves)
+        faixas.append("    {\n" + campos + "\n    }")
+    comentario = json.dumps(dataset["_comentario"], ensure_ascii=False)
+    return "{\n" f'  "_comentario": {comentario},\n' '  "musicas": [\n' + ",\n".join(faixas) + "\n  ]\n}\n"
+
+
+def slug(texto: str) -> str:
+    """'Queen's Gardens' -> 'queens-gardens' (sem acento, só [a-z0-9-])."""
+    texto = _normalizar(texto)
+    texto = re.sub(r"['’]", "", texto)
+    return re.sub(r"[^a-z0-9]+", "-", texto).strip("-")
+
+
+def video_id(link: str) -> str:
+    """Id do vídeo de um link do YouTube (watch?v=, youtu.be/); o próprio texto se não achar."""
+    m = re.search(r"(?:[?&]v=|youtu\.be/)([\w-]+)", link)
+    return m.group(1) if m else link

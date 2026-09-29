@@ -14,21 +14,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from modules.bardo.service import _DATASET_PATH, carregar_vocabulario, categorias_dos_temas  # noqa: E402
-
-# Ordem dos campos de cada faixa no arquivo, pra ficar legível no diff.
-_ORDEM = ["id", "nome", "link", "escopo", "origem", "temas", "categorias", "comentario_pessoal"]
-
-
-def formatar_dataset(dataset: dict) -> str:
-    """Mesmo formato do arquivo à mão: uma faixa por bloco, um campo por linha."""
-    faixas = []
-    for m in dataset["musicas"]:
-        chaves = [k for k in _ORDEM if k in m] + [k for k in m if k not in _ORDEM]
-        campos = ",\n".join(f"      {json.dumps(k)}: {json.dumps(m[k], ensure_ascii=False)}" for k in chaves)
-        faixas.append("    {\n" + campos + "\n    }")
-    comentario = json.dumps(dataset["_comentario"], ensure_ascii=False)
-    return "{\n" f'  "_comentario": {comentario},\n' '  "musicas": [\n' + ",\n".join(faixas) + "\n  ]\n}\n"
+from modules.bardo.service import (  # noqa: E402
+    _DATASET_PATH, carregar_vocabulario, categorias_dos_temas, formatar_dataset,
+)
 
 
 def main() -> None:

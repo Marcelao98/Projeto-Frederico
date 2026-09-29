@@ -4,14 +4,25 @@ Testes do serviço do Bardo (pedidos, fila, busca). Da raiz do projeto:
 """
 
 import os
+import json
 import shlex
 import sys
+import tempfile
 import unittest
+from pathlib import Path
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 
 from modules.bardo.service import (  # noqa: E402
     MAX_FILA,
+    NAO_CLASSIFICADO,
+    SEGUNDOS_PARA_RESPONDER,
+    MusicaJaNoDataset,
+    adicionar_descoberta_ao_dataset,
+    criar_pendencia,
+    interpretar_resposta_de_pendencia,
+    limpar_pendencia,
+    pendencia_do_servidor,
     PASSO_VOLUME,
     Fila,
     FilaCheia,
@@ -355,6 +366,86 @@ class BuscarMusicas(unittest.TestCase):
                     self.assertIn(campo, m)
                 self.assertIsNotNone(extrair_link_youtube(m["link"]))
 
+
+
+class RespostaDaPendencia(unittest.TestCase):
+    def test_nao_descarta(self):
+        for texto in ["não", "Não é essa", "nao, errou", "natty, não era essa não"]:
+            with self.subTest(texto=texto):
+                self.assertIsNone(interpretar_resposta_de_pendencia(texto))
+
+    def test_temas_separados_por_virgula_e_e(self):
+        self.assertEqual(interpretar_resposta_de_pendencia("sim, é triste e épico"), ["triste", "épico"])
+        self.assertEqual(
+            interpretar_resposta_de_pendencia("Taverna, animado e boss fight"), ["taverna", "animado", "boss fight"]
+        )
+
+    def test_so_confirmacao_vira_lista_vazia(self):
+        for texto in ["sim", "é essa mesmo!", "isso aí 🎉", "<@123> sim"]:
+            with self.subTest(texto=texto):
+                self.assertEqual(interpretar_resposta_de_pendencia(texto), [])
+
+    def test_nao_repete_nem_passa_do_limite(self):
+        temas = interpretar_resposta_de_pendencia("triste, triste, calmo, épico, sombrio, terror, tenso")
+        self.assertEqual(temas, ["triste", "calmo", "épico", "sombrio", "terror"])
+
+    def test_rolagem_nao_vira_tema(self):
+        self.assertEqual(interpretar_resposta_de_pendencia("1d20+5"), [])
+
+
+class Pendencia(unittest.TestCase):
+    def tearDown(self):
+        limpar_pendencia(1)
+
+    def test_abre_e_limpa(self):
+        criar_pendencia(1, "Música", LINK, canal_id=9, agora=0)
+        self.assertEqual(pendencia_do_servidor(1, agora=10)["link"], LINK)
+        limpar_pendencia(1)
+        self.assertIsNone(pendencia_do_servidor(1, agora=10))
+
+    def test_vence_depois_do_prazo(self):
+        criar_pendencia(1, "Música", LINK, agora=0)
+        self.assertIsNone(pendencia_do_servidor(1, agora=SEGUNDOS_PARA_RESPONDER + 1))
+        # venceu = limpou: nem voltando no tempo ela reaparece
+        self.assertIsNone(pendencia_do_servidor(1, agora=0))
+
+
+class AdicionarDescoberta(unittest.TestCase):
+    def setUp(self):
+        pasta = tempfile.TemporaryDirectory()
+        self.addCleanup(pasta.cleanup)
+        self.arquivo = Path(pasta.name) / "musicas.json"
+        self.arquivo.write_text(
+            json.dumps({"_comentario": "teste", "musicas": [_DATASET_TESTE[2]]}, ensure_ascii=False), encoding="utf-8"
+        )
+
+    def _musicas(self):
+        return json.loads(self.arquivo.read_text(encoding="utf-8"))["musicas"]
+
+    def test_grava_com_temas_e_categorias(self):
+        entrada = adicionar_descoberta_ao_dataset("Bard's Song", LINK, ["triste"], caminho=self.arquivo)
+        self.assertEqual(entrada["id"], "descoberta-em-mesa-bards-song")
+        self.assertEqual(entrada["origem"], {"nome": "Descoberta em mesa", "tipo": "outro"})
+        self.assertIn("triste", entrada["categorias"])
+        self.assertEqual(self._musicas()[-1], entrada)
+
+    def test_sem_temas_vira_nao_classificado(self):
+        entrada = adicionar_descoberta_ao_dataset("Bard's Song", LINK, [], caminho=self.arquivo)
+        self.assertEqual(entrada["temas"], [NAO_CLASSIFICADO])
+
+    def test_nao_duplica_pelo_link(self):
+        adicionar_descoberta_ao_dataset("Bard's Song", LINK, ["triste"], caminho=self.arquivo)
+        with self.assertRaises(MusicaJaNoDataset):
+            adicionar_descoberta_ao_dataset("Outro título", "https://youtu.be/dQw4w9WgXcQ?t=5", [], caminho=self.arquivo)
+        # nem se já estava no dataset desde antes
+        with self.assertRaises(MusicaJaNoDataset):
+            adicionar_descoberta_ao_dataset("Greenpath", _DATASET_TESTE[2]["link"], [], caminho=self.arquivo)
+        self.assertEqual(len(self._musicas()), 2)
+
+    def test_id_repetido_ganha_sufixo(self):
+        adicionar_descoberta_ao_dataset("Tema", LINK, [], caminho=self.arquivo)
+        entrada = adicionar_descoberta_ao_dataset("Tema", "https://www.youtube.com/watch?v=outro", [], caminho=self.arquivo)
+        self.assertEqual(entrada["id"], "descoberta-em-mesa-tema-2")
 
 
 class OpcoesFFmpeg(unittest.TestCase):

@@ -15,21 +15,15 @@ import argparse
 import json
 import re
 import sys
-import unicodedata
 from pathlib import Path
 
 import yt_dlp
 
-NAO_CLASSIFICADO = "não classificado"
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from modules.bardo.service import NAO_CLASSIFICADO, slug  # noqa: E402
+
 _TITULOS_INDISPONIVEIS = {"[deleted video]", "[private video]"}
-
-
-def slug(texto: str) -> str:
-    """'Queen's Gardens' -> 'queens-gardens' (sem acento, só [a-z0-9-])."""
-    texto = unicodedata.normalize("NFD", texto.lower())
-    texto = "".join(c for c in texto if unicodedata.category(c) != "Mn")
-    texto = re.sub(r"['’]", "", texto)
-    return re.sub(r"[^a-z0-9]+", "-", texto).strip("-")
 
 
 def limpar_titulo(titulo: str) -> str:

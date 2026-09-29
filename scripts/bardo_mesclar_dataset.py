@@ -13,23 +13,14 @@ import argparse
 import json
 import sys
 from pathlib import Path
-from urllib.parse import parse_qs, urlparse
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from modules.bardo.service import (  # noqa: E402
-    _DATASET_PATH, _normalizar, carregar_vocabulario, categorias_dos_temas,
+    _DATASET_PATH, _normalizar, carregar_vocabulario, categorias_dos_temas, formatar_dataset, video_id,
 )
-from scripts.categorizar_musicas import formatar_dataset  # noqa: E402
 
 _CAMPOS_OBRIGATORIOS = {"id", "nome", "link", "escopo", "origem", "temas"}
-
-
-def _video_id(link: str) -> str:
-    url = urlparse(link)
-    if url.hostname and url.hostname.endswith("youtu.be"):
-        return url.path.lstrip("/")
-    return parse_qs(url.query).get("v", [link])[0]
 
 
 def _chave_nome(m: dict) -> tuple[str, str]:
@@ -45,7 +36,7 @@ def main() -> None:
     dataset = json.loads(_DATASET_PATH.read_text(encoding="utf-8"))
     novas = json.loads(args.staging.read_text(encoding="utf-8"))["musicas"]
 
-    videos = {_video_id(m["link"]) for m in dataset["musicas"]}
+    videos = {video_id(m["link"]) for m in dataset["musicas"]}
     ids = {m["id"] for m in dataset["musicas"]}
     nomes = {_chave_nome(m) for m in dataset["musicas"]}
     vocabulario = carregar_vocabulario()
@@ -55,7 +46,7 @@ def main() -> None:
         faltando = _CAMPOS_OBRIGATORIOS - m.keys()
         if faltando:
             sys.exit(f"Faixa {m.get('id', '?')} sem os campos {sorted(faltando)}.")
-        video = _video_id(m["link"])
+        video = video_id(m["link"])
         if video in videos or m["id"] in ids or _chave_nome(m) in nomes:
             puladas.append(m)
             continue
