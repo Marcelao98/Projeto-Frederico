@@ -43,26 +43,28 @@ Se "natty toca <texto>" não acha nada no dataset, a Natty busca o texto
 direto no YouTube, toca o primeiro resultado (ou põe na fila, como um link)
 e pergunta no mesmo canal: *"Era essa mesmo? Me diz uns temas dela"*.
 
-- A próxima mensagem **naquele canal**, de qualquer pessoa (a mesa é
-  coletiva), vale como resposta — não precisa chamar a Natty.
-  - `"não"` (em qualquer lugar da frase) → descarta, nada é gravado.
-  - `"sim, é triste e épico"` → grava a faixa com os temas `triste`,
+- A resposta é a próxima mensagem **naquele canal que chama a Natty**
+  (nome ou menção, como um pedido), de qualquer pessoa — a mesa é
+  coletiva. Conversa normal da mesa não conta, então "kkkk" não vira tema.
+  - `"natty, não"` (o "não" em qualquer lugar da frase) → descarta, nada é gravado.
+  - `"natty, é triste e épico"` → grava a faixa com os temas `triste`,
     `épico` (separa por vírgula e por " e "; ignora "sim", "é", "essa",
     "mesmo"...; no máximo 5 temas).
-  - `"sim"` sem tema → grava como `"não classificado"`: a música é a certa,
-    só ninguém opinou sobre o clima.
+  - `"natty, sim"` sem tema → grava como `"não classificado"`: a música é
+    a certa, só ninguém opinou sobre o clima.
 - A pergunta vale 3 minutos (`SEGUNDOS_PARA_RESPONDER`); depois disso
   ninguém respondeu, e a próxima mensagem é só conversa. Uma pergunta
   por servidor: uma busca nova substitui a anterior.
 - Pedido pra Natty (`natty pula`, `natty toca ...`) nunca conta como resposta.
+  Por isso uma resposta com palavra de pedido ("natty, bota taverna") é
+  lida como pedido — melhor responder só com os temas.
 - A faixa entra no `musicas.json` com origem `Descoberta em mesa` (tipo
   `outro`), id `descoberta-em-mesa-<título>`, e já com as categorias
   calculadas pelo vocabulário. A busca acha ela na hora, sem reiniciar.
   Vídeo que já está no dataset não é gravado de novo.
 - Grava o link de watch do vídeo, não a URL de áudio (essa expira).
-- **Cuidado:** qualquer mensagem no canal durante esses 3 minutos vira
-  resposta — um "kkkk" vira o tema "kkkk". Vale conferir de tempos em
-  tempos as faixas `Descoberta em mesa` no `musicas.json` e corrigir à mão.
+- Vale conferir de tempos em tempos as faixas `Descoberta em mesa` no
+  `musicas.json`: o tema é o que a mesa digitou, não passa pelo vocabulário.
 
 ## Busca no dataset
 

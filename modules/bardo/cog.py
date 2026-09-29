@@ -47,7 +47,6 @@ class BardoCog(commands.Cog):
         if message.author.bot or message.guild is None:
             return
         if not self._falou_com_a_natty(message):
-            await self._responder_pendencia(message)
             return
 
         pedido = service.interpretar_pedido(message.content)
@@ -255,12 +254,12 @@ class BardoCog(commands.Cog):
         service.criar_pendencia(guild.id, info["titulo"], link, canal_id=getattr(canal_de_texto, "id", None))
         return (
             f"Não achei no dataset, mas achei no YouTube. {resposta}\n"
-            "Era essa mesmo? Me diz uns temas dela (ex: triste, épico, taverna...) que eu aprendo — "
-            'ou "não" se não for.'
+            'Era essa mesmo? Me diz uns temas dela que eu aprendo (ex: "natty, é taverna e animado") — '
+            'ou "natty, não" se não for.'
         )
 
     async def _responder_pendencia(self, message: discord.Message) -> None:
-        """Se o servidor tem pergunta "era essa?" em aberto neste canal, trata a mensagem como resposta."""
+        """Mensagem pra Natty que não é pedido: se tem pergunta "era essa?" em aberto neste canal, é a resposta."""
         pendencia = service.pendencia_do_servidor(message.guild.id)  # já some se venceu
         if pendencia is None or pendencia["canal_id"] != message.channel.id:
             return

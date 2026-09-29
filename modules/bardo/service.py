@@ -460,7 +460,7 @@ _SEPARADOR_DE_TEMAS_RE = re.compile(r"\s*(?:[,;/\n]|\s\be\b\s)\s*", re.IGNORECAS
 _PALAVRAS_DE_CONFIRMACAO = {
     "sim", "s", "isso", "isso ai", "é", "e", "era", "essa", "esse", "ela", "ele", "mesmo", "mesma",
     "exato", "exatamente", "certo", "certa", "aham", "uhum", "ok", "okay", "yes", "sure", "natty",
-    "ai", "aí", "tem", "temas", "tema", "ela é", "seria", "acho", "que", "boa", "ótima", "otima",
+    "ei", "oi", "ô", "ai", "aí", "tem", "temas", "tema", "ela é", "seria", "acho", "que", "boa", "ótima", "otima",
 }
 _TEM_PALAVRA_RE = re.compile(r"[^\W\d_]{3,}")  # "1d20" ou "ss" não viram tema
 

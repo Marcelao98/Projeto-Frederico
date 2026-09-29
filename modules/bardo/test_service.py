@@ -380,6 +380,17 @@ class RespostaDaPendencia(unittest.TestCase):
             interpretar_resposta_de_pendencia("Taverna, animado e boss fight"), ["taverna", "animado", "boss fight"]
         )
 
+    def test_chamando_a_natty_antes(self):
+        # A resposta só conta se chamar a Natty; o nome dela não vira tema.
+        self.assertEqual(interpretar_resposta_de_pendencia("natty, é taverna e animado"), ["taverna", "animado"])
+        self.assertEqual(interpretar_resposta_de_pendencia("ei natty sim, triste"), ["triste"])
+        self.assertEqual(interpretar_resposta_de_pendencia("<@123> épico"), ["épico"])
+        self.assertIsNone(interpretar_resposta_de_pendencia("natty, não"))
+        # ...e o cog só trata como resposta o que não é pedido de música.
+        for texto in ["natty, é taverna e animado", "ei natty sim, triste", "natty, não"]:
+            with self.subTest(texto=texto):
+                self.assertIsNone(interpretar_pedido(texto))
+
     def test_so_confirmacao_vira_lista_vazia(self):
         for texto in ["sim", "é essa mesmo!", "isso aí 🎉", "<@123> sim"]:
             with self.subTest(texto=texto):
