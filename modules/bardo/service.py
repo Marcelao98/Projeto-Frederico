@@ -217,19 +217,26 @@ class Fila:
 # knight" ou "calmo e fire emblem sem batalha" (sem = exclui o termo).
 # "e" combina (AND), "ou" separa grupos alternativos (OR), "sem"/"não" na
 # frente de um termo nega ele. O "ou" tem precedência menor: "a e b ou c"
-# é "(a e b) ou c". Cada termo é comparado (substring, sem acento) contra
-# nome da faixa + nome/tipo da origem + temas da faixa.
+# é "(a e b) ou c". Um termo bate com a faixa se:
+#   - aparece (substring, sem acento) no nome da faixa, na origem, nos temas
+#     ou nas categorias; ou
+#   - é sinônimo de uma categoria da faixa, segundo o vocabulario.json
+#     ("tragico" acha as faixas da categoria "triste").
 # ---------------------------------------------------------------------------
 
 _DATASET_PATH = Path(__file__).parent / "dataset" / "musicas.json"
+_VOCABULARIO_PATH = Path(__file__).parent / "dataset" / "vocabulario.json"
 
 # Se a busca achar mais que isso, sorteia: algumas franquias do dataset têm
 # 200+ faixas, e enfileirar tudo prenderia a mesa numa franquia por horas.
 MAX_RESULTADOS_DA_BUSCA = 15
 
 _FILLER_WORDS = {
-    "musica", "música", "som", "sons", "faixa", "algo", "alguma", "algum",
-    "uma", "um", "de", "do", "da", "dos", "das", "a", "o",
+    "musica", "musicas", "som", "sons", "faixa", "faixas", "trilha", "sonora",
+    "algo", "alguma", "algum", "uma", "um", "umas", "uns",
+    "de", "do", "da", "dos", "das", "a", "o", "as", "os",
+    "para", "pra", "pro", "com", "no", "na", "nos", "nas", "em",
+    "tipo", "bem", "muito", "mais", "clima", "cena", "hora", "estilo", "vibe",
 }
 
 _dataset_cache: list[dict] | None = None
@@ -248,6 +255,56 @@ def carregar_dataset(caminho: Path | None = None) -> list[dict]:
     return _dataset_cache
 
 
+@dataclass(frozen=True)
+class Vocabulario:
+    """vocabulario.json já normalizado.
+
+    sinonimos: palavra que as pessoas digitam → categorias que ela puxa.
+    por_tema: tema cru do dataset → categorias que ele dá à faixa.
+    """
+
+    sinonimos: dict[str, frozenset[str]]
+    por_tema: dict[str, frozenset[str]]
+
+
+_vocabulario_cache: Vocabulario | None = None
+
+
+def montar_vocabulario(bruto: dict) -> Vocabulario:
+    """Monta o Vocabulario a partir do conteúdo do vocabulario.json."""
+    sinonimos: dict[str, set[str]] = {}
+    por_tema: dict[str, set[str]] = {}
+    for categoria, spec in bruto["categorias"].items():
+        palavras = {_normalizar(p) for p in [categoria, *spec.get("palavras", [])]}
+        for p in palavras:
+            sinonimos.setdefault(p, set()).add(categoria)
+        # Toda palavra também conta como tema; os "temas" só puxam a faixa.
+        for t in palavras | {_normalizar(t) for t in spec.get("temas", [])}:
+            por_tema.setdefault(t, set()).add(categoria)
+    return Vocabulario(
+        {k: frozenset(v) for k, v in sinonimos.items()},
+        {k: frozenset(v) for k, v in por_tema.items()},
+    )
+
+
+def carregar_vocabulario() -> Vocabulario:
+    """Carrega (com cache em memória) o vocabulário de categorias."""
+    global _vocabulario_cache
+    if _vocabulario_cache is None:
+        with open(_VOCABULARIO_PATH, encoding="utf-8") as f:
+            _vocabulario_cache = montar_vocabulario(json.load(f))
+    return _vocabulario_cache
+
+
+def categorias_dos_temas(temas: list[str], vocabulario: Vocabulario | None = None) -> list[str]:
+    """Categorias que os temas crus de uma faixa dão a ela, em ordem alfabética."""
+    vocabulario = vocabulario or carregar_vocabulario()
+    categorias: set[str] = set()
+    for tema in temas:
+        categorias |= vocabulario.por_tema.get(_normalizar(tema), frozenset())
+    return sorted(categorias)
+
+
 def _normalizar(texto: str) -> str:
     """minúsculas, sem acento — pra 'É Pico' bater com 'epico'."""
     texto = texto.lower().strip()
@@ -256,7 +313,10 @@ def _normalizar(texto: str) -> str:
 
 
 def _texto_buscavel(musica: dict) -> str:
-    partes = [musica["nome"], musica["origem"]["nome"], musica["origem"]["tipo"], *musica["temas"]]
+    partes = [
+        musica["nome"], musica["origem"]["nome"], musica["origem"]["tipo"],
+        *musica["temas"], *musica.get("categorias", []),
+    ]
     return _normalizar(" ".join(partes))
 
 
@@ -291,19 +351,31 @@ def _parse_query(texto: str) -> list[list[tuple[bool, str]]]:
     return grupos
 
 
-def _termo_bate(alvo: str, negado: bool, termo: str) -> bool:
-    contido = termo in alvo
+def _contem(alvo: str, categorias: set[str], termo: str, vocabulario: Vocabulario) -> bool:
+    return termo in alvo or bool(vocabulario.sinonimos.get(termo, frozenset()) & categorias)
+
+
+def _termo_bate(alvo: str, categorias: set[str], negado: bool, termo: str, vocabulario: Vocabulario) -> bool:
+    # Primeiro a frase inteira ("boss fight", "hollow knight"); se não bater,
+    # cada palavra por si ("luta chefe" = luta e chefe).
+    contido = _contem(alvo, categorias, termo, vocabulario) or (
+        " " in termo and all(_contem(alvo, categorias, p, vocabulario) for p in termo.split())
+    )
     return (not contido) if negado else contido
 
 
-def _musica_bate(alvo: str, grupos_ou: list[list[tuple[bool, str]]]) -> bool:
+def _musica_bate(musica: dict, grupos_ou: list[list[tuple[bool, str]]], vocabulario: Vocabulario) -> bool:
+    alvo = _texto_buscavel(musica)
+    categorias = set(musica.get("categorias", []))
     return any(
-        all(_termo_bate(alvo, negado, termo) for negado, termo in grupo_and)
+        all(_termo_bate(alvo, categorias, negado, termo, vocabulario) for negado, termo in grupo_and)
         for grupo_and in grupos_ou
     )
 
 
-def buscar_por_tags(texto_busca: str, dataset: list[dict] | None = None) -> list[dict]:
+def buscar_por_tags(
+    texto_busca: str, dataset: list[dict] | None = None, vocabulario: Vocabulario | None = None
+) -> list[dict]:
     """Busca booleana em linguagem natural no dataset de músicas.
 
     Retorna as entradas do dataset que batem com a query; lista vazia se
@@ -313,15 +385,18 @@ def buscar_por_tags(texto_busca: str, dataset: list[dict] | None = None) -> list
     if not grupos:
         return []
     musicas = dataset if dataset is not None else carregar_dataset()
-    return [m for m in musicas if _musica_bate(_texto_buscavel(m), grupos)]
+    vocabulario = vocabulario or carregar_vocabulario()
+    return [m for m in musicas if _musica_bate(m, grupos, vocabulario)]
 
 
-def buscar_musicas(texto_busca: str, dataset: list[dict] | None = None) -> tuple[list[Musica], int]:
+def buscar_musicas(
+    texto_busca: str, dataset: list[dict] | None = None, vocabulario: Vocabulario | None = None
+) -> tuple[list[Musica], int]:
     """buscar_por_tags() já no formato da fila, sorteando até MAX_RESULTADOS_DA_BUSCA.
 
     Devolve (músicas escolhidas, quantas bateram no total).
     """
-    resultados = buscar_por_tags(texto_busca, dataset)
+    resultados = buscar_por_tags(texto_busca, dataset, vocabulario)
     if len(resultados) > MAX_RESULTADOS_DA_BUSCA:
         escolhidas = random.sample(resultados, MAX_RESULTADOS_DA_BUSCA)
     else:

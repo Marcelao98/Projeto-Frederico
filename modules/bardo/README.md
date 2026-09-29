@@ -48,19 +48,50 @@ português) e põe o resultado na fila. Se nada tocava, a primeira já começa.
   é `(boss fight e elden ring) ou hollow knight` — traz todo o Hollow
   Knight, não só os boss fights. Pra isso, repete o termo:
   `boss fight e elden ring ou boss fight e hollow knight`.
-- Cada termo é comparado por substring, sem acento e sem diferenciar
-  maiúscula, contra nome da faixa, nome e tipo da origem e temas.
-- Palavras de preenchimento ("uma", "música", "de"...) são ignoradas.
+- Cada termo bate com a faixa se aparece (sem acento, sem diferenciar
+  maiúscula) no nome da faixa, na origem, nos temas ou nas categorias —
+  **ou** se é sinônimo de uma categoria da faixa (ver abaixo).
+- Termo de várias palavras tenta a frase inteira ("boss fight", "hollow
+  knight") e, se não bater, cada palavra: "luta de chefe" = luta e chefe.
+- Palavras de preenchimento ("uma", "música", "de", "para", "clima"...) são
+  ignoradas: "uma música para relaxar", "clima de taverna".
 - Achando mais de 15 (`MAX_RESULTADOS_DA_BUSCA`), sorteia 15 e avisa
   quantas achou. A fila continua limitada a 50.
 
-**Limitação conhecida — sem sinônimos.** "triste" não acha "trágico" nem
-"melancólico": `natty toca triste e bloodborne` não acha nada, porque as
-faixas do Bloodborne estão marcadas como trágico/melancólico. Tema em
-português também não bate com palavra em inglês que só aparece no nome
-da faixa (ex: "sem chuva" não filtra "(Rain)"). É curadoria do dataset
-(vocabulário de temas), não bug do parser. Hoje 34 faixas estão como
-"não classificado".
+### Categorias e sinônimos
+
+O dataset tinha ~170 temas soltos ("melancólico", "sereno-macabro",
+"ódio"...), muitos com uma faixa só, e ninguém numa mesa busca assim. Por
+isso existem as **categorias** (`dataset/vocabulario.json`): ~27 coisas que
+alguém de fato pede — triste, calmo, tenso, combate, chefe, épico,
+sombrio, terror, mistério, mágico, sagrado, alegre, engraçado, romântico,
+nobreza, cidade (taverna), exploração, natureza, masmorra, descanso
+(acampamento), vilão, final, abertura...
+
+Cada categoria tem:
+- `palavras`: o que as pessoas digitam e leva à categoria — "trágico",
+  "tristeza", "luto" levam a *triste*; "taverna", "vila" levam a *cidade*.
+- `temas`: temas crus que colocam a faixa na categoria, mas que sozinhos
+  são específicos demais pra puxá-la inteira (quem busca "coral" quer
+  coral, não todo o épico).
+
+Cada faixa do `musicas.json` guarda as suas em `categorias`, geradas a
+partir dos `temas`. Depois de mexer no vocabulário ou acrescentar faixas:
+
+```
+python scripts/categorizar_musicas.py
+```
+
+O script só acrescenta categorias; dá pra pôr uma à mão numa faixa (ex:
+"taverna" onde o vocabulário não pegou) e ela fica. Pra tirar, apaga à mão.
+
+**Ainda falta curadoria:**
+- 33 faixas (quase todas do Umineko, nomes abstratos como "Core", "Mind")
+  estão como "não classificado" — precisa ouvir pra marcar.
+- Não há faixa de taverna de verdade: "taverna" cai em *cidade* (hubs,
+  cotidiano, mercado), que é a aproximação mais próxima.
+- Tema em português não bate com palavra em inglês que só está no nome
+  da faixa ("sem chuva" não filtra "(Rain)").
 
 ## Por que não usa Lavalink
 
@@ -90,7 +121,8 @@ modules/bardo/
 ├── cog.py           # interface Discord: on_message + slash commands, voz, playback
 ├── test_service.py  # testes de pedidos, fila e busca
 ├── dataset/
-│   └── musicas.json  # faixas taggeadas (origem + temas), curadoria em andamento
+│   ├── musicas.json      # faixas taggeadas (origem, temas, categorias)
+│   └── vocabulario.json  # categorias de busca e seus sinônimos
 └── README.md
 ```
 
@@ -134,7 +166,7 @@ validada à mão no Discord.
 
 ## O que falta pro próximo passo
 
-- Sinônimos/vocabulário padronizado de temas na busca
+- Classificar as 33 faixas "não classificado" e trilhas de taverna de verdade
 - Completar Dark Souls e Hollow Knight no dataset (hoje 3 e 4 faixas)
 - Loop (repetir a música ou a fila), remover um item da fila, colar playlist do YouTube
 - Sair sozinha do canal quando ficar vazio

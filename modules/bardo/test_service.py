@@ -20,9 +20,12 @@ from modules.bardo.service import (  # noqa: E402
     buscar_musicas,
     buscar_por_tags,
     carregar_dataset,
+    carregar_vocabulario,
+    categorias_dos_temas,
     chamou_a_natty,
     interpretar_pedido,
     extrair_link_youtube,
+    montar_vocabulario,
     novo_volume,
 )
 
@@ -271,6 +274,61 @@ class TestBuscaBooleana(unittest.TestCase):
         # "boss fight e bloodborne ou greenpath" = (boss fight e bloodborne) ou greenpath
         r = buscar_por_tags("boss fight e bloodborne ou greenpath", dataset=_DATASET_TESTE)
         self.assertEqual({m["id"] for m in r}, {"bloodborne-cleric-beast", "hollow-knight-greenpath"})
+
+
+_VOCABULARIO_TESTE = montar_vocabulario({
+    "categorias": {
+        "triste": {"palavras": ["tristeza", "trágico", "melancólico"], "temas": ["vazio"]},
+        "chefe": {"palavras": ["chefão", "boss fight"], "temas": []},
+        "epico": {"palavras": ["grandioso"], "temas": ["coral"]},
+    }
+})
+
+_DATASET_COM_CATEGORIAS = [
+    dict(_DATASET_TESTE[0], temas=["boss fight", "trágico"], categorias=["chefe", "triste"]),
+    dict(_DATASET_TESTE[3], temas=["boss fight", "coral"], categorias=["chefe", "epico"]),
+]
+
+
+def _ids(query: str) -> set[str]:
+    return {m["id"] for m in buscar_por_tags(query, _DATASET_COM_CATEGORIAS, _VOCABULARIO_TESTE)}
+
+
+class Sinonimos(unittest.TestCase):
+    def test_vocabulario_monta_categorias_dos_temas(self):
+        self.assertEqual(categorias_dos_temas(["Trágico", "coral", "piano"], _VOCABULARIO_TESTE), ["epico", "triste"])
+
+    def test_sinonimo_acha_a_categoria(self):
+        for query in ["triste", "tristeza", "melancolico", "tragico"]:
+            with self.subTest(query=query):
+                self.assertEqual(_ids(query), {"bloodborne-cleric-beast"})
+
+    def test_tema_so_puxa_a_faixa_nao_a_categoria(self):
+        # "coral" põe a faixa em "epico", mas quem busca "coral" não quer todo o épico.
+        self.assertEqual(_ids("coral"), {"hollow-knight-radiance"})
+        self.assertEqual(_ids("grandioso"), {"hollow-knight-radiance"})
+
+    def test_frase_com_varias_palavras(self):
+        self.assertEqual(_ids("chefao triste"), {"bloodborne-cleric-beast"})
+        self.assertEqual(_ids("uma musica de chefao para chorar"), set())
+        self.assertEqual(_ids("hollow knight"), {"hollow-knight-radiance"})
+
+    def test_negacao_com_sinonimo(self):
+        self.assertEqual(_ids("chefao sem tristeza"), {"hollow-knight-radiance"})
+
+
+class VocabularioReal(unittest.TestCase):
+    def test_categorias_do_dataset_existem_no_vocabulario(self):
+        vocabulario = carregar_vocabulario()
+        conhecidas = {c for cats in vocabulario.por_tema.values() for c in cats}
+        for m in carregar_dataset():
+            with self.subTest(id=m["id"]):
+                self.assertLessEqual(set(m.get("categorias", [])), conhecidas)
+
+    def test_buscas_que_as_pessoas_fazem(self):
+        for query in ["triste e bloodborne", "luta de chefe", "clima de taverna", "algo assustador", "masmorra"]:
+            with self.subTest(query=query):
+                self.assertTrue(buscar_por_tags(query))
 
 
 class BuscarMusicas(unittest.TestCase):
