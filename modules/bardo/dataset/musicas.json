@@ -1747,8 +1747,8 @@
       "link": "https://www.youtube.com/watch?v=VSEnv0_Y5B4",
       "escopo": "faixa_individual",
       "origem": {"nome": "Fire Emblem: Three Houses", "tipo": "jogo"},
-      "temas": ["não classificado"],
-      "categorias": ["combate"],
+      "temas": ["batalha", "tenso", "intenso"],
+      "categorias": ["combate", "emocionante", "tenso"],
       "comentario_pessoal": ""
     },
     {
@@ -2727,8 +2727,8 @@
       "link": "https://www.youtube.com/watch?v=WBzYgCZ4TJ8",
       "escopo": "faixa_individual",
       "origem": {"nome": "Umineko no Naku Koro ni", "tipo": "visual novel"},
-      "temas": ["não classificado"],
-      "categorias": [],
+      "temas": ["estranho", "experimental", "perturbador"],
+      "categorias": ["terror"],
       "comentario_pessoal": ""
     },
     {
@@ -3307,8 +3307,8 @@
       "link": "https://www.youtube.com/watch?v=eIb6GiqXdog",
       "escopo": "faixa_individual",
       "origem": {"nome": "Umineko no Naku Koro ni", "tipo": "visual novel"},
-      "temas": ["não classificado"],
-      "categorias": [],
+      "temas": ["triste", "melancólico", "calmo"],
+      "categorias": ["calmo", "triste"],
       "comentario_pessoal": ""
     },
     {
@@ -3627,8 +3627,8 @@
       "link": "https://www.youtube.com/watch?v=OOjsg2xUf0w",
       "escopo": "faixa_individual",
       "origem": {"nome": "Umineko no Naku Koro ni", "tipo": "visual novel"},
-      "temas": ["não classificado"],
-      "categorias": [],
+      "temas": ["terror", "tenso", "mistério", "sombrio"],
+      "categorias": ["misterio", "sombrio", "tenso", "terror"],
       "comentario_pessoal": ""
     },
     {
@@ -3697,8 +3697,8 @@
       "link": "https://www.youtube.com/watch?v=GET7mnf81A0",
       "escopo": "faixa_individual",
       "origem": {"nome": "Umineko no Naku Koro ni", "tipo": "visual novel"},
-      "temas": ["não classificado"],
-      "categorias": [],
+      "temas": ["trágico", "emocionante", "clímax"],
+      "categorias": ["dramatico", "emocionante", "epico", "final", "triste"],
       "comentario_pessoal": ""
     },
     {
@@ -4207,8 +4207,8 @@
       "link": "https://www.youtube.com/watch?v=9V55PGmFOvM",
       "escopo": "faixa_individual",
       "origem": {"nome": "Umineko no Naku Koro ni", "tipo": "visual novel"},
-      "temas": ["não classificado"],
-      "categorias": [],
+      "temas": ["estranho", "experimental", "perturbador"],
+      "categorias": ["terror"],
       "comentario_pessoal": ""
     },
     {

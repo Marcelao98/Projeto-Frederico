@@ -1,6 +1,6 @@
 ---
 name: chips
-description: Adiciona uma franquia (playlist do YouTube) ao dataset de músicas do Bardo — extrai, tagueia os temas de cada faixa, mescla no musicas.json e testa. Usar quando pedirem pra colocar trilha de um jogo/anime/filme novo no Bardo.
+description: Adiciona uma franquia (playlist do YouTube) ao dataset de músicas do Bardo — extrai, tagueia os temas de cada faixa, mescla no musicas.json e testa. Usar quando pedirem pra colocar trilha de um jogo/anime/filme novo no Bardo, ou pra classificar faixas "não classificado" que já estão no dataset.
 ---
 
 # chips — nova franquia no dataset do Bardo
@@ -49,6 +49,11 @@ Trocar `["não classificado"]` por **2 a 5 temas** por faixa.
   `["não classificado"]` — tag chutada polui a busca mais que faixa sem tag.
 - Pra conferir que nenhum tema é novo, compare contra o snippet acima
   (normalizando acento/maiúscula).
+- `escopo`: quase sempre `"faixa_individual"`. `"album_completo"` só pra
+  uma entrada única que representa o álbum inteiro (raro — a ideia do
+  dataset é granularidade por faixa).
+- `comentario_pessoal`: fica `""`. É a opinião do mestre sobre a faixa, não
+  descrição gerada; só preencher se ele disser algo sobre aquela faixa.
 
 ## 3. Mesclar
 
@@ -64,6 +69,13 @@ python scripts/bardo_mesclar_dataset.py staging/<franquia>.json
 - As `categorias` das faixas novas são preenchidas pelo vocabulário. Se
   mexer no `vocabulario.json` depois, rodar `python scripts/categorizar_musicas.py`.
 
+## Reclassificar faixas "não classificado" que já estão no dataset
+
+Não precisa do pipeline: editar o `temas` da faixa direto no
+`musicas.json` (achar pelo `id` ou `nome`), com as mesmas regras do passo 2
+(reusar vocabulário, sem fonte não chuta). Depois rodar
+`python scripts/categorizar_musicas.py` pra atualizar as categorias.
+
 ## 4. Testar e commitar
 
 ```
@@ -74,3 +86,11 @@ Commitar só o `musicas.json` (e os scripts, se mudaram). Antes, `git status`
 pra confirmar que `.env` e `credentials.json` não estão staged. Depois do
 merge, reiniciar a Natty (`scripts/reiniciar_natty.ps1`) pra ela recarregar
 o dataset.
+
+## No final
+
+Fechar explicando em português o que entrou e por quê: quantas faixas por
+franquia, as decisões de tagueamento (por que essa tag, de onde veio a
+fonte) e, separado, a lista das que ficaram `não classificado` e o motivo.
+Essas dependem da memória/opinião do mestre — wiki raramente documenta
+clima faixa a faixa.
