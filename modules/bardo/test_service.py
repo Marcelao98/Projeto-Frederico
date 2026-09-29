@@ -326,6 +326,15 @@ class Sinonimos(unittest.TestCase):
         self.assertEqual(_ids("uma musica de chefao para chorar"), set())
         self.assertEqual(_ids("hollow knight"), {"hollow-knight-radiance"})
 
+    def test_feminino_cai_na_mesma_categoria(self):
+        vocabulario = montar_vocabulario({"categorias": {
+            "alegre": {"palavras": ["animado"], "temas": []},
+            "terror": {"palavras": ["assustador"], "temas": []},
+        }})
+        self.assertEqual(vocabulario.sinonimos["animada"], {"alegre"})
+        self.assertEqual(vocabulario.sinonimos["assustadora"], {"terror"})
+        self.assertEqual(categorias_dos_temas(["Animada"], vocabulario), ["alegre"])
+
     def test_negacao_com_sinonimo(self):
         self.assertEqual(_ids("chefao sem tristeza"), {"hollow-knight-radiance"})
 

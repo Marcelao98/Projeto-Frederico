@@ -291,16 +291,33 @@ class Vocabulario:
 _vocabulario_cache: Vocabulario | None = None
 
 
+def _com_feminino(palavras: set[str]) -> set[str]:
+    """Acrescenta o feminino das palavras soltas: "animado" → "animada", "assustador" → "assustadora".
+
+    O vocabulario.json fica só no masculino; quem digita (ou marca o tema)
+    "animada" ou "sombria" cai na mesma categoria.
+    """
+    femininos = set()
+    for p in palavras:
+        if " " in p:
+            continue
+        if p.endswith("o") and not p.endswith("ao"):
+            femininos.add(p[:-1] + "a")
+        elif p.endswith("or"):
+            femininos.add(p + "a")
+    return palavras | femininos
+
+
 def montar_vocabulario(bruto: dict) -> Vocabulario:
     """Monta o Vocabulario a partir do conteúdo do vocabulario.json."""
     sinonimos: dict[str, set[str]] = {}
     por_tema: dict[str, set[str]] = {}
     for categoria, spec in bruto["categorias"].items():
-        palavras = {_normalizar(p) for p in [categoria, *spec.get("palavras", [])]}
+        palavras = _com_feminino({_normalizar(p) for p in [categoria, *spec.get("palavras", [])]})
         for p in palavras:
             sinonimos.setdefault(p, set()).add(categoria)
         # Toda palavra também conta como tema; os "temas" só puxam a faixa.
-        for t in palavras | {_normalizar(t) for t in spec.get("temas", [])}:
+        for t in palavras | _com_feminino({_normalizar(t) for t in spec.get("temas", [])}):
             por_tema.setdefault(t, set()).add(categoria)
     return Vocabulario(
         {k: frozenset(v) for k, v in sinonimos.items()},

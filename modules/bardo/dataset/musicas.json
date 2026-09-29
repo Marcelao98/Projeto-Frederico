@@ -5790,6 +5790,56 @@
       "temas": ["final", "vocal", "coral", "esperançoso", "emocionante"],
       "categorias": ["dramatico", "emocionante", "epico", "esperancoso", "final", "sagrado"],
       "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-the-elder-scrolls-v-skyrim-ragnar-the-red-song-hd",
+      "nome": "The Elder Scrolls V: Skyrim - Ragnar the Red. Song. HD",
+      "link": "https://www.youtube.com/watch?v=0dj7EVJ_mtA",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["taverna", "bardo", "canção", "animado", "festivo"],
+      "categorias": ["alegre", "cidade"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-milton-nascimento-lo-borges-clube-da-esquina-n-2",
+      "nome": "Milton Nascimento, Lo Borges - Clube Da Esquina Nº2",
+      "link": "https://www.youtube.com/watch?v=-83HCIbrfWU",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["mpb", "brasileira", "melancólico", "contemplativo", "nostálgico"],
+      "categorias": ["calmo", "nostalgico", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-zelda-original-soundtrack-song-of-storms",
+      "nome": "Zelda Original Soundtrack - Song of Storms",
+      "link": "https://www.youtube.com/watch?v=UtgHZaq0EGs",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["zelda", "animado", "nostálgico", "caixinha de música", "tempestade"],
+      "categorias": ["alegre", "nostalgico"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-reginaldo-rossi-garcom-oficial",
+      "nome": "Reginaldo Rossi  - Garçom (Oficial)",
+      "link": "https://www.youtube.com/watch?v=8Xe8gApDRgU",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["brega", "dor de cotovelo", "música de corno", "romântico", "cômico"],
+      "categorias": ["engracado", "romantico"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-gloria-gaynor-i-will-survive",
+      "nome": "Gloria Gaynor - I Will Survive",
+      "link": "https://www.youtube.com/watch?v=6dYWe1c3OyU",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["disco", "anos 70", "animado", "dançante", "hino lgbt"],
+      "categorias": ["alegre"],
+      "comentario_pessoal": ""
     }
   ]
 }
