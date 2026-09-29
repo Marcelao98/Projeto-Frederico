@@ -34,4 +34,6 @@ def resolver_stream(url: str) -> dict:
             "titulo": info.get("title") or "música desconhecida",
             "stream_url": info["url"],
             "duracao_segundos": info.get("duration"),
+            # O FFmpeg precisa mandar os mesmos headers pra URL de áudio.
+            "http_headers": info.get("http_headers") or {},
         }

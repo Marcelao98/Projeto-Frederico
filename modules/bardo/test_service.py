@@ -4,6 +4,7 @@ Testes do serviço do Bardo (pedidos, fila, busca). Da raiz do projeto:
 """
 
 import os
+import shlex
 import sys
 import unittest
 
@@ -27,6 +28,7 @@ from modules.bardo.service import (  # noqa: E402
     extrair_link_youtube,
     montar_vocabulario,
     novo_volume,
+    opcoes_ffmpeg,
 )
 
 LINK = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
@@ -352,6 +354,21 @@ class BuscarMusicas(unittest.TestCase):
                 for campo in ("nome", "link", "origem", "temas"):
                     self.assertIn(campo, m)
                 self.assertIsNotNone(extrair_link_youtube(m["link"]))
+
+
+
+class OpcoesFFmpeg(unittest.TestCase):
+    def test_sem_headers(self):
+        self.assertNotIn("-headers", opcoes_ffmpeg()["before_options"])
+
+    def test_headers_sobrevivem_ao_shlex_do_discord(self):
+        # discord.py quebra before_options com shlex.split; o User-Agent tem espaços e ';'.
+        headers = {"User-Agent": "Mozilla/5.0 (X11; Linux) Firefox/1.0", "Accept": "*/*"}
+        args = shlex.split(opcoes_ffmpeg(headers)["before_options"])
+        self.assertEqual(args[:6], ["-reconnect", "1", "-reconnect_streamed", "1", "-reconnect_delay_max", "5"])
+        self.assertEqual(
+            args[args.index("-headers") + 1], "User-Agent: Mozilla/5.0 (X11; Linux) Firefox/1.0\r\nAccept: */*\r\n"
+        )
 
 
 if __name__ == "__main__":

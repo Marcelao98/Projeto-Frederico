@@ -15,6 +15,7 @@ from __future__ import annotations
 import json
 import random
 import re
+import shlex
 import unicodedata
 from collections import deque
 from dataclasses import dataclass
@@ -57,6 +58,25 @@ FFMPEG_OPTIONS = {
     "before_options": "-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5",
     "options": "-vn",
 }
+
+# Música que "acaba" antes disso sem ninguém pular não tocou de verdade: o
+# YouTube às vezes recusa a URL de áudio (403) e o FFmpeg sai sem som.
+SEGUNDOS_PARA_FALHA_RAPIDA = 5
+
+
+def opcoes_ffmpeg(http_headers: dict[str, str] | None = None) -> dict[str, str]:
+    """FFMPEG_OPTIONS com os headers que o yt-dlp usou pra resolver a URL.
+
+    Sem eles o FFmpeg se apresenta com o User-Agent dele, e o YouTube
+    recusa a URL de áudio com mais frequência.
+    """
+    if not http_headers:
+        return dict(FFMPEG_OPTIONS)
+    headers = "".join(f"{k}: {v}\r\n" for k, v in http_headers.items())
+    return {
+        "before_options": f"{FFMPEG_OPTIONS['before_options']} -headers {shlex.quote(headers)}",
+        "options": FFMPEG_OPTIONS["options"],
+    }
 
 
 @dataclass(frozen=True)
@@ -413,6 +433,7 @@ def extrair_link_youtube(texto: str) -> str | None:
 def resolver_musica(url: str) -> dict:
     """Resolve um link de YouTube em algo tocável.
 
-    Retorna {"titulo": str, "stream_url": str, "duracao_segundos": int|None}.
+    Retorna {"titulo": str, "stream_url": str, "duracao_segundos": int|None,
+    "http_headers": dict} — os headers vão pro FFmpeg via opcoes_ffmpeg().
     """
     return youtube.resolver_stream(url)

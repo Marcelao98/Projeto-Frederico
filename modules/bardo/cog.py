@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import asyncio
 import logging
+import time
 
 import discord
 from discord import app_commands
@@ -37,6 +38,9 @@ class BardoCog(commands.Cog):
         # guild.id → canal de texto do último pedido, pra avisar "tocando agora"
         # quando a fila anda sozinha.
         self._canais_de_aviso: dict[int, discord.abc.Messageable] = {}
+        # guild.id de quem pulou/parou a música de propósito: aí uma música
+        # que acabou rápido não é falha pra tentar de novo.
+        self._interrompidas: set[int] = set()
 
     @commands.Cog.listener()
     async def on_message(self, message: discord.Message):
@@ -177,7 +181,7 @@ class BardoCog(commands.Cog):
             fila.tocando = musica
             try:
                 voice_client = await self._conectar(guild, canal)
-                self._tocar_stream(guild, voice_client, info["stream_url"])
+                self._tocar_stream(guild, voice_client, info, musica)
             except Exception:
                 fila.tocando = None
                 raise
@@ -227,19 +231,55 @@ class BardoCog(commands.Cog):
             await voice_client.move_to(canal)
         return voice_client
 
-    def _tocar_stream(self, guild: discord.Guild, voice_client: discord.VoiceClient, stream_url: str) -> None:
+    def _tocar_stream(
+        self,
+        guild: discord.Guild,
+        voice_client: discord.VoiceClient,
+        info: dict,
+        musica: service.Musica,
+        tentativa: int = 0,
+    ) -> None:
         fonte = discord.PCMVolumeTransformer(
-            discord.FFmpegPCMAudio(stream_url, **service.FFMPEG_OPTIONS),
+            discord.FFmpegPCMAudio(info["stream_url"], **service.opcoes_ffmpeg(info.get("http_headers"))),
             volume=self._volume(guild) / 100,
         )
+        inicio = time.monotonic()
+        self._interrompidas.discard(guild.id)
 
         def ao_terminar(erro: Exception | None) -> None:
             # Roda na thread do player do discord.py, não no event loop.
             if erro:
                 log.error("Bardo: erro tocando música", exc_info=erro)
-            asyncio.run_coroutine_threadsafe(self._tocar_proxima(guild), self.bot.loop)
+            interrompida = guild.id in self._interrompidas
+            self._interrompidas.discard(guild.id)
+            falhou = not interrompida and time.monotonic() - inicio < service.SEGUNDOS_PARA_FALHA_RAPIDA
+            asyncio.run_coroutine_threadsafe(self._depois_de_tocar(guild, musica, tentativa, falhou), self.bot.loop)
 
         voice_client.play(fonte, after=ao_terminar)
+
+    async def _depois_de_tocar(self, guild: discord.Guild, musica: service.Musica, tentativa: int, falhou: bool) -> None:
+        """Chamada quando uma música acaba: tenta de novo se ela falhou logo de cara, senão anda a fila."""
+        if not falhou:
+            await self._tocar_proxima(guild)
+            return
+
+        voice_client = guild.voice_client
+        # Se enquanto isso pararam ou trocaram a música, não tem o que refazer.
+        mesma_musica = self._fila(guild).tocando is musica
+        if tentativa == 0 and mesma_musica and voice_client is not None and voice_client.is_connected():
+            log.warning("Bardo: %s acabou logo de cara (YouTube recusou?), tentando de novo", musica.link)
+            try:
+                # URL nova: a anterior pode ter sido recusada de vez.
+                info = await asyncio.to_thread(service.resolver_musica, musica.link)
+                self._tocar_stream(guild, voice_client, info, musica, tentativa + 1)
+                return
+            except Exception:
+                log.exception("Bardo: falha ao tentar de novo %s", musica.link)
+
+        if mesma_musica:
+            log.error("Bardo: %s não tocou nem na segunda tentativa", musica.link)
+            await self._avisar(guild, f"O YouTube não deixou tocar **{escape_markdown(musica.titulo)}**, pulei.")
+        await self._tocar_proxima(guild)
 
     async def _tocar_proxima(self, guild: discord.Guild, avisar: bool = True) -> service.Musica | None:
         """Toca a próxima da fila, se tiver, e a devolve.
@@ -260,7 +300,7 @@ class BardoCog(commands.Cog):
 
             try:
                 info = await asyncio.to_thread(service.resolver_musica, musica.link)
-                self._tocar_stream(guild, voice_client, info["stream_url"])
+                self._tocar_stream(guild, voice_client, info, musica)
             except Exception:
                 log.exception("Bardo: falha ao tocar %s da fila", musica.link)
                 await self._avisar(guild, f"Não consegui tocar **{escape_markdown(musica.titulo)}**, pulei.")
@@ -284,6 +324,7 @@ class BardoCog(commands.Cog):
         if voice_client is None or not (voice_client.is_playing() or voice_client.is_paused()):
             return "Não tem nada tocando."
         tem_proxima = bool(self._fila(guild).proximas)
+        self._interrompidas.add(guild.id)
         voice_client.stop()  # o `after` do player chama _tocar_proxima
         return "Pulei ⏭️" if tem_proxima else "Pulei ⏭️ A fila acabou."
 
@@ -331,6 +372,8 @@ class BardoCog(commands.Cog):
         voice_client = guild.voice_client
         if voice_client is None:
             return "Não estou tocando nada."
+        if voice_client.is_playing() or voice_client.is_paused():
+            self._interrompidas.add(guild.id)
         voice_client.stop()
         await voice_client.disconnect()
         return "Parei ⏹️"
