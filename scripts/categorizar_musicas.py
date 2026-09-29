@@ -20,7 +20,7 @@ from modules.bardo.service import _DATASET_PATH, carregar_vocabulario, categoria
 _ORDEM = ["id", "nome", "link", "escopo", "origem", "temas", "categorias", "comentario_pessoal"]
 
 
-def _formatar(dataset: dict) -> str:
+def formatar_dataset(dataset: dict) -> str:
     """Mesmo formato do arquivo à mão: uma faixa por bloco, um campo por linha."""
     faixas = []
     for m in dataset["musicas"]:
@@ -39,7 +39,7 @@ def main() -> None:
         m["categorias"] = sorted(set(m.get("categorias", [])) | set(categorias_dos_temas(m["temas"], vocabulario)))
         if not m["categorias"]:
             sem_categoria.append(m["nome"])
-    _DATASET_PATH.write_text(_formatar(dataset), encoding="utf-8")
+    _DATASET_PATH.write_text(formatar_dataset(dataset), encoding="utf-8")
 
     print(f"{len(dataset['musicas'])} faixas categorizadas; {len(sem_categoria)} sem nenhuma categoria.")
     for nome in sem_categoria:
