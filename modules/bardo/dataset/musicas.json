@@ -4900,6 +4900,896 @@
       "temas": ["existencial", "filosófico", "melancólico", "drama pesado"],
       "categorias": ["dramatico", "triste"],
       "comentario_pessoal": "Fallback: mesmo caso do Umineko — pouca faixa avulsa confiável achada ainda."
+    },
+    {
+      "id": "hollow-knight-enter-hallownest",
+      "nome": "Enter Hallownest",
+      "link": "https://www.youtube.com/watch?v=243Uguc-6mQ",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["tema principal", "introdução", "épico", "orquestral"],
+      "categorias": ["abertura", "epico"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-crossroads",
+      "nome": "Crossroads",
+      "link": "https://www.youtube.com/watch?v=eX4de4BH5lM",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["exploração", "subterrâneo", "ruínas", "melancólico"],
+      "categorias": ["exploracao", "masmorra", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-false-knight",
+      "nome": "False Knight",
+      "link": "https://www.youtube.com/watch?v=vKDQNGDOdE4",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["boss fight", "batalha", "intenso", "dramático"],
+      "categorias": ["chefe", "combate", "dramatico", "emocionante"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-hornet",
+      "nome": "Hornet",
+      "link": "https://www.youtube.com/watch?v=7xkM8mWC4Kk",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["boss fight", "duelo", "frenético", "intenso"],
+      "categorias": ["chefe", "combate", "emocionante"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-reflection",
+      "nome": "Reflection",
+      "link": "https://www.youtube.com/watch?v=nC3Dd3eqZy8",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["descanso", "calmo", "introspectivo", "melancólico"],
+      "categorias": ["calmo", "descanso", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-mantis-lords",
+      "nome": "Mantis Lords",
+      "link": "https://www.youtube.com/watch?v=Lp5M2BAXwSo",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["boss fight", "duelo", "elegante", "nobre", "intenso"],
+      "categorias": ["chefe", "combate", "emocionante", "nobreza"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-dung-defender",
+      "nome": "Dung Defender",
+      "link": "https://www.youtube.com/watch?v=lkgHqBl12Cg",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["boss fight", "batalha", "cômico", "animado"],
+      "categorias": ["alegre", "chefe", "combate", "engracado"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-crystal-peak",
+      "nome": "Crystal Peak",
+      "link": "https://www.youtube.com/watch?v=DWKKsB0rD40",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["exploração", "subterrâneo", "místico", "atmosférico"],
+      "categorias": ["calmo", "exploracao", "magico", "masmorra"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-fungal-wastes",
+      "nome": "Fungal Wastes",
+      "link": "https://www.youtube.com/watch?v=fhUqu-g0pVY",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["exploração", "subterrâneo", "excêntrico", "atmosférico"],
+      "categorias": ["calmo", "engracado", "exploracao", "masmorra"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-decisive-battle",
+      "nome": "Decisive Battle",
+      "link": "https://www.youtube.com/watch?v=r7hCJIC_y6Q",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["boss fight", "batalha", "intenso", "urgente"],
+      "categorias": ["chefe", "combate", "emocionante", "tenso"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-soul-sanctum",
+      "nome": "Soul Sanctum",
+      "link": "https://www.youtube.com/watch?v=pvpCX9qtyZE",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["masmorra", "arcano", "sombrio", "tenso", "boss fight"],
+      "categorias": ["chefe", "combate", "magico", "masmorra", "sombrio", "tenso"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-resting-grounds",
+      "nome": "Resting Grounds",
+      "link": "https://www.youtube.com/watch?v=CgrBJDU2yvQ",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["sagrado", "morte", "contemplativo", "etéreo", "melancólico"],
+      "categorias": ["calmo", "magico", "sagrado", "sombrio", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-queens-gardens",
+      "nome": "Queen's Gardens",
+      "link": "https://www.youtube.com/watch?v=O_g-JmMfpF4",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["exploração", "natureza", "elegante", "melancólico"],
+      "categorias": ["exploracao", "natureza", "nobreza", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-the-white-lady",
+      "nome": "The White Lady",
+      "link": "https://www.youtube.com/watch?v=IOvO7OmxAqI",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["realeza", "solene", "trágico", "melancólico"],
+      "categorias": ["nobreza", "sagrado", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-broken-vessel",
+      "nome": "Broken Vessel",
+      "link": "https://www.youtube.com/watch?v=dyHn4980MPY",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["boss fight", "trágico", "sombrio", "desespero"],
+      "categorias": ["chefe", "combate", "sombrio", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-kingdoms-edge",
+      "nome": "Kingdom's Edge",
+      "link": "https://www.youtube.com/watch?v=XGcYPyZRyTY",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["exploração", "solitário", "frio", "melancólico"],
+      "categorias": ["exploracao", "natureza", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-nosk",
+      "nome": "Nosk",
+      "link": "https://www.youtube.com/watch?v=4wfAVkXxhEw",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["boss fight", "terror", "grotesco", "perturbador"],
+      "categorias": ["chefe", "combate", "terror"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-dream",
+      "nome": "Dream",
+      "link": "https://www.youtube.com/watch?v=oG_kxNhs1I8",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["onírico", "etéreo", "místico", "mistério"],
+      "categorias": ["magico", "misterio"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-dream-battle",
+      "nome": "Dream Battle",
+      "link": "https://www.youtube.com/watch?v=uAmgPYMY3o8",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["boss fight", "duelo", "onírico", "intenso"],
+      "categorias": ["chefe", "combate", "emocionante", "magico"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-white-palace",
+      "nome": "White Palace",
+      "link": "https://www.youtube.com/watch?v=4JWANCA-Pbw",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["castelo", "realeza", "etéreo", "masmorra"],
+      "categorias": ["magico", "masmorra", "nobreza"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-sealed-vessel",
+      "nome": "Sealed Vessel",
+      "link": "https://www.youtube.com/watch?v=ze0Rk-m0w2A",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["boss fight", "final", "clímax", "trágico", "épico"],
+      "categorias": ["chefe", "combate", "emocionante", "epico", "final", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-hollow-knight",
+      "nome": "Hollow Knight",
+      "link": "https://www.youtube.com/watch?v=r6PuACnHkNY",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["menu", "tema principal", "solene", "melancólico"],
+      "categorias": ["abertura", "sagrado", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-truth-beauty-and-hatred-hidden-dreams",
+      "nome": "Truth, Beauty and Hatred (Hollow Knight: Hidden Dreams)",
+      "link": "https://www.youtube.com/watch?v=zidGo704SvI",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["boss fight", "cômico", "teatral", "épico"],
+      "categorias": ["chefe", "combate", "dramatico", "engracado", "epico"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-white-defender-hidden-dreams",
+      "nome": "White Defender (Hollow Knight: Hidden Dreams)",
+      "link": "https://www.youtube.com/watch?v=EVuSps67I9w",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["boss fight", "heroico", "épico", "melancólico"],
+      "categorias": ["chefe", "combate", "epico", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-grimm-the-grimm-troupe",
+      "nome": "Grimm (Hollow Knight: The Grimm Troupe)",
+      "link": "https://www.youtube.com/watch?v=qmsjvBivRkU",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["boss fight", "duelo", "teatral", "elegante", "sombrio"],
+      "categorias": ["chefe", "combate", "dramatico", "engracado", "nobreza", "sombrio"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-nightmare-king-the-grimm-troupe",
+      "nome": "Nightmare King (Hollow Knight: The Grimm Troupe)",
+      "link": "https://www.youtube.com/watch?v=Mq8E_1LkoAc",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["boss fight", "difícil", "sombrio", "intenso", "clímax"],
+      "categorias": ["chefe", "combate", "emocionante", "epico", "final", "sombrio"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-hive-knight-gods-nightmares",
+      "nome": "Hive Knight (Hollow Knight: Gods & Nightmares)",
+      "link": "https://www.youtube.com/watch?v=RVyJmhiJjA8",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["boss fight", "batalha", "heroico", "intenso"],
+      "categorias": ["chefe", "combate", "emocionante", "epico"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-truth-beauty-and-hatred-gods-nightmares",
+      "nome": "Truth, Beauty and Hatred (Hollow Knight: Gods & Nightmares)",
+      "link": "https://www.youtube.com/watch?v=DayjA0isJLs",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["boss fight", "cômico", "teatral", "épico"],
+      "categorias": ["chefe", "combate", "dramatico", "engracado", "epico"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-nightmare-lantern-interlude-gods-nightmares",
+      "nome": "Nightmare Lantern Interlude (Hollow Knight: Gods & Nightmares)",
+      "link": "https://www.youtube.com/watch?v=-8N7Td5FtYs",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["presságio", "ritualístico", "sombrio", "mistério"],
+      "categorias": ["magico", "misterio", "sombrio", "tenso"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-the-grimm-troupe-gods-nightmares",
+      "nome": "The Grimm Troupe (Hollow Knight: Gods & Nightmares)",
+      "link": "https://www.youtube.com/watch?v=Xnc4wSuKvuo",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["boss fight", "duelo", "teatral", "elegante", "sombrio"],
+      "categorias": ["chefe", "combate", "dramatico", "engracado", "nobreza", "sombrio"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-nightmare-king-gods-nightmares",
+      "nome": "Nightmare King (Hollow Knight: Gods & Nightmares)",
+      "link": "https://www.youtube.com/watch?v=GGhZsiRCvYc",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["boss fight", "difícil", "sombrio", "intenso", "clímax"],
+      "categorias": ["chefe", "combate", "emocionante", "epico", "final", "sombrio"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-white-defender-gods-nightmares",
+      "nome": "White Defender (Hollow Knight: Gods & Nightmares)",
+      "link": "https://www.youtube.com/watch?v=5ioNwM3nxmQ",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["boss fight", "heroico", "épico", "melancólico"],
+      "categorias": ["chefe", "combate", "epico", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-dreamers-gods-nightmares",
+      "nome": "Dreamers (Hollow Knight: Gods & Nightmares)",
+      "link": "https://www.youtube.com/watch?v=4tFRd79Ukb8",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["onírico", "etéreo", "contemplativo", "melancólico"],
+      "categorias": ["calmo", "magico", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-pale-court-gods-nightmares",
+      "nome": "Pale Court (Hollow Knight: Gods & Nightmares)",
+      "link": "https://www.youtube.com/watch?v=LCYP9L2FfQg",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["realeza", "castelo", "orquestral", "grandioso"],
+      "categorias": ["epico", "nobreza"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-gods-glory-gods-nightmares",
+      "nome": "Gods & Glory (Hollow Knight: Gods & Nightmares)",
+      "link": "https://www.youtube.com/watch?v=UjBTtNU27Ec",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["boss fight", "sagrado", "coral", "grandioso", "épico"],
+      "categorias": ["chefe", "combate", "epico", "sagrado"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-daughter-of-hallownest-gods-nightmares",
+      "nome": "Daughter of Hallownest (Hollow Knight: Gods & Nightmares)",
+      "link": "https://www.youtube.com/watch?v=o5_nMrARi-k",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["boss fight", "duelo", "difícil", "épico"],
+      "categorias": ["chefe", "combate", "epico"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-godhome-gods-nightmares",
+      "nome": "Godhome (Hollow Knight: Gods & Nightmares)",
+      "link": "https://www.youtube.com/watch?v=NTDpg_N6WRI",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["hub", "sagrado", "etéreo", "solene"],
+      "categorias": ["cidade", "descanso", "magico", "sagrado"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-sisters-of-battle-gods-nightmares",
+      "nome": "Sisters of Battle (Hollow Knight: Gods & Nightmares)",
+      "link": "https://www.youtube.com/watch?v=4yxgEsS8ogM",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["boss fight", "duelo", "difícil", "elegante", "intenso"],
+      "categorias": ["chefe", "combate", "emocionante", "nobreza"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-haunted-foes-gods-nightmares",
+      "nome": "Haunted Foes (Hollow Knight: Gods & Nightmares)",
+      "link": "https://www.youtube.com/watch?v=pqpdrTRZX0Y",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["boss fight", "difícil", "sombrio", "perturbador"],
+      "categorias": ["chefe", "combate", "sombrio", "terror"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-furious-gods-gods-nightmares",
+      "nome": "Furious Gods (Hollow Knight: Gods & Nightmares)",
+      "link": "https://www.youtube.com/watch?v=ut_RjDGUJoY",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["boss fight", "batalha", "difícil", "frenético"],
+      "categorias": ["chefe", "combate"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-pure-vessel-gods-nightmares",
+      "nome": "Pure Vessel (Hollow Knight: Gods & Nightmares)",
+      "link": "https://www.youtube.com/watch?v=35pUQDrKy5A",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["boss fight", "duelo", "difícil", "trágico", "épico"],
+      "categorias": ["chefe", "combate", "epico", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-lace-silksong-ost-sample",
+      "nome": "Lace (Silksong OST Sample)",
+      "link": "https://www.youtube.com/watch?v=zRs58D34OLY",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["boss fight", "duelo", "elegante", "intenso"],
+      "categorias": ["chefe", "combate", "emocionante", "nobreza"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "hollow-knight-bonebottom-silksong-ost-sample",
+      "nome": "Bonebottom (Silksong OST Sample)",
+      "link": "https://www.youtube.com/watch?v=e6b-lWhn8pg",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+      "temas": ["cidade", "hub", "calmo", "melancólico"],
+      "categorias": ["calmo", "cidade", "descanso", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-significance-nothing-jnique-nicole",
+      "nome": "Significance - Nothing - J’Nique Nicole",
+      "link": "https://www.youtube.com/watch?v=GqQ91CcPYtU",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["menu", "vocal", "melancólico", "contemplativo"],
+      "categorias": ["abertura", "calmo", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-city-ruins-rays-of-light",
+      "nome": "City Ruins - Rays of Light",
+      "link": "https://www.youtube.com/watch?v=LC5HsZt4oNc",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["exploração", "ruínas", "vocal", "sereno", "melancólico"],
+      "categorias": ["calmo", "exploracao", "masmorra", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-peaceful-sleep",
+      "nome": "Peaceful Sleep",
+      "link": "https://www.youtube.com/watch?v=5sN6hsuMH5Q",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["hub", "descanso", "acolhedor", "vocal", "calmo"],
+      "categorias": ["calmo", "cidade", "descanso"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-memories-of-dust",
+      "nome": "Memories of Dust",
+      "link": "https://www.youtube.com/watch?v=aGTI8MKn7A0",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["exploração", "solitário", "atmosférico", "melancólico"],
+      "categorias": ["calmo", "exploracao", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-birth-of-a-wish",
+      "nome": "Birth of a Wish",
+      "link": "https://www.youtube.com/watch?v=xDiKoRfelnU",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["boss fight", "batalha", "intenso", "dramático"],
+      "categorias": ["chefe", "combate", "dramatico", "emocionante"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-the-color-of-depression",
+      "nome": "The Color of Depression",
+      "link": "https://www.youtube.com/watch?v=_60D5x0fUP4",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["não classificado"],
+      "categorias": [],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-amusement-park",
+      "nome": "Amusement Park",
+      "link": "https://www.youtube.com/watch?v=aCmtbciKbHI",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["exploração", "vocal", "excêntrico", "teatral", "alegre"],
+      "categorias": ["alegre", "dramatico", "engracado", "exploracao"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-a-beautiful-song",
+      "nome": "A Beautiful Song",
+      "link": "https://www.youtube.com/watch?v=LDkVtoq5bIQ",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["boss fight", "vocal", "teatral", "insano", "perturbador"],
+      "categorias": ["chefe", "combate", "dramatico", "engracado", "terror"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-voice-of-no-return-guitar",
+      "nome": "Voice of no Return - Guitar",
+      "link": "https://www.youtube.com/watch?v=gRUCHtB_JlI",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["cotidiano", "contemplativo", "melancólico"],
+      "categorias": ["calmo", "cidade", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-grandma-destruction",
+      "nome": "Grandma - Destruction",
+      "link": "https://www.youtube.com/watch?v=ca1lRiswzbA",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["boss fight", "batalha", "vocal", "caótico", "intenso"],
+      "categorias": ["chefe", "combate", "emocionante", "tenso"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-faltering-prayer-dawn-breeze",
+      "nome": "Faltering Prayer - Dawn Breeze",
+      "link": "https://www.youtube.com/watch?v=ssM6Tl19PJU",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["não classificado"],
+      "categorias": [],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-emils-shop",
+      "nome": "Emil's Shop",
+      "link": "https://www.youtube.com/watch?v=aYFCqIXAgM8",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["mercado", "cotidiano", "excêntrico", "leve"],
+      "categorias": ["alegre", "calmo", "cidade", "engracado"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-treasured-times",
+      "nome": "Treasured Times",
+      "link": "https://www.youtube.com/watch?v=coe8gEbHGeQ",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["não classificado"],
+      "categorias": [],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-vague-hope-cold-rain",
+      "nome": "Vague Hope - Cold Rain",
+      "link": "https://www.youtube.com/watch?v=Ez_c6qJkcbg",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["final", "chuva", "triste", "melancólico"],
+      "categorias": ["final", "natureza", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-weight-of-the-world-english-version-jnique-nicole",
+      "nome": "Weight of the World English Version - J’Nique Nicole",
+      "link": "https://www.youtube.com/watch?v=Yza2l5sWYzg",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["final", "vocal", "melancólico", "esperançoso"],
+      "categorias": ["esperancoso", "final", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-significance-marina-kawano-emi-evans",
+      "nome": "Significance - Marina Kawano - Emi Evans",
+      "link": "https://www.youtube.com/watch?v=nHI75csRt7Y",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["menu", "vocal", "melancólico", "contemplativo"],
+      "categorias": ["abertura", "calmo", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-city-ruins-shade",
+      "nome": "City Ruins - Shade",
+      "link": "https://www.youtube.com/watch?v=_v4lMOzrgLk",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["exploração", "ruínas", "sombrio", "melancólico"],
+      "categorias": ["exploracao", "masmorra", "sombrio", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-end-of-the-unknown",
+      "nome": "End of the Unknown",
+      "link": "https://www.youtube.com/watch?v=Lxpdims9rtA",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["boss fight", "batalha", "tecnológico", "intenso"],
+      "categorias": ["chefe", "combate", "emocionante"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-voice-of-no-return-normal",
+      "nome": "Voice of no Return - Normal",
+      "link": "https://www.youtube.com/watch?v=-jcAW-Hh7oo",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["cotidiano", "contemplativo", "melancólico"],
+      "categorias": ["calmo", "cidade", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-pascal",
+      "nome": "Pascal",
+      "link": "https://www.youtube.com/watch?v=6nEdbqGdeIU",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["cidade", "hub", "acolhedor", "calmo"],
+      "categorias": ["calmo", "cidade", "descanso"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-forest-kingdom",
+      "nome": "Forest Kingdom",
+      "link": "https://www.youtube.com/watch?v=ciGudNp4B5c",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["exploração", "natureza", "cavaleiresco", "realeza"],
+      "categorias": ["epico", "exploracao", "natureza", "nobreza"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-dark-colossus-kaiju",
+      "nome": "Dark Colossus - Kaiju",
+      "link": "https://www.youtube.com/watch?v=_R84rgyNuj4",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["boss fight", "batalha", "imponente", "grandioso"],
+      "categorias": ["chefe", "combate", "epico", "vilao"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-copied-city",
+      "nome": "Copied City",
+      "link": "https://www.youtube.com/watch?v=bwsRRx69mOE",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["masmorra", "mistério", "etéreo", "perturbador"],
+      "categorias": ["magico", "masmorra", "misterio", "terror"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-wretched-weaponry-medium-dynamic",
+      "nome": "Wretched Weaponry: Medium/Dynamic",
+      "link": "https://www.youtube.com/watch?v=wanAbsG1o0I",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["boss fight", "batalha", "tenso", "intenso"],
+      "categorias": ["chefe", "combate", "emocionante", "tenso"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-possessed-by-disease",
+      "nome": "Possessed by Disease",
+      "link": "https://www.youtube.com/watch?v=onB8RNtnk90",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["boss fight", "coral", "sombrio", "insano"],
+      "categorias": ["chefe", "combate", "epico", "sagrado", "sombrio", "terror"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-broken-heart",
+      "nome": "Broken Heart",
+      "link": "https://www.youtube.com/watch?v=OSHOgTBYShk",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["triste", "trágico", "perturbador", "melancólico"],
+      "categorias": ["terror", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-wretched-weaponry-quiet",
+      "nome": "Wretched Weaponry: Quiet",
+      "link": "https://www.youtube.com/watch?v=aUodoL89SFo",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["tenso", "suspense", "sombrio"],
+      "categorias": ["sombrio", "tenso"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-mourning",
+      "nome": "Mourning",
+      "link": "https://www.youtube.com/watch?v=s_v9bk9afZM",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["luto", "despedida", "trágico", "final"],
+      "categorias": ["final", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-dependent-weakling",
+      "nome": "Dependent Weakling",
+      "link": "https://www.youtube.com/watch?v=lHEVK6LIA3s",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["boss fight", "clímax", "raiva", "desespero", "trágico"],
+      "categorias": ["chefe", "combate", "emocionante", "epico", "final", "triste", "vilao"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-weight-of-the-world-kowaretasekainouta-marina-kawano",
+      "nome": "Weight of the World Kowaretasekainouta - Marina Kawano",
+      "link": "https://www.youtube.com/watch?v=f1-eY31Bw7A",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["final", "vocal", "melancólico", "esperançoso"],
+      "categorias": ["esperancoso", "final", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-rebirth-hope",
+      "nome": "Rebirth & Hope",
+      "link": "https://www.youtube.com/watch?v=C45lbXjouQc",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["não classificado"],
+      "categorias": [],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-war-war",
+      "nome": "War & War",
+      "link": "https://www.youtube.com/watch?v=o0NivjyvEM8",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["não classificado"],
+      "categorias": [],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-crumbling-lies-front",
+      "nome": "Crumbling Lies - Front",
+      "link": "https://www.youtube.com/watch?v=a9HnAGe_jSI",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["apocalíptico", "destruição", "urgente", "trágico"],
+      "categorias": ["sombrio", "tenso", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-widespread-illness",
+      "nome": "Widespread Illness",
+      "link": "https://www.youtube.com/watch?v=qGwIvGb0zQA",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["não classificado"],
+      "categorias": [],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-fortress-of-lies",
+      "nome": "Fortress of Lies",
+      "link": "https://www.youtube.com/watch?v=YqW4_VEIttY",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["hub", "tecnológico", "militar", "frio"],
+      "categorias": ["cidade", "combate", "descanso", "natureza"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-vague-hope-spring-rain",
+      "nome": "Vague Hope - Spring Rain",
+      "link": "https://www.youtube.com/watch?v=thXrsik0_TY",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["não classificado"],
+      "categorias": [],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-song-of-the-ancients-atonement",
+      "nome": "Song of the Ancients - Atonement",
+      "link": "https://www.youtube.com/watch?v=wgwDwu7uxF8",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["batalha", "vocal", "dramático", "emocionante"],
+      "categorias": ["combate", "dramatico", "emocionante"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-blissful-death",
+      "nome": "Blissful Death",
+      "link": "https://www.youtube.com/watch?v=rlESx_FjNmg",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["não classificado"],
+      "categorias": [],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-emil-despair",
+      "nome": "Emil - Despair",
+      "link": "https://www.youtube.com/watch?v=_gIlIOasfG4",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["boss fight", "épico", "desespero", "intenso"],
+      "categorias": ["chefe", "combate", "emocionante", "epico", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-faltering-prayer-starry-sky",
+      "nome": "Faltering Prayer - Starry Sky",
+      "link": "https://www.youtube.com/watch?v=SyN2pV7IMdk",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["não classificado"],
+      "categorias": [],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-alien-manifestation",
+      "nome": "Alien Manifestation",
+      "link": "https://www.youtube.com/watch?v=jzwJG9StBBA",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["masmorra", "mistério", "sombrio", "tecnológico"],
+      "categorias": ["masmorra", "misterio", "sombrio"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-the-tower",
+      "nome": "The Tower",
+      "link": "https://www.youtube.com/watch?v=1v4qfKJtVsY",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["masmorra", "final", "coral", "épico"],
+      "categorias": ["epico", "final", "masmorra", "sagrado"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-bipolar-nightmare",
+      "nome": "Bipolar Nightmare",
+      "link": "https://www.youtube.com/watch?v=btQBL-8fM3U",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["boss fight", "batalha", "intenso", "dramático"],
+      "categorias": ["chefe", "combate", "dramatico", "emocionante"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-the-sound-of-the-end",
+      "nome": "The Sound of the End",
+      "link": "https://www.youtube.com/watch?v=fV8k7U1ZgLc",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["boss fight", "final", "clímax", "épico"],
+      "categorias": ["chefe", "combate", "emocionante", "epico", "final"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-weight-of-the-world-nouveau-fr-version-emi-evans",
+      "nome": "Weight of the World Nouveau - FR Version - Emi Evans",
+      "link": "https://www.youtube.com/watch?v=ifDWI3YbDDk",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["final", "vocal", "melancólico", "esperançoso"],
+      "categorias": ["esperancoso", "final", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "nier-automata-weight-of-the-world-the-end-of-yorha",
+      "nome": "Weight of the World the End of YoRHa",
+      "link": "https://www.youtube.com/watch?v=blCGwwQVXYg",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Nier: Automata", "tipo": "jogo"},
+      "temas": ["final", "vocal", "coral", "esperançoso", "emocionante"],
+      "categorias": ["dramatico", "emocionante", "epico", "esperancoso", "final", "sagrado"],
+      "comentario_pessoal": ""
     }
   ]
 }
