@@ -6,14 +6,19 @@ Reconhece pedidos de música em linguagem natural ("natty toca <link>",
 nenhuma dependência de discord.py, pra qualquer outro módulo (inclusive um
 futuro módulo de LLM) poder chamar direto.
 
-A busca por tags, dataset local e playlist dinâmica ficam para depois.
+"natty toca <tema>" sem link vira busca booleana no dataset local
+(dataset/musicas.json): "natty toca triste e bloodborne".
 """
 
 from __future__ import annotations
 
+import json
+import random
 import re
+import unicodedata
 from collections import deque
 from dataclasses import dataclass
+from pathlib import Path
 
 from modules.bardo import youtube
 
@@ -61,6 +66,8 @@ class Pedido:
     acao: "tocar", "pausar", "continuar", "parar", "volume", "pular", "fila"
         ou "limpar_fila".
     link: só em "tocar"; None se pediram pra tocar sem mandar link.
+    busca: só em "tocar" sem link; o que vem depois do verbo ("triste e
+        bloodborne"), pra buscar_musicas(). None se não sobrou nada.
     volume: só em "volume"; valor absoluto (0-100) pedido.
     delta_volume: só em "volume"; +/-PASSO_VOLUME para "aumenta"/"abaixa".
     Em "volume" sem número nem direção, os dois ficam None (é pergunta).
@@ -68,6 +75,7 @@ class Pedido:
 
     acao: str
     link: str | None = None
+    busca: str | None = None
     volume: int | None = None
     delta_volume: int | None = None
 
@@ -112,7 +120,10 @@ def interpretar_pedido(texto: str) -> Pedido | None:
     if parar and not (tocar and tocar.start() < parar.start()):
         return Pedido("parar")
     if tocar:
-        return Pedido("tocar", link=None)
+        # A menção (<@id>) e o nome da Natty vêm antes do verbo, então o que
+        # sobra depois dele é só a busca.
+        busca = sem_link[tocar.end():].strip(" \t\n,.!?:;")
+        return Pedido("tocar", busca=busca or None)
     return None
 
 
@@ -175,6 +186,13 @@ class Fila:
         self._proximas.append(musica)
         return len(self._proximas)
 
+    def adicionar_varias(self, musicas: list[Musica]) -> int:
+        """Põe no fim da fila as que couberem (até MAX_FILA) e devolve quantas entraram."""
+        cabem = MAX_FILA - len(self._proximas)
+        entram = musicas[: max(cabem, 0)]
+        self._proximas.extend(entram)
+        return len(entram)
+
     def avancar(self) -> Musica | None:
         """Passa pra próxima música (que vira a `tocando`) e a devolve; None se acabou."""
         self.tocando = self._proximas.popleft() if self._proximas else None
@@ -190,6 +208,125 @@ class Fila:
         """Esvazia tudo, inclusive a atual."""
         self.limpar()
         self.tocando = None
+
+
+# ---------------------------------------------------------------------------
+# Dataset e busca booleana em linguagem natural
+#
+# Query como "triste e bloodborne" ou "boss fight e elden ring ou hollow
+# knight" ou "calmo e fire emblem sem batalha" (sem = exclui o termo).
+# "e" combina (AND), "ou" separa grupos alternativos (OR), "sem"/"não" na
+# frente de um termo nega ele. O "ou" tem precedência menor: "a e b ou c"
+# é "(a e b) ou c". Cada termo é comparado (substring, sem acento) contra
+# nome da faixa + nome/tipo da origem + temas da faixa.
+# ---------------------------------------------------------------------------
+
+_DATASET_PATH = Path(__file__).parent / "dataset" / "musicas.json"
+
+# Se a busca achar mais que isso, sorteia: algumas franquias do dataset têm
+# 200+ faixas, e enfileirar tudo prenderia a mesa numa franquia por horas.
+MAX_RESULTADOS_DA_BUSCA = 15
+
+_FILLER_WORDS = {
+    "musica", "música", "som", "sons", "faixa", "algo", "alguma", "algum",
+    "uma", "um", "de", "do", "da", "dos", "das", "a", "o",
+}
+
+_dataset_cache: list[dict] | None = None
+
+
+def carregar_dataset(caminho: Path | None = None) -> list[dict]:
+    """Carrega (com cache em memória) o dataset de músicas taggeadas."""
+    global _dataset_cache
+    if caminho is not None:
+        # Uso principalmente em teste: não usa o cache global.
+        with open(caminho, encoding="utf-8") as f:
+            return json.load(f)["musicas"]
+    if _dataset_cache is None:
+        with open(_DATASET_PATH, encoding="utf-8") as f:
+            _dataset_cache = json.load(f)["musicas"]
+    return _dataset_cache
+
+
+def _normalizar(texto: str) -> str:
+    """minúsculas, sem acento — pra 'É Pico' bater com 'epico'."""
+    texto = texto.lower().strip()
+    texto = unicodedata.normalize("NFD", texto)
+    return "".join(c for c in texto if unicodedata.category(c) != "Mn")
+
+
+def _texto_buscavel(musica: dict) -> str:
+    partes = [musica["nome"], musica["origem"]["nome"], musica["origem"]["tipo"], *musica["temas"]]
+    return _normalizar(" ".join(partes))
+
+
+def _parse_query(texto: str) -> list[list[tuple[bool, str]]]:
+    """'triste e bloodborne ou calmo sem triste' ->
+    [[(F,'triste'),(F,'bloodborne')], [(F,'calmo'),(T,'triste')]]
+
+    Formato: lista de grupos OR; cada grupo é uma lista de termos AND,
+    cada termo é (negado: bool, termo: str). 'e' separa termo normal,
+    'sem'/'nao' separa termo negado — ambos funcionam como ponto de corte
+    dentro do grupo (não precisam vir logo no início dele).
+    """
+    texto = _normalizar(texto)
+    grupos = []
+    for bruto_ou in re.split(r"\bou\b", texto):
+        # captura o separador junto: ['termo0', 'e'|'sem'|'nao', 'termo1', ...]
+        pedacos = re.split(r"\b(e|sem|nao)\b", bruto_ou)
+        termos = []
+        negado_atual = False
+        for pedaco in pedacos:
+            pedaco = pedaco.strip()
+            if pedaco in ("e", "sem", "nao"):
+                negado_atual = pedaco in ("sem", "nao")
+                continue
+            palavras = [p for p in pedaco.split() if p not in _FILLER_WORDS]
+            termo_limpo = " ".join(palavras).strip()
+            if termo_limpo:
+                termos.append((negado_atual, termo_limpo))
+            negado_atual = False
+        if termos:
+            grupos.append(termos)
+    return grupos
+
+
+def _termo_bate(alvo: str, negado: bool, termo: str) -> bool:
+    contido = termo in alvo
+    return (not contido) if negado else contido
+
+
+def _musica_bate(alvo: str, grupos_ou: list[list[tuple[bool, str]]]) -> bool:
+    return any(
+        all(_termo_bate(alvo, negado, termo) for negado, termo in grupo_and)
+        for grupo_and in grupos_ou
+    )
+
+
+def buscar_por_tags(texto_busca: str, dataset: list[dict] | None = None) -> list[dict]:
+    """Busca booleana em linguagem natural no dataset de músicas.
+
+    Retorna as entradas do dataset que batem com a query; lista vazia se
+    nada bate ou se a query só tinha palavras de preenchimento.
+    """
+    grupos = _parse_query(texto_busca)
+    if not grupos:
+        return []
+    musicas = dataset if dataset is not None else carregar_dataset()
+    return [m for m in musicas if _musica_bate(_texto_buscavel(m), grupos)]
+
+
+def buscar_musicas(texto_busca: str, dataset: list[dict] | None = None) -> tuple[list[Musica], int]:
+    """buscar_por_tags() já no formato da fila, sorteando até MAX_RESULTADOS_DA_BUSCA.
+
+    Devolve (músicas escolhidas, quantas bateram no total).
+    """
+    resultados = buscar_por_tags(texto_busca, dataset)
+    if len(resultados) > MAX_RESULTADOS_DA_BUSCA:
+        escolhidas = random.sample(resultados, MAX_RESULTADOS_DA_BUSCA)
+    else:
+        escolhidas = resultados
+    return [Musica(m["nome"], m["link"]) for m in escolhidas], len(resultados)
 
 
 def extrair_link_youtube(texto: str) -> str | None:

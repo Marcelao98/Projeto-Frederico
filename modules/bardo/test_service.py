@@ -1,5 +1,5 @@
 """
-Testes do reconhecimento de pedidos do Bardo. Da raiz do projeto:
+Testes do serviço do Bardo (pedidos, fila, busca). Da raiz do projeto:
     python -m unittest discover -s modules/bardo -t .
 """
 
@@ -15,9 +15,14 @@ from modules.bardo.service import (  # noqa: E402
     Fila,
     FilaCheia,
     Musica,
+    MAX_RESULTADOS_DA_BUSCA,
     Pedido,
+    buscar_musicas,
+    buscar_por_tags,
+    carregar_dataset,
     chamou_a_natty,
     interpretar_pedido,
+    extrair_link_youtube,
     novo_volume,
 )
 
@@ -46,8 +51,14 @@ class Tocar(unittest.TestCase):
         link = "https://youtu.be/dQw4w9WgXcQ?si=abc&list=PL123"
         self.assertEqual(interpretar_pedido(f"natty toca {link}"), Pedido("tocar", link=link))
 
-    def test_sem_link_pede_link(self):
-        self.assertEqual(interpretar_pedido("natty toca uma música de taverna"), Pedido("tocar"))
+    def test_sem_link_vira_busca(self):
+        self.assertEqual(
+            interpretar_pedido("natty toca triste e bloodborne"), Pedido("tocar", busca="triste e bloodborne")
+        )
+        self.assertEqual(interpretar_pedido("<@123> play boss fight!"), Pedido("tocar", busca="boss fight"))
+
+    def test_sem_link_nem_busca(self):
+        self.assertEqual(interpretar_pedido("natty toca"), Pedido("tocar"))
 
     def test_para_na_frase_nao_para(self):
         self.assertEqual(interpretar_pedido(f"natty toca essa para mim {LINK}"), Pedido("tocar", link=LINK))
@@ -55,7 +66,7 @@ class Tocar(unittest.TestCase):
     def test_para_na_frase_sem_link_nao_para(self):
         for texto in ["natty toca uma música para relaxar", "natty bota algo de taverna para o combate"]:
             with self.subTest(texto=texto):
-                self.assertEqual(interpretar_pedido(texto), Pedido("tocar"))
+                self.assertEqual(interpretar_pedido(texto).acao, "tocar")
 
 
 class Controles(unittest.TestCase):
@@ -142,6 +153,13 @@ class FilaDeMusicas(unittest.TestCase):
         with self.assertRaises(FilaCheia):
             fila.adicionar(_musica(MAX_FILA))
 
+    def test_adicionar_varias_ate_o_limite(self):
+        fila = Fila()
+        fila.adicionar(_musica(0))
+        self.assertEqual(fila.adicionar_varias([_musica(n) for n in range(1, MAX_FILA + 5)]), MAX_FILA - 1)
+        self.assertEqual(len(fila.proximas), MAX_FILA)
+        self.assertEqual(fila.adicionar_varias([_musica(999)]), 0)
+
 
 class Volume(unittest.TestCase):
     def test_absoluto(self):
@@ -164,6 +182,118 @@ class Volume(unittest.TestCase):
         self.assertEqual(novo_volume(90, Pedido("volume", delta_volume=PASSO_VOLUME)), 100)
         self.assertEqual(novo_volume(10, Pedido("volume", delta_volume=-PASSO_VOLUME)), 0)
         self.assertEqual(novo_volume(40, Pedido("volume")), 40)
+
+
+_DATASET_TESTE = [
+    {
+        "id": "bloodborne-cleric-beast",
+        "nome": "Cleric Beast",
+        "link": "https://www.youtube.com/watch?v=aaa",
+        "escopo": "faixa_individual",
+        "origem": {"nome": "Bloodborne", "tipo": "jogo"},
+        "temas": ["boss fight", "terror", "opressivo"],
+        "comentario_pessoal": "",
+    },
+    {
+        "id": "bloodborne-dream-refuge",
+        "nome": "Dream Refuge (Character Creation)",
+        "link": "https://www.youtube.com/watch?v=bbb",
+        "escopo": "faixa_individual",
+        "origem": {"nome": "Bloodborne", "tipo": "jogo"},
+        "temas": ["calmo", "hub", "atmosférico"],
+        "comentario_pessoal": "",
+    },
+    {
+        "id": "hollow-knight-greenpath",
+        "nome": "Greenpath",
+        "link": "https://www.youtube.com/watch?v=ccc",
+        "escopo": "faixa_individual",
+        "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+        "temas": ["exploração", "sereno", "calmo"],
+        "comentario_pessoal": "",
+    },
+    {
+        "id": "hollow-knight-radiance",
+        "nome": "Radiance (Final Boss)",
+        "link": "https://www.youtube.com/watch?v=ddd",
+        "escopo": "faixa_individual",
+        "origem": {"nome": "Hollow Knight", "tipo": "jogo"},
+        "temas": ["boss fight", "épico", "coral"],
+        "comentario_pessoal": "",
+    },
+]
+
+
+class TestBuscaBooleana(unittest.TestCase):
+    def test_busca_por_tema_simples(self):
+        r = buscar_por_tags("terror", dataset=_DATASET_TESTE)
+        self.assertEqual([m["id"] for m in r], ["bloodborne-cleric-beast"])
+
+    def test_busca_and_tema_e_origem(self):
+        r = buscar_por_tags("calmo e hollow knight", dataset=_DATASET_TESTE)
+        self.assertEqual([m["id"] for m in r], ["hollow-knight-greenpath"])
+
+    def test_busca_and_nao_bate_quando_falta_um_termo(self):
+        r = buscar_por_tags("terror e hollow knight", dataset=_DATASET_TESTE)
+        self.assertEqual(r, [])
+
+    def test_busca_or_junta_dois_grupos(self):
+        r = buscar_por_tags("terror ou epico", dataset=_DATASET_TESTE)
+        ids = {m["id"] for m in r}
+        self.assertEqual(ids, {"bloodborne-cleric-beast", "hollow-knight-radiance"})
+
+    def test_busca_negacao_com_sem(self):
+        r = buscar_por_tags("bloodborne sem terror", dataset=_DATASET_TESTE)
+        self.assertEqual([m["id"] for m in r], ["bloodborne-dream-refuge"])
+
+    def test_busca_ignora_palavras_de_preenchimento(self):
+        # "musica" e "de" não devem virar termo obrigatório que não bate com nada
+        r = buscar_por_tags("uma musica de boss fight", dataset=_DATASET_TESTE)
+        ids = {m["id"] for m in r}
+        self.assertEqual(ids, {"bloodborne-cleric-beast", "hollow-knight-radiance"})
+
+    def test_busca_ignora_acento_e_maiuscula(self):
+        r = buscar_por_tags("ÉPICO", dataset=_DATASET_TESTE)
+        self.assertEqual([m["id"] for m in r], ["hollow-knight-radiance"])
+
+    def test_busca_por_nome_da_faixa(self):
+        r = buscar_por_tags("greenpath", dataset=_DATASET_TESTE)
+        self.assertEqual([m["id"] for m in r], ["hollow-knight-greenpath"])
+
+    def test_busca_vazia_retorna_lista_vazia(self):
+        self.assertEqual(buscar_por_tags("", dataset=_DATASET_TESTE), [])
+        self.assertEqual(buscar_por_tags("musica de", dataset=_DATASET_TESTE), [])
+
+    def test_busca_sem_resultado(self):
+        self.assertEqual(buscar_por_tags("dark souls", dataset=_DATASET_TESTE), [])
+
+    def test_or_tem_precedencia_menor_que_e(self):
+        # "boss fight e bloodborne ou greenpath" = (boss fight e bloodborne) ou greenpath
+        r = buscar_por_tags("boss fight e bloodborne ou greenpath", dataset=_DATASET_TESTE)
+        self.assertEqual({m["id"] for m in r}, {"bloodborne-cleric-beast", "hollow-knight-greenpath"})
+
+
+class BuscarMusicas(unittest.TestCase):
+    def test_vira_musica_da_fila(self):
+        musicas, achadas = buscar_musicas("greenpath", dataset=_DATASET_TESTE)
+        self.assertEqual(musicas, [Musica("Greenpath", "https://www.youtube.com/watch?v=ccc")])
+        self.assertEqual(achadas, 1)
+
+    def test_sorteia_quando_acha_demais(self):
+        dataset = [dict(_DATASET_TESTE[0], nome=f"Faixa {n}") for n in range(MAX_RESULTADOS_DA_BUSCA + 5)]
+        musicas, achadas = buscar_musicas("terror", dataset=dataset)
+        self.assertEqual(len(musicas), MAX_RESULTADOS_DA_BUSCA)
+        self.assertEqual(achadas, MAX_RESULTADOS_DA_BUSCA + 5)
+        self.assertEqual(len(set(musicas)), MAX_RESULTADOS_DA_BUSCA)
+
+    def test_dataset_de_producao(self):
+        musicas = carregar_dataset()
+        self.assertGreater(len(musicas), 0)
+        for m in musicas:
+            with self.subTest(id=m.get("id")):
+                for campo in ("nome", "link", "origem", "temas"):
+                    self.assertIn(campo, m)
+                self.assertIsNotNone(extrair_link_youtube(m["link"]))
 
 
 if __name__ == "__main__":

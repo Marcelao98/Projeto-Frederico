@@ -1,12 +1,14 @@
-# Módulo Bardo — tocar música do YouTube
+# Módulo Bardo — música do YouTube, por link ou por busca
 
-**Status:** ✅ Em produção desde 2026-09-27 · tocar, fila, pausar, continuar, parar e volume
+**Status:** ✅ Em produção desde 2026-09-27 · tocar, fila, pausar, continuar, parar e volume.
+Busca booleana no dataset: implementada e testada (lógica pura), ainda não validada no Discord.
 
 ## O que faz, hoje
 
 A Natty reconhece pedidos de música em linguagem natural — igual ao
 módulo Dice reconhece "1d20 com vantagem" em vez de exigir um comando
-formal — e toca o link do YouTube no canal de voz de quem pediu.
+formal — e toca no canal de voz de quem pediu, a partir de um link do
+YouTube ou de uma busca por tema/origem no dataset local.
 
 O pedido precisa ser dirigido à Natty: começar com o nome dela ("natty",
 "ei natty") ou mencioná-la (o usuário @Natty ou o cargo automático @Natty,
@@ -14,7 +16,8 @@ que o Discord oferece com o mesmo nome).
 
 | Ação | Exemplos | Slash command |
 |------|----------|---------------|
-| Tocar (ou pôr na fila) | `natty toca <link>`, `@Natty bota <link>`, `natty adiciona <link>` | `/tocar link:<link>` |
+| Tocar (ou pôr na fila) | `natty toca <link>`, `@Natty bota <link>`, `natty adiciona <link>` | `/tocar pedido:<link>` |
+| Buscar no dataset | `natty toca triste e fire emblem`, `@Natty toca boss fight sem elden ring` | `/tocar pedido:<busca>` |
 | Pular | `natty pula`, `natty próxima`, `natty skip` | `/pular` |
 | Ver a fila | `natty fila`, `natty mostra a playlist` | `/fila` |
 | Limpar a fila | `natty limpa a fila`, `natty esvazia a fila` | `/limpar-fila` |
@@ -33,9 +36,31 @@ que o Discord oferece com o mesmo nome).
   Vale por servidor e zera quando a Natty reinicia.
 - Os slash commands não dependem de menção nem da Message Content Intent.
 
-Não tem busca por tags, não tem dataset, não tem loop. Tudo isso (dataset
-de tags, playlist dinâmica, fontes além de YouTube) é trabalho futuro
-descrito em outros documentos do projeto.
+## Busca no dataset
+
+"natty toca <texto>" sem link procura no `dataset/musicas.json` (~490
+faixas de Elden Ring, Dark Souls, Bloodborne, Fire Emblem: Three Houses,
+Umineko, Subahibi e Hollow Knight, cada uma com origem e temas em
+português) e põe o resultado na fila. Se nada tocava, a primeira já começa.
+
+- `e` = E, `ou` = OU, `sem`/`não` antes de um termo = exclui o termo.
+- O `ou` separa grupos inteiros: `boss fight e elden ring ou hollow knight`
+  é `(boss fight e elden ring) ou hollow knight` — traz todo o Hollow
+  Knight, não só os boss fights. Pra isso, repete o termo:
+  `boss fight e elden ring ou boss fight e hollow knight`.
+- Cada termo é comparado por substring, sem acento e sem diferenciar
+  maiúscula, contra nome da faixa, nome e tipo da origem e temas.
+- Palavras de preenchimento ("uma", "música", "de"...) são ignoradas.
+- Achando mais de 15 (`MAX_RESULTADOS_DA_BUSCA`), sorteia 15 e avisa
+  quantas achou. A fila continua limitada a 50.
+
+**Limitação conhecida — sem sinônimos.** "triste" não acha "trágico" nem
+"melancólico": `natty toca triste e bloodborne` não acha nada, porque as
+faixas do Bloodborne estão marcadas como trágico/melancólico. Tema em
+português também não bate com palavra em inglês que só aparece no nome
+da faixa (ex: "sem chuva" não filtra "(Rain)"). É curadoria do dataset
+(vocabulário de temas), não bug do parser. Hoje 34 faixas estão como
+"não classificado".
 
 ## Por que não usa Lavalink
 
@@ -61,9 +86,11 @@ demais no processo principal — sem precisar reescrever `cog.py`.
 modules/bardo/
 ├── __init__.py
 ├── youtube.py     # acesso cru ao YouTube via yt-dlp (equivalente a sheets.py no core)
-├── service.py      # lógica pura: interpreta o pedido, extrai link, calcula volume
+├── service.py      # lógica pura: interpreta o pedido, fila, volume, busca booleana
 ├── cog.py           # interface Discord: on_message + slash commands, voz, playback
-├── test_service.py  # testes do reconhecimento de pedidos
+├── test_service.py  # testes de pedidos, fila e busca
+├── dataset/
+│   └── musicas.json  # faixas taggeadas (origem + temas), curadoria em andamento
 └── README.md
 ```
 
@@ -89,6 +116,7 @@ cog.py (on_message)
   ├─ falou com a Natty? (nome, menção ou cargo) → chamou_a_natty() + discord.py
   ├─ interpretar_pedido(texto) → Pedido      → service.py (regex: tocar/pausar/continuar/parar/volume)
   ├─ usuário está em canal de voz?            → discord.py (message.author.voice)
+  ├─ sem link? buscar_musicas(busca)            → service.py (dataset/musicas.json) → fila
   ├─ resolver_musica(link)                    → service.py → youtube.py → yt-dlp
   ├─ conecta/move pro canal de voz            → discord.py (voice_client)
   └─ toca via FFmpegPCMAudio + volume         → discord.py + FFmpeg
@@ -100,12 +128,14 @@ cog.py (on_message)
 python -m unittest discover -s modules/bardo -t .
 ```
 
-Cobrem o reconhecimento de pedidos (`service.py`). A parte de voz foi
+Cobrem o reconhecimento de pedidos, a fila e a busca booleana
+(`service.py`), inclusive um teste que valida o dataset real. A parte de voz foi
 validada à mão no Discord.
 
 ## O que falta pro próximo passo
 
-- Dataset de tags + busca booleana (`música triste e deserto`)
+- Sinônimos/vocabulário padronizado de temas na busca
+- Completar Dark Souls e Hollow Knight no dataset (hoje 3 e 4 faixas)
 - Loop (repetir a música ou a fila), remover um item da fila, colar playlist do YouTube
 - Sair sozinha do canal quando ficar vazio
 - Fontes além de YouTube (Freesound, local files)

@@ -51,11 +51,17 @@ class BardoCog(commands.Cog):
 
         guild = message.guild
         if pedido.acao == "tocar":
-            if not pedido.link:
-                await message.reply("Me manda o link do YouTube da música junto do pedido.")
-                return
-            async with message.channel.typing():
-                resposta = await self._tocar(guild, message.author, message.channel, pedido.link)
+            if pedido.link:
+                async with message.channel.typing():
+                    resposta = await self._tocar(guild, message.author, message.channel, pedido.link)
+            elif pedido.busca:
+                async with message.channel.typing():
+                    resposta = await self._tocar_busca(guild, message.author, message.channel, pedido.busca)
+            else:
+                resposta = (
+                    "Me manda o link do YouTube, ou descreve o que quer ouvir "
+                    '(ex: "natty toca triste e bloodborne").'
+                )
         elif pedido.acao == "pular":
             resposta = self._pular(guild)
         elif pedido.acao == "fila":
@@ -83,17 +89,17 @@ class BardoCog(commands.Cog):
             or service.chamou_a_natty(message.content)
         )
 
-    @app_commands.command(name="tocar", description="Toca um link do YouTube (ou põe na fila, se já tiver música)")
-    @app_commands.describe(link="Link do YouTube (youtube.com/watch?v=... ou youtu.be/...)")
+    @app_commands.command(name="tocar", description="Toca um link do YouTube ou uma busca no dataset (ou põe na fila)")
+    @app_commands.describe(pedido="Link do YouTube, ou uma busca como: triste e bloodborne")
     @app_commands.guild_only()
-    async def tocar(self, interaction: discord.Interaction, link: str):
-        link_youtube = service.extrair_link_youtube(link)
-        if not link_youtube:
-            await interaction.response.send_message("Isso não parece um link do YouTube.", ephemeral=True)
-            return
+    async def tocar(self, interaction: discord.Interaction, pedido: str):
         # Resolver o link no yt-dlp passa fácil dos 3s que o Discord dá pra responder.
         await interaction.response.defer(thinking=True)
-        resposta = await self._tocar(interaction.guild, interaction.user, interaction.channel, link_youtube)
+        link_youtube = service.extrair_link_youtube(pedido)
+        if link_youtube:
+            resposta = await self._tocar(interaction.guild, interaction.user, interaction.channel, link_youtube)
+        else:
+            resposta = await self._tocar_busca(interaction.guild, interaction.user, interaction.channel, pedido)
         await interaction.followup.send(resposta)
 
     @app_commands.command(name="pular", description="Pula pra próxima música da fila")
@@ -170,17 +176,56 @@ class BardoCog(commands.Cog):
 
             fila.tocando = musica
             try:
-                voice_client = guild.voice_client
-                if voice_client is None:
-                    voice_client = await canal.connect()
-                elif voice_client.channel != canal:
-                    await voice_client.move_to(canal)
+                voice_client = await self._conectar(guild, canal)
                 self._tocar_stream(guild, voice_client, info["stream_url"])
             except Exception:
                 fila.tocando = None
                 raise
 
         return f"Tocando **{escape_markdown(musica.titulo)}** 🎵"
+
+    async def _tocar_busca(
+        self, guild: discord.Guild, membro: discord.Member, canal_de_texto: discord.abc.Messageable, busca: str
+    ) -> str:
+        """Busca `busca` no dataset e põe o resultado na fila; se nada tocava, já começa. Devolve a resposta."""
+        voice_state = membro.voice
+        if not voice_state or not voice_state.channel:
+            return "Entra num canal de voz primeiro, aí eu toco."
+
+        musicas, achadas = service.buscar_musicas(busca)
+        if not musicas:
+            return f'Não achei nada pra "{escape_markdown(busca)}" no dataset. Tenta outros termos?'
+
+        self._canais_de_aviso[guild.id] = canal_de_texto
+        aviso = f" (achei {achadas}, sorteei {len(musicas)})" if achadas > len(musicas) else ""
+        fila = self._fila(guild)
+
+        async with self._travas.setdefault(guild.id, asyncio.Lock()):
+            if guild.voice_client is None or not guild.voice_client.is_connected():
+                fila.resetar()
+
+            entraram = fila.adicionar_varias(musicas)
+            if entraram == 0:
+                return f"A fila já tem {service.MAX_FILA} músicas. Espera andar um pouco ou pede `natty limpa a fila`."
+            if fila.tocando is not None:
+                return f"Adicionei {entraram} música{'s' if entraram > 1 else ''} na fila{aviso} 📜"
+
+            await self._conectar(guild, voice_state.channel)
+            tocando = await self._tocar_proxima(guild, avisar=False)
+
+        if tocando is None:
+            return "Não consegui tocar nenhuma das músicas que achei."
+        resto = len(fila.proximas)
+        complemento = f" — mais {resto} na fila" if resto else ""
+        return f"Tocando **{escape_markdown(tocando.titulo)}** 🎵{complemento}{aviso}"
+
+    async def _conectar(self, guild: discord.Guild, canal: discord.VoiceChannel) -> discord.VoiceClient:
+        voice_client = guild.voice_client
+        if voice_client is None:
+            return await canal.connect()
+        if voice_client.channel != canal:
+            await voice_client.move_to(canal)
+        return voice_client
 
     def _tocar_stream(self, guild: discord.Guild, voice_client: discord.VoiceClient, stream_url: str) -> None:
         fonte = discord.PCMVolumeTransformer(
@@ -196,18 +241,22 @@ class BardoCog(commands.Cog):
 
         voice_client.play(fonte, after=ao_terminar)
 
-    async def _tocar_proxima(self, guild: discord.Guild) -> None:
-        """Chamada quando uma música acaba (ou foi pulada): toca a próxima da fila, se tiver."""
+    async def _tocar_proxima(self, guild: discord.Guild, avisar: bool = True) -> service.Musica | None:
+        """Toca a próxima da fila, se tiver, e a devolve.
+
+        Chamada quando uma música acaba (ou foi pulada), e pelo _tocar_busca
+        pra começar a primeira, que responde ele mesmo (avisar=False).
+        """
         fila = self._fila(guild)
         while True:
             voice_client = guild.voice_client
             if voice_client is None or not voice_client.is_connected():
                 fila.resetar()
-                return
+                return None
 
             musica = fila.avancar()
             if musica is None:
-                return
+                return None
 
             try:
                 info = await asyncio.to_thread(service.resolver_musica, musica.link)
@@ -217,8 +266,9 @@ class BardoCog(commands.Cog):
                 await self._avisar(guild, f"Não consegui tocar **{escape_markdown(musica.titulo)}**, pulei.")
                 continue
 
-            await self._avisar(guild, f"Tocando agora **{escape_markdown(musica.titulo)}** 🎵")
-            return
+            if avisar:
+                await self._avisar(guild, f"Tocando agora **{escape_markdown(musica.titulo)}** 🎵")
+            return musica
 
     async def _avisar(self, guild: discord.Guild, texto: str) -> None:
         canal = self._canais_de_aviso.get(guild.id)
