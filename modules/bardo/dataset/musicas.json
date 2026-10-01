@@ -5840,6 +5840,16 @@
       "temas": ["disco", "anos 70", "animado", "dançante", "hino lgbt"],
       "categorias": ["alegre"],
       "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-trio-parada-dura-grao-de-areia",
+      "nome": "TRIO PARADA DURA -- GRÃO DE AREIA",
+      "link": "https://www.youtube.com/watch?v=8LUfBED6fYo",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["sertanejo", "sertanejo raíz", "sofrencia", "depressão"],
+      "categorias": [],
+      "comentario_pessoal": ""
     }
   ]
 }
