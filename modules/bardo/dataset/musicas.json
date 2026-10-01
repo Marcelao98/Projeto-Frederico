@@ -5850,6 +5850,76 @@
       "temas": ["sertanejo", "sertanejo raíz", "sofrencia", "depressão"],
       "categorias": [],
       "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-tim-maia-ela-partiu-official-audio",
+      "nome": "Tim Maia – Ela Partiu (Official Audio)",
+      "link": "https://www.youtube.com/watch?v=syqJAgTQdlU",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["tim maia", "música brasileira"],
+      "categorias": [],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-gwyn-lord-of-cinder",
+      "nome": "Gwyn, Lord of Cinder",
+      "link": "https://www.youtube.com/watch?v=3bqLGebDRIY",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["dark souls", "plin plon plon", "triste"],
+      "categorias": ["triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-d-d-background-music-city-town-square-day",
+      "nome": "d&d Background Music -- [CITY/TOWN SQUARE - DAY]",
+      "link": "https://www.youtube.com/watch?v=CBQshTNwP5w",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["taverna", "cidade", "animado"],
+      "categorias": ["alegre", "cidade"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-frozen-tundra-arctic-ambience-1-hour-dnd",
+      "nome": "Frozen Tundra | Arctic Ambience | 1 Hour #dnd",
+      "link": "https://www.youtube.com/watch?v=RhvyGiJs120",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["tundra", "frio", "inverno", "ambiente"],
+      "categorias": ["calmo", "natureza"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-the-witcher-3-wild-hunt-ost-the-fields-of-ard-skellig-extended",
+      "nome": "The Witcher 3: Wild Hunt OST - The Fields of Ard Skellig (Extended)",
+      "link": "https://www.youtube.com/watch?v=NknjE2SBPxw",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["neve", "calma", "vilarejo", "witcher 3"],
+      "categorias": ["calmo", "cidade", "natureza"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-1-hour-of-dungeon-and-dragons-mystery-music-investigation-dnd-ambient-suspense-themes",
+      "nome": "1 Hour of Dungeon and Dragons Mystery Music | Investigation | DnD Ambient Suspense Themes",
+      "link": "https://www.youtube.com/watch?v=sGQFWM19DEw",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["mistério", "investigação", "ambiente", "suspense"],
+      "categorias": ["calmo", "misterio", "tenso"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-blizzard-ambience-and-music-ambience-of-a-snow-storm-with-original-fantasy-music-ambientmusic",
+      "nome": "Blizzard Ambience and Music | ambience of a snow storm with original fantasy music #ambientmusic",
+      "link": "https://www.youtube.com/watch?v=J_i9_neXNZM",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["ambiente", "neve", "inverno", "tempestade", "tempestade neve"],
+      "categorias": ["calmo", "natureza"],
+      "comentario_pessoal": ""
     }
   ]
 }
