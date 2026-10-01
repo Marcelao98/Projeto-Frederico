@@ -125,6 +125,10 @@ O script só acrescenta categorias; dá pra pôr uma à mão numa faixa (ex:
 - Tema em português não bate com palavra em inglês que só está no nome
   da faixa ("sem chuva" não filtra "(Rain)").
 
+## Pedido falado (mensagens da própria Natty com 🎙)
+
+O listener ignora mensagens de bots, menos a da **própria Natty que começa com 🎙** (`MARCADOR_VOZ` no `cog.py`) — a mesma convenção do Dice. É assim que o pedido de música falado numa call chega aqui: o módulo Echo grava o pedido, transcreve com Whisper e posta `🎙️ natty toca <o que ouviu>`; o Bardo trata como qualquer pedido digitado (dataset, e YouTube se não achar). Nenhum dos dois importa o outro. Quem "pediu" é a própria Natty, então a música toca no canal de voz dela — o mesmo onde o Echo está escutando. As respostas do Bardo nunca começam com 🎙, então ele não reage a si mesmo. Ver `modules/echo/README.md`, seção "Pedido de música".
+
 ## Por que não usa Lavalink
 
 Decisão registrada em `modules/sieve/Findings/natty-reports/lavalink-perspective.md`

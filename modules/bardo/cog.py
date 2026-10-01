@@ -28,6 +28,20 @@ log = logging.getLogger(__name__)
 
 MUSICAS_MOSTRADAS_NA_FILA = 10
 
+# Pedido falado na call: a própria Natty posta "🎙️ natty toca <o que ouviu>"
+# no canal (quem transcreve a fala é o módulo Echo). Mesma convenção do Dice:
+# só mensagem dela com esse marcador no começo é aceita — as respostas do
+# Bardo nunca começam assim, então não há laço. O Bardo não importa nada do Echo.
+# Só o caractere-base do 🎙, sem o seletor de emoji (U+FE0F), que pode vir ou não.
+MARCADOR_VOZ = "\U0001F399"
+
+
+def _deve_ignorar(message: discord.Message, eu: discord.abc.User | None) -> bool:
+    """Ignora bots (a própria Natty, o Avrae...), exceto o pedido falado que a Natty posta."""
+    if not message.author.bot:
+        return False
+    return not (eu is not None and message.author.id == eu.id and message.content.startswith(MARCADOR_VOZ))
+
 
 class BardoCog(commands.Cog):
     def __init__(self, bot: commands.Bot):
@@ -44,7 +58,7 @@ class BardoCog(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message: discord.Message):
-        if message.author.bot or message.guild is None:
+        if _deve_ignorar(message, self.bot.user) or message.guild is None:
             return
         if not self._falou_com_a_natty(message):
             return
