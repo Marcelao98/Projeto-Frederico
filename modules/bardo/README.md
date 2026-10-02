@@ -230,7 +230,7 @@ validada à mão no Discord.
 - Completar Dark Souls no dataset (hoje 3 faixas)
 - Loop da **fila inteira** (repetir a faixa atual já existe — ver "Repetir"), remover um item da fila, colar playlist do YouTube
 - `/repetir` como slash command (hoje só por texto)
-- Comandos do Bardo por voz além de tocar e parar ("NAT20, por favor… próxima/repete"): o Echo não repassa comando livre — só entende as palavras da grammar dele (ver README do Echo)
+- Volume por voz (os outros controles — tocar, parar, próxima, repete, pausa, continua — já funcionam pelo Echo; ver README do Echo, "Controles do Bardo por voz")
 - Sair sozinha do canal quando ficar vazio
 - Fontes além de YouTube (Freesound, local files)
 - Tratamento de erro mais fino (vídeo privado, idade-restrito, etc. — hoje
