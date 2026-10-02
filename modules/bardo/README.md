@@ -1,7 +1,9 @@
 # Módulo Bardo — música do YouTube, por link ou por busca
 
 **Status:** ✅ Em produção desde 2026-09-27 · tocar, fila, pausar, continuar, parar e volume.
-Busca booleana no dataset: implementada e testada (lógica pura), ainda não validada no Discord.
+Busca no dataset (596 faixas) e busca livre no YouTube com aprendizado em mesa: ✅ em uso real —
+17 faixas já entraram no dataset como "Descoberta em mesa". Pedido falado na call (via módulo Echo):
+✅ validado em 01/10/2026 ("Garçom", "Ela Partiu").
 
 ## O que faz, hoje
 
@@ -207,9 +209,14 @@ validada à mão no Discord.
 
 - Classificar as 37 faixas "não classificado" e trilhas de taverna de verdade
 - Completar Dark Souls no dataset (hoje 3 faixas)
-- Validar a busca livre + aprendizado numa mesa de verdade
 - Loop (repetir a música ou a fila), remover um item da fila, colar playlist do YouTube
 - Sair sozinha do canal quando ficar vazio
 - Fontes além de YouTube (Freesound, local files)
 - Tratamento de erro mais fino (vídeo privado, idade-restrito, etc. — hoje
-  cai tudo no mesmo `except Exception`)
+  cai tudo no mesmo `except Exception`). Visto em 01/10/2026: uma busca livre
+  sem resultado (`ytsearch1:"dugeon ambience, kobold"`) só gerou traceback no
+  log.
+- Título de música com "volta", "próxima" ou "fila" vira outro comando
+  ("natty toca Volta pra Casa" = continuar): pular/fila/volume/pausar/continuar
+  são checados antes de "tocar". Pesa mais no pedido falado, onde não dá pra
+  reescrever.
