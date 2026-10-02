@@ -6020,6 +6020,36 @@
       "temas": ["sertanejo", "sertanejo raíz", "trio parada dura"],
       "categorias": [],
       "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-wasteland-d-d-ttrpg-music-1-hour",
+      "nome": "Wasteland | D&D/TTRPG Music | 1 Hour",
+      "link": "https://www.youtube.com/watch?v=ONkPzf5EdSQ",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["ambiente", "destruição", "desolação", "ruínas"],
+      "categorias": ["calmo", "masmorra", "sombrio"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-deep-waters-d-d-ttrpg-music-1-hour",
+      "nome": "Deep Waters | D&D/TTRPG Music | 1 Hour",
+      "link": "https://www.youtube.com/watch?v=MhiSjz0c7MI",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["ambiente", "aquático", "água", "mar"],
+      "categorias": ["calmo", "exploracao", "natureza"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-pedras-escondidas",
+      "nome": "Pedras Escondidas",
+      "link": "https://www.youtube.com/watch?v=tfYhj7TWyq0",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["tampe ouvidos"],
+      "categorias": [],
+      "comentario_pessoal": ""
     }
   ]
 }
