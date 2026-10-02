@@ -102,6 +102,8 @@ class BardoCog(commands.Cog):
             resposta = self._pausar(guild)
         elif pedido.acao == "continuar":
             resposta = self._continuar(guild)
+        elif pedido.acao == "repetir":
+            resposta = self._repetir(guild, pedido)
         elif pedido.acao == "parar":
             resposta = await self._parar(guild)
         else:  # volume
@@ -346,13 +348,24 @@ class BardoCog(commands.Cog):
             interrompida = guild.id in self._interrompidas
             self._interrompidas.discard(guild.id)
             falhou = not interrompida and time.monotonic() - inicio < service.SEGUNDOS_PARA_FALHA_RAPIDA
-            asyncio.run_coroutine_threadsafe(self._depois_de_tocar(guild, musica, tentativa, falhou), self.bot.loop)
+            asyncio.run_coroutine_threadsafe(
+                self._depois_de_tocar(guild, musica, tentativa, falhou, interrompida), self.bot.loop
+            )
 
         voice_client.play(fonte, after=ao_terminar)
 
-    async def _depois_de_tocar(self, guild: discord.Guild, musica: service.Musica, tentativa: int, falhou: bool) -> None:
-        """Chamada quando uma música acaba: tenta de novo se ela falhou logo de cara, senão anda a fila."""
+    async def _depois_de_tocar(
+        self, guild: discord.Guild, musica: service.Musica, tentativa: int, falhou: bool, interrompida: bool = False
+    ) -> None:
+        """
+        Chamada quando uma música acaba: tenta de novo se ela falhou logo de
+        cara; com o repetir ligado e a música tendo acabado sozinha (ninguém
+        pulou/parou), toca a mesma de novo; senão anda a fila.
+        """
         if not falhou:
+            if not interrompida and self._fila(guild).deve_repetir(musica):
+                await self._repetir_musica(guild, musica)
+                return
             await self._tocar_proxima(guild)
             return
 
@@ -373,6 +386,24 @@ class BardoCog(commands.Cog):
             log.error("Bardo: %s não tocou nem na segunda tentativa", musica.link)
             await self._avisar(guild, f"O YouTube não deixou tocar **{escape_markdown(musica.titulo)}**, pulei.")
         await self._tocar_proxima(guild)
+
+    async def _repetir_musica(self, guild: discord.Guild, musica: service.Musica) -> None:
+        """Toca `musica` de novo, do começo (repetir ligado). Sem aviso no canal a cada volta."""
+        voice_client = guild.voice_client
+        if voice_client is None or not voice_client.is_connected():
+            self._fila(guild).resetar()
+            return
+        try:
+            # URL nova: a de áudio do YouTube expira, e a música pode ter durado horas.
+            info = await asyncio.to_thread(service.resolver_musica, musica.link)
+            self._tocar_stream(guild, voice_client, info, musica)
+        except Exception:
+            log.exception("Bardo: falha ao repetir %s", musica.link)
+            self._fila(guild).repetir = False
+            await self._avisar(
+                guild, f"Não consegui repetir **{escape_markdown(musica.titulo)}**, desliguei a repetição e segui a fila."
+            )
+            await self._tocar_proxima(guild)
 
     async def _tocar_proxima(self, guild: discord.Guild, avisar: bool = True) -> service.Musica | None:
         """Toca a próxima da fila, se tiver, e a devolve.
@@ -416,17 +447,24 @@ class BardoCog(commands.Cog):
         voice_client = guild.voice_client
         if voice_client is None or not (voice_client.is_playing() or voice_client.is_paused()):
             return "Não tem nada tocando."
-        tem_proxima = bool(self._fila(guild).proximas)
+        fila = self._fila(guild)
+        tem_proxima = bool(fila.proximas)
+        # Pular é "chega dessa": desliga o repetir, senão a próxima também
+        # entraria em loop sem ninguém ter pedido.
+        repetia = fila.repetir
+        fila.repetir = False
         self._interrompidas.add(guild.id)
         _parar_audio(voice_client)  # o `after` do player chama _tocar_proxima
-        return "Pulei ⏭️" if tem_proxima else "Pulei ⏭️ A fila acabou."
+        aviso = " (repetição desligada)" if repetia else ""
+        return f"Pulei ⏭️{aviso}" if tem_proxima else f"Pulei ⏭️ A fila acabou.{aviso}"
 
     def _descrever_fila(self, guild: discord.Guild) -> str:
         fila = self._fila(guild)
         if fila.tocando is None:
             return "Não tem nada tocando, e a fila está vazia."
 
-        linhas = [f"🎵 Tocando: **{escape_markdown(fila.tocando.titulo)}**{_duracao(fila.tocando)}"]
+        repetindo = " 🔁 (repetindo)" if fila.repetir else ""
+        linhas = [f"🎵 Tocando: **{escape_markdown(fila.tocando.titulo)}**{_duracao(fila.tocando)}{repetindo}"]
         proximas = fila.proximas
         if not proximas:
             linhas.append("A fila está vazia.")
@@ -437,6 +475,18 @@ class BardoCog(commands.Cog):
             if len(proximas) > MUSICAS_MOSTRADAS_NA_FILA:
                 linhas.append(f"… e mais {len(proximas) - MUSICAS_MOSTRADAS_NA_FILA}")
         return "\n".join(linhas)
+
+    def _repetir(self, guild: discord.Guild, pedido: service.Pedido) -> str:
+        """Liga/desliga o repetir da faixa atual e diz qual estado ficou — nunca muda calado."""
+        fila = self._fila(guild)
+        if fila.tocando is None and (pedido.repetir is None and not fila.repetir):
+            return "Não tem nada tocando pra repetir."
+        if fila.alternar_repetir(pedido):
+            return (
+                f"🔁 Repetindo **{escape_markdown(fila.tocando.titulo)}** — quando acabar, volta do começo. "
+                "Pra parar: `natty para de repetir` (ou `natty repete` de novo)."
+            )
+        return "➡️ Repetição desligada — quando essa acabar, sigo a fila."
 
     def _limpar_fila(self, guild: discord.Guild) -> str:
         quantas = self._fila(guild).limpar()

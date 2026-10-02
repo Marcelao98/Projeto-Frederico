@@ -69,5 +69,76 @@ class TestPararNaoSaiDaCall(unittest.TestCase):
         conexao.stop.assert_not_called()
 
 
+class TestRepetir(unittest.TestCase):
+    """O que o cog faz com o repetir: responder o estado, repetir no fim da faixa, desligar ao pular."""
+
+    def setUp(self):
+        self.c = cog.BardoCog(bot=SimpleNamespace(user=None))
+        self.guild = SimpleNamespace(id=1, voice_client=ConexaoComum())
+        self.guild.voice_client.is_connected = lambda: True
+        self.fila = self.c._fila(self.guild)
+        self.musica = cog.service.Musica("Garçom", "https://youtu.be/a")
+        self.fila.adicionar(self.musica)
+        self.fila.avancar()
+
+    def test_liga_e_diz_que_ligou(self):
+        resposta = self.c._repetir(self.guild, cog.service.Pedido("repetir"))
+        self.assertIn("🔁 Repetindo **Garçom**", resposta)
+        self.assertTrue(self.fila.repetir)
+
+    def test_desliga_e_diz_que_desligou(self):
+        self.fila.repetir = True
+        resposta = self.c._repetir(self.guild, cog.service.Pedido("repetir", repetir=False))
+        self.assertIn("Repetição desligada", resposta)
+        self.assertFalse(self.fila.repetir)
+
+    def test_sem_nada_tocando_nao_liga(self):
+        self.fila.resetar()
+        self.assertEqual(self.c._repetir(self.guild, cog.service.Pedido("repetir")), "Não tem nada tocando pra repetir.")
+        self.assertFalse(self.fila.repetir)
+
+    def _fim_da_faixa(self, interrompida):
+        repetir = mock.patch.object(self.c, "_repetir_musica", new=mock.AsyncMock()).start()
+        proxima = mock.patch.object(self.c, "_tocar_proxima", new=mock.AsyncMock()).start()
+        self.addCleanup(mock.patch.stopall)
+        asyncio.run(self.c._depois_de_tocar(self.guild, self.musica, 0, False, interrompida))
+        return repetir, proxima
+
+    def test_ligado_e_acabou_sozinha_toca_a_mesma_de_novo(self):
+        self.fila.repetir = True
+        repetir, proxima = self._fim_da_faixa(interrompida=False)
+        repetir.assert_awaited_once_with(self.guild, self.musica)
+        proxima.assert_not_awaited()
+
+    def test_ligado_mas_interrompida_segue_a_fila(self):
+        self.fila.repetir = True
+        repetir, proxima = self._fim_da_faixa(interrompida=True)
+        repetir.assert_not_awaited()
+        proxima.assert_awaited_once()
+
+    def test_desligado_segue_a_fila(self):
+        repetir, proxima = self._fim_da_faixa(interrompida=False)
+        repetir.assert_not_awaited()
+        proxima.assert_awaited_once()
+
+    def test_repetir_resolve_url_nova_e_toca_a_mesma(self):
+        mock.patch.object(cog.service, "resolver_musica", return_value={"stream_url": "x"}).start()
+        tocar = mock.patch.object(self.c, "_tocar_stream").start()
+        self.addCleanup(mock.patch.stopall)
+        asyncio.run(self.c._repetir_musica(self.guild, self.musica))
+        tocar.assert_called_once_with(self.guild, self.guild.voice_client, {"stream_url": "x"}, self.musica)
+
+    def test_pular_desliga_o_repetir_e_avisa(self):
+        self.fila.repetir = True
+        self.fila.adicionar(cog.service.Musica("Hope", "https://youtu.be/b"))
+        resposta = self.c._pular(self.guild)
+        self.assertFalse(self.fila.repetir)
+        self.assertIn("repetição desligada", resposta)
+
+    def test_fila_mostra_que_esta_repetindo(self):
+        self.fila.repetir = True
+        self.assertIn("🔁", self.c._descrever_fila(self.guild))
+
+
 if __name__ == "__main__":
     unittest.main()

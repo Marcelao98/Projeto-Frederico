@@ -6010,6 +6010,16 @@
       "temas": ["trails in the sky", "triste", "melancólica", "bonita"],
       "categorias": ["triste"],
       "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-trio-parada-dura-ultimo-adeus-ft-eduardo-costa",
+      "nome": "Trio Parada Dura - Último Adeus ft. Eduardo Costa",
+      "link": "https://www.youtube.com/watch?v=-d8dTW4Aza4",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["sertanejo", "sertanejo raíz", "trio parada dura"],
+      "categorias": [],
+      "comentario_pessoal": ""
     }
   ]
 }

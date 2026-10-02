@@ -27,6 +27,7 @@ que o Discord oferece com o mesmo nome).
 | Pausar | `natty pausa` | `/pausar` |
 | Continuar | `natty continua`, `natty volta a tocar`, `natty despausa` | `/continuar` |
 | Parar (para a música e limpa a fila; **continua no canal**) | `natty para`, `natty chega`, `natty sai` | `/parar` |
+| Repetir a faixa atual (liga/desliga) | `natty repete`, `natty loop`; desligar: `natty repete` de novo, `natty para de repetir`, `natty repete não` | — |
 | Volume | `natty volume 30`, `natty aumenta o volume`, `natty abaixa` | `/volume nivel:30` |
 | Ver volume | `natty qual o volume?` | `/volume` |
 
@@ -127,6 +128,16 @@ O script só acrescenta categorias; dá pra pôr uma à mão numa faixa (ex:
 - Tema em português não bate com palavra em inglês que só está no nome
   da faixa ("sem chuva" não filtra "(Rain)").
 
+## Repetir a faixa atual (desde 02/10/2026)
+
+`natty repete` (ou `repetir`, `repita`, `loop`) liga a repetição da **música que está tocando**: quando ela acaba sozinha, volta do começo em vez de seguir a fila. Pedir de novo desliga; `natty para de repetir`, `natty repete não`, `natty chega de loop` e `natty desliga o repetir` desligam sempre. A Natty sempre responde qual estado ficou ("🔁 Repetindo **X**…" / "➡️ Repetição desligada…"), e a `natty fila` mostra 🔁 ao lado da atual.
+
+- **Só a faixa atual**, não a fila inteira (loop de fila fica pra quando fizer falta).
+- **Pular desliga o repetir** ("Pulei ⏭️ (repetição desligada)"): pular é "chega dessa", e sem isso a próxima também entraria em loop sem ninguém pedir. **Parar** também desliga (limpa tudo).
+- A cada volta a URL de áudio é resolvida de novo (a do YouTube expira), sem aviso no canal. Se falhar, desliga o repetir, avisa e segue a fila.
+- "natty toca Repete Comigo" continua sendo busca: quando "toca" vem antes, o "repete" é parte do nome.
+- Onde mora: o estado é `Fila.repetir` (por servidor, junto da fila); `alternar_repetir()` e `deve_repetir()` no `service.py`; o cog só decide, no fim da faixa, se chama `_repetir_musica()` ou `_tocar_proxima()`.
+
 ## Parar não sai mais da call (desde 02/10/2026)
 
 "natty para" (e `natty chega`, `natty sai`, `/parar`) para a música e limpa a fila, mas **a Natty continua no canal de voz**. Quem tira ela da call agora é só o Echo: "NAT20, por favor, saia" ou "@Natty, tampe os ouvidos".
@@ -217,7 +228,9 @@ validada à mão no Discord.
 
 - Classificar as 37 faixas "não classificado" e trilhas de taverna de verdade
 - Completar Dark Souls no dataset (hoje 3 faixas)
-- Loop (repetir a música ou a fila), remover um item da fila, colar playlist do YouTube
+- Loop da **fila inteira** (repetir a faixa atual já existe — ver "Repetir"), remover um item da fila, colar playlist do YouTube
+- `/repetir` como slash command (hoje só por texto)
+- Comandos do Bardo por voz além de tocar e parar ("NAT20, por favor… próxima/repete"): o Echo não repassa comando livre — só entende as palavras da grammar dele (ver README do Echo)
 - Sair sozinha do canal quando ficar vazio
 - Fontes além de YouTube (Freesound, local files)
 - Tratamento de erro mais fino (vídeo privado, idade-restrito, etc. — hoje

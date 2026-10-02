@@ -44,6 +44,9 @@ _CONTINUAR_RE = re.compile(
     r"\b(continua|continue|continuar|despausa|retoma|volta|resume)\b", re.IGNORECASE
 )
 _PARAR_RE = re.compile(r"\b(para|pare|parar|stop|chega|desliga|sai|sair)\b", re.IGNORECASE)
+_REPETIR_RE = re.compile(r"\b(repete|repetir|repita|loop)\b", re.IGNORECASE)
+# "para de repetir", "repete não", "chega de loop", "desliga o repetir".
+_DESLIGAR_REPETIR_RE = re.compile(r"\b(n[ãa]o|para|pare|parar|chega|desliga|tira)\b", re.IGNORECASE)
 _VOLUME_RE = re.compile(r"\bvolume\b", re.IGNORECASE)
 _AUMENTAR_RE = re.compile(r"\b(aumenta|sobe|mais alto)\b", re.IGNORECASE)
 _DIMINUIR_RE = re.compile(r"\b(abaixa|baixa|diminui|mais baixo)\b", re.IGNORECASE)
@@ -84,14 +87,16 @@ def opcoes_ffmpeg(http_headers: dict[str, str] | None = None) -> dict[str, str]:
 class Pedido:
     """O que pediram pra Natty fazer com a música.
 
-    acao: "tocar", "pausar", "continuar", "parar", "volume", "pular", "fila"
-        ou "limpar_fila".
+    acao: "tocar", "pausar", "continuar", "parar", "volume", "pular", "fila",
+        "limpar_fila" ou "repetir".
     link: só em "tocar"; None se pediram pra tocar sem mandar link.
     busca: só em "tocar" sem link; o que vem depois do verbo ("triste e
         bloodborne"), pra buscar_musicas(). None se não sobrou nada.
     volume: só em "volume"; valor absoluto (0-100) pedido.
     delta_volume: só em "volume"; +/-PASSO_VOLUME para "aumenta"/"abaixa".
     Em "volume" sem número nem direção, os dois ficam None (é pergunta).
+    repetir: só em "repetir"; False = desligar ("para de repetir", "repete
+        não"), None = alternar ("natty repete" liga, de novo desliga).
     """
 
     acao: str
@@ -99,6 +104,7 @@ class Pedido:
     busca: str | None = None
     volume: int | None = None
     delta_volume: int | None = None
+    repetir: bool | None = None
 
 
 def chamou_a_natty(texto: str) -> bool:
@@ -123,6 +129,13 @@ def interpretar_pedido(texto: str) -> Pedido | None:
     # "natty toca a próxima" é pular, não pedido sem link.
     if _FILA_RE.search(sem_link) and _LIMPAR_RE.search(sem_link):
         return Pedido("limpar_fila")
+    # Repetir antes de parar: "natty para de repetir" desliga o loop, não para
+    # a música. Mas se "toca" vem antes, é busca ("natty toca Repete Comigo").
+    repetir = _REPETIR_RE.search(sem_link)
+    tocar_antes = _TOCAR_RE.search(sem_link)
+    if repetir and not (tocar_antes and tocar_antes.start() < repetir.start()):
+        desligar = _DESLIGAR_REPETIR_RE.search(sem_link)
+        return Pedido("repetir", repetir=False if desligar else None)
     if _PULAR_RE.search(sem_link):
         return Pedido("pular")
     if _FILA_RE.search(sem_link):
@@ -189,12 +202,25 @@ class Fila:
     """A música tocando e as que esperam a vez, de um servidor.
 
     Só guarda estado; quem toca de verdade (cog.py) chama avancar() quando
-    uma música acaba.
+    uma música acaba — ou, com `repetir` ligado, toca a mesma de novo
+    (deve_repetir).
     """
 
     def __init__(self):
         self.tocando: Musica | None = None
         self._proximas: deque[Musica] = deque()
+        # Repetir a faixa ATUAL (não a fila): quando ela acaba sozinha, volta
+        # do começo em vez de avançar. Pular e parar desligam.
+        self.repetir: bool = False
+
+    def alternar_repetir(self, pedido: Pedido) -> bool:
+        """Aplica um Pedido("repetir") e devolve o estado novo (None = alternar, False = desligar)."""
+        self.repetir = (not self.repetir) if pedido.repetir is None else pedido.repetir
+        return self.repetir
+
+    def deve_repetir(self, musica: Musica) -> bool:
+        """`musica` acabou sozinha: toca de novo? Só se o repetir está ligado e ela ainda é a atual."""
+        return self.repetir and self.tocando is musica
 
     @property
     def proximas(self) -> tuple[Musica, ...]:
@@ -226,9 +252,10 @@ class Fila:
         return quantas
 
     def resetar(self) -> None:
-        """Esvazia tudo, inclusive a atual."""
+        """Esvazia tudo, inclusive a atual (e desliga o repetir)."""
         self.limpar()
         self.tocando = None
+        self.repetir = False
 
 
 # ---------------------------------------------------------------------------

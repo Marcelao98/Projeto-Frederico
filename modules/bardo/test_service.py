@@ -177,6 +177,54 @@ class FilaDeMusicas(unittest.TestCase):
         self.assertEqual(fila.adicionar_varias([_musica(999)]), 0)
 
 
+class Repetir(unittest.TestCase):
+    """Repetir a faixa ATUAL: "natty repete" alterna; "para de repetir"/"repete não" desliga."""
+
+    def test_pedidos_que_alternam(self):
+        for texto in ["natty repete", "natty, repete", "natty repetir", "natty repita essa", "natty loop",
+                      "@Natty repete a música"]:
+            with self.subTest(texto=texto):
+                self.assertEqual(interpretar_pedido(texto), Pedido("repetir", repetir=None))
+
+    def test_pedidos_que_desligam(self):
+        for texto in ["natty para de repetir", "natty pare de repetir", "natty repete não", "natty não repete",
+                      "natty chega de loop", "natty desliga o repetir", "natty tira o loop"]:
+            with self.subTest(texto=texto):
+                self.assertEqual(interpretar_pedido(texto), Pedido("repetir", repetir=False))
+
+    def test_toca_antes_do_repete_e_busca(self):
+        self.assertEqual(interpretar_pedido("natty toca Repete Comigo"), Pedido("tocar", busca="Repete Comigo"))
+
+    def test_parar_e_pular_continuam_iguais(self):
+        self.assertEqual(interpretar_pedido("natty para").acao, "parar")
+        self.assertEqual(interpretar_pedido("natty pula").acao, "pular")
+
+    def test_fila_alterna_e_desliga(self):
+        fila = Fila()
+        self.assertFalse(fila.repetir)
+        self.assertTrue(fila.alternar_repetir(Pedido("repetir")))       # liga
+        self.assertFalse(fila.alternar_repetir(Pedido("repetir")))      # de novo: desliga
+        fila.alternar_repetir(Pedido("repetir"))
+        self.assertFalse(fila.alternar_repetir(Pedido("repetir", repetir=False)))  # "para de repetir"
+        self.assertFalse(fila.alternar_repetir(Pedido("repetir", repetir=False)))  # desligar desligado: segue off
+
+    def test_deve_repetir_so_a_faixa_atual_e_so_ligado(self):
+        fila = Fila()
+        atual, outra = Musica("Garçom", "https://youtu.be/a"), Musica("Hope", "https://youtu.be/b")
+        fila.adicionar(atual)
+        fila.avancar()
+        self.assertFalse(fila.deve_repetir(atual))      # desligado: segue a fila
+        fila.alternar_repetir(Pedido("repetir"))
+        self.assertTrue(fila.deve_repetir(atual))       # ligado e é a atual: repete
+        self.assertFalse(fila.deve_repetir(outra))      # não é a atual (trocaram no meio): não repete
+
+    def test_resetar_desliga_o_repetir(self):
+        fila = Fila()
+        fila.alternar_repetir(Pedido("repetir"))
+        fila.resetar()  # "natty para"
+        self.assertFalse(fila.repetir)
+
+
 class Volume(unittest.TestCase):
     def test_absoluto(self):
         self.assertEqual(interpretar_pedido("natty volume 30"), Pedido("volume", volume=30))
