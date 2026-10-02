@@ -5,7 +5,7 @@ parte que é inerentemente Discord (conectar em canal de voz, tocar o
 áudio, pausar, volume, passar pra próxima da fila quando uma música acaba).
 Nenhuma lógica de reconhecimento de pedido mora aqui.
 
-Dois jeitos de pedir, como no Dice: em linguagem natural ("natty toca
+Dois jeitos de pedir, como no Dice: em linguagem natural ("@Natty toca
 <link>", "natty pula", "@Natty volume 30") ou pelos slash commands
 (/tocar, /pular, /fila, /limpar-fila, /pausar, /continuar, /parar,
 /volume), que não dependem de menção nem da Message Content Intent.
@@ -70,13 +70,17 @@ class BardoCog(commands.Cog):
     async def on_message(self, message: discord.Message):
         if _deve_ignorar(message, self.bot.user) or message.guild is None:
             return
+        # Reply à pergunta "era essa?" é a resposta dela — com ou sem @ (dá
+        # pra responder no Discord com a menção desligada). Só reply conta.
+        respondendo_a = message.reference.message_id if message.reference else None
+        if service.eh_resposta_da_pendencia(message.guild.id, respondendo_a):
+            await self._responder_pendencia(message)
+            return
         if not self._falou_com_a_natty(message):
             return
 
         pedido = service.interpretar_pedido(message.content)
         if pedido is None:
-            # "natty, é essa sim, triste" responde a pergunta em aberto.
-            await self._responder_pendencia(message)
             return
 
         guild = message.guild
@@ -90,7 +94,7 @@ class BardoCog(commands.Cog):
             else:
                 resposta = (
                     "Me manda o link do YouTube, ou descreve o que quer ouvir "
-                    '(ex: "natty toca triste e bloodborne").'
+                    '(ex: "@Natty toca triste e bloodborne").'
                 )
         elif pedido.acao == "pular":
             resposta = self._pular(guild)
@@ -109,16 +113,25 @@ class BardoCog(commands.Cog):
         else:  # volume
             resposta = self._mudar_volume(guild, pedido)
 
-        await message.reply(resposta, mention_author=False)
+        enviada = await message.reply(resposta, mention_author=False)
+        # Se esse pedido abriu um "era essa?", a pergunta está nesta mensagem:
+        # só reply a ela vai contar como resposta.
+        service.registrar_pergunta_da_pendencia(guild.id, enviada.id)
 
     def _falou_com_a_natty(self, message: discord.Message) -> bool:
-        # Ao digitar "@Natty" o Discord também oferece o cargo automático do
-        # bot, que tem o mesmo nome; as duas menções valem.
+        """
+        Só menção de verdade: @Natty ou o cargo automático dela (o Discord
+        oferece os dois ao digitar "@Natty"). Escrever "natty" sem @ não conta
+        mais — evitava que conversa normal da mesa virasse comando.
+
+        Exceção: o pedido falado que a própria Natty posta com 🎙 (Echo →
+        "🎙️ natty toca X"). O marcador já diz que é pra ela.
+        """
+        if message.author.id == getattr(self.bot.user, "id", None) and message.content.startswith(MARCADOR_VOZ):
+            return True
         cargo_da_natty = message.guild.self_role
-        return (
-            self.bot.user in message.mentions
-            or (cargo_da_natty is not None and cargo_da_natty in message.role_mentions)
-            or service.chamou_a_natty(message.content)
+        return self.bot.user in message.mentions or (
+            cargo_da_natty is not None and cargo_da_natty in message.role_mentions
         )
 
     @app_commands.command(name="tocar", description="Toca um link do YouTube ou uma busca no dataset (ou põe na fila)")
@@ -132,7 +145,8 @@ class BardoCog(commands.Cog):
             resposta = await self._tocar(interaction.guild, interaction.user, interaction.channel, link_youtube)
         else:
             resposta = await self._tocar_busca(interaction.guild, interaction.user, interaction.channel, pedido)
-        await interaction.followup.send(resposta)
+        enviada = await interaction.followup.send(resposta, wait=True)
+        service.registrar_pergunta_da_pendencia(interaction.guild.id, enviada.id)  # se abriu um "era essa?"
 
     @app_commands.command(name="pular", description="Pula pra próxima música da fila")
     @app_commands.guild_only()
@@ -212,7 +226,7 @@ class BardoCog(commands.Cog):
                 try:
                     posicao = fila.adicionar(musica)
                 except service.FilaCheia as e:
-                    return f"{e} Espera andar um pouco ou pede `natty limpa a fila`."
+                    return f"{e} Espera andar um pouco ou pede `@Natty limpa a fila`."
                 return f"Adicionei **{escape_markdown(musica.titulo)}** na fila (posição {posicao}) 📜"
 
             fila.tocando = musica
@@ -247,7 +261,7 @@ class BardoCog(commands.Cog):
 
             entraram = fila.adicionar_varias(musicas)
             if entraram == 0:
-                return f"A fila já tem {service.MAX_FILA} músicas. Espera andar um pouco ou pede `natty limpa a fila`."
+                return f"A fila já tem {service.MAX_FILA} músicas. Espera andar um pouco ou pede `@Natty limpa a fila`."
             if fila.tocando is not None:
                 return f"Adicionei {entraram} música{'s' if entraram > 1 else ''} na fila{aviso} 📜"
 
@@ -280,8 +294,8 @@ class BardoCog(commands.Cog):
         service.criar_pendencia(guild.id, info["titulo"], link, canal_id=getattr(canal_de_texto, "id", None))
         return (
             f"Não achei no dataset, mas achei no YouTube. {resposta}\n"
-            'Era essa mesmo? Me diz uns temas dela que eu aprendo (ex: "natty, é taverna e animado") — '
-            'ou "natty, não" se não for.'
+            "Era essa mesmo? **Responde a esta mensagem** (reply) com uns temas dela que eu aprendo "
+            '(ex: "é taverna e animado") — ou "não" se não for.'
         )
 
     async def _responder_pendencia(self, message: discord.Message) -> None:
@@ -484,7 +498,7 @@ class BardoCog(commands.Cog):
         if fila.alternar_repetir(pedido):
             return (
                 f"🔁 Repetindo **{escape_markdown(fila.tocando.titulo)}** — quando acabar, volta do começo. "
-                "Pra parar: `natty para de repetir` (ou `natty repete` de novo)."
+                "Pra parar: `@Natty para de repetir` (ou `@Natty repete` de novo)."
             )
         return "➡️ Repetição desligada — quando essa acabar, sigo a fila."
 

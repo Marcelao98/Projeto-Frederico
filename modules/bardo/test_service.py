@@ -34,7 +34,8 @@ from modules.bardo.service import (  # noqa: E402
     carregar_dataset,
     carregar_vocabulario,
     categorias_dos_temas,
-    chamou_a_natty,
+    eh_resposta_da_pendencia,
+    registrar_pergunta_da_pendencia,
     interpretar_pedido,
     extrair_link_youtube,
     montar_vocabulario,
@@ -43,18 +44,6 @@ from modules.bardo.service import (  # noqa: E402
 )
 
 LINK = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-
-
-class ChamouANatty(unittest.TestCase):
-    def test_pelo_nome(self):
-        for texto in ["natty toca", "Natty, pausa", "ei natty para", "@Natty volume 30", "NATTY: continua"]:
-            with self.subTest(texto=texto):
-                self.assertTrue(chamou_a_natty(texto))
-
-    def test_sem_chamar(self):
-        for texto in ["toca essa", "a natty toca bem", "nattyzinha pausa", "pausa pro café"]:
-            with self.subTest(texto=texto):
-                self.assertFalse(chamou_a_natty(texto))
 
 
 class Tocar(unittest.TestCase):
@@ -490,6 +479,37 @@ class Pendencia(unittest.TestCase):
         self.assertIsNone(pendencia_do_servidor(1, agora=SEGUNDOS_PARA_RESPONDER + 1))
         # venceu = limpou: nem voltando no tempo ela reaparece
         self.assertIsNone(pendencia_do_servidor(1, agora=0))
+
+
+class RespostaSoPorReply(unittest.TestCase):
+    """Só um REPLY à mensagem do "era essa?" conta como resposta."""
+
+    def setUp(self):
+        criar_pendencia(1, "Música", LINK, canal_id=9, agora=0)
+        registrar_pergunta_da_pendencia(1, mensagem_id=555)
+        self.addCleanup(limpar_pendencia, 1)
+
+    def test_sem_reply_e_ignorado(self):
+        # Ex: "@Natty escuta" logo depois da pergunta — antes virava tema "escuta".
+        self.assertFalse(eh_resposta_da_pendencia(1, respondendo_a=None, agora=10))
+
+    def test_reply_a_pergunta_e_aceito(self):
+        self.assertTrue(eh_resposta_da_pendencia(1, respondendo_a=555, agora=10))
+
+    def test_reply_a_outra_mensagem_e_ignorado(self):
+        self.assertFalse(eh_resposta_da_pendencia(1, respondendo_a=777, agora=10))
+
+    def test_reply_depois_do_prazo_e_ignorado(self):
+        self.assertFalse(eh_resposta_da_pendencia(1, respondendo_a=555, agora=SEGUNDOS_PARA_RESPONDER + 1))
+
+    def test_sem_pendencia_nada_e_resposta(self):
+        limpar_pendencia(1)
+        self.assertFalse(eh_resposta_da_pendencia(1, respondendo_a=555, agora=10))
+
+    def test_registrar_nao_sobrescreve_a_pergunta(self):
+        # Depois de gravado, outra resposta do Bardo (outro pedido) não troca o id.
+        registrar_pergunta_da_pendencia(1, mensagem_id=999)
+        self.assertTrue(eh_resposta_da_pendencia(1, respondendo_a=555, agora=10))
 
 
 class AdicionarDescoberta(unittest.TestCase):

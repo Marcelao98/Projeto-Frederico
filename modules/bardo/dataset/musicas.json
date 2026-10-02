@@ -6050,6 +6050,16 @@
       "temas": ["tampe ouvidos"],
       "categorias": [],
       "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-weight-of-the-world-piano-collections-version-from-nier-automata-for-piano-solo",
+      "nome": "Weight of the World: Piano Collections Version (From \"NieR: Automata\") (For Piano Solo)",
+      "link": "https://www.youtube.com/watch?v=LcYt80gtk2c",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["final", "melancólico", "esperançoso", "piano"],
+      "categorias": ["esperancoso", "final", "triste"],
+      "comentario_pessoal": ""
     }
   ]
 }

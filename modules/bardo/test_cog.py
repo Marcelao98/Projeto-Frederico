@@ -69,6 +69,33 @@ class TestPararNaoSaiDaCall(unittest.TestCase):
         conexao.stop.assert_not_called()
 
 
+class TestSoMencaoDeVerdade(unittest.TestCase):
+    """Só @Natty (ou o cargo) chama a Natty; "natty" escrito não. Exceção: o 🎙 que ela mesma posta."""
+
+    def setUp(self):
+        self.natty = SimpleNamespace(id=1)
+        self.c = cog.BardoCog(bot=SimpleNamespace(user=self.natty))
+        self.cargo = SimpleNamespace(id=99)
+
+    def falou(self, texto, mentions=(), role_mentions=(), autor_id=5):
+        msg = SimpleNamespace(author=SimpleNamespace(id=autor_id), content=texto, mentions=list(mentions),
+                              role_mentions=list(role_mentions), guild=SimpleNamespace(self_role=self.cargo))
+        return self.c._falou_com_a_natty(msg)
+
+    def test_mencao_e_cargo_valem(self):
+        self.assertTrue(self.falou("<@1> toca Garçom", mentions=[self.natty]))
+        self.assertTrue(self.falou("<@&99> pula", role_mentions=[self.cargo]))
+
+    def test_nome_escrito_nao_vale_mais(self):
+        for texto in ["natty toca Garçom", "Natty, pausa", "ei natty para"]:
+            with self.subTest(texto=texto):
+                self.assertFalse(self.falou(texto))
+
+    def test_pedido_falado_da_propria_natty_vale(self):
+        self.assertTrue(self.falou("🎙️ natty toca Garçom", autor_id=1))
+        self.assertFalse(self.falou("🎙️ natty toca Garçom", autor_id=5))  # 🎙 de outra pessoa não
+
+
 class TestRepetir(unittest.TestCase):
     """O que o cog faz com o repetir: responder o estado, repetir no fim da faixa, desligar ao pular."""
 

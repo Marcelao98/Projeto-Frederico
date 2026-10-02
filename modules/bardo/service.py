@@ -24,10 +24,6 @@ from pathlib import Path
 
 from modules.bardo import youtube
 
-# "natty ...", "ei natty, ...", "@Natty ..." escrito como texto. A menção de
-# verdade (<@id>) quem reconhece é o cog, que sabe o id do bot.
-_CHAMOU_NATTY_RE = re.compile(r"^\W*(?:(?:ei|oi|ô|o)\s+)?natty\b", re.IGNORECASE)
-
 _YOUTUBE_URL_RE = re.compile(
     r"(https?://)?(www\.|music\.)?(youtube\.com/watch\?v=[\w-]+|youtu\.be/[\w-]+)(\S*)?",
     re.IGNORECASE,
@@ -107,16 +103,11 @@ class Pedido:
     repetir: bool | None = None
 
 
-def chamou_a_natty(texto: str) -> bool:
-    """True se o texto começa chamando a Natty pelo nome ("natty ...")."""
-    return bool(_CHAMOU_NATTY_RE.search(texto))
-
-
 def interpretar_pedido(texto: str) -> Pedido | None:
     """Traduz um pedido em linguagem natural num Pedido, ou None se não for de música.
 
-    Não verifica se o texto é dirigido à Natty — isso é com quem chama
-    (menção ou chamou_a_natty).
+    Não verifica se o texto é dirigido à Natty — isso é com o cog, que exige
+    menção de verdade (@Natty ou o cargo). Escrever só "natty" não basta.
     """
     link = extrair_link_youtube(texto)
     # O link sai antes das outras regras: "para" ou "volta" dentro de uma
@@ -544,17 +535,52 @@ def resolver_por_busca_livre(texto: str) -> dict:
 
 
 def criar_pendencia(
-    guild_id: int, titulo: str, link: str, canal_id: int | None = None, agora: float | None = None
+    guild_id: int,
+    titulo: str,
+    link: str,
+    canal_id: int | None = None,
+    agora: float | None = None,
+    mensagem_pergunta_id: int | None = None,
 ) -> dict:
-    """Abre (ou substitui) a pergunta "era essa?" do servidor e a devolve."""
+    """
+    Abre (ou substitui) a pergunta "era essa?" do servidor e a devolve.
+
+    `mensagem_pergunta_id` é a mensagem da Natty com a pergunta: só um REPLY a
+    ela conta como resposta (ver eh_resposta_da_pendencia). Quando a pergunta
+    sai junto da resposta do pedido, o id ainda não existe na hora de criar —
+    o cog completa com registrar_pergunta_da_pendencia depois de enviar.
+    """
     pendencia = {
         "titulo": titulo,
         "link": link,
         "canal_id": canal_id,
         "criado_em": time.time() if agora is None else agora,
+        "mensagem_pergunta_id": mensagem_pergunta_id,
     }
     _pendencias[guild_id] = pendencia
     return pendencia
+
+
+def registrar_pergunta_da_pendencia(guild_id: int, mensagem_id: int) -> None:
+    """Grava o id da mensagem com o "era essa?" na pendência aberta que ainda não tem."""
+    pendencia = _pendencias.get(guild_id)
+    if pendencia is not None and pendencia.get("mensagem_pergunta_id") is None:
+        pendencia["mensagem_pergunta_id"] = mensagem_id
+
+
+def eh_resposta_da_pendencia(guild_id: int, respondendo_a: int | None, agora: float | None = None) -> bool:
+    """
+    A mensagem é resposta ao "era essa?"? Só se for um REPLY à mensagem da
+    pergunta (`respondendo_a` = message.reference.message_id). Antes valia
+    qualquer mensagem que chamasse a Natty em 3 min — e um "@Natty escuta" /
+    "@Natty transcreve" (de outro módulo) virou tema de música no acervo.
+    """
+    pendencia = pendencia_do_servidor(guild_id, agora)
+    return (
+        pendencia is not None
+        and respondendo_a is not None
+        and pendencia.get("mensagem_pergunta_id") == respondendo_a
+    )
 
 
 def pendencia_do_servidor(guild_id: int, agora: float | None = None) -> dict | None:

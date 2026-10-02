@@ -12,24 +12,27 @@ módulo Dice reconhece "1d20 com vantagem" em vez de exigir um comando
 formal — e toca no canal de voz de quem pediu, a partir de um link do
 YouTube ou de uma busca por tema/origem no dataset local.
 
-O pedido precisa ser dirigido à Natty: começar com o nome dela ("natty",
-"ei natty") ou mencioná-la (o usuário @Natty ou o cargo automático @Natty,
-que o Discord oferece com o mesmo nome).
+O pedido precisa **mencionar a Natty de verdade**: o usuário @Natty ou o
+cargo automático @Natty, que o Discord oferece com o mesmo nome. Só
+escrever "natty" no texto não basta (desde 02/10/2026) — evita a Natty
+reagir a conversa da mesa que cita o nome dela. A única exceção é o
+pedido falado na call: o Echo posta o texto com o marcador 🎙 e o Bardo
+aceita mensagens da própria Natty com esse marcador como se fossem menção.
 
 | Ação | Exemplos | Slash command |
 |------|----------|---------------|
-| Tocar (ou pôr na fila) | `natty toca <link>`, `@Natty bota <link>`, `natty adiciona <link>` | `/tocar pedido:<link>` |
-| Buscar no dataset | `natty toca triste e fire emblem`, `@Natty toca boss fight sem elden ring` | `/tocar pedido:<busca>` |
-| Buscar no YouTube (quando o dataset não tem) | `natty toca ragnar the red skyrim` | `/tocar pedido:<busca>` |
-| Pular | `natty pula`, `natty próxima`, `natty skip` | `/pular` |
-| Ver a fila | `natty fila`, `natty mostra a playlist` | `/fila` |
-| Limpar a fila | `natty limpa a fila`, `natty esvazia a fila` | `/limpar-fila` |
-| Pausar | `natty pausa` | `/pausar` |
-| Continuar | `natty continua`, `natty volta a tocar`, `natty despausa` | `/continuar` |
-| Parar (para a música e limpa a fila; **continua no canal**) | `natty para`, `natty chega`, `natty sai` | `/parar` |
-| Repetir a faixa atual (liga/desliga) | `natty repete`, `natty loop`; desligar: `natty repete` de novo, `natty para de repetir`, `natty repete não` | — |
-| Volume | `natty volume 30`, `natty aumenta o volume`, `natty abaixa` | `/volume nivel:30` |
-| Ver volume | `natty qual o volume?` | `/volume` |
+| Tocar (ou pôr na fila) | `@Natty toca <link>`, `@Natty bota <link>`, `@Natty adiciona <link>` | `/tocar pedido:<link>` |
+| Buscar no dataset | `@Natty toca triste e fire emblem`, `@Natty toca boss fight sem elden ring` | `/tocar pedido:<busca>` |
+| Buscar no YouTube (quando o dataset não tem) | `@Natty toca ragnar the red skyrim` | `/tocar pedido:<busca>` |
+| Pular | `@Natty pula`, `@Natty próxima`, `@Natty skip` | `/pular` |
+| Ver a fila | `@Natty fila`, `@Natty mostra a playlist` | `/fila` |
+| Limpar a fila | `@Natty limpa a fila`, `@Natty esvazia a fila` | `/limpar-fila` |
+| Pausar | `@Natty pausa` | `/pausar` |
+| Continuar | `@Natty continua`, `@Natty volta a tocar`, `@Natty despausa` | `/continuar` |
+| Parar (para a música e limpa a fila; **continua no canal**) | `@Natty para`, `@Natty chega`, `@Natty sai` | `/parar` |
+| Repetir a faixa atual (liga/desliga) | `@Natty repete`, `@Natty loop`; desligar: `@Natty repete` de novo, `@Natty para de repetir`, `@Natty repete não` | — |
+| Volume | `@Natty volume 30`, `@Natty aumenta o volume`, `@Natty abaixa` | `/volume nivel:30` |
+| Ver volume | `@Natty qual o volume?` | `/volume` |
 
 - Tocar com música já tocando põe a nova no fim da fila. Quando uma música
   acaba, a próxima toca sozinha e a Natty avisa no canal do último pedido.
@@ -42,25 +45,32 @@ que o Discord oferece com o mesmo nome).
 
 ## Busca livre no YouTube e aprendizado por confirmação
 
-Se "natty toca <texto>" não acha nada no dataset, a Natty busca o texto
+Se "@Natty toca <texto>" não acha nada no dataset, a Natty busca o texto
 direto no YouTube, toca o primeiro resultado (ou põe na fila, como um link)
-e pergunta no mesmo canal: *"Era essa mesmo? Me diz uns temas dela"*.
+e pergunta no mesmo canal: *"Era essa mesmo? **Responde a esta mensagem**
+(reply) com uns temas dela"*.
 
-- A resposta é a próxima mensagem **naquele canal que chama a Natty**
-  (nome ou menção, como um pedido), de qualquer pessoa — a mesa é
-  coletiva. Conversa normal da mesa não conta, então "kkkk" não vira tema.
-  - `"natty, não"` (o "não" em qualquer lugar da frase) → descarta, nada é gravado.
-  - `"natty, é triste e épico"` → grava a faixa com os temas `triste`,
+- A resposta tem que ser um **reply direto à mensagem da pergunta**, de
+  qualquer pessoa — a mesa é coletiva. O reply não precisa de @ (a
+  própria resposta já aponta pra Natty). Mensagem solta no canal, mesmo
+  com @Natty, não conta como resposta, e reply a outra mensagem também
+  não. Assim, "kkkk" ou um "transcrever" no meio da conversa não viram
+  tema (já aconteceu: a faixa "Weight of the World: Piano Collections
+  Version" ganhou o tema "transcrever" assim, limpo em 02/10/2026).
+  - reply `"não"` (o "não" em qualquer lugar da frase) → descarta, nada é gravado.
+  - reply `"é triste e épico"` → grava a faixa com os temas `triste`,
     `épico` (separa por vírgula e por " e "; ignora "sim", "é", "essa",
     "mesmo"...; no máximo 5 temas).
-  - `"natty, sim"` sem tema → grava como `"não classificado"`: a música é
+  - reply `"sim"` sem tema → grava como `"não classificado"`: a música é
     a certa, só ninguém opinou sobre o clima.
+- O id da mensagem da pergunta fica na pendência (`mensagem_pergunta_id`,
+  via `registrar_pergunta_da_pendencia`); `eh_resposta_da_pendencia`
+  confere se o reply aponta pra ela.
 - A pergunta vale 3 minutos (`SEGUNDOS_PARA_RESPONDER`); depois disso
   ninguém respondeu, e a próxima mensagem é só conversa. Uma pergunta
   por servidor: uma busca nova substitui a anterior.
-- Pedido pra Natty (`natty pula`, `natty toca ...`) nunca conta como resposta.
-  Por isso uma resposta com palavra de pedido ("natty, bota taverna") é
-  lida como pedido — melhor responder só com os temas.
+- Pedido pra Natty (`@Natty pula`, `@Natty toca ...`) nunca conta como resposta.
+  Pedidos normais continuam funcionando enquanto a pergunta está aberta.
 - A faixa entra no `musicas.json` com origem `Descoberta em mesa` (tipo
   `outro`), id `descoberta-em-mesa-<título>`, e já com as categorias
   calculadas pelo vocabulário. A busca acha ela na hora, sem reiniciar.
@@ -71,7 +81,7 @@ e pergunta no mesmo canal: *"Era essa mesmo? Me diz uns temas dela"*.
 
 ## Busca no dataset
 
-"natty toca <texto>" sem link procura no `dataset/musicas.json` (~580
+"@Natty toca <texto>" sem link procura no `dataset/musicas.json` (~580
 faixas de Elden Ring, Dark Souls, Bloodborne, Fire Emblem: Three Houses,
 Umineko, Subahibi, Hollow Knight e NieR:Automata, cada uma com origem e
 temas em português) e põe o resultado na fila. Se nada tocava, a primeira
@@ -130,21 +140,21 @@ O script só acrescenta categorias; dá pra pôr uma à mão numa faixa (ex:
 
 ## Repetir a faixa atual (desde 02/10/2026)
 
-`natty repete` (ou `repetir`, `repita`, `loop`) liga a repetição da **música que está tocando**: quando ela acaba sozinha, volta do começo em vez de seguir a fila. Pedir de novo desliga; `natty para de repetir`, `natty repete não`, `natty chega de loop` e `natty desliga o repetir` desligam sempre. A Natty sempre responde qual estado ficou ("🔁 Repetindo **X**…" / "➡️ Repetição desligada…"), e a `natty fila` mostra 🔁 ao lado da atual.
+`@Natty repete` (ou `repetir`, `repita`, `loop`) liga a repetição da **música que está tocando**: quando ela acaba sozinha, volta do começo em vez de seguir a fila. Pedir de novo desliga; `@Natty para de repetir`, `@Natty repete não`, `@Natty chega de loop` e `@Natty desliga o repetir` desligam sempre. A Natty sempre responde qual estado ficou ("🔁 Repetindo **X**…" / "➡️ Repetição desligada…"), e a `@Natty fila` mostra 🔁 ao lado da atual.
 
 - **Só a faixa atual**, não a fila inteira (loop de fila fica pra quando fizer falta).
 - **Pular desliga o repetir** ("Pulei ⏭️ (repetição desligada)"): pular é "chega dessa", e sem isso a próxima também entraria em loop sem ninguém pedir. **Parar** também desliga (limpa tudo).
 - A cada volta a URL de áudio é resolvida de novo (a do YouTube expira), sem aviso no canal. Se falhar, desliga o repetir, avisa e segue a fila.
-- "natty toca Repete Comigo" continua sendo busca: quando "toca" vem antes, o "repete" é parte do nome.
+- "@Natty toca Repete Comigo" continua sendo busca: quando "toca" vem antes, o "repete" é parte do nome.
 - Onde mora: o estado é `Fila.repetir` (por servidor, junto da fila); `alternar_repetir()` e `deve_repetir()` no `service.py`; o cog só decide, no fim da faixa, se chama `_repetir_musica()` ou `_tocar_proxima()`.
 
 ## Parar não sai mais da call (desde 02/10/2026)
 
-"natty para" (e `natty chega`, `natty sai`, `/parar`) para a música e limpa a fila, mas **a Natty continua no canal de voz**. Quem tira ela da call agora é só o Echo: "NAT20, por favor, saia" ou "@Natty, tampe os ouvidos".
+"@Natty para" (e `@Natty chega`, `@Natty sai`, `/parar`) para a música e limpa a fila, mas **a Natty continua no canal de voz**. Quem tira ela da call agora é só o Echo: "NAT20, por favor, saia" ou "@Natty, tampe os ouvidos".
 
-Motivo: com o Echo escutando, sair da call no "para" derrubava a escuta — "NAT20, por favor, pare" (que posta `🎙️ natty para`) deixaria a Natty fora da call. E tinha um bug escondido: na conexão do Echo (`VoiceRecvClient`), `stop()` para a música **e a escuta**, então até "natty pula" deixava a Natty surda pra senha. Agora `_parar` e `_pular` usam `_parar_audio()`, que chama `stop_playing()` quando a conexão tem (só a do Echo tem) e `stop()` quando não — sem importar nada do Echo. Testes em `test_cog.py`.
+Motivo: com o Echo escutando, sair da call no "para" derrubava a escuta — "NAT20, por favor, pare" (que posta `🎙️ natty para`) deixaria a Natty fora da call. E tinha um bug escondido: na conexão do Echo (`VoiceRecvClient`), `stop()` para a música **e a escuta**, então até "@Natty pula" deixava a Natty surda pra senha. Agora `_parar` e `_pular` usam `_parar_audio()`, que chama `stop_playing()` quando a conexão tem (só a do Echo tem) e `stop()` quando não — sem importar nada do Echo. Testes em `test_cog.py`.
 
-Efeito colateral conhecido: usando o Bardo **sem** o Echo, depois de "natty para" a Natty fica parada no canal até alguém tirar ela (ou até o Echo mandar sair). "Sair sozinha do canal quando ficar vazio" continua nas pendências.
+Efeito colateral conhecido: usando o Bardo **sem** o Echo, depois de "@Natty para" a Natty fica parada no canal até alguém tirar ela (ou até o Echo mandar sair). "Sair sozinha do canal quando ficar vazio" continua nas pendências.
 
 ## Pedido falado (mensagens da própria Natty com 🎙)
 
@@ -199,15 +209,16 @@ modules/bardo/
 ## Fluxo
 
 ```
-Usuário: "natty toca https://youtube.com/watch?v=xxx"
+Usuário: "@Natty toca https://youtube.com/watch?v=xxx"
         ↓
 cog.py (on_message)
-  ├─ falou com a Natty? (nome, menção ou cargo) → chamou_a_natty() + discord.py
+  ├─ reply à pergunta "era essa?"? eh_resposta_da_pendencia → interpretar_resposta_de_pendencia
+  ├─ falou com a Natty? (menção, cargo ou 🎙 da própria Natty) → _falou_com_a_natty (discord.py)
   ├─ interpretar_pedido(texto) → Pedido      → service.py (regex: tocar/pausar/continuar/parar/volume)
   ├─ usuário está em canal de voz?            → discord.py (message.author.voice)
   ├─ sem link? buscar_musicas(busca)            → service.py (dataset/musicas.json) → fila
   ├─ nada no dataset? resolver_por_busca_livre → youtube.py (ytsearch1:) → toca + criar_pendencia()
-  ├─ mensagem seguinte no canal? interpretar_resposta_de_pendencia → adicionar_descoberta_ao_dataset
+  ├─ resposta aceita? adicionar_descoberta_ao_dataset
   ├─ resolver_musica(link)                    → service.py → youtube.py → yt-dlp
   ├─ conecta/move pro canal de voz            → discord.py (voice_client)
   └─ toca via FFmpegPCMAudio + volume         → discord.py + FFmpeg
@@ -245,6 +256,6 @@ validada à mão no Discord.
   no acervo. Correção possível: ignorar mensagens que outro módulo reconhece
   como comando ("escuta", "socorro", "tampe os ouvidos", rolagem).
 - Título de música com "volta", "próxima" ou "fila" vira outro comando
-  ("natty toca Volta pra Casa" = continuar): pular/fila/volume/pausar/continuar
+  ("@Natty toca Volta pra Casa" = continuar): pular/fila/volume/pausar/continuar
   são checados antes de "tocar". Pesa mais no pedido falado, onde não dá pra
   reescrever.
