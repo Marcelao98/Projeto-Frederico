@@ -5960,6 +5960,56 @@
       "temas": ["ambiente", "calma", "relaxante"],
       "categorias": ["calmo", "descanso"],
       "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-aline-barros-ressuscita-me-clipe-oficial-mk-music-hd",
+      "nome": "Aline Barros - Ressuscita-me (Clipe Oficial MK Music HD)",
+      "link": "https://www.youtube.com/watch?v=dc6oADkbQSw",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["gospel", "aline barros"],
+      "categorias": [],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-eng-dub-useless-i-made-my-village-unstoppable-english-dubbing-hd-online-streaming-drama",
+      "nome": "【ENG DUB】 《Useless? I Made My Village Unstoppable》 | English dubbing | HD online streaming#drama",
+      "link": "https://www.youtube.com/watch?v=1kvkK7Jf-p0",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["escuta"],
+      "categorias": [],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-hope",
+      "nome": "Hope",
+      "link": "https://www.youtube.com/watch?v=QTAcJ0ZcUkI",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["umineko", "esperança", "praia", "tranquila", "tranquilo"],
+      "categorias": ["calmo", "esperancoso", "natureza"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-song-of-healing-the-legend-of-zelda-majoras-mask-trifantasy",
+      "nome": "Song of Healing - The Legend of Zelda (Majora’s Mask) - Trifantasy",
+      "link": "https://www.youtube.com/watch?v=ZBFk9Uscb-k",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["zelda", "majora mask", "cura", "relaxante", "soothing"],
+      "categorias": ["calmo", "descanso"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-trails-in-the-sky-3rd-ost-cradle-where-feelings-rest-1-hour-extended",
+      "nome": "Trails in the Sky 3rd OST - Cradle Where Feelings Rest (1 hour extended)",
+      "link": "https://www.youtube.com/watch?v=AfTHJnn28ek",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["trails in the sky", "triste", "melancólica", "bonita"],
+      "categorias": ["triste"],
+      "comentario_pessoal": ""
     }
   ]
 }
