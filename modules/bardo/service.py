@@ -151,6 +151,10 @@ def interpretar_pedido(texto: str) -> Pedido | None:
     # decide: em "natty toca uma música para relaxar" o "para" é preposição.
     parar = _PARAR_RE.search(sem_link)
     tocar = _TOCAR_RE.search(sem_link)
+    if parar and _para_de_outra_coisa(sem_link[parar.end():]):
+        # "natty para de transcrever" é comando do Echo (Escriba), não do
+        # Bardo: "para de X" só para a música se X for tocar/cantar/música.
+        return None
     if parar and not (tocar and tocar.start() < parar.start()):
         return Pedido("parar")
     if tocar:
@@ -159,6 +163,16 @@ def interpretar_pedido(texto: str) -> Pedido | None:
         busca = sem_link[tocar.end():].strip(" \t\n,.!?:;")
         return Pedido("tocar", busca=busca or None)
     return None
+
+
+_PARA_DE_RE = re.compile(r"^\s+de\s+(\w+)", re.IGNORECASE)
+_O_QUE_O_BARDO_PARA = {"tocar", "tocando", "cantar", "cantando", "música", "musica", "som", "barulho"}
+
+
+def _para_de_outra_coisa(depois_do_para: str) -> bool:
+    """True em "para de X" quando X não é música: "para de transcrever", "para de pausar"."""
+    m = _PARA_DE_RE.match(depois_do_para)
+    return bool(m) and m.group(1).lower() not in _O_QUE_O_BARDO_PARA
 
 
 def _pedido_de_volume(texto: str) -> Pedido:

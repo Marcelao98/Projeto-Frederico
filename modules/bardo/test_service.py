@@ -177,6 +177,20 @@ class FilaDeMusicas(unittest.TestCase):
         self.assertEqual(fila.adicionar_varias([_musica(999)]), 0)
 
 
+class ParaDeOutraCoisa(unittest.TestCase):
+    """"para de X" só para a música se X for música — "@Natty para de transcrever" é da Escriba (Echo)."""
+
+    def test_para_de_transcrever_nao_e_do_bardo(self):
+        for texto in ["natty para de transcrever", "@Natty pare de transcrever", "natty parar de transcrever"]:
+            with self.subTest(texto=texto):
+                self.assertIsNone(interpretar_pedido(texto))
+
+    def test_para_de_tocar_continua_parando(self):
+        for texto in ["natty para de tocar", "natty para de cantar", "natty para", "natty para a música"]:
+            with self.subTest(texto=texto):
+                self.assertEqual(interpretar_pedido(texto).acao, "parar")
+
+
 class Repetir(unittest.TestCase):
     """Repetir a faixa ATUAL: "natty repete" alterna; "para de repetir"/"repete não" desliga."""
 
