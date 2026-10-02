@@ -5920,6 +5920,46 @@
       "temas": ["ambiente", "neve", "inverno", "tempestade", "tempestade neve"],
       "categorias": ["calmo", "natureza"],
       "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-d-d-ambience-damp-cave",
+      "nome": "D&D Ambience - Damp Cave",
+      "link": "https://www.youtube.com/watch?v=3Hwr_BaekgM",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["caverna", "ambiente", "caverna úmida"],
+      "categorias": ["calmo", "masmorra"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-5e-d-d-combat-music-d-d-icewind-dale-campaign-1-hour-music",
+      "nome": "5E D&D Combat Music  | D&D Icewind Dale Campaign  | 1 hour Music",
+      "link": "https://www.youtube.com/watch?v=ribfyGXZID8",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["combate", "inverno", "neve"],
+      "categorias": ["combate", "natureza"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-paul-vs-gladion-pokemon-battle",
+      "nome": "Paul vs Gladion - Pokemon Battle",
+      "link": "https://www.youtube.com/watch?v=pVpM_Zxv988",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["pokemon", "luta", "combate", "monstro"],
+      "categorias": ["combate", "triste"],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-dnd-calm-fantasy-music-for-adventure-and-exploration-3-hour-mix-for-dungeons-dragons",
+      "nome": "DnD Calm Fantasy Music for Adventure and Exploration | 3 Hour Mix for Dungeons & Dragons",
+      "link": "https://www.youtube.com/watch?v=sHA_4wfQhE8",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["ambiente", "calma", "relaxante"],
+      "categorias": ["calmo", "descanso"],
+      "comentario_pessoal": ""
     }
   ]
 }
