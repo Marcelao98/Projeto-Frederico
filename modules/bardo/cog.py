@@ -36,6 +36,16 @@ MUSICAS_MOSTRADAS_NA_FILA = 10
 MARCADOR_VOZ = "\U0001F399"
 
 
+def _parar_audio(voice_client) -> None:
+    """
+    Para só a música. Com o Echo escutando, a conexão é um VoiceRecvClient, e
+    nele `stop()` para a música E a escuta — "natty pula"/"natty para"
+    deixavam a Natty surda pra senha. `stop_playing()` (só existe lá) para só
+    a música; numa conexão comum, `stop()` já é só a música. Sem importar o Echo.
+    """
+    getattr(voice_client, "stop_playing", voice_client.stop)()
+
+
 def _deve_ignorar(message: discord.Message, eu: discord.abc.User | None) -> bool:
     """Ignora bots (a própria Natty, o Avrae...), exceto o pedido falado que a Natty posta."""
     if not message.author.bot:
@@ -147,7 +157,7 @@ class BardoCog(commands.Cog):
     async def continuar(self, interaction: discord.Interaction):
         await interaction.response.send_message(self._continuar(interaction.guild))
 
-    @app_commands.command(name="parar", description="Para a música, limpa a fila e sai do canal de voz")
+    @app_commands.command(name="parar", description="Para a música e limpa a fila (continua no canal de voz)")
     @app_commands.guild_only()
     async def parar(self, interaction: discord.Interaction):
         await interaction.response.send_message(await self._parar(interaction.guild))
@@ -408,7 +418,7 @@ class BardoCog(commands.Cog):
             return "Não tem nada tocando."
         tem_proxima = bool(self._fila(guild).proximas)
         self._interrompidas.add(guild.id)
-        voice_client.stop()  # o `after` do player chama _tocar_proxima
+        _parar_audio(voice_client)  # o `after` do player chama _tocar_proxima
         return "Pulei ⏭️" if tem_proxima else "Pulei ⏭️ A fila acabou."
 
     def _descrever_fila(self, guild: discord.Guild) -> str:
@@ -457,8 +467,10 @@ class BardoCog(commands.Cog):
             return "Não estou tocando nada."
         if voice_client.is_playing() or voice_client.is_paused():
             self._interrompidas.add(guild.id)
-        voice_client.stop()
-        await voice_client.disconnect()
+        # Só para a música, não sai da call: quem tira a Natty da call agora é
+        # só o Echo ("NAT20, por favor, saia" / "@Natty, tampe os ouvidos").
+        # Assim "NAT20, por favor, pare" não derruba a escuta.
+        _parar_audio(voice_client)
         return "Parei ⏹️"
 
     def _mudar_volume(self, guild: discord.Guild, pedido: service.Pedido) -> str:

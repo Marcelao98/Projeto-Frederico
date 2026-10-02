@@ -26,7 +26,7 @@ que o Discord oferece com o mesmo nome).
 | Limpar a fila | `natty limpa a fila`, `natty esvazia a fila` | `/limpar-fila` |
 | Pausar | `natty pausa` | `/pausar` |
 | Continuar | `natty continua`, `natty volta a tocar`, `natty despausa` | `/continuar` |
-| Parar (limpa a fila e sai do canal) | `natty para`, `natty chega`, `natty sai` | `/parar` |
+| Parar (para a música e limpa a fila; **continua no canal**) | `natty para`, `natty chega`, `natty sai` | `/parar` |
 | Volume | `natty volume 30`, `natty aumenta o volume`, `natty abaixa` | `/volume nivel:30` |
 | Ver volume | `natty qual o volume?` | `/volume` |
 
@@ -127,6 +127,14 @@ O script só acrescenta categorias; dá pra pôr uma à mão numa faixa (ex:
 - Tema em português não bate com palavra em inglês que só está no nome
   da faixa ("sem chuva" não filtra "(Rain)").
 
+## Parar não sai mais da call (desde 02/10/2026)
+
+"natty para" (e `natty chega`, `natty sai`, `/parar`) para a música e limpa a fila, mas **a Natty continua no canal de voz**. Quem tira ela da call agora é só o Echo: "NAT20, por favor, saia" ou "@Natty, tampe os ouvidos".
+
+Motivo: com o Echo escutando, sair da call no "para" derrubava a escuta — "NAT20, por favor, pare" (que posta `🎙️ natty para`) deixaria a Natty fora da call. E tinha um bug escondido: na conexão do Echo (`VoiceRecvClient`), `stop()` para a música **e a escuta**, então até "natty pula" deixava a Natty surda pra senha. Agora `_parar` e `_pular` usam `_parar_audio()`, que chama `stop_playing()` quando a conexão tem (só a do Echo tem) e `stop()` quando não — sem importar nada do Echo. Testes em `test_cog.py`.
+
+Efeito colateral conhecido: usando o Bardo **sem** o Echo, depois de "natty para" a Natty fica parada no canal até alguém tirar ela (ou até o Echo mandar sair). "Sair sozinha do canal quando ficar vazio" continua nas pendências.
+
 ## Pedido falado (mensagens da própria Natty com 🎙)
 
 O listener ignora mensagens de bots, menos a da **própria Natty que começa com 🎙** (`MARCADOR_VOZ` no `cog.py`) — a mesma convenção do Dice. É assim que o pedido de música falado numa call chega aqui: o módulo Echo grava o pedido, transcreve com Whisper e posta `🎙️ natty toca <o que ouviu>`; o Bardo trata como qualquer pedido digitado (dataset, e YouTube se não achar). Nenhum dos dois importa o outro. Quem "pediu" é a própria Natty, então a música toca no canal de voz dela — o mesmo onde o Echo está escutando. As respostas do Bardo nunca começam com 🎙, então ele não reage a si mesmo. Ver `modules/echo/README.md`, seção "Pedido de música".
@@ -216,6 +224,13 @@ validada à mão no Discord.
   cai tudo no mesmo `except Exception`). Visto em 01/10/2026: uma busca livre
   sem resultado (`ytsearch1:"dugeon ambience, kobold"`) só gerou traceback no
   log.
+- O "era essa?" da busca livre aceita como resposta **qualquer** mensagem que
+  chame a Natty nos 3 minutos seguintes — inclusive comandos de outro módulo.
+  Em 02/10/2026, um pedido de música falado mal transcrito tocou um vídeo
+  errado, e o "@Natty escuta" mandado logo depois foi lido como "sim, tema:
+  escuta": o vídeo (`【ENG DUB】 Useless? I Made My Village Unstoppable`) entrou
+  no acervo. Correção possível: ignorar mensagens que outro módulo reconhece
+  como comando ("escuta", "socorro", "tampe os ouvidos", rolagem).
 - Título de música com "volta", "próxima" ou "fila" vira outro comando
   ("natty toca Volta pra Casa" = continuar): pular/fila/volume/pausar/continuar
   são checados antes de "tocar". Pesa mais no pedido falado, onde não dá pra
