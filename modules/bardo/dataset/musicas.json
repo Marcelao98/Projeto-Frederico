@@ -6050,6 +6050,26 @@
       "temas": ["final", "melancólico", "esperançoso", "piano"],
       "categorias": ["esperancoso", "final", "triste"],
       "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-return-of-the-obra-dinn-soundtrack-theme",
+      "nome": "Return of the Obra Dinn Soundtrack - Theme",
+      "link": "https://www.youtube.com/watch?v=0asI8EoYy-E",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["não classificado"],
+      "categorias": [],
+      "comentario_pessoal": ""
+    },
+    {
+      "id": "descoberta-em-mesa-spectral-sails-original-game-soundtrack",
+      "nome": "Spectral Sails (Original Game Soundtrack)",
+      "link": "https://www.youtube.com/watch?v=3T2P98dFbJk",
+      "escopo": "faixa_individual",
+      "origem": {"nome": "Descoberta em mesa", "tipo": "outro"},
+      "temas": ["não classificado"],
+      "categorias": [],
+      "comentario_pessoal": ""
     }
   ]
 }
