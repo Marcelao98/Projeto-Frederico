@@ -1,0 +1,13 @@
+.env
+credentials.json
+__pycache__/
+*.pyc
+.venv/
+venv/
+**/.claude/settings.local.json
+
+# Staging do pipeline do Bardo (bardo_extrair_playlist.py)
+staging/
+
+# Sons do usuário (futuro): ficam só na máquina de quem roda
+sons/
