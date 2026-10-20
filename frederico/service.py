@@ -22,7 +22,7 @@ from collections import deque
 from dataclasses import dataclass
 from pathlib import Path
 
-from modules.bardo import youtube
+from frederico import youtube
 
 _YOUTUBE_URL_RE = re.compile(
     r"(https?://)?(www\.|music\.)?(youtube\.com/watch\?v=[\w-]+|youtu\.be/[\w-]+)(\S*)?",

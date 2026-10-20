@@ -8,7 +8,7 @@ import unittest
 from types import SimpleNamespace
 from unittest import mock
 
-from modules.bardo import cog
+from frederico.discord_pendente import cog
 
 
 class ConexaoComum:

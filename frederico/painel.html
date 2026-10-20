@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frederico</title>
+<style>
+  :root {
+    --fundo: #1e1f24; --cartao: #2b2d33; --borda: #3a3d44; --pena: #8c8f96;
+    --crista: #f2c230; --bochecha: #f08a3c; --asa: #f4f1ea; --erro: #ff6b6b;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--fundo); color: var(--asa); font: 15px/1.4 system-ui, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 16px; display: grid; gap: 14px; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  h1 { font-size: 22px; margin: 0; }
+  h1 span { color: var(--crista); }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--pena); margin: 0 0 10px; }
+  section { background: var(--cartao); border: 1px solid var(--borda); border-radius: 12px; padding: 14px; }
+  .pilula { font-size: 13px; padding: 4px 10px; border-radius: 99px; background: var(--borda); color: var(--pena); }
+  .pilula.on { background: var(--crista); color: #1e1f24; font-weight: 600; }
+  .linha { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  input[type=text], select { flex: 1; min-width: 0; background: var(--fundo); color: var(--asa); border: 1px solid var(--borda);
+    border-radius: 8px; padding: 10px; font: inherit; }
+  select { width: 100%; }
+  button { background: var(--borda); color: var(--asa); border: 0; border-radius: 8px; padding: 10px 14px; font: inherit; cursor: pointer; }
+  button:hover { filter: brightness(1.2); }
+  button.principal { background: var(--crista); color: #1e1f24; font-weight: 600; }
+  button.ativo { background: var(--bochecha); color: #1e1f24; }
+  .tocando { font-size: 18px; font-weight: 600; margin: 4px 0 12px; word-break: break-word; }
+  .tocando.vazio { color: var(--pena); font-weight: 400; }
+  .dica { color: var(--pena); font-size: 13px; margin: 8px 0 0; }
+  label { display: block; color: var(--pena); font-size: 13px; margin: 10px 0 4px; }
+  input[type=range] { width: 100%; accent-color: var(--crista); }
+  ol { margin: 8px 0 0; padding-left: 22px; color: var(--pena); max-height: 180px; overflow: auto; }
+  .medidor { height: 8px; background: var(--fundo); border-radius: 4px; overflow: hidden; }
+  .medidor div { height: 100%; width: 0; background: var(--crista); transition: width .1s; }
+  .medidor.mic div { background: var(--bochecha); }
+  .grade { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+  @media (max-width: 560px) { .grade { grid-template-columns: 1fr; } }
+  #recado { min-height: 20px; color: var(--crista); font-size: 14px; }
+  #recado.erro { color: var(--erro); }
+  #eventos { color: var(--pena); font-size: 13px; margin: 8px 0 0; padding: 0; list-style: none; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>🦜 <span>Frederico</span></h1>
+    <span id="som" class="pilula">som desligado</span>
+  </header>
+
+  <section>
+    <h2>Tocar</h2>
+    <form id="formTocar" class="linha">
+      <input id="texto" type="text" placeholder="Link do YouTube, caminho de arquivo ou temas (ex: taverna)" autocomplete="off">
+      <button class="principal" type="submit">Tocar</button>
+    </form>
+    <p class="dica">Sem link, busco no catálogo por tema ("triste e bloodborne"); se não achar, pego o 1º resultado do YouTube. Dá pra colar o caminho de um arquivo: C:\Musicas\aula.mp3</p>
+    <div id="recado"></div>
+  </section>
+
+  <section>
+    <h2>Agora</h2>
+    <div id="tocando" class="tocando vazio">Nada tocando</div>
+    <div class="linha">
+      <button id="bPausa">⏸ Pausa</button>
+      <button data-acao="pular">⏭ Pular</button>
+      <button id="bRepetir" data-acao="repetir">🔁 Repetir</button>
+      <button data-acao="parar">⏹ Parar</button>
+    </div>
+    <label for="volMusica">Volume da música: <b id="volMusicaTxt"></b></label>
+    <input id="volMusica" type="range" min="0" max="100">
+    <div class="linha" style="justify-content: space-between; margin-top: 10px;">
+      <span class="dica" style="margin:0">Fila</span>
+      <button data-acao="limpar_fila">Limpar fila</button>
+    </div>
+    <ol id="fila"></ol>
+    <ul id="eventos"></ul>
+  </section>
+
+  <section>
+    <h2>Microfone</h2>
+    <div class="linha">
+      <button id="bMic">🎙 Mic ligado</button>
+      <button id="bDucking">🦜 Abaixar música quando eu falo</button>
+    </div>
+    <label for="ganhoMic">Volume do mic: <b id="ganhoMicTxt"></b></label>
+    <input id="ganhoMic" type="range" min="0" max="300">
+    <div class="grade">
+      <div><label>Seu mic</label><div class="medidor mic"><div id="nMic"></div></div></div>
+      <div><label>Saída (o que os outros ouvem)</label><div class="medidor"><div id="nSaida"></div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Dispositivos</h2>
+    <label for="dMic">Microfone de verdade</label>
+    <select id="dMic"></select>
+    <label for="dSaida">Saída: pra onde vai mic + música (VB-Cable: "CABLE Input")</label>
+    <select id="dSaida"></select>
+    <label for="dMonitor">Monitor: seu fone (só a música)</label>
+    <select id="dMonitor"></select>
+    <div class="linha" style="margin-top: 12px;">
+      <button id="bLigar" class="principal">Ligar som</button>
+      <button id="bDesligar">Desligar</button>
+    </div>
+    <p class="dica">No Zoom/Meet/Discord, escolha <b>CABLE Output</b> como microfone. No Discord, desligue a supressão de ruído e o cancelamento de eco, senão eles cortam a música.</p>
+  </section>
+</main>
+
+<script>
+const $ = (id) => document.getElementById(id);
+let estado = null;
+
+async function api(rota, dados) {
+  const r = await fetch(rota, dados === undefined ? {} : {
+    method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(dados),
+  });
+  const j = await r.json();
+  if (!r.ok) throw new Error(j.erro || "erro");
+  return j;
+}
+
+function recado(texto, erro = false) {
+  $("recado").textContent = texto;
+  $("recado").className = erro ? "erro" : "";
+}
+
+async function enviar(rota, dados) {
+  try { const j = await api(rota, dados); if (j.msg && j.msg !== "ok") recado(j.msg); }
+  catch (e) { recado(e.message, true); }
+  atualizar();
+}
+
+$("formTocar").addEventListener("submit", async (ev) => {
+  ev.preventDefault();
+  const texto = $("texto").value.trim();
+  if (!texto) return;
+  recado("Procurando…");
+  await enviar("/api/tocar", {texto});
+  $("texto").value = "";
+});
+
+document.querySelectorAll("[data-acao]").forEach((b) =>
+  b.addEventListener("click", () => enviar("/api/comando", {acao: b.dataset.acao})));
+$("bPausa").addEventListener("click", () =>
+  enviar("/api/comando", {acao: estado && estado.player.pausado ? "continuar" : "pausar"}));
+$("bMic").addEventListener("click", () => enviar("/api/mic", {ligado: !estado.audio.mic_ligado}));
+$("bDucking").addEventListener("click", () => enviar("/api/mic", {ducking: !estado.audio.ducking}));
+
+function slider(id, aoMudar) {
+  const el = $(id);
+  el.addEventListener("input", () => { el.dataset.mexendo = "1"; aoMudar(+el.value); });
+  el.addEventListener("change", () => { delete el.dataset.mexendo; });
+}
+slider("volMusica", (v) => { $("volMusicaTxt").textContent = v + "%"; api("/api/volume", {valor: v}); });
+slider("ganhoMic", (v) => { $("ganhoMicTxt").textContent = v + "%"; api("/api/mic", {ganho: v}); });
+
+function pos(el, v) { if (!el.dataset.mexendo) el.value = v; }
+function nivel(rms) { return Math.max(0, Math.min(100, (20 * Math.log10(rms + 1e-9) + 60) / 60 * 100)); }
+
+let ultimoEvento = 0;
+async function atualizar() {
+  try { estado = await api("/api/estado"); } catch (e) { $("som").textContent = "Frederico desligado?"; return; }
+  const p = estado.player, a = estado.audio;
+  $("som").textContent = a.ligado ? "som ligado" : (a.erro ? "erro no som" : "som desligado");
+  $("som").className = "pilula" + (a.ligado ? " on" : "");
+  $("tocando").textContent = p.tocando ? (p.pausado ? "⏸ " : "🎵 ") + p.tocando : "Nada tocando";
+  $("tocando").className = "tocando" + (p.tocando ? "" : " vazio");
+  $("bPausa").textContent = p.pausado ? "▶ Continuar" : "⏸ Pausa";
+  $("bRepetir").className = p.repetir ? "ativo" : "";
+  pos($("volMusica"), p.volume); $("volMusicaTxt").textContent = p.volume + "%";
+  pos($("ganhoMic"), a.ganho_mic); $("ganhoMicTxt").textContent = a.ganho_mic + "%";
+  $("bMic").textContent = a.mic_ligado ? "🎙 Mic ligado" : "🔇 Mic mudo";
+  $("bMic").className = a.mic_ligado ? "" : "ativo";
+  $("bDucking").className = a.ducking ? "ativo" : "";
+  $("nMic").style.width = nivel(a.nivel_mic) + "%";
+  $("nSaida").style.width = nivel(a.nivel_saida) + "%";
+  $("fila").innerHTML = "";
+  p.proximas.forEach((t) => { const li = document.createElement("li"); li.textContent = t; $("fila").appendChild(li); });
+  $("eventos").innerHTML = "";
+  p.eventos.slice(-3).reverse().forEach(([id, t]) => {
+    const li = document.createElement("li"); li.textContent = t; $("eventos").appendChild(li);
+  });
+}
+
+function preencher(select, lista, salvo, vazio) {
+  select.innerHTML = "";
+  if (vazio) select.add(new Option(vazio, ""));
+  lista.forEach((d) => select.add(new Option(d.nome, d.id)));
+  if (salvo !== null && salvo !== undefined) select.value = salvo;
+}
+
+async function carregarDispositivos() {
+  try {
+    const d = await api("/api/dispositivos");
+    const s = d.salvos || {};
+    preencher($("dMic"), d.entradas, s.mic, "(sem microfone: só música)");
+    preencher($("dSaida"), d.saidas, s.saida ?? d.saidas.find((x) => /CABLE Input/i.test(x.nome))?.id);
+    preencher($("dMonitor"), d.saidas, s.monitor, "(sem monitor)");
+  } catch (e) { recado(e.message, true); }
+}
+
+$("bLigar").addEventListener("click", () =>
+  enviar("/api/audio", {mic: $("dMic").value, saida: $("dSaida").value, monitor: $("dMonitor").value}));
+$("bDesligar").addEventListener("click", () => enviar("/api/desligar", {}));
+
+carregarDispositivos();
+atualizar();
+setInterval(atualizar, 700);
+</script>
+</body>
+</html>

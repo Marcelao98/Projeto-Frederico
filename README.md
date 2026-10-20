@@ -7,48 +7,75 @@ Marcelo, que ama música e barulho de todo tipo. No universo da
 [Natty](https://github.com/Marcelao98/natty-bot) ele vira uma calopsita robô:
 um dos robozinhos menores que a Natty comanda, o que cuida do som.
 
-## De onde veio
+**O que faz hoje:** toca música **por cima do seu microfone**. Você fala, a
+música toca junto (e abaixa sozinha quando você fala), e tudo sai num
+microfone virtual que o Zoom, o Meet, o Discord ou o OBS enxergam como um mic
+qualquer. Serve pra aula online, live, gravação de vídeo, mesa de RPG.
 
-O código foi roubado, com carinho e com histórico, do **Bardo**, o módulo de
-música da Natty (`modules/bardo/`). Ele já sabe:
+```
+seu mic ─────┐
+             ├─► Frederico (mistura + abaixa a música quando você fala) ─► VB-Cable ─► Zoom/Meet/Discord/OBS
+música ──────┘                                                        └─► seu fone (só a música)
+```
 
-- tocar link do YouTube ou buscar por tema no dataset (~585 faixas com tags,
-  em `modules/bardo/dataset/`)
-- busca livre no YouTube com aprendizado ("era essa? me diz uns temas")
-- fila por servidor, repetir, volume, pausa, pular e reconexão automática
+## Instalar (Windows)
 
-Os commits do Bardo vieram junto (extraídos da natty-bot com
-`git filter-repo`), então `git log` conta a história desde o começo.
+1. **Python 3.11+** e **ffmpeg** no PATH (o mesmo ffmpeg que a Natty usa serve).
+2. **VB-Cable** (grátis): baixa em <https://vb-audio.com/Cable/>, roda o
+   `VBCABLE_Setup_x64.exe` **como administrador** e reinicia o PC. Ele cria
+   dois dispositivos: **CABLE Input** (onde o Frederico toca) e
+   **CABLE Output** (o "microfone" que os outros programas usam).
+3. Dois cliques no **`iniciar.bat`**. Na primeira vez ele instala tudo; depois
+   é só abrir. O painel abre sozinho em <http://127.0.0.1:8765>.
 
-**Hoje** o código ainda é o Bardo como ele é na Natty: um Cog de discord.py,
-sem bot próprio. Ele não roda sozinho ainda.
+## Usar
 
-## Pra onde vai
+1. No painel, em **Dispositivos**: escolhe o seu **microfone de verdade**, a
+   saída **CABLE Input** e, no monitor, o seu **fone**. Clica **Ligar som**.
+   (Ele lembra da escolha na próxima vez.)
+2. No Zoom / Meet / Discord / OBS, escolhe **CABLE Output** como microfone.
+3. Em **Tocar**, cola um link do YouTube, o caminho de um arquivo
+   (`C:\Musicas\aula.mp3`) ou uns temas do catálogo (`taverna`,
+   `triste e bloodborne`). Sem link e sem tema que bata, ele toca o primeiro
+   resultado do YouTube.
+4. **Volume da música** e **volume do mic** são separados. O botão
+   "Abaixar música quando eu falo" liga o ducking.
 
-O Frederico vai ser uma aplicação **local** (roda no PC de cada mestre) que
-toca e mistura som, e o Discord é só uma das saídas:
+**No Discord:** desliga a **supressão de ruído** (Krisp) e o **cancelamento
+de eco** em Voz e Vídeo, senão eles cortam a música, e usa **detecção de voz**
+(com push-to-talk a música só vai quando você aperta a tecla).
 
-- **Mixer em camadas:** música + ambiente (loops) + efeitos (pads), com volume
-  por camada e ducking (a música abaixa quando um efeito toca ou quando você fala).
-- **Microfone virtual:** soma o seu mic com o som e manda pra um cabo virtual
-  (VB-Cable). Discord, Zoom, Meet ou OBS usam como microfone, sem precisar de bot.
-- **Painel web local** (localhost) como controle remoto, com playlists e cenas salvas.
-- **Fontes:** arquivos locais, YouTube, playlists inteiras e Freesound
-  (CC0 por padrão, com os créditos guardados).
-- **Bot de Discord** (depois): a Natty, na nuvem, manda o Frederico tocar pela
-  convenção 🎙 (ver `CLAUDE.md` da natty-bot). A Natty nunca toca áudio, e o
-  Frederico nunca sai do PC de quem roda.
+**Cuidado em live e vídeo monetizado:** música do YouTube pode dar strike /
+Content ID. Pra isso, prefira arquivos seus ou trilhas livres (CC0,
+biblioteca de áudio do YouTube Studio).
 
-Por que local: bot de música público na nuvem cai (termos do YouTube e
-bloqueio de IP de datacenter). No PC de cada um, é uso pessoal pra própria mesa.
+## Como é por dentro
+
+```
+frederico/
+├── service.py    # catálogo (~585 faixas com tags), busca, fila, frases ("pula", "volume 30")
+├── youtube.py    # yt-dlp: link ou busca → URL de áudio
+├── fonte.py      # ffmpeg → PCM 48 kHz estéreo, num buffer
+├── player.py     # o tocador: fila, repetir, pular, pausar, volume, tenta de novo se falhar
+├── mixer.py      # mic + música, ducking, limitador (funções puras)
+├── audio.py      # placa de som (sounddevice): mic → mistura → saída + monitor
+├── web.py        # painel: HTTP + JSON, só em 127.0.0.1
+├── painel.html
+├── dataset/      # musicas.json + vocabulario.json
+└── discord_pendente/   # o bot de Discord, parado por enquanto
+```
+
+O núcleo **não depende do Discord**. Bot, painel ou linha de comando são só
+formas de chamar o `Player`.
 
 ## Testes
 
 ```
-python -m unittest discover -s modules/bardo -t .
+python -m unittest discover -s frederico -t .
 ```
 
-Sem rede nem Discord de verdade (dublês).
+Sem rede e sem placa de som (dublês). Os testes de ponta a ponta usam o ffmpeg
+de verdade se ele estiver instalado.
 
 ## Licença
 

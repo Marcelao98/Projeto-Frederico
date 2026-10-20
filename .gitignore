@@ -11,3 +11,6 @@ staging/
 
 # Sons do usuário (futuro): ficam só na máquina de quem roda
 sons/
+
+# Dispositivos escolhidos no painel (são do seu PC)
+config_local.json

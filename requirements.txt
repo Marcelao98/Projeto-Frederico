@@ -1,5 +1,7 @@
-discord.py>=2.4.0
-PyNaCl>=1.5.0
-davey>=0.1.6
+# Núcleo + painel (o resto é biblioteca padrão). Precisa do ffmpeg no PATH.
+numpy>=1.26
+sounddevice>=0.4.6
 yt-dlp>=2024.12.13
-python-dotenv>=1.0.0
+
+# O adaptador do Discord (frederico/discord_pendente/) está parado; quando
+# voltar, precisa de: discord.py>=2.4.0, PyNaCl>=1.5.0, davey>=0.1.6

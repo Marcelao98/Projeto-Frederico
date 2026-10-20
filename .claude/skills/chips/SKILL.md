@@ -7,7 +7,7 @@ description: Adiciona uma franquia (playlist do YouTube) ao dataset de músicas 
 
 Pipeline em quatro passos. Uma franquia = um arquivo de staging = um
 pipeline; não misturar franquias no mesmo staging. `staging/` está no
-`.gitignore` — só o `modules/bardo/dataset/musicas.json` vai pro commit.
+`.gitignore` — só o `frederico/dataset/musicas.json` vai pro commit.
 
 ## 1. Extrair
 
@@ -34,11 +34,11 @@ Trocar `["não classificado"]` por **2 a 5 temas** por faixa.
   em uso (com contagem):
 
   ```
-  python -c "import json,collections;d=json.load(open('modules/bardo/dataset/musicas.json',encoding='utf-8'));print(collections.Counter(t for m in d['musicas'] for t in m['temas']).most_common())"
+  python -c "import json,collections;d=json.load(open('frederico/dataset/musicas.json',encoding='utf-8'));print(collections.Counter(t for m in d['musicas'] for t in m['temas']).most_common())"
   ```
 
   As categorias de busca (`triste`, `chefe`, `masmorra`...) saem dos temas
-  via `modules/bardo/dataset/vocabulario.json` — um tema que já está lá ou
+  via `frederico/dataset/vocabulario.json` — um tema que já está lá ou
   no dataset é o que faz a faixa aparecer nas buscas.
 - **Contexto de jogo conta tanto quanto clima**: onde a faixa toca
   (`boss fight`, `hub`, `exploração`, `masmorra`, `cidade`, `menu`,
@@ -79,7 +79,7 @@ Não precisa do pipeline: editar o `temas` da faixa direto no
 ## 4. Testar e commitar
 
 ```
-python -m unittest discover -s modules/bardo -t .
+python -m unittest discover -s frederico -t .
 ```
 
 Commitar só o `musicas.json` (e os scripts, se mudaram). Antes, `git status`

@@ -16,7 +16,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from modules.bardo.service import (  # noqa: E402
+from frederico.service import (  # noqa: E402
     _DATASET_PATH, _normalizar, carregar_vocabulario, categorias_dos_temas, formatar_dataset, video_id,
 )
 

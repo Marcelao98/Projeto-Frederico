@@ -21,7 +21,7 @@ import yt_dlp
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from modules.bardo.service import NAO_CLASSIFICADO, slug  # noqa: E402
+from frederico.service import NAO_CLASSIFICADO, slug  # noqa: E402
 
 _TITULOS_INDISPONIVEIS = {"[deleted video]", "[private video]"}
 

@@ -1,7 +1,7 @@
 """Preenche o campo 'categorias' de cada faixa do dataset do Bardo.
 
 As categorias saem dos temas crus da faixa, segundo
-modules/bardo/dataset/vocabulario.json. Categorias que já estão na faixa
+frederico/dataset/vocabulario.json. Categorias que já estão na faixa
 são mantidas (dá pra acrescentar à mão, ex: "taverna" numa faixa que o
 vocabulário não pegou); pra tirar uma, apaga à mão no musicas.json.
 
@@ -14,7 +14,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from modules.bardo.service import (  # noqa: E402
+from frederico.service import (  # noqa: E402
     _DATASET_PATH, carregar_vocabulario, categorias_dos_temas, formatar_dataset,
 )
 

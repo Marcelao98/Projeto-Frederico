@@ -22,7 +22,7 @@ from discord import app_commands
 from discord.ext import commands
 from discord.utils import escape_markdown
 
-from modules.bardo import service
+from frederico import service
 
 log = logging.getLogger(__name__)
 

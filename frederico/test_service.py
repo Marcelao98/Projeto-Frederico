@@ -1,6 +1,6 @@
 """
 Testes do serviço do Bardo (pedidos, fila, busca). Da raiz do projeto:
-    python -m unittest discover -s modules/bardo -t .
+    python -m unittest discover -s frederico -t .
 """
 
 import os
@@ -13,7 +13,7 @@ from pathlib import Path
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 
-from modules.bardo.service import (  # noqa: E402
+from frederico.service import (  # noqa: E402
     MAX_FILA,
     NAO_CLASSIFICADO,
     SEGUNDOS_PARA_RESPONDER,
