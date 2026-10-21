@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -3 64 67" role="img" aria-label="Frederico, calopsita albina">
+  <g fill="none" stroke="#f4f1ea" stroke-width="2.4" stroke-linecap="round">
+    <path d="M30 13 C27 5 22 2 17 1"/>
+    <path d="M33 12 C32 4 28 0 24 -1"/>
+    <path d="M36 12 C37 6 35 2 32 0"/>
+  </g>
+  <path d="M20 58 L10 63 L14 56 Z" fill="#e8e3d8"/>
+  <ellipse cx="27" cy="42" rx="12" ry="17" transform="rotate(18 27 42)" fill="#f4f1ea"/>
+  <path d="M22 34 C16 42 16 52 22 56" fill="none" stroke="#d9d3c6" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="34" cy="22" r="11" fill="#fbf9f4"/>
+  <circle cx="38" cy="26" r="3.4" fill="#f6dccf"/>
+  <path d="M44 20 C49 21 49 26 45 28 L43 24 Z" fill="#e9c7b8"/>
+  <circle cx="37" cy="19" r="2.3" fill="#d6283a"/>
+  <circle cx="37.7" cy="18.4" r="0.7" fill="#fff"/>
+</svg>

@@ -1,9 +1,11 @@
-# Projeto Frederico 🦜
+<img src="docs/frederico.svg" width="96" alt="Frederico, calopsita albina">
+
+# Projeto Frederico
 
 > Nome de trabalho. O nome final (FredBOT, Freddy ou Fredérico) ainda não foi escolhido.
 
-Uma aplicação de som inspirada no **Frederico**, a calopsita de verdade do
-Marcelo, que ama música e barulho de todo tipo. No universo da
+Uma aplicação de som inspirada no **Frederico**, a calopsita albina de verdade
+do Marcelo, que ama música e barulho de todo tipo. No universo da
 [Natty](https://github.com/Marcelao98/natty-bot) ele vira uma calopsita robô:
 um dos robozinhos menores que a Natty comanda, o que cuida do som.
 

@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Frederico</title>
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgLTMgNjQgNjciIHJvbGU9ImltZyIgYXJpYS1sYWJlbD0iRnJlZGVyaWNvLCBjYWxvcHNpdGEgYWxiaW5hIj4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9IiNmNGYxZWEiIHN0cm9rZS13aWR0aD0iMi40IiBzdHJva2UtbGluZWNhcD0icm91bmQiPgogICAgPHBhdGggZD0iTTMwIDEzIEMyNyA1IDIyIDIgMTcgMSIvPgogICAgPHBhdGggZD0iTTMzIDEyIEMzMiA0IDI4IDAgMjQgLTEiLz4KICAgIDxwYXRoIGQ9Ik0zNiAxMiBDMzcgNiAzNSAyIDMyIDAiLz4KICA8L2c+CiAgPHBhdGggZD0iTTIwIDU4IEwxMCA2MyBMMTQgNTYgWiIgZmlsbD0iI2U4ZTNkOCIvPgogIDxlbGxpcHNlIGN4PSIyNyIgY3k9IjQyIiByeD0iMTIiIHJ5PSIxNyIgdHJhbnNmb3JtPSJyb3RhdGUoMTggMjcgNDIpIiBmaWxsPSIjZjRmMWVhIi8+CiAgPHBhdGggZD0iTTIyIDM0IEMxNiA0MiAxNiA1MiAyMiA1NiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZDlkM2M2IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9IjM0IiBjeT0iMjIiIHI9IjExIiBmaWxsPSIjZmJmOWY0Ii8+CiAgPGNpcmNsZSBjeD0iMzgiIGN5PSIyNiIgcj0iMy40IiBmaWxsPSIjZjZkY2NmIi8+CiAgPHBhdGggZD0iTTQ0IDIwIEM0OSAyMSA0OSAyNiA0NSAyOCBMNDMgMjQgWiIgZmlsbD0iI2U5YzdiOCIvPgogIDxjaXJjbGUgY3g9IjM3IiBjeT0iMTkiIHI9IjIuMyIgZmlsbD0iI2Q2MjgzYSIvPgogIDxjaXJjbGUgY3g9IjM3LjciIGN5PSIxOC40IiByPSIwLjciIGZpbGw9IiNmZmYiLz4KPC9zdmc+">
 <style>
   :root {
     --fundo: #1e1f24; --cartao: #2b2d33; --borda: #3a3d44; --pena: #8c8f96;
@@ -14,7 +15,9 @@
   main { max-width: 760px; margin: 0 auto; padding: 16px; display: grid; gap: 14px; }
   header { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
   h1 { font-size: 22px; margin: 0; }
+  h1 { display: flex; align-items: center; gap: 8px; }
   h1 span { color: var(--crista); }
+  h1 .ave { display: flex; }
   h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--pena); margin: 0 0 10px; }
   section { background: var(--cartao); border: 1px solid var(--borda); border-radius: 12px; padding: 14px; }
   .pilula { font-size: 13px; padding: 4px 10px; border-radius: 99px; background: var(--borda); color: var(--pena); }
@@ -46,7 +49,21 @@
 <body>
 <main>
   <header>
-    <h1>🦜 <span>Frederico</span></h1>
+    <h1><span class="ave"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 -3 64 67" role="img" aria-label="Frederico, calopsita albina">
+  <g fill="none" stroke="#f4f1ea" stroke-width="2.4" stroke-linecap="round">
+    <path d="M30 13 C27 5 22 2 17 1"/>
+    <path d="M33 12 C32 4 28 0 24 -1"/>
+    <path d="M36 12 C37 6 35 2 32 0"/>
+  </g>
+  <path d="M20 58 L10 63 L14 56 Z" fill="#e8e3d8"/>
+  <ellipse cx="27" cy="42" rx="12" ry="17" transform="rotate(18 27 42)" fill="#f4f1ea"/>
+  <path d="M22 34 C16 42 16 52 22 56" fill="none" stroke="#d9d3c6" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="34" cy="22" r="11" fill="#fbf9f4"/>
+  <circle cx="38" cy="26" r="3.4" fill="#f6dccf"/>
+  <path d="M44 20 C49 21 49 26 45 28 L43 24 Z" fill="#e9c7b8"/>
+  <circle cx="37" cy="19" r="2.3" fill="#d6283a"/>
+  <circle cx="37.7" cy="18.4" r="0.7" fill="#fff"/>
+</svg></span><span>Frederico</span></h1>
     <span id="som" class="pilula">som desligado</span>
   </header>
 
@@ -83,7 +100,7 @@
     <h2>Microfone</h2>
     <div class="linha">
       <button id="bMic">🎙 Mic ligado</button>
-      <button id="bDucking">🦜 Abaixar música quando eu falo</button>
+      <button id="bDucking">🔉 Abaixar música quando eu falo</button>
     </div>
     <label for="ganhoMic">Volume do mic: <b id="ganhoMicTxt"></b></label>
     <input id="ganhoMic" type="range" min="0" max="300">

@@ -30,7 +30,7 @@ def main() -> None:
 
     servidor = criar_servidor(App(player, motor), args.porta)
     url = f"http://127.0.0.1:{args.porta}"
-    print(f"🦜 Frederico no ar: {url}  (Ctrl+C pra sair)")
+    print(f"🐦 Frederico no ar: {url}  (Ctrl+C pra sair)")
     if not args.sem_navegador:
         webbrowser.open(url)
     try:
