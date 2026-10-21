@@ -78,8 +78,8 @@ class TestArquivoDeVerdade(unittest.TestCase):
 
 
 class MotorFalso:
-    ligado, config, erro, mic_ligado, ganho_mic, ducking, nivel_mic, nivel_saida = (
-        False, {"mic": None, "saida": None, "monitor": None}, None, True, 1.0, True, 0.0, 0.0)
+    ligado, config, erro, mic_ligado, ganho_mic, ducking, nivel_mic, nivel_saida, ouvir_saida = (
+        False, {"mic": None, "saida": None, "monitor": None}, None, True, 1.0, True, 0.0, 0.0, False)
 
     def ligar(self, saida, mic=None, monitor=None):
         self.config = {"mic": mic, "saida": saida, "monitor": monitor}
@@ -114,10 +114,11 @@ class TestPainel(unittest.TestCase):
     def test_comandos(self):
         self.assertIn("50%", self.pedir("/api/volume", {"valor": 50})["msg"])
         self.assertIn("Não tem nada", self.pedir("/api/comando", {"acao": "pular"})["msg"])
-        self.pedir("/api/mic", {"ligado": False, "ganho": 150})
+        self.pedir("/api/mic", {"ligado": False, "ganho": 150, "ouvir_saida": True})
         audio = self.pedir("/api/estado")["audio"]
         self.assertFalse(audio["mic_ligado"])
         self.assertEqual(audio["ganho_mic"], 150)
+        self.assertTrue(audio["ouvir_saida"])
 
     def test_recusa_host_de_fora(self):
         with self.assertRaises(urllib.error.HTTPError) as ctx:

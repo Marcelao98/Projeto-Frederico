@@ -1,5 +1,10 @@
 # Changelog
 
+## Botão de teste e calopsita albina - 2026-10-21
+
+- **"Testar: ouvir o que sai"**: o monitor (fone) passa a receber a mistura completa (mic + música), igual ao que sai no VB-Cable.
+- O 🦜 virou um desenho da calopsita albina (painel, favicon, README).
+
 ## Núcleo sem Discord + painel web + música por cima do mic - 2026-10-20
 
 - O código saiu de `modules/bardo/` pra `frederico/` (histórico preservado com `git mv`).

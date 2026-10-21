@@ -42,6 +42,9 @@ música ──────┘                                                   
    resultado do YouTube.
 4. **Volume da música** e **volume do mic** são separados. O botão
    "Abaixar música quando eu falo" liga o ducking.
+5. **Testar antes da aula:** com o fone no Monitor, liga **"Testar: ouvir o
+   que sai"**. Você ouve no fone exatamente o que vai pro microfone virtual
+   (sua voz + música, com um pouco de atraso). Desliga depois.
 
 **No Discord:** desliga a **supressão de ruído** (Krisp) e o **cancelamento
 de eco** em Voz e Vídeo, senão eles cortam a música, e usa **detecção de voz**

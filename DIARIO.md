@@ -22,3 +22,9 @@
   tem) e YouTube (a nuvem é bloqueada). Primeiro teste de ouvido é do Marcelo.
 - Falta: aviso "congelado" no Bardo da Natty; mixer em camadas (ambiente,
   pads); bot de Discord; Freesound; quebrar o `service.py` em arquivos menores.
+
+## 2026-10-21 — Teste de ouvido
+
+- Botão "Testar: ouvir o que sai" no painel, pra conferir mic + música no fone antes da aula.
+- Frederico é uma calopsita **albina**: desenho próprio em SVG.
+- Celular: só como controle remoto, e fica pra depois (só PC por enquanto).

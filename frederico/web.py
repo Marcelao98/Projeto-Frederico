@@ -45,7 +45,7 @@ class App:
             "player": self.player.estado(),
             "audio": {
                 "ligado": m.ligado, "config": m.config, "erro": m.erro,
-                "mic_ligado": m.mic_ligado, "ganho_mic": round(m.ganho_mic * 100), "ducking": m.ducking,
+                "mic_ligado": m.mic_ligado, "ganho_mic": round(m.ganho_mic * 100), "ducking": m.ducking, "ouvir_saida": m.ouvir_saida,
                 "nivel_mic": round(m.nivel_mic, 4), "nivel_saida": round(m.nivel_saida, 4),
             },
         }
@@ -74,6 +74,8 @@ class App:
                 m.ganho_mic = max(0, min(int(dados["ganho"]), 300)) / 100
             if "ducking" in dados:
                 m.ducking = bool(dados["ducking"])
+            if "ouvir_saida" in dados:
+                m.ouvir_saida = bool(dados["ouvir_saida"])
             return {"msg": "ok"}
         if rota == "/api/audio":
             def _id(chave):

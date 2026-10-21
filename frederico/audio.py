@@ -96,6 +96,9 @@ class Motor:
         self.mic_ligado = True
         self.ganho_mic = 1.0
         self.ducking = True
+        # Teste: o monitor (fone) recebe o mesmo que a saída (mic + música),
+        # pra ouvir o que os outros vão ouvir.
+        self.ouvir_saida = False
         self.nivel_mic = 0.0
         self.nivel_saida = 0.0
         self.config: dict = {"mic": None, "saida": None, "monitor": None}
@@ -137,7 +140,7 @@ class Motor:
             principal, so_musica = self.processar(quadros)
             outdata[:] = principal
             if monitor is not None:
-                self._monitor.colocar(so_musica)
+                self._monitor.colocar(principal if self.ouvir_saida else so_musica)
 
         def ao_gravar(indata, _quadros, _tempo, status):
             self._mic.colocar(indata.copy())

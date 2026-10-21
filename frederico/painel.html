@@ -100,8 +100,10 @@
     <h2>Microfone</h2>
     <div class="linha">
       <button id="bMic">🎙 Mic ligado</button>
+      <button id="bTeste">🎧 Testar: ouvir o que sai</button>
       <button id="bDucking">🔉 Abaixar música quando eu falo</button>
     </div>
+    <p class="dica">Pra testar: escolha seu fone no <b>Monitor</b> e ligue <b>Testar</b>. Você ouve exatamente o que vai pro microfone virtual (sua voz + música), com um pouquinho de atraso. Desligue antes da aula.</p>
     <label for="ganhoMic">Volume do mic: <b id="ganhoMicTxt"></b></label>
     <input id="ganhoMic" type="range" min="0" max="300">
     <div class="grade">
@@ -165,6 +167,7 @@ $("bPausa").addEventListener("click", () =>
   enviar("/api/comando", {acao: estado && estado.player.pausado ? "continuar" : "pausar"}));
 $("bMic").addEventListener("click", () => enviar("/api/mic", {ligado: !estado.audio.mic_ligado}));
 $("bDucking").addEventListener("click", () => enviar("/api/mic", {ducking: !estado.audio.ducking}));
+$("bTeste").addEventListener("click", () => enviar("/api/mic", {ouvir_saida: !estado.audio.ouvir_saida}));
 
 function slider(id, aoMudar) {
   const el = $(id);
@@ -192,6 +195,8 @@ async function atualizar() {
   $("bMic").textContent = a.mic_ligado ? "🎙 Mic ligado" : "🔇 Mic mudo";
   $("bMic").className = a.mic_ligado ? "" : "ativo";
   $("bDucking").className = a.ducking ? "ativo" : "";
+  $("bTeste").className = a.ouvir_saida ? "ativo" : "";
+  $("bTeste").textContent = a.ouvir_saida ? "🎧 Testando: ouvindo o que sai" : "🎧 Testar: ouvir o que sai";
   $("nMic").style.width = nivel(a.nivel_mic) + "%";
   $("nSaida").style.width = nivel(a.nivel_saida) + "%";
   $("fila").innerHTML = "";
