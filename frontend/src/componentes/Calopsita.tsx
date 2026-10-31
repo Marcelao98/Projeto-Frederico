@@ -1,5 +1,42 @@
-/** O Frederico: uma calopsita robô. As cores vêm do tema (--ave-*). */
-export function Calopsita({ tamanho = 40 }: { tamanho?: number }) {
+/**
+ * O Frederico. Cada plumagem pode ter a sua ilustração em
+ * public/aves/<tema>.png (albina.png, lutino.png...). Se o arquivo do tema
+ * ainda não existe, desenha a calopsita robô em SVG com as cores do tema.
+ */
+
+import { useState } from "react";
+import { temaAtual } from "../dados/temas";
+import { useArmazem } from "../dados/useArmazem";
+
+// Imagens que já falharam: não tenta de novo a cada render.
+const semImagem = new Set<string>();
+
+export function Calopsita({ tamanho = 40, tema }: { tamanho?: number; tema?: string }) {
+  const atual = useArmazem(temaAtual);
+  const plumagem = tema ?? atual;
+  const [, redesenhar] = useState(0);
+
+  if (!semImagem.has(plumagem)) {
+    return (
+      <img
+        src={`${import.meta.env.BASE_URL}aves/${plumagem}.png`}
+        width={tamanho}
+        height={tamanho}
+        alt=""
+        draggable={false}
+        style={{ objectFit: "contain" }}
+        onError={() => {
+          semImagem.add(plumagem);
+          redesenhar((n) => n + 1);
+        }}
+      />
+    );
+  }
+  return <CalopsitaDesenhada tamanho={tamanho} />;
+}
+
+/** A calopsita robô em SVG. As cores vêm do tema (--ave-*). */
+function CalopsitaDesenhada({ tamanho }: { tamanho: number }) {
   return (
     <svg width={tamanho} height={tamanho} viewBox="0 0 64 64" aria-hidden="true">
       <path

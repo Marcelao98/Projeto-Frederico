@@ -119,7 +119,7 @@ export function App({ palcoDoVideo }: { palcoDoVideo: HTMLElement }) {
               >
                 {/* O data-tema aqui pinta só esta ave com as cores do tema dela. */}
                 <span data-tema={t.id} className="plumagem-ave">
-                  <Calopsita tamanho={30} />
+                  <Calopsita tamanho={30} tema={t.id} />
                 </span>
               </button>
             ))}

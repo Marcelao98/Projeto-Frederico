@@ -47,6 +47,8 @@ export function ModoChat({ acervo }: { acervo: Acervo }) {
   const campo = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
+    // Sem mensagens é a tela de boas-vindas: fica no topo.
+    if (!mensagens.length) return;
     rolagem.current?.scrollTo({ top: rolagem.current.scrollHeight, behavior: "smooth" });
   }, [mensagens.length, pensando]);
 
