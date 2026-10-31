@@ -1,0 +1,160 @@
+{
+  "_comentario": "Casos do contrato do Motor, rodados pelos DOIS lados: frontend/src/motor/contrato.test.ts (MotorLocal) e backend/freddy/motor/test_contrato.py (Motor do backend). Mudou uma regra do motor? Acrescente o caso aqui e os dois testes cobram. Formato dos passos: 'executar' (comando; músicas como número n = {titulo: 'Música n', link: 'https://youtu.be/vn'}, ou {'intervalo': [de, ate]}; uid como '$proximas.N' ou '$tocando') com 'resultado' esperado; 'reprodutor' (fim, tocando, erro, titulo) com 'arg'; 'estado' (tocando e proximas pelos títulos); 'eventos' (todos desde o começo); 'carregados' (números das músicas mandadas pro reprodutor); 'volume_reprodutor'.",
+  "casos": [
+    {
+      "nome": "a primeira começa a tocar e as outras entram na fila",
+      "passos": [
+        { "executar": { "tipo": "adicionar", "musicas": [1, 2] }, "resultado": { "entraram": 2, "posicao": 0, "comecou": true } },
+        { "estado": { "tocando": "Música 1", "proximas": ["Música 2"], "situacao": "carregando" } },
+        { "carregados": [1] },
+        { "executar": { "tipo": "adicionar", "musicas": [3] }, "resultado": { "entraram": 1, "posicao": 2, "comecou": false } },
+        { "executar": { "tipo": "adicionar", "musicas": [] }, "resultado": { "entraram": 0, "posicao": -1, "comecou": false } }
+      ]
+    },
+    {
+      "nome": "quando acaba, segue a fila e avisa",
+      "passos": [
+        { "executar": { "tipo": "adicionar", "musicas": [1, 2] } },
+        { "reprodutor": "fim" },
+        { "estado": { "tocando": "Música 2", "proximas": [] } },
+        { "eventos": [{ "tipo": "tocando_agora", "titulo": "Música 2" }] },
+        { "reprodutor": "fim" },
+        { "estado": { "tocando": null, "situacao": "parado" } },
+        { "eventos": [{ "tipo": "tocando_agora", "titulo": "Música 2" }, { "tipo": "fila_acabou" }] }
+      ]
+    },
+    {
+      "nome": "repetir toca a mesma de novo; pular desliga",
+      "passos": [
+        { "executar": { "tipo": "adicionar", "musicas": [1, 2] } },
+        { "executar": { "tipo": "repetir" }, "resultado": { "repetir": true } },
+        { "reprodutor": "fim" },
+        { "estado": { "tocando": "Música 1", "repetir": true } },
+        { "carregados": [1, 1] },
+        { "executar": { "tipo": "pular" }, "resultado": { "pulou": true, "temProxima": true, "repetiaAntes": true } },
+        { "estado": { "tocando": "Música 2", "repetir": false } },
+        { "executar": { "tipo": "pular" }, "resultado": { "pulou": true, "temProxima": false, "repetiaAntes": false } },
+        { "eventos": [{ "tipo": "fila_acabou" }] },
+        { "executar": { "tipo": "pular" }, "resultado": { "pulou": false, "temProxima": false, "repetiaAntes": false } }
+      ]
+    },
+    {
+      "nome": "repetir sem nada tocando não liga; ligar=false desliga",
+      "passos": [
+        { "executar": { "tipo": "repetir" }, "resultado": { "repetir": false } },
+        { "executar": { "tipo": "adicionar", "musicas": [1] } },
+        { "executar": { "tipo": "repetir", "ligar": true }, "resultado": { "repetir": true } },
+        { "executar": { "tipo": "repetir", "ligar": true }, "resultado": { "repetir": true } },
+        { "executar": { "tipo": "repetir", "ligar": false }, "resultado": { "repetir": false } }
+      ]
+    },
+    {
+      "nome": "falha avisa, desliga o repetir e segue",
+      "passos": [
+        { "executar": { "tipo": "adicionar", "musicas": [1, 2] } },
+        { "executar": { "tipo": "repetir" } },
+        { "reprodutor": "erro", "arg": "vídeo removido" },
+        { "eventos": [{ "tipo": "falha", "titulo": "Música 1", "motivo": "vídeo removido" }, { "tipo": "tocando_agora", "titulo": "Música 2" }] },
+        { "estado": { "tocando": "Música 2", "repetir": false } }
+      ]
+    },
+    {
+      "nome": "parar limpa tudo",
+      "passos": [
+        { "executar": { "tipo": "parar" }, "resultado": { "ok": false } },
+        { "executar": { "tipo": "adicionar", "musicas": [1, 2] } },
+        { "executar": { "tipo": "parar" }, "resultado": { "ok": true } },
+        { "estado": { "tocando": null, "proximas": [], "situacao": "parado", "repetir": false } }
+      ]
+    },
+    {
+      "nome": "limpar a fila mantém a atual",
+      "passos": [
+        { "executar": { "tipo": "adicionar", "musicas": [1, 2, 3] } },
+        { "executar": { "tipo": "limpar_fila" }, "resultado": { "removidas": 2 } },
+        { "estado": { "tocando": "Música 1", "proximas": [] } }
+      ]
+    },
+    {
+      "nome": "pausar e continuar dependem da situação",
+      "passos": [
+        { "executar": { "tipo": "pausar" }, "resultado": { "ok": false } },
+        { "executar": { "tipo": "adicionar", "musicas": [1] } },
+        { "reprodutor": "tocando" },
+        { "executar": { "tipo": "continuar" }, "resultado": { "ok": false } },
+        { "executar": { "tipo": "pausar" }, "resultado": { "ok": true } },
+        { "estado": { "situacao": "pausado" } },
+        { "executar": { "tipo": "continuar" }, "resultado": { "ok": true } },
+        { "estado": { "situacao": "tocando" } },
+        { "executar": { "tipo": "alternar_pausa" }, "resultado": { "ok": true } },
+        { "estado": { "situacao": "pausado" } },
+        { "executar": { "tipo": "alternar_pausa" }, "resultado": { "ok": true } },
+        { "estado": { "situacao": "tocando" } }
+      ]
+    },
+    {
+      "nome": "volume absoluto e relativo, limitado a 0-100",
+      "passos": [
+        { "estado": { "volume": 50 } },
+        { "executar": { "tipo": "volume", "delta": 20 }, "resultado": { "volume": 70 } },
+        { "executar": { "tipo": "volume", "valor": 130 }, "resultado": { "volume": 100 } },
+        { "volume_reprodutor": 100 },
+        { "executar": { "tipo": "volume", "delta": -150 }, "resultado": { "volume": 0 } },
+        { "executar": { "tipo": "volume" }, "resultado": { "volume": 0 } }
+      ]
+    },
+    {
+      "nome": "modo playlist: tocar agora, próxima, mover, remover, tocar item",
+      "passos": [
+        { "executar": { "tipo": "adicionar", "musicas": [1, 2, 3] } },
+        { "executar": { "tipo": "adicionar", "musicas": [9], "onde": "proxima" }, "resultado": { "entraram": 1, "posicao": 1, "comecou": false } },
+        { "estado": { "proximas": ["Música 9", "Música 2", "Música 3"] } },
+        { "executar": { "tipo": "mover", "uid": "$proximas.0", "para": 2 }, "resultado": { "ok": true } },
+        { "estado": { "proximas": ["Música 2", "Música 3", "Música 9"] } },
+        { "executar": { "tipo": "remover", "uid": "$proximas.1" }, "resultado": { "ok": true } },
+        { "executar": { "tipo": "remover", "uid": "nao-existe" }, "resultado": { "ok": false } },
+        { "estado": { "proximas": ["Música 2", "Música 9"] } },
+        { "executar": { "tipo": "tocar_item", "uid": "$proximas.1" }, "resultado": { "ok": true } },
+        { "estado": { "tocando": "Música 9", "proximas": ["Música 2"] } },
+        { "executar": { "tipo": "tocar_item", "uid": "nao-existe" }, "resultado": { "ok": false } },
+        { "executar": { "tipo": "adicionar", "musicas": [7, 8], "onde": "agora" }, "resultado": { "entraram": 2, "posicao": 0, "comecou": true } },
+        { "estado": { "tocando": "Música 7", "proximas": ["Música 8", "Música 2"] } },
+        { "carregados": [1, 9, 7] }
+      ]
+    },
+    {
+      "nome": "com nada tocando, 'próxima' também começa a tocar",
+      "passos": [
+        { "executar": { "tipo": "adicionar", "musicas": [1, 2], "onde": "proxima" }, "resultado": { "entraram": 2, "posicao": 0, "comecou": true } },
+        { "estado": { "tocando": "Música 1", "proximas": ["Música 2"] } }
+      ]
+    },
+    {
+      "nome": "respeita o limite da fila",
+      "passos": [
+        { "executar": { "tipo": "adicionar", "musicas": { "intervalo": [0, 60] } }, "resultado": { "entraram": 50, "posicao": 0, "comecou": true } },
+        { "executar": { "tipo": "adicionar", "musicas": [998] }, "resultado": { "entraram": 1, "posicao": 50, "comecou": false } },
+        { "executar": { "tipo": "adicionar", "musicas": [999] }, "resultado": { "entraram": 0, "posicao": -1, "comecou": false } }
+      ]
+    },
+    {
+      "nome": "link colado ganha o título do vídeo; faixa do acervo mantém o nome",
+      "passos": [
+        { "executar": { "tipo": "adicionar", "musicas": [1] } },
+        { "reprodutor": "titulo", "arg": "Nome Real do Vídeo" },
+        { "estado": { "tocando": "Nome Real do Vídeo" } },
+        { "executar": { "tipo": "adicionar", "musicas": [{ "titulo": "Música 2", "link": "https://youtu.be/v2", "faixaId": "x" }], "onde": "agora" } },
+        { "reprodutor": "titulo", "arg": "Outro nome" },
+        { "estado": { "tocando": "Música 2" } }
+      ]
+    },
+    {
+      "nome": "buscar posição só com algo tocando",
+      "passos": [
+        { "executar": { "tipo": "buscar_posicao", "segundos": 30 }, "resultado": { "ok": false } },
+        { "executar": { "tipo": "adicionar", "musicas": [1] } },
+        { "executar": { "tipo": "buscar_posicao", "segundos": 30 }, "resultado": { "ok": true } }
+      ]
+    }
+  ]
+}

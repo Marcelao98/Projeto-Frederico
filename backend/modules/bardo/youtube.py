@@ -19,13 +19,14 @@ _YDL_OPTS = {
 }
 
 
-def resolver_stream(url: str) -> dict:
+def resolver_stream(url: str, formato: str | None = None) -> dict:
     """Resolve uma URL do YouTube na URL de áudio direto + metadados.
 
     Levanta a exceção do yt-dlp se o vídeo não existir, estiver bloqueado,
-    etc. — quem chama decide como tratar.
+    etc. — quem chama decide como tratar. `formato` troca o "format" do
+    yt-dlp (o Freddy prefere Opus, que o ffmpeg-free do Fedora toca).
     """
-    info = _extrair(url)
+    info = _extrair(url, formato)
     return {
         "titulo": info.get("title") or "música desconhecida",
         "stream_url": info["url"],
@@ -35,7 +36,7 @@ def resolver_stream(url: str) -> dict:
     }
 
 
-def buscar_stream(texto: str) -> dict:
+def buscar_stream(texto: str, formato: str | None = None) -> dict:
     """Busca `texto` no YouTube e resolve o primeiro resultado.
 
     Mesmo retorno de resolver_stream(), mais "link": o link de watch do
@@ -43,7 +44,7 @@ def buscar_stream(texto: str) -> dict:
     se a busca não trouxer nada.
     """
     # "ytsearch1:" é a pseudo-URL de busca do yt-dlp (primeiro resultado).
-    info = _extrair(f"ytsearch1:{texto}")
+    info = _extrair(f"ytsearch1:{texto}", formato)
     return {
         "titulo": info.get("title") or "música desconhecida",
         "link": f"https://www.youtube.com/watch?v={info['id']}",
@@ -53,8 +54,9 @@ def buscar_stream(texto: str) -> dict:
     }
 
 
-def _extrair(url: str) -> dict:
-    with yt_dlp.YoutubeDL(_YDL_OPTS) as ydl:
+def _extrair(url: str, formato: str | None = None) -> dict:
+    opcoes = {**_YDL_OPTS, "format": formato} if formato else _YDL_OPTS
+    with yt_dlp.YoutubeDL(opcoes) as ydl:
         info = ydl.extract_info(url, download=False)
     if "entries" in info:  # playlist ou busca: pega o primeiro item
         entradas = [e for e in info["entries"] if e]
