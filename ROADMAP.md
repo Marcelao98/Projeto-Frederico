@@ -102,10 +102,10 @@ Um Freddy ligado num PC de casa, atendendo todos os mestres.
   chat, colar playlist do YouTube, sair da call quando ficar vazia, erros mais
   claros (vídeo privado, idade), títulos com "volta"/"próxima" virando comando.
 
+## Decisões tomadas
+- **Bot:** um Freddy compartilhado pelos mestres, rodando num PC de casa (Fase 3). (31/10/2026)
+- **Sistemas:** Linux e Windows são prioridade; Mac depois. (31/10/2026)
+
 ## Decisões em aberto
 - **Nome:** Freddy, FredBOT ou Fredérico? (o app já se chama Freddy)
-- **Bot:** um Freddy compartilhado por todos (Fase 3) ou cada mestre com o seu?
-  A recomendação é compartilhado, num PC de casa.
-- **Sistema principal:** Linux (Fedora, o PC do Marcelo) e Windows (a
-  maioria dos mestres) são prioridade; Mac depois.
 - **Quando abrir o repositório** pro público.
