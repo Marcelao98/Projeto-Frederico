@@ -50,7 +50,7 @@ npm run app:build    # gera o instalador (.msi/.exe no Windows) em src-tauri/tar
 
 ## Os dois modos
 
-- **Chat**: fala com o Freddy como fala com a Natty no Discord, sem @ e sem
+- **Chat**: pede música em português pro Freddy, sem @ e sem
   LLM. "toca triste e bloodborne", "toca chefe sem elden ring", "pula",
   "repete", "volume 30", "fila", "ajuda". O nome na frente é opcional
   ("Freddy, toca…"). Enquanto você digita, ele mostra quantas faixas do

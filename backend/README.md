@@ -6,9 +6,10 @@ Python. Duas peças:
   Servidor local (FastAPI + WebSocket) que o painel usa pelo `MotorRemoto`:
   a fila mora aqui, o som sai daqui (yt-dlp + FFmpeg + caixa de som), e o
   acervo e as playlists também.
-- **`modules/bardo/`**: o Bardo, o módulo de música da Natty (Cog de
-  discord.py). É dele que o Freddy reaproveita as regras (pedidos, busca no
-  acervo, YouTube). Na Fase 2 o Cog vira o bot do Freddy.
+- **`modules/bardo/`**: o Bardo, que veio do módulo de música da Natty e
+  agora é do Freddy (não fica em sincronia com a natty-bot). É dele que o
+  Freddy usa as regras (pedidos, busca no acervo, YouTube). Na Fase 2 o Cog
+  vira o bot do Freddy e perde o que era da Natty (`@Natty`, o 🎙 do Echo).
 
 ## Ligar o Freddy
 
@@ -122,7 +123,7 @@ repositório):
 - `aprendidas.json`: faixas novas ("era essa?" ou linha nova na planilha).
 
 As categorias sempre saem dos temas (`vocabulario.json`). Pra levar tudo pro
-acervo oficial (e a Natty ganhar junto):
+acervo oficial (e os outros mestres ganharem junto na próxima versão):
 
 ```bash
 python scripts/freddy_promover.py --so-mostrar   # ver o que tem

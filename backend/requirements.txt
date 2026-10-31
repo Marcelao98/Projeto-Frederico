@@ -1,4 +1,4 @@
-# Bardo (o bot do Discord, hoje dentro da Natty)
+# Bardo (o cérebro musical; o Cog vira o bot do Freddy na Fase 2)
 discord.py>=2.4.0
 PyNaCl>=1.5.0
 davey>=0.1.6

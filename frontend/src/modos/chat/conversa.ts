@@ -2,7 +2,7 @@
  * O "cérebro" do chat: texto da mesa → comando no motor → resposta do Freddy.
  *
  * Mesma ideia do cog do Bardo: interpretarPedido() decide o que é, o motor
- * faz, e aqui só se monta a resposta (com os mesmos textos da Natty). Sem
+ * faz, e aqui só se monta a resposta (os textos vieram do Bardo). Sem
  * LLM. Não depende de React, então dá pra testar sozinho.
  */
 
@@ -49,7 +49,7 @@ const AJUDA_RE = /^(ajuda|socorro|help|comandos|\?|o que (voce|vc) (faz|sabe))/;
 const NOMES_DO_FREDDY_RE = /^\s*(@?(freddy|fred|frederico|fredbot))[\s,!:.]*/i;
 
 export const AJUDA = [
-  "Eu entendo o mesmo que o Bardo da Natty, sem precisar de @:",
+  "Me pede do seu jeito, sem precisar de @:",
   "• **toca triste e bloodborne**: busca no acervo (`e`, `ou`, `sem`)",
   "• **toca <link do YouTube>**: toca ou põe na fila",
   "• **pula** · **pausa** · **continua** · **para**",

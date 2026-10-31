@@ -234,7 +234,7 @@ def criar_app(config: Config | None = None, criar=criar_reprodutor, youtube: You
     async def ws(socket: WebSocket):
         origem = socket.headers.get("origin")
         # Navegador sempre manda Origin: sem ela é um programa local (script,
-        # a Natty no futuro). Com ela, só o painel passa.
+        # um teste). Com ela, só o painel passa.
         if origem is not None and origem not in config.origens:
             log.warning("Conexão recusada de %s", origem)
             await socket.close(code=4403)

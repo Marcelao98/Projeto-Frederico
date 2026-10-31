@@ -7,7 +7,7 @@ O Freddy guarda na pasta do mestre (fora do git):
 
 Este script aplica os dois no modules/bardo/dataset/musicas.json (as
 categorias são recalculadas dos temas) e esvazia os arquivos do mestre. Depois
-é revisar o git diff e commitar: a Natty e os outros mestres ganham junto.
+é revisar o git diff e commitar: os outros mestres ganham na próxima versão.
 
 Rodar de dentro de backend/:
     python scripts/freddy_promover.py --so-mostrar   # só lista, não mexe em nada

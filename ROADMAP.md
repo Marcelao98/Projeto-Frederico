@@ -10,12 +10,12 @@ Atualizado em 31/10/2026.
 
 | Peça | Situação |
 |---|---|
-| **Cérebro musical** (Bardo: entender pedidos, buscar no acervo, fila, aprender faixa nova) | ✅ pronto, em uso na Natty |
+| **Cérebro musical** (veio do Bardo: entender pedidos, buscar no acervo, fila, aprender faixa nova) | ✅ pronto, agora é do Freddy |
 | **Acervo** (607 faixas, 9 franquias, 27 climas) | ✅ pronto, curadoria contínua |
 | **Painel** (Chat, Playlist, Acervo, 5 plumagens) | ✅ pronto; toca pelo Freddy ou sozinho pelo YouTube |
 | **App desktop** (Tauri) com instaladores no GitHub (Windows, Linux, Mac) | ✅ pronto (v0.1.1), testado no Fedora |
 | **Backend próprio** (o Freddy sem a Natty) | 🟡 pronto (v0.3.0), instalado no Fedora; falta confirmar o som |
-| **Bot do Discord próprio do Freddy** | ⬜ hoje o som no Discord só existe pela Natty |
+| **Bot do Discord do Freddy** | ⬜ Fase 2 |
 | **Mixer, microfone virtual, soundboard** | ⬜ só planejado (telas "em breve" no painel) |
 
 ## Como desenvolver sem sofrer
@@ -62,13 +62,13 @@ O Freddy vira um programa Python que roda sozinho, sem a Natty: `python -m fredd
 - **Pronto quando:** o painel controla uma fila que mora no backend, com o app aberto ou no navegador.
 
 ### Fase 2: Bot do Discord do Freddy
-O som chega na call sem a Natty. Plano em `backend/docs/discord.md`.
+O som chega na call pelo Freddy. Plano em `backend/docs/discord.md`.
 - Bot próprio (o Cog do Bardo vira o bot do Freddy), tocando pelo backend.
+  Saem os jeitos da Natty que vieram junto: `@Natty`, o pedido falado com 🎙
+  (Echo) e o "não sair da call" por causa da escuta.
 - O painel escolhe a saída: este computador ou o Discord (servidor e canal).
-- Pedidos digitados no Discord continuam funcionando (`@Freddy toca...`).
-- Convivência com a Natty: ela pode mandar o Freddy tocar pela convenção 🎙
-  (os módulos não se importam; conversam por mensagem).
-- **Pronto quando:** um mestre toca música na call pelo painel, sem a Natty.
+- Pedidos digitados no Discord (`@Freddy toca...`), com a mesma fila do painel.
+- **Pronto quando:** um mestre toca música na call pelo painel.
 
 ### Fase 3: Vários mestres no mesmo Freddy
 Um Freddy ligado num PC de casa, atendendo todos os mestres.
@@ -117,6 +117,9 @@ Um Freddy ligado num PC de casa, atendendo todos os mestres.
   claros (vídeo privado, idade), títulos com "volta"/"próxima" virando comando.
 
 ## Decisões tomadas
+- **O Freddy é o áudio do Nattyverso.** A Natty não toca mais nada e não
+  precisa mudar: o Bardo que veio pra cá é do Freddy agora e não fica em
+  sincronia com a natty-bot. (31/10/2026)
 - **Bot:** um Freddy compartilhado pelos mestres, rodando num PC de casa (Fase 3). (31/10/2026)
 - **Sistemas:** Linux e Windows são prioridade; Mac depois. (31/10/2026)
 - **Quem toca:** o backend toca o som ele mesmo (não o navegador), num formato

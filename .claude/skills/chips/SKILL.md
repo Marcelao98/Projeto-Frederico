@@ -84,9 +84,8 @@ python -m unittest discover -s modules/bardo -t .
 ```
 
 Commitar só o `musicas.json` (e os scripts, se mudaram). Antes, `git status`
-pra confirmar que `.env` e `credentials.json` não estão staged. Depois do
-merge, reiniciar a Natty (`scripts/reiniciar_natty.ps1`) pra ela recarregar
-o dataset.
+pra confirmar que `.env` e `credentials.json` não estão staged. O Freddy
+relê o acervo sozinho; no painel, é só recarregar (F5).
 
 ## No final
 

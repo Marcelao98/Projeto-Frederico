@@ -20,9 +20,9 @@ música da Natty (`backend/modules/bardo/`). Ele já sabe:
 Os commits do Bardo vieram junto (extraídos da natty-bot com
 `git filter-repo`), então `git log` conta a história desde o começo.
 
-**Hoje** o Freddy já roda sozinho no PC (`python -m freddy`, em
-`backend/freddy/`): o painel manda nele, ele toca na caixa de som. O bot do
-Discord ainda é o Bardo dentro da Natty; o do Freddy é a Fase 2.
+**O Freddy é o áudio do Nattyverso:** a Natty não toca mais nada. Hoje ele
+já roda sozinho no PC (`python -m freddy`, em `backend/freddy/`): o painel
+manda nele, ele toca na caixa de som. O bot do Discord do Freddy é a Fase 2.
 
 ## Pra onde vai
 
@@ -36,9 +36,8 @@ toca e mistura som, e o Discord é só uma das saídas:
 - **Painel web local** (localhost) como controle remoto, com playlists e cenas salvas.
 - **Fontes:** arquivos locais, YouTube, playlists inteiras e Freesound
   (CC0 por padrão, com os créditos guardados).
-- **Bot de Discord** (depois): a Natty, na nuvem, manda o Frederico tocar pela
-  convenção 🎙 (ver `CLAUDE.md` da natty-bot). A Natty nunca toca áudio, e o
-  Frederico nunca sai do PC de quem roda.
+- **Bot de Discord do Freddy** (Fase 2): um bot só, compartilhado pelos
+  mestres, rodando num PC de casa. O som nunca passa pela Natty.
 
 Por que local: bot de música público na nuvem cai (termos do YouTube e
 bloqueio de IP de datacenter). No PC de cada um, é uso pessoal pra própria mesa.
@@ -53,7 +52,7 @@ backend/    o som: hoje o Bardo (Python, Discord), com o acervo de faixas
 ```
 
 - **Frontend** ([`frontend/README.md`](frontend/README.md)): modo **Chat**
-  (pedidos em português, como pra Natty) e modo **Playlist** (monta a fila
+  (pedidos em português, sem comando decorado) e modo **Playlist** (monta a fila
   e salva), com cinco plumagens de calopsita como tema. Toca pelo Freddy
   (backend) se ele estiver ligado; senão, pelo player do YouTube.
 - **Backend** ([`backend/README.md`](backend/README.md)): o Freddy

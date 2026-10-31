@@ -6,6 +6,11 @@ Frederico, a calopsita de verdade do Marcelo (cara-branca, asa prateada,
 olho preto, bico rosado). Nasceu do **Bardo**, o módulo de música da Natty
 (repositório `Marcelao98/natty-bot`).
 
+**O Freddy é o áudio do Nattyverso.** A Natty não toca mais nada e não se
+mexe nela por causa de áudio: o Bardo daqui (`backend/modules/bardo/`) é do
+Freddy agora e **não** precisa ficar em sincronia com a natty-bot. O que
+sobrou de "Natty" nele (`@Natty`, o 🎙 do Echo) sai na Fase 2.
+
 **Leia o `ROADMAP.md` antes de começar**: ele diz o que está pronto, a fase
 atual e as decisões já tomadas.
 
@@ -61,7 +66,7 @@ Detalhes de cada lado em `frontend/README.md` e `backend/README.md`.
   da paridade com o Bardo.
 - **Modos do painel** moram em `frontend/src/modos/<nome>/` e entram pela
   lista em `frontend/src/modos/registro.tsx`.
-- **No backend, a regra da Natty vale:** `service.py` é lógica pura, sem
+- **No backend:** `service.py` é lógica pura, sem
   discord.py; `cog.py` só traduz Discord ↔ service.
 - **Temas (plumagens):** cores em `frontend/src/temas.css` (um bloco
   `[data-tema]` por tema, com `--acento` pra preencher e `--acento-texto`

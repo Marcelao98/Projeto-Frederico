@@ -1,5 +1,5 @@
 /**
- * Modo Chat: fala com o Freddy como fala com a Natty no Discord.
+ * Modo Chat: pede música em português pro Freddy.
  * "toca triste e bloodborne", "pula", "volume 30". Sem LLM.
  */
 
@@ -136,7 +136,7 @@ export function ModoChat({ acervo }: { acervo: Acervo }) {
       <header className="modo-topo">
         <div>
           <h1>Chat</h1>
-          <p>Pede do jeito que você pede pra Natty. Sem @, sem comando decorado.</p>
+          <p>Pede do seu jeito, em português. Sem @, sem comando decorado.</p>
         </div>
         {mensagens.length > 0 && (
           <button
