@@ -15,7 +15,10 @@
     "skipLibCheck": true,
     "types": ["youtube", "vite/client", "node"],
     "baseUrl": ".",
-    "paths": { "@dataset/*": ["../backend/modules/bardo/dataset/*"] }
+    "paths": {
+      "@dataset/*": ["../backend/modules/bardo/dataset/*"],
+      "@contrato/*": ["../backend/freddy/motor/*"]
+    }
   },
   "include": ["src", "vite.config.ts"]
 }

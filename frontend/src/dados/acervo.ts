@@ -1,9 +1,9 @@
 /**
  * O acervo de faixas e o vocabulário de categorias, prontos pra buscar.
  *
- * Hoje vem direto dos JSON do Bardo (modules/bardo/dataset). Quando o
- * backend existir, ele serve esses mesmos dados (e grava as descobertas);
- * as telas só enxergam a interface `Acervo`.
+ * Sem o Freddy, vem direto dos JSON do Bardo (modules/bardo/dataset),
+ * embutidos no painel. Com o Freddy ligado, vem dele (GET /acervo): o mesmo
+ * dataset mais as faixas que a mesa ensinou. As telas só enxergam `Acervo`.
  */
 
 import musicasJson from "@dataset/musicas.json";
@@ -11,6 +11,7 @@ import vocabularioJson from "@dataset/vocabulario.json";
 import { MAX_RESULTADOS_DA_BUSCA, buscarPorTags, montarVocabulario, sortear, type Vocabulario } from "../nucleo/busca";
 import { normalizar } from "../nucleo/texto";
 import type { Faixa, VocabularioBruto } from "../nucleo/tipos";
+import { criarArmazem } from "./armazem";
 
 export interface Contagem {
   nome: string;
@@ -70,6 +71,9 @@ export const acervoLocal: Acervo = montarAcervo(
   (musicasJson as { musicas: Faixa[] }).musicas,
   vocabularioJson as VocabularioBruto,
 );
+
+/** O acervo em uso (troca quando o Freddy manda o dele, ou aprende faixa nova). */
+export const acervoAtual = criarArmazem<Acervo>(acervoLocal);
 
 // As categorias ficam sem acento no JSON ("epico"); na tela, com.
 const ROTULOS: Record<string, string> = {

@@ -18,6 +18,8 @@ export interface RespostaFreddy {
   texto: string;
   /** Músicas citadas na resposta, pra tela mostrar como cartões. */
   musicas?: Musica[];
+  /** "Era essa?": música achada na busca livre, que a mesa pode ensinar pro acervo. */
+  pergunta?: Musica;
 }
 
 export interface Contexto {
@@ -25,6 +27,13 @@ export interface Contexto {
   acervo: Acervo;
   /** Descobre o título de um link colado; null se não der. */
   tituloDoLink?: (link: string) => Promise<string | null>;
+  /** Busca livre no YouTube (só com o Freddy ligado); null se não achou. */
+  buscarNoYoutube?: (texto: string) => Promise<Musica | null>;
+}
+
+/** O que precisa pra ensinar uma faixa (a ApiFreddy cumpre). */
+export interface Professor {
+  aprender(faixa: { titulo: string; link: string; temas: string[] }): Promise<{ nome: string }>;
 }
 
 const MUSICAS_MOSTRADAS_NA_FILA = 10;
@@ -96,7 +105,8 @@ export async function responder(texto: string, ctx: Contexto): Promise<RespostaF
   return executarPedido(pedido, ctx);
 }
 
-async function executarPedido(pedido: Pedido, { motor, acervo, tituloDoLink }: Contexto): Promise<RespostaFreddy> {
+async function executarPedido(pedido: Pedido, ctx: Contexto): Promise<RespostaFreddy> {
+  const { motor, acervo, tituloDoLink } = ctx;
   switch (pedido.acao) {
     case "tocar": {
       if (pedido.link) {
@@ -116,10 +126,11 @@ async function executarPedido(pedido: Pedido, { motor, acervo, tituloDoLink }: C
       }
       const { escolhidas, total } = acervo.sortearDaBusca(pedido.busca);
       if (!escolhidas.length) {
+        if (ctx.buscarNoYoutube) return buscaLivre(pedido.busca, motor, ctx.buscarNoYoutube);
         return {
           texto:
             `Não achei nada pra "${pedido.busca}" no acervo 😕 ` +
-            "Tenta outros termos, ou cola o link do YouTube. (A busca livre no YouTube chega junto com o backend.)",
+            "Tenta outros termos, ou cola o link do YouTube. (Com o Freddy ligado eu procuro no YouTube também.)",
         };
       }
       const musicas = escolhidas.map(musicaDaFaixa);
@@ -177,6 +188,68 @@ async function executarPedido(pedido: Pedido, { motor, acervo, tituloDoLink }: C
       return { texto: `Volume em ${volume}% 🔊` };
     }
   }
+}
+
+/** Nada no acervo: procura no YouTube, toca, e pergunta se era essa (como o Bardo). */
+async function buscaLivre(
+  busca: string,
+  motor: Motor,
+  buscarNoYoutube: (texto: string) => Promise<Musica | null>,
+): Promise<RespostaFreddy> {
+  let musica: Musica | null;
+  try {
+    musica = await buscarNoYoutube(busca);
+  } catch (e) {
+    const motivo = e instanceof Error ? e.message : String(e);
+    return { texto: `Não achei "${busca}" no acervo, e o YouTube deu problema (${motivo}) 😕` };
+  }
+  if (!musica) return { texto: `Não achei nada pra "${busca}", nem no acervo nem no YouTube 😕` };
+  const r = await motor.executar({ tipo: "adicionar", musicas: [musica] });
+  if (!r.entraram) return { texto: filaCheia() };
+  const onde = r.comecou ? "tocando" : `na fila (posição ${r.posicao})`;
+  return {
+    texto:
+      `Não tinha "${busca}" no acervo, então procurei no YouTube: ${mostrar(musica.titulo)}, ${onde} 🔎\n` +
+      "**Era essa?** Se for, me diz os climas dela que eu guardo no acervo.",
+    musicas: [musica],
+    pergunta: musica,
+  };
+}
+
+/** "taverna, alegre e calmo" → ["taverna", "alegre", "calmo"]. */
+export function separarTemas(texto: string): string[] {
+  const temas = texto
+    .split(/\s*(?:[,;/\n]|\s\be\b\s)\s*/iu)
+    .map((t) => t.trim().toLowerCase())
+    .filter((t) => t.length > 1);
+  return [...new Set(temas)].slice(0, 5);
+}
+
+/**
+ * A resposta ao "era essa?": `temas` null = não era (pula, se ainda toca);
+ * senão guarda no acervo com esses climas (vazio = "não classificado").
+ */
+export async function responderEraEssa(
+  musica: Musica,
+  temas: string[] | null,
+  { motor, professor }: { motor: Motor; professor: Professor },
+): Promise<RespostaFreddy> {
+  if (temas === null) {
+    if (motor.estado().tocando?.link === musica.link) {
+      await motor.executar({ tipo: "pular" });
+      return { texto: "Beleza, pulei essa. Tenta descrever de outro jeito, ou cola o link do YouTube." };
+    }
+    return { texto: "Beleza, não guardei." };
+  }
+  try {
+    await professor.aprender({ titulo: musica.titulo, link: musica.link, temas });
+  } catch (e) {
+    const status = (e as { status?: number }).status;
+    if (status === 409) return { texto: `Essa já estava no acervo 😉` };
+    return { texto: `Não consegui guardar (${e instanceof Error ? e.message : String(e)}) 😕` };
+  }
+  const como = temas.length ? `como ${temas.map((t) => `**${t}**`).join(", ")}` : "sem clima (fica como **não classificado**)";
+  return { texto: `Guardei ${mostrar(musica.titulo)} no acervo ${como} 🪶 Da próxima vez eu acho sozinho.` };
 }
 
 function filaCheia() {

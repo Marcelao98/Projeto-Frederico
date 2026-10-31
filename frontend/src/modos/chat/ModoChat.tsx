@@ -8,13 +8,14 @@ import { Calopsita } from "../../componentes/Calopsita";
 import { CartaoMusica } from "../../componentes/CartaoMusica";
 import { Icone } from "../../componentes/Icone";
 import { TextoRico } from "../../componentes/TextoRico";
-import { emojiCategoria, rotuloCategoria, sugestoesDeBusca, type Acervo } from "../../dados/acervo";
+import { acervoAtual, emojiCategoria, montarAcervo, rotuloCategoria, sugestoesDeBusca, type Acervo } from "../../dados/acervo";
+import { freddy, type ApiFreddy } from "../../dados/freddy";
 import { tituloDoLink } from "../../dados/tituloDoLink";
 import { useArmazem } from "../../dados/useArmazem";
 import { useMotor } from "../../motor/contexto";
 import type { Musica } from "../../nucleo/tipos";
-import { previa, responder, termoEmDigitacao, type Previa } from "./conversa";
-import { historico, limparHistorico, pedidosAnteriores, registrar, type MensagemChat } from "./historico";
+import { previa, responder, responderEraEssa, separarTemas, termoEmDigitacao, type Previa } from "./conversa";
+import { fecharPergunta, historico, limparHistorico, pedidosAnteriores, registrar, type MensagemChat } from "./historico";
 
 const EXEMPLOS = [
   "toca calmo e hollow knight",
@@ -37,8 +38,14 @@ const NOME_DA_ACAO: Record<string, string> = {
   tocar: "pedir o que tocar",
 };
 
+/** O título de um link: o oEmbed do YouTube (rápido); se falhar, o Freddy pergunta pro yt-dlp. */
+function tituloComFreddy(api: ApiFreddy | null) {
+  return async (link: string) => (await tituloDoLink(link)) ?? (api ? await api.tituloDoLink(link) : null);
+}
+
 export function ModoChat({ acervo }: { acervo: Acervo }) {
   const motor = useMotor();
+  const api = useArmazem(freddy);
   const mensagens = useArmazem(historico);
   const [texto, setTexto] = useState("");
   const [pensando, setPensando] = useState(false);
@@ -69,7 +76,15 @@ export function ModoChat({ acervo }: { acervo: Acervo }) {
     setIndiceHistorico(-1);
     setPensando(true);
     try {
-      registrar("freddy", await responder(limpo, { motor, acervo, tituloDoLink }));
+      registrar(
+        "freddy",
+        await responder(limpo, {
+          motor,
+          acervo,
+          tituloDoLink: tituloComFreddy(api),
+          buscarNoYoutube: api ? (t) => api.buscarNoYoutube(t) : undefined,
+        }),
+      );
     } catch (e) {
       registrar("freddy", { texto: `Deu ruim aqui 😕 (${e instanceof Error ? e.message : String(e)})` });
     } finally {
@@ -257,6 +272,7 @@ function Mensagem({ mensagem }: { mensagem: MensagemChat }) {
         <div className="balao-texto">
           <TextoRico texto={mensagem.texto} />
         </div>
+        {mensagem.pergunta && <EraEssa mensagem={mensagem} musica={mensagem.pergunta} />}
         {musicas.length > 0 && (
           <div className="balao-musicas">
             {musicas.slice(0, MUSICAS_NO_CARTAO).map((m, i) => (
@@ -279,5 +295,56 @@ function Mensagem({ mensagem }: { mensagem: MensagemChat }) {
         <time className="balao-hora">{hora}</time>
       </div>
     </li>
+  );
+}
+
+/** Os botões do "era essa?": guarda a faixa no acervo com os climas, ou pula. */
+function EraEssa({ mensagem, musica }: { mensagem: MensagemChat; musica: Musica }) {
+  const motor = useMotor();
+  const api = useArmazem(freddy);
+  const [climas, setClimas] = useState("");
+  const [ocupado, setOcupado] = useState(false);
+  if (!api) return null;
+
+  async function responder(temas: string[] | null) {
+    if (!api || ocupado) return;
+    setOcupado(true);
+    try {
+      registrar("voce", { texto: temas === null ? "não era essa" : `era essa${temas.length ? `: ${temas.join(", ")}` : ""}` });
+      registrar("freddy", await responderEraEssa(musica, temas, { motor, professor: api }));
+      fecharPergunta(mensagem.id);
+      if (temas !== null) {
+        const novo = await api.acervo();
+        acervoAtual.escrever(montarAcervo(novo.musicas, novo.vocabulario));
+      }
+    } catch (e) {
+      registrar("freddy", { texto: `Deu ruim aqui 😕 (${e instanceof Error ? e.message : String(e)})` });
+    } finally {
+      setOcupado(false);
+    }
+  }
+
+  return (
+    <form
+      className="era-essa"
+      onSubmit={(e) => {
+        e.preventDefault();
+        void responder(separarTemas(climas));
+      }}
+    >
+      <input
+        value={climas}
+        onChange={(e) => setClimas(e.target.value)}
+        placeholder="climas: taverna, alegre…"
+        aria-label="Climas da música"
+        disabled={ocupado}
+      />
+      <button type="submit" className="chip" disabled={ocupado}>
+        É essa, guarda
+      </button>
+      <button type="button" className="chip" disabled={ocupado} onClick={() => void responder(null)}>
+        Não é
+      </button>
+    </form>
   );
 }

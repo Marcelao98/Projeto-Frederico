@@ -2,19 +2,22 @@ import { useEffect, useRef, useState } from "react";
 import { BarraDoPlayer } from "./componentes/BarraDoPlayer";
 import { Calopsita } from "./componentes/Calopsita";
 import { Icone } from "./componentes/Icone";
-import { acervoLocal } from "./dados/acervo";
+import { acervoAtual } from "./dados/acervo";
+import { preferenciaDeMotor } from "./dados/freddy";
 import { modoAtual, videoAberto } from "./dados/preferencias";
 import { TEMAS, proximoTema, temaAtual } from "./dados/temas";
 import { useArmazem } from "./dados/useArmazem";
-import { useEstadoDoMotor, useMotor } from "./motor/contexto";
+import { useConexao, useEstadoDoMotor, useMotor } from "./motor/contexto";
 import { MODOS } from "./modos/registro";
 
 function digitando(alvo: EventTarget | null) {
   return alvo instanceof HTMLElement && (alvo.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(alvo.tagName));
 }
 
-export function App({ palcoDoVideo }: { palcoDoVideo: HTMLElement }) {
+/** `palcoDoVideo` só existe com o motor do navegador (o Freddy toca sem vídeo). */
+export function App({ palcoDoVideo }: { palcoDoVideo: HTMLElement | null }) {
   const motor = useMotor();
+  const acervo = useArmazem(acervoAtual);
   const { tocando, situacao } = useEstadoDoMotor();
   const idDoModo = useArmazem(modoAtual);
   const comVideo = useArmazem(videoAberto);
@@ -25,7 +28,7 @@ export function App({ palcoDoVideo }: { palcoDoVideo: HTMLElement }) {
   // O player do YouTube mora num elemento fixo, criado uma vez só: mudar ele
   // de lugar no DOM recarregaria o vídeo.
   useEffect(() => {
-    doca.current?.appendChild(palcoDoVideo);
+    if (palcoDoVideo) doca.current?.appendChild(palcoDoVideo);
   }, [palcoDoVideo]);
 
   useEffect(() => {
@@ -94,14 +97,12 @@ export function App({ palcoDoVideo }: { palcoDoVideo: HTMLElement }) {
 
         <div className="saidas">
           <div className="rotulo">Saída do som</div>
-          <div className="saida ativa" title="Toca aqui mesmo, neste computador">
-            <Icone nome="volume" tamanho={16} /> Este computador <span className="luz" />
+          <OrigemDoSom comFreddy={!palcoDoVideo} />
+          <div className="saida" title="Chega na Fase 4 (mixer)">
+            <Icone nome="mic" tamanho={16} /> Mic virtual <span className="selo">breve</span>
           </div>
-          <div className="saida" title="Chega com o backend do Freddy">
-            <Icone nome="mic" tamanho={16} /> Mic virtual <span className="selo">backend</span>
-          </div>
-          <div className="saida" title="Chega com o backend do Freddy">
-            <Icone nome="discord" tamanho={16} /> Discord <span className="selo">backend</span>
+          <div className="saida" title="Chega na Fase 2 (bot do Freddy)">
+            <Icone nome="discord" tamanho={16} /> Discord <span className="selo">breve</span>
           </div>
         </div>
 
@@ -127,12 +128,14 @@ export function App({ palcoDoVideo }: { palcoDoVideo: HTMLElement }) {
           <div className="plumagem-nome">{TEMAS.find((t) => t.id === tema)?.nome}</div>
         </div>
 
-        <div className={`doca-video ${comVideo ? "" : "fechada"} ${tocando ? "" : "sem-video"}`}>
-          <button className="doca-alternar" onClick={() => videoAberto.escrever(!comVideo)}>
-            <Icone nome="video" tamanho={14} /> {comVideo ? "Esconder vídeo" : "Mostrar vídeo"}
-          </button>
-          <div className="doca-palco" ref={doca} />
-        </div>
+        {palcoDoVideo && (
+          <div className={`doca-video ${comVideo ? "" : "fechada"} ${tocando ? "" : "sem-video"}`}>
+            <button className="doca-alternar" onClick={() => videoAberto.escrever(!comVideo)}>
+              <Icone nome="video" tamanho={14} /> {comVideo ? "Esconder vídeo" : "Mostrar vídeo"}
+            </button>
+            <div className="doca-palco" ref={doca} />
+          </div>
+        )}
 
         <button className="botao-texto atalhos-teclado" onClick={() => setMostrarAjuda(!mostrarAjuda)}>
           Atalhos de teclado
@@ -154,10 +157,39 @@ export function App({ palcoDoVideo }: { palcoDoVideo: HTMLElement }) {
       </aside>
 
       <main className="principal">
-        <modo.Componente acervo={acervoLocal} />
+        <modo.Componente acervo={acervo} />
       </main>
 
       <BarraDoPlayer />
     </div>
+  );
+}
+
+const TEXTO_DA_CONEXAO = {
+  conectado: "",
+  conectando: "conectando…",
+  reconectando: "reconectando…",
+} as const;
+
+/** "Este computador": pelo navegador ou pelo Freddy, e se o Freddy está conectado. */
+function OrigemDoSom({ comFreddy }: { comFreddy: boolean }) {
+  const conexao = useConexao();
+  const alternar = () => {
+    // Troca na próxima abertura: trocar de motor com a fila andando perderia a fila.
+    preferenciaDeMotor.escrever(comFreddy ? "navegador" : "auto");
+    location.reload();
+  };
+  const dica = comFreddy
+    ? "Tocando pelo Freddy (python -m freddy). Clique pra tocar só pelo navegador."
+    : "Tocando pelo navegador (YouTube). Ligue o Freddy e clique pra usar ele.";
+  return (
+    <button className="saida ativa" onClick={alternar} title={dica}>
+      <Icone nome="volume" tamanho={16} />
+      <span className="saida-nome">
+        Este computador
+        <small>{comFreddy ? `pelo Freddy ${TEXTO_DA_CONEXAO[conexao]}` : "pelo navegador"}</small>
+      </span>
+      <span className={`luz ${conexao === "conectado" ? "" : "apagada"}`} />
+    </button>
   );
 }

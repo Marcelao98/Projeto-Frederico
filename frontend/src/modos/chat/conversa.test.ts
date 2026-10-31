@@ -3,7 +3,7 @@ import { montarAcervo } from "../../dados/acervo";
 import { MotorLocal } from "../../motor/motorLocal";
 import type { OuvinteReprodutor, Reprodutor } from "../../motor/reprodutor";
 import type { Faixa } from "../../nucleo/tipos";
-import { AJUDA, previa, responder, termoEmDigitacao } from "./conversa";
+import { AJUDA, previa, responder, responderEraEssa, separarTemas, termoEmDigitacao } from "./conversa";
 
 class Mudo implements Reprodutor {
   ouvinte!: OuvinteReprodutor;
@@ -104,5 +104,57 @@ describe("prévia e autocompletar", () => {
     expect(termoEmDigitacao("toca chefe sem eld")).toEqual({ termo: "eld", inicio: 15 });
     expect(termoEmDigitacao("pula")).toBeNull();
     expect(termoEmDigitacao("toca ")).toBeNull();
+  });
+
+  it("sem nada no acervo e com o Freddy: busca no YouTube e pergunta se era essa", async () => {
+    const c = ctx();
+    const achada = { titulo: "Taverna Medieval", link: "https://www.youtube.com/watch?v=tav" };
+    const r = await responder("toca taverna medieval", { ...c, buscarNoYoutube: async () => achada });
+    expect(r.texto).toContain("procurei no YouTube: **Taverna Medieval**, tocando");
+    expect(r.pergunta).toEqual(achada);
+    expect(c.motor.estado().tocando?.link).toBe(achada.link);
+
+    const nada = await responder("toca xyz", { ...c, buscarNoYoutube: async () => null });
+    expect(nada.texto).toContain("nem no acervo nem no YouTube");
+    const erro = await responder("toca xyz", {
+      ...c,
+      buscarNoYoutube: async () => {
+        throw new Error("o vídeo é privado");
+      },
+    });
+    expect(erro.texto).toContain("(o vídeo é privado)");
+    expect((await responder("toca xyz", c)).texto).toContain("Com o Freddy ligado");
+  });
+
+  it("era essa? sim guarda com os climas; não pula se ainda toca", async () => {
+    const c = ctx();
+    const musica = { titulo: "Taverna", link: "https://youtu.be/t" };
+    const aprendidas: unknown[] = [];
+    const professor = {
+      aprender: async (f: { temas: string[] }) => {
+        aprendidas.push(f);
+        return { nome: "Taverna" };
+      },
+    };
+    const sim = await responderEraEssa(musica, ["taverna", "alegre"], { motor: c.motor, professor });
+    expect(sim.texto).toContain("como **taverna**, **alegre**");
+    expect(aprendidas).toEqual([{ titulo: "Taverna", link: "https://youtu.be/t", temas: ["taverna", "alegre"] }]);
+
+    await c.motor.executar({ tipo: "adicionar", musicas: [musica] });
+    const nao = await responderEraEssa(musica, null, { motor: c.motor, professor });
+    expect(nao.texto).toContain("pulei");
+    expect(c.motor.estado().tocando).toBeNull();
+
+    const repetida = await responderEraEssa(musica, [], {
+      motor: c.motor,
+      professor: { aprender: () => Promise.reject(Object.assign(new Error("já"), { status: 409 })) },
+    });
+    expect(repetida.texto).toContain("já estava no acervo");
+  });
+
+  it("separa os climas digitados", () => {
+    expect(separarTemas("Taverna, alegre e calmo")).toEqual(["taverna", "alegre", "calmo"]);
+    expect(separarTemas("  ")).toEqual([]);
+    expect(separarTemas("épico; épico / sombrio")).toEqual(["épico", "sombrio"]);
   });
 });

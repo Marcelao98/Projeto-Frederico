@@ -1,7 +1,7 @@
 /** Liga o motor ao React: quem precisa do estado usa os hooks daqui. */
 
 import { createContext, useContext, useSyncExternalStore, type ReactNode } from "react";
-import type { EstadoMotor, Motor, Progresso } from "./tipos";
+import type { EstadoMotor, Motor, Progresso, SituacaoConexao } from "./tipos";
 
 const ContextoDoMotor = createContext<Motor | null>(null);
 
@@ -24,4 +24,13 @@ export function useEstadoDoMotor(): EstadoMotor {
 export function useProgresso(): Progresso {
   const motor = useMotor();
   return useSyncExternalStore(motor.inscreverProgresso, motor.progresso);
+}
+
+const sempreConectado = () => "conectado" as const;
+const nada = () => () => {};
+
+/** Como está a conexão com o Freddy ("conectado" pro motor do navegador). */
+export function useConexao(): SituacaoConexao {
+  const motor = useMotor();
+  return useSyncExternalStore(motor.inscreverConexao ?? nada, motor.conexao ?? sempreConectado);
 }

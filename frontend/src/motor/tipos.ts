@@ -1,10 +1,12 @@
 /**
  * O contrato do motor de som: o que o painel pode pedir e o que ele enxerga.
  *
- * Hoje quem implementa é o MotorLocal (toca no navegador, via YouTube).
- * Amanhã o MotorRemoto vai falar com o backend Python por WebSocket, com o
- * mesmo contrato: as telas não mudam. Mixer, soundboard e afins entram
- * acrescentando comandos em `Comandos` e campos em `EstadoMotor`.
+ * Dois motores implementam: o MotorLocal (toca no navegador, via YouTube) e
+ * o MotorRemoto (fala com o backend Python, `python -m freddy`, por
+ * WebSocket). As telas não sabem qual é. O backend tem a porta fiel deste
+ * contrato em backend/freddy/motor/; os casos de casos_contrato.json rodam
+ * nos dois lados. Mixer, soundboard e afins entram acrescentando comandos
+ * em `Comandos` e campos em `EstadoMotor`.
  */
 
 import type { Musica } from "../nucleo/tipos";
@@ -36,7 +38,9 @@ export type Onde = "fim" | "proxima" | "agora";
 
 /**
  * Cada comando: os argumentos e o que ele devolve. Pra criar um comando
- * novo (ex.: "mixer.volume_camada"), acrescente aqui e implemente no motor.
+ * novo (ex.: "mixer.volume_camada"), acrescente aqui e implemente nos DOIS
+ * motores (motorLocal.ts e backend/freddy/motor/motor.py, mais a validação
+ * em backend/freddy/api/protocolo.py) e um caso em casos_contrato.json.
  */
 export interface Comandos {
   adicionar: {
@@ -69,6 +73,9 @@ export type EventoMotor =
   | { tipo: "fila_acabou" }
   | { tipo: "falha"; musica: ItemDaFila; motivo: string };
 
+/** Só pra motor que mora longe (o MotorRemoto): como está a conexão. */
+export type SituacaoConexao = "conectando" | "conectado" | "reconectando";
+
 export interface Motor {
   estado(): EstadoMotor;
   progresso(): Progresso;
@@ -77,4 +84,7 @@ export interface Motor {
   inscreverProgresso(ouvinte: () => void): () => void;
   aoEvento(ouvinte: (evento: EventoMotor) => void): () => void;
   executar<K extends NomeComando>(comando: Comando<K>): Promise<Resultado<K>>;
+  /** Ausente = motor local, sempre "conectado". */
+  conexao?(): SituacaoConexao;
+  inscreverConexao?(ouvinte: () => void): () => void;
 }
