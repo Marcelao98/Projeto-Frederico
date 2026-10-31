@@ -12,9 +12,9 @@ Atualizado em 31/10/2026.
 |---|---|
 | **Cérebro musical** (Bardo: entender pedidos, buscar no acervo, fila, aprender faixa nova) | ✅ pronto, em uso na Natty |
 | **Acervo** (607 faixas, 9 franquias, 27 climas) | ✅ pronto, curadoria contínua |
-| **Painel** (modo Chat, modo Playlist, 5 plumagens) | ✅ pronto, toca sozinho pelo YouTube |
+| **Painel** (Chat, Playlist, Acervo, 5 plumagens) | ✅ pronto; toca pelo Freddy ou sozinho pelo YouTube |
 | **App desktop** (Tauri) com instaladores no GitHub (Windows, Linux, Mac) | ✅ pronto (v0.1.1), testado no Fedora |
-| **Backend próprio** (o Freddy sem a Natty) | 🟡 pronto e testado aqui (v0.2.0); falta o teste com som de verdade no Fedora |
+| **Backend próprio** (o Freddy sem a Natty) | 🟡 pronto (v0.3.0), instalado no Fedora; falta confirmar o som |
 | **Bot do Discord próprio do Freddy** | ⬜ hoje o som no Discord só existe pela Natty |
 | **Mixer, microfone virtual, soundboard** | ⬜ só planejado (telas "em breve" no painel) |
 
@@ -53,7 +53,12 @@ O Freddy vira um programa Python que roda sozinho, sem a Natty: `python -m fredd
 - ✅ Busca livre no YouTube e o "era essa?" no chat do painel (com botões);
   a faixa vai pro `aprendidas.json` e um script leva pro acervo oficial.
 - ✅ Estudo do Kenku FM pro Discord: `backend/docs/discord.md`.
-- ⬜ Marcelo testar no Fedora com som de verdade (e um mestre no Windows).
+- ✅ Arrumar o acervo (v0.3.0): modo **Acervo** (tabela editável), planilha
+  CSV (baixa, edita no LibreOffice/Excel, manda de volta com resumo) e pelo
+  chat (`temas`, `revisar`: o Freddy mostra os temas e você diz se tá certo).
+  Correções vão pro `ajustes.json` do mestre; `freddy_promover.py` leva pro oficial.
+- ✅ O chat conta o que muda fora dele (Playlist, barra, outra aba).
+- 🟡 Marcelo instalou no Fedora (31/10); falta confirmar o som saindo (e um mestre no Windows).
 - **Pronto quando:** o painel controla uma fila que mora no backend, com o app aberto ou no navegador.
 
 ### Fase 2: Bot do Discord do Freddy

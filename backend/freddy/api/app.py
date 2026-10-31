@@ -5,6 +5,10 @@ Rotas:
     WS     /ws                    o Motor (ver protocolo.py)
     GET    /acervo                {musicas, vocabulario}: o dataset + as aprendidas
     POST   /acervo/faixas         {titulo, link, temas}: ensina faixa nova ("era essa?")
+    PATCH  /acervo/faixas/{id}    {nome?, temas?, comentario?}: corrige uma faixa
+    GET    /acervo/planilha       o acervo em CSV (pra baixar pelo navegador)
+    POST   /acervo/planilha/salvar   salva o CSV na pasta Downloads (funciona no app)
+    POST   /acervo/planilha?aplicar=  manda o CSV editado: resumo; com aplicar=true, grava
     GET    /playlists             playlists salvas
     PUT    /playlists/{id}        cria ou substitui
     DELETE /playlists/{id}
@@ -18,8 +22,10 @@ import asyncio
 import json
 import logging
 from contextlib import asynccontextmanager, suppress
+from csv import Error as csv_Error
+from datetime import date
 
-from fastapi import FastAPI, HTTPException, WebSocket, WebSocketDisconnect
+from fastapi import FastAPI, HTTPException, Request, Response, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field, ValidationError
 
@@ -27,7 +33,8 @@ from freddy import PROTOCOLO, VERSAO
 from freddy.api.paineis import Paineis
 from freddy.api.protocolo import Musica, descrever_erro, validar_comando
 from freddy.config import Config
-from freddy.dados.acervo import Acervo
+from freddy.dados import planilha
+from freddy.dados.acervo import Acervo, FaixaNaoEncontrada
 from freddy.dados.playlists import Playlists
 from freddy.motor.motor import ComandoInvalido, Motor
 from modules.bardo import service
@@ -59,6 +66,12 @@ class PlaylistSalva(BaseModel):
     nome: str = Field(min_length=1, max_length=200)
     musicas: list[Musica] = Field(max_length=1000)
     atualizadaEm: float
+
+
+class EdicaoDeFaixa(BaseModel):
+    nome: str | None = Field(default=None, max_length=300)
+    temas: list[str] | None = Field(default=None, max_length=30)
+    comentario: str | None = Field(default=None, max_length=2000)
 
 
 class PedidoDeBusca(BaseModel):
@@ -136,6 +149,46 @@ def criar_app(config: Config | None = None, criar=criar_reprodutor, youtube: You
         except service.MusicaJaNoDataset as e:
             raise HTTPException(409, {"erro": "essa música já está no acervo", "faixa": e.musica}) from e
 
+    @app.patch("/acervo/faixas/{id_}")
+    def editar_faixa(id_: str, edicao: EdicaoDeFaixa):
+        campos = {"nome": edicao.nome, "temas": edicao.temas, "comentario_pessoal": edicao.comentario}
+        try:
+            return acervo.editar(id_, campos)
+        except FaixaNaoEncontrada as e:
+            raise HTTPException(404, "essa faixa não está no acervo") from e
+
+    @app.get("/acervo/planilha")
+    def baixar_planilha():
+        return Response(
+            planilha.exportar(acervo),
+            media_type="text/csv; charset=utf-8",
+            headers={"Content-Disposition": f'attachment; filename="{_nome_da_planilha()}"'},
+        )
+
+    @app.post("/acervo/planilha/salvar")
+    def salvar_planilha():
+        destino = config.pasta_downloads / _nome_da_planilha()
+        destino.parent.mkdir(parents=True, exist_ok=True)
+        destino.write_text(planilha.exportar(acervo), encoding="utf-8")
+        return {"caminho": str(destino)}
+
+    @app.post("/acervo/planilha")
+    async def enviar_planilha(request: Request, aplicar: bool = False):
+        corpo = await request.body()
+        if len(corpo) > 5_000_000:
+            raise HTTPException(413, "planilha grande demais")
+        try:
+            texto = corpo.decode("utf-8")
+        except UnicodeDecodeError:
+            texto = corpo.decode("latin-1")  # Excel antigo salva assim
+        try:
+            resumo = planilha.comparar(acervo, texto)
+        except (ValueError, csv_Error) as e:
+            raise HTTPException(400, f"não consegui ler a planilha: {e}") from e
+        if aplicar:
+            planilha.aplicar(acervo, resumo)
+        return {**resumo.como_dict(), "aplicado": aplicar}
+
     @app.get("/playlists")
     def listar_playlists():
         return playlists.listar()
@@ -209,6 +262,10 @@ def criar_app(config: Config | None = None, criar=criar_reprodutor, youtube: You
                 await envio
 
     return app
+
+
+def _nome_da_planilha() -> str:
+    return f"freddy-acervo-{date.today().isoformat()}.csv"
 
 
 def _atender(texto: str, motor: Motor, paineis: Paineis) -> dict | None:

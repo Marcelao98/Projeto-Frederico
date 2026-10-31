@@ -50,10 +50,15 @@ Detalhes de cada lado em `frontend/README.md` e `backend/README.md`.
 - **Porta do Freddy: 47824**, só em `127.0.0.1`, e o `/ws` só aceita as
   origens de `backend/freddy/config.py` (o painel). Não abrir pra rede sem
   login (Fase 3).
-- **Dados do mestre** (playlists, faixas aprendidas pelo "era essa?") ficam na
-  pasta do usuário (`~/.local/share/Freddy`, `%APPDATA%\Freddy`), nunca no
-  repositório. Aprendidas vão pro acervo oficial pelo
-  `backend/scripts/freddy_promover_aprendidas.py`.
+- **Dados do mestre** (playlists, `ajustes.json` com as correções de
+  nome/temas, `aprendidas.json` com as faixas novas) ficam na pasta do
+  usuário (`~/.local/share/Freddy`, `%APPDATA%\Freddy`), nunca no
+  repositório. O Freddy aplica por cima do dataset ao servir `/acervo`; o
+  `backend/scripts/freddy_promover.py` leva pro `musicas.json` oficial.
+  Categorias sempre saem dos temas, nunca à mão.
+- **Comandos de acervo no chat** (`temas`, `revisar`) moram em
+  `frontend/src/modos/chat/revisao.ts`, fora do `pedido.ts`: não fazem parte
+  da paridade com o Bardo.
 - **Modos do painel** moram em `frontend/src/modos/<nome>/` e entram pela
   lista em `frontend/src/modos/registro.tsx`.
 - **No backend, a regra da Natty vale:** `service.py` é lógica pura, sem

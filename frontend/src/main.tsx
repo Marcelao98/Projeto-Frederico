@@ -7,6 +7,7 @@ import { definirAvisoDeFalha, usarPlaylistsDoFreddy } from "./dados/playlists";
 import { aplicarTema, temaAtual } from "./dados/temas";
 import { falaDoEvento } from "./modos/chat/conversa";
 import { registrar } from "./modos/chat/historico";
+import { ligarNarrador } from "./modos/chat/narrador";
 import { ProvedorDoMotor } from "./motor/contexto";
 import { MotorLocal } from "./motor/motorLocal";
 import { MotorRemoto } from "./motor/motorRemoto";
@@ -48,6 +49,8 @@ async function iniciar() {
 
   // Como o Bardo avisa no canal quando a fila anda sozinha.
   motor.aoEvento((evento) => registrar("freddy", falaDoEvento(evento)));
+  // E o que mudou fora do chat (Playlist, barra do player, outra aba), em letra miúda.
+  ligarNarrador(motor, (texto) => registrar("freddy", { texto }, true));
 
   createRoot(document.getElementById("raiz")!).render(
     <StrictMode>

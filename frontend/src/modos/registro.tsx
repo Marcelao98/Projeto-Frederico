@@ -7,6 +7,7 @@
 import type { ComponentType } from "react";
 import type { NomeIcone } from "../componentes/Icone";
 import type { Acervo } from "../dados/acervo";
+import { ModoAcervo } from "./acervo/ModoAcervo";
 import { ModoChat } from "./chat/ModoChat";
 import { ModoEmBreve } from "./mixer/ModoEmBreve";
 import { ModoPlaylist } from "./playlist/ModoPlaylist";
@@ -27,6 +28,7 @@ export interface DefinicaoDeModo {
 export const MODOS: DefinicaoDeModo[] = [
   { id: "chat", nome: "Chat", icone: "chat", descricao: "Pede em português", Componente: ModoChat },
   { id: "playlist", nome: "Playlist", icone: "lista", descricao: "Monta a fila na mão", Componente: ModoPlaylist },
+  { id: "acervo", nome: "Acervo", icone: "planilha", descricao: "Arruma nomes e temas", Componente: ModoAcervo },
   {
     id: "mixer",
     nome: "Mixer",

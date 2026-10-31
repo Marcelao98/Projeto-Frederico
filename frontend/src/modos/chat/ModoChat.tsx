@@ -8,13 +8,15 @@ import { Calopsita } from "../../componentes/Calopsita";
 import { CartaoMusica } from "../../componentes/CartaoMusica";
 import { Icone } from "../../componentes/Icone";
 import { TextoRico } from "../../componentes/TextoRico";
-import { acervoAtual, emojiCategoria, montarAcervo, rotuloCategoria, sugestoesDeBusca, type Acervo } from "../../dados/acervo";
+import { acervoAtual, emojiCategoria, recarregarAcervo, rotuloCategoria, sugestoesDeBusca, type Acervo } from "../../dados/acervo";
 import { freddy, type ApiFreddy } from "../../dados/freddy";
 import { tituloDoLink } from "../../dados/tituloDoLink";
 import { useArmazem } from "../../dados/useArmazem";
 import { useMotor } from "../../motor/contexto";
 import type { Musica } from "../../nucleo/tipos";
-import { previa, responder, responderEraEssa, separarTemas, termoEmDigitacao, type Previa } from "./conversa";
+import { previa, responder, responderEraEssa, separarTemas, termoEmDigitacao, type Contexto, type Previa } from "./conversa";
+import { semNarrar } from "./narrador";
+import { esquecerRevisao, responderRevisao, type Revisao } from "./revisao";
 import { fecharPergunta, historico, limparHistorico, pedidosAnteriores, registrar, type MensagemChat } from "./historico";
 
 const EXEMPLOS = [
@@ -37,6 +39,16 @@ const NOME_DA_ACAO: Record<string, string> = {
   volume: "mexer no volume",
   tocar: "pedir o que tocar",
 };
+
+/** Grava temas no Freddy e já traz o acervo novo (busca e Playlist enxergam na hora). */
+function editarTemasCom(api: ApiFreddy | null): Contexto["editarTemas"] {
+  if (!api) return undefined;
+  return async (faixaId, temas) => {
+    const faixa = await api.editarFaixa(faixaId, { temas });
+    await recarregarAcervo(api);
+    return faixa;
+  };
+}
 
 /** O título de um link: o oEmbed do YouTube (rápido); se falhar, o Freddy pergunta pro yt-dlp. */
 function tituloComFreddy(api: ApiFreddy | null) {
@@ -78,12 +90,13 @@ export function ModoChat({ acervo }: { acervo: Acervo }) {
     try {
       registrar(
         "freddy",
-        await responder(limpo, {
+        await semNarrar(() => responder(limpo, {
           motor,
           acervo,
           tituloDoLink: tituloComFreddy(api),
           buscarNoYoutube: api ? (t) => api.buscarNoYoutube(t) : undefined,
-        }),
+          editarTemas: editarTemasCom(api),
+        })),
       );
     } catch (e) {
       registrar("freddy", { texto: `Deu ruim aqui 😕 (${e instanceof Error ? e.message : String(e)})` });
@@ -126,7 +139,13 @@ export function ModoChat({ acervo }: { acervo: Acervo }) {
           <p>Pede do jeito que você pede pra Natty. Sem @, sem comando decorado.</p>
         </div>
         {mensagens.length > 0 && (
-          <button className="botao-texto" onClick={limparHistorico}>
+          <button
+            className="botao-texto"
+            onClick={() => {
+              esquecerRevisao();
+              limparHistorico();
+            }}
+          >
             Limpar conversa
           </button>
         )}
@@ -222,6 +241,8 @@ function LinhaDePrevia({ previa, vazio }: { previa: Previa | null; vazio: boolea
       return <span className="previa ok">mostrar tudo que eu entendo</span>;
     case "comando":
       return <span className="previa ok">↵ {NOME_DA_ACAO[previa.acao] ?? previa.acao}</span>;
+    case "acervo":
+      return <span className="previa ok">↵ {previa.descricao}</span>;
   }
 }
 
@@ -261,6 +282,15 @@ function Mensagem({ mensagem }: { mensagem: MensagemChat }) {
   const musicas = mensagem.musicas ?? [];
   const tocarAgora = (m: Musica) => void motor.executar({ tipo: "adicionar", musicas: [m], onde: "agora" });
 
+  if (mensagem.discreta) {
+    return (
+      <li className="mensagem aviso-discreto">
+        <TextoRico texto={mensagem.texto} />
+        <time>{hora}</time>
+      </li>
+    );
+  }
+
   return (
     <li className={`mensagem ${mensagem.autor}`}>
       {mensagem.autor === "freddy" && (
@@ -273,6 +303,7 @@ function Mensagem({ mensagem }: { mensagem: MensagemChat }) {
           <TextoRico texto={mensagem.texto} />
         </div>
         {mensagem.pergunta && <EraEssa mensagem={mensagem} musica={mensagem.pergunta} />}
+        {mensagem.revisao && <TaCerto revisao={mensagem.revisao} />}
         {musicas.length > 0 && (
           <div className="balao-musicas">
             {musicas.slice(0, MUSICAS_NO_CARTAO).map((m, i) => (
@@ -311,12 +342,9 @@ function EraEssa({ mensagem, musica }: { mensagem: MensagemChat; musica: Musica 
     setOcupado(true);
     try {
       registrar("voce", { texto: temas === null ? "não era essa" : `era essa${temas.length ? `: ${temas.join(", ")}` : ""}` });
-      registrar("freddy", await responderEraEssa(musica, temas, { motor, professor: api }));
+      registrar("freddy", await semNarrar(() => responderEraEssa(musica, temas, { motor, professor: api })));
       fecharPergunta(mensagem.id);
-      if (temas !== null) {
-        const novo = await api.acervo();
-        acervoAtual.escrever(montarAcervo(novo.musicas, novo.vocabulario));
-      }
+      if (temas !== null) await recarregarAcervo(api);
     } catch (e) {
       registrar("freddy", { texto: `Deu ruim aqui 😕 (${e instanceof Error ? e.message : String(e)})` });
     } finally {
@@ -346,5 +374,74 @@ function EraEssa({ mensagem, musica }: { mensagem: MensagemChat; musica: Musica 
         Não é
       </button>
     </form>
+  );
+}
+
+/** Os botões do "tá certo?": confirma, corrige os temas ali mesmo, ou para a revisão. */
+function TaCerto({ revisao }: { revisao: Revisao }) {
+  const motor = useMotor();
+  const api = useArmazem(freddy);
+  const acervo = useArmazem(acervoAtual);
+  const semTema = revisao.temas.length === 0 || revisao.temas.includes("não classificado");
+  const [corrigindo, setCorrigindo] = useState(semTema);
+  const [temas, setTemas] = useState(semTema ? "" : revisao.temas.join(", "));
+  const [ocupado, setOcupado] = useState(false);
+
+  async function responder(resposta: Parameters<typeof responderRevisao>[0], fala: string) {
+    if (ocupado) return;
+    setOcupado(true);
+    try {
+      registrar("voce", { texto: fala });
+      registrar("freddy", await responderRevisao(resposta, { motor, acervo, editarTemas: editarTemasCom(api) }));
+    } catch (e) {
+      registrar("freddy", { texto: `Não consegui salvar (${e instanceof Error ? e.message : String(e)}) 😕` });
+    } finally {
+      setOcupado(false);
+    }
+  }
+
+  const salvar = () => {
+    const lista = separarTemas(temas);
+    void responder({ temas: lista }, `temas: ${lista.join(", ")}`);
+  };
+
+  return (
+    <div className="era-essa">
+      {corrigindo ? (
+        <form
+          className="era-essa"
+          onSubmit={(e) => {
+            e.preventDefault();
+            salvar();
+          }}
+        >
+          <input
+            autoFocus
+            value={temas}
+            onChange={(e) => setTemas(e.target.value)}
+            placeholder="temas: taverna, alegre…"
+            aria-label="Temas da música"
+            disabled={ocupado}
+          />
+          <button type="submit" className="chip" disabled={ocupado || !temas.trim()}>
+            Salvar
+          </button>
+        </form>
+      ) : (
+        <>
+          <button className="chip" disabled={ocupado} onClick={() => void responder("certo", "tá certo")}>
+            👍 Tá certo
+          </button>
+          <button className="chip" disabled={ocupado} onClick={() => setCorrigindo(true)}>
+            ✏️ Corrigir
+          </button>
+        </>
+      )}
+      {revisao.emSessao && (
+        <button className="chip" disabled={ocupado} onClick={() => void responder("parar", "para de revisar")}>
+          Parar revisão
+        </button>
+      )}
+    </div>
   );
 }

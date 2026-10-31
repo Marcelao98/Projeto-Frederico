@@ -44,7 +44,8 @@ class Base(unittest.TestCase):
             self.reprodutores.append(r)
             return r
 
-        app = criar_app(Config(pasta=self.pasta), criar=criar, youtube=YoutubeFalso())
+        config = Config(pasta=self.pasta, pasta_downloads=self.pasta / "Downloads")
+        app = criar_app(config, criar=criar, youtube=YoutubeFalso())
         self.cliente = TestClient(app)
         self.cliente.__enter__()
         self.addCleanup(self.cliente.__exit__, None, None, None)
@@ -176,6 +177,36 @@ class TestRest(Base):
         r = self.cliente.post("/acervo/faixas", json={"titulo": "x", "link": existente["link"], "temas": []})
         self.assertEqual(r.status_code, 409)
         self.assertEqual(r.json()["detail"]["faixa"]["id"], existente["id"])
+
+    def test_editar_faixa(self):
+        faixa = self.cliente.get("/acervo").json()["musicas"][0]
+        r = self.cliente.patch(f"/acervo/faixas/{faixa['id']}", json={"temas": ["Taverna", "alegre"]})
+        self.assertEqual(r.status_code, 200)
+        self.assertEqual(r.json()["temas"], ["taverna", "alegre"])
+        self.assertTrue((self.pasta / "ajustes.json").exists())
+        novo = next(f for f in self.cliente.get("/acervo").json()["musicas"] if f["id"] == faixa["id"])
+        self.assertEqual(novo["temas"], ["taverna", "alegre"])
+        self.assertEqual(self.cliente.patch("/acervo/faixas/nada", json={"temas": ["x"]}).status_code, 404)
+
+    def test_planilha(self):
+        r = self.cliente.get("/acervo/planilha")
+        self.assertIn("attachment", r.headers["content-disposition"])
+        texto = r.content.decode("utf-8")
+        self.assertTrue(texto.startswith("\ufeffid;"))
+
+        salvo = self.cliente.post("/acervo/planilha/salvar").json()["caminho"]
+        self.assertTrue(salvo.startswith(str(self.pasta / "Downloads")))
+
+        cabecalho, primeira, *resto = texto.lstrip("\ufeff").split("\r\n")
+        id_ = primeira.split(";")[0]
+        editada = f"{cabecalho}\r\n{id_};;;;taverna, alegre;;\r\n"
+        previa = self.cliente.post("/acervo/planilha", content=editada.encode(), headers={"content-type": "text/csv"}).json()
+        self.assertEqual((previa["mudaram"], previa["aplicado"]), (1, False))
+        self.assertFalse((self.pasta / "ajustes.json").exists())
+        feito = self.cliente.post("/acervo/planilha?aplicar=true", content=editada.encode()).json()
+        self.assertTrue(feito["aplicado"])
+        self.assertTrue((self.pasta / "ajustes.json").exists())
+        self.assertEqual(self.cliente.post("/acervo/planilha", content=b"a;b\n1;2").status_code, 400)
 
     def test_playlists(self):
         self.assertEqual(self.cliente.get("/playlists").json(), [])

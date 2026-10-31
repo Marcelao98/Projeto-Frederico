@@ -1593,3 +1593,199 @@ button.saida:hover {
     opacity: 1;
   }
 }
+
+/* O narrador: o que mudou fora do chat, em letra miúda e no meio. */
+.mensagem.aviso-discreto {
+  justify-content: center;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--texto-3);
+  padding: 2px 0;
+}
+
+.mensagem.aviso-discreto time {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+/* ---------- modo Acervo ---------- */
+
+.modo-acervo {
+  gap: 12px;
+}
+
+.acoes-planilha {
+  display: flex;
+  gap: 8px;
+  position: relative;
+}
+
+.faixa-aviso {
+  padding: 9px 14px;
+  border-radius: var(--raio-p);
+  border: 1px solid var(--borda);
+  background: var(--painel-2);
+  color: var(--texto-2);
+  font-size: 13.5px;
+}
+
+.acervo-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.acervo-filtros .campo-busca {
+  flex: 1 1 240px;
+}
+
+.acervo-filtros select {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--borda-forte);
+  background: var(--painel-2);
+  color: var(--texto);
+  font: inherit;
+  font-size: 13.5px;
+  max-width: 260px;
+}
+
+.marcar {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  color: var(--texto-2);
+}
+
+.tabela-rolagem {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding-bottom: 24px;
+}
+
+.tabela-acervo {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+.tabela-acervo th {
+  position: sticky;
+  top: 0;
+  background: var(--fundo);
+  text-align: left;
+  font-weight: 600;
+  color: var(--texto-3);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 6px 6px;
+  border-bottom: 1px solid var(--borda);
+  z-index: 1;
+}
+
+.tabela-acervo td {
+  padding: 3px 6px;
+  border-bottom: 1px solid var(--borda);
+  vertical-align: middle;
+}
+
+.tabela-acervo tr.sem-tema td:nth-child(4) input {
+  border-color: var(--aviso);
+}
+
+.celula {
+  width: 100%;
+  min-width: 140px;
+  padding: 5px 8px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: none;
+  color: var(--texto);
+  font: inherit;
+}
+
+.celula:hover:not(:disabled) {
+  border-color: var(--borda);
+}
+
+.celula:focus {
+  outline: none;
+  border-color: var(--acento-borda);
+  background: var(--painel-2);
+}
+
+.celula-franquia {
+  color: var(--texto-2);
+  white-space: nowrap;
+}
+
+.celula-categorias {
+  min-width: 120px;
+}
+
+.celula-categorias .selo {
+  margin: 1px 3px 1px 0;
+}
+
+.celula-situacao {
+  width: 18px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.celula-situacao.salvo {
+  color: var(--ok);
+}
+
+.celula-situacao.erro {
+  color: var(--perigo);
+  cursor: help;
+}
+
+.mostrar-mais {
+  margin: 12px auto 0;
+  display: flex;
+}
+
+.resumo-planilha {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 5;
+  width: min(480px, 90vw);
+  max-height: 60vh;
+  overflow: auto;
+  padding: 16px;
+  border-radius: var(--raio);
+  border: 1px solid var(--borda-forte);
+  background: var(--painel);
+  box-shadow: var(--sombra);
+}
+
+.resumo-planilha h2 {
+  font-size: 16px;
+  margin: 0 0 6px;
+}
+
+.lista-resumo {
+  margin: 8px 0;
+  padding-left: 18px;
+  font-size: 13px;
+  color: var(--texto-2);
+}
+
+.lista-resumo.ignoradas {
+  color: var(--aviso);
+}
+
+.resumo-botoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 10px;
+}

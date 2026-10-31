@@ -79,7 +79,8 @@ freddy/
 │   ├── protocolo.py   as mensagens do WebSocket (validadas)
 │   └── paineis.py     os painéis conectados (todos veem a mesma fila)
 └── dados/
-    ├── acervo.py      dataset do repositório + aprendidas.json
+    ├── acervo.py      dataset do repositório + ajustes.json + aprendidas.json
+    ├── planilha.py    o acervo em CSV, ida e volta
     └── playlists.py   playlists.json
 ```
 
@@ -96,6 +97,10 @@ validação em `protocolo.py` e um caso em `casos_contrato.json`.
 | `WS /ws` | o motor: comandos, estado, progresso e eventos (ver `api/protocolo.py`) |
 | `GET /acervo` | `{musicas, vocabulario}`: o dataset + as faixas aprendidas |
 | `POST /acervo/faixas` | `{titulo, link, temas}`: ensina faixa nova ("era essa?") |
+| `PATCH /acervo/faixas/{id}` | `{nome?, temas?, comentario?}`: corrige uma faixa (categorias recalculadas) |
+| `GET /acervo/planilha` | o acervo em CSV (`;`, com acentos certos pro Excel) |
+| `POST /acervo/planilha/salvar` | salva o CSV na pasta Downloads (o jeito que funciona no app) |
+| `POST /acervo/planilha?aplicar=` | manda o CSV editado: sem `aplicar`, só o resumo do que muda |
 | `GET /playlists`, `PUT /playlists/{id}`, `DELETE /playlists/{id}` | playlists salvas |
 | `GET /youtube/info?link=` | título e duração de um link |
 | `POST /youtube/buscar` | `{texto}`: busca livre no YouTube |
@@ -109,12 +114,19 @@ um site qualquer aberto no navegador não consegue mexer na fila.
 única: o frontend importa os mesmos JSON (alias `@dataset` em
 `frontend/vite.config.ts`). Mover ou renomear essa pasta quebra o frontend.
 
-O que a mesa ensina pelo "era essa?" vai pro `aprendidas.json` do mestre
-(quem baixou o app não tem o repositório). Pra levar pro acervo oficial:
+O que o mestre muda fica na pasta dele (quem baixou o app não tem o
+repositório):
+- `ajustes.json`: correções nas faixas do dataset (nome, temas, comentário),
+  feitas pelo chat (`temas`, `revisar`), pelo modo Acervo ou pela planilha.
+  Só guarda o que difere do dataset; voltar ao original apaga o ajuste.
+- `aprendidas.json`: faixas novas ("era essa?" ou linha nova na planilha).
+
+As categorias sempre saem dos temas (`vocabulario.json`). Pra levar tudo pro
+acervo oficial (e a Natty ganhar junto):
 
 ```bash
-python scripts/freddy_promover_aprendidas.py --so-mostrar   # ver o que tem
-python scripts/freddy_promover_aprendidas.py                # levar, e revisar o git diff
+python scripts/freddy_promover.py --so-mostrar   # ver o que tem
+python scripts/freddy_promover.py                # levar, e revisar o git diff
 ```
 
 ## Testes

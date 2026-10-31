@@ -32,6 +32,13 @@ def pasta_padrao() -> Path:
     return Path(user_data_dir("Freddy", appauthor=False, roaming=True))
 
 
+def pasta_de_downloads() -> Path:
+    """Onde a planilha do acervo é salva: a pasta Downloads da pessoa."""
+    from platformdirs import user_downloads_dir
+
+    return Path(user_downloads_dir())
+
+
 @dataclass
 class Config:
     pasta: Path = field(default_factory=pasta_padrao)
@@ -39,6 +46,7 @@ class Config:
     porta: int = PORTA_PADRAO
     origens: tuple[str, ...] = ORIGENS_PERMITIDAS
     sem_som: bool = False
+    pasta_downloads: Path = field(default_factory=pasta_de_downloads)
 
     @property
     def arquivo_playlists(self) -> Path:

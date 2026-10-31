@@ -75,6 +75,12 @@ export const acervoLocal: Acervo = montarAcervo(
 /** O acervo em uso (troca quando o Freddy manda o dele, ou aprende faixa nova). */
 export const acervoAtual = criarArmazem<Acervo>(acervoLocal);
 
+/** Busca o acervo do Freddy de novo (depois de editar ou ensinar faixa). */
+export async function recarregarAcervo(api: { acervo(): Promise<{ musicas: Faixa[]; vocabulario: VocabularioBruto }> }) {
+  const novo = await api.acervo();
+  acervoAtual.escrever(montarAcervo(novo.musicas, novo.vocabulario));
+}
+
 // As categorias ficam sem acento no JSON ("epico"); na tela, com.
 const ROTULOS: Record<string, string> = {
   epico: "épico",

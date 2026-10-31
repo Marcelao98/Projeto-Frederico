@@ -13,6 +13,10 @@ import { interpretarPedido, type Pedido } from "../../nucleo/pedido";
 import { normalizar } from "../../nucleo/texto";
 import { musicaDaFaixa, type Musica } from "../../nucleo/tipos";
 import type { EventoMotor } from "../../motor/tipos";
+import type { Faixa } from "../../nucleo/tipos";
+import { ehComandoDeRevisao, separarTemas, tentarRevisao, type Revisao } from "./revisao";
+
+export { separarTemas };
 
 export interface RespostaFreddy {
   texto: string;
@@ -20,6 +24,8 @@ export interface RespostaFreddy {
   musicas?: Musica[];
   /** "Era essa?": música achada na busca livre, que a mesa pode ensinar pro acervo. */
   pergunta?: Musica;
+  /** "Tá certo?": os temas de uma faixa do acervo, pra confirmar ou corrigir. */
+  revisao?: Revisao;
 }
 
 export interface Contexto {
@@ -29,6 +35,8 @@ export interface Contexto {
   tituloDoLink?: (link: string) => Promise<string | null>;
   /** Busca livre no YouTube (só com o Freddy ligado); null se não achou. */
   buscarNoYoutube?: (texto: string) => Promise<Musica | null>;
+  /** Grava temas novos numa faixa (só com o Freddy ligado). */
+  editarTemas?: (faixaId: string, temas: string[]) => Promise<Faixa>;
 }
 
 /** O que precisa pra ensinar uma faixa (a ApiFreddy cumpre). */
@@ -48,18 +56,26 @@ export const AJUDA = [
   "• **repete** (liga/desliga) · **para de repetir**",
   "• **fila** · **limpa a fila**",
   "• **volume 30** · **aumenta** · **abaixa** · **qual o volume?**",
+  "",
+  "Pra arrumar o acervo (com o Freddy ligado):",
+  "• **temas**: mostra os temas da que toca, e você diz se tá certo",
+  "• **temas: taverna, alegre**: troca os temas",
+  "• **revisar** (ou **revisar hollow knight**): passa faixa por faixa",
 ].join("\n");
 
 export type Previa =
   | { tipo: "busca"; busca: string; total: number }
   | { tipo: "link" }
   | { tipo: "comando"; acao: Pedido["acao"] }
+  | { tipo: "acervo"; descricao: string }
   | { tipo: "ajuda" };
 
 /** O que o Freddy vai entender, antes de mandar: a prévia embaixo do campo. */
 export function previa(texto: string, acervo: Acervo): Previa | null {
   const semNome = texto.replace(NOMES_DO_FREDDY_RE, "");
   if (AJUDA_RE.test(normalizar(semNome))) return { tipo: "ajuda" };
+  const doAcervo = ehComandoDeRevisao(semNome);
+  if (doAcervo) return { tipo: "acervo", descricao: doAcervo };
   const pedido = interpretarPedido(semNome);
   if (!pedido) return null;
   if (pedido.acao === "tocar") {
@@ -93,6 +109,9 @@ const mostrar = (titulo: string) => `**${titulo.replace(/\*/g, "")}**`;
 export async function responder(texto: string, ctx: Contexto): Promise<RespostaFreddy> {
   const semNome = texto.replace(NOMES_DO_FREDDY_RE, "");
   if (AJUDA_RE.test(normalizar(semNome))) return { texto: AJUDA };
+
+  const daRevisao = await tentarRevisao(semNome, ctx, (t) => interpretarPedido(t) !== null);
+  if (daRevisao) return daRevisao;
 
   const pedido = interpretarPedido(semNome);
   if (pedido === null) {
@@ -214,15 +233,6 @@ async function buscaLivre(
     musicas: [musica],
     pergunta: musica,
   };
-}
-
-/** "taverna, alegre e calmo" → ["taverna", "alegre", "calmo"]. */
-export function separarTemas(texto: string): string[] {
-  const temas = texto
-    .split(/\s*(?:[,;/\n]|\s\be\b\s)\s*/iu)
-    .map((t) => t.trim().toLowerCase())
-    .filter((t) => t.length > 1);
-  return [...new Set(temas)].slice(0, 5);
 }
 
 /**

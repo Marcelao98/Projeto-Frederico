@@ -3,6 +3,7 @@
 import { criarArmazem } from "../../dados/armazem";
 import type { Musica } from "../../nucleo/tipos";
 import type { RespostaFreddy } from "./conversa";
+import type { Revisao } from "./revisao";
 
 export interface MensagemChat {
   id: number;
@@ -11,6 +12,10 @@ export interface MensagemChat {
   musicas?: Musica[];
   /** "Era essa?" em aberto (some quando respondem). */
   pergunta?: Musica;
+  /** "Tá certo?" sobre os temas de uma faixa (some quando respondem). */
+  revisao?: Revisao;
+  /** Aviso pequeno do narrador (o que mudou fora do chat). */
+  discreta?: boolean;
   quando: number;
 }
 
@@ -19,9 +24,20 @@ let proximoId = 1;
 
 export const historico = criarArmazem<MensagemChat[]>([]);
 
-export function registrar(autor: MensagemChat["autor"], { texto, musicas, pergunta }: RespostaFreddy) {
-  const mensagem: MensagemChat = { id: proximoId++, autor, texto, musicas, pergunta, quando: Date.now() };
+export function registrar(
+  autor: MensagemChat["autor"],
+  { texto, musicas, pergunta, revisao }: RespostaFreddy,
+  discreta = false,
+) {
+  // Uma revisão nova (ou resposta digitada) fecha os botões das anteriores.
+  if (autor === "voce" || revisao) fecharRevisoes();
+  const mensagem: MensagemChat = { id: proximoId++, autor, texto, musicas, pergunta, revisao, discreta, quando: Date.now() };
   historico.escrever((lista) => [...lista, mensagem].slice(-MAX_MENSAGENS));
+}
+
+export function fecharRevisoes() {
+  if (!historico.ler().some((m) => m.revisao)) return;
+  historico.escrever((lista) => lista.map((m) => (m.revisao ? { ...m, revisao: undefined } : m)));
 }
 
 /** Fecha o "era essa?" de uma mensagem (já responderam). */

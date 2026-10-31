@@ -23,6 +23,23 @@ export interface Saude {
   som: string;
 }
 
+/** O que mudar numa faixa do acervo (o resto fica como está). */
+export interface EdicaoDeFaixa {
+  nome?: string;
+  temas?: string[];
+  comentario?: string;
+}
+
+/** O que a planilha enviada muda no acervo (antes e depois de aplicar). */
+export interface ResumoDaPlanilha {
+  mudaram: number;
+  novas: number;
+  ignoradas: { linha: number; motivo: string }[];
+  totalIgnoradas: number;
+  exemplos: { id: string; nome: string; antes: string[]; depois: string[] }[];
+  aplicado: boolean;
+}
+
 export class ErroDoFreddy extends Error {
   constructor(
     mensagem: string,
@@ -51,7 +68,7 @@ export class ApiFreddy {
     try {
       const resposta = await this.buscar(`http://${this.endereco}${caminho}`, {
         ...init,
-        headers: init?.body ? { "Content-Type": "application/json" } : undefined,
+        headers: init?.headers ?? (init?.body ? { "Content-Type": "application/json" } : undefined),
         signal: controle.signal,
       });
       if (resposta.status === 204) return undefined as T;
@@ -84,6 +101,26 @@ export class ApiFreddy {
   /** "Era essa?": ensina a faixa. ErroDoFreddy 409 se já está no acervo. */
   aprender(faixa: { titulo: string; link: string; temas: string[] }) {
     return this.pedir<Faixa>("/acervo/faixas", { method: "POST", body: JSON.stringify(faixa) });
+  }
+
+  /** Corrige nome/temas/comentário de uma faixa; devolve como ficou (categorias recalculadas). */
+  editarFaixa(id: string, edicao: EdicaoDeFaixa) {
+    return this.pedir<Faixa>(`/acervo/faixas/${encodeURIComponent(id)}`, { method: "PATCH", body: JSON.stringify(edicao) });
+  }
+
+  /** Salva o acervo em CSV na pasta Downloads; devolve onde. */
+  salvarPlanilha() {
+    return this.pedir<{ caminho: string }>("/acervo/planilha/salvar", { method: "POST" });
+  }
+
+  /** Manda a planilha editada: sem `aplicar`, só o resumo do que mudaria. */
+  enviarPlanilha(texto: string, aplicar: boolean) {
+    return this.pedir<ResumoDaPlanilha>(`/acervo/planilha?aplicar=${aplicar}`, {
+      method: "POST",
+      body: texto,
+      headers: { "Content-Type": "text/csv; charset=utf-8" },
+      prazoMs: 60_000,
+    });
   }
 
   playlists() {

@@ -61,6 +61,20 @@ npm run app:build    # gera o instalador (.msi/.exe no Windows) em src-tauri/tar
   ou põe no fim. Arrasta pra reordenar (ou Alt+↑↓), embaralha, tira, salva
   com nome e carrega depois.
 
+- **Acervo**: as faixas numa tabela, como planilha. Muda o nome e os temas
+  ali mesmo (salva ao sair do campo ou no Enter; Esc desfaz), filtra por
+  franquia ou "só sem tema", e toca a faixa pra ouvir antes de marcar.
+  **Baixar planilha** salva o CSV na pasta Downloads; edita no
+  LibreOffice/Excel e **Enviar planilha** mostra o que muda antes de aplicar.
+  Precisa do Freddy ligado pra salvar.
+
+No chat, com o Freddy ligado, dá pra arrumar o acervo conversando: **temas**
+mostra os temas da que toca e pergunta se está certo (botões ou "tá
+certo"/"não"); **temas: taverna, alegre** troca; **revisar** (ou **revisar
+hollow knight**) passa faixa por faixa, as sem tema primeiro. E o chat conta,
+em letra miúda, o que mudou fora dele (Playlist, barra do player, outra aba):
+"▶ Tocando Greenpath", "+5 na fila".
+
 Mixer e Soundboard já aparecem na barra lateral como "em breve".
 
 ## Plumagens (temas)
@@ -99,7 +113,9 @@ src/
 │   └── contexto.tsx     hooks do React (useMotor, useEstadoDoMotor, useConexao...)
 ├── dados/      acervo, playlists, temas, preferências; freddy.ts (API do backend e a escolha do motor)
 ├── modos/      um diretório por modo + registro.tsx (a lista de modos)
-│   ├── chat/       ModoChat + conversa.ts (texto → comando → resposta)
+│   ├── chat/       ModoChat + conversa.ts (texto → comando → resposta),
+│   │               revisao.ts (temas pelo chat), narrador.ts (o que mudou fora do chat)
+│   ├── acervo/     ModoAcervo (tabela editável + planilha)
 │   ├── playlist/   ModoPlaylist, PainelAcervo, PainelFila
 │   └── mixer/      ModoEmBreve
 └── componentes/ barra do player, cartão de música, ícones, a calopsita
