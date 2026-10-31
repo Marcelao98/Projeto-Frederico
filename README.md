@@ -42,10 +42,22 @@ toca e mistura som, e o Discord é só uma das saídas:
 Por que local: bot de música público na nuvem cai (termos do YouTube e
 bloqueio de IP de datacenter). No PC de cada um, é uso pessoal pra própria mesa.
 
+## Painel (frontend)
+
+Já existe: `web/` (React + TypeScript). Roda sozinho no navegador, com modo
+**Chat** (pedidos em português, como pra Natty) e modo **Playlist** (monta a
+fila na mão e salva). Arquitetura e como acrescentar modos em
+[`web/README.md`](web/README.md).
+
+```
+cd web && npm install && npm run dev
+```
+
 ## Testes
 
 ```
 python -m unittest discover -s modules/bardo -t .
+cd web && npm test
 ```
 
 Sem rede nem Discord de verdade (dublês).
