@@ -214,7 +214,7 @@ function BoasVindas({ acervo, enviar }: { acervo: Acervo; enviar: (t: string) =>
   const categorias = acervo.categorias.filter((c) => c.quantas > 0).slice(0, 14);
   return (
     <div className="boas-vindas">
-      <Calopsita tamanho={88} />
+      <Calopsita tamanho={150} />
       <h2>Oi, eu sou o Freddy</h2>
       <p>
         Cuido do som da mesa. Tenho <strong>{acervo.faixas.length} faixas</strong> de{" "}

@@ -1,32 +1,43 @@
 /**
- * O Frederico. Cada plumagem pode ter a sua ilustração em
- * public/aves/<tema>.png (frederico.png, lutino.png...). Se o arquivo do tema
- * ainda não existe, desenha a calopsita robô em SVG com as cores do tema.
+ * O Frederico. Cada plumagem pode ter a sua ilustração em public/aves/:
+ *   <tema>.png        corpo inteiro, pros lugares grandes (boas-vindas)
+ *   <tema>-rosto.png  só a cabeça, pros pequenos (logo, seletor, chat)
+ * Falta o rosto: usa o corpo inteiro. Falta os dois: desenha a calopsita
+ * robô em SVG com as cores do tema.
  */
 
 import { useState } from "react";
 import { temaAtual } from "../dados/temas";
 import { useArmazem } from "../dados/useArmazem";
 
-// Imagens que já falharam: não tenta de novo a cada render.
-const semImagem = new Set<string>();
+/** Abaixo disso o corpo inteiro (com a cauda comprida) vira um risquinho. */
+const TAMANHO_DO_ROSTO = 60;
+
+// Arquivos que já falharam: não tenta de novo a cada render.
+const semArquivo = new Set<string>();
 
 export function Calopsita({ tamanho = 40, tema }: { tamanho?: number; tema?: string }) {
   const atual = useArmazem(temaAtual);
   const plumagem = tema ?? atual;
   const [, redesenhar] = useState(0);
 
-  if (!semImagem.has(plumagem)) {
+  const candidatos = tamanho < TAMANHO_DO_ROSTO ? [`${plumagem}-rosto`, plumagem] : [plumagem];
+  const arquivo = candidatos.find((c) => !semArquivo.has(c));
+
+  if (arquivo) {
+    const rosto = arquivo.endsWith("-rosto");
     return (
       <img
-        src={`${import.meta.env.BASE_URL}aves/${plumagem}.png`}
+        key={arquivo}
+        className={rosto ? "ave-rosto" : undefined}
+        src={`${import.meta.env.BASE_URL}aves/${arquivo}.png`}
         width={tamanho}
         height={tamanho}
         alt=""
         draggable={false}
         style={{ objectFit: "contain" }}
         onError={() => {
-          semImagem.add(plumagem);
+          semArquivo.add(arquivo);
           redesenhar((n) => n + 1);
         }}
       />

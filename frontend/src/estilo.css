@@ -127,6 +127,12 @@ code {
   font-size: 12.5px;
 }
 
+/* O rosto do Frederico é branco: num círculo cinza claro ele não some no fundo. */
+.ave-rosto {
+  border-radius: 50%;
+  background: var(--painel-3);
+}
+
 .marca-ave {
   display: grid;
   border-radius: 50%;
@@ -1389,7 +1395,13 @@ code {
     display: none;
   }
 
-  .marca-ave {
+  /* O rosto do Frederico é branco: num círculo cinza claro ele não some no fundo. */
+.ave-rosto {
+  border-radius: 50%;
+  background: var(--painel-3);
+}
+
+.marca-ave {
   display: grid;
   border-radius: 50%;
   transition: transform 0.15s;
