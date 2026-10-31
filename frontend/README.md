@@ -44,11 +44,11 @@ Mixer e Soundboard já aparecem na barra lateral como "em breve".
 
 ## Plumagens (temas)
 
-Cinco temas, um por mutação de calopsita. A ave do logo muda junto.
+Cinco temas, um por calopsita. A ave do logo muda junto.
 
 | Tema | Cara |
 |---|---|
-| **Albina** (padrão) | branca, acento rubi do olho: o Frederico de verdade |
+| **Frederico** (padrão) | branco e prata, acento rosado do bico: a calopsita de verdade (cara-branca) |
 | Lutino | creme e amarela, bochecha laranja |
 | Cinza silvestre | escuro, crista amarela e bochecha laranja |
 | Canela | escuro castanho e quente |

@@ -4,7 +4,7 @@ Uma imagem por tema, com o nome do tema:
 
 | Arquivo | Plumagem |
 |---|---|
-| `albina.png` | Albina (padrão): o Frederico |
+| `frederico.png` | Frederico (padrão): cara-branca, asa prateada |
 | `lutino.png` | Lutino |
 | `cinza.png` | Cinza silvestre |
 | `canela.png` | Canela |
@@ -19,6 +19,6 @@ Tema sem arquivo aqui usa o desenho em SVG com as cores do tema
 (`src/componentes/Calopsita.tsx`). Dá pra pôr só algumas e o resto continua
 no desenho.
 
-O ícone do app sai da albina: depois de trocar, rodar de dentro de `frontend/`:
+O ícone do app sai do Frederico: depois de trocar, rodar de dentro de `frontend/`:
 
-    npx tauri icon public/aves/albina.png
+    npx tauri icon public/aves/frederico.png

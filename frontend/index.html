@@ -7,7 +7,8 @@
     <script>
       // Aplica a plumagem salva antes de desenhar, pra não piscar o tema padrão.
       try {
-        var tema = JSON.parse(localStorage.getItem("freddy.tema") || '"albina"');
+        var tema = JSON.parse(localStorage.getItem("freddy.tema") || '"frederico"');
+        if (tema === "albina") tema = "frederico";
         document.documentElement.dataset.tema = tema;
       } catch (e) {}
     </script>

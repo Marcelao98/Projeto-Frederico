@@ -1,6 +1,5 @@
 /*
- * As plumagens do Frederico. Cada tema é uma mutação de calopsita e define
- * dois grupos de cor:
+ * As plumagens. Cada tema é uma calopsita e define dois grupos de cor:
  *   - a interface: fundo, painéis, texto, acento (botões, destaque);
  *   - a ave (--ave-*): o desenho da calopsita no logo e no seletor.
  *
@@ -8,44 +7,47 @@
  * aparece COMO TEXTO sobre o fundo. Nos temas claros elas são diferentes,
  * senão o destaque fica ilegível no branco.
  *
- * O padrão é a albina: o Frederico de verdade.
+ * O padrão é o Frederico, a calopsita de verdade: cara-branca, cabeça e
+ * rosto brancos, asas cinza-prateado, olho preto, bico e pés rosados.
  */
 
 :root,
-[data-tema="albina"] {
+[data-tema="frederico"] {
   color-scheme: light;
-  --fundo: #f7f5f3;
+  /* branco das penas da cabeça, com o cinza frio das asas nos painéis */
+  --fundo: #f5f5f7;
   --painel: #ffffff;
-  --painel-2: #f4f1ee;
-  --painel-3: #e9e4e0;
-  --borda: #e5dfda;
-  --borda-forte: #cfc6bf;
-  --texto: #231e1d;
-  --texto-2: #5a5250;
-  --texto-3: #7d7470;
+  --painel-2: #f1f1f4;
+  --painel-3: #e5e5ea;
+  --borda: #e1e1e7;
+  --borda-forte: #c8c8d1;
+  --texto: #1e1e23;
+  --texto-2: #52525c;
+  --texto-3: #70707b;
 
-  /* o rubi do olho da albina */
-  --acento: #c22d4a;
-  --acento-texto: #ad2640;
+  /* o rosado do bico e dos pés, escurecido pra ler no branco */
+  --acento: #bf4a62;
+  --acento-texto: #a43b52;
   --sobre-acento: #ffffff;
-  --acento-fraco: rgb(194 45 74 / 0.08);
-  --acento-borda: rgb(194 45 74 / 0.35);
-  --acento-2-fraco: rgb(240 170 176 / 0.22);
+  --acento-fraco: rgb(191 74 98 / 0.08);
+  --acento-borda: rgb(191 74 98 / 0.35);
+  --acento-2-fraco: rgb(168 172 186 / 0.2);
 
   --ok: #1d7f4b;
   --ok-fraco: rgb(29 127 75 / 0.16);
   --perigo: #c42727;
   --perigo-fraco: rgb(196 39 39 / 0.1);
   --aviso: #a8530f;
-  --sombra: 0 10px 30px rgb(70 40 40 / 0.12);
+  --sombra: 0 10px 30px rgb(40 40 60 / 0.1);
 
   --ave-corpo: #ffffff;
-  --ave-borda: #d6ccc5;
-  --ave-crista: #ece2d6;
-  --ave-bochecha: #f8dcdc;
-  --ave-olho: #d12f4f;
-  --ave-visor: #3a2f31;
-  --ave-bico: #f3c6bd;
+  --ave-asa: #c9cad3;
+  --ave-borda: #b9bac4;
+  --ave-crista: #f7ece2;
+  --ave-bochecha: #fbe9e1;
+  --ave-olho: #1b1b20;
+  --ave-visor: #ececf1;
+  --ave-bico: #eab3b5;
 }
 
 [data-tema="lutino"] {
@@ -76,6 +78,7 @@
   --sombra: 0 10px 30px rgb(90 70 20 / 0.14);
 
   --ave-corpo: #fff4d2;
+  --ave-asa: #f6e3a8;
   --ave-borda: #e0ca8c;
   --ave-crista: #f5c219;
   --ave-bochecha: #f2853f;
@@ -112,6 +115,7 @@
   --sombra: 0 10px 30px rgb(0 0 0 / 0.35);
 
   --ave-corpo: #a9aeb7;
+  --ave-asa: #8a909b;
   --ave-borda: #6f7682;
   --ave-crista: #f5c542;
   --ave-bochecha: #f08a4b;
@@ -148,6 +152,7 @@
   --sombra: 0 10px 30px rgb(0 0 0 / 0.4);
 
   --ave-corpo: #b39477;
+  --ave-asa: #94775d;
   --ave-borda: #7e6550;
   --ave-crista: #f3c04f;
   --ave-bochecha: #ec8550;
@@ -184,6 +189,7 @@
   --sombra: 0 10px 30px rgb(0 0 0 / 0.4);
 
   --ave-corpo: #8b939c;
+  --ave-asa: #6f777f;
   --ave-borda: #5b636c;
   --ave-crista: #b6bdc5;
   --ave-bochecha: #f4f6f8;

@@ -1,6 +1,6 @@
 /**
  * O Frederico. Cada plumagem pode ter a sua ilustração em
- * public/aves/<tema>.png (albina.png, lutino.png...). Se o arquivo do tema
+ * public/aves/<tema>.png (frederico.png, lutino.png...). Se o arquivo do tema
  * ainda não existe, desenha a calopsita robô em SVG com as cores do tema.
  */
 
@@ -45,13 +45,16 @@ function CalopsitaDesenhada({ tamanho }: { tamanho: number }) {
         stroke="var(--ave-borda)"
         strokeWidth="1"
       />
-      <circle cx="32" cy="34" r="20" fill="var(--ave-corpo)" stroke="var(--ave-borda)" strokeWidth="2" />
-      <circle cx="24" cy="40" r="5.5" fill="var(--ave-bochecha)" />
-      <circle cx="40" cy="40" r="5.5" fill="var(--ave-bochecha)" />
-      <rect x="20" y="27" width="24" height="9" rx="4.5" fill="var(--ave-visor)" />
-      <circle cx="26" cy="31.5" r="2.2" fill="var(--ave-olho)" />
-      <circle cx="38" cy="31.5" r="2.2" fill="var(--ave-olho)" />
-      <path d="M29 39h6l-3 5Z" fill="var(--ave-bico)" />
+      {/* corpo e asas */}
+      <circle cx="32" cy="36" r="20" fill="var(--ave-asa)" stroke="var(--ave-borda)" strokeWidth="2" />
+      {/* cabeça e rosto */}
+      <circle cx="32" cy="31" r="15" fill="var(--ave-corpo)" />
+      <circle cx="24.5" cy="37" r="4.5" fill="var(--ave-bochecha)" />
+      <circle cx="39.5" cy="37" r="4.5" fill="var(--ave-bochecha)" />
+      <rect x="20" y="25.5" width="24" height="8.5" rx="4.25" fill="var(--ave-visor)" />
+      <circle cx="26" cy="29.75" r="2.2" fill="var(--ave-olho)" />
+      <circle cx="38" cy="29.75" r="2.2" fill="var(--ave-olho)" />
+      <path d="M29 36h6l-3 5Z" fill="var(--ave-bico)" />
     </svg>
   );
 }
