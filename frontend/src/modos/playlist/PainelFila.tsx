@@ -4,12 +4,35 @@ import { useState, type DragEvent, type KeyboardEvent } from "react";
 import { CartaoMusica } from "../../componentes/CartaoMusica";
 import { Icone } from "../../componentes/Icone";
 import { formatarTempo } from "../../componentes/tempo";
-import { excluirPlaylist, playlists, salvarPlaylist, type PlaylistSalva } from "../../dados/playlists";
+import { freddy } from "../../dados/freddy";
+import { acharPlaylist, excluirPlaylist, playlists, salvarPlaylist } from "../../dados/playlists";
 import { useArmazem } from "../../dados/useArmazem";
 import { useEstadoDoMotor, useMotor } from "../../motor/contexto";
 import { MAX_FILA, type ItemDaFila } from "../../motor/tipos";
+import { EditorDePlaylist } from "./EditorDePlaylist";
+import { porPlaylistNaFila, tocarPlaylist } from "./usarPlaylist";
 
-export function PainelFila({ avisar }: { avisar: (texto: string) => void }) {
+export function PainelFila({
+  avisar,
+  editando,
+  editar,
+}: {
+  avisar: (texto: string) => void;
+  /** Id da playlist aberta no editor (null = mostra a fila). */
+  editando: string | null;
+  editar: (id: string | null) => void;
+}) {
+  if (editando) {
+    return (
+      <section className="painel painel-fila" aria-label="Editando playlist">
+        <EditorDePlaylist id={editando} fechar={() => editar(null)} avisar={avisar} />
+      </section>
+    );
+  }
+  return <Fila avisar={avisar} editar={editar} />;
+}
+
+function Fila({ avisar, editar }: { avisar: (texto: string) => void; editar: (id: string) => void }) {
   const motor = useMotor();
   const { tocando, proximas, situacao, repetir } = useEstadoDoMotor();
   const [arrastado, setArrastado] = useState<string | null>(null);
@@ -180,53 +203,60 @@ export function PainelFila({ avisar }: { avisar: (texto: string) => void }) {
         {!proximas.length && <li className="vazio">A fila está vazia.</li>}
       </ol>
 
-      <PlaylistsSalvas avisar={avisar} />
+      <PlaylistsSalvas avisar={avisar} editar={editar} />
     </section>
   );
 }
 
-function PlaylistsSalvas({ avisar }: { avisar: (texto: string) => void }) {
+function PlaylistsSalvas({ avisar, editar }: { avisar: (texto: string) => void; editar: (id: string) => void }) {
   const motor = useMotor();
   const salvas = useArmazem(playlists);
+  const comFreddy = useArmazem(freddy) !== null;
   const [confirmando, setConfirmando] = useState<string | null>(null);
+  const [busca, setBusca] = useState("");
+  const onde = comFreddy ? "Ficam guardadas no Freddy." : "Ficam guardadas neste navegador.";
 
   if (!salvas.length) {
     return (
       <div className="salvas">
         <h3>Playlists salvas</h3>
-        <p className="apagado">Monta a fila e clica em Salvar. Fica guardada neste navegador.</p>
+        <p className="apagado">
+          Monta a fila e clica em Salvar, ou usa o 📁 no acervo. {onde}
+        </p>
       </div>
     );
   }
 
-  async function tocar(p: PlaylistSalva) {
-    const r = await motor.executar({ tipo: "adicionar", musicas: p.musicas, onde: "agora" });
-    avisar(`Tocando "${p.nome}" (${r.entraram} música${r.entraram > 1 ? "s" : ""}) 🎵`);
-  }
-
-  async function enfileirar(p: PlaylistSalva) {
-    const r = await motor.executar({ tipo: "adicionar", musicas: p.musicas });
-    avisar(r.entraram ? `"${p.nome}" na fila (${r.entraram})` : "A fila está cheia.");
-  }
+  const mostradas = busca.trim() ? acharPlaylist(busca, salvas) : salvas;
 
   return (
     <div className="salvas">
       <h3>Playlists salvas</h3>
+      {salvas.length > 5 && (
+        <div className="campo-busca pequeno">
+          <Icone nome="busca" tamanho={14} />
+          <input value={busca} onChange={(e) => setBusca(e.target.value)} placeholder="Achar playlist" aria-label="Achar playlist" />
+        </div>
+      )}
       <ul>
-        {salvas.map((p) => (
+        {!mostradas.length && <li className="apagado">Nenhuma com esse nome.</li>}
+        {mostradas.map((p) => (
           <li key={p.id} className="salva">
             <Icone nome="pasta" tamanho={16} />
-            <div className="salva-textos">
+            <div className="salva-textos clicavel" onClick={() => editar(p.id)} title="Abrir pra editar">
               <div className="salva-nome">{p.nome}</div>
               <div className="cartao-sub">
                 {p.musicas.length} música{p.musicas.length > 1 ? "s" : ""} ·{" "}
                 {new Date(p.atualizadaEm).toLocaleDateString("pt-BR")}
               </div>
             </div>
-            <button className="botao-icone pequeno" onClick={() => void tocar(p)} title="Tocar agora">
+            <button className="botao-icone pequeno" onClick={() => editar(p.id)} title="Abrir pra editar">
+              <Icone nome="editar" tamanho={14} />
+            </button>
+            <button className="botao-icone pequeno" onClick={() => void tocarPlaylist(motor, p, avisar)} title="Tocar (troca a fila)">
               <Icone nome="tocar" tamanho={14} />
             </button>
-            <button className="botao-icone pequeno" onClick={() => void enfileirar(p)} title="Pôr no fim da fila">
+            <button className="botao-icone pequeno" onClick={() => void porPlaylistNaFila(motor, p, avisar)} title="Pôr no fim da fila">
               <Icone nome="mais" tamanho={15} />
             </button>
             <button

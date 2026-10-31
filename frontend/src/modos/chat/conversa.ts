@@ -14,6 +14,7 @@ import { normalizar } from "../../nucleo/texto";
 import { musicaDaFaixa, type Musica } from "../../nucleo/tipos";
 import type { EventoMotor } from "../../motor/tipos";
 import type { Faixa } from "../../nucleo/tipos";
+import { ehComandoDePlaylist, tentarPlaylist } from "./playlistsChat";
 import { ehComandoDeRevisao, separarTemas, tentarRevisao, type Revisao } from "./revisao";
 
 export { separarTemas };
@@ -57,6 +58,12 @@ export const AJUDA = [
   "• **fila** · **limpa a fila**",
   "• **volume 30** · **aumenta** · **abaixa** · **qual o volume?**",
   "",
+  "Playlists salvas:",
+  "• **playlists**: mostra as que você salvou",
+  "• **toca a playlist sessão 12**: troca a fila por ela",
+  "• **põe a playlist cripta na fila**: acrescenta no fim",
+  "• **salva a fila como sessão 12**: guarda o que está tocando e a fila",
+  "",
   "Pra arrumar o acervo (com o Freddy ligado):",
   "• **temas**: mostra os temas da que toca, e você diz se tá certo",
   "• **temas: taverna, alegre**: troca os temas",
@@ -74,7 +81,7 @@ export type Previa =
 export function previa(texto: string, acervo: Acervo): Previa | null {
   const semNome = texto.replace(NOMES_DO_FREDDY_RE, "");
   if (AJUDA_RE.test(normalizar(semNome))) return { tipo: "ajuda" };
-  const doAcervo = ehComandoDeRevisao(semNome);
+  const doAcervo = ehComandoDeRevisao(semNome) ?? ehComandoDePlaylist(semNome);
   if (doAcervo) return { tipo: "acervo", descricao: doAcervo };
   const pedido = interpretarPedido(semNome);
   if (!pedido) return null;
@@ -112,6 +119,8 @@ export async function responder(texto: string, ctx: Contexto): Promise<RespostaF
 
   const daRevisao = await tentarRevisao(semNome, ctx, (t) => interpretarPedido(t) !== null);
   if (daRevisao) return daRevisao;
+  const daPlaylist = await tentarPlaylist(semNome, ctx.motor);
+  if (daPlaylist) return daPlaylist;
 
   const pedido = interpretarPedido(semNome);
   if (pedido === null) {

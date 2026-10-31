@@ -1,6 +1,7 @@
 /** O acervo pra montar a playlist: busca, filtro por franquia e por clima. */
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, type ReactNode } from "react";
+import { BotaoPlaylist } from "./BotaoPlaylist";
 import { CartaoMusica } from "../../componentes/CartaoMusica";
 import { Icone } from "../../componentes/Icone";
 import { emojiCategoria, rotuloCategoria, type Acervo } from "../../dados/acervo";
@@ -12,7 +13,17 @@ import { extrairLinkYoutube } from "../../nucleo/youtube";
 
 const PAGINA = 80;
 
-export function PainelAcervo({ acervo, avisar }: { acervo: Acervo; avisar: (texto: string) => void }) {
+export function PainelAcervo({
+  acervo,
+  avisar,
+  editando,
+  editar,
+}: {
+  acervo: Acervo;
+  avisar: (texto: string) => void;
+  editando: string | null;
+  editar: (id: string) => void;
+}) {
   const motor = useMotor();
   const { tocando } = useEstadoDoMotor();
   const [busca, setBusca] = useState("");
@@ -162,7 +173,11 @@ export function PainelAcervo({ acervo, avisar }: { acervo: Acervo; avisar: (text
               musica={musicaDaFaixa(f)}
               ativo={tocando?.faixaId === f.id}
               detalhe={<Detalhe faixa={f} />}
-              acoes={<AcoesDeMusica por={(onde) => void por([musicaDaFaixa(f)], onde)} />}
+              acoes={
+                <AcoesDeMusica por={(onde) => void por([musicaDaFaixa(f)], onde)}>
+                  <BotaoPlaylist musica={musicaDaFaixa(f)} avisar={avisar} editando={editando} editar={editar} />
+                </AcoesDeMusica>
+              }
             />
           </li>
         ))}
@@ -197,9 +212,10 @@ function Detalhe({ faixa }: { faixa: Faixa }) {
   );
 }
 
-function AcoesDeMusica({ por }: { por: (onde: Onde) => void }) {
+function AcoesDeMusica({ por, children }: { por: (onde: Onde) => void; children?: ReactNode }) {
   return (
     <>
+      {children}
       <button className="botao-icone pequeno" onClick={() => por("agora")} title="Tocar agora">
         <Icone nome="tocar" tamanho={14} />
       </button>

@@ -59,7 +59,10 @@ npm run app:build    # gera o instalador (.msi/.exe no Windows) em src-tauri/tar
 - **Playlist**: o acervo inteiro com busca, filtro por franquia e por
   clima (os mesmos de cima), e a fila do lado. Toca agora, toca a seguir
   ou põe no fim. Arrasta pra reordenar (ou Alt+↑↓), embaralha, tira, salva
-  com nome e carrega depois.
+  com nome e carrega depois. O 📁 de cada faixa põe ela numa playlist salva
+  (ou numa nova) sem tocar nada; clicar numa playlist salva abre ela pra
+  editar (tirar, reordenar, renomear) sem mexer na fila. "Tocar" uma
+  playlist troca a fila por ela; o ＋ acrescenta no fim.
 
 - **Acervo**: as faixas numa tabela, como planilha. Muda o nome e os temas
   ali mesmo (salva ao sair do campo ou no Enter; Esc desfaz), filtra por
@@ -67,6 +70,12 @@ npm run app:build    # gera o instalador (.msi/.exe no Windows) em src-tauri/tar
   **Baixar planilha** salva o CSV na pasta Downloads; edita no
   LibreOffice/Excel e **Enviar planilha** mostra o que muda antes de aplicar.
   Precisa do Freddy ligado pra salvar.
+
+Playlists também pelo chat: **playlists** lista as salvas, **toca a
+playlist sessão 12** troca a fila por ela (o nome não precisa ser exato),
+**põe a playlist cripta na fila** acrescenta, e **salva a fila como sessão
+12** guarda o que toca mais a fila. Se não couber tudo (a fila tem 50
+lugares), o Freddy avisa quantas entraram.
 
 No chat, com o Freddy ligado, dá pra arrumar o acervo conversando: **temas**
 mostra os temas da que toca e pergunta se está certo (botões ou "tá
@@ -114,7 +123,8 @@ src/
 ├── dados/      acervo, playlists, temas, preferências; freddy.ts (API do backend e a escolha do motor)
 ├── modos/      um diretório por modo + registro.tsx (a lista de modos)
 │   ├── chat/       ModoChat + conversa.ts (texto → comando → resposta),
-│   │               revisao.ts (temas pelo chat), narrador.ts (o que mudou fora do chat)
+│   │               revisao.ts (temas pelo chat), playlistsChat.ts (playlists pelo chat),
+│   │               narrador.ts (o que mudou fora do chat)
 │   ├── acervo/     ModoAcervo (tabela editável + planilha)
 │   ├── playlist/   ModoPlaylist, PainelAcervo, PainelFila
 │   └── mixer/      ModoEmBreve

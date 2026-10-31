@@ -14,7 +14,7 @@ Atualizado em 31/10/2026.
 | **Acervo** (607 faixas, 9 franquias, 27 climas) | ✅ pronto, curadoria contínua |
 | **Painel** (Chat, Playlist, Acervo, 5 plumagens) | ✅ pronto; toca pelo Freddy ou sozinho pelo YouTube |
 | **App desktop** (Tauri) com instaladores no GitHub (Windows, Linux, Mac) | ✅ pronto (v0.1.1), testado no Fedora |
-| **Backend próprio** (o Freddy sem a Natty) | 🟡 pronto (v0.3.0), instalado no Fedora; falta confirmar o som |
+| **Backend próprio** (o Freddy sem a Natty) | 🟡 pronto (v0.4.0), instalado no Fedora; falta confirmar o som |
 | **Bot do Discord do Freddy** | ⬜ Fase 2 |
 | **Mixer, microfone virtual, soundboard** | ⬜ só planejado (telas "em breve" no painel) |
 
@@ -58,6 +58,10 @@ O Freddy vira um programa Python que roda sozinho, sem a Natty: `python -m fredd
   chat (`temas`, `revisar`: o Freddy mostra os temas e você diz se tá certo).
   Correções vão pro `ajustes.json` do mestre; `freddy_promover.py` leva pro oficial.
 - ✅ O chat conta o que muda fora dele (Playlist, barra, outra aba).
+- ✅ Playlists salvas de verdade (v0.4.0): pelo chat (`playlists`, `toca a
+  playlist X`, `põe a playlist X na fila`, `salva a fila como X`), editor
+  sem mexer na fila, 📁 no acervo pra montar a playlist sem tocar, busca nas
+  salvas e aviso quando não cabe tudo na fila.
 - 🟡 Marcelo instalou no Fedora (31/10); falta confirmar o som saindo (e um mestre no Windows).
 - **Pronto quando:** o painel controla uma fila que mora no backend, com o app aberto ou no navegador.
 

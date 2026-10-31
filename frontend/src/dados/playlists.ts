@@ -6,6 +6,8 @@
  */
 
 import { novoUid } from "../motor/fila";
+import { normalizar } from "../nucleo/texto";
+import { videoId } from "../nucleo/youtube";
 import type { Musica } from "../nucleo/tipos";
 import { criarArmazem } from "./armazem";
 import type { ApiFreddy } from "./freddy";
@@ -37,20 +39,84 @@ function limpa({ titulo, link, faixaId, origem, duracaoSegundos }: Musica): Musi
   return { titulo, link, faixaId, origem, duracaoSegundos };
 }
 
-/** Salva com esse nome; se já existe uma com o mesmo nome, substitui. */
-export function salvarPlaylist(nome: string, musicas: Musica[]): PlaylistSalva {
-  const existente = playlists.ler().find((p) => p.nome.toLowerCase() === nome.toLowerCase());
-  const playlist: PlaylistSalva = {
-    id: existente?.id ?? novoUid(),
-    nome,
-    musicas: musicas.map(limpa),
-    atualizadaEm: Date.now(),
-  };
+/** Grava (no Freddy ou no navegador) e põe no topo da lista. */
+function gravar(playlist: PlaylistSalva): PlaylistSalva {
   const nova = (lista: PlaylistSalva[]) => [playlist, ...lista.filter((p) => p.id !== playlist.id)];
   playlists.escrever(nova);
   if (api) api.salvarPlaylist(playlist).catch(aoFalharGravacao);
   else doNavegador.escrever(nova);
   return playlist;
+}
+
+const mesmoNome = (a: string, b: string) => normalizar(a) === normalizar(b);
+
+export function playlistPorId(id: string): PlaylistSalva | undefined {
+  return playlists.ler().find((p) => p.id === id);
+}
+
+/** Salva com esse nome; se já existe uma com o mesmo nome, substitui. */
+export function salvarPlaylist(nome: string, musicas: Musica[]): PlaylistSalva {
+  const existente = playlists.ler().find((p) => mesmoNome(p.nome, nome));
+  return gravar({ id: existente?.id ?? novoUid(), nome: nome.trim(), musicas: musicas.map(limpa), atualizadaEm: Date.now() });
+}
+
+function mudar(id: string, mudanca: (p: PlaylistSalva) => Partial<PlaylistSalva>): PlaylistSalva | null {
+  const atual = playlistPorId(id);
+  if (!atual) return null;
+  return gravar({ ...atual, ...mudanca(atual), atualizadaEm: Date.now() });
+}
+
+/** Troca o nome. Recusa (devolve o motivo) se outra já tem esse nome. */
+export function renomearPlaylist(id: string, nome: string): string | null {
+  const limpo = nome.trim();
+  if (!limpo) return "o nome não pode ficar vazio";
+  if (playlists.ler().some((p) => p.id !== id && mesmoNome(p.nome, limpo))) return `já existe uma playlist "${limpo}"`;
+  mudar(id, () => ({ nome: limpo }));
+  return null;
+}
+
+/** Põe a música no fim da playlist. "ja_estava" se o mesmo vídeo já está lá. */
+export function adicionarNaPlaylist(id: string, musica: Musica): "entrou" | "ja_estava" | "sem_playlist" {
+  const atual = playlistPorId(id);
+  if (!atual) return "sem_playlist";
+  if (atual.musicas.some((m) => videoId(m.link) === videoId(musica.link))) return "ja_estava";
+  mudar(id, (p) => ({ musicas: [...p.musicas, limpa(musica)] }));
+  return "entrou";
+}
+
+export function removerDaPlaylist(id: string, indice: number) {
+  mudar(id, (p) => ({ musicas: p.musicas.filter((_, i) => i !== indice) }));
+}
+
+/** Move a música da posição `de` pra `para` (contando do 0). */
+export function moverNaPlaylist(id: string, de: number, para: number) {
+  mudar(id, (p) => {
+    const musicas = [...p.musicas];
+    if (de < 0 || de >= musicas.length) return {};
+    const [m] = musicas.splice(de, 1);
+    musicas.splice(Math.max(0, Math.min(para, musicas.length)), 0, m);
+    return { musicas };
+  });
+}
+
+/**
+ * Acha a playlist pelo que a pessoa digitou ("sessao 12" acha "Sessão 12 —
+ * a cripta"). Nome igual ganha; senão, as que começam com o texto; senão, as
+ * que têm todas as palavras. Mais de uma = ambígua (a tela pergunta qual).
+ */
+export function acharPlaylist(texto: string, lista: PlaylistSalva[] = playlists.ler()): PlaylistSalva[] {
+  const alvo = normalizar(texto).replace(/[^\p{L}\p{N} ]/gu, " ").replace(/\s+/g, " ").trim();
+  if (!alvo) return [];
+  const limpo = (n: string) => normalizar(n).replace(/[^\p{L}\p{N} ]/gu, " ").replace(/\s+/g, " ").trim();
+  const iguais = lista.filter((p) => limpo(p.nome) === alvo);
+  if (iguais.length) return iguais;
+  const comecam = lista.filter((p) => limpo(p.nome).startsWith(alvo));
+  if (comecam.length) return comecam;
+  const palavras = alvo.split(" ");
+  return lista.filter((p) => {
+    const nome = ` ${limpo(p.nome)} `;
+    return palavras.every((w) => nome.includes(` ${w}`));
+  });
 }
 
 export function excluirPlaylist(id: string) {

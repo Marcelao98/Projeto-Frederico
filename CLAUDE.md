@@ -61,9 +61,11 @@ Detalhes de cada lado em `frontend/README.md` e `backend/README.md`.
   repositório. O Freddy aplica por cima do dataset ao servir `/acervo`; o
   `backend/scripts/freddy_promover.py` leva pro `musicas.json` oficial.
   Categorias sempre saem dos temas, nunca à mão.
-- **Comandos de acervo no chat** (`temas`, `revisar`) moram em
-  `frontend/src/modos/chat/revisao.ts`, fora do `pedido.ts`: não fazem parte
-  da paridade com o Bardo.
+- **Comandos só do painel no chat** (`temas`/`revisar` em
+  `frontend/src/modos/chat/revisao.ts`; `playlists`/`toca a playlist X`/
+  `salva a fila como X` em `playlistsChat.ts`) rodam antes do `pedido.ts` e
+  ficam fora da paridade com o Bardo. Atenção: no `pedido.ts`, "playlist" é
+  palavra de "mostra a fila"; por isso os de playlist vêm antes.
 - **Modos do painel** moram em `frontend/src/modos/<nome>/` e entram pela
   lista em `frontend/src/modos/registro.tsx`.
 - **No backend:** `service.py` é lógica pura, sem

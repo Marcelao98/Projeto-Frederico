@@ -7,6 +7,7 @@ import { PainelFila } from "./PainelFila";
 
 export function ModoPlaylist({ acervo }: { acervo: Acervo }) {
   const [aviso, setAviso] = useState<string | null>(null);
+  const [editando, setEditando] = useState<string | null>(null);
   const prazo = useRef<ReturnType<typeof setTimeout>>();
 
   const avisar = (texto: string) => {
@@ -25,8 +26,8 @@ export function ModoPlaylist({ acervo }: { acervo: Acervo }) {
         </div>
       </header>
       <div className="playlist-grade">
-        <PainelAcervo acervo={acervo} avisar={avisar} />
-        <PainelFila avisar={avisar} />
+        <PainelAcervo acervo={acervo} avisar={avisar} editando={editando} editar={setEditando} />
+        <PainelFila avisar={avisar} editando={editando} editar={setEditando} />
       </div>
       <div className={`aviso-flutuante ${aviso ? "visivel" : ""}`} role="status">
         {aviso}

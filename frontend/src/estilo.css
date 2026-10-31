@@ -1789,3 +1789,147 @@ button.saida:hover {
   gap: 8px;
   margin-top: 10px;
 }
+
+/* ---------- playlists salvas: editor, busca e o 📁 do acervo ---------- */
+
+.editor-playlist {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 0;
+  flex: 1;
+}
+
+.editor-topo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.editor-nome {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.editor-nome input {
+  font: inherit;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--texto);
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 3px 6px;
+  margin-left: -6px;
+}
+
+.editor-nome input:hover {
+  border-color: var(--borda);
+}
+
+.editor-nome input:focus {
+  outline: none;
+  border-color: var(--acento-borda);
+  background: var(--painel-2);
+}
+
+.salvas .campo-busca.pequeno {
+  margin-bottom: 6px;
+}
+
+.salvas .campo-busca.pequeno input {
+  padding: 6px 0;
+  font-size: 13px;
+}
+
+.salva-textos.clicavel {
+  cursor: pointer;
+}
+
+.salva-textos.clicavel:hover .salva-nome {
+  color: var(--acento-texto);
+}
+
+.botao-icone.ligado {
+  color: var(--acento-texto);
+  background: var(--acento-fraco);
+}
+
+.menu-fundo {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+}
+
+.menu-playlist {
+  position: fixed;
+  z-index: 21;
+  width: 260px;
+  max-height: 320px;
+  overflow: auto;
+  padding: 6px;
+  border-radius: var(--raio-p);
+  border: 1px solid var(--borda-forte);
+  background: var(--painel);
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.menu-titulo {
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--texto-3);
+  padding: 4px 8px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 8px;
+  border-radius: 6px;
+  text-align: left;
+  font-size: 13.5px;
+  color: var(--texto);
+}
+
+.menu-item span:nth-child(2) {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.menu-item:hover,
+.menu-item:focus-visible {
+  background: var(--painel-2);
+  outline: none;
+}
+
+.menu-item .contagem {
+  color: var(--texto-3);
+  font-size: 12px;
+}
+
+.menu-nova input {
+  width: 100%;
+  margin-top: 4px;
+  padding: 7px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--borda);
+  background: var(--painel-2);
+  color: var(--texto);
+  font: inherit;
+  font-size: 13.5px;
+}
+
+.menu-nova input:focus {
+  outline: none;
+  border-color: var(--acento-borda);
+}
