@@ -1,0 +1,193 @@
+/*
+ * As plumagens do Frederico. Cada tema é uma mutação de calopsita e define
+ * dois grupos de cor:
+ *   - a interface: fundo, painéis, texto, acento (botões, destaque);
+ *   - a ave (--ave-*): o desenho da calopsita no logo e no seletor.
+ *
+ * --acento é a cor que PREENCHE (botão de play); --acento-texto é a que
+ * aparece COMO TEXTO sobre o fundo. Nos temas claros elas são diferentes,
+ * senão o destaque fica ilegível no branco.
+ *
+ * O padrão é a albina: o Frederico de verdade.
+ */
+
+:root,
+[data-tema="albina"] {
+  color-scheme: light;
+  --fundo: #f7f5f3;
+  --painel: #ffffff;
+  --painel-2: #f4f1ee;
+  --painel-3: #e9e4e0;
+  --borda: #e5dfda;
+  --borda-forte: #cfc6bf;
+  --texto: #231e1d;
+  --texto-2: #5a5250;
+  --texto-3: #7d7470;
+
+  /* o rubi do olho da albina */
+  --acento: #c22d4a;
+  --acento-texto: #ad2640;
+  --sobre-acento: #ffffff;
+  --acento-fraco: rgb(194 45 74 / 0.08);
+  --acento-borda: rgb(194 45 74 / 0.35);
+  --acento-2-fraco: rgb(240 170 176 / 0.22);
+
+  --ok: #1d7f4b;
+  --ok-fraco: rgb(29 127 75 / 0.16);
+  --perigo: #c42727;
+  --perigo-fraco: rgb(196 39 39 / 0.1);
+  --aviso: #a8530f;
+  --sombra: 0 10px 30px rgb(70 40 40 / 0.12);
+
+  --ave-corpo: #ffffff;
+  --ave-borda: #d6ccc5;
+  --ave-crista: #ece2d6;
+  --ave-bochecha: #f8dcdc;
+  --ave-olho: #d12f4f;
+  --ave-visor: #3a2f31;
+  --ave-bico: #f3c6bd;
+}
+
+[data-tema="lutino"] {
+  color-scheme: light;
+  --fundo: #fbf6e9;
+  --painel: #fffdf6;
+  --painel-2: #f9f1db;
+  --painel-3: #f1e5c3;
+  --borda: #ecdfbb;
+  --borda-forte: #dbc893;
+  --texto: #2b2416;
+  --texto-2: #5c5237;
+  --texto-3: #7e7253;
+
+  /* o amarelo da lutino; o texto usa um dourado escuro pra ler no claro */
+  --acento: #f0b51d;
+  --acento-texto: #885a00;
+  --sobre-acento: #2b1f00;
+  --acento-fraco: rgb(240 181 29 / 0.18);
+  --acento-borda: rgb(200 145 10 / 0.45);
+  --acento-2-fraco: rgb(239 125 62 / 0.16);
+
+  --ok: #217a48;
+  --ok-fraco: rgb(33 122 72 / 0.16);
+  --perigo: #c42727;
+  --perigo-fraco: rgb(196 39 39 / 0.1);
+  --aviso: #ab4b16;
+  --sombra: 0 10px 30px rgb(90 70 20 / 0.14);
+
+  --ave-corpo: #fff4d2;
+  --ave-borda: #e0ca8c;
+  --ave-crista: #f5c219;
+  --ave-bochecha: #f2853f;
+  --ave-olho: #c8324f;
+  --ave-visor: #3b3020;
+  --ave-bico: #f0d6b0;
+}
+
+[data-tema="cinza"] {
+  color-scheme: dark;
+  --fundo: #0e1014;
+  --painel: #151920;
+  --painel-2: #1b2029;
+  --painel-3: #232a35;
+  --borda: #2a313d;
+  --borda-forte: #3a4352;
+  --texto: #ece9e2;
+  --texto-2: #a3abb9;
+  --texto-3: #7d8697;
+
+  /* crista amarela e bochecha laranja da calopsita silvestre */
+  --acento: #f5c542;
+  --acento-texto: #f5c542;
+  --sobre-acento: #1d1600;
+  --acento-fraco: rgb(245 197 66 / 0.14);
+  --acento-borda: rgb(245 197 66 / 0.5);
+  --acento-2-fraco: rgb(240 138 75 / 0.16);
+
+  --ok: #6fd39a;
+  --ok-fraco: rgb(111 211 154 / 0.18);
+  --perigo: #ef6262;
+  --perigo-fraco: rgb(239 98 98 / 0.14);
+  --aviso: #f08a4b;
+  --sombra: 0 10px 30px rgb(0 0 0 / 0.35);
+
+  --ave-corpo: #a9aeb7;
+  --ave-borda: #6f7682;
+  --ave-crista: #f5c542;
+  --ave-bochecha: #f08a4b;
+  --ave-olho: #f5c542;
+  --ave-visor: #262c37;
+  --ave-bico: #e9d9b0;
+}
+
+[data-tema="canela"] {
+  color-scheme: dark;
+  --fundo: #15110e;
+  --painel: #1d1814;
+  --painel-2: #261f19;
+  --painel-3: #30271f;
+  --borda: #3a2f26;
+  --borda-forte: #4c3f33;
+  --texto: #f2eadf;
+  --texto-2: #c2b19e;
+  --texto-3: #998874;
+
+  /* corpo castanho, rosto amarelo */
+  --acento: #f3b54a;
+  --acento-texto: #f6c36a;
+  --sobre-acento: #2a1a00;
+  --acento-fraco: rgb(243 181 74 / 0.14);
+  --acento-borda: rgb(243 181 74 / 0.45);
+  --acento-2-fraco: rgb(232 131 75 / 0.18);
+
+  --ok: #7fd3a0;
+  --ok-fraco: rgb(127 211 160 / 0.18);
+  --perigo: #f07167;
+  --perigo-fraco: rgb(240 113 103 / 0.14);
+  --aviso: #ef9a62;
+  --sombra: 0 10px 30px rgb(0 0 0 / 0.4);
+
+  --ave-corpo: #b39477;
+  --ave-borda: #7e6550;
+  --ave-crista: #f3c04f;
+  --ave-bochecha: #ec8550;
+  --ave-olho: #f3c04f;
+  --ave-visor: #2c221a;
+  --ave-bico: #e9d3b4;
+}
+
+[data-tema="cara-branca"] {
+  color-scheme: dark;
+  --fundo: #0e1115;
+  --painel: #151a20;
+  --painel-2: #1b2229;
+  --painel-3: #242d36;
+  --borda: #28313b;
+  --borda-forte: #384451;
+  --texto: #eef2f6;
+  --texto-2: #a9b4bf;
+  --texto-3: #808c98;
+
+  /* sem amarelo nem laranja: cinza e o rosto branco */
+  --acento: #e8edf2;
+  --acento-texto: #d3e5f6;
+  --sobre-acento: #12161b;
+  --acento-fraco: rgb(232 237 242 / 0.1);
+  --acento-borda: rgb(232 237 242 / 0.4);
+  --acento-2-fraco: rgb(143 166 186 / 0.16);
+
+  --ok: #79d4a3;
+  --ok-fraco: rgb(121 212 163 / 0.18);
+  --perigo: #f07070;
+  --perigo-fraco: rgb(240 112 112 / 0.14);
+  --aviso: #f0b46a;
+  --sombra: 0 10px 30px rgb(0 0 0 / 0.4);
+
+  --ave-corpo: #8b939c;
+  --ave-borda: #5b636c;
+  --ave-crista: #b6bdc5;
+  --ave-bochecha: #f4f6f8;
+  --ave-olho: #ffffff;
+  --ave-visor: #1d2329;
+  --ave-bico: #c9ccd0;
+}

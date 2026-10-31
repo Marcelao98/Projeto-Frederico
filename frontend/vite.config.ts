@@ -6,7 +6,7 @@ import { defineConfig } from "vite";
 // O acervo (musicas.json + vocabulario.json) mora no Bardo, em
 // modules/bardo/dataset, e é a mesma fonte que o backend Python vai usar.
 // O painel lê direto de lá: nada de cópia pra ficar dessincronizada.
-const dataset = fileURLToPath(new URL("../modules/bardo/dataset", import.meta.url));
+const dataset = fileURLToPath(new URL("../backend/modules/bardo/dataset", import.meta.url));
 
 export default defineConfig({
   plugins: [react()],

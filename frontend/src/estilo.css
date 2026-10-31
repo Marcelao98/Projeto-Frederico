@@ -1,38 +1,13 @@
 /*
- * Freddy: cores do Frederico (crista amarela, bochecha laranja, corpo cinza)
- * sobre uma mesa escura. Tudo sai dos tokens do :root.
+ * Freddy: o visual é o do Frederico, uma calopsita. As cores vêm de
+ * temas.css (uma plumagem por tema); aqui só o que não muda entre eles.
  */
 
 :root {
-  --fundo: #0e1014;
-  --painel: #151920;
-  --painel-2: #1b2029;
-  --painel-3: #232a35;
-  --borda: #2a313d;
-  --borda-forte: #3a4352;
-  --texto: #ece9e2;
-  --texto-2: #a3abb9;
-  --texto-3: #6f7889;
-
-  --crista: #f5c542;
-  --crista-fraca: rgb(245 197 66 / 0.14);
-  --bochecha: #f08a4b;
-  --bochecha-fraca: rgb(240 138 75 / 0.16);
-  --ok: #6fd39a;
-  --perigo: #ef6262;
-
-  --corpo: #c9ccd3;
-  --corpo-borda: #8d93a0;
-  --visor: #262c37;
-  --bico: #e9d9b0;
-
   --raio: 12px;
   --raio-p: 8px;
-  --sombra: 0 10px 30px rgb(0 0 0 / 0.35);
   --fonte: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --mono: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
-
-  color-scheme: dark;
 }
 
 * {
@@ -72,7 +47,7 @@ button:disabled {
 }
 
 :focus-visible {
-  outline: 2px solid var(--crista);
+  outline: 2px solid var(--acento-texto);
   outline-offset: 2px;
 }
 
@@ -152,6 +127,61 @@ code {
   font-size: 12.5px;
 }
 
+.marca-ave {
+  display: grid;
+  border-radius: 50%;
+  transition: transform 0.15s;
+}
+
+.marca-ave:hover {
+  transform: rotate(-8deg) scale(1.06);
+}
+
+.plumagens {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 4px;
+}
+
+.plumagens-grade {
+  display: flex;
+  gap: 6px;
+}
+
+.plumagem {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.plumagem:hover {
+  transform: translateY(-2px);
+}
+
+.plumagem.ativa {
+  border-color: var(--acento);
+}
+
+.plumagem-ave {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--painel-2);
+  border: 1px solid var(--borda);
+}
+
+.plumagem-nome {
+  font-size: 12.5px;
+  color: var(--texto-2);
+}
+
 .navegacao {
   display: flex;
   flex-direction: column;
@@ -175,8 +205,8 @@ code {
 }
 
 .item-nav.ativo {
-  background: var(--crista-fraca);
-  color: var(--crista);
+  background: var(--acento-fraco);
+  color: var(--acento-texto);
 }
 
 .item-nav-nome {
@@ -240,7 +270,7 @@ code {
   height: 8px;
   border-radius: 50%;
   background: var(--ok);
-  box-shadow: 0 0 0 3px rgb(111 211 154 / 0.18);
+  box-shadow: 0 0 0 3px var(--ok-fraco);
 }
 
 .doca-video {
@@ -313,7 +343,7 @@ code {
 
 .lista-atalhos dt {
   font-family: var(--mono);
-  color: var(--crista);
+  color: var(--acento-texto);
 }
 
 .lista-atalhos dd {
@@ -371,9 +401,9 @@ code {
 }
 
 .botao.destaque {
-  background: var(--crista);
-  border-color: var(--crista);
-  color: #1d1600;
+  background: var(--acento);
+  border-color: var(--acento);
+  color: var(--sobre-acento);
   font-weight: 600;
 }
 
@@ -383,7 +413,7 @@ code {
 }
 
 .botao-texto:hover {
-  color: var(--crista);
+  color: var(--acento-texto);
 }
 
 .grupo-botoes {
@@ -412,16 +442,16 @@ code {
 }
 
 .botao-icone.ligado {
-  color: var(--crista);
+  color: var(--acento-texto);
 }
 
 .botao-icone.destaque {
-  color: var(--crista);
+  color: var(--acento-texto);
 }
 
 .botao-icone.perigo {
   color: var(--perigo);
-  background: rgb(239 98 98 / 0.14);
+  background: var(--perigo-fraco);
 }
 
 .botao-icone.fantasma {
@@ -448,9 +478,9 @@ code {
 }
 
 .chip.ligado {
-  background: var(--crista-fraca);
-  border-color: rgb(245 197 66 / 0.5);
-  color: var(--crista);
+  background: var(--acento-fraco);
+  border-color: var(--acento-borda);
+  color: var(--acento-texto);
 }
 
 .chip.pequeno {
@@ -498,7 +528,7 @@ code {
 }
 
 .cartao-musica.ativo .cartao-titulo {
-  color: var(--crista);
+  color: var(--acento-texto);
 }
 
 .cartao-capa {
@@ -628,8 +658,8 @@ code {
 }
 
 .mensagem.voce .balao {
-  background: var(--crista-fraca);
-  border-color: rgb(245 197 66 / 0.28);
+  background: var(--acento-fraco);
+  border-color: var(--acento-borda);
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 6px;
 }
@@ -640,7 +670,7 @@ code {
 }
 
 .balao-texto strong {
-  color: var(--crista);
+  color: var(--acento-texto);
   font-weight: 650;
 }
 
@@ -749,11 +779,11 @@ code {
 
 .exemplo:hover {
   color: var(--texto);
-  border-color: rgb(245 197 66 / 0.45);
+  border-color: var(--acento-borda);
 }
 
 .exemplo svg {
-  color: var(--crista);
+  color: var(--acento-texto);
   flex-shrink: 0;
 }
 
@@ -797,8 +827,8 @@ code {
 }
 
 .campo-chat:focus-within {
-  border-color: rgb(245 197 66 / 0.6);
-  box-shadow: 0 0 0 4px var(--crista-fraca);
+  border-color: var(--acento-borda);
+  box-shadow: 0 0 0 4px var(--acento-fraco);
 }
 
 .campo-chat input {
@@ -821,8 +851,8 @@ code {
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background: var(--crista);
-  color: #1d1600;
+  background: var(--acento);
+  color: var(--sobre-acento);
 }
 
 .chat-rodape {
@@ -846,7 +876,7 @@ code {
 }
 
 .previa.aviso {
-  color: var(--bochecha);
+  color: var(--aviso);
 }
 
 .atalhos {
@@ -906,7 +936,7 @@ code {
 }
 
 .campo-busca:focus-within {
-  border-color: rgb(245 197 66 / 0.6);
+  border-color: var(--acento-borda);
 }
 
 .campo-busca input {
@@ -977,8 +1007,8 @@ code {
   padding: 10px;
   margin: 0 -4px;
   border-radius: var(--raio);
-  background: linear-gradient(135deg, var(--crista-fraca), var(--bochecha-fraca));
-  border: 1px solid rgb(245 197 66 / 0.18);
+  background: linear-gradient(135deg, var(--acento-fraco), var(--acento-2-fraco));
+  border: 1px solid var(--acento-borda);
 }
 
 .tocando-agora .cartao-musica:hover {
@@ -990,8 +1020,8 @@ code {
 }
 
 .selo:where(.tocando-agora .selo) {
-  background: var(--crista-fraca);
-  color: var(--crista);
+  background: var(--acento-fraco);
+  color: var(--acento-texto);
   text-transform: none;
   letter-spacing: 0;
 }
@@ -1005,7 +1035,7 @@ code {
 }
 
 .lista-fila li.alvo {
-  border-top-color: var(--crista);
+  border-top-color: var(--acento);
 }
 
 .lista-fila li.arrastando {
@@ -1056,7 +1086,7 @@ code {
 }
 
 .salvar-playlist input:focus {
-  border-color: rgb(245 197 66 / 0.6);
+  border-color: var(--acento-borda);
 }
 
 .salvas {
@@ -1143,7 +1173,7 @@ code {
 }
 
 .novidade svg {
-  color: var(--crista);
+  color: var(--acento-texto);
 }
 
 .novidade h3 {
@@ -1223,8 +1253,8 @@ code {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: var(--crista);
-  color: #1d1600;
+  background: var(--acento);
+  color: var(--sobre-acento);
   transition: transform 0.1s;
 }
 
@@ -1280,13 +1310,13 @@ code {
 .trilho::-webkit-slider-runnable-track {
   height: 4px;
   border-radius: 99px;
-  background: linear-gradient(to right, var(--crista) var(--pct), var(--painel-3) var(--pct));
+  background: linear-gradient(to right, var(--acento) var(--pct), var(--painel-3) var(--pct));
 }
 
 .trilho::-moz-range-track {
   height: 4px;
   border-radius: 99px;
-  background: linear-gradient(to right, var(--crista) var(--pct), var(--painel-3) var(--pct));
+  background: linear-gradient(to right, var(--acento) var(--pct), var(--painel-3) var(--pct));
 }
 
 .trilho::-webkit-slider-thumb {
@@ -1351,6 +1381,7 @@ code {
 
   .marca-sub,
   .saidas,
+  .plumagens,
   .atalhos-teclado,
   .lista-atalhos,
   .item-nav-nome,
@@ -1358,7 +1389,62 @@ code {
     display: none;
   }
 
-  .navegacao {
+  .marca-ave {
+  display: grid;
+  border-radius: 50%;
+  transition: transform 0.15s;
+}
+
+.marca-ave:hover {
+  transform: rotate(-8deg) scale(1.06);
+}
+
+.plumagens {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 4px;
+}
+
+.plumagens-grade {
+  display: flex;
+  gap: 6px;
+}
+
+.plumagem {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.plumagem:hover {
+  transform: translateY(-2px);
+}
+
+.plumagem.ativa {
+  border-color: var(--acento);
+}
+
+.plumagem-ave {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--painel-2);
+  border: 1px solid var(--borda);
+}
+
+.plumagem-nome {
+  font-size: 12.5px;
+  color: var(--texto-2);
+}
+
+.navegacao {
     flex-direction: row;
     margin-left: auto;
   }

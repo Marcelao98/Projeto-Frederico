@@ -6,7 +6,12 @@ import { MotorLocal } from "./motor/motorLocal";
 import { ReprodutorYoutube } from "./motor/reprodutorYoutube";
 import { falaDoEvento } from "./modos/chat/conversa";
 import { registrar } from "./modos/chat/historico";
+import { aplicarTema, temaAtual } from "./dados/temas";
+import "./temas.css";
 import "./estilo.css";
+
+aplicarTema(temaAtual.ler());
+temaAtual.inscrever(() => aplicarTema(temaAtual.ler()));
 
 // Hoje o som sai do navegador (MotorLocal + YouTube). Quando o backend
 // existir, é só trocar esta linha por um MotorRemoto: o resto não muda.

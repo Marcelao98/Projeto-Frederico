@@ -10,10 +10,10 @@ um dos robozinhos menores que a Natty comanda, o que cuida do som.
 ## De onde veio
 
 O código foi roubado, com carinho e com histórico, do **Bardo**, o módulo de
-música da Natty (`modules/bardo/`). Ele já sabe:
+música da Natty (`backend/modules/bardo/`). Ele já sabe:
 
 - tocar link do YouTube ou buscar por tema no dataset (~585 faixas com tags,
-  em `modules/bardo/dataset/`)
+  em `backend/modules/bardo/dataset/`)
 - busca livre no YouTube com aprendizado ("era essa? me diz uns temas")
 - fila por servidor, repetir, volume, pausa, pular e reconexão automática
 
@@ -42,22 +42,33 @@ toca e mistura som, e o Discord é só uma das saídas:
 Por que local: bot de música público na nuvem cai (termos do YouTube e
 bloqueio de IP de datacenter). No PC de cada um, é uso pessoal pra própria mesa.
 
-## Painel (frontend)
-
-Já existe: `web/` (React + TypeScript). Roda sozinho no navegador, com modo
-**Chat** (pedidos em português, como pra Natty) e modo **Playlist** (monta a
-fila na mão e salva). Arquitetura e como acrescentar modos em
-[`web/README.md`](web/README.md).
+## Como o repositório está dividido
 
 ```
-cd web && npm install && npm run dev
+frontend/   o painel: React + TypeScript, empacotado como app desktop (Tauri)
+backend/    o som: hoje o Bardo (Python, Discord), com o acervo de faixas
+```
+
+- **Frontend** ([`frontend/README.md`](frontend/README.md)): modo **Chat**
+  (pedidos em português, como pra Natty) e modo **Playlist** (monta a fila
+  e salva), com cinco plumagens de calopsita como tema. Por enquanto toca
+  sozinho, pelo player do YouTube.
+- **Backend** ([`backend/README.md`](backend/README.md)): o Bardo e o acervo
+  (`backend/modules/bardo/dataset/`). O frontend lê esse mesmo acervo.
+
+Rodar o app:
+
+```
+cd frontend
+npm install
+npm run app
 ```
 
 ## Testes
 
 ```
-python -m unittest discover -s modules/bardo -t .
-cd web && npm test
+cd backend && python -m unittest discover -s modules/bardo -t .
+cd frontend && npm test
 ```
 
 Sem rede nem Discord de verdade (dublês).

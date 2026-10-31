@@ -4,6 +4,7 @@ import { Calopsita } from "./componentes/Calopsita";
 import { Icone } from "./componentes/Icone";
 import { acervoLocal } from "./dados/acervo";
 import { modoAtual, videoAberto } from "./dados/preferencias";
+import { TEMAS, proximoTema, temaAtual } from "./dados/temas";
 import { useArmazem } from "./dados/useArmazem";
 import { useEstadoDoMotor, useMotor } from "./motor/contexto";
 import { MODOS } from "./modos/registro";
@@ -17,6 +18,7 @@ export function App({ palcoDoVideo }: { palcoDoVideo: HTMLElement }) {
   const { tocando, situacao } = useEstadoDoMotor();
   const idDoModo = useArmazem(modoAtual);
   const comVideo = useArmazem(videoAberto);
+  const tema = useArmazem(temaAtual);
   const doca = useRef<HTMLDivElement>(null);
   const modo = MODOS.find((m) => m.id === idDoModo) ?? MODOS[0];
 
@@ -59,7 +61,14 @@ export function App({ palcoDoVideo }: { palcoDoVideo: HTMLElement }) {
     <div className="app">
       <aside className="lateral">
         <div className="marca">
-          <Calopsita tamanho={36} />
+          <button
+            className="marca-ave"
+            onClick={() => temaAtual.escrever(proximoTema(tema))}
+            title="Trocar a plumagem"
+            aria-label="Trocar a plumagem"
+          >
+            <Calopsita tamanho={36} />
+          </button>
           <div>
             <div className="marca-nome">Freddy</div>
             <div className="marca-sub">o som da mesa</div>
@@ -85,8 +94,8 @@ export function App({ palcoDoVideo }: { palcoDoVideo: HTMLElement }) {
 
         <div className="saidas">
           <div className="rotulo">Saída do som</div>
-          <div className="saida ativa" title="Toca aqui, no navegador">
-            <Icone nome="volume" tamanho={16} /> Este navegador <span className="luz" />
+          <div className="saida ativa" title="Toca aqui mesmo, neste computador">
+            <Icone nome="volume" tamanho={16} /> Este computador <span className="luz" />
           </div>
           <div className="saida" title="Chega com o backend do Freddy">
             <Icone nome="mic" tamanho={16} /> Mic virtual <span className="selo">backend</span>
@@ -94,6 +103,28 @@ export function App({ palcoDoVideo }: { palcoDoVideo: HTMLElement }) {
           <div className="saida" title="Chega com o backend do Freddy">
             <Icone nome="discord" tamanho={16} /> Discord <span className="selo">backend</span>
           </div>
+        </div>
+
+        <div className="plumagens">
+          <div className="rotulo">Plumagem</div>
+          <div className="plumagens-grade" role="radiogroup" aria-label="Plumagem">
+            {TEMAS.map((t) => (
+              <button
+                key={t.id}
+                role="radio"
+                aria-checked={t.id === tema}
+                className={`plumagem ${t.id === tema ? "ativa" : ""}`}
+                onClick={() => temaAtual.escrever(t.id)}
+                title={`${t.nome}: ${t.descricao}`}
+              >
+                {/* O data-tema aqui pinta só esta ave com as cores do tema dela. */}
+                <span data-tema={t.id} className="plumagem-ave">
+                  <Calopsita tamanho={30} />
+                </span>
+              </button>
+            ))}
+          </div>
+          <div className="plumagem-nome">{TEMAS.find((t) => t.id === tema)?.nome}</div>
         </div>
 
         <div className={`doca-video ${comVideo ? "" : "fechada"} ${tocando ? "" : "sem-video"}`}>

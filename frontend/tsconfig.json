@@ -15,7 +15,7 @@
     "skipLibCheck": true,
     "types": ["youtube", "vite/client", "node"],
     "baseUrl": ".",
-    "paths": { "@dataset/*": ["../modules/bardo/dataset/*"] }
+    "paths": { "@dataset/*": ["../backend/modules/bardo/dataset/*"] }
   },
   "include": ["src", "vite.config.ts"]
 }

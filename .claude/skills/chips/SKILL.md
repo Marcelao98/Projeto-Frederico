@@ -5,7 +5,8 @@ description: Adiciona uma franquia (playlist do YouTube) ao dataset de músicas 
 
 # chips — nova franquia no dataset do Bardo
 
-Pipeline em quatro passos. Uma franquia = um arquivo de staging = um
+Pipeline em quatro passos. **Todos os comandos rodam de dentro de `backend/`**
+(`cd backend`); os caminhos abaixo são relativos a ela. Uma franquia = um arquivo de staging = um
 pipeline; não misturar franquias no mesmo staging. `staging/` está no
 `.gitignore` — só o `modules/bardo/dataset/musicas.json` vai pro commit.
 
