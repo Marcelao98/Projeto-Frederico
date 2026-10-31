@@ -13,7 +13,7 @@ Atualizado em 31/10/2026.
 | **Cérebro musical** (Bardo: entender pedidos, buscar no acervo, fila, aprender faixa nova) | ✅ pronto, em uso na Natty |
 | **Acervo** (607 faixas, 9 franquias, 27 climas) | ✅ pronto, curadoria contínua |
 | **Painel** (modo Chat, modo Playlist, 5 plumagens) | ✅ pronto, toca sozinho pelo YouTube |
-| **App desktop** (Tauri) com instaladores no GitHub (Windows, Linux, Mac) | ✅ pronto (v0.1.0) |
+| **App desktop** (Tauri) com instaladores no GitHub (Windows, Linux, Mac) | ✅ pronto (v0.1.1), testado no Fedora |
 | **Backend próprio** (o Freddy sem a Natty) | ⬜ não começou |
 | **Bot do Discord próprio do Freddy** | ⬜ hoje o som no Discord só existe pela Natty |
 | **Mixer, microfone virtual, soundboard** | ⬜ só planejado (telas "em breve" no painel) |
@@ -96,8 +96,9 @@ Um Freddy ligado num PC de casa, atendendo todos os mestres.
 ## Sempre em andamento
 - **Acervo:** classificar as 37 faixas "não classificado", trilhas de taverna
   de verdade, completar Dark Souls, franquias novas (skill `chips`).
-- **Plumagens:** arte das outras quatro (Lutino, Cinza, Canela, Cara-branca)
-  com o mesmo prompt do Frederico; recorte com `frontend/scripts/recortar_ave.py`.
+- **Plumagens:** por enquanto todas usam a arte do Frederico (pedido do
+  Marcelo). Arte própria das outras quatro é opcional: mesmo prompt do
+  Frederico no Gemini, recorte com `frontend/scripts/recortar_ave.py`.
 - **Pendências herdadas do Bardo:** loop da fila inteira, remover item pelo
   chat, colar playlist do YouTube, sair da call quando ficar vazia, erros mais
   claros (vídeo privado, idade), títulos com "volta"/"próxima" virando comando.

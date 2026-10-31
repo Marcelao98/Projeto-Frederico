@@ -19,9 +19,8 @@ ocupando quase todo o quadro. Aparece pequena (30px no seletor e no chat,
 36px no logo) e grande (88px nas boas-vindas), então precisa ser legível
 pequena.
 
-Tema sem arquivo aqui usa o desenho em SVG com as cores do tema
-(`src/componentes/Calopsita.tsx`). Dá pra pôr só algumas e o resto continua
-no desenho.
+Tema sem arquivo aqui usa a arte do Frederico (`frederico.png`). Só sem
+nenhuma imagem cai no desenho em SVG (`src/componentes/Calopsita.tsx`).
 
 O ícone do app sai do Frederico: depois de trocar, rodar de dentro de `frontend/`:
 

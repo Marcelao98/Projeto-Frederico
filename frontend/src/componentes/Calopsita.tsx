@@ -2,12 +2,12 @@
  * O Frederico. Cada plumagem pode ter a sua ilustração em public/aves/:
  *   <tema>.png        corpo inteiro, pros lugares grandes (boas-vindas)
  *   <tema>-rosto.png  só a cabeça, pros pequenos (logo, seletor, chat)
- * Falta o rosto: usa o corpo inteiro. Falta os dois: desenha a calopsita
- * robô em SVG com as cores do tema.
+ * Falta o rosto: usa o corpo inteiro. Tema sem arte própria usa a do
+ * Frederico. Sem nenhuma imagem: desenha a calopsita robô em SVG.
  */
 
 import { useState } from "react";
-import { temaAtual } from "../dados/temas";
+import { TEMA_PADRAO, temaAtual } from "../dados/temas";
 import { useArmazem } from "../dados/useArmazem";
 
 /** Abaixo disso o corpo inteiro (com a cauda comprida) vira um risquinho. */
@@ -21,7 +21,11 @@ export function Calopsita({ tamanho = 40, tema }: { tamanho?: number; tema?: str
   const plumagem = tema ?? atual;
   const [, redesenhar] = useState(0);
 
-  const candidatos = tamanho < TAMANHO_DO_ROSTO ? [`${plumagem}-rosto`, plumagem] : [plumagem];
+  // A arte do tema; sem ela, a do Frederico (o padrão) em todos os temas.
+  const pequena = tamanho < TAMANHO_DO_ROSTO;
+  const daPlumagem = pequena ? [`${plumagem}-rosto`, plumagem] : [plumagem];
+  const doFrederico = pequena ? [`${TEMA_PADRAO}-rosto`, TEMA_PADRAO] : [TEMA_PADRAO];
+  const candidatos = [...new Set([...daPlumagem, ...doFrederico])];
   const arquivo = candidatos.find((c) => !semArquivo.has(c));
 
   if (arquivo) {
