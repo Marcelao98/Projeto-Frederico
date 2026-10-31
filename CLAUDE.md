@@ -13,7 +13,8 @@ atual e as decisões já tomadas.
 
 ```
 frontend/   painel React + TypeScript (Vite), empacotado em app desktop com Tauri 2
-backend/    Python: hoje é o Bardo (discord.py + yt-dlp + FFmpeg) e o acervo
+backend/    Python: o Freddy (backend/freddy: FastAPI + WebSocket + áudio),
+            o Bardo (discord.py + yt-dlp + FFmpeg) e o acervo
 .github/workflows/app.yml   testa, compila Windows/Linux/Mac e publica a Release
 ROADMAP.md  fases e decisões
 ```
@@ -29,13 +30,30 @@ Detalhes de cada lado em `frontend/README.md` e `backend/README.md`.
 - **Paridade TS ↔ Python:** `frontend/src/nucleo/pedido.ts` e `busca.ts` são
   portas fiéis de `interpretar_pedido` e `buscar_por_tags` do
   `backend/modules/bardo/service.py`. Mudou uma regra num, muda no outro, e
-  os testes dos dois lados. Quando o backend existir, ele vira a fonte única.
+  os testes dos dois lados. O `freddy` importa as regras do Bardo (não copia).
 - **O contrato `Motor`** (`frontend/src/motor/tipos.ts`) é a costura com o
   backend: as telas só chamam `motor.executar({ tipo: ... })` e leem o
-  estado. Hoje quem implementa é o `MotorLocal` (toca pelo player do
-  YouTube no navegador). A Fase 1 cria um `MotorRemoto` (WebSocket) com a
-  mesma interface; a troca é no `frontend/src/main.tsx`. Comando novo =
-  entrada em `Comandos` + implementação no motor.
+  estado. Dois motores no painel: `MotorLocal` (toca pelo player do YouTube
+  no navegador) e `MotorRemoto` (WebSocket pro `python -m freddy`); o
+  `frontend/src/main.tsx` escolhe (Freddy ligado = remoto). No backend, o
+  `backend/freddy/motor/motor.py` é a porta fiel do `MotorLocal`.
+  **Comando novo** = entrada em `Comandos` + os DOIS motores + validação em
+  `backend/freddy/api/protocolo.py` + um caso em
+  `backend/freddy/motor/casos_contrato.json` (rodado pelos testes dos dois
+  lados, alias `@contrato` no frontend).
+- **Backend do Freddy** (`backend/freddy/`): `motor/` é lógica pura (sem rede
+  nem áudio, testa com `ReprodutorFalso`); `api/` só traduz HTTP/WebSocket ↔
+  motor; `audio/` é yt-dlp → FFmpeg → `Mesa` → saída. A Mesa entrega quadros
+  de 20 ms, 48 kHz, estéreo, 16 bits: o formato do Discord (Fase 2) e a base
+  do mixer (Fase 4). Avisos do áudio pro motor passam por `agendar` (o loop
+  do servidor): o motor roda numa thread só.
+- **Porta do Freddy: 47824**, só em `127.0.0.1`, e o `/ws` só aceita as
+  origens de `backend/freddy/config.py` (o painel). Não abrir pra rede sem
+  login (Fase 3).
+- **Dados do mestre** (playlists, faixas aprendidas pelo "era essa?") ficam na
+  pasta do usuário (`~/.local/share/Freddy`, `%APPDATA%\Freddy`), nunca no
+  repositório. Aprendidas vão pro acervo oficial pelo
+  `backend/scripts/freddy_promover_aprendidas.py`.
 - **Modos do painel** moram em `frontend/src/modos/<nome>/` e entram pela
   lista em `frontend/src/modos/registro.tsx`.
 - **No backend, a regra da Natty vale:** `service.py` é lógica pura, sem
@@ -56,9 +74,13 @@ Detalhes de cada lado em `frontend/README.md` e `backend/README.md`.
 # painel no navegador, recarrega sozinho (o jeito normal de testar)
 cd frontend && npm install && npm run dev        # http://localhost:5173
 
-# testes (o GitHub roda os dois antes de compilar)
+# o backend (Fedora: sudo dnf install ffmpeg-free portaudio)
+cd backend && pip install -r requirements.txt && python -m freddy   # --sem-som finge que toca
+
+# testes (o GitHub roda todos antes de compilar, mais o ponta a ponta)
 cd frontend && npm test && npm run build
 cd backend && python -m unittest discover -s modules/bardo -t .
+cd backend && python -m unittest discover -s freddy -t .
 
 # app desktop local (precisa de Rust; raramente necessário)
 cd frontend && npm run app

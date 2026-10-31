@@ -1,6 +1,6 @@
 {
   "name": "freddy-web",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Painel do Freddy: chat e playlist do som da mesa",
   "scripts": {
     "dev": "vite",

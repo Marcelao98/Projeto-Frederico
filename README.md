@@ -20,8 +20,9 @@ música da Natty (`backend/modules/bardo/`). Ele já sabe:
 Os commits do Bardo vieram junto (extraídos da natty-bot com
 `git filter-repo`), então `git log` conta a história desde o começo.
 
-**Hoje** o código ainda é o Bardo como ele é na Natty: um Cog de discord.py,
-sem bot próprio. Ele não roda sozinho ainda.
+**Hoje** o Freddy já roda sozinho no PC (`python -m freddy`, em
+`backend/freddy/`): o painel manda nele, ele toca na caixa de som. O bot do
+Discord ainda é o Bardo dentro da Natty; o do Freddy é a Fase 2.
 
 ## Pra onde vai
 
@@ -53,9 +54,10 @@ backend/    o som: hoje o Bardo (Python, Discord), com o acervo de faixas
 
 - **Frontend** ([`frontend/README.md`](frontend/README.md)): modo **Chat**
   (pedidos em português, como pra Natty) e modo **Playlist** (monta a fila
-  e salva), com cinco plumagens de calopsita como tema. Por enquanto toca
-  sozinho, pelo player do YouTube.
-- **Backend** ([`backend/README.md`](backend/README.md)): o Bardo e o acervo
+  e salva), com cinco plumagens de calopsita como tema. Toca pelo Freddy
+  (backend) se ele estiver ligado; senão, pelo player do YouTube.
+- **Backend** ([`backend/README.md`](backend/README.md)): o Freddy
+  (`backend/freddy/`: servidor local, fila, som), o Bardo e o acervo
   (`backend/modules/bardo/dataset/`). O frontend lê esse mesmo acervo.
 
 **Pra usar:** baixe o app pronto na página **Releases** do GitHub (Windows,
@@ -66,6 +68,7 @@ Linux e Mac), sem compilar nada. Pra desenvolver: `cd frontend && npm install
 
 ```
 cd backend && python -m unittest discover -s modules/bardo -t .
+cd backend && python -m unittest discover -s freddy -t .
 cd frontend && npm test
 ```
 

@@ -14,7 +14,7 @@ Atualizado em 31/10/2026.
 | **Acervo** (607 faixas, 9 franquias, 27 climas) | ✅ pronto, curadoria contínua |
 | **Painel** (modo Chat, modo Playlist, 5 plumagens) | ✅ pronto, toca sozinho pelo YouTube |
 | **App desktop** (Tauri) com instaladores no GitHub (Windows, Linux, Mac) | ✅ pronto (v0.1.1), testado no Fedora |
-| **Backend próprio** (o Freddy sem a Natty) | ⬜ não começou |
+| **Backend próprio** (o Freddy sem a Natty) | 🟡 pronto e testado aqui (v0.2.0); falta o teste com som de verdade no Fedora |
 | **Bot do Discord próprio do Freddy** | ⬜ hoje o som no Discord só existe pela Natty |
 | **Mixer, microfone virtual, soundboard** | ⬜ só planejado (telas "em breve" no painel) |
 
@@ -39,17 +39,25 @@ Atualizado em 31/10/2026.
   Arte do Frederico gerada a partir das fotos dele.
 - App Tauri e instaladores automáticos no GitHub.
 
-### Fase 1: Backend próprio (o próximo passo)
-O Freddy vira um programa Python que roda sozinho, sem a Natty.
-- Servidor local (FastAPI + WebSocket) com o mesmo contrato do `Motor` que o
-  painel já usa. No painel, troca o `MotorLocal` pelo `MotorRemoto`: uma linha.
-- O acervo e as playlists salvas passam a morar no backend (um lugar só).
-- Busca livre no YouTube e o "era essa?" que ensina faixa nova, agora no painel.
-- O `yt-dlp` resolve o áudio: acaba o problema de vídeo bloqueado no player embutido.
+### Fase 1: Backend próprio 🟡 (falta o teste com som no Fedora)
+O Freddy vira um programa Python que roda sozinho, sem a Natty: `python -m freddy`.
+- ✅ Servidor local (FastAPI + WebSocket, porta 47824) com o mesmo contrato do
+  `Motor`. O painel acha o Freddy sozinho e usa o `MotorRemoto`; desligado,
+  volta pro `MotorLocal` (navegador). Os casos do contrato rodam nos dois
+  motores e, no GitHub, pela rede.
+- ✅ O som sai do backend: yt-dlp → FFmpeg → Mesa → caixa de som
+  (sounddevice). Formato de 20 ms/48 kHz/estéreo, o mesmo do Discord: a
+  Fase 2 é só mais uma saída. Erros do YouTube em português.
+- ✅ Acervo e playlists moram no backend (pasta do mestre). Na primeira vez,
+  o painel oferece levar as playlists do navegador.
+- ✅ Busca livre no YouTube e o "era essa?" no chat do painel (com botões);
+  a faixa vai pro `aprendidas.json` e um script leva pro acervo oficial.
+- ✅ Estudo do Kenku FM pro Discord: `backend/docs/discord.md`.
+- ⬜ Marcelo testar no Fedora com som de verdade (e um mestre no Windows).
 - **Pronto quando:** o painel controla uma fila que mora no backend, com o app aberto ou no navegador.
 
 ### Fase 2: Bot do Discord do Freddy
-O som chega na call sem a Natty.
+O som chega na call sem a Natty. Plano em `backend/docs/discord.md`.
 - Bot próprio (o Cog do Bardo vira o bot do Freddy), tocando pelo backend.
 - O painel escolhe a saída: este computador ou o Discord (servidor e canal).
 - Pedidos digitados no Discord continuam funcionando (`@Freddy toca...`).
@@ -106,6 +114,11 @@ Um Freddy ligado num PC de casa, atendendo todos os mestres.
 ## Decisões tomadas
 - **Bot:** um Freddy compartilhado pelos mestres, rodando num PC de casa (Fase 3). (31/10/2026)
 - **Sistemas:** Linux e Windows são prioridade; Mac depois. (31/10/2026)
+- **Quem toca:** o backend toca o som ele mesmo (não o navegador), num formato
+  único que serve à caixa de som, ao Discord e ao mixer. (31/10/2026)
+- **Faixa aprendida:** vai pra um arquivo na pasta do mestre, não direto pro
+  `musicas.json`; um script promove pro acervo oficial. (31/10/2026)
+- **Sem o Freddy ligado:** o painel continua tocando sozinho pelo navegador. (31/10/2026)
 
 ## Decisões em aberto
 - **Nome:** Freddy, FredBOT ou Fredérico? (o app já se chama Freddy)

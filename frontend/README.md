@@ -1,8 +1,17 @@
 # Painel do Freddy (frontend)
 
-React + TypeScript + Vite, empacotado como **app desktop com Tauri**. Por
-enquanto toca sozinho, pelo player do YouTube embutido; o backend
-(Discord, mic virtual) entra depois sem mudar as telas.
+React + TypeScript + Vite, empacotado como **app desktop com Tauri**. Toca
+de dois jeitos, sem mudar as telas:
+
+- **Pelo Freddy** (o backend, `python -m freddy`): se ele estiver ligado, o
+  painel acha sozinho. A fila, o som, o acervo e as playlists moram nele;
+  dá pra abrir o app e o navegador ao mesmo tempo que os dois veem a mesma
+  fila. Ver `backend/README.md`.
+- **Pelo navegador**: com o Freddy desligado, toca sozinho pelo player do
+  YouTube embutido, como sempre.
+
+A linha "Este computador" na barra lateral mostra qual está em uso (clicar
+alterna). Pra forçar: `?motor=navegador` ou `?motor=freddy` na URL.
 
 ## Baixar e usar (sem compilar nada)
 
@@ -14,9 +23,8 @@ Na página **Releases** do GitHub, baixe o arquivo do seu sistema:
 
 Quem compila é o GitHub (`.github/workflows/app.yml`): a cada tag de versão
 (`v0.1.0`, `v0.2.0`...) ele roda os testes, compila os três sistemas e
-publica a Release. Pra lançar uma versão nova: suba `version` em
-`src-tauri/tauri.conf.json` e em `package.json`, faça o commit e
-`git tag v0.2.0 && git push origin v0.2.0`.
+publica a Release. Pra lançar uma versão nova, ver "Lançar versão nova do
+app" no `CLAUDE.md` da raiz.
 
 ## Rodar a partir do código (pra desenvolver)
 
@@ -81,13 +89,15 @@ src/
 │   ├── pedido.ts   interpretarPedido(): "toca X", "pula", "volume 30"...
 │   ├── busca.ts    busca booleana + vocabulário (e / ou / sem, sinônimos)
 │   └── youtube.ts  links e ids de vídeo
-├── motor/      quem toca: o contrato Motor e a implementação local
+├── motor/      quem toca: o contrato Motor e os dois motores
 │   ├── tipos.ts         Motor, EstadoMotor, Comandos, EventoMotor
 │   ├── fila.ts          a fila (imutável)
 │   ├── motorLocal.ts    Motor que roda no navegador
+│   ├── motorRemoto.ts   Motor que fala com o Freddy (WebSocket)
+│   ├── contratoCasos.ts roda os casos de backend/freddy/motor/casos_contrato.json
 │   ├── reprodutor*.ts   Reprodutor (interface) + o do YouTube
-│   └── contexto.tsx     hooks do React (useMotor, useEstadoDoMotor...)
-├── dados/      acervo (lê backend/modules/bardo/dataset), playlists, temas, preferências
+│   └── contexto.tsx     hooks do React (useMotor, useEstadoDoMotor, useConexao...)
+├── dados/      acervo, playlists, temas, preferências; freddy.ts (API do backend e a escolha do motor)
 ├── modos/      um diretório por modo + registro.tsx (a lista de modos)
 │   ├── chat/       ModoChat + conversa.ts (texto → comando → resposta)
 │   ├── playlist/   ModoPlaylist, PainelAcervo, PainelFila
@@ -100,33 +110,37 @@ direto (alias `@dataset` no `vite.config.ts`), sem cópia. A busca e o
 interpretador de pedidos são portas fiéis do `service.py`: os testes do
 `test_service.py` foram traduzidos, e conferi que TS e Python dão o mesmo
 resultado em buscas e pedidos de verdade. **Mudou uma regra num, muda no
-outro.** Quando o backend existir, ele vira a fonte única e o chat pode
-mandar o texto cru pra ele.
+outro.** Com o Freddy ligado, o acervo vem dele (`GET /acervo`), com as
+faixas que a mesa ensinou.
 
 **O contrato `Motor`** (`motor/tipos.ts`) é a costura com o backend. As telas
 só chamam `motor.executar({ tipo: "pular" })` e leem `useEstadoDoMotor()`.
-Hoje quem responde é o `MotorLocal`; depois um `MotorRemoto` (WebSocket pro
-backend Python) implementa a mesma interface, e a troca é uma linha no
-`main.tsx`.
+O `main.tsx` escolhe o `MotorLocal` ou o `MotorRemoto`. Os casos de
+`backend/freddy/motor/casos_contrato.json` rodam no `MotorLocal`, no Motor
+do Python e, no GitHub, no `MotorRemoto` falando com o backend de verdade
+(`contrato.remoto.test.ts`): os três se comportam igual.
 
 ## Como crescer
 
 - **Modo novo** (mixer, soundboard, cenas): cria `src/modos/<nome>/`, põe uma
   entrada em `modos/registro.tsx`. Navegação e atalho Alt+N saem sozinhos.
 - **Comando novo** (ex.: volume por camada): acrescenta em `Comandos` no
-  `motor/tipos.ts` e implementa no motor. O TypeScript cobra os argumentos
-  e o retorno em quem chama.
+  `motor/tipos.ts`, implementa no `MotorLocal` e no motor do backend
+  (`backend/freddy/motor/motor.py` + validação em `api/protocolo.py`), e
+  põe um caso em `casos_contrato.json`. O TypeScript cobra os argumentos e o
+  retorno em quem chama.
 - **Fonte nova** (arquivo local, Freesound): outro `Reprodutor`.
 - **Saída nova** (mic virtual, Discord): é o backend, via `MotorRemoto`.
 
 ## Limites de hoje
 
 - Busca livre no YouTube (quando o acervo não tem) e o "era essa?" que
-  ensina faixa nova precisam do backend (yt-dlp). O chat avisa e pede o link.
-- Vídeo com embed bloqueado pelo dono não toca no navegador: o Freddy avisa
-  e pula. No backend isso some, porque ele baixa o áudio direto.
-- A fila não sobrevive a recarregar a página. As playlists salvas e a
-  preferência de modo sobrevivem (ficam no `localStorage`).
+  ensina faixa nova só existem com o Freddy ligado. Sem ele, o chat pede o link.
+- Pelo navegador, vídeo com embed bloqueado pelo dono não toca: o painel
+  avisa e pula. Pelo Freddy isso some (ele pega o áudio direto).
+- Pelo navegador, a fila não sobrevive a recarregar a página (pelo Freddy,
+  sobrevive enquanto ele estiver ligado). Playlists salvas sobrevivem nos dois.
+- Pelo Freddy não tem vídeo, só a capa.
 - No app instalado, o painel é servido em `http://localhost:47823` (não no
   endereço interno do Tauri), porque o player do YouTube não toca sem uma
   origem web normal. Se outra coisa usar essa porta, o app não abre.
