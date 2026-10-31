@@ -1,16 +1,21 @@
 # Compila o app do Freddy (frontend + Tauri) e publica numa Release do GitHub.
 #
-# Dispara quando sobe uma tag de versão (v0.1.0, v0.2.0...) ou à mão, pela
-# aba Actions. Primeiro roda os testes; só compila se passarem. A versão vem
-# de frontend/src-tauri/tauri.conf.json ("version"): suba ela antes da tag.
-#
-#   git tag v0.2.0 && git push origin v0.2.0
+# Dispara quando sobe uma tag de versão (v0.1.0, v0.2.0...), à mão pela aba
+# Actions, ou a cada push no branch de desenvolvimento que mexa no app.
+# Primeiro roda os testes; só compila se passarem. A Release se chama
+# v<versão> (de frontend/src-tauri/tauri.conf.json, "version"): push na mesma
+# versão atualiza os arquivos dela; versão nova cria Release nova. Quem cria
+# a tag é o próprio GitHub, junto com a Release.
 
 name: App do Freddy
 
 on:
   push:
     tags: ["v*"]
+    # Enquanto o app vive neste branch (antes do merge na main). Depois do
+    # merge, trocar por "main".
+    branches: ["claude/busy-clarke-i0agsb"]
+    paths: ["frontend/**", "backend/**", ".github/workflows/app.yml"]
   workflow_dispatch:
 
 permissions:
