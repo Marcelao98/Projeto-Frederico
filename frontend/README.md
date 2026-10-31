@@ -4,12 +4,25 @@ React + TypeScript + Vite, empacotado como **app desktop com Tauri**. Por
 enquanto toca sozinho, pelo player do YouTube embutido; o backend
 (Discord, mic virtual) entra depois sem mudar as telas.
 
-## Rodar
+## Baixar e usar (sem compilar nada)
+
+Na página **Releases** do GitHub, baixe o arquivo do seu sistema:
+
+- **Windows:** `Freddy_..._x64-setup.exe` (ou o `.msi`)
+- **Linux:** `.AppImage` (qualquer distro) ou `.deb` (Ubuntu, Mint, Debian)
+- **Mac:** `.dmg`
+
+Quem compila é o GitHub (`.github/workflows/app.yml`): a cada tag de versão
+(`v0.1.0`, `v0.2.0`...) ele roda os testes, compila os três sistemas e
+publica a Release. Pra lançar uma versão nova: suba `version` em
+`src-tauri/tauri.conf.json` e em `package.json`, faça o commit e
+`git tag v0.2.0 && git push origin v0.2.0`.
+
+## Rodar a partir do código (pra desenvolver)
 
 Precisa de **Node 18+** e de **Rust** (https://rustup.rs). No Windows, também
-do "Desktop development with C++" do Visual Studio Build Tools (o WebView2 já
-vem no Windows 10/11). Guia oficial dos pré-requisitos:
-https://v2.tauri.app/start/prerequisites/
+do "Desktop development with C++" do Visual Studio Build Tools; no Linux, das
+bibliotecas do WebKitGTK. Guia: https://v2.tauri.app/start/prerequisites/
 
 ```bash
 cd frontend
@@ -114,8 +127,7 @@ backend Python) implementa a mesma interface, e a troca é uma linha no
   e pula. No backend isso some, porque ele baixa o áudio direto.
 - A fila não sobrevive a recarregar a página. As playlists salvas e a
   preferência de modo sobrevivem (ficam no `localStorage`).
-- No app instalado (`app:build`), o YouTube pode recusar tocar alguns
-  vídeos dentro da janela do Tauri (ele exige uma origem de site). No
-  `npm run app` (modo de desenvolvimento) e no navegador funciona. Quando o
-  som passar pro backend, isso deixa de importar.
+- No app instalado, o painel é servido em `http://localhost:47823` (não no
+  endereço interno do Tauri), porque o player do YouTube não toca sem uma
+  origem web normal. Se outra coisa usar essa porta, o app não abre.
 - Atalhos: Espaço pausa/continua, `/` vai pro chat, Alt+1…4 troca de modo.

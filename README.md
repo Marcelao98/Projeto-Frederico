@@ -56,13 +56,9 @@ backend/    o som: hoje o Bardo (Python, Discord), com o acervo de faixas
 - **Backend** ([`backend/README.md`](backend/README.md)): o Bardo e o acervo
   (`backend/modules/bardo/dataset/`). O frontend lê esse mesmo acervo.
 
-Rodar o app:
-
-```
-cd frontend
-npm install
-npm run app
-```
+**Pra usar:** baixe o app pronto na página **Releases** do GitHub (Windows,
+Linux e Mac), sem compilar nada. Pra desenvolver: `cd frontend && npm install
+&& npm run app` (precisa de Node e Rust; ver o README do frontend).
 
 ## Testes
 
