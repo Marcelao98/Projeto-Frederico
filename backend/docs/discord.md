@@ -3,8 +3,10 @@
 Estudo do [Kenku FM](https://github.com/owlbear-rodeo/kenku-fm) (v1.5.5), o
 app de som para RPG que mais se parece com o Freddy, para decidir a Fase 2.
 
-> **Licença:** o Kenku é GPL-3.0 e o Freddy é MIT. Copiamos as **ideias**,
-> não o código. Nada de colar trecho de lá aqui.
+> **Licença:** o Kenku e o Freddy são GPL-3.0, então dá pra adaptar o código
+> de lá. Arquivo que adaptar código do Kenku diz no topo de onde veio
+> ("adaptado do Kenku FM, © Owlbear Rodeo, GPL-3.0"). Como o Kenku é
+> JavaScript e o Freddy é Python, na prática o que vem é a lógica, reescrita.
 
 ## Como o Kenku fala com o Discord
 

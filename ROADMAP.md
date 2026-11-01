@@ -107,7 +107,7 @@ Um Freddy ligado num PC de casa, atendendo todos os mestres.
 - O app sobe o backend sozinho (sidecar do Tauri): um programa só pra abrir.
 - Ícone na bandeja, iniciar com o sistema, atualização automática.
 - Instaladores assinados (some o aviso "o Windows protegeu o computador").
-- Repositório público e licença revisada (hoje MIT, privado).
+- ✅ Repositório público e licença GPL-3.0 (01/11/2026).
 - Guia de instalação simples: baixar, abrir, conectar o Discord.
 
 ## Sempre em andamento
@@ -132,6 +132,11 @@ Um Freddy ligado num PC de casa, atendendo todos os mestres.
   `musicas.json`; um script promove pro acervo oficial. (31/10/2026)
 - **Sem o Freddy ligado:** o painel continua tocando sozinho pelo navegador. (31/10/2026)
 
+## Licença
+- **GPL-3.0** (01/11/2026): o Freddy é open source por natureza. Permite usar
+  código do Kenku FM (também GPL-3.0) com crédito, e quem fizer algo em cima
+  do Freddy também tem que abrir o código. Não impede ganhar dinheiro no
+  futuro (vender o app pronto, doações, suporte); só impede fechar o código.
+
 ## Decisões em aberto
 - **Nome:** Freddy, FredBOT ou Fredérico? (o app já se chama Freddy)
-- **Quando abrir o repositório** pro público.

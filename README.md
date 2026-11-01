@@ -75,5 +75,9 @@ Sem rede nem Discord de verdade (dublês).
 
 ## Licença
 
-MIT (ver `LICENSE`). Repositório privado por enquanto; a licença será
-revisada antes de abrir.
+**GPL-3.0** (ver `LICENSE`). © 2026 Marcelo.
+
+O Freddy é open source por natureza: pode usar, estudar, mudar e
+redistribuir, desde que o que você distribuir também tenha o código aberto
+sob a GPL-3.0. Partes adaptadas do [Kenku FM](https://github.com/owlbear-rodeo/kenku-fm)
+(© Owlbear Rodeo, GPL-3.0) dizem isso no topo do arquivo.
