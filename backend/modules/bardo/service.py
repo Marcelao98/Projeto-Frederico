@@ -1,4 +1,4 @@
-"""Módulo Bardo — camada de serviço.
+"""Bardo: o cérebro musical do Freddy (veio do módulo de música da Natty).
 
 Reconhece pedidos de música em linguagem natural ("natty toca <link>",
 "natty pausa", "natty volume 30") e resolve links do YouTube num stream de
@@ -106,8 +106,8 @@ class Pedido:
 def interpretar_pedido(texto: str) -> Pedido | None:
     """Traduz um pedido em linguagem natural num Pedido, ou None se não for de música.
 
-    Não verifica se o texto é dirigido à Natty — isso é com o cog, que exige
-    menção de verdade (@Natty ou o cargo). Escrever só "natty" não basta.
+    Não verifica se o texto é dirigido ao bot: isso é com quem chama (o bot
+    do Freddy exige menção de verdade, @Freddy ou o cargo dele).
     """
     link = extrair_link_youtube(texto)
     # O link sai antes das outras regras: "para" ou "volta" dentro de uma
@@ -206,7 +206,7 @@ class FilaCheia(Exception):
 class Fila:
     """A música tocando e as que esperam a vez, de um servidor.
 
-    Só guarda estado; quem toca de verdade (cog.py) chama avancar() quando
+    Só guarda estado; quem toca de verdade chama avancar() quando
     uma música acaba — ou, com `repetir` ligado, toca a mesma de novo
     (deve_repetir).
     """
@@ -492,7 +492,7 @@ def resolver_musica(url: str) -> dict:
 # ---------------------------------------------------------------------------
 # Busca livre no YouTube e aprendizado por confirmação
 #
-# Quando a busca no dataset não acha nada, o cog busca o texto direto no
+# Quando a busca no dataset não acha nada, quem chama busca o texto direto no
 # YouTube, toca, e pergunta no canal se era essa e quais temas ela tem. A
 # pergunta fica "em aberto" por servidor (uma pendência); a próxima mensagem
 # no canal responde. Confirmando, a faixa entra no dataset.
@@ -548,7 +548,7 @@ def criar_pendencia(
     `mensagem_pergunta_id` é a mensagem da Natty com a pergunta: só um REPLY a
     ela conta como resposta (ver eh_resposta_da_pendencia). Quando a pergunta
     sai junto da resposta do pedido, o id ainda não existe na hora de criar —
-    o cog completa com registrar_pergunta_da_pendencia depois de enviar.
+    quem chama completa com registrar_pergunta_da_pendencia depois de enviar.
     """
     pendencia = {
         "titulo": titulo,

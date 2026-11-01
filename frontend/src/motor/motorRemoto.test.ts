@@ -137,6 +137,15 @@ describe("MotorRemoto", () => {
     await expect(promessa).rejects.toThrow("demorou");
   });
 
+  it("o estado do Discord chega por fora do motor", () => {
+    const { motor, atual } = novo();
+    atual().abrir();
+    const recebidos: unknown[] = [];
+    motor.aoMensagem("discord", (d) => recebidos.push(d));
+    atual().mandar({ tipo: "discord", discord: { situacao: "conectado" } });
+    expect(recebidos).toEqual([{ situacao: "conectado" }]);
+  });
+
   it("fechar não religa", () => {
     const { motor, sockets, atual } = novo();
     atual().abrir();

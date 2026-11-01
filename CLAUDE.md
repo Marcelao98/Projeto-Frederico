@@ -8,8 +8,10 @@ olho preto, bico rosado). Nasceu do **Bardo**, o módulo de música da Natty
 
 **O Freddy é o áudio do Nattyverso.** A Natty não toca mais nada e não se
 mexe nela por causa de áudio: o Bardo daqui (`backend/modules/bardo/`) é do
-Freddy agora e **não** precisa ficar em sincronia com a natty-bot. O que
-sobrou de "Natty" nele (`@Natty`, o 🎙 do Echo) sai na Fase 2.
+Freddy agora e **não** precisa ficar em sincronia com a natty-bot.
+
+**Licença GPL-3.0.** Código adaptado do Kenku FM (também GPL-3.0) diz no
+topo do arquivo de onde veio.
 
 **Leia o `ROADMAP.md` antes de começar**: ele diz o que está pronto, a fase
 atual e as decisões já tomadas.
@@ -18,8 +20,8 @@ atual e as decisões já tomadas.
 
 ```
 frontend/   painel React + TypeScript (Vite), empacotado em app desktop com Tauri 2
-backend/    Python: o Freddy (backend/freddy: FastAPI + WebSocket + áudio),
-            o Bardo (discord.py + yt-dlp + FFmpeg) e o acervo
+backend/    Python: o Freddy (backend/freddy: FastAPI + WebSocket + áudio + bot
+            do Discord), o Bardo (as regras: pedidos, busca, YouTube) e o acervo
 .github/workflows/app.yml   testa, compila Windows/Linux/Mac e publica a Release
 ROADMAP.md  fases e decisões
 ```
@@ -52,6 +54,15 @@ Detalhes de cada lado em `frontend/README.md` e `backend/README.md`.
   de 20 ms, 48 kHz, estéreo, 16 bits: o formato do Discord (Fase 2) e a base
   do mixer (Fase 4). Avisos do áudio pro motor passam por `agendar` (o loop
   do servidor): o motor roda numa thread só.
+- **Bot do Discord** (`backend/freddy/bot/`): roda no mesmo loop do
+  servidor. `conversa.py` é lógica sem discord.py (texto → mesmo `Motor` do
+  painel → resposta); `bot.py` só traduz Discord ↔ conversa/motor (como era o
+  `cog.py`). Com o bot numa call, quem puxa a Mesa é o Discord
+  (`SaidaDiscord`) e a caixa de som toca a cópia (`Mesa.ler_para_local`):
+  nunca dois puxando a Mesa. Token só na pasta do mestre (`discord.json`) ou
+  em `FREDDY_DISCORD_TOKEN`. Ids do Discord vão pro painel como texto.
+  Aqui na nuvem não dá pra testar o Discord de verdade (o proxy bloqueia
+  discord.com): teste com dublês e peça pro Marcelo testar na call.
 - **Porta do Freddy: 47824**, só em `127.0.0.1`, e o `/ws` só aceita as
   origens de `backend/freddy/config.py` (o painel). Não abrir pra rede sem
   login (Fase 3).
@@ -68,8 +79,7 @@ Detalhes de cada lado em `frontend/README.md` e `backend/README.md`.
   palavra de "mostra a fila"; por isso os de playlist vêm antes.
 - **Modos do painel** moram em `frontend/src/modos/<nome>/` e entram pela
   lista em `frontend/src/modos/registro.tsx`.
-- **No backend:** `service.py` é lógica pura, sem
-  discord.py; `cog.py` só traduz Discord ↔ service.
+- **No backend:** `service.py` é lógica pura, sem discord.py.
 - **Temas (plumagens):** cores em `frontend/src/temas.css` (um bloco
   `[data-tema]` por tema, com `--acento` pra preencher e `--acento-texto`
   pra texto), lista em `frontend/src/dados/temas.ts`. O padrão é
@@ -86,7 +96,7 @@ Detalhes de cada lado em `frontend/README.md` e `backend/README.md`.
 # painel no navegador, recarrega sozinho (o jeito normal de testar)
 cd frontend && npm install && npm run dev        # http://localhost:5173
 
-# o backend (Fedora: sudo dnf install ffmpeg-free portaudio)
+# o backend (Fedora: sudo dnf install ffmpeg-free portaudio opus)
 cd backend && pip install -r requirements.txt && python -m freddy   # --sem-som finge que toca
 
 # testes (o GitHub roda todos antes de compilar, mais o ponta a ponta)

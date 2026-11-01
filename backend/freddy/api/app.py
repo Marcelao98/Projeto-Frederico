@@ -6,6 +6,13 @@ Rotas:
     GET    /acervo                {musicas, vocabulario}: o dataset + as aprendidas
     POST   /acervo/faixas         {titulo, link, temas}: ensina faixa nova ("era essa?")
     PATCH  /acervo/faixas/{id}    {nome?, temas?, comentario?}: corrige uma faixa
+    GET    /discord               o bot: situação, servidores e canais, onde está tocando
+    PUT    /discord/token         {token}: guarda o token e conecta
+    DELETE /discord/token         desconecta e esquece o token
+    POST   /discord/religar       conecta de novo com o token guardado
+    POST   /discord/entrar        {canalId}: entra na call
+    POST   /discord/sair          sai da call
+    PUT    /discord/ouvir-aqui    {ligado}: a caixa de som toca a cópia do que vai pra call
     GET    /acervo/planilha       o acervo em CSV (pra baixar pelo navegador)
     POST   /acervo/planilha/salvar   salva o CSV na pasta Downloads (funciona no app)
     POST   /acervo/planilha?aplicar=  manda o CSV editado: resumo; com aplicar=true, grava
@@ -36,6 +43,7 @@ from freddy.config import Config
 from freddy.dados import planilha
 from freddy.dados.acervo import Acervo, FaixaNaoEncontrada
 from freddy.dados.playlists import Playlists
+from freddy.dados.segredos import Segredos
 from freddy.motor.motor import ComandoInvalido, Motor
 from modules.bardo import service
 
@@ -74,6 +82,18 @@ class EdicaoDeFaixa(BaseModel):
     comentario: str | None = Field(default=None, max_length=2000)
 
 
+class TokenDoBot(BaseModel):
+    token: str = Field(min_length=20, max_length=200)
+
+
+class CanalDeVoz(BaseModel):
+    canalId: str = Field(pattern=r"^\d{5,25}$")
+
+
+class Ligado(BaseModel):
+    ligado: bool
+
+
 class PedidoDeBusca(BaseModel):
     texto: str = Field(min_length=1, max_length=300)
 
@@ -95,11 +115,24 @@ def criar_reprodutor(config: Config, loop: asyncio.AbstractEventLoop):
     return ReprodutorMesa(abrir_saida_local, agendar=loop.call_soon_threadsafe)
 
 
-def criar_app(config: Config | None = None, criar=criar_reprodutor, youtube: YoutubeDados | None = None) -> FastAPI:
+def criar_bot(motor, reprodutor, acervo, playlists, youtube, segredos):
+    from freddy.bot.bot import BotDoFreddy
+    from freddy.bot.conversa import Conversa
+
+    return BotDoFreddy(motor, reprodutor, Conversa(motor, acervo, playlists, youtube), segredos)
+
+
+def criar_app(
+    config: Config | None = None,
+    criar=criar_reprodutor,
+    youtube: YoutubeDados | None = None,
+    bot=criar_bot,
+) -> FastAPI:
     config = config or Config()
     acervo = Acervo(config.arquivo_aprendidas)
     playlists = Playlists(config.arquivo_playlists)
     youtube = youtube or YoutubeDados()
+    segredos = Segredos(config.arquivo_discord)
 
     @asynccontextmanager
     async def vida(app: FastAPI):
@@ -108,11 +141,17 @@ def criar_app(config: Config | None = None, criar=criar_reprodutor, youtube: You
         motor = Motor(reprodutor)
         app.state.reprodutor = reprodutor
         app.state.motor = motor
-        app.state.paineis = Paineis(motor)
+        paineis = app.state.paineis = Paineis(motor)
+        app.state.bot = bot(motor, reprodutor, acervo, playlists, youtube, segredos)
+        app.state.bot.ao_mudar = lambda: paineis.enviar({"tipo": "discord", "discord": app.state.bot.estado()})
+        ligar_bot = asyncio.create_task(app.state.bot.ligar())
         relogio = asyncio.create_task(_relogio(motor, app.state.paineis))
         try:
             yield
         finally:
+            ligar_bot.cancel()
+            with suppress(Exception, asyncio.CancelledError):
+                await app.state.bot.desconectar()
             relogio.cancel()
             with suppress(asyncio.CancelledError):
                 await relogio
@@ -189,6 +228,54 @@ def criar_app(config: Config | None = None, criar=criar_reprodutor, youtube: You
             planilha.aplicar(acervo, resumo)
         return {**resumo.como_dict(), "aplicado": aplicar}
 
+    # --- Discord -------------------------------------------------------------
+
+    @app.get("/discord")
+    def estado_do_discord():
+        return app.state.bot.estado()
+
+    @app.put("/discord/token")
+    async def guardar_token(pedido: TokenDoBot):
+        if segredos.do_ambiente:
+            raise HTTPException(409, "o token vem da variável FREDDY_DISCORD_TOKEN; troque lá")
+        segredos.guardar(pedido.token)
+        await app.state.bot.conectar(pedido.token)
+        return app.state.bot.estado()
+
+    @app.post("/discord/religar")
+    async def religar_bot():
+        if segredos.token() is None:
+            raise HTTPException(409, "não tem token guardado")
+        await app.state.bot.ligar()
+        return app.state.bot.estado()
+
+    @app.delete("/discord/token")
+    async def esquecer_token():
+        await app.state.bot.desconectar()
+        if not segredos.do_ambiente:
+            segredos.esquecer()
+        return app.state.bot.estado()
+
+    @app.post("/discord/entrar")
+    async def entrar_na_call(pedido: CanalDeVoz):
+        from freddy.bot.bot import ErroDoBot
+
+        try:
+            await app.state.bot.entrar(int(pedido.canalId))
+        except ErroDoBot as e:
+            raise HTTPException(409, str(e)) from e
+        return app.state.bot.estado()
+
+    @app.post("/discord/sair")
+    async def sair_da_call():
+        await app.state.bot.sair()
+        return app.state.bot.estado()
+
+    @app.put("/discord/ouvir-aqui")
+    def ouvir_aqui(pedido: Ligado):
+        app.state.bot.definir_ouvir_aqui(pedido.ligado)
+        return app.state.bot.estado()
+
     @app.get("/playlists")
     def listar_playlists():
         return playlists.listar()
@@ -248,6 +335,7 @@ def criar_app(config: Config | None = None, criar=criar_reprodutor, youtube: You
             fila.put_nowait({"tipo": "ola", "protocolo": PROTOCOLO, "versao": VERSAO, "som": "simulado" if config.sem_som else "local"})
             fila.put_nowait({"tipo": "estado", "estado": motor.estado()})
             fila.put_nowait({"tipo": "progresso", **motor.progresso()})
+            fila.put_nowait({"tipo": "discord", "discord": app.state.bot.estado()})
             while True:
                 texto = await socket.receive_text()
                 resposta = _atender(texto, motor, paineis)

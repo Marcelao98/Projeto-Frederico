@@ -40,6 +40,21 @@ export interface ResumoDaPlanilha {
   aplicado: boolean;
 }
 
+/** O bot do Discord, como o Freddy conta (GET /discord e as mensagens "discord" do /ws). */
+export interface EstadoDiscord {
+  configurado: boolean;
+  doAmbiente: boolean;
+  situacao: "desligado" | "conectando" | "conectado" | "erro";
+  erro: string | null;
+  bot: { id: string; nome: string; avatar: string } | null;
+  convite: string | null;
+  servidores: { id: string; nome: string; icone: string | null; canais: { id: string; nome: string; pessoas: number }[] }[];
+  canal: { id: string; nome: string; servidorId: string; servidor: string } | null;
+  ouvirAqui: boolean;
+  /** false no --sem-som: conecta, mas não tem som pra mandar. */
+  podeTocar: boolean;
+}
+
 export class ErroDoFreddy extends Error {
   constructor(
     mensagem: string,
@@ -123,6 +138,38 @@ export class ApiFreddy {
     });
   }
 
+  // --- Discord --------------------------------------------------------------
+
+  discord() {
+    return this.pedir<EstadoDiscord>("/discord");
+  }
+
+  /** Guarda o token (na pasta do Freddy, nunca no git) e conecta o bot. */
+  guardarTokenDoDiscord(token: string) {
+    return this.pedir<EstadoDiscord>("/discord/token", { method: "PUT", body: JSON.stringify({ token }), prazoMs: 45_000 });
+  }
+
+  /** Conecta de novo com o token já guardado (depois de cair, por exemplo). */
+  religarDiscord() {
+    return this.pedir<EstadoDiscord>("/discord/religar", { method: "POST", prazoMs: 45_000 });
+  }
+
+  esquecerTokenDoDiscord() {
+    return this.pedir<EstadoDiscord>("/discord/token", { method: "DELETE" });
+  }
+
+  entrarNaCall(canalId: string) {
+    return this.pedir<EstadoDiscord>("/discord/entrar", { method: "POST", body: JSON.stringify({ canalId }), prazoMs: 30_000 });
+  }
+
+  sairDaCall() {
+    return this.pedir<EstadoDiscord>("/discord/sair", { method: "POST" });
+  }
+
+  ouvirAqui(ligado: boolean) {
+    return this.pedir<EstadoDiscord>("/discord/ouvir-aqui", { method: "PUT", body: JSON.stringify({ ligado }) });
+  }
+
   playlists() {
     return this.pedir<PlaylistSalva[]>("/playlists");
   }
@@ -156,6 +203,9 @@ export class ApiFreddy {
 
 /** O Freddy em uso, se o painel está falando com ele (null = só o navegador). */
 export const freddy = criarArmazem<ApiFreddy | null>(null);
+
+/** O bot do Discord (null = ainda não sabe, ou sem Freddy). */
+export const discord = criarArmazem<EstadoDiscord | null>(null);
 
 /** ?motor=navegador|freddy|auto na URL ganha da preferência (bom pra testar). */
 export function preferenciaEfetiva(busca = typeof location !== "undefined" ? location.search : ""): PreferenciaDeMotor {

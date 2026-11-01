@@ -22,7 +22,8 @@ Os commits do Bardo vieram junto (extraídos da natty-bot com
 
 **O Freddy é o áudio do Nattyverso:** a Natty não toca mais nada. Hoje ele
 já roda sozinho no PC (`python -m freddy`, em `backend/freddy/`): o painel
-manda nele, ele toca na caixa de som. O bot do Discord do Freddy é a Fase 2.
+manda nele, ele toca na caixa de som ou numa call do Discord, pelo bot dele
+(guia em `backend/docs/discord.md`).
 
 ## Pra onde vai
 
@@ -36,8 +37,8 @@ toca e mistura som, e o Discord é só uma das saídas:
 - **Painel web local** (localhost) como controle remoto, com playlists e cenas salvas.
 - **Fontes:** arquivos locais, YouTube, playlists inteiras e Freesound
   (CC0 por padrão, com os créditos guardados).
-- **Bot de Discord do Freddy** (Fase 2): um bot só, compartilhado pelos
-  mestres, rodando num PC de casa. O som nunca passa pela Natty.
+- **Bot de Discord do Freddy**: um bot só, compartilhado pelos mestres,
+  rodando num PC de casa. O som nunca passa pela Natty.
 
 Por que local: bot de música público na nuvem cai (termos do YouTube e
 bloqueio de IP de datacenter). No PC de cada um, é uso pessoal pra própria mesa.

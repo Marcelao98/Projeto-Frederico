@@ -14,8 +14,8 @@ Atualizado em 31/10/2026.
 | **Acervo** (607 faixas, 9 franquias, 27 climas) | ✅ pronto, curadoria contínua |
 | **Painel** (Chat, Playlist, Acervo, 5 plumagens) | ✅ pronto; toca pelo Freddy ou sozinho pelo YouTube |
 | **App desktop** (Tauri) com instaladores no GitHub (Windows, Linux, Mac) | ✅ pronto (v0.1.1), testado no Fedora |
-| **Backend próprio** (o Freddy sem a Natty) | 🟡 pronto (v0.4.0), instalado no Fedora; falta confirmar o som |
-| **Bot do Discord do Freddy** | ⬜ Fase 2 |
+| **Backend próprio** (o Freddy sem a Natty) | 🟡 pronto (v0.5.0), instalado no Fedora; falta confirmar o som |
+| **Bot do Discord do Freddy** | 🟡 pronto (v0.5.0); falta o teste numa call de verdade |
 | **Mixer, microfone virtual, soundboard** | ⬜ só planejado (telas "em breve" no painel) |
 
 ## Como desenvolver sem sofrer
@@ -65,13 +65,17 @@ O Freddy vira um programa Python que roda sozinho, sem a Natty: `python -m fredd
 - 🟡 Marcelo instalou no Fedora (31/10); falta confirmar o som saindo (e um mestre no Windows).
 - **Pronto quando:** o painel controla uma fila que mora no backend, com o app aberto ou no navegador.
 
-### Fase 2: Bot do Discord do Freddy
-O som chega na call pelo Freddy. Plano em `backend/docs/discord.md`.
-- Bot próprio (o Cog do Bardo vira o bot do Freddy), tocando pelo backend.
-  Saem os jeitos da Natty que vieram junto: `@Natty`, o pedido falado com 🎙
-  (Echo) e o "não sair da call" por causa da escuta.
-- O painel escolhe a saída: este computador ou o Discord (servidor e canal).
-- Pedidos digitados no Discord (`@Freddy toca...`), com a mesma fila do painel.
+### Fase 2: Bot do Discord do Freddy 🟡 (falta testar numa call de verdade)
+O som chega na call pelo Freddy. Guia e detalhes em `backend/docs/discord.md`.
+- ✅ Bot próprio dentro do `python -m freddy` (`backend/freddy/bot/`), com o
+  jeito de conectar do Kenku FM: token colado no painel, lista de servidores
+  e canais, um player que nunca para, "ouvir aqui também". O `cog.py` da
+  Natty saiu (com o `@Natty`, o 🎙 do Echo e o "não sair da call").
+- ✅ Janela Discord no painel: token, convite, servidor → canal → entrar/sair.
+- ✅ `@Freddy toca…`, `pula`, `fila`, `volume`, playlists e `sai` no chat do
+  Discord, na mesma fila do painel; avisa quando a fila anda; sai sozinho
+  da call vazia depois de 5 minutos.
+- ⬜ Marcelo criar o bot, entrar numa call e tocar (confirma o som também).
 - **Pronto quando:** um mestre toca música na call pelo painel.
 
 ### Fase 3: Vários mestres no mesmo Freddy

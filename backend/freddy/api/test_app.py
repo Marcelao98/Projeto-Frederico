@@ -33,6 +33,46 @@ class YoutubeFalso:
         return {"titulo": f"Achei {texto}", "link": "https://www.youtube.com/watch?v=abc123", "duracaoSegundos": 200}
 
 
+class BotFalso:
+    """Faz o papel do BotDoFreddy (o de verdade precisa do Discord)."""
+
+    def __init__(self, *args):
+        self.segredos = args[5]
+        self.ao_mudar = lambda: None
+        self.tokens: list[str] = []
+        self.canal: str | None = None
+        self.ouvir = True
+
+    def estado(self):
+        return {"situacao": "conectado" if self.tokens else "desligado", "canal": self.canal, "ouvirAqui": self.ouvir}
+
+    async def ligar(self):
+        if self.segredos.token():
+            self.tokens.append("guardado")
+
+    async def conectar(self, token):
+        self.tokens.append(token)
+        self.ao_mudar()
+
+    async def desconectar(self):
+        self.tokens.clear()
+        self.canal = None
+
+    async def entrar(self, canal_id):
+        from freddy.bot.bot import ErroDoBot
+
+        if canal_id == 404404:
+            raise ErroDoBot("não achei esse canal de voz")
+        self.canal = str(canal_id)
+        self.ao_mudar()
+
+    async def sair(self):
+        self.canal = None
+
+    def definir_ouvir_aqui(self, ligado):
+        self.ouvir = ligado
+
+
 class Base(unittest.TestCase):
     def setUp(self):
         self.pasta = Path(tempfile.mkdtemp())
@@ -45,7 +85,13 @@ class Base(unittest.TestCase):
             return r
 
         config = Config(pasta=self.pasta, pasta_downloads=self.pasta / "Downloads")
-        app = criar_app(config, criar=criar, youtube=YoutubeFalso())
+        self.bot = None
+
+        def bot(*args):
+            self.bot = BotFalso(*args)
+            return self.bot
+
+        app = criar_app(config, criar=criar, youtube=YoutubeFalso(), bot=bot)
         self.cliente = TestClient(app)
         self.cliente.__enter__()
         self.addCleanup(self.cliente.__exit__, None, None, None)
@@ -62,6 +108,7 @@ class TestWebSocket(Base):
         estado = ws.receive_json()
         self.assertEqual(estado["tipo"], "estado")
         self.assertEqual(ws.receive_json()["tipo"], "progresso")
+        self.assertEqual(ws.receive_json()["tipo"], "discord")
         return ws, estado["estado"]
 
     def comando(self, ws, id_, comando):
@@ -141,6 +188,39 @@ class TestWebSocket(Base):
     def test_programa_local_sem_origin_conecta(self):
         with self.cliente.websocket_connect("/ws") as ws:
             self.assertEqual(ws.receive_json()["tipo"], "ola")
+
+
+class TestDiscord(Base):
+    def test_token_guarda_na_pasta_e_conecta(self):
+        token = "x" * 70
+        r = self.cliente.put("/discord/token", json={"token": token})
+        self.assertEqual(r.json()["situacao"], "conectado")
+        self.assertEqual(self.bot.tokens, [token])
+        arquivo = self.pasta / "discord.json"
+        self.assertIn(token, arquivo.read_text())
+        self.assertEqual(self.cliente.put("/discord/token", json={"token": "curto"}).status_code, 422)
+        self.assertEqual(self.cliente.post("/discord/religar").status_code, 200)
+        self.assertEqual(self.cliente.delete("/discord/token").json()["situacao"], "desligado")
+        self.assertEqual(self.cliente.post("/discord/religar").status_code, 409)
+        self.assertFalse(arquivo.exists())
+
+    def test_entrar_sair_e_ouvir_aqui(self):
+        self.assertEqual(self.cliente.post("/discord/entrar", json={"canalId": "123456789012345678"}).json()["canal"], "123456789012345678")
+        r = self.cliente.post("/discord/entrar", json={"canalId": "404404"})
+        self.assertEqual((r.status_code, r.json()["detail"]), (409, "não achei esse canal de voz"))
+        self.assertEqual(self.cliente.post("/discord/entrar", json={"canalId": "abc"}).status_code, 422)
+        self.assertIsNone(self.cliente.post("/discord/sair").json()["canal"])
+        self.assertFalse(self.cliente.put("/discord/ouvir-aqui", json={"ligado": False}).json()["ouvirAqui"])
+
+    def test_painel_fica_sabendo_na_hora(self):
+        with self.cliente.websocket_connect("/ws", headers=PAINEL) as ws:
+            for _ in range(4):
+                ws.receive_json()
+            self.cliente.post("/discord/entrar", json={"canalId": "123456789012345678"})
+            msg = ws.receive_json()
+            while msg["tipo"] != "discord":
+                msg = ws.receive_json()
+            self.assertEqual(msg["discord"]["canal"], "123456789012345678")
 
 
 class TestRest(Base):

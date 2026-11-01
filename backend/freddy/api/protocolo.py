@@ -11,6 +11,7 @@ Freddy → painel:
     {"tipo": "resposta", "id": 7, "ok": true, "resultado": {...}}
     {"tipo": "resposta", "id": 7, "ok": false, "erro": "..."}
     {"tipo": "pong"}
+    {"tipo": "discord", "discord": {...}}   o bot (o mesmo de GET /discord), a cada mudança
 Os nomes dos campos são os do TypeScript (faixaId, temProxima...), sem conversão.
 """
 

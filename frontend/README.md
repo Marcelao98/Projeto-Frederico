@@ -84,6 +84,10 @@ hollow knight**) passa faixa por faixa, as sem tema primeiro. E o chat conta,
 em letra miúda, o que mudou fora dele (Playlist, barra do player, outra aba):
 "▶ Tocando Greenpath", "+5 na fila".
 
+**Discord** (barra lateral, com o Freddy ligado): cola o token do bot uma
+vez, convida pros servidores, escolhe o canal de voz e o bot toca a mesma
+fila do painel. Guia em `backend/docs/discord.md`.
+
 Mixer e Soundboard já aparecem na barra lateral como "em breve".
 
 ## Plumagens (temas)
@@ -128,7 +132,7 @@ src/
 │   ├── acervo/     ModoAcervo (tabela editável + planilha)
 │   ├── playlist/   ModoPlaylist, PainelAcervo, PainelFila
 │   └── mixer/      ModoEmBreve
-└── componentes/ barra do player, cartão de música, ícones, a calopsita
+└── componentes/ barra do player, cartão de música, ícones, a calopsita, JanelaDiscord
 ```
 
 **O mesmo acervo do Bardo.** O painel importa `backend/modules/bardo/dataset/*.json`

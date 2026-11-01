@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { App } from "./App";
 import { acervoAtual, montarAcervo } from "./dados/acervo";
-import { escolherFreddy, freddy } from "./dados/freddy";
+import { discord, escolherFreddy, freddy, type EstadoDiscord } from "./dados/freddy";
 import { definirAvisoDeFalha, usarPlaylistsDoFreddy } from "./dados/playlists";
 import { aplicarTema, temaAtual } from "./dados/temas";
 import { falaDoEvento } from "./modos/chat/conversa";
@@ -30,8 +30,11 @@ async function iniciar() {
   let palcoDoVideo: HTMLElement | null = null;
 
   if (api) {
-    motor = new MotorRemoto(api.urlDoMotor);
+    const remoto = new MotorRemoto(api.urlDoMotor);
+    motor = remoto;
     freddy.escrever(api);
+    // O bot do Discord: o Freddy manda o estado ao conectar e a cada mudança.
+    remoto.aoMensagem("discord", (d) => discord.escrever(d as EstadoDiscord));
     definirAvisoDeFalha((e) =>
       registrar("freddy", { texto: `Não consegui salvar a playlist no Freddy (${e instanceof Error ? e.message : e}) 😕` }),
     );

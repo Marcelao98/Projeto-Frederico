@@ -44,7 +44,8 @@ type MensagemDoFreddy =
   | { tipo: "progresso"; posicao: number; duracao: number }
   | { tipo: "evento"; evento: EventoMotor }
   | { tipo: "resposta"; id: number | null; ok: boolean; resultado?: unknown; erro?: string }
-  | { tipo: "pong" };
+  | { tipo: "pong" }
+  | { tipo: "discord"; discord: unknown };
 
 interface Pendente {
   resolver(r: unknown): void;
@@ -77,6 +78,7 @@ export class MotorRemoto implements Motor {
   private ouvintesProgresso = new Set<() => void>();
   private ouvintesEvento = new Set<(e: EventoMotor) => void>();
   private ouvintesConexao = new Set<() => void>();
+  private ouvintesExtras = new Map<string, Set<(dados: unknown) => void>>();
 
   constructor(
     private readonly url: string,
@@ -105,6 +107,14 @@ export class MotorRemoto implements Motor {
     this.ouvintesConexao.add(ouvinte);
     return () => void this.ouvintesConexao.delete(ouvinte);
   };
+
+  /** Mensagens do Freddy que não são do motor (ex.: "discord", o estado do bot). */
+  aoMensagem(tipo: "discord", ouvinte: (dados: unknown) => void) {
+    const ouvintes = this.ouvintesExtras.get(tipo) ?? new Set();
+    ouvintes.add(ouvinte);
+    this.ouvintesExtras.set(tipo, ouvintes);
+    return () => void ouvintes.delete(ouvinte);
+  }
 
   executar<K extends NomeComando>(comando: Comando<K>): Promise<Resultado<K>> {
     const socket = this.socket;
@@ -219,6 +229,9 @@ export class MotorRemoto implements Motor {
         return;
       }
       case "pong":
+        return;
+      case "discord":
+        for (const o of this.ouvintesExtras.get("discord") ?? []) o(msg.discord);
         return;
     }
   }

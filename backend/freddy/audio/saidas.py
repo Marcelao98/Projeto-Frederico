@@ -4,8 +4,8 @@
   no Fedora vai pro PipeWire, no Windows pro WASAPI/MME).
 - SaidaMuda: puxa no ritmo do relógio e joga fora. Serve pros testes e pra
   quando não tem placa de som.
-- Fase 2: SaidaDiscord, um discord.AudioSource cujo read() é mesa.ler()
-  (o mesmo quadro de 20 ms). Ver backend/docs/discord.md.
+- SaidaDiscord (freddy/bot/saida.py): o discord.AudioSource cujo read() é
+  mesa.ler_para_discord(). Com ela ativa, as daqui tocam a cópia.
 """
 
 from __future__ import annotations
@@ -43,7 +43,7 @@ class SaidaLocal:
         def pedir(saida, quadros, _tempo, status):
             if status.output_underflow:
                 log.debug("a caixa de som ficou sem som por um instante")
-            saida[:] = self.mesa.ler(quadros * CANAIS * BYTES_POR_AMOSTRA)
+            saida[:] = self.mesa.ler_para_local(quadros * CANAIS * BYTES_POR_AMOSTRA)
 
         self._stream = sd.RawOutputStream(
             samplerate=TAXA,
@@ -81,7 +81,7 @@ class SaidaMuda:
         passo = QUADRO_MS / 1000 / self.velocidade
         proximo = time.monotonic()
         while not self._parar.is_set():
-            self.mesa.ler(BYTES_POR_QUADRO)
+            self.mesa.ler_para_local(BYTES_POR_QUADRO)
             proximo += passo
             espera = proximo - time.monotonic()
             if espera > 0:

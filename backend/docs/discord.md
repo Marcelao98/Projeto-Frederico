@@ -1,97 +1,97 @@
-# Discord: como o Kenku FM faz, e o plano do Freddy (Fase 2)
+# Discord: o bot do Freddy
 
-Estudo do [Kenku FM](https://github.com/owlbear-rodeo/kenku-fm) (v1.5.5), o
-app de som para RPG que mais se parece com o Freddy, para decidir a Fase 2.
+O Freddy toca na call pelo bot dele: um bot só, compartilhado pelos mestres,
+rodando dentro do `python -m freddy` (código em `backend/freddy/bot/`).
 
-> **Licença:** o Kenku e o Freddy são GPL-3.0, então dá pra adaptar o código
-> de lá. Arquivo que adaptar código do Kenku diz no topo de onde veio
-> ("adaptado do Kenku FM, © Owlbear Rodeo, GPL-3.0"). Como o Kenku é
-> JavaScript e o Freddy é Python, na prática o que vem é a lógica, reescrita.
+## Criar o bot (uma vez só)
 
-## Como o Kenku fala com o Discord
+1. Abra o [Discord Developer Portal](https://discord.com/developers/applications)
+   e clique em **New Application**. Nome: *Freddy*. (Dá pra pôr a cara do
+   Frederico como ícone: `frontend/src-tauri/icons/icon.png`.)
+2. Na aba **Bot**, clique em **Reset Token** e copie o token. Ele é a senha
+   do bot: não mande pra ninguém e nunca ponha no git.
+3. Com o Freddy ligado, no painel: barra lateral → **Discord** → cole o
+   token → **Conectar**. Fica guardado em `~/.local/share/Freddy/discord.json`
+   (Windows: `%APPDATA%\Freddy\discord.json`), legível só por você. Quem
+   preferir, usa a variável de ambiente `FREDDY_DISCORD_TOKEN`.
+4. Na mesma janela: **Convidar pra um servidor** (ou **Copiar link** e abrir
+   no navegador). O convite já pede as permissões certas: ver canais, enviar
+   mensagens, ler o histórico, conectar e falar.
 
-Electron + `discord.js` + `@discordjs/voice`. O arquivo central é
-`src/main/broadcast/DiscordBroadcast.ts`.
+Não precisa ligar nenhum "Privileged Gateway Intent" no portal: mensagem que
+menciona o bot chega com o texto mesmo sem o intent de conteúdo.
 
-1. **Cada pessoa cria o próprio bot** no Discord Developer Portal e cola o
-   token nas configurações do app (eles têm um guia: "getting a discord token").
-2. **Intents mínimos:** só `Guilds` e `GuildVoiceStates`. O bot não lê
-   mensagem nenhuma: é controlado só pelo app.
-3. **Lista de servidores e canais:** quando o bot conecta, o app busca os
-   servidores dele e os canais de voz de cada um (na ordem do Discord) e
-   mostra numa lista de **saídas**: "Local" ou um canal de voz.
-4. **Um player só, que nunca para:** um `AudioPlayer` com
-   `noSubscriber: Play` (segue tocando mesmo sem ninguém ouvindo) e
-   `maxMissedFrames: 3000` (aguenta 60 s de buraco sem desistir).
-5. **Um som contínuo, não uma faixa por vez.** Tudo o que toca no app (abas
-   de navegador embutidas, playlists, soundboard, até um microfone) é
-   misturado num `AudioContext` a **48 kHz estéreo**. Um `AudioWorklet`
-   converte em **PCM 16 bits** e manda por um WebSocket interno para o
-   processo principal, que codifica em **Opus em quadros de 20 ms** (960
-   amostras) e entrega ao player como um recurso só.
-6. **Entrar e sair do canal:** `joinVoiceChannel` + `connection.subscribe(player)`;
-   sair é destruir a conexão daquele servidor. Erro de conexão vira aviso na tela.
-7. **Saída "Local":** o mesmo mix tocando na caixa de som (loopback).
-8. **Controle remoto:** uma API HTTP local (fastify) para Stream Deck e afins.
-9. **Criptografia de voz (DAVE):** usam `@snazzah/davey`. O Discord passou a
-   exigir criptografia ponta a ponta nas calls; o Bardo já tem o `davey` no
-   `requirements.txt`.
+No Fedora, o Discord precisa da biblioteca Opus (quase sempre já está
+instalada): `sudo dnf install opus`. No Windows ela vem junto com o discord.py.
 
-## O que o Freddy já tem igual
+## Usar
 
-A Fase 1 foi feita pensando nisso: a **Mesa** (`freddy/audio/mesa.py`) é o
-"mix contínuo" do Kenku. Ela entrega quadros de **20 ms, 48 kHz, estéreo,
-16 bits** (3840 bytes), exatamente o que o `discord.AudioSource.read()` do
-discord.py pede. A caixa de som (`SaidaLocal`) já puxa da Mesa; o Discord vai
-ser só mais uma saída.
+- **Pelo painel:** Discord → escolha o servidor e o canal de voz → o bot
+  entra e toca a fila do painel. **Ouvir aqui também** faz o som da call sair
+  na caixa do seu computador.
+- **Pelo chat do Discord:** `@Freddy toca triste e bloodborne`, `@Freddy pula`,
+  `@Freddy volume 30`, `@Freddy fila`, `@Freddy playlists`,
+  `@Freddy toca a playlist sessão 12`, `@Freddy salva a fila como sessão 12`,
+  `@Freddy sai`, `@Freddy ajuda`. Se o bot não estiver em call, ele entra na
+  call de quem pediu. Ele avisa no canal quando a fila anda ("Tocando agora…").
+- **Uma fila só:** o que se pede no Discord aparece no painel (o narrador do
+  chat conta) e vice-versa.
+- **Sozinho na call por 5 minutos** → ele sai e avisa.
+- **Uma call por vez** (por enquanto). Várias mesas ao mesmo tempo é a Fase 3.
 
-Diferença boa: o Kenku precisa de um navegador escondido para capturar o som
-das abas. O Freddy decodifica direto (yt-dlp + FFmpeg), sem navegador.
+## Como funciona
 
-## Onde o Freddy é diferente (decisões tomadas)
-
-| | Kenku | Freddy |
-|---|---|---|
-| Bot | cada pessoa cria o seu e cola o token | **um bot compartilhado**: o token fica só no backend (`.env`); os mestres não mexem em token |
-| Quem controla | só o app | o painel **e** o chat do Discord (`@Freddy toca ...`, como o Bardo) |
-| Calls ao mesmo tempo | uma (um player global) | uma por servidor (Fase 3); na Fase 2, uma basta |
-| Sistemas | Windows, Mac, Linux | Linux e Windows primeiro |
-
-Consequências do bot compartilhado: login no painel pela conta do Discord e
-permissão por cargo (Fase 3); e como um bot só fica em **um canal de voz por
-servidor**, duas mesas no mesmo servidor precisam de um "pool" de bots.
-
-## Esboço da Fase 2
-
-```python
-class SaidaDiscord(discord.AudioSource):
-    """O Discord puxa um quadro de 20 ms a cada 20 ms: é só entregar o da Mesa."""
-
-    def __init__(self, mesa: Mesa):
-        self.mesa = mesa
-
-    def read(self) -> bytes:
-        return self.mesa.ler(BYTES_POR_QUADRO)  # nunca vazio: silêncio quando não toca
-
-    def is_opus(self) -> bool:
-        return False  # o discord.py codifica em Opus
+```
+Mesa (freddy/audio/mesa.py)  ──read() a cada 20 ms──▶  SaidaDiscord (bot/saida.py)  ──▶  discord.py (Opus) ──▶ call
+   │
+   └─ cópia (se "ouvir aqui") ──▶ caixa de som (audio/saidas.py)
 ```
 
-- `voice_client = await canal.connect()` e `voice_client.play(SaidaDiscord(mesa))`,
-  uma vez só ao entrar no canal. Trocar de música não mexe no Discord: só na
-  Mesa. Como o `read()` nunca devolve vazio, o player não para sozinho (o
-  equivalente ao `noSubscriber: Play` do Kenku).
-- **API nova:** `GET /discord/servidores` → `[{id, nome, icone, canais: [{id, nome}]}]`
-  (o que o bot enxerga), e um comando do motor `saida` com
-  `{destino: "local" | "discord", canal?}`. O painel já tem o bloco "Saída do som".
-- **Intents:** `guilds` e `voice_states` para o painel. Para `@Freddy toca`
-  pelo chat, também `message_content` (intent privilegiado: ligar no portal).
-- **Um relógio só:** se a caixa de som e o Discord puxarem da mesma Mesa ao
-  mesmo tempo, a música anda em dobro. Com o Discord ativo, a caixa de som
-  vira "monitor" (toca a cópia do que o Discord puxou) ou desliga. Decidir
-  na Fase 2.
-- **Erros do Discord** (sem permissão no canal, canal cheio, caiu) viram um
-  evento novo para o painel mostrar, como o Kenku faz.
-- O `cog.py` do Bardo vira o bot do Freddy: troca o `FFmpegPCMAudio` por
-  faixa pela `SaidaDiscord` contínua, e os comandos de texto chamam o mesmo
-  `Motor` que o painel usa (uma fila só para o chat e o painel).
+- `bot/bot.py` (`BotDoFreddy`): conecta, lista servidores e canais de voz
+  (na ordem do Discord), entra/sai da call, recebe as menções, avisa o
+  painel (`ao_mudar` → mensagem `"discord"` no `/ws`).
+- `bot/saida.py` (`SaidaDiscord`): o `discord.AudioSource`. O `read()` nunca
+  devolve vazio (silêncio quando nada toca), então o player do discord.py
+  nunca para: trocar de música não mexe no Discord, só na Mesa.
+- `bot/conversa.py` (`Conversa`): texto do Discord → comando no mesmo `Motor`
+  do painel → resposta. As regras de pedido são as do Bardo
+  (`service.interpretar_pedido`); playlists, iguais ao chat do painel. Sem
+  discord.py: testado direto em `bot/test_bot.py`.
+- **Um relógio só:** com o bot numa call, quem puxa a Mesa é o Discord; a
+  caixa de som toca uma cópia do que foi pra call. Sem isso a música andaria
+  em dobro.
+- **API:** `GET /discord`, `PUT/DELETE /discord/token`, `POST /discord/religar`,
+  `POST /discord/entrar` `{canalId}`, `POST /discord/sair`,
+  `PUT /discord/ouvir-aqui` `{ligado}`. Ids do Discord vão como texto (o
+  JavaScript estraga número desse tamanho).
+
+## O que veio do Kenku FM
+
+O jeito de conectar foi adaptado do [Kenku FM](https://github.com/owlbear-rodeo/kenku-fm)
+(`src/main/broadcast/DiscordBroadcast.ts`, © Owlbear Rodeo, GPL-3.0; o
+Freddy também é GPL-3.0). Como o Kenku é JavaScript (discord.js) e o Freddy é
+Python (discord.py), o que veio foi a lógica, reescrita:
+
+- token colado no app, intents mínimos (servidores e estados de voz);
+- ao conectar, a lista de servidores e canais de voz pro app escolher;
+- um player só que nunca para (lá: `noSubscriber: Play` e 60 s de tolerância);
+- um som contínuo de 48 kHz estéreo em quadros de 20 ms (lá: o mix do
+  `AudioContext`; aqui: a Mesa);
+- a saída "local" (loopback) tocando o mesmo som na caixa;
+- erro de conexão vira aviso no app.
+
+Onde o Freddy é diferente: um bot compartilhado (o Kenku é um bot por
+pessoa); o chat do Discord manda na mesma fila do painel; o som vem direto do
+YouTube via yt-dlp + FFmpeg (o Kenku captura o áudio de abas de navegador);
+o bot sai sozinho da call vazia.
+
+## Problemas comuns
+
+- **"token inválido"**: gere outro em Bot → Reset Token e cole de novo.
+- **"o bot não tem permissão de entrar e falar"**: no Discord, dê ao cargo
+  do bot (ou no canal) as permissões Conectar e Falar.
+- **"falta a biblioteca Opus"**: `sudo dnf install opus` (Fedora).
+- **O botão de convite não abre nada no app**: use **Copiar link** e cole no
+  navegador.
+- **"Agora estou tocando em outro servidor"**: é uma call por vez; tire o
+  bot de lá (painel ou `@Freddy sai`) antes.

@@ -8,7 +8,9 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import tempfile
+import unicodedata
 from pathlib import Path
 
 
@@ -48,3 +50,30 @@ class Playlists:
             return False
         gravar_json(self.arquivo, {"playlists": restantes})
         return True
+
+
+def _limpo(texto: str) -> str:
+    """minúsculas, sem acento e sem pontuação: "Sessão 12 — a cripta" → "sessao 12 a cripta"."""
+    texto = unicodedata.normalize("NFD", texto.lower())
+    texto = "".join(c for c in texto if unicodedata.category(c) != "Mn")
+    return " ".join(re.sub(r"[^\w ]", " ", texto).split())
+
+
+def mesmo_nome(a: str, b: str) -> bool:
+    return _limpo(a) == _limpo(b)
+
+
+def achar_playlist(texto: str, lista: list[dict]) -> list[dict]:
+    """Porta de acharPlaylist (frontend/src/dados/playlists.ts): nome igual
+    ganha; senão as que começam com o texto; senão as que têm todas as palavras."""
+    alvo = _limpo(texto)
+    if not alvo:
+        return []
+    iguais = [p for p in lista if _limpo(p["nome"]) == alvo]
+    if iguais:
+        return iguais
+    comecam = [p for p in lista if _limpo(p["nome"]).startswith(alvo)]
+    if comecam:
+        return comecam
+    palavras = alvo.split()
+    return [p for p in lista if all(f" {w}" in f" {_limpo(p['nome'])} " for w in palavras)]

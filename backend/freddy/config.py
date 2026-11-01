@@ -53,5 +53,9 @@ class Config:
         return self.pasta / "playlists.json"
 
     @property
+    def arquivo_discord(self) -> Path:
+        return self.pasta / "discord.json"
+
+    @property
     def arquivo_aprendidas(self) -> Path:
         return self.pasta / "aprendidas.json"

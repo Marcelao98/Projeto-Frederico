@@ -3,7 +3,8 @@ import { BarraDoPlayer } from "./componentes/BarraDoPlayer";
 import { Calopsita } from "./componentes/Calopsita";
 import { Icone } from "./componentes/Icone";
 import { acervoAtual } from "./dados/acervo";
-import { preferenciaDeMotor } from "./dados/freddy";
+import { discord, preferenciaDeMotor } from "./dados/freddy";
+import { JanelaDiscord } from "./componentes/JanelaDiscord";
 import { modoAtual, videoAberto } from "./dados/preferencias";
 import { TEMAS, proximoTema, temaAtual } from "./dados/temas";
 import { useArmazem } from "./dados/useArmazem";
@@ -101,9 +102,7 @@ export function App({ palcoDoVideo }: { palcoDoVideo: HTMLElement | null }) {
           <div className="saida" title="Chega na Fase 4 (mixer)">
             <Icone nome="mic" tamanho={16} /> Mic virtual <span className="selo">breve</span>
           </div>
-          <div className="saida" title="Chega na Fase 2 (bot do Freddy)">
-            <Icone nome="discord" tamanho={16} /> Discord <span className="selo">breve</span>
-          </div>
+          <SaidaDiscord comFreddy={!palcoDoVideo} />
         </div>
 
         <div className="plumagens">
@@ -191,5 +190,36 @@ function OrigemDoSom({ comFreddy }: { comFreddy: boolean }) {
       </span>
       <span className={`luz ${conexao === "conectado" ? "" : "apagada"}`} />
     </button>
+  );
+}
+
+/** A linha "Discord" da barra lateral: mostra onde o bot está e abre a janela. */
+function SaidaDiscord({ comFreddy }: { comFreddy: boolean }) {
+  const estado = useArmazem(discord);
+  const [aberta, setAberta] = useState(false);
+  const detalhe = !comFreddy
+    ? "precisa do Freddy"
+    : !estado || estado.situacao === "desligado"
+      ? estado?.configurado ? "bot desligado" : "configurar"
+      : estado.situacao === "conectando"
+        ? "conectando…"
+        : estado.situacao === "erro"
+          ? "deu erro"
+          : estado.canal
+            ? `#${estado.canal.nome}`
+            : "fora da call";
+  return (
+    <>
+      <button className={`saida ${estado?.canal ? "ativa" : ""}`} onClick={() => setAberta(true)} title="Tocar no Discord">
+        <Icone nome="discord" tamanho={16} />
+        <span className="saida-nome">
+          Discord
+          <small>{detalhe}</small>
+        </span>
+        {estado?.canal && <span className="luz" />}
+        {estado?.situacao === "erro" && <span className="luz apagada" />}
+      </button>
+      {aberta && <JanelaDiscord fechar={() => setAberta(false)} />}
+    </>
   );
 }

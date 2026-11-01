@@ -6,17 +6,18 @@ Python. Duas peças:
   Servidor local (FastAPI + WebSocket) que o painel usa pelo `MotorRemoto`:
   a fila mora aqui, o som sai daqui (yt-dlp + FFmpeg + caixa de som), e o
   acervo e as playlists também.
-- **`modules/bardo/`**: o Bardo, que veio do módulo de música da Natty e
-  agora é do Freddy (não fica em sincronia com a natty-bot). É dele que o
-  Freddy usa as regras (pedidos, busca no acervo, YouTube). Na Fase 2 o Cog
-  vira o bot do Freddy e perde o que era da Natty (`@Natty`, o 🎙 do Echo).
+- **`modules/bardo/`**: o Bardo, o cérebro musical que veio da Natty e
+  agora é do Freddy (não fica em sincronia com a natty-bot): entender
+  pedidos, buscar no acervo, falar com o YouTube. Só lógica, sem Discord.
+- **`freddy/bot/`**: o bot do Discord do Freddy (guia em
+  [`docs/discord.md`](docs/discord.md)).
 
 ## Ligar o Freddy
 
 ### Fedora
 
 ```bash
-sudo dnf install ffmpeg-free portaudio python3-pip
+sudo dnf install ffmpeg-free portaudio opus python3-pip
 cd backend
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
@@ -75,6 +76,10 @@ freddy/
 │   ├── saidas.py      caixa de som (sounddevice), muda; Discord na Fase 2
 │   ├── reprodutor_mesa.py   o Reprodutor de verdade
 │   └── reprodutor_falso.py  pros testes e o --sem-som
+├── bot/
+│   ├── bot.py         o bot do Discord: conecta, lista canais, entra na call
+│   ├── saida.py       a Mesa indo pra call (discord.AudioSource)
+│   └── conversa.py    "@Freddy toca…" → o mesmo Motor do painel
 ├── api/
 │   ├── app.py         FastAPI: REST + /ws
 │   ├── protocolo.py   as mensagens do WebSocket (validadas)
@@ -82,6 +87,7 @@ freddy/
 └── dados/
     ├── acervo.py      dataset do repositório + ajustes.json + aprendidas.json
     ├── planilha.py    o acervo em CSV, ida e volta
+    ├── segredos.py    o token do bot (discord.json, só o dono lê)
     └── playlists.py   playlists.json
 ```
 
@@ -103,6 +109,8 @@ validação em `protocolo.py` e um caso em `casos_contrato.json`.
 | `POST /acervo/planilha/salvar` | salva o CSV na pasta Downloads (o jeito que funciona no app) |
 | `POST /acervo/planilha?aplicar=` | manda o CSV editado: sem `aplicar`, só o resumo do que muda |
 | `GET /playlists`, `PUT /playlists/{id}`, `DELETE /playlists/{id}` | playlists salvas |
+| `GET /discord`, `PUT/DELETE /discord/token`, `POST /discord/religar` | o bot: situação, servidores e canais; guardar/esquecer o token |
+| `POST /discord/entrar`, `POST /discord/sair`, `PUT /discord/ouvir-aqui` | entrar na call, sair, ouvir a call na caixa |
 | `GET /youtube/info?link=` | título e duração de um link |
 | `POST /youtube/buscar` | `{texto}`: busca livre no YouTube |
 
@@ -145,5 +153,5 @@ instalado). O GitHub roda tudo isso e mais um teste de ponta a ponta: o
 
 ## Discord
 
-O estudo de como o Kenku FM fala com o Discord, e o plano da Fase 2, estão
-em [`docs/discord.md`](docs/discord.md).
+Criar o bot, usar e como funciona (inclusive o que veio do Kenku FM):
+[`docs/discord.md`](docs/discord.md).
