@@ -3,7 +3,7 @@ import { BarraDoPlayer } from "./componentes/BarraDoPlayer";
 import { Calopsita } from "./componentes/Calopsita";
 import { Icone } from "./componentes/Icone";
 import { acervoAtual } from "./dados/acervo";
-import { discord, preferenciaDeMotor } from "./dados/freddy";
+import { discord, freddyLigouDepois, preferenciaDeMotor } from "./dados/freddy";
 import { JanelaDiscord } from "./componentes/JanelaDiscord";
 import { modoAtual, videoAberto } from "./dados/preferencias";
 import { TEMAS, proximoTema, temaAtual } from "./dados/temas";
@@ -155,6 +155,7 @@ export function App({ palcoDoVideo }: { palcoDoVideo: HTMLElement | null }) {
         )}
       </aside>
 
+      <AvisoFreddyLigou />
       <main className="principal">
         <modo.Componente acervo={acervo} />
       </main>
@@ -221,5 +222,31 @@ function SaidaDiscord({ comFreddy }: { comFreddy: boolean }) {
       </button>
       {aberta && <JanelaDiscord fechar={() => setAberta(false)} />}
     </>
+  );
+}
+
+/** Tocando pelo navegador e o Freddy ligou: oferece trocar (recarrega o painel). */
+function AvisoFreddyLigou() {
+  const ligou = useArmazem(freddyLigouDepois);
+  const { tocando } = useEstadoDoMotor();
+  if (!ligou) return null;
+  return (
+    <div className="aviso-freddy" role="status">
+      <span>
+        🐦 O Freddy ligou. Usar ele?{tocando ? " (a fila de agora fica pra trás)" : ""}
+      </span>
+      <button
+        className="botao destaque"
+        onClick={() => {
+          preferenciaDeMotor.escrever("auto");
+          location.reload();
+        }}
+      >
+        Usar o Freddy
+      </button>
+      <button className="botao-texto" onClick={() => freddyLigouDepois.escrever(false)}>
+        Agora não
+      </button>
+    </div>
   );
 }

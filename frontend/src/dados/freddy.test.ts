@@ -1,5 +1,5 @@
-import { describe, expect, it } from "vitest";
-import { ApiFreddy, ErroDoFreddy, escolherFreddy, preferenciaEfetiva } from "./freddy";
+import { describe, expect, it, vi } from "vitest";
+import { ApiFreddy, ErroDoFreddy, escolherFreddy, preferenciaEfetiva, vigiarFreddy } from "./freddy";
 
 function falso(respostas: Record<string, { status?: number; corpo?: unknown } | "cai">) {
   const pedidos: { url: string; init?: RequestInit }[] = [];
@@ -63,7 +63,35 @@ describe("escolher o motor", () => {
 
   it("auto usa o Freddy só se ele responde", async () => {
     expect(await escolherFreddy("auto", ligado())).not.toBeNull();
-    expect(await escolherFreddy("auto", desligado())).toBeNull();
+    expect(await escolherFreddy("auto", desligado(), 2, 1)).toBeNull();
+  });
+
+  it("auto espera o Freddy que está acabando de ligar", async () => {
+    let perguntas = 0;
+    const api = new ApiFreddy("x:1", (async () => {
+      perguntas += 1;
+      if (perguntas < 3) throw new TypeError("Failed to fetch");
+      return new Response(JSON.stringify({ ok: true }));
+    }) as unknown as typeof fetch);
+    expect(await escolherFreddy("auto", api, 4, 1)).not.toBeNull();
+    expect(perguntas).toBe(3);
+  });
+
+  it("pelo navegador, avisa uma vez quando o Freddy liga", async () => {
+    vi.useFakeTimers();
+    let ligou = false;
+    let avisos = 0;
+    const api = new ApiFreddy("x:1", (async () => {
+      if (!ligou) throw new TypeError("Failed to fetch");
+      return new Response(JSON.stringify({ ok: true }));
+    }) as unknown as typeof fetch);
+    vigiarFreddy(() => avisos++, api, 1000);
+    await vi.advanceTimersByTimeAsync(3000);
+    expect(avisos).toBe(0);
+    ligou = true;
+    await vi.advanceTimersByTimeAsync(3000);
+    expect(avisos).toBe(1);
+    vi.useRealTimers();
   });
 
   it("navegador nunca usa; freddy usa mesmo desligado", async () => {

@@ -4,5 +4,5 @@
 usa pelo MotorRemoto. Ver backend/README.md.
 """
 
-VERSAO = "0.5.0"
+VERSAO = "0.5.1"
 PROTOCOLO = 1  # versão do protocolo do WebSocket (sobe quando quebrar o contrato)

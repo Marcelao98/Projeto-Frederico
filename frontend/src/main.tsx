@@ -2,7 +2,15 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { App } from "./App";
 import { acervoAtual, montarAcervo } from "./dados/acervo";
-import { discord, escolherFreddy, freddy, type EstadoDiscord } from "./dados/freddy";
+import {
+  discord,
+  escolherFreddy,
+  freddy,
+  freddyLigouDepois,
+  preferenciaEfetiva,
+  vigiarFreddy,
+  type EstadoDiscord,
+} from "./dados/freddy";
 import { definirAvisoDeFalha, usarPlaylistsDoFreddy } from "./dados/playlists";
 import { aplicarTema, temaAtual } from "./dados/temas";
 import { falaDoEvento } from "./modos/chat/conversa";
@@ -48,6 +56,9 @@ async function iniciar() {
     palcoDoVideo = document.createElement("div");
     palcoDoVideo.className = "palco-video";
     motor = new MotorLocal(new ReprodutorYoutube(palcoDoVideo));
+    // Se o Freddy ligar depois, a tela oferece trocar (sem trocar sozinha: a fila sumiria).
+    // (Quem escolheu "só navegador" de propósito não é incomodado.)
+    if (preferenciaEfetiva() === "auto") vigiarFreddy(() => freddyLigouDepois.escrever(true));
   }
 
   // Como o Bardo avisa no canal quando a fila anda sozinha.

@@ -96,8 +96,9 @@ Detalhes de cada lado em `frontend/README.md` e `backend/README.md`.
 # painel no navegador, recarrega sozinho (o jeito normal de testar)
 cd frontend && npm install && npm run dev        # http://localhost:5173
 
-# o backend (Fedora: sudo dnf install ffmpeg-free portaudio opus)
-cd backend && pip install -r requirements.txt && python -m freddy   # --sem-som finge que toca
+# o backend + o app, na ordem certa (Fedora: sudo dnf install ffmpeg-free portaudio opus)
+./freddy.sh                 # --sem-som finge que toca
+# ou só o backend: cd backend && pip install -r requirements.txt && python -m freddy
 
 # testes (o GitHub roda todos antes de compilar, mais o ponta a ponta)
 cd frontend && npm test && npm run build

@@ -215,16 +215,55 @@ export function preferenciaEfetiva(busca = typeof location !== "undefined" ? loc
   return preferenciaDeMotor.ler();
 }
 
+/** Quantas vezes perguntar se o Freddy está ligado ao abrir (ele pode estar acabando de ligar). */
+const TENTATIVAS_AO_ABRIR = 4;
+const ESPERA_ENTRE_TENTATIVAS_MS = 600;
+const espera = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
 /**
  * Qual motor usar: o Freddy (devolve a API) ou o navegador (null).
- * "auto" pergunta ao Freddy se ele está ligado; "freddy" usa mesmo
- * desligado (o MotorRemoto fica tentando religar).
+ * "auto" pergunta ao Freddy se ele está ligado, algumas vezes, porque o app
+ * pode abrir junto com ele (uns 3 s no total, só quando ele não responde);
+ * "freddy" usa mesmo desligado (o MotorRemoto fica tentando religar).
  */
 export async function escolherFreddy(
   preferencia: PreferenciaDeMotor = preferenciaEfetiva(),
   api: ApiFreddy = new ApiFreddy(enderecoDoFreddy.ler()),
+  tentativas = TENTATIVAS_AO_ABRIR,
+  esperaMs = ESPERA_ENTRE_TENTATIVAS_MS,
 ): Promise<ApiFreddy | null> {
   if (preferencia === "navegador") return null;
   if (preferencia === "freddy") return api;
-  return (await api.saude()) ? api : null;
+  for (let i = 0; i < tentativas; i++) {
+    if (await api.saude()) return api;
+    if (i < tentativas - 1) await espera(esperaMs);
+  }
+  return null;
 }
+
+/**
+ * Tocando pelo navegador, fica de olho: se o Freddy ligar depois, chama
+ * `aoLigar` (uma vez). Devolve a função de parar de olhar.
+ */
+export function vigiarFreddy(
+  aoLigar: () => void,
+  api: ApiFreddy = new ApiFreddy(enderecoDoFreddy.ler()),
+  intervaloMs = 5000,
+): () => void {
+  let parado = false;
+  const relogio = setInterval(async () => {
+    if (parado) return;
+    if (await api.saude()) {
+      parado = true;
+      clearInterval(relogio);
+      aoLigar();
+    }
+  }, intervaloMs);
+  return () => {
+    parado = true;
+    clearInterval(relogio);
+  };
+}
+
+/** O Freddy ligou depois que o painel abriu pelo navegador (a tela oferece trocar). */
+export const freddyLigouDepois = criarArmazem<boolean>(false);

@@ -17,12 +17,14 @@ Python. Duas peças:
 ### Fedora
 
 ```bash
-sudo dnf install ffmpeg-free portaudio opus python3-pip
-cd backend
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-python -m freddy
+sudo dnf install ffmpeg-free portaudio opus python3-pip   # uma vez (quem já tem o ffmpeg do RPM Fusion, pula o ffmpeg-free)
+~/Projeto-Frederico/freddy.sh
 ```
+
+O `freddy.sh` (na raiz do repositório) faz tudo na ordem certa: prepara o
+Python na primeira vez (e quando o `requirements.txt` muda), liga o backend,
+espera ele responder e só então abre o app. Ctrl+C desliga tudo.
+`freddy.sh --sem-som` finge que toca.
 
 O `ffmpeg-free` do Fedora basta: o Freddy pede áudio Opus ao YouTube, que
 ele toca sem o RPM Fusion.
@@ -44,9 +46,11 @@ python -m freddy
 ### Usando
 
 Com o Freddy ligado, abra o painel (o app instalado ou `npm run dev`). Ele
-acha o Freddy sozinho e mostra **"Este computador · pelo Freddy"** na barra
-lateral. Desligado, o painel toca pelo navegador como antes. Clicar nessa
-linha alterna entre os dois.
+acha o Freddy sozinho (espera uns 3 s, caso ele esteja acabando de ligar) e
+mostra **"Este computador · pelo Freddy"** na barra lateral. Desligado, o
+painel toca pelo navegador como antes; se o Freddy ligar depois, aparece
+"O Freddy ligou. Usar ele?". Clicar na linha "Este computador" alterna
+entre os dois.
 
 ```
 python -m freddy               toca na caixa de som
