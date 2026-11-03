@@ -53,6 +53,36 @@ export interface EstadoDiscord {
   ouvirAqui: boolean;
   /** false no --sem-som: conecta, mas não tem som pra mandar. */
   podeTocar: boolean;
+  /** O que está indo pra call agora (null fora da call). */
+  transmissao?: Transmissao | null;
+}
+
+/** O medidor do som indo pra call (backend/freddy/bot/saida.py). */
+export interface Transmissao {
+  conectado: boolean;
+  tocando: boolean;
+  quadros: number;
+  quadrosComSom: number;
+  /** O Discord pede 50 por segundo. */
+  quadrosPorSegundo: number;
+  comSomPorSegundo: number;
+  /** 0 a 32767. */
+  nivel: number;
+  segundosDesdeUltimo: number | null;
+}
+
+/** O modo debug: GET /diagnostico. */
+export interface Diagnostico {
+  bot: EstadoDiscord["situacao"];
+  canal: string | null;
+  transmissao: Transmissao | null;
+  mesa: {
+    musica: "sem música" | "carregando" | "tocando" | "engasgou" | "pausada" | "assobiando";
+    bufferSegundos: number;
+    nivelLocal: number;
+    mudoLocal: boolean;
+  } | null;
+  motor: { situacao: string; titulo: string | null };
 }
 
 export class ErroDoFreddy extends Error {
@@ -168,6 +198,15 @@ export class ApiFreddy {
 
   ouvirAqui(ligado: boolean) {
     return this.pedir<EstadoDiscord>("/discord/ouvir-aqui", { method: "PUT", body: JSON.stringify({ ligado }) });
+  }
+
+  /** O teste da call: o Frederico assobia só pelo Discord (o PC fica mudo). Volta quando acaba. */
+  assobiar() {
+    return this.pedir<EstadoDiscord>("/discord/assobio", { method: "POST", prazoMs: 15_000 });
+  }
+
+  diagnostico() {
+    return this.pedir<Diagnostico>("/diagnostico", { prazoMs: 3_000 });
   }
 
   playlists() {

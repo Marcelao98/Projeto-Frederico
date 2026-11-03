@@ -1,6 +1,6 @@
 {
   "name": "freddy-web",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Painel do Freddy: chat e playlist do som da mesa",
   "license": "GPL-3.0-only",
   "scripts": {

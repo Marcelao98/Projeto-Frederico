@@ -3,7 +3,7 @@ import { BarraDoPlayer } from "./componentes/BarraDoPlayer";
 import { Calopsita } from "./componentes/Calopsita";
 import { Icone } from "./componentes/Icone";
 import { acervoAtual } from "./dados/acervo";
-import { discord, freddyLigouDepois, preferenciaDeMotor } from "./dados/freddy";
+import { discord, freddy, freddyLigouDepois, preferenciaDeMotor } from "./dados/freddy";
 import { JanelaDiscord } from "./componentes/JanelaDiscord";
 import { modoAtual, videoAberto } from "./dados/preferencias";
 import { TEMAS, proximoTema, temaAtual } from "./dados/temas";
@@ -197,6 +197,7 @@ function OrigemDoSom({ comFreddy }: { comFreddy: boolean }) {
 /** A linha "Discord" da barra lateral: mostra onde o bot está e abre a janela. */
 function SaidaDiscord({ comFreddy }: { comFreddy: boolean }) {
   const estado = useArmazem(discord);
+  const api = useArmazem(freddy);
   const [aberta, setAberta] = useState(false);
   const detalhe = !comFreddy
     ? "precisa do Freddy"
@@ -220,6 +221,16 @@ function SaidaDiscord({ comFreddy }: { comFreddy: boolean }) {
         {estado?.canal && <span className="luz" />}
         {estado?.situacao === "erro" && <span className="luz apagada" />}
       </button>
+      {estado?.canal && estado.podeTocar && api && (
+        <label className="marcar so-na-call" title="Muta este PC: a música sai só pela call">
+          <input
+            type="checkbox"
+            checked={!estado.ouvirAqui}
+            onChange={(e) => void api.ouvirAqui(!e.target.checked).then((novo) => discord.escrever(novo)).catch(() => {})}
+          />
+          Só no Discord (mutar aqui)
+        </label>
+      )}
       {aberta && <JanelaDiscord fechar={() => setAberta(false)} />}
     </>
   );

@@ -19,8 +19,9 @@ from typing import Callable
 
 import numpy as np
 
+from freddy.audio.assobio import quadros_do_assobio
 from freddy.audio.fonte_ffmpeg import FonteFfmpeg
-from freddy.audio.pcm import BYTES_POR_QUADRO, SILENCIO
+from freddy.audio.pcm import BYTES_POR_QUADRO, QUADROS_POR_SEGUNDO, SILENCIO
 
 MAX_COPIAS = 25  # 0,5 s de folga entre o Discord e a caixa de som
 
@@ -40,6 +41,10 @@ class Mesa:
         self.ouvir_aqui = True
         self._copias: deque[bytes] = deque(maxlen=MAX_COPIAS)
         self._sobra_copia = b""
+        # O assobio de teste (toca no lugar da música enquanto durar).
+        self._assobio: list[bytes] = []
+        # Pro diagnóstico: o volume do que saiu na caixa de som (últimos ~0,5 s).
+        self._picos_local: deque[int] = deque(maxlen=25)
         # Chamados da thread do áudio, com a etiqueta da fonte: quem recebe
         # repassa pro loop do servidor e ignora etiqueta velha.
         self.ao_primeiro_quadro: Callable[[object], None] = lambda etiqueta: None
@@ -77,7 +82,9 @@ class Mesa:
     def ler_para_local(self, nbytes: int = BYTES_POR_QUADRO) -> bytes:
         """O que a caixa de som toca: a Mesa mesmo, ou a cópia do Discord."""
         if not self.no_discord:
-            return self.ler(nbytes)
+            saiu = self.ler(nbytes)
+            self._picos_local.append(pico(saiu))
+            return saiu
         partes, tem = [self._sobra_copia], len(self._sobra_copia)
         while tem < nbytes:
             try:
@@ -88,7 +95,9 @@ class Mesa:
             tem += len(q)
         junto = b"".join(partes)
         self._sobra_copia = junto[nbytes:]
-        return junto[:nbytes]
+        saiu = junto[:nbytes]
+        self._picos_local.append(pico(saiu))
+        return saiu
 
     def entrar_no_discord(self) -> None:
         self._copias.clear()
@@ -99,8 +108,42 @@ class Mesa:
         self.no_discord = False
         self._copias.clear()
 
+    def assobiar(self) -> float:
+        """Toca o assobio do Frederico (no lugar da música). Devolve quantos segundos dura."""
+        quadros = list(quadros_do_assobio())
+        with self._trava:
+            self._assobio = quadros
+        return len(quadros) / QUADROS_POR_SEGUNDO
+
+    @property
+    def assobiando(self) -> bool:
+        return bool(self._assobio)
+
+    def diagnostico(self) -> dict:
+        """O que a Mesa está fazendo agora (pro modo debug do painel)."""
+        fonte = self._fonte
+        buffer = getattr(fonte, "segundos_no_buffer", 0.0) if fonte is not None else 0.0
+        if self._assobio:
+            musica = "assobiando"
+        elif fonte is None:
+            musica = "sem música"
+        elif self.pausada:
+            musica = "pausada"
+        elif buffer > 0:
+            musica = "tocando"
+        else:
+            musica = "engasgou" if self.quadros_tocados else "carregando"
+        return {
+            "musica": musica,
+            "bufferSegundos": round(buffer, 1),
+            "nivelLocal": max(self._picos_local, default=0),
+            "mudoLocal": self.no_discord and not self.ouvir_aqui,
+        }
+
     def _quadro(self) -> bytes:
         with self._trava:
+            if self._assobio:
+                return self._assobio.pop(0)
             fonte, etiqueta = self._fonte, self._etiqueta
             if fonte is None or self.pausada:
                 return SILENCIO
@@ -133,3 +176,10 @@ def aplicar_ganho(quadro: bytes, ganho: float) -> bytes:
         return SILENCIO
     amostras = np.frombuffer(quadro, dtype=np.int16).astype(np.float32) * ganho
     return np.clip(amostras, -32768, 32767).astype(np.int16).tobytes()
+
+
+def pico(quadro: bytes) -> int:
+    """O volume mais alto do trecho (0 a 32767)."""
+    if not quadro or quadro == SILENCIO:
+        return 0
+    return int(np.abs(np.frombuffer(quadro[: len(quadro) // 2 * 2], dtype=np.int16).astype(np.int32)).max())

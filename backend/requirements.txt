@@ -1,7 +1,7 @@
 # Bardo (o cérebro musical) e o bot do Discord do Freddy (freddy/bot)
 discord.py>=2.4.0
 PyNaCl>=1.5.0
-davey>=0.1.6
+davey>=0.1.6,<0.2   # 0.2 mudou a API e o discord.py 2.7 não fica pronto pra cifrar (DAVE): a call fica muda
 yt-dlp>=2024.12.13
 python-dotenv>=1.0.0
 

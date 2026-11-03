@@ -2132,3 +2132,87 @@ a.botao {
   font-size: 14px;
   max-width: calc(100% - 32px);
 }
+
+/* --- Discord: só na call, teste do assobio e diagnóstico --------------- */
+
+.so-na-call {
+  padding: 2px 6px 4px 31px;
+  font-size: 12.5px;
+  color: var(--texto-2);
+}
+
+.teste-call {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--raio-p);
+  border: 1px solid var(--borda);
+}
+
+.teste-linha {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+}
+
+.teste-linha .apagado {
+  font-size: 12.5px;
+}
+
+.diagnostico summary {
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--texto-2);
+}
+
+.diagnostico dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 6px 12px;
+  margin: 10px 0 0;
+  font-size: 13px;
+}
+
+.diagnostico dt {
+  color: var(--texto-3);
+}
+
+.diagnostico dd {
+  margin: 0;
+  min-width: 0;
+}
+
+.diagnostico .aviso {
+  color: var(--aviso);
+  font-weight: 600;
+}
+
+.nivel {
+  display: inline-block;
+  width: 70px;
+  height: 7px;
+  margin-right: 8px;
+  vertical-align: middle;
+  border-radius: 4px;
+  background: var(--painel-3);
+  overflow: hidden;
+}
+
+.nivel span {
+  display: block;
+  height: 100%;
+  background: var(--ok);
+  transition: width 0.15s linear;
+}
+
+@media (max-width: 480px) {
+  .diagnostico dl {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  .diagnostico dd {
+    margin-bottom: 6px;
+  }
+}

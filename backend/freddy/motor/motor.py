@@ -100,7 +100,8 @@ class Motor:
         if not r.entraram:
             return {"entraram": 0, "posicao": -1, "comecou": False}
         if nada_tocava or onde == "agora":
-            self.fila = F.avancar(r.fila) if nada_tocava else r.fila
+            # "agora" já põe a primeira tocando; avançar aqui jogaria ela fora.
+            self.fila = F.avancar(r.fila) if nada_tocava and onde != "agora" else r.fila
             self._tocar_atual()
             return {"entraram": r.entraram, "posicao": 0, "comecou": True}
         self._mudar_fila(r.fila)

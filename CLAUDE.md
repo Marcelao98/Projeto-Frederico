@@ -61,6 +61,13 @@ Detalhes de cada lado em `frontend/README.md` e `backend/README.md`.
   (`SaidaDiscord`) e a caixa de som toca a cópia (`Mesa.ler_para_local`):
   nunca dois puxando a Mesa. Token só na pasta do mestre (`discord.json`) ou
   em `FREDDY_DISCORD_TOKEN`. Ids do Discord vão pro painel como texto.
+  O player segue o Kenku (`PlaybackManager.ts`): play com uma `SaidaDiscord`
+  nova quando o som começa, stop quando acaba. **`davey` fica em `<0.2`**: a
+  0.2 mudou a API e o discord.py 2.7 nunca fica pronto pra cifrar (DAVE), e
+  a call fica muda sem erro nenhum. Pra testar a call: janela do Discord →
+  🐦 assobio (o PC fica mudo, então se ouviu, veio pela call) e
+  "Diagnóstico" (`GET /diagnostico`: quadros indo pra call, nível, buffer,
+  DAVE pronta/criptografando).
   Aqui na nuvem não dá pra testar o Discord de verdade (o proxy bloqueia
   discord.com): teste com dublês e peça pro Marcelo testar na call.
 - **Porta do Freddy: 47824**, só em `127.0.0.1`, e o `/ws` só aceita as

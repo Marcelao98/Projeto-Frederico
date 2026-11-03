@@ -6,7 +6,7 @@
  */
 
 import { useEffect, useState } from "react";
-import { discord, freddy, type EstadoDiscord } from "../dados/freddy";
+import { discord, freddy, type Diagnostico, type EstadoDiscord } from "../dados/freddy";
 import { useArmazem } from "../dados/useArmazem";
 import { Icone } from "./Icone";
 
@@ -184,6 +184,8 @@ function Conteudo({
         Ouvir aqui também (o som da call sai na caixa deste computador)
       </label>
 
+      {estado.canal && estado.podeTocar && <Teste ocupado={ocupado} fazer={fazer} />}
+
       {estado.servidores.length === 0 ? (
         <p className="apagado">O bot ainda não está em nenhum servidor. Usa o convite aí em cima.</p>
       ) : (
@@ -231,5 +233,95 @@ function Conteudo({
         </button>
       )}
     </div>
+  );
+}
+
+/**
+ * Testar a call e o modo debug: o assobio do Frederico (só pelo Discord) e,
+ * aberto, os números do que está saindo (2x por segundo, só enquanto aberto).
+ */
+function Teste({
+  ocupado,
+  fazer,
+}: {
+  ocupado: string | null;
+  fazer: (qual: string, acao: () => Promise<EstadoDiscord>) => Promise<void>;
+}) {
+  const api = useArmazem(freddy)!;
+  const [aberto, setAberto] = useState(false);
+  const [diag, setDiag] = useState<Diagnostico | null>(null);
+
+  useEffect(() => {
+    if (!aberto) return;
+    let vivo = true;
+    const pedir = () =>
+      api
+        .diagnostico()
+        .then((d) => vivo && setDiag(d))
+        .catch(() => vivo && setDiag(null));
+    void pedir();
+    const t = window.setInterval(pedir, 500);
+    return () => {
+      vivo = false;
+      window.clearInterval(t);
+    };
+  }, [aberto, api]);
+
+  const t = diag?.transmissao;
+  const m = diag?.mesa;
+  const puxando = t ? t.quadrosPorSegundo >= 40 : false;
+
+  return (
+    <div className="teste-call">
+      <div className="teste-linha">
+        <button className="botao" disabled={ocupado !== null} onClick={() => void fazer("assobio", () => api.assobiar())}>
+          🐦 {ocupado === "assobio" ? "Assobiando…" : "Testar: o Frederico assobia na call"}
+        </button>
+        <span className="apagado">O PC fica mudo: se você ouviu o assobio, veio pelo Discord.</span>
+      </div>
+
+      <details className="diagnostico" onToggle={(e) => setAberto((e.target as HTMLDetailsElement).open)}>
+        <summary>Diagnóstico (modo debug)</summary>
+        {!diag ? (
+          <p className="apagado">Perguntando pro Freddy…</p>
+        ) : (
+          <dl>
+            <dt>Indo pra call</dt>
+            <dd>
+              <Nivel valor={t?.nivel ?? 0} />
+              {t
+                ? `${t.quadrosPorSegundo}/50 quadros por segundo, ${t.comSomPorSegundo} com som`
+                : "fora da call"}
+              {t && !puxando && <strong className="aviso"> · o Discord não está puxando o som</strong>}
+            </dd>
+            <dt>Saindo neste PC</dt>
+            <dd>
+              <Nivel valor={m?.mudoLocal ? 0 : (m?.nivelLocal ?? 0)} />
+              {m?.mudoLocal ? "mudo (só na call)" : "ligado"}
+            </dd>
+            <dt>Música</dt>
+            <dd>
+              {m?.musica ?? "—"}
+              {m?.musica === "engasgou" && <strong className="aviso"> · esperando o YouTube mandar mais</strong>}
+              {m && m.musica !== "sem música" && m.musica !== "assobiando" && ` · ${m.bufferSegundos.toFixed(1)} s guardados`}
+              {diag.motor.titulo && <div className="apagado">{diag.motor.titulo}</div>}
+            </dd>
+            <dt>Player do Discord</dt>
+            <dd>{t ? (t.tocando ? "rodando" : "parado") : "—"}{t && ` · ${t.quadros} quadros desde que entrou`}</dd>
+          </dl>
+        )}
+      </details>
+    </div>
+  );
+}
+
+/** Barrinha de volume: 0 a 32767 em escala de ouvido (dB), pra mexer com a música. */
+function Nivel({ valor }: { valor: number }) {
+  const db = valor > 0 ? 20 * Math.log10(valor / 32767) : -60;
+  const pct = Math.max(0, Math.min(100, ((db + 60) / 60) * 100));
+  return (
+    <span className="nivel" aria-hidden="true">
+      <span style={{ width: `${pct}%` }} />
+    </span>
   );
 }

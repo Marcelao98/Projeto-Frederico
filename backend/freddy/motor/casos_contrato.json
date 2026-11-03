@@ -2,6 +2,14 @@
   "_comentario": "Casos do contrato do Motor, rodados pelos DOIS lados: frontend/src/motor/contrato.test.ts (MotorLocal) e backend/freddy/motor/test_contrato.py (Motor do backend). Mudou uma regra do motor? Acrescente o caso aqui e os dois testes cobram. Formato dos passos: 'executar' (comando; músicas como número n = {titulo: 'Música n', link: 'https://youtu.be/vn'}, ou {'intervalo': [de, ate]}; uid como '$proximas.N' ou '$tocando') com 'resultado' esperado; 'reprodutor' (fim, tocando, erro, titulo) com 'arg'; 'estado' (tocando e proximas pelos títulos); 'eventos' (todos desde o começo); 'carregados' (números das músicas mandadas pro reprodutor); 'volume_reprodutor'.",
   "casos": [
     {
+      "nome": "\"agora\" com nada tocando toca a pedida (não pula ela)",
+      "passos": [
+        { "executar": { "tipo": "adicionar", "musicas": [1, 2], "onde": "agora" }, "resultado": { "entraram": 2, "posicao": 0, "comecou": true } },
+        { "estado": { "tocando": "Música 1", "proximas": ["Música 2"], "situacao": "carregando" } },
+        { "carregados": [1] }
+      ]
+    },
+    {
       "nome": "a primeira começa a tocar e as outras entram na fila",
       "passos": [
         { "executar": { "tipo": "adicionar", "musicas": [1, 2] }, "resultado": { "entraram": 2, "posicao": 0, "comecou": true } },

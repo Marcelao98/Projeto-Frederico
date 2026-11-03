@@ -150,14 +150,76 @@ class TestSomDaCall(unittest.TestCase):
         SaidaDiscord(mesa).read()
         self.assertEqual(mesa.ler_para_local(), SILENCIO)
 
-    def test_sair_do_discord_devolve_a_mesa_pra_caixa(self):
+    def test_player_parado_nao_tira_a_mesa_do_discord(self):
         mesa = Mesa()
         mesa.entrar_no_discord()
-        SaidaDiscord(mesa).cleanup()
+        SaidaDiscord(mesa).cleanup()  # o bot parou o player (música parou)
+        self.assertTrue(mesa.no_discord)
+        mesa.sair_do_discord()  # saiu da call
         self.assertFalse(mesa.no_discord)
 
     def test_quadro_sempre_do_tamanho_do_discord(self):
         self.assertEqual(len(SaidaDiscord(Mesa()).read()), 3840)
+
+    def test_medidor_conta_o_que_foi_pra_call(self):
+        mesa = Mesa()
+        mesa.ganho = 1.0
+        mesa.assobiar()
+        saida = SaidaDiscord(mesa)
+        for _ in range(10):
+            saida.read()
+        med = saida.medidor()
+        self.assertEqual((med["quadros"], med["quadrosPorSegundo"]), (10, 10))
+        self.assertGreater(med["comSomPorSegundo"], 0)
+        self.assertGreater(med["nivel"], 1000)
+
+    def test_assobio_toca_no_lugar_da_musica_e_depois_ela_volta(self):
+        from freddy.audio.assobio import quadros_do_assobio
+
+        mesa = Mesa()
+        mesa.ganho = 1.0
+        musica = [self.tom(100)] * 3
+
+        class Fonte:
+            esgotada = False
+            segundos_no_buffer = 1.0
+
+            def ler_quadro(self):
+                return musica.pop(0) if musica else None
+
+            def fechar(self):
+                pass
+
+        mesa.trocar(Fonte())
+        segundos = mesa.assobiar()
+        self.assertGreater(segundos, 1)
+        self.assertEqual(mesa.diagnostico()["musica"], "assobiando")
+        assobio = quadros_do_assobio()
+        self.assertEqual([mesa.ler() for _ in assobio], list(assobio))
+        self.assertEqual(mesa.ler(), self.tom(100))  # a música segue de onde estava
+        self.assertEqual(mesa.diagnostico()["musica"], "tocando")
+
+    def test_diagnostico_avisa_engasgo(self):
+        mesa = Mesa()
+
+        class Vazia:
+            esgotada = False
+            segundos_no_buffer = 0.0
+
+            def ler_quadro(self):
+                return None
+
+            def fechar(self):
+                pass
+
+        mesa.trocar(Vazia())
+        self.assertEqual(mesa.diagnostico()["musica"], "carregando")
+        mesa.quadros_tocados = 10
+        self.assertEqual(mesa.diagnostico()["musica"], "engasgou")
+        mesa.entrar_no_discord()
+        mesa.ouvir_aqui = False
+        self.assertTrue(mesa.diagnostico()["mudoLocal"])
+
 
 
 class TestSegredos(unittest.TestCase):
@@ -200,6 +262,82 @@ class TestBotSemConectar(unittest.TestCase):
         bot = BotDoFreddy(Motor(ReprodutorFalso()), ReprodutorFalso(), None, Segredos(pasta / "d.json"))  # type: ignore[arg-type]
         with self.assertRaisesRegex(ErroDoBot, "não está conectado"):
             asyncio.run(bot.entrar(1))
+
+
+    def test_so_na_call_fica_guardado(self):
+        pasta = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, pasta, True)
+
+        class ComMesa(ReprodutorFalso):
+            def __init__(self):
+                super().__init__()
+                self.mesa = Mesa()
+
+        bot = BotDoFreddy(Motor(ReprodutorFalso()), ComMesa(), None, Segredos(pasta / "d.json"))  # type: ignore[arg-type]
+        self.assertTrue(bot.mesa.ouvir_aqui)
+        bot.definir_ouvir_aqui(False)
+        de_novo = BotDoFreddy(Motor(ReprodutorFalso()), ComMesa(), None, Segredos(pasta / "d.json"))  # type: ignore[arg-type]
+        self.assertFalse(de_novo.mesa.ouvir_aqui)
+        self.assertFalse(de_novo.estado()["ouvirAqui"])
+
+    def test_assobio_pede_call_e_diagnostico_responde(self):
+        from freddy.bot.bot import ErroDoBot
+
+        pasta = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, pasta, True)
+
+        class ComMesa(ReprodutorFalso):
+            def __init__(self):
+                super().__init__()
+                self.mesa = Mesa()
+
+        bot = BotDoFreddy(Motor(ReprodutorFalso()), ComMesa(), None, Segredos(pasta / "d.json"))  # type: ignore[arg-type]
+        with self.assertRaisesRegex(ErroDoBot, "nenhuma call"):
+            asyncio.run(bot.assobiar())
+        d = bot.diagnostico()
+        self.assertEqual((d["bot"], d["canal"], d["transmissao"]), ("desligado", None, None))
+        self.assertEqual(d["mesa"]["musica"], "sem música")
+
+
+    def test_toca_na_call_so_quando_tem_som_como_o_kenku(self):
+        pasta = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, pasta, True)
+
+        class ComMesa(ReprodutorFalso):
+            def __init__(self):
+                super().__init__()
+                self.mesa = Mesa()
+
+        class VozFalsa:
+            def __init__(self):
+                self.tocando = None
+                self.channel = None
+
+            def is_connected(self):
+                return True
+
+            def is_playing(self):
+                return self.tocando is not None
+
+            def play(self, fonte, after=None):
+                self.tocando = fonte
+
+            def stop(self):
+                self.tocando = None
+
+        reprodutor = ComMesa()
+        motor = Motor(reprodutor)
+        bot = BotDoFreddy(motor, reprodutor, None, Segredos(pasta / "d.json"))  # type: ignore[arg-type]
+        bot.voz = VozFalsa()  # type: ignore[assignment]
+        bot._atualizar_player()
+        self.assertFalse(bot.voz.is_playing())  # parado: nada de silêncio na call
+        motor.executar({"tipo": "adicionar", "musicas": [m(1)]})
+        self.assertIsInstance(bot.voz.tocando, SaidaDiscord)
+        primeira = bot.voz.tocando
+        motor.executar({"tipo": "parar"})
+        self.assertFalse(bot.voz.is_playing())
+        motor.executar({"tipo": "adicionar", "musicas": [m(2)]})
+        self.assertIsNot(bot.voz.tocando, primeira)  # recurso novo a cada play
 
 
 if __name__ == "__main__":

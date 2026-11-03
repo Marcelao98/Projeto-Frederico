@@ -1,6 +1,7 @@
 /** A barra de baixo: o que toca, os controles e o volume. Igual em todos os modos. */
 
 import { useEffect, useState } from "react";
+import { discord, freddy } from "../dados/freddy";
 import { videoAberto } from "../dados/preferencias";
 import { useArmazem } from "../dados/useArmazem";
 import { useEstadoDoMotor, useMotor, useProgresso } from "../motor/contexto";
@@ -15,6 +16,11 @@ export function BarraDoPlayer() {
   const [arrastando, setArrastando] = useState<number | null>(null);
   const comVideo = useArmazem(videoAberto);
   const [volumeAntesDoMudo, setVolumeAntesDoMudo] = useState<number | null>(null);
+  const bot = useArmazem(discord);
+  const api = useArmazem(freddy);
+  // Com o bot numa call: mutar só este PC e deixar tocando na call (pra testar).
+  const naCall = Boolean(api && bot?.canal && bot.podeTocar);
+  const soNaCall = naCall && bot?.ouvirAqui === false;
 
   useEffect(() => setArrastando(null), [tocando?.uid]);
 
@@ -128,6 +134,16 @@ export function BarraDoPlayer() {
         >
           <Icone nome="video" />
         </button>
+        {naCall && (
+          <button
+            className={`botao-icone ${soNaCall ? "ligado" : ""}`}
+            onClick={() => void api?.ouvirAqui(soNaCall).then((e) => discord.escrever(e)).catch(() => {})}
+            aria-pressed={soNaCall}
+            title={soNaCall ? "Tocando só no Discord. Clique pra ouvir neste PC também" : "Tocar só no Discord (muta este PC)"}
+          >
+            <Icone nome="discord" />
+          </button>
+        )}
         <button className="botao-icone" onClick={alternarMudo} title={volume ? "Mudo" : "Tirar do mudo"}>
           <Icone nome={volume ? "volume" : "mudo"} />
         </button>

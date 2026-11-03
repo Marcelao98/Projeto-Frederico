@@ -7,7 +7,8 @@ O jeito de conectar vem do Kenku FM (src/main/broadcast/DiscordBroadcast.ts,
   sem o intent privilegiado de conteúdo, então não precisa ligar nada no portal;
 - ao conectar, lista os servidores do bot e os canais de voz de cada um, na
   ordem do Discord, pro painel escolher;
-- um player só, que nunca para (saida.py); erros viram aviso no painel.
+- toca quando tem som e para quando acaba, igual ao PlaybackManager.ts do
+  Kenku (play com uma saída nova / stop); erros viram aviso no painel.
 
 Diferenças do Kenku: um bot compartilhado (token só no backend), o chat do
 Discord manda na mesma fila do painel, e ele sai sozinho da call vazia.
@@ -17,6 +18,7 @@ Roda no mesmo loop do servidor (FastAPI): nada de thread extra.
 from __future__ import annotations
 
 import asyncio
+import json
 import logging
 import re
 from typing import Callable
@@ -61,11 +63,17 @@ class BotDoFreddy:
         self.situacao = "desligado"  # desligado | conectando | conectado | erro
         self.erro: str | None = None
         self.voz: discord.VoiceClient | None = None
+        self.saida: SaidaDiscord | None = None
         self.canal_de_texto: discord.abc.Messageable | None = None
         self._sozinho: asyncio.Task | None = None
         self._saindo = False
         self.ao_mudar: Callable[[], None] = lambda: None
         motor.ao_evento(self._evento)
+        motor.inscrever(self._atualizar_player)
+        # "Ouvir aqui" (ou só na call) fica guardado entre uma vez e outra.
+        self._arquivo_preferencias = segredos.arquivo.with_name("preferencias.json")
+        if self.mesa is not None:
+            self.mesa.ouvir_aqui = self._preferencias().get("ouvirAqui", True)
 
     @property
     def mesa(self):
@@ -108,7 +116,15 @@ class BotDoFreddy:
             "canal": canal,
             "ouvirAqui": mesa.ouvir_aqui if mesa is not None else True,
             "podeTocar": mesa is not None,
+            "transmissao": self._transmissao(),
         }
+
+    def _transmissao(self) -> dict | None:
+        """O que de fato está indo pra call (pra testar sem ouvir)."""
+        voz, saida = self.voz, self.saida
+        if voz is None or saida is None:
+            return None
+        return {"conectado": voz.is_connected(), "tocando": voz.is_playing(), "dave": _dave(voz), **saida.medidor()}
 
     def _notificar(self) -> None:
         try:
@@ -217,14 +233,12 @@ class BotDoFreddy:
             raise ErroDoBot("o Discord não deixou entrar na call (demorou demais)") from e
         except discord.ClientException as e:
             raise ErroDoBot(f"não consegui entrar na call ({e})") from e
-        mesa.entrar_no_discord()
-        try:
-            voz.play(SaidaDiscord(mesa), after=self._player_parou)
-        except discord.opus.OpusNotLoaded as e:
-            mesa.sair_do_discord()
+        if not discord.opus.is_loaded() and not discord.opus._load_default():
             await voz.disconnect(force=True)
-            raise ErroDoBot("falta a biblioteca Opus (Fedora: sudo dnf install opus)") from e
+            raise ErroDoBot("falta a biblioteca Opus (Fedora: sudo dnf install opus)")
+        mesa.entrar_no_discord()
         self.voz = voz
+        self._atualizar_player()
         log.info("Entrei em #%s (%s)", canal.name, canal.guild.name)
         self._notificar()
         self._conferir_sozinho()
@@ -232,6 +246,9 @@ class BotDoFreddy:
     async def sair(self) -> None:
         self._cancelar_sozinho()
         voz, self.voz = self.voz, None
+        self.saida = None
+        if voz is not None and voz.is_playing():
+            voz.stop()
         if voz is not None:
             try:
                 await voz.disconnect(force=True)
@@ -245,11 +262,91 @@ class BotDoFreddy:
     def definir_ouvir_aqui(self, ligado: bool) -> None:
         if self.mesa is not None:
             self.mesa.ouvir_aqui = ligado
+        self._guardar_preferencia("ouvirAqui", ligado)
         self._notificar()
+
+    def _preferencias(self) -> dict:
+        try:
+            return json.loads(self._arquivo_preferencias.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            return {}
+
+    def _guardar_preferencia(self, chave: str, valor) -> None:
+        from freddy.dados.playlists import gravar_json
+
+        try:
+            gravar_json(self._arquivo_preferencias, {**self._preferencias(), chave: valor})
+        except OSError:
+            log.warning("Não consegui guardar a preferência %s", chave)
+
+    # --- teste e diagnóstico -----------------------------------------------
+
+    async def assobiar(self) -> None:
+        """O teste da call: o PC fica mudo e o Frederico assobia só pelo Discord."""
+        mesa = self.mesa
+        if mesa is None:
+            raise ErroDoBot("no modo --sem-som não tem som pra mandar pro Discord")
+        if self.voz is None or not self.voz.is_connected():
+            raise ErroDoBot("o bot não está em nenhuma call: entra num canal primeiro")
+        if mesa.assobiando:
+            return
+        ouvia = mesa.ouvir_aqui
+        mesa.ouvir_aqui = False  # sem tocar no arquivo: é só durante o assobio
+        self._notificar()
+        try:
+            segundos = mesa.assobiar()
+            self._atualizar_player()
+            await asyncio.sleep(segundos + 0.6)  # + a folga da cópia
+        finally:
+            mesa.ouvir_aqui = ouvia
+            self._atualizar_player()
+            self._notificar()
+
+    def diagnostico(self) -> dict:
+        """Tudo que ajuda a saber por onde o som está saindo (modo debug do painel)."""
+        mesa = self.mesa
+        tocando = self.motor.estado().get("tocando")
+        return {
+            "bot": self.situacao,
+            "canal": self.voz.channel.name if self.voz is not None and self.voz.channel is not None else None,
+            "transmissao": self._transmissao(),
+            "mesa": mesa.diagnostico() if mesa is not None else None,
+            "motor": {"situacao": self.motor.estado().get("situacao"), "titulo": tocando.get("titulo") if tocando else None},
+        }
 
     def _player_parou(self, erro: Exception | None) -> None:
         if erro:
             log.error("O player do Discord parou: %s", erro)
+
+    # --- o player da call, do jeito do Kenku -------------------------------
+    # Kenku (PlaybackManager.ts): som começou → audioPlayer.play(recurso novo);
+    # som acabou → audioPlayer.stop(). Aqui: motor tocando/carregando (ou o
+    # assobio) → voz.play(SaidaDiscord nova); parou → voz.stop().
+
+    def _deve_tocar(self) -> bool:
+        mesa = self.mesa
+        if mesa is not None and mesa.assobiando:
+            return True
+        return self.motor.estado().get("situacao") in ("tocando", "carregando")
+
+    def _atualizar_player(self) -> None:
+        voz, mesa = self.voz, self.mesa
+        if voz is None or mesa is None or not voz.is_connected():
+            return
+        if self._deve_tocar():
+            if not voz.is_playing():
+                saida = SaidaDiscord(mesa)
+                try:
+                    voz.play(saida, after=self._player_parou)
+                except Exception as e:  # noqa: BLE001
+                    log.exception("Não consegui tocar na call")
+                    self._mudar(self.situacao, f"não consegui tocar na call ({e})")
+                    return
+                self.saida = saida
+                log.info("Tocando na call")
+        elif voz.is_playing():
+            voz.stop()
+            log.info("Parei de tocar na call")
 
     # --- sozinho na call ---------------------------------------------------
 
@@ -388,6 +485,19 @@ class BotDoFreddy:
             return
         asyncio.get_running_loop().create_task(self._enviar(self.canal_de_texto, fala_do_evento(evento)))
 
+
+def _dave(voz) -> dict | None:
+    """A criptografia de ponta a ponta da call (DAVE): se o som sai cifrado do jeito que o Discord espera."""
+    con = getattr(voz, "_connection", None)
+    if con is None:
+        return None
+    sessao = getattr(con, "dave_session", None)
+    return {
+        "versao": getattr(con, "dave_protocol_version", None),
+        "pronta": bool(sessao and sessao.ready),
+        "criptografando": bool(getattr(con, "can_encrypt", False)),
+        "modo": getattr(voz, "mode", None),
+    }
 
 def _cortar(texto: str) -> str:
     return texto if len(texto) <= LIMITE_DE_MENSAGEM else texto[: LIMITE_DE_MENSAGEM - 1] + "…"

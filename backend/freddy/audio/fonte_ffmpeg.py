@@ -58,6 +58,11 @@ class FonteFfmpeg:
             return None
 
     @property
+    def segundos_no_buffer(self) -> float:
+        """Quanto de música já chegou e está esperando pra tocar."""
+        return self._buffer.qsize() / 50
+
+    @property
     def esgotada(self) -> bool:
         """O FFmpeg terminou e o buffer já foi todo tocado."""
         return self._acabou.is_set() and self._buffer.empty()

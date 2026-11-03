@@ -71,7 +71,8 @@ export class MotorLocal implements Motor {
         const r = F.adicionar(this.fila, c.musicas, nadaTocava && onde !== "agora" ? "fim" : onde);
         if (!r.entraram) return { entraram: 0, posicao: -1, comecou: false };
         if (nadaTocava || onde === "agora") {
-          this.fila = nadaTocava ? F.avancar(r.fila) : r.fila;
+          // "agora" já põe a primeira tocando; avançar aqui jogaria ela fora.
+          this.fila = nadaTocava && onde !== "agora" ? F.avancar(r.fila) : r.fila;
           this.tocarAtual();
           return { entraram: r.entraram, posicao: 0, comecou: true };
         }

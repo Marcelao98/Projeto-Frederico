@@ -271,6 +271,21 @@ def criar_app(
         await app.state.bot.sair()
         return app.state.bot.estado()
 
+    @app.post("/discord/assobio")
+    async def assobio():
+        """O teste da call: o Frederico assobia só pelo Discord (o PC fica mudo)."""
+        from freddy.bot.bot import ErroDoBot
+
+        try:
+            await app.state.bot.assobiar()
+        except ErroDoBot as e:
+            raise HTTPException(409, str(e)) from e
+        return app.state.bot.estado()
+
+    @app.get("/diagnostico")
+    def diagnostico():
+        return app.state.bot.diagnostico()
+
     @app.put("/discord/ouvir-aqui")
     def ouvir_aqui(pedido: Ligado):
         app.state.bot.definir_ouvir_aqui(pedido.ligado)
