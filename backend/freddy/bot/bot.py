@@ -167,6 +167,7 @@ class BotDoFreddy:
         espera.cancel()
         if tarefa in feito and tarefa.exception() is not None:
             e = tarefa.exception()
+            log.warning("Não conectei no Discord: %r", e)
             if isinstance(e, discord.LoginFailure):
                 motivo = "token inválido (confere se copiou o token do bot inteiro, em Bot → Reset Token)"
             elif isinstance(e, OSError):  # inclui o "Cannot connect to host" do aiohttp

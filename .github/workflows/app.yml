@@ -109,10 +109,18 @@ jobs:
           pyinstaller --onefile --name freddy-backend --paths . \
             --add-data "modules/bardo/dataset${sep}modules/bardo/dataset" \
             --collect-submodules uvicorn --collect-all discord --collect-all davey \
-            --collect-submodules yt_dlp --hidden-import sounddevice \
+            --collect-submodules yt_dlp --hidden-import sounddevice --collect-data certifi \
             freddy_backend.py
           mkdir -p ../frontend/src-tauri/binaries
           cp "dist/freddy-backend$ext" "../frontend/src-tauri/binaries/freddy-backend-$alvo$ext"
+          if [ "$alvo" = universal-apple-darwin ]; then
+            # O build universal compila cada processador separado e procura um
+            # backend com o nome de cada um. (O backend é só do processador
+            # do runner, Apple Silicon: Mac Intel ainda fica sem.)
+            for a in aarch64-apple-darwin x86_64-apple-darwin; do
+              cp dist/freddy-backend "../frontend/src-tauri/binaries/freddy-backend-$a"
+            done
+          fi
           ls -la ../frontend/src-tauri/binaries
       - name: FFmpeg junto (Windows)
         if: runner.os == 'Windows'

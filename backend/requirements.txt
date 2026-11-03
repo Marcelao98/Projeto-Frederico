@@ -4,6 +4,7 @@ PyNaCl>=1.5.0
 davey>=0.1.6,<0.2   # 0.2 mudou a API e o discord.py 2.7 não fica pronto pra cifrar (DAVE): a call fica muda
 yt-dlp>=2024.12.13
 python-dotenv>=1.0.0
+certifi>=2024.2.2   # os certificados HTTPS do backend empacotado (freddy_backend.py)
 
 # Freddy (python -m freddy): servidor local, áudio e dados do mestre
 fastapi>=0.115.0
