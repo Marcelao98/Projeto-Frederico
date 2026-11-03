@@ -96,6 +96,14 @@ Detalhes de cada lado em `frontend/README.md` e `backend/README.md`.
   (`tauri-plugin-localhost`, ver `frontend/src-tauri/src/lib.rs`), porque o
   player do YouTube não toca em `tauri://`. Não trocar a porta: o
   localStorage (temas, playlists) é guardado por endereço.
+- **O app liga o backend sozinho (sidecar):** o workflow empacota o backend
+  com PyInstaller (`backend/freddy_backend.py` → `freddy-backend-<alvo>` em
+  `frontend/src-tauri/binaries/`, fora do git) e, no Windows, põe o
+  `ffmpeg.exe` junto (`tauri.windows.conf.json`). O `lib.rs` só liga se a
+  porta 47824 estiver livre (freddy.sh/`python -m freddy` continuam valendo)
+  e passa `FREDDY_PAI`: o backend desliga sozinho se o app fechar ou cair.
+  Empacotado, o log vai pro `freddy.log` na pasta do mestre. Dependência
+  nova do backend que o PyInstaller não acha sozinho = flag no `app.yml`.
 
 ## Comandos
 
@@ -112,7 +120,8 @@ cd frontend && npm test && npm run build
 cd backend && python -m unittest discover -s modules/bardo -t .
 cd backend && python -m unittest discover -s freddy -t .
 
-# app desktop local (precisa de Rust; raramente necessário)
+# app desktop local (precisa de Rust e do backend empacotado em
+# src-tauri/binaries/, ver o passo "Backend empacotado" do app.yml; raramente necessário)
 cd frontend && npm run app
 ```
 

@@ -48,8 +48,8 @@ export function JanelaDiscord({ fechar }: { fechar: () => void }) {
 
         {!api ? (
           <p>
-            O Discord precisa do Freddy ligado (<code>python -m freddy</code>). Pelo navegador sozinho, o som só sai
-            neste computador.
+            O Discord precisa do Freddy ligado: no app ele liga sozinho (no navegador, rode o <code>freddy.sh</code>).
+            Sem ele, o som só sai neste computador.
           </p>
         ) : !estado ? (
           <p className="apagado">Perguntando pro Freddy…</p>

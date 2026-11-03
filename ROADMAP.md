@@ -108,7 +108,7 @@ Um Freddy ligado num PC de casa, atendendo todos os mestres.
 - Fontes: arquivos do PC e Freesound (CC0 por padrão, créditos guardados).
 
 ### Fase 6: App redondo pra outros mestres
-- O app sobe o backend sozinho (sidecar do Tauri): um programa só pra abrir.
+- ✅ O app sobe o backend sozinho (sidecar do Tauri): um programa só pra abrir, sem terminal (v0.5.3, 03/11/2026).
 - Ícone na bandeja, iniciar com o sistema, atualização automática.
 - Instaladores assinados (some o aviso "o Windows protegeu o computador").
 - ✅ Repositório público e licença GPL-3.0 (01/11/2026).

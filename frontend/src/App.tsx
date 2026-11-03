@@ -180,7 +180,7 @@ function OrigemDoSom({ comFreddy }: { comFreddy: boolean }) {
     location.reload();
   };
   const dica = comFreddy
-    ? "Tocando pelo Freddy (python -m freddy). Clique pra tocar só pelo navegador."
+    ? "Tocando pelo Freddy. Clique pra tocar só pelo navegador."
     : "Tocando pelo navegador (YouTube). Ligue o Freddy e clique pra usar ele.";
   return (
     <button className="saida ativa" onClick={alternar} title={dica}>

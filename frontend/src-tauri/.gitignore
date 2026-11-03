@@ -1,2 +1,5 @@
 /target/
 /gen/schemas
+
+# Backend empacotado e FFmpeg (gerados pelo workflow app.yml)
+/binaries/

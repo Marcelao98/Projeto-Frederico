@@ -93,6 +93,35 @@ jobs:
         with:
           workspaces: frontend/src-tauri -> target
 
+      # O backend vai dentro do app (sidecar): o app liga ele sozinho, sem
+      # terminal nem Python instalado (ver frontend/src-tauri/src/lib.rs).
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Backend empacotado (PyInstaller)
+        shell: bash
+        run: |
+          pip install -r backend/requirements.txt pyinstaller
+          if [ "${{ matrix.plataforma }}" = macos-latest ]; then alvo=universal-apple-darwin; else alvo=$(rustc -vV | sed -n 's/^host: //p'); fi
+          ext=""; sep=":"
+          if [ "$RUNNER_OS" = Windows ]; then ext=".exe"; sep=";"; fi
+          cd backend
+          pyinstaller --onefile --name freddy-backend --paths . \
+            --add-data "modules/bardo/dataset${sep}modules/bardo/dataset" \
+            --collect-submodules uvicorn --collect-all discord --collect-all davey \
+            --collect-submodules yt_dlp --hidden-import sounddevice \
+            freddy_backend.py
+          mkdir -p ../frontend/src-tauri/binaries
+          cp "dist/freddy-backend$ext" "../frontend/src-tauri/binaries/freddy-backend-$alvo$ext"
+          ls -la ../frontend/src-tauri/binaries
+      - name: FFmpeg junto (Windows)
+        if: runner.os == 'Windows'
+        shell: bash
+        run: |
+          curl -sSfL -o ffmpeg.zip https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip
+          unzip -q ffmpeg.zip -d ffmpeg
+          cp ffmpeg/*/bin/ffmpeg.exe frontend/src-tauri/binaries/ffmpeg-x86_64-pc-windows-msvc.exe
+
       - name: Dependências do frontend
         working-directory: frontend
         run: npm ci
@@ -107,8 +136,10 @@ jobs:
           releaseBody: |
             Baixe o arquivo do seu sistema em "Assets":
             - **Windows:** `Freddy_..._x64-setup.exe` (ou o `.msi`)
-            - **Linux:** `.AppImage` (qualquer distro: dar permissão de execução e abrir) ou `.deb` (Ubuntu, Mint, Debian)
-            - **Mac:** `.dmg`
+            - **Linux:** `.rpm` (Fedora), `.deb` (Ubuntu, Mint, Debian) ou `.AppImage` (qualquer distro; precisa de ffmpeg, opus e portaudio instalados)
+            - **Mac:** `.dmg` (precisa do FFmpeg: `brew install ffmpeg`)
+
+            É só abrir: o app liga o Freddy sozinho, sem terminal.
 
             O app não é assinado: o Windows pode mostrar "o Windows protegeu o computador" (clique em "Mais informações" → "Executar assim mesmo") e o Mac pode pedir pra abrir pelo clique direito → Abrir.
           releaseDraft: false

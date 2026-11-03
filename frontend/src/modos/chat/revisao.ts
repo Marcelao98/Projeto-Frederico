@@ -130,7 +130,7 @@ export async function responderRevisao(
     return { texto: feitas ? `Parei a revisão (${feitas} revisada${feitas > 1 ? "s" : ""}). Continua quando quiser.` : "Beleza, parei." };
   }
   if (resposta === "certo") return depois("👍 Anotado.", ctx.acervo, r.emSessao);
-  if (!ctx.editarTemas) return { texto: "Pra mudar o acervo eu preciso do Freddy ligado (python -m freddy)." };
+  if (!ctx.editarTemas) return { texto: "Pra mudar o acervo eu preciso do Freddy ligado (no app ele liga sozinho)." };
   if (!resposta.temas.length) return { texto: "Não peguei nenhum tema. Manda separado por vírgula (ex.: taverna, alegre)." };
   const faixa = await ctx.editarTemas(r.faixaId, resposta.temas);
   const busca = faixa.categorias?.length ? ` (na busca: ${faixa.categorias.map(rotuloCategoria).join(", ")})` : "";

@@ -9,10 +9,46 @@ from __future__ import annotations
 import argparse
 import logging
 import shutil
+import sys
 from pathlib import Path
 
 from freddy import VERSAO
 from freddy.config import PORTA_PADRAO, Config
+
+
+def vigiar_o_app(pid: int) -> None:
+    """Ligado pelo app (FREDDY_PAI): se o app fechar ou cair, o Freddy desliga junto."""
+    import os
+    import threading
+    import time
+
+    def vivo() -> bool:
+        if sys.platform == "win32":
+            import ctypes
+
+            k = ctypes.windll.kernel32  # type: ignore[attr-defined]
+            h = k.OpenProcess(0x1000, False, pid)  # PROCESS_QUERY_LIMITED_INFORMATION
+            if not h:
+                return False
+            codigo = ctypes.c_ulong()
+            k.GetExitCodeProcess(h, ctypes.byref(codigo))
+            k.CloseHandle(h)
+            return codigo.value == 259  # STILL_ACTIVE
+        try:
+            os.kill(pid, 0)
+            return True
+        except ProcessLookupError:
+            return False
+        except PermissionError:
+            return True
+
+    def vigiar():
+        while vivo():
+            time.sleep(2)
+        logging.info("O app fechou: desligando o Freddy.")
+        os._exit(0)
+
+    threading.Thread(target=vigiar, name="vigia-do-app", daemon=True).start()
 
 
 def main() -> None:
@@ -31,6 +67,10 @@ def main() -> None:
         format="%(asctime)s %(levelname)-7s %(name)s: %(message)s",
         datefmt="%H:%M:%S",
     )
+    import os
+
+    if os.environ.get("FREDDY_PAI", "").isdigit():
+        vigiar_o_app(int(os.environ["FREDDY_PAI"]))
     config = Config(porta=args.porta, sem_som=args.sem_som or args.teste)
     if args.pasta:
         config.pasta = args.pasta

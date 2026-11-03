@@ -61,7 +61,7 @@ export function ModoAcervo({ acervo }: { acervo: Acervo }) {
 
       {!api && (
         <div className="faixa-aviso">
-          Pra salvar, ligue o Freddy (<code>python -m freddy</code>). Sem ele dá pra ver o acervo, mas não mudar.
+          Pra salvar, precisa do Freddy ligado (no app ele liga sozinho). Sem ele dá pra ver o acervo, mas não mudar.
         </div>
       )}
 

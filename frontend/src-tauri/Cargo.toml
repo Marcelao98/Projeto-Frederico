@@ -1,6 +1,6 @@
 [package]
 name = "freddy"
-version = "0.5.2"
+version = "0.5.3"
 description = "Freddy: o som da mesa de RPG"
 authors = ["Marcelo"]
 license = "GPL-3.0-only"
@@ -16,5 +16,6 @@ tauri-build = { version = "2", features = [] }
 [dependencies]
 tauri = { version = "2", features = [] }
 tauri-plugin-localhost = "2"
+tauri-plugin-shell = "2"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
