@@ -2,12 +2,12 @@ import { useEffect, useRef, useState } from "react";
 import { BarraDoPlayer } from "./componentes/BarraDoPlayer";
 import { Calopsita } from "./componentes/Calopsita";
 import { Icone } from "./componentes/Icone";
-import { acervoAtual } from "./dados/acervo";
-import { discord, freddy, freddyLigouDepois, preferenciaDeMotor } from "./dados/freddy";
+import { acervoAtual } from "./estado/acervo";
+import { discord, freddy, freddyLigouDepois, preferenciaDeMotor } from "./api/freddy";
 import { JanelaDiscord } from "./componentes/JanelaDiscord";
-import { modoAtual, videoAberto } from "./dados/preferencias";
-import { TEMAS, proximoTema, temaAtual } from "./dados/temas";
-import { useArmazem } from "./dados/useArmazem";
+import { modoAtual, videoAberto } from "./estado/preferencias";
+import { TEMAS, proximoTema, temaAtual } from "./estado/temas";
+import { useArmazem } from "./estado/useArmazem";
 import { useConexao, useEstadoDoMotor, useMotor } from "./motor/contexto";
 import { MODOS } from "./modos/registro";
 

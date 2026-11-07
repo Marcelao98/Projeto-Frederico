@@ -3,7 +3,7 @@
  * tocar. É o "Bardo sem Discord" do painel, até o backend existir.
  */
 
-import { VOLUME_PADRAO, limitarVolume } from "../nucleo/pedido";
+import { VOLUME_PADRAO, limitarVolume } from "./pedido";
 import * as F from "./fila";
 import type { Reprodutor } from "./reprodutor";
 import type {
@@ -16,7 +16,7 @@ import type {
   Progresso,
   Resultado,
   Situacao,
-} from "./tipos";
+} from "../motor/tipos";
 
 const INTERVALO_DO_PROGRESSO_MS = 500;
 

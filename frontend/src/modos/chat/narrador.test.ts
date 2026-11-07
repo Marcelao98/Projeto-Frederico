@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { MotorLocal } from "../../motor/motorLocal";
-import type { OuvinteReprodutor, Reprodutor } from "../../motor/reprodutor";
-import type { Musica } from "../../nucleo/tipos";
+import { MotorLocal } from "../../navegador/motorLocal";
+import type { OuvinteReprodutor, Reprodutor } from "../../navegador/reprodutor";
+import type { Musica } from "../../comum/tipos";
 import { ligarNarrador, semNarrar, type Narrador } from "./narrador";
 
 class Falso implements Reprodutor {

@@ -1,0 +1,190 @@
+/* Telas menores (celular, janela estreita): vem por último, por cima de tudo. */
+
+/* ---------- telas menores ---------- */
+
+@media (max-width: 1080px) {
+  .playlist-grade {
+    grid-template-columns: minmax(0, 1fr);
+    overflow-y: auto;
+  }
+
+  .painel-acervo {
+    min-height: 520px;
+  }
+}
+
+@media (max-width: 760px) {
+  .app {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr) auto;
+  }
+
+  .lateral {
+    grid-row: 1;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    border-right: 0;
+    border-bottom: 1px solid var(--borda);
+    overflow: visible;
+  }
+
+  .marca-sub,
+  .saidas,
+  .plumagens,
+  .atalhos-teclado,
+  .lista-atalhos,
+  .item-nav-nome,
+  .item-nav .selo {
+    display: none;
+  }
+
+  /* O rosto do Frederico é branco: num círculo cinza claro ele não some no fundo. */
+.ave-rosto {
+  border-radius: 50%;
+  background: var(--painel-3);
+}
+
+.marca-ave {
+  display: grid;
+  border-radius: 50%;
+  transition: transform 0.15s;
+}
+
+.marca-ave:hover {
+  transform: rotate(-8deg) scale(1.06);
+}
+
+.plumagens {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 4px;
+}
+
+.plumagens-grade {
+  display: flex;
+  gap: 6px;
+}
+
+.plumagem {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.plumagem:hover {
+  transform: translateY(-2px);
+}
+
+.plumagem.ativa {
+  border-color: var(--acento);
+}
+
+.plumagem-ave {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--painel-2);
+  border: 1px solid var(--borda);
+}
+
+.plumagem-nome {
+  font-size: 12.5px;
+  color: var(--texto-2);
+}
+
+.navegacao {
+    flex-direction: row;
+    margin-left: auto;
+  }
+
+  .doca-video {
+    position: fixed;
+    right: 16px;
+    bottom: 124px;
+    width: 160px;
+    z-index: 5;
+    margin: 0;
+  }
+
+  /* No celular quem liga o vídeo é o botão da barra do player. */
+  .doca-alternar {
+    display: none;
+  }
+
+  .doca-palco {
+    box-shadow: var(--sombra);
+  }
+
+  .so-celular {
+    display: inline-grid !important;
+  }
+
+  .principal {
+    grid-row: 2;
+  }
+
+  .modo {
+    padding: 14px 16px 0;
+  }
+
+  .modo-topo p {
+    font-size: 13.5px;
+  }
+
+  .exemplos {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .playlist-grade {
+    gap: 12px;
+  }
+
+  .filtro-categorias {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .painel {
+    padding: 12px;
+  }
+
+  .barra {
+    grid-row: 3;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 6px 10px;
+    padding: 8px 16px 10px;
+  }
+
+  .barra-centro {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .barra-controles .botao-icone.fantasma {
+    display: none;
+  }
+
+  .barra-volume .trilho,
+  .barra-volume .tempo {
+    display: none;
+  }
+
+  .barra-capa {
+    width: 56px;
+    height: 32px;
+  }
+
+  .cartao-acoes {
+    opacity: 1;
+  }
+}

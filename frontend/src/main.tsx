@@ -1,7 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+// O visual: as cores das plumagens e o básico primeiro; cada tela importa o
+// CSS dela; o das telas menores por último, por cima de tudo.
+import "./estilo/temas.css";
+import "./estilo/base.css";
 import { App } from "./App";
-import { acervoAtual, montarAcervo } from "./dados/acervo";
+import { acervoAtual, montarAcervo } from "./estado/acervo";
 import {
   discord,
   escolherFreddy,
@@ -10,19 +14,18 @@ import {
   preferenciaEfetiva,
   vigiarFreddy,
   type EstadoDiscord,
-} from "./dados/freddy";
-import { definirAvisoDeFalha, usarPlaylistsDoFreddy } from "./dados/playlists";
-import { aplicarTema, temaAtual } from "./dados/temas";
+} from "./api/freddy";
+import { definirAvisoDeFalha, usarPlaylistsDoFreddy } from "./estado/playlists";
+import { aplicarTema, temaAtual } from "./estado/temas";
 import { falaDoEvento } from "./modos/chat/conversa";
 import { registrar } from "./modos/chat/historico";
 import { ligarNarrador } from "./modos/chat/narrador";
 import { ProvedorDoMotor } from "./motor/contexto";
-import { MotorLocal } from "./motor/motorLocal";
-import { MotorRemoto } from "./motor/motorRemoto";
-import { ReprodutorYoutube } from "./motor/reprodutorYoutube";
+import { MotorLocal } from "./navegador/motorLocal";
+import { MotorRemoto } from "./api/motorRemoto";
+import { ReprodutorYoutube } from "./navegador/reprodutorYoutube";
 import type { Motor } from "./motor/tipos";
-import "./temas.css";
-import "./estilo.css";
+import "./estilo/telas-menores.css";
 
 aplicarTema(temaAtual.ler());
 temaAtual.inscrever(() => aplicarTema(temaAtual.ler()));

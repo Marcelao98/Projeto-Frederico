@@ -6,8 +6,8 @@
  * operação devolve uma fila nova, que é o que o React gosta.
  */
 
-import type { Musica } from "../nucleo/tipos";
-import { MAX_FILA, type ItemDaFila, type Onde } from "./tipos";
+import type { Musica } from "../comum/tipos";
+import { MAX_FILA, type ItemDaFila, type Onde } from "../motor/tipos";
 
 export interface Fila {
   tocando: ItemDaFila | null;

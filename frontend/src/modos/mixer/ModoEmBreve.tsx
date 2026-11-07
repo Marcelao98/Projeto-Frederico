@@ -1,6 +1,7 @@
 /** Lugar guardado pros modos que ainda vão existir. */
 
 import { Icone, type NomeIcone } from "../../componentes/Icone";
+import "./emBreve.css";
 
 export interface Novidade {
   icone: NomeIcone;

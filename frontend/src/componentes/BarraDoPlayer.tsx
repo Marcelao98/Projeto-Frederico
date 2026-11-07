@@ -1,13 +1,14 @@
 /** A barra de baixo: o que toca, os controles e o volume. Igual em todos os modos. */
 
 import { useEffect, useState } from "react";
-import { discord, freddy } from "../dados/freddy";
-import { videoAberto } from "../dados/preferencias";
-import { useArmazem } from "../dados/useArmazem";
+import { discord, freddy } from "../api/freddy";
+import { videoAberto } from "../estado/preferencias";
+import { useArmazem } from "../estado/useArmazem";
 import { useEstadoDoMotor, useMotor, useProgresso } from "../motor/contexto";
-import { miniatura } from "../nucleo/youtube";
+import { miniatura } from "../comum/youtube";
 import { Icone } from "./Icone";
 import { formatarTempo } from "./tempo";
+import "./barraDoPlayer.css";
 
 export function BarraDoPlayer() {
   const motor = useMotor();

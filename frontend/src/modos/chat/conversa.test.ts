@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { montarAcervo } from "../../dados/acervo";
-import { MotorLocal } from "../../motor/motorLocal";
-import type { OuvinteReprodutor, Reprodutor } from "../../motor/reprodutor";
-import type { Faixa } from "../../nucleo/tipos";
+import { montarAcervo } from "../../estado/acervo";
+import { MotorLocal } from "../../navegador/motorLocal";
+import type { OuvinteReprodutor, Reprodutor } from "../../navegador/reprodutor";
+import type { Faixa } from "../../comum/tipos";
 import { AJUDA, previa, responder, responderEraEssa, separarTemas, termoEmDigitacao } from "./conversa";
 
 class Mudo implements Reprodutor {

@@ -4,9 +4,9 @@
  * pelo WebSocket, no MotorRemoto.
  */
 
-import type { Faixa, Musica, VocabularioBruto } from "../nucleo/tipos";
-import { criarArmazem } from "./armazem";
-import type { PlaylistSalva } from "./playlists";
+import type { Faixa, Musica, VocabularioBruto } from "../comum/tipos";
+import { criarArmazem } from "../estado/armazem";
+import type { PlaylistSalva } from "../estado/playlists";
 
 export const ENDERECO_PADRAO = "127.0.0.1:47824";
 const PRAZO_DA_SAUDE_MS = 800;

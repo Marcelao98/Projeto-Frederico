@@ -11,7 +11,7 @@
 
 import { afterAll, beforeAll, describe, it } from "vitest";
 import { CASOS, rodarCaso, soPorFora } from "./contratoCasos";
-import { MotorRemoto } from "./motorRemoto";
+import { MotorRemoto } from "../api/motorRemoto";
 
 const endereco = process.env.FREDDY_E2E;
 

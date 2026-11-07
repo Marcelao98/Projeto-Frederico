@@ -7,8 +7,8 @@
  * Sem LLM: é só regex, previsível e instantâneo.
  */
 
-import { CARACTERE_DE_PALAVRA, aparar, comecoDePalavra, palavra } from "./texto";
-import { URL_YOUTUBE_GLOBAL_RE, extrairLinkYoutube } from "./youtube";
+import { CARACTERE_DE_PALAVRA, aparar, comecoDePalavra, palavra } from "../comum/texto";
+import { URL_YOUTUBE_GLOBAL_RE, extrairLinkYoutube } from "../comum/youtube";
 
 export const VOLUME_PADRAO = 50; // %
 export const PASSO_VOLUME = 20; // %: quanto "aumenta"/"abaixa" mexe

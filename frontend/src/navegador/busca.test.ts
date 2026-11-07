@@ -4,7 +4,7 @@ import { describe, expect, it } from "vitest";
 import musicasJson from "@acervo/musicas.json";
 import vocabularioJson from "@acervo/vocabulario.json";
 import { buscarPorTags, categoriasDosTemas, montarVocabulario, sortear } from "./busca";
-import type { Faixa } from "./tipos";
+import type { Faixa } from "../comum/tipos";
 
 const faixa = (id: string, nome: string, origem: string, temas: string[]): Faixa => ({
   id,

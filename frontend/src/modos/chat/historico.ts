@@ -1,7 +1,7 @@
 /** As mensagens do chat. Ficam fora do componente pra sobreviver à troca de modo. */
 
-import { criarArmazem } from "../../dados/armazem";
-import type { Musica } from "../../nucleo/tipos";
+import { criarArmazem } from "../../estado/armazem";
+import type { Musica } from "../../comum/tipos";
 import type { RespostaFreddy } from "./conversa";
 import type { Revisao } from "./revisao";
 

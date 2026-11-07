@@ -11,9 +11,9 @@
  * interpretador de pedidos (pedido.ts, gêmeo do Python) não muda.
  */
 
-import { rotuloCategoria, type Acervo } from "../../dados/acervo";
-import { normalizar } from "../../nucleo/texto";
-import type { Faixa } from "../../nucleo/tipos";
+import { rotuloCategoria, type Acervo } from "../../estado/acervo";
+import { normalizar } from "../../comum/texto";
+import type { Faixa } from "../../comum/tipos";
 import type { Motor } from "../../motor/tipos";
 
 export const NAO_CLASSIFICADO = "não classificado";

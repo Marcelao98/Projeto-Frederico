@@ -6,14 +6,14 @@
  * LLM. Não depende de React, então dá pra testar sozinho.
  */
 
-import type { Acervo } from "../../dados/acervo";
+import type { Acervo } from "../../estado/acervo";
 import type { Motor } from "../../motor/tipos";
 import { MAX_FILA } from "../../motor/tipos";
-import { interpretarPedido, type Pedido } from "../../nucleo/pedido";
-import { normalizar } from "../../nucleo/texto";
-import { musicaDaFaixa, type Musica } from "../../nucleo/tipos";
+import { interpretarPedido, type Pedido } from "../../navegador/pedido";
+import { normalizar } from "../../comum/texto";
+import { musicaDaFaixa, type Musica } from "../../comum/tipos";
 import type { EventoMotor } from "../../motor/tipos";
-import type { Faixa } from "../../nucleo/tipos";
+import type { Faixa } from "../../comum/tipos";
 import { ehComandoDePlaylist, tentarPlaylist } from "./playlistsChat";
 import { ehComandoDeRevisao, separarTemas, tentarRevisao, type Revisao } from "./revisao";
 

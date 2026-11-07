@@ -7,8 +7,8 @@
  */
 
 import { useState } from "react";
-import { TEMA_PADRAO, temaAtual } from "../dados/temas";
-import { useArmazem } from "../dados/useArmazem";
+import { TEMA_PADRAO, temaAtual } from "../estado/temas";
+import { useArmazem } from "../estado/useArmazem";
 
 /** Abaixo disso o corpo inteiro (com a cauda comprida) vira um risquinho. */
 const TAMANHO_DO_ROSTO = 60;

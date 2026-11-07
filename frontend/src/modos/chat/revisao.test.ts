@@ -1,9 +1,9 @@
 import { afterEach, describe, expect, it } from "vitest";
-import { montarAcervo } from "../../dados/acervo";
-import { MotorLocal } from "../../motor/motorLocal";
-import type { OuvinteReprodutor, Reprodutor } from "../../motor/reprodutor";
-import type { Faixa } from "../../nucleo/tipos";
-import { musicaDaFaixa } from "../../nucleo/tipos";
+import { montarAcervo } from "../../estado/acervo";
+import { MotorLocal } from "../../navegador/motorLocal";
+import type { OuvinteReprodutor, Reprodutor } from "../../navegador/reprodutor";
+import type { Faixa } from "../../comum/tipos";
+import { musicaDaFaixa } from "../../comum/tipos";
 import { responder } from "./conversa";
 import { esquecerRevisao, revisaoAberta, separarTemas } from "./revisao";
 

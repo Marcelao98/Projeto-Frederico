@@ -6,7 +6,7 @@
 
 import type { ComponentType } from "react";
 import type { NomeIcone } from "../componentes/Icone";
-import type { Acervo } from "../dados/acervo";
+import type { Acervo } from "../estado/acervo";
 import { ModoAcervo } from "./acervo/ModoAcervo";
 import { ModoChat } from "./chat/ModoChat";
 import { ModoEmBreve } from "./mixer/ModoEmBreve";

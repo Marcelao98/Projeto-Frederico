@@ -1,0 +1,686 @@
+/*
+ * Freddy: o visual é o do Frederico, uma calopsita. As cores vêm de
+ * temas.css (uma plumagem por tema); aqui só o que não muda entre eles.
+ */
+
+:root {
+  --raio: 12px;
+  --raio-p: 8px;
+  --fonte: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#raiz {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--fundo);
+  color: var(--texto);
+  font: 15px/1.45 var(--fonte);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  padding: 0;
+}
+
+button:disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+
+:focus-visible {
+  outline: 2px solid var(--acento-texto);
+  outline-offset: 2px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+code,
+kbd {
+  font-family: var(--mono);
+  font-size: 0.88em;
+}
+
+code {
+  background: var(--painel-3);
+  padding: 1px 5px;
+  border-radius: 5px;
+}
+
+.apagado {
+  color: var(--texto-3);
+}
+
+/* ---------- layout ---------- */
+
+.app {
+  display: grid;
+  grid-template-columns: 248px minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  height: 100dvh;
+}
+
+.lateral {
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 18px 14px;
+  background: var(--painel);
+  border-right: 1px solid var(--borda);
+  overflow-y: auto;
+}
+
+.principal {
+  grid-row: 1;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+}
+
+.barra {
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+
+/* ---------- barra lateral ---------- */
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 6px;
+}
+
+.marca-nome {
+  font-weight: 750;
+  font-size: 19px;
+  letter-spacing: -0.02em;
+}
+
+.marca-sub {
+  color: var(--texto-3);
+  font-size: 12.5px;
+}
+
+/* O rosto do Frederico é branco: num círculo cinza claro ele não some no fundo. */
+.ave-rosto {
+  border-radius: 50%;
+  background: var(--painel-3);
+}
+
+.marca-ave {
+  display: grid;
+  border-radius: 50%;
+  transition: transform 0.15s;
+}
+
+.marca-ave:hover {
+  transform: rotate(-8deg) scale(1.06);
+}
+
+.plumagens {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 4px;
+}
+
+.plumagens-grade {
+  display: flex;
+  gap: 6px;
+}
+
+.plumagem {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.plumagem:hover {
+  transform: translateY(-2px);
+}
+
+.plumagem.ativa {
+  border-color: var(--acento);
+}
+
+.plumagem-ave {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--painel-2);
+  border: 1px solid var(--borda);
+}
+
+.plumagem-nome {
+  font-size: 12.5px;
+  color: var(--texto-2);
+}
+
+.navegacao {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.item-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  border-radius: var(--raio-p);
+  color: var(--texto-2);
+  text-align: left;
+  transition: background 0.15s, color 0.15s;
+}
+
+.item-nav:hover {
+  background: var(--painel-2);
+  color: var(--texto);
+}
+
+.item-nav.ativo {
+  background: var(--acento-fraco);
+  color: var(--acento-texto);
+}
+
+.item-nav-nome {
+  flex: 1;
+}
+
+.selo {
+  font-size: 10.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 6px;
+  border-radius: 99px;
+  background: var(--painel-3);
+  color: var(--texto-3);
+  vertical-align: middle;
+}
+
+.rotulo {
+  font-size: 11px;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--texto-3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.saidas {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 4px;
+}
+
+.saidas .rotulo {
+  margin-bottom: 4px;
+}
+
+.saida {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 6px;
+  font-size: 13.5px;
+  color: var(--texto-3);
+}
+
+.saida .selo {
+  margin-left: auto;
+}
+
+.saida.ativa {
+  color: var(--texto);
+}
+
+button.saida {
+  width: 100%;
+  text-align: left;
+  border-radius: var(--raio-p);
+}
+
+button.saida:hover {
+  background: var(--painel-2);
+}
+
+.saida-nome {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.saida-nome small {
+  font-size: 11.5px;
+  color: var(--texto-3);
+}
+
+.luz.apagada {
+  background: var(--aviso);
+  box-shadow: none;
+}
+
+.era-essa {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.era-essa input {
+  flex: 1 1 160px;
+  min-width: 0;
+  padding: 6px 11px;
+  border-radius: 99px;
+  border: 1px solid var(--borda);
+  background: var(--painel-2);
+  color: var(--texto);
+  font: inherit;
+  font-size: 13.5px;
+}
+
+.era-essa input:focus {
+  outline: none;
+  border-color: var(--acento-borda);
+}
+
+.luz {
+  margin-left: auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ok);
+  box-shadow: 0 0 0 3px var(--ok-fraco);
+}
+
+.doca-video {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.doca-alternar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: var(--texto-3);
+  padding: 0 4px;
+}
+
+.doca-alternar:hover {
+  color: var(--texto);
+}
+
+.doca-palco {
+  aspect-ratio: 16 / 9;
+  border-radius: var(--raio-p);
+  overflow: hidden;
+  background: #000;
+  border: 1px solid var(--borda);
+}
+
+.doca-video.fechada .doca-palco,
+.doca-video.sem-video .doca-palco {
+  /* Fica no DOM (o player precisa existir), só some da vista. */
+  height: 1px;
+  opacity: 0;
+  border: 0;
+  aspect-ratio: auto;
+  pointer-events: none;
+}
+
+.doca-video.sem-video .doca-alternar {
+  display: none;
+}
+
+.palco-video,
+.palco-video iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+
+.so-celular {
+  display: none !important;
+}
+
+.atalhos-teclado {
+  align-self: flex-start;
+  font-size: 12.5px;
+}
+
+.lista-atalhos {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 10px;
+  margin: -8px 0 0;
+  font-size: 12.5px;
+  color: var(--texto-2);
+}
+
+.lista-atalhos dt {
+  font-family: var(--mono);
+  color: var(--acento-texto);
+}
+
+.lista-atalhos dd {
+  margin: 0;
+}
+
+/* ---------- peças comuns ---------- */
+
+.modo {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 28px 0;
+  position: relative;
+}
+
+.modo-topo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 16px;
+}
+
+.modo-topo h1 {
+  font-size: 22px;
+}
+
+.modo-topo p {
+  margin: 2px 0 0;
+  color: var(--texto-2);
+}
+
+.botao,
+.botao-texto {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.botao {
+  padding: 7px 12px;
+  border-radius: var(--raio-p);
+  background: var(--painel-2);
+  border: 1px solid var(--borda);
+  font-size: 13.5px;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.botao:hover:not(:disabled) {
+  border-color: var(--borda-forte);
+  background: var(--painel-3);
+}
+
+.botao.destaque {
+  background: var(--acento);
+  border-color: var(--acento);
+  color: var(--sobre-acento);
+  font-weight: 600;
+}
+
+.botao-texto {
+  color: var(--texto-2);
+  font-size: 13.5px;
+}
+
+.botao-texto:hover {
+  color: var(--acento-texto);
+}
+
+.grupo-botoes {
+  display: flex;
+  gap: 6px;
+}
+
+.botao-icone {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: var(--texto-2);
+  transition: background 0.15s, color 0.15s;
+}
+
+.botao-icone:hover:not(:disabled) {
+  color: var(--texto);
+  background: var(--painel-3);
+}
+
+.botao-icone.pequeno {
+  width: 30px;
+  height: 30px;
+}
+
+.botao-icone.ligado {
+  color: var(--acento-texto);
+}
+
+.botao-icone.destaque {
+  color: var(--acento-texto);
+}
+
+.botao-icone.perigo {
+  color: var(--perigo);
+  background: var(--perigo-fraco);
+}
+
+.botao-icone.fantasma {
+  visibility: hidden;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 11px;
+  border-radius: 99px;
+  border: 1px solid var(--borda);
+  background: var(--painel-2);
+  color: var(--texto-2);
+  font-size: 13.5px;
+  white-space: nowrap;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+
+.chip:hover {
+  color: var(--texto);
+  border-color: var(--borda-forte);
+}
+
+.chip.ligado {
+  background: var(--acento-fraco);
+  border-color: var(--acento-borda);
+  color: var(--acento-texto);
+}
+
+.chip.pequeno {
+  padding: 4px 9px;
+  font-size: 12.5px;
+}
+
+.chip .contagem {
+  font-size: 11.5px;
+  color: var(--texto-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.chip kbd {
+  font-size: 10.5px;
+  padding: 0 4px;
+  border-radius: 4px;
+  border: 1px solid var(--borda-forte);
+  color: var(--texto-3);
+}
+
+.vazio {
+  color: var(--texto-3);
+  padding: 18px 4px;
+  text-align: center;
+  font-size: 13.5px;
+  list-style: none;
+}
+
+/* ---------- cartão de música ---------- */
+
+.cartao-musica {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 8px;
+  border-radius: var(--raio-p);
+  min-width: 0;
+  flex: 1;
+  transition: background 0.12s;
+}
+
+.cartao-musica:hover {
+  background: var(--painel-2);
+}
+
+.cartao-musica.ativo .cartao-titulo {
+  color: var(--acento-texto);
+}
+
+.cartao-capa {
+  width: 64px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: var(--painel-3);
+  flex-shrink: 0;
+}
+
+.cartao-musica.compacto .cartao-capa {
+  width: 48px;
+  height: 27px;
+  border-radius: 5px;
+}
+
+.cartao-textos {
+  min-width: 0;
+  flex: 1;
+}
+
+.cartao-titulo {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 550;
+}
+
+.cartao-sub {
+  color: var(--texto-3);
+  font-size: 12.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.mini-tags {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.mini-tag {
+  padding: 0 6px;
+  border-radius: 99px;
+  background: var(--painel-3);
+  color: var(--texto-2);
+  font-size: 11px;
+}
+
+.cartao-acoes {
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+  opacity: 0.55;
+  transition: opacity 0.12s;
+}
+
+.cartao-musica:hover .cartao-acoes,
+.cartao-musica:focus-within .cartao-acoes {
+  opacity: 1;
+}
+/* O Freddy ligou depois do painel: oferece trocar. */
+.aviso-freddy {
+  position: fixed;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: var(--raio);
+  border: 1px solid var(--acento-borda);
+  background: var(--painel);
+  box-shadow: var(--sombra);
+  font-size: 14px;
+  max-width: calc(100% - 32px);
+}
+/* Botão com cara de link (abre no navegador pelo backend). */
+button.link {
+  display: inline;
+  padding: 0;
+  font: inherit;
+  font-weight: 600;
+  color: var(--acento-texto);
+  text-decoration: underline;
+}
+
+/* "Só no Discord (mutar aqui)", na barra lateral. */
+.so-na-call {
+  padding: 2px 6px 4px 31px;
+  font-size: 12.5px;
+  color: var(--texto-2);
+}

@@ -4,12 +4,12 @@ import { useMemo, useState, type ReactNode } from "react";
 import { BotaoPlaylist } from "./BotaoPlaylist";
 import { CartaoMusica } from "../../componentes/CartaoMusica";
 import { Icone } from "../../componentes/Icone";
-import { emojiCategoria, rotuloCategoria, type Acervo } from "../../dados/acervo";
+import { emojiCategoria, rotuloCategoria, type Acervo } from "../../estado/acervo";
 import { useEstadoDoMotor, useMotor } from "../../motor/contexto";
 import type { Onde } from "../../motor/tipos";
-import { MAX_RESULTADOS_DA_BUSCA, sortear } from "../../nucleo/busca";
-import { musicaDaFaixa, type Faixa, type Musica } from "../../nucleo/tipos";
-import { extrairLinkYoutube } from "../../nucleo/youtube";
+import { MAX_RESULTADOS_DA_BUSCA, sortear } from "../../navegador/busca";
+import { musicaDaFaixa, type Faixa, type Musica } from "../../comum/tipos";
+import { extrairLinkYoutube } from "../../comum/youtube";
 
 const PAGINA = 80;
 

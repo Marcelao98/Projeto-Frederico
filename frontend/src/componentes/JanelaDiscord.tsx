@@ -6,9 +6,10 @@
  */
 
 import { useEffect, useState } from "react";
-import { discord, freddy, type ApiFreddy, type Diagnostico, type EstadoDiscord } from "../dados/freddy";
-import { useArmazem } from "../dados/useArmazem";
+import { discord, freddy, type ApiFreddy, type Diagnostico, type EstadoDiscord } from "../api/freddy";
+import { useArmazem } from "../estado/useArmazem";
 import { Icone } from "./Icone";
+import "./janelaDiscord.css";
 
 export function JanelaDiscord({ fechar }: { fechar: () => void }) {
   const api = useArmazem(freddy);

@@ -8,12 +8,12 @@ import {
   removerDaPlaylist,
   renomearPlaylist,
   salvarPlaylist,
-} from "../../dados/playlists";
-import { MotorLocal } from "../../motor/motorLocal";
-import type { OuvinteReprodutor, Reprodutor } from "../../motor/reprodutor";
-import type { Musica } from "../../nucleo/tipos";
+} from "../../estado/playlists";
+import { MotorLocal } from "../../navegador/motorLocal";
+import type { OuvinteReprodutor, Reprodutor } from "../../navegador/reprodutor";
+import type { Musica } from "../../comum/tipos";
 import { previa, responder } from "./conversa";
-import { montarAcervo } from "../../dados/acervo";
+import { montarAcervo } from "../../estado/acervo";
 
 class Mudo implements Reprodutor {
   ouvir(_: OuvinteReprodutor) {}

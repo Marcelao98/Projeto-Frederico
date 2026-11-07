@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it } from "vitest";
-import type { ApiFreddy } from "./freddy";
+import type { ApiFreddy } from "../api/freddy";
 import {
   excluirPlaylist,
   playlists,

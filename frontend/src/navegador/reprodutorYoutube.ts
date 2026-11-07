@@ -3,7 +3,7 @@
  * Toca no navegador: serve pra usar o painel sozinho, antes do backend.
  */
 
-import { videoId } from "../nucleo/youtube";
+import { videoId } from "../comum/youtube";
 import type { OuvinteReprodutor, Reprodutor } from "./reprodutor";
 
 declare global {

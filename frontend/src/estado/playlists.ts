@@ -5,12 +5,12 @@
  * app e pro navegador). Sem ele, no navegador (localStorage), como antes.
  */
 
-import { novoUid } from "../motor/fila";
-import { normalizar } from "../nucleo/texto";
-import { videoId } from "../nucleo/youtube";
-import type { Musica } from "../nucleo/tipos";
+import { novoUid } from "../navegador/fila";
+import { normalizar } from "../comum/texto";
+import { videoId } from "../comum/youtube";
+import type { Musica } from "../comum/tipos";
 import { criarArmazem } from "./armazem";
-import type { ApiFreddy } from "./freddy";
+import type { ApiFreddy } from "../api/freddy";
 
 export interface PlaylistSalva {
   id: string;

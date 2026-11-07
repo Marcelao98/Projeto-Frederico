@@ -8,16 +8,17 @@ import { Calopsita } from "../../componentes/Calopsita";
 import { CartaoMusica } from "../../componentes/CartaoMusica";
 import { Icone } from "../../componentes/Icone";
 import { TextoRico } from "../../componentes/TextoRico";
-import { acervoAtual, emojiCategoria, recarregarAcervo, rotuloCategoria, sugestoesDeBusca, type Acervo } from "../../dados/acervo";
-import { freddy, type ApiFreddy } from "../../dados/freddy";
-import { tituloDoLink } from "../../dados/tituloDoLink";
-import { useArmazem } from "../../dados/useArmazem";
+import { acervoAtual, emojiCategoria, recarregarAcervo, rotuloCategoria, sugestoesDeBusca, type Acervo } from "../../estado/acervo";
+import { freddy, type ApiFreddy } from "../../api/freddy";
+import { tituloDoLink } from "../../estado/tituloDoLink";
+import { useArmazem } from "../../estado/useArmazem";
 import { useMotor } from "../../motor/contexto";
-import type { Musica } from "../../nucleo/tipos";
+import type { Musica } from "../../comum/tipos";
 import { previa, responder, responderEraEssa, separarTemas, termoEmDigitacao, type Contexto, type Previa } from "./conversa";
 import { semNarrar } from "./narrador";
 import { esquecerRevisao, responderRevisao, type Revisao } from "./revisao";
 import { fecharPergunta, historico, limparHistorico, pedidosAnteriores, registrar, type MensagemChat } from "./historico";
+import "./chat.css";
 
 const EXEMPLOS = [
   "toca calmo e hollow knight",

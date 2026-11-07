@@ -7,8 +7,8 @@
 import { useEffect, useState, type DragEvent, type KeyboardEvent } from "react";
 import { CartaoMusica } from "../../componentes/CartaoMusica";
 import { Icone } from "../../componentes/Icone";
-import { moverNaPlaylist, playlists, removerDaPlaylist, renomearPlaylist } from "../../dados/playlists";
-import { useArmazem } from "../../dados/useArmazem";
+import { moverNaPlaylist, playlists, removerDaPlaylist, renomearPlaylist } from "../../estado/playlists";
+import { useArmazem } from "../../estado/useArmazem";
 import { useMotor } from "../../motor/contexto";
 import { tocarPlaylist, porPlaylistNaFila } from "./usarPlaylist";
 

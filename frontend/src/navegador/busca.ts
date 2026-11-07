@@ -11,8 +11,8 @@
  *   - palavras de preenchimento ("uma", "música", "de", "clima"...) são ignoradas.
  */
 
-import { normalizar, palavra } from "./texto";
-import type { Faixa, VocabularioBruto } from "./tipos";
+import { normalizar, palavra } from "../comum/texto";
+import type { Faixa, VocabularioBruto } from "../comum/tipos";
 
 export const MAX_RESULTADOS_DA_BUSCA = 15;
 

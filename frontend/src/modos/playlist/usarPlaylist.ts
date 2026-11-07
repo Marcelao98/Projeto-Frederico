@@ -1,6 +1,6 @@
 /** Tocar ou enfileirar uma playlist salva pelos botões (o chat faz o mesmo em playlistsChat.ts). */
 
-import type { PlaylistSalva } from "../../dados/playlists";
+import type { PlaylistSalva } from "../../estado/playlists";
 import type { Motor } from "../../motor/tipos";
 import { avisoDeLimite } from "../chat/playlistsChat";
 

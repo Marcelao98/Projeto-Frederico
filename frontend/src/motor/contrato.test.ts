@@ -6,8 +6,8 @@
 
 import { describe, it } from "vitest";
 import { CASOS, rodarCaso } from "./contratoCasos";
-import { MotorLocal } from "./motorLocal";
-import type { OuvinteReprodutor, Reprodutor } from "./reprodutor";
+import { MotorLocal } from "../navegador/motorLocal";
+import type { OuvinteReprodutor, Reprodutor } from "../navegador/reprodutor";
 
 class ReprodutorFalso implements Reprodutor {
   ouvinte!: OuvinteReprodutor;

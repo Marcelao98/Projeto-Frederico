@@ -10,11 +10,11 @@
  * a fila". Por isso o chat olha aqui antes.
  */
 
-import { acharPlaylist, playlists, salvarPlaylist, type PlaylistSalva } from "../../dados/playlists";
+import { acharPlaylist, playlists, salvarPlaylist, type PlaylistSalva } from "../../estado/playlists";
 import type { Motor } from "../../motor/tipos";
 import { MAX_FILA } from "../../motor/tipos";
-import { normalizar } from "../../nucleo/texto";
-import type { Musica } from "../../nucleo/tipos";
+import { normalizar } from "../../comum/texto";
+import type { Musica } from "../../comum/tipos";
 
 export interface FalaDePlaylist {
   texto: string;

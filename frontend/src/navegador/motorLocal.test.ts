@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
-import type { Musica } from "../nucleo/tipos";
+import type { Musica } from "../comum/tipos";
 import { MotorLocal } from "./motorLocal";
 import type { OuvinteReprodutor, Reprodutor } from "./reprodutor";
-import { MAX_FILA, type EventoMotor } from "./tipos";
+import { MAX_FILA, type EventoMotor } from "../motor/tipos";
 
 /** Reprodutor de mentira: guarda o que mandaram e deixa o teste disparar os eventos. */
 class ReprodutorFalso implements Reprodutor {

@@ -5,9 +5,9 @@
 
 import { useRef, useState } from "react";
 import { Icone } from "../../componentes/Icone";
-import { adicionarNaPlaylist, playlists, salvarPlaylist } from "../../dados/playlists";
-import { useArmazem } from "../../dados/useArmazem";
-import type { Musica } from "../../nucleo/tipos";
+import { adicionarNaPlaylist, playlists, salvarPlaylist } from "../../estado/playlists";
+import { useArmazem } from "../../estado/useArmazem";
+import type { Musica } from "../../comum/tipos";
 
 export function BotaoPlaylist({
   musica,

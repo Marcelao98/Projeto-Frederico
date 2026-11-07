@@ -7,8 +7,8 @@
 
 import casos from "@contrato/casos_contrato.json";
 import { expect } from "vitest";
-import type { Musica } from "../nucleo/tipos";
-import type { OuvinteReprodutor } from "./reprodutor";
+import type { Musica } from "../comum/tipos";
+import type { OuvinteReprodutor } from "../navegador/reprodutor";
 import type { Comando, EventoMotor, Motor } from "./tipos";
 
 export type Passo = Record<string, unknown>;

@@ -1,0 +1,256 @@
+/* ---------- janela do Discord ---------- */
+
+.janela-fundo {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  background: rgb(0 0 0 / 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.janela {
+  width: min(560px, 100%);
+  max-height: 86vh;
+  overflow: auto;
+  padding: 18px 20px;
+  border-radius: var(--raio);
+  border: 1px solid var(--borda-forte);
+  background: var(--painel);
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.janela-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.janela-topo h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  margin: 0;
+}
+
+.janela-erro {
+  color: var(--perigo);
+  font-size: 13.5px;
+}
+
+.janela-token,
+.janela-corpo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.guia {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--texto-2);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.janela-linha {
+  display: flex;
+  gap: 8px;
+}
+
+.janela-linha input {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 11px;
+  border-radius: var(--raio-p);
+  border: 1px solid var(--borda-forte);
+  background: var(--painel-2);
+  color: var(--texto);
+  font: inherit;
+}
+
+.bot-linha {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.bot-linha .grupo-botoes {
+  margin-left: auto;
+  display: flex;
+  gap: 6px;
+}
+
+.bot-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.na-call {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: var(--raio-p);
+  background: var(--painel-2);
+  border: 1px solid var(--borda);
+}
+
+.na-call .luz {
+  margin-left: 0;
+}
+
+.na-call .botao {
+  margin-left: auto;
+}
+
+.servidores {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.servidor h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin: 0 0 4px;
+}
+
+.servidor h3 img,
+.servidor-letra {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+
+.servidor-letra {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--acento-fraco);
+  color: var(--acento-texto);
+  font-size: 12px;
+}
+
+.canal {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 6px;
+  text-align: left;
+  color: var(--texto-2);
+  font-size: 14px;
+}
+
+.canal:hover:not(:disabled) {
+  background: var(--painel-2);
+  color: var(--texto);
+}
+
+.canal.ativo {
+  background: var(--acento-fraco);
+  color: var(--acento-texto);
+}
+
+.canal-nome {
+  flex: 1;
+}
+
+.desconectar {
+  align-self: flex-start;
+  font-size: 12.5px;
+}
+
+a.botao {
+  color: inherit;
+  text-decoration: none;
+}
+/* --- Discord: só na call, teste do assobio e diagnóstico --------------- */
+
+.teste-call {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--raio-p);
+  border: 1px solid var(--borda);
+}
+
+.teste-linha {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+}
+
+.teste-linha .apagado {
+  font-size: 12.5px;
+}
+
+.diagnostico summary {
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--texto-2);
+}
+
+.diagnostico dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 6px 12px;
+  margin: 10px 0 0;
+  font-size: 13px;
+}
+
+.diagnostico dt {
+  color: var(--texto-3);
+}
+
+.diagnostico dd {
+  margin: 0;
+  min-width: 0;
+}
+
+.diagnostico .aviso {
+  color: var(--aviso);
+  font-weight: 600;
+}
+
+.nivel {
+  display: inline-block;
+  width: 70px;
+  height: 7px;
+  margin-right: 8px;
+  vertical-align: middle;
+  border-radius: 4px;
+  background: var(--painel-3);
+  overflow: hidden;
+}
+
+.nivel span {
+  display: block;
+  height: 100%;
+  background: var(--ok);
+  transition: width 0.15s linear;
+}
+
+@media (max-width: 480px) {
+  .diagnostico dl {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  .diagnostico dd {
+    margin-bottom: 6px;
+  }
+}

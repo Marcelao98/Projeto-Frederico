@@ -8,9 +8,9 @@
 
 import musicasJson from "@acervo/musicas.json";
 import vocabularioJson from "@acervo/vocabulario.json";
-import { MAX_RESULTADOS_DA_BUSCA, buscarPorTags, montarVocabulario, sortear, type Vocabulario } from "../nucleo/busca";
-import { normalizar } from "../nucleo/texto";
-import type { Faixa, VocabularioBruto } from "../nucleo/tipos";
+import { MAX_RESULTADOS_DA_BUSCA, buscarPorTags, montarVocabulario, sortear, type Vocabulario } from "../navegador/busca";
+import { normalizar } from "../comum/texto";
+import type { Faixa, VocabularioBruto } from "../comum/tipos";
 import { criarArmazem } from "./armazem";
 
 export interface Contagem {

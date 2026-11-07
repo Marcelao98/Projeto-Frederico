@@ -8,7 +8,7 @@
  * dobrado. Protocolo em backend/freddy/api/protocolo.py.
  */
 
-import { VOLUME_PADRAO } from "../nucleo/pedido";
+import { VOLUME_PADRAO } from "../navegador/pedido";
 import type {
   Comando,
   EstadoMotor,
@@ -18,7 +18,7 @@ import type {
   Progresso,
   Resultado,
   SituacaoConexao,
-} from "./tipos";
+} from "../motor/tipos";
 
 export const PROTOCOLO = 1;
 const PRAZO_DO_COMANDO_MS = 15_000;

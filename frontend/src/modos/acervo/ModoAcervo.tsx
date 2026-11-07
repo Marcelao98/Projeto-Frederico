@@ -9,13 +9,14 @@
 
 import { useEffect, useMemo, useRef, useState, type ChangeEvent } from "react";
 import { Icone } from "../../componentes/Icone";
-import { recarregarAcervo, rotuloCategoria, type Acervo } from "../../dados/acervo";
-import { freddy, type ApiFreddy, type ResumoDaPlanilha } from "../../dados/freddy";
-import { useArmazem } from "../../dados/useArmazem";
+import { recarregarAcervo, rotuloCategoria, type Acervo } from "../../estado/acervo";
+import { freddy, type ApiFreddy, type ResumoDaPlanilha } from "../../api/freddy";
+import { useArmazem } from "../../estado/useArmazem";
 import { useMotor } from "../../motor/contexto";
-import { normalizar } from "../../nucleo/texto";
-import { musicaDaFaixa, type Faixa } from "../../nucleo/tipos";
+import { normalizar } from "../../comum/texto";
+import { musicaDaFaixa, type Faixa } from "../../comum/tipos";
 import { separarTemas } from "../chat/revisao";
+import "./acervo.css";
 
 const PAGINA = 100;
 const SEM_TEMA = "não classificado";

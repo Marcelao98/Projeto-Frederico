@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { MotorRemoto, type SocketMinimo } from "./motorRemoto";
-import type { EstadoMotor, EventoMotor } from "./tipos";
+import type { EstadoMotor, EventoMotor } from "../motor/tipos";
 
 /** WebSocket de mentira: o teste faz o papel do Freddy. */
 class SocketFalso implements SocketMinimo {

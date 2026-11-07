@@ -9,7 +9,7 @@
  * em `Comandos` e campos em `EstadoMotor`.
  */
 
-import type { Musica } from "../nucleo/tipos";
+import type { Musica } from "../comum/tipos";
 
 export const MAX_FILA = 50; // músicas esperando, sem contar a que toca (igual ao Bardo)
 

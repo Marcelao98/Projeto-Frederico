@@ -1,9 +1,10 @@
 /** Modo Playlist: monta a fila na mão, do acervo, e salva pra próxima sessão. */
 
 import { useEffect, useRef, useState } from "react";
-import type { Acervo } from "../../dados/acervo";
+import type { Acervo } from "../../estado/acervo";
 import { PainelAcervo } from "./PainelAcervo";
 import { PainelFila } from "./PainelFila";
+import "./playlist.css";
 
 export function ModoPlaylist({ acervo }: { acervo: Acervo }) {
   const [aviso, setAviso] = useState<string | null>(null);

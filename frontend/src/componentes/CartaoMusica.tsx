@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
-import type { Musica } from "../nucleo/tipos";
-import { miniatura } from "../nucleo/youtube";
+import type { Musica } from "../comum/tipos";
+import { miniatura } from "../comum/youtube";
 
 /** Uma música em linha: capa, título, origem e as ações que quem usa passar. */
 export function CartaoMusica({
