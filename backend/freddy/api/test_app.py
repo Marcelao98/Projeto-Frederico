@@ -15,6 +15,7 @@ from freddy.audio.reprodutor_falso import ReprodutorFalso
 from freddy.config import Config
 
 PAINEL = {"origin": "http://localhost:5173"}
+WS = "ws://127.0.0.1:47824/ws"  # o TestClient usa "testserver" se não disser o endereço
 
 
 def m(n: int) -> dict:
@@ -92,14 +93,14 @@ class Base(unittest.TestCase):
             return self.bot
 
         app = criar_app(config, criar=criar, youtube=YoutubeFalso(), bot=bot)
-        self.cliente = TestClient(app)
+        self.cliente = TestClient(app, base_url="http://127.0.0.1:47824")
         self.cliente.__enter__()
         self.addCleanup(self.cliente.__exit__, None, None, None)
 
 
 class TestWebSocket(Base):
     def conectar(self):
-        ws = self.cliente.websocket_connect("/ws", headers=PAINEL)
+        ws = self.cliente.websocket_connect(WS, headers=PAINEL)
         ws.__enter__()
         self.addCleanup(ws.__exit__, None, None, None)
         ola = ws.receive_json()
@@ -181,12 +182,12 @@ class TestWebSocket(Base):
 
     def test_site_estranho_nao_conecta(self):
         with self.assertRaises(WebSocketDisconnect) as erro:
-            with self.cliente.websocket_connect("/ws", headers={"origin": "https://site-malvado.example"}) as ws:
+            with self.cliente.websocket_connect(WS, headers={"origin": "https://site-malvado.example"}) as ws:
                 ws.receive_json()
         self.assertEqual(erro.exception.code, 4403)
 
     def test_programa_local_sem_origin_conecta(self):
-        with self.cliente.websocket_connect("/ws") as ws:
+        with self.cliente.websocket_connect(WS) as ws:
             self.assertEqual(ws.receive_json()["tipo"], "ola")
 
 
@@ -213,7 +214,7 @@ class TestDiscord(Base):
         self.assertFalse(self.cliente.put("/discord/ouvir-aqui", json={"ligado": False}).json()["ouvirAqui"])
 
     def test_painel_fica_sabendo_na_hora(self):
-        with self.cliente.websocket_connect("/ws", headers=PAINEL) as ws:
+        with self.cliente.websocket_connect(WS, headers=PAINEL) as ws:
             for _ in range(4):
                 ws.receive_json()
             self.cliente.post("/discord/entrar", json={"canalId": "123456789012345678"})
@@ -221,6 +222,56 @@ class TestDiscord(Base):
             while msg["tipo"] != "discord":
                 msg = ws.receive_json()
             self.assertEqual(msg["discord"]["canal"], "123456789012345678")
+
+
+class TestPorteiro(Base):
+    """Os ataques da revisão de 07/11: site estranho e DNS rebinding."""
+
+    MAL = {"origin": "https://site-malvado.example"}
+
+    def test_site_estranho_nao_reescreve_o_acervo(self):
+        faixa = self.cliente.get("/acervo").json()["musicas"][0]
+        csv = f"id;nome;franquia;link;temas;categorias;comentario\r\n{faixa['id']};;;;hackeado;;\r\n"
+        # POST "simples" (text/plain): o navegador manda sem preflight de CORS.
+        r = self.cliente.post("/acervo/planilha?aplicar=true", content=csv.encode(), headers={**self.MAL, "content-type": "text/plain"})
+        self.assertEqual(r.status_code, 403)
+        self.assertFalse((self.pasta / "ajustes.json").exists())
+
+    def test_site_estranho_nao_mexe_no_bot(self):
+        for rota in ("/discord/sair", "/discord/religar", "/discord/assobio", "/acervo/planilha/salvar", "/abrir"):
+            with self.subTest(rota):
+                self.assertEqual(self.cliente.post(rota, headers=self.MAL).status_code, 403)
+
+    def test_site_estranho_nem_le(self):
+        self.assertEqual(self.cliente.get("/acervo", headers=self.MAL).status_code, 403)
+
+    def test_dns_rebinding(self):
+        r = self.cliente.get("/acervo", headers={"host": "evil.example:47824"})
+        self.assertEqual(r.status_code, 403)
+        self.assertIn("endereço não permitido", r.json()["detail"])
+        with self.assertRaises(WebSocketDisconnect):
+            with self.cliente.websocket_connect(WS, headers={"host": "evil.example:47824"}) as ws:
+                ws.receive_json()
+
+    def test_painel_e_programas_locais_passam(self):
+        for origem in ("http://localhost:5173", "http://localhost:47823", "tauri://localhost"):
+            with self.subTest(origem):
+                self.assertEqual(self.cliente.get("/saude", headers={"origin": origem}).status_code, 200)
+        self.assertEqual(self.cliente.get("/saude").status_code, 200)  # curl, script
+        self.assertEqual(self.cliente.get("/saude", headers={"host": "localhost:47824"}).status_code, 200)
+
+
+class TestAbrir(Base):
+    def test_so_abre_discord_e_github(self):
+        from unittest import mock
+
+        with mock.patch("webbrowser.open", return_value=True) as abrir:
+            ok = self.cliente.post("/abrir", json={"url": "https://discord.com/oauth2/authorize?client_id=1"})
+            self.assertEqual(ok.status_code, 200)
+            abrir.assert_called_once()
+            self.assertEqual(self.cliente.post("/abrir", json={"url": "https://site-malvado.example"}).status_code, 400)
+            self.assertEqual(self.cliente.post("/abrir", json={"url": "file:///etc/passwd"}).status_code, 400)
+            self.assertEqual(abrir.call_count, 1)
 
 
 class TestRest(Base):

@@ -10,6 +10,7 @@ Rotas:
     PUT    /discord/token         {token}: guarda o token e conecta
     DELETE /discord/token         desconecta e esquece o token
     POST   /discord/religar       conecta de novo com o token guardado
+    POST   /abrir                 {url}: abre no navegador do sistema (só Discord e GitHub)
     POST   /discord/entrar        {canalId}: entra na call
     POST   /discord/sair          sai da call
     PUT    /discord/ouvir-aqui    {ligado}: a caixa de som toca a cópia do que vai pra call
@@ -38,6 +39,7 @@ from pydantic import BaseModel, Field, ValidationError
 
 from freddy import PROTOCOLO, VERSAO
 from freddy.api.paineis import Paineis
+from freddy.api.porteiro import Porteiro
 from freddy.api.protocolo import Musica, descrever_erro, validar_comando
 from freddy.config import Config
 from freddy.dados import planilha
@@ -92,6 +94,15 @@ class CanalDeVoz(BaseModel):
 
 class Ligado(BaseModel):
     ligado: bool
+
+
+class LinkExterno(BaseModel):
+    url: str = Field(max_length=2000)
+
+
+# O que o painel pode mandar abrir no navegador do sistema (o app não abre
+# link sozinho). Lista fechada: a rota não vira "abre qualquer coisa".
+SITES_QUE_ABRE = ("https://discord.com/", "https://github.com/Marcelao98/Projeto-Frederico")
 
 
 class PedidoDeBusca(BaseModel):
@@ -162,6 +173,9 @@ def criar_app(
     app = FastAPI(title="Freddy", version=VERSAO, lifespan=vida)
     app.add_middleware(
         CORSMiddleware, allow_origins=list(config.origens), allow_methods=["*"], allow_headers=["*"]
+    )
+    # Por último = o primeiro a ver o pedido: recusa site estranho antes de tudo.
+    app.add_middleware(Porteiro, origens=config.origens, hosts=config.hosts
     )
 
     @app.get("/saude")
@@ -291,6 +305,16 @@ def criar_app(
         app.state.bot.definir_ouvir_aqui(pedido.ligado)
         return app.state.bot.estado()
 
+    @app.post("/abrir")
+    def abrir_no_navegador(link: LinkExterno):
+        import webbrowser
+
+        if not link.url.startswith(SITES_QUE_ABRE):
+            raise HTTPException(400, "só abro links do Discord e do GitHub do Freddy")
+        if not webbrowser.open(link.url):
+            raise HTTPException(500, "não achei um navegador pra abrir")
+        return {"ok": True}
+
     @app.get("/playlists")
     def listar_playlists():
         return playlists.listar()
@@ -334,13 +358,7 @@ def criar_app(
 
     @app.websocket("/ws")
     async def ws(socket: WebSocket):
-        origem = socket.headers.get("origin")
-        # Navegador sempre manda Origin: sem ela é um programa local (script,
-        # um teste). Com ela, só o painel passa.
-        if origem is not None and origem not in config.origens:
-            log.warning("Conexão recusada de %s", origem)
-            await socket.close(code=4403)
-            return
+        # Quem pode conectar (só o painel) o Porteiro já conferiu.
         await socket.accept()
         paineis: Paineis = app.state.paineis
         motor: Motor = app.state.motor

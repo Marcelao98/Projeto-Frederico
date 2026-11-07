@@ -49,6 +49,11 @@ class Config:
     pasta_downloads: Path = field(default_factory=pasta_de_downloads)
 
     @property
+    def hosts(self) -> tuple[str, ...]:
+        """Os endereços que o Freddy atende (ver api/porteiro.py)."""
+        return (f"127.0.0.1:{self.porta}", f"localhost:{self.porta}")
+
+    @property
     def arquivo_playlists(self) -> Path:
         return self.pasta / "playlists.json"
 
