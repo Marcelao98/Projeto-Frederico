@@ -6,7 +6,7 @@
  */
 
 import { useEffect, useState } from "react";
-import { discord, freddy, type Diagnostico, type EstadoDiscord } from "../dados/freddy";
+import { discord, freddy, type ApiFreddy, type Diagnostico, type EstadoDiscord } from "../dados/freddy";
 import { useArmazem } from "../dados/useArmazem";
 import { Icone } from "./Icone";
 
@@ -62,6 +62,13 @@ export function JanelaDiscord({ fechar }: { fechar: () => void }) {
   );
 }
 
+const PORTAL = "https://discord.com/developers/applications";
+
+/** No app, quem abre o navegador é o backend; se não der, tenta pelo próprio painel. */
+function abrirLink(api: ApiFreddy, url: string) {
+  api.abrir(url).catch(() => window.open(url, "_blank", "noopener"));
+}
+
 function Conteudo({
   estado,
   ocupado,
@@ -98,7 +105,11 @@ function Conteudo({
         ) : (
           <ol className="guia">
             <li>
-              Abre o <strong>Discord Developer Portal</strong> (discord.com/developers/applications) e clica em{" "}
+              Abre o{" "}
+              <button type="button" className="link" onClick={() => abrirLink(api, PORTAL)}>
+                Discord Developer Portal
+              </button>{" "}
+              e clica em{" "}
               <strong>New Application</strong>. Nome: <em>Freddy</em>.
             </li>
             <li>
@@ -149,9 +160,9 @@ function Conteudo({
         </div>
         {estado.convite && (
           <div className="grupo-botoes">
-            <a className="botao" href={estado.convite} target="_blank" rel="noreferrer">
+            <button className="botao" onClick={() => abrirLink(api, estado.convite!)}>
               Convidar pra um servidor
-            </a>
+            </button>
             <button className="botao" onClick={() => void copiarConvite()} title="Copiar o link do convite">
               {copiado ? "Copiado ✓" : "Copiar link"}
             </button>

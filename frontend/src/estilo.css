@@ -2216,3 +2216,13 @@ a.botao {
     margin-bottom: 6px;
   }
 }
+
+/* Botão com cara de link (abre no navegador pelo backend). */
+button.link {
+  display: inline;
+  padding: 0;
+  font: inherit;
+  font-weight: 600;
+  color: var(--acento-texto);
+  text-decoration: underline;
+}

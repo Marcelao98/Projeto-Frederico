@@ -168,6 +168,14 @@ export class ApiFreddy {
     });
   }
 
+  /**
+   * Abre um link no navegador do sistema. O app (Tauri) não abre link sozinho,
+   * então quem abre é o backend. Só aceita Discord e o GitHub do Freddy.
+   */
+  abrir(url: string) {
+    return this.pedir<{ ok: boolean }>("/abrir", { method: "POST", body: JSON.stringify({ url }) });
+  }
+
   // --- Discord --------------------------------------------------------------
 
   discord() {
