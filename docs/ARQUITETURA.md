@@ -112,7 +112,7 @@ freddy.sh                   pra desenvolver: backend + app na ordem certa
 |---|---|---|
 | A | segurança (Porteiro), docs, versão num comando, `main` | ✅ v0.5.5 |
 | B1 | esta estrutura; o yt-dlp que se atualiza; o painel espera o backend; teste do backend empacotado | ✅ v0.6.0 |
-| B2 | Sala (fila + Mesa + saídas), relógio único e saídas plugáveis, Mesa com camadas, procurar a próxima música antes, fila salva ao fechar, avisos internos (eventos) | próxima |
+| B2 | Sala (fila + Mesa + saídas), relógio único e saídas plugáveis, Mesa com camadas, procurar a próxima música antes, fila salva ao fechar, avisos internos (eventos). Pedido completo: `docs/etapas/B2.md` | próxima |
 | C | mic virtual (mais uma saída) | |
 | D | um cérebro só: o chat do painel no backend; tipos do painel gerados do Python | |
 | depois | mixer e soundboard (camadas) ou vários mestres (salas) | |

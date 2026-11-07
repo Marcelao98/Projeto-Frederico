@@ -18,6 +18,18 @@ Atualizado em 07/11/2026 (v0.6.0).
 | **Bot do Discord do Freddy** | ✅ toca na call desde a v0.5.2 (DAVE resolvido) |
 | **Mixer, microfone virtual, soundboard** | ⬜ só planejado (telas "em breve" no painel) |
 
+## Onde paramos (07/11/2026)
+
+- **v0.6.0 pronta** (etapa B1 da arquitetura nova). Tudo no `main`.
+- ⚠️ **O branch principal do GitHub ainda é `bardo-inicial`**: o Marcelo troca
+  em Settings → General → Default branch → `main` (a sessão na nuvem não tem
+  permissão). Até lá, sempre começar do `main` explicitamente.
+- **Próximo pedido do Marcelo:** "transformar o Freddy em algo de verdade":
+  revisar a documentação, ver o que falta e montar um roadmap de produto
+  (pra outros mestres usarem de verdade, na maioria no Windows).
+- **Etapa B2 aprovada**, com o pedido completo em `docs/etapas/B2.md` (pode
+  ir pra uma sessão separada).
+
 ## Como desenvolver sem sofrer
 
 - **Testar o painel:** `cd frontend && npm run dev` e abrir http://localhost:5173.
