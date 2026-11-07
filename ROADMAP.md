@@ -24,11 +24,13 @@ Atualizado em 07/11/2026 (v0.6.0).
 - ⚠️ **O branch principal do GitHub ainda é `bardo-inicial`**: o Marcelo troca
   em Settings → General → Default branch → `main` (a sessão na nuvem não tem
   permissão). Até lá, sempre começar do `main` explicitamente.
-- **Próximo pedido do Marcelo:** "transformar o Freddy em algo de verdade":
-  revisar a documentação, ver o que falta e montar um roadmap de produto
-  (pra outros mestres usarem de verdade, na maioria no Windows).
-- **Etapa B2 aprovada**, com o pedido completo em `docs/etapas/B2.md` (pode
-  ir pra uma sessão separada).
+- **Visão nova (07/11/2026): o Freddy vira o Fredify**, um tocador de música
+  universal (música + efeitos sonoros; Windows, Linux, Android; toca no
+  aparelho, no Discord e em outras plataformas; banco de dados pra busca).
+  RPG vira um dos usos. Antes de seguir: **auditoria + roadmap de produto**,
+  pedido completo em `docs/etapas/auditoria-fredify.md`.
+- **Etapa B2** (base do som) aprovada, pedido em `docs/etapas/B2.md`, mas
+  **em espera**: a auditoria diz se ela continua sendo o próximo passo.
 
 ## Como desenvolver sem sofrer
 
@@ -176,4 +178,5 @@ A arquitetura nova (aprovada em 07/11/2026) está em `docs/ARQUITETURA.md`:
   futuro (vender o app pronto, doações, suporte); só impede fechar o código.
 
 ## Decisões em aberto
-- **Nome:** Freddy, FredBOT ou Fredérico? (o app já se chama Freddy)
+- **Nome:** o Marcelo quer **Fredify** (07/11/2026); a auditoria confere marca e
+  nomes parecidos antes de trocar nos arquivos.
