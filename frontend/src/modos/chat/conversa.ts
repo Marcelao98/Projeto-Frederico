@@ -1,8 +1,8 @@
 /**
  * O "cérebro" do chat: texto da mesa → comando no motor → resposta do Freddy.
  *
- * Mesma ideia do cog do Bardo: interpretarPedido() decide o que é, o motor
- * faz, e aqui só se monta a resposta (os textos vieram do Bardo). Sem
+ * Mesma ideia do backend (freddy/conversa/): interpretarPedido() decide o
+ * que é, o motor faz, e aqui só se monta a resposta. Sem
  * LLM. Não depende de React, então dá pra testar sozinho.
  */
 
@@ -218,7 +218,7 @@ async function executarPedido(pedido: Pedido, ctx: Contexto): Promise<RespostaFr
   }
 }
 
-/** Nada no acervo: procura no YouTube, toca, e pergunta se era essa (como o Bardo). */
+/** Nada no acervo: procura no YouTube, toca, e pergunta se era essa (como no Discord). */
 async function buscaLivre(
   busca: string,
   motor: Motor,
@@ -294,7 +294,7 @@ function descreverFila(motor: Motor): RespostaFreddy {
   return { texto: linhas.join("\n") };
 }
 
-/** O que o Freddy fala sozinho quando a fila anda (o "avisar" do Bardo). */
+/** O que o Freddy fala sozinho quando a fila anda. */
 export function falaDoEvento(evento: EventoMotor): RespostaFreddy {
   switch (evento.tipo) {
     case "tocando_agora":

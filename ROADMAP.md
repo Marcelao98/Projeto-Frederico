@@ -4,17 +4,17 @@ O Freddy é o som da mesa de RPG: você pede a música em português, ele toca
 pro seu Discord (ou pro seu microfone), e o mestre controla tudo por um
 painel com a cara do Frederico, a calopsita de verdade.
 
-Atualizado em 07/11/2026.
+Atualizado em 07/11/2026 (v0.6.0).
 
 ## Onde estamos
 
 | Peça | Situação |
 |---|---|
-| **Cérebro musical** (veio do Bardo: entender pedidos, buscar no acervo, fila, aprender faixa nova) | ✅ pronto, agora é do Freddy |
+| **Cérebro musical** (entender pedidos, buscar no acervo, fila, aprender faixa nova) | ✅ pronto (`backend/freddy/nucleo/`) |
 | **Acervo** (607 faixas, 9 franquias, 27 climas) | ✅ pronto, curadoria contínua |
 | **Painel** (Chat, Playlist, Acervo, 5 plumagens) | ✅ pronto; toca pelo Freddy ou sozinho pelo YouTube |
 | **App desktop** (Tauri) com instaladores no GitHub (Windows, Linux, Mac) | ✅ pronto (v0.5.x): liga o backend sozinho, sem terminal |
-| **Backend próprio** (o Freddy sem a Natty) | ✅ pronto, vai dentro do app |
+| **Backend próprio** | ✅ pronto, vai dentro do app |
 | **Bot do Discord do Freddy** | ✅ toca na call desde a v0.5.2 (DAVE resolvido) |
 | **Mixer, microfone virtual, soundboard** | ⬜ só planejado (telas "em breve" no painel) |
 
@@ -26,16 +26,16 @@ Atualizado em 07/11/2026.
   (`.github/workflows/app.yml`) e publica em Releases. Ninguém compila no PC.
 - **Backend + app na ordem certa:** `./freddy.sh` (`--sem-som` finge que toca).
 - **Testes:** `cd frontend && npm test`, `cd backend && python -m unittest
-  discover -s freddy -t .` (e `-s modules/bardo`), e `python3 scripts/versao.py
+  discover -s freddy -t .` e `python3 scripts/versao.py
   --conferir` (o GitHub roda tudo antes de cada build, mais o ponta a ponta).
 - **Versão nova:** `python3 scripts/versao.py 0.5.6`, commit e push.
 
 ## Fases
 
 ### Fase 0: Fundação ✅
-- Bardo extraído da Natty com o histórico.
+- O módulo de música da Natty vira o Freddy, com o histórico.
 - Repositório dividido em `frontend/` e `backend/`.
-- Painel React + TypeScript: Chat (pedidos sem LLM, mesmas regras da Natty),
+- Painel React + TypeScript: Chat (pedidos em português, sem LLM),
   Playlist (acervo com filtros, fila arrastável, playlists salvas).
 - Plumagens: Frederico (padrão), Lutino, Cinza silvestre, Canela, Cara-branca.
   Arte do Frederico gerada a partir das fotos dele.
@@ -54,11 +54,11 @@ O Freddy vira um programa Python que roda sozinho, sem a Natty: `python -m fredd
   o painel oferece levar as playlists do navegador.
 - ✅ Busca livre no YouTube e o "era essa?" no chat do painel (com botões);
   a faixa vai pro `aprendidas.json` e um script leva pro acervo oficial.
-- ✅ Estudo do Kenku FM pro Discord: `backend/docs/discord.md`.
+- ✅ Estudo do Kenku FM pro Discord: `docs/discord.md`.
 - ✅ Arrumar o acervo (v0.3.0): modo **Acervo** (tabela editável), planilha
   CSV (baixa, edita no LibreOffice/Excel, manda de volta com resumo) e pelo
   chat (`temas`, `revisar`: o Freddy mostra os temas e você diz se tá certo).
-  Correções vão pro `ajustes.json` do mestre; `freddy_promover.py` leva pro oficial.
+  Correções vão pro `ajustes.json` do mestre; `acervo_promover.py` leva pro oficial.
 - ✅ O chat conta o que muda fora dele (Playlist, barra, outra aba).
 - ✅ Playlists salvas de verdade (v0.4.0): pelo chat (`playlists`, `toca a
   playlist X`, `põe a playlist X na fila`, `salva a fila como X`), editor
@@ -68,8 +68,8 @@ O Freddy vira um programa Python que roda sozinho, sem a Natty: `python -m fredd
 - **Pronto quando:** o painel controla uma fila que mora no backend, com o app aberto ou no navegador.
 
 ### Fase 2: Bot do Discord do Freddy ✅
-O som chega na call pelo Freddy. Guia e detalhes em `backend/docs/discord.md`.
-- ✅ Bot próprio dentro do `python -m freddy` (`backend/freddy/bot/`), com o
+O som chega na call pelo Freddy. Guia e detalhes em `docs/discord.md`.
+- ✅ Bot próprio dentro do `python -m freddy` (`backend/freddy/integracoes/discord/`), com o
   jeito de conectar do Kenku FM: token colado no painel, lista de servidores
   e canais, um player que nunca para, "ouvir aqui também". O `cog.py` da
   Natty saiu (com o `@Natty`, o 🎙 do Echo e o "não sair da call").
@@ -86,7 +86,7 @@ Um Freddy ligado num PC de casa, atendendo todos os mestres.
 - Login no painel pela conta do Discord (OAuth2). Cada um vê só os
   servidores onde tem permissão.
 - Permissão por cargo do Discord (ex.: "Mestre") ou lista de pessoas.
-- Fila e volume separados por servidor (o Bardo já faz isso).
+- Fila e volume separados por servidor (uma sala por servidor: `backend/freddy/salas/`).
 - **Limite do Discord:** um bot fica em um canal de voz por servidor. Duas
   mesas ao mesmo tempo no mesmo servidor = um "pool" de contas de bot
   (Freddy 1, Freddy 2) e o backend distribui.
@@ -123,7 +123,7 @@ Um Freddy ligado num PC de casa, atendendo todos os mestres.
 - **Plumagens:** por enquanto todas usam a arte do Frederico (pedido do
   Marcelo). Arte própria das outras quatro é opcional: mesmo prompt do
   Frederico no Gemini, recorte com `frontend/scripts/recortar_ave.py`.
-- **Pendências herdadas do Bardo:** loop da fila inteira, remover item pelo
+- **Pendências antigas:** loop da fila inteira, remover item pelo
   chat, colar playlist do YouTube, títulos com "volta"/"próxima" virando comando.
 
 ## Arrumação da casa (07/11/2026)
@@ -135,13 +135,20 @@ Revisão geral do código e da arquitetura. A **etapa A** (v0.5.5):
 - ✅ Documentação em dia; `main` como branch principal; workflow em
   qualquer branch `claude/**`.
 
-As próximas etapas (base do som, mic virtual, um cérebro só pro chat)
-dependem da proposta de arquitetura nova, em discussão.
+A arquitetura nova (aprovada em 07/11/2026) está em `docs/ARQUITETURA.md`:
+- ✅ **Etapa B1** (v0.6.0): a estrutura nova de pastas (as regras viraram
+  `backend/freddy/nucleo/`, o acervo foi pra `acervo/` na raiz, rotas
+  divididas, CSS por tela); o yt-dlp do app se atualiza sozinho; o painel
+  espera o backend que o app ligou; o GitHub liga o backend empacotado antes
+  de virar app.
+- ⬜ **B2:** Sala, relógio único, saídas plugáveis, Mesa com camadas, próxima
+  música procurada antes, fila salva.
+- ⬜ **C:** mic virtual. ⬜ **D:** um cérebro só pro chat.
 
 ## Decisões tomadas
 - **O Freddy é o áudio do Nattyverso.** A Natty não toca mais nada e não
-  precisa mudar: o Bardo que veio pra cá é do Freddy agora e não fica em
-  sincronia com a natty-bot. (31/10/2026)
+  precisa mudar: o módulo de música que veio de lá é do Freddy agora e não
+  fica em sincronia com a natty-bot. (31/10/2026)
 - **Bot:** um Freddy compartilhado pelos mestres, rodando num PC de casa (Fase 3). (31/10/2026)
 - **Sistemas:** Linux e Windows são prioridade; Mac depois. (31/10/2026)
 - **Quem toca:** o backend toca o som ele mesmo (não o navegador), num formato

@@ -1,7 +1,7 @@
 # Discord: o bot do Freddy
 
 O Freddy toca na call pelo bot dele: um bot só, compartilhado pelos mestres,
-rodando dentro do `python -m freddy` (código em `backend/freddy/bot/`).
+rodando dentro do `python -m freddy` (código em `backend/freddy/integracoes/discord/`).
 
 ## Criar o bot (uma vez só)
 
@@ -42,21 +42,21 @@ instalada): `sudo dnf install opus`. No Windows ela vem junto com o discord.py.
 ## Como funciona
 
 ```
-Mesa (freddy/audio/mesa.py)  ──read() a cada 20 ms──▶  SaidaDiscord (bot/saida.py)  ──▶  discord.py (Opus) ──▶ call
+Mesa (freddy/audio/mesa.py)  ──read() a cada 20 ms──▶  SaidaDiscord (audio/saidas/discord.py)  ──▶  discord.py (Opus) ──▶ call
    │
-   └─ cópia (se "ouvir aqui") ──▶ caixa de som (audio/saidas.py)
+   └─ cópia (se "ouvir aqui") ──▶ caixa de som (audio/saidas/caixa.py)
 ```
 
-- `bot/bot.py` (`BotDoFreddy`): conecta, lista servidores e canais de voz
+- `integracoes/discord/bot.py` (`BotDoFreddy`): conecta, lista servidores e canais de voz
   (na ordem do Discord), entra/sai da call, recebe as menções, avisa o
   painel (`ao_mudar` → mensagem `"discord"` no `/ws`).
-- `bot/saida.py` (`SaidaDiscord`): o `discord.AudioSource`. O `read()` nunca
+- `audio/saidas/discord.py` (`SaidaDiscord`): o `discord.AudioSource`. O `read()` nunca
   devolve vazio (silêncio quando nada toca), então o player do discord.py
   nunca para: trocar de música não mexe no Discord, só na Mesa.
-- `bot/conversa.py` (`Conversa`): texto do Discord → comando no mesmo `Motor`
-  do painel → resposta. As regras de pedido são as do Bardo
-  (`service.interpretar_pedido`); playlists, iguais ao chat do painel. Sem
-  discord.py: testado direto em `bot/test_bot.py`.
+- `conversa/cerebro.py` (`Conversa`): texto do Discord → comando no mesmo
+  motor do painel → resposta. As regras de pedido são as do núcleo
+  (`nucleo/pedido.py`); playlists, iguais ao chat do painel. Sem discord.py:
+  testado direto em `integracoes/discord/test_bot.py`.
 - **Um relógio só:** com o bot numa call, quem puxa a Mesa é o Discord; a
   caixa de som toca uma cópia do que foi pra call. Sem isso a música andaria
   em dobro.

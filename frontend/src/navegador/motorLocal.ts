@@ -1,6 +1,6 @@
 /**
  * Motor que roda inteiro no navegador: guarda a fila e manda o Reprodutor
- * tocar. É o "Bardo sem Discord" do painel, até o backend existir.
+ * tocar. É o modo reserva do painel, quando o Freddy (backend) não está ligado.
  */
 
 import { VOLUME_PADRAO, limitarVolume } from "./pedido";

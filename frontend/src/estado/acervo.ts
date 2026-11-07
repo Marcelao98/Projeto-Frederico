@@ -1,7 +1,7 @@
 /**
  * O acervo de faixas e o vocabulário de categorias, prontos pra buscar.
  *
- * Sem o Freddy, vem direto dos JSON do Bardo (modules/bardo/dataset),
+ * Sem o Freddy, vem direto dos JSON do acervo (acervo/, na raiz),
  * embutidos no painel. Com o Freddy ligado, vem dele (GET /acervo): o mesmo
  * dataset mais as faixas que a mesa ensinou. As telas só enxergam `Acervo`.
  */
@@ -28,7 +28,7 @@ export interface Acervo {
   porId(id: string): Faixa | undefined;
   /** Busca booleana ("triste e bloodborne"). Vazio = nada. */
   buscar(texto: string): Faixa[];
-  /** buscar() sorteando até MAX_RESULTADOS_DA_BUSCA, como o Bardo faz pra fila. */
+  /** buscar() sorteando até MAX_RESULTADOS_DA_BUSCA, como o backend faz pra fila. */
   sortearDaBusca(texto: string): { escolhidas: Faixa[]; total: number };
 }
 

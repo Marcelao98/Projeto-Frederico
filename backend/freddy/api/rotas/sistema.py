@@ -30,7 +30,17 @@ def saude(request: Request):
         "protocolo": PROTOCOLO,
         "som": "simulado" if estado.config.sem_som else "local",
         "paineis": estado.paineis.quantos,
+        "ytdlp": _versao_do_ytdlp(),
     }
+
+
+def _versao_do_ytdlp() -> str | None:
+    try:
+        import yt_dlp.version
+
+        return yt_dlp.version.__version__
+    except Exception:  # noqa: BLE001
+        return None
 
 
 @rotas.post("/abrir")

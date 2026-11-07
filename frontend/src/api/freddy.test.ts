@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { ApiFreddy, ErroDoFreddy, escolherFreddy, preferenciaEfetiva, vigiarFreddy } from "./freddy";
+import { ApiFreddy, ErroDoFreddy, appLigandoOFreddy, escolherFreddy, preferenciaEfetiva, vigiarFreddy } from "./freddy";
 
 function falso(respostas: Record<string, { status?: number; corpo?: unknown } | "cai">) {
   const pedidos: { url: string; init?: RequestInit }[] = [];
@@ -97,6 +97,11 @@ describe("escolher o motor", () => {
   it("navegador nunca usa; freddy usa mesmo desligado", async () => {
     expect(await escolherFreddy("navegador", ligado())).toBeNull();
     expect(await escolherFreddy("freddy", desligado())).not.toBeNull();
+  });
+
+  it("o app avisa quando acabou de ligar o backend (aí o painel espera mais)", () => {
+    expect(appLigandoOFreddy("?freddy=ligando")).toBe(true);
+    expect(appLigandoOFreddy("")).toBe(false);
   });
 
   it("?motor= na URL ganha da preferência", () => {

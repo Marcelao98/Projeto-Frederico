@@ -1,9 +1,9 @@
 /**
  * Pedidos em linguagem natural: "toca triste e bloodborne", "pula", "volume 30".
  *
- * Porta fiel de `interpretar_pedido` do Bardo (modules/bardo/service.py), com
+ * Porta fiel de `interpretar_pedido` (backend/freddy/nucleo/pedido.py), com
  * as mesmas regras e a mesma ordem de checagem: quem muda uma, muda a outra.
- * Os testes de pedido.test.ts são os do test_service.py traduzidos.
+ * Os testes de pedido.test.ts são os de backend/freddy/nucleo/test_pedido.py traduzidos.
  * Sem LLM: é só regex, previsível e instantâneo.
  */
 

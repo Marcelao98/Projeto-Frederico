@@ -1,101 +1,111 @@
 # Projeto Frederico (Freddy)
 
 O som da mesa de RPG. O mestre pede música em português ("toca triste e
-bloodborne"), o Freddy toca, e tudo é controlado por um painel com a cara do
-Frederico, a calopsita de verdade do Marcelo (cara-branca, asa prateada,
-olho preto, bico rosado). Nasceu do **Bardo**, o módulo de música da Natty
-(repositório `Marcelao98/natty-bot`).
+bloodborne"), o Freddy toca na caixa de som ou na call do Discord, e tudo é
+controlado por um painel com a cara do Frederico, a calopsita de verdade do
+Marcelo (cara-branca, asa prateada, olho preto, bico rosado).
 
-**O Freddy é o áudio do Nattyverso.** A Natty não toca mais nada e não se
-mexe nela por causa de áudio: o Bardo daqui (`backend/modules/bardo/`) é do
-Freddy agora e **não** precisa ficar em sincronia com a natty-bot.
+**O Freddy é o áudio do Nattyverso:** a Natty (outro projeto do Marcelo) não
+toca nada; não se mexe nela por causa de áudio.
 
 **Licença GPL-3.0.** Código adaptado do Kenku FM (também GPL-3.0) diz no
 topo do arquivo de onde veio.
 
-**Leia o `ROADMAP.md` antes de começar**: ele diz o que está pronto, a fase
-atual e as decisões já tomadas.
+**Antes de começar, leia o `ROADMAP.md`** (o que está pronto, a fase atual,
+as decisões) e o **`docs/ARQUITETURA.md`** (o desenho, as pastas e as
+etapas). Este arquivo tem as regras que não podem quebrar.
 
 ## Como o repositório está dividido
 
 ```
-frontend/   painel React + TypeScript (Vite), empacotado em app desktop com Tauri 2
-backend/    Python: o Freddy (backend/freddy: FastAPI + WebSocket + áudio + bot
-            do Discord), o Bardo (as regras: pedidos, busca, YouTube) e o acervo
-.github/workflows/app.yml   testa, compila Windows/Linux/Mac e publica a Release
-ROADMAP.md  fases e decisões
+acervo/     o acervo oficial: musicas.json + vocabulario.json (fonte única)
+backend/    Python: o Freddy (backend/freddy/) e os scripts do acervo (backend/scripts/)
+frontend/   o painel (React + TypeScript, src/) e a casca do app (Tauri/Rust, src-tauri/)
+docs/       ARQUITETURA.md, discord.md
+scripts/versao.py   a versão do app nos 6 arquivos
+freddy.sh   pra desenvolver: liga o backend e abre o app na ordem certa
+.github/workflows/app.yml   testa, empacota o backend, compila e publica a Release
 ```
-
-Detalhes de cada lado em `frontend/README.md` e `backend/README.md`.
 
 ## Regras de arquitetura (não quebrar)
 
-- **Acervo é um só:** `backend/modules/bardo/dataset/` (`musicas.json` +
-  `vocabulario.json`). O frontend importa esses JSON direto (alias
-  `@dataset` no `frontend/vite.config.ts`). Não copiar, não mover sem
-  atualizar o alias.
-- **Paridade TS ↔ Python:** `frontend/src/nucleo/pedido.ts` e `busca.ts` são
-  portas fiéis de `interpretar_pedido` e `buscar_por_tags` do
-  `backend/modules/bardo/service.py`. Mudou uma regra num, muda no outro, e
-  os testes dos dois lados. O `freddy` importa as regras do Bardo (não copia).
-- **O contrato `Motor`** (`frontend/src/motor/tipos.ts`) é a costura com o
-  backend: as telas só chamam `motor.executar({ tipo: ... })` e leem o
-  estado. Dois motores no painel: `MotorLocal` (toca pelo player do YouTube
-  no navegador) e `MotorRemoto` (WebSocket pro `python -m freddy`); o
-  `frontend/src/main.tsx` escolhe (Freddy ligado = remoto). No backend, o
-  `backend/freddy/motor/motor.py` é a porta fiel do `MotorLocal`.
-  **Comando novo** = entrada em `Comandos` + os DOIS motores + validação em
-  `backend/freddy/api/protocolo.py` + um caso em
-  `backend/freddy/motor/casos_contrato.json` (rodado pelos testes dos dois
-  lados, alias `@contrato` no frontend).
-- **Backend do Freddy** (`backend/freddy/`): `motor/` é lógica pura (sem rede
-  nem áudio, testa com `ReprodutorFalso`); `api/` só traduz HTTP/WebSocket ↔
-  motor; `audio/` é yt-dlp → FFmpeg → `Mesa` → saída. A Mesa entrega quadros
-  de 20 ms, 48 kHz, estéreo, 16 bits: o formato do Discord (Fase 2) e a base
-  do mixer (Fase 4). Avisos do áudio pro motor passam por `agendar` (o loop
-  do servidor): o motor roda numa thread só.
-- **Bot do Discord** (`backend/freddy/bot/`): roda no mesmo loop do
-  servidor. `conversa.py` é lógica sem discord.py (texto → mesmo `Motor` do
-  painel → resposta); `bot.py` só traduz Discord ↔ conversa/motor (como era o
-  `cog.py`). Com o bot numa call, quem puxa a Mesa é o Discord
-  (`SaidaDiscord`) e a caixa de som toca a cópia (`Mesa.ler_para_local`):
-  nunca dois puxando a Mesa. Token só na pasta do mestre (`discord.json`) ou
-  em `FREDDY_DISCORD_TOKEN`. Ids do Discord vão pro painel como texto.
-  O player segue o Kenku (`PlaybackManager.ts`): play com uma `SaidaDiscord`
-  nova quando o som começa, stop quando acaba. **`davey` fica em `<0.2`**: a
-  0.2 mudou a API e o discord.py 2.7 nunca fica pronto pra cifrar (DAVE), e
-  a call fica muda sem erro nenhum. Pra testar a call: janela do Discord →
-  🐦 assobio (o PC fica mudo, então se ouviu, veio pela call) e
-  "Diagnóstico" (`GET /diagnostico`: quadros indo pra call, nível, buffer,
-  DAVE pronta/criptografando).
-  Aqui na nuvem não dá pra testar o Discord de verdade (o proxy bloqueia
-  discord.com): teste com dublês e peça pro Marcelo testar na call.
+- **O backend é o Freddy; o painel e o Discord são telas.** Decisão (fila, o
+  que tocar, entender pedido) mora em `backend/freddy/`.
+- **Acervo é um só:** `acervo/` na raiz. O backend acha por
+  `config.PASTA_ACERVO` (no app empacotado, junto do executável: o
+  `app.yml` põe com `--add-data`); o painel importa os JSON pelo alias
+  `@acervo` (`frontend/vite.config.ts` e `tsconfig.json`). Não copiar.
+- **`backend/freddy/nucleo/`** (texto, pedido, vocabulário, busca) é lógica
+  pura: nada de rede, som ou Discord. **Paridade com o painel:**
+  `frontend/src/navegador/pedido.ts` e `busca.ts` são portas fiéis de
+  `nucleo/pedido.py` e `nucleo/busca.py` (o modo navegador usa). Mudou uma
+  regra num, muda no outro, e os testes dos dois lados.
+- **O contrato do motor** (`frontend/src/motor/tipos.ts`) é a costura entre o
+  painel e o backend: as telas só chamam `motor.executar({ tipo: ... })` e
+  leem o estado. Dois motores no painel: `MotorRemoto`
+  (`src/api/motorRemoto.ts`, WebSocket pro backend) e `MotorLocal`
+  (`src/navegador/`, o modo reserva sem o Freddy); o `src/main.tsx` escolhe.
+  No backend, `freddy/salas/motor.py` é a porta fiel do `MotorLocal`.
+  **Comando novo** = entrada em `Comandos` + os dois motores + validação em
+  `freddy/api/protocolo.py` + um caso em `freddy/salas/casos_contrato.json`
+  (rodado pelos testes dos dois lados; alias `@contrato` no painel).
+- **O modo navegador está congelado:** funciona sem o Freddy, mas função
+  nova é só pelo Freddy.
+- **Som** (`freddy/audio/`): fontes (`fontes/`: YouTube via yt-dlp, FFmpeg,
+  assobio) → `Mesa` → saídas (`saidas/`: caixa, Discord, muda). A Mesa
+  entrega quadros de 20 ms, 48 kHz, estéreo, 16 bits (o formato do Discord e
+  a base do mixer). **Um relógio só:** com o bot tocando numa call, quem
+  puxa a Mesa é o Discord (`saidas/discord.py`) e a caixa toca a cópia
+  (`Mesa.ler_para_local`); nunca dois puxando. Avisos do áudio pro motor
+  passam por `agendar` (o loop do servidor): o motor roda numa thread só.
+- **yt-dlp** (`audio/fontes/ytdlp.py`): no app instalado, usa o mais novo já
+  baixado (pasta do mestre, `yt-dlp/yt-dlp.zip`) e procura outro uma vez por
+  dia, só do GitHub oficial do yt-dlp, com SHA-256 conferido; se o baixado
+  não carregar, volta pro que veio no app. Em desenvolvimento, é o do `pip`.
+- **Bot do Discord** (`freddy/integracoes/discord/bot.py`): roda no mesmo
+  loop do servidor e só traduz Discord ↔ `freddy/conversa/` (o cérebro do
+  chat, sem discord.py) e o motor. O player segue o Kenku
+  (`PlaybackManager.ts`): play com uma `SaidaDiscord` nova quando o som
+  começa, stop quando acaba. **`davey` fica em `<0.2`**: a 0.2 mudou a API e
+  o discord.py 2.7 nunca fica pronto pra cifrar (DAVE), e a call fica muda
+  sem erro nenhum. Token só na pasta do mestre (`discord.json`) ou em
+  `FREDDY_DISCORD_TOKEN`. Ids do Discord vão pro painel como texto. Pra
+  testar a call: janela do Discord → 🐦 assobio e "Diagnóstico"
+  (`GET /diagnostico`). Aqui na nuvem não dá pra testar o Discord de verdade
+  (o proxy bloqueia discord.com): teste com dublês e peça pro Marcelo.
+- **API** (`freddy/api/`): `app.py` só monta as peças em `app.state`; rotas
+  em `api/rotas/<assunto>.py` (sistema, acervo, playlists, youtube,
+  discord); o canal de tempo real em `api/ws.py`.
 - **Porta do Freddy: 47824**, só em `127.0.0.1`. O **Porteiro**
-  (`backend/freddy/api/porteiro.py`) confere TODO pedido, HTTP e WebSocket:
-  Host só `127.0.0.1:<porta>`/`localhost:<porta>` (DNS rebinding) e, com
-  Origin, só as origens de `backend/freddy/config.py` (o painel). Sem isso,
-  qualquer site aberto no navegador mexia no Freddy (POST "simples" não tem
-  preflight de CORS). Rota nova já nasce protegida; nos testes, o
-  `TestClient` usa `base_url="http://127.0.0.1:47824"` (e `WS` pro /ws).
-  Link externo quem abre é o backend (`POST /abrir`, lista fechada de sites).
-  Não abrir pra rede sem login (Fase 3).
+  (`api/porteiro.py`) confere TODO pedido, HTTP e WebSocket: Host só
+  `127.0.0.1:<porta>`/`localhost:<porta>` (DNS rebinding) e, com Origin, só
+  as origens de `config.py` (o painel). Sem isso, qualquer site aberto no
+  navegador mexia no Freddy (POST "simples" não tem preflight de CORS). Rota
+  nova já nasce protegida; nos testes, o `TestClient` usa
+  `base_url="http://127.0.0.1:47824"` (e `WS` pro /ws). Link externo quem
+  abre é o backend (`POST /abrir`, lista fechada de sites). Não abrir pra
+  rede sem login (Fase 3).
 - **Dados do mestre** (playlists, `ajustes.json` com as correções de
-  nome/temas, `aprendidas.json` com as faixas novas) ficam na pasta do
-  usuário (`~/.local/share/Freddy`, `%APPDATA%\Freddy`), nunca no
-  repositório. O Freddy aplica por cima do dataset ao servir `/acervo`; o
-  `backend/scripts/freddy_promover.py` leva pro `musicas.json` oficial.
-  Categorias sempre saem dos temas, nunca à mão.
+  nome/temas, `aprendidas.json` com as faixas novas, `discord.json`,
+  `freddy.log`, o yt-dlp baixado) ficam na pasta do usuário
+  (`~/.local/share/Freddy`, `%APPDATA%\Freddy`), nunca no repositório. O
+  Freddy aplica os ajustes por cima do acervo ao servir `/acervo`; o
+  `backend/scripts/acervo_promover.py` leva pro `acervo/musicas.json`.
+  Categorias sempre saem dos temas (`nucleo/vocabulario.py`), nunca à mão.
 - **Comandos só do painel no chat** (`temas`/`revisar` em
   `frontend/src/modos/chat/revisao.ts`; `playlists`/`toca a playlist X`/
-  `salva a fila como X` em `playlistsChat.ts`) rodam antes do `pedido.ts` e
-  ficam fora da paridade com o Bardo. Atenção: no `pedido.ts`, "playlist" é
-  palavra de "mostra a fila"; por isso os de playlist vêm antes.
-- **Modos do painel** moram em `frontend/src/modos/<nome>/` e entram pela
-  lista em `frontend/src/modos/registro.tsx`.
-- **No backend:** `service.py` é lógica pura, sem discord.py.
-- **Temas (plumagens):** cores em `frontend/src/temas.css` (um bloco
+  `salva a fila como X` em `playlistsChat.ts`) rodam antes do
+  `navegador/pedido.ts`. Atenção: no `pedido`, "playlist" é palavra de
+  "mostra a fila"; por isso os de playlist vêm antes. (Na etapa D o chat do
+  painel passa a usar o `freddy/conversa/` e isso vai pro backend.)
+- **Painel:** modos em `frontend/src/modos/<nome>/` (cada um com seu `.css`),
+  entram pela lista em `modos/registro.tsx`. Conversa com o Freddy em
+  `src/api/`; o que a tela guarda em `src/estado/`. CSS: `src/estilo/base.css`
+  (comum), um `.css` por tela/componente, `telas-menores.css` por último
+  (importado no `main.tsx` depois de tudo).
+- **Temas (plumagens):** cores em `frontend/src/estilo/temas.css` (um bloco
   `[data-tema]` por tema, com `--acento` pra preencher e `--acento-texto`
-  pra texto), lista em `frontend/src/dados/temas.ts`. O padrão é
+  pra texto), lista em `frontend/src/estado/temas.ts`. O padrão é
   `frederico`. Arte em `frontend/public/aves/<tema>.png` e
   `<tema>-rosto.png`; tema sem arte usa a do Frederico.
 - **App instalado serve o painel em `http://localhost:47823`**
@@ -104,10 +114,12 @@ Detalhes de cada lado em `frontend/README.md` e `backend/README.md`.
   localStorage (temas, playlists) é guardado por endereço.
 - **O app liga o backend sozinho (sidecar):** o workflow empacota o backend
   com PyInstaller (`backend/freddy_backend.py` → `freddy-backend-<alvo>` em
-  `frontend/src-tauri/binaries/`, fora do git) e, no Windows, põe o
-  `ffmpeg.exe` junto (`tauri.windows.conf.json`). O `lib.rs` só liga se a
-  porta 47824 estiver livre (freddy.sh/`python -m freddy` continuam valendo)
-  e passa `FREDDY_PAI`: o backend desliga sozinho se o app fechar ou cair.
+  `frontend/src-tauri/binaries/`, fora do git), **liga o empacotado de
+  verdade** (`/saude` e `/acervo`) e, no Windows, põe o `ffmpeg.exe` junto
+  (`tauri.windows.conf.json`). O `lib.rs` só liga se a porta 47824 estiver
+  livre (freddy.sh/`python -m freddy` continuam valendo), abre o painel com
+  `?freddy=ligando` (aí o painel espera o backend acordar, até ~30 s) e
+  passa `FREDDY_PAI`: o backend desliga sozinho se o app fechar ou cair.
   Empacotado, o log vai pro `freddy.log` na pasta do mestre. Dependência
   nova do backend que o PyInstaller não acha sozinho = flag no `app.yml`.
 
@@ -123,8 +135,11 @@ cd frontend && npm install && npm run dev        # http://localhost:5173
 
 # testes (o GitHub roda todos antes de compilar, mais o ponta a ponta)
 cd frontend && npm test && npm run build
-cd backend && python -m unittest discover -s modules/bardo -t .
 cd backend && python -m unittest discover -s freddy -t .
+python3 scripts/versao.py --conferir
+
+# manutenção do acervo (de dentro de backend/): ver a skill chips
+python scripts/acervo_promover.py --so-mostrar
 
 # app desktop local (precisa de Rust e do backend empacotado em
 # src-tauri/binaries/, ver o passo "Backend empacotado" do app.yml; raramente necessário)

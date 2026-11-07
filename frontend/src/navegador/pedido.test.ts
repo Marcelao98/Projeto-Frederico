@@ -1,4 +1,4 @@
-// Os testes de pedido do Bardo (modules/bardo/test_service.py), traduzidos.
+// Os testes de pedido do backend (backend/freddy/nucleo/test_pedido.py), traduzidos.
 import { describe, expect, it } from "vitest";
 import { PASSO_VOLUME, interpretarPedido } from "./pedido";
 

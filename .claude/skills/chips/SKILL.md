@@ -1,19 +1,19 @@
 ---
 name: chips
-description: Adiciona uma franquia (playlist do YouTube) ao dataset de músicas do Bardo — extrai, tagueia os temas de cada faixa, mescla no musicas.json e testa. Usar quando pedirem pra colocar trilha de um jogo/anime/filme novo no Bardo, ou pra classificar faixas "não classificado" que já estão no dataset.
+description: Adiciona uma franquia (playlist do YouTube) ao acervo do Freddy (acervo/musicas.json) — extrai, tagueia os temas de cada faixa, mescla no musicas.json e testa. Usar quando pedirem pra colocar trilha de um jogo/anime/filme novo no Freddy, ou pra classificar faixas "não classificado" que já estão no acervo.
 ---
 
-# chips — nova franquia no dataset do Bardo
+# chips — nova franquia no acervo do Freddy
 
 Pipeline em quatro passos. **Todos os comandos rodam de dentro de `backend/`**
 (`cd backend`); os caminhos abaixo são relativos a ela. Uma franquia = um arquivo de staging = um
 pipeline; não misturar franquias no mesmo staging. `staging/` está no
-`.gitignore` — só o `modules/bardo/dataset/musicas.json` vai pro commit.
+`.gitignore` — só o `acervo/musicas.json` vai pro commit.
 
 ## 1. Extrair
 
 ```
-python scripts/bardo_extrair_playlist.py "<url da playlist>" \
+python scripts/acervo_extrair_playlist.py "<url da playlist>" \
     --origem-nome "Hollow Knight" --origem-tipo jogo \
     --saida staging/hollow_knight.json
 ```
@@ -35,11 +35,11 @@ Trocar `["não classificado"]` por **2 a 5 temas** por faixa.
   em uso (com contagem):
 
   ```
-  python -c "import json,collections;d=json.load(open('modules/bardo/dataset/musicas.json',encoding='utf-8'));print(collections.Counter(t for m in d['musicas'] for t in m['temas']).most_common())"
+  python -c "import json,collections;d=json.load(open('../acervo/musicas.json',encoding='utf-8'));print(collections.Counter(t for m in d['musicas'] for t in m['temas']).most_common())"
   ```
 
   As categorias de busca (`triste`, `chefe`, `masmorra`...) saem dos temas
-  via `modules/bardo/dataset/vocabulario.json` — um tema que já está lá ou
+  via `acervo/vocabulario.json` — um tema que já está lá ou
   no dataset é o que faz a faixa aparecer nas buscas.
 - **Contexto de jogo conta tanto quanto clima**: onde a faixa toca
   (`boss fight`, `hub`, `exploração`, `masmorra`, `cidade`, `menu`,
@@ -59,8 +59,8 @@ Trocar `["não classificado"]` por **2 a 5 temas** por faixa.
 ## 3. Mesclar
 
 ```
-python scripts/bardo_mesclar_dataset.py staging/<franquia>.json --dry-run
-python scripts/bardo_mesclar_dataset.py staging/<franquia>.json
+python scripts/acervo_mesclar.py staging/<franquia>.json --dry-run
+python scripts/acervo_mesclar.py staging/<franquia>.json
 ```
 
 - O dry-run mostra quantas entram, quais são duplicadas e quais ficaram
@@ -68,19 +68,19 @@ python scripts/bardo_mesclar_dataset.py staging/<franquia>.json
 - Duplicada = mesmo vídeo, mesmo `id`, ou mesmo nome na mesma origem (a
   faixa pode já estar no dataset com outro upload). Essas são puladas.
 - As `categorias` das faixas novas são preenchidas pelo vocabulário. Se
-  mexer no `vocabulario.json` depois, rodar `python scripts/categorizar_musicas.py`.
+  mexer no `vocabulario.json` depois, rodar `python scripts/acervo_categorizar.py`.
 
 ## Reclassificar faixas "não classificado" que já estão no dataset
 
 Não precisa do pipeline: editar o `temas` da faixa direto no
 `musicas.json` (achar pelo `id` ou `nome`), com as mesmas regras do passo 2
 (reusar vocabulário, sem fonte não chuta). Depois rodar
-`python scripts/categorizar_musicas.py` pra atualizar as categorias.
+`python scripts/acervo_categorizar.py` pra atualizar as categorias.
 
 ## 4. Testar e commitar
 
 ```
-python -m unittest discover -s modules/bardo -t .
+python -m unittest discover -s freddy -t .
 ```
 
 Commitar só o `musicas.json` (e os scripts, se mudaram). Antes, `git status`

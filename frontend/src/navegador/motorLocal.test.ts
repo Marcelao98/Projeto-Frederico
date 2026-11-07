@@ -146,7 +146,7 @@ describe("MotorLocal", () => {
     const { motor } = novo();
     const muitas = Array.from({ length: MAX_FILA + 10 }, (_, i) => m(i));
     const r = await motor.executar({ tipo: "adicionar", musicas: muitas });
-    // Como no Bardo: entram 50, uma começa a tocar e 49 esperam. Cabe mais uma.
+    // Como no backend: entram 50, uma começa a tocar e 49 esperam. Cabe mais uma.
     expect(r.entraram).toBe(MAX_FILA);
     expect((await motor.executar({ tipo: "adicionar", musicas: [m(998)] })).entraram).toBe(1);
     expect((await motor.executar({ tipo: "adicionar", musicas: [m(999)] })).entraram).toBe(0);

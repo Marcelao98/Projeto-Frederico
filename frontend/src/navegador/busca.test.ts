@@ -1,4 +1,4 @@
-// Os testes de busca do Bardo (modules/bardo/test_service.py), traduzidos,
+// Os testes de busca do backend (backend/freddy/nucleo/test_busca.py), traduzidos,
 // mais a checagem do acervo real.
 import { describe, expect, it } from "vitest";
 import musicasJson from "@acervo/musicas.json";

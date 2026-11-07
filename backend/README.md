@@ -1,16 +1,16 @@
 # Backend do Freddy
 
-Python. Duas peças:
+Python:
 
-- **`freddy/`**: o Freddy rodando sozinho, sem a Natty (`python -m freddy`).
+- **`freddy/`**: o Freddy (`python -m freddy`, ou dentro do app instalado).
   Servidor local (FastAPI + WebSocket) que o painel usa pelo `MotorRemoto`:
   a fila mora aqui, o som sai daqui (yt-dlp + FFmpeg + caixa de som), e o
   acervo e as playlists também.
-- **`modules/bardo/`**: o Bardo, o cérebro musical que veio da Natty e
-  agora é do Freddy (não fica em sincronia com a natty-bot): entender
-  pedidos, buscar no acervo, falar com o YouTube. Só lógica, sem Discord.
-- **`freddy/bot/`**: o bot do Discord do Freddy (guia em
-  [`docs/discord.md`](docs/discord.md)).
+  Inclui as regras de música (`freddy/nucleo/`) e o bot do Discord
+  (`freddy/integracoes/discord/`, guia em [`docs/discord.md`](../docs/discord.md)).
+- **`scripts/`**: manutenção do acervo (`acervo_*.py`).
+
+O acervo mora fora daqui, em `acervo/` na raiz: o painel lê os mesmos arquivos.
 
 ## Usar (sem programar)
 
@@ -71,46 +71,57 @@ Playlists e faixas aprendidas ficam em `~/.local/share/Freddy/` (Linux) ou
 ```
 freddy/
 ├── __main__.py        python -m freddy
-├── config.py          porta (47824), pastas, quem pode conectar
-├── motor/
-│   ├── fila.py        porta fiel de frontend/src/motor/fila.ts
+├── config.py          porta (47824), pastas, PASTA_ACERVO, quem pode conectar
+├── nucleo/            as regras, lógica pura (sem rede, som ou Discord)
+│   ├── texto.py       normalizar, slug, links do YouTube
+│   ├── pedido.py      "toca triste e bloodborne", "pula", "volume 30"
+│   ├── vocabulario.py temas → as 27 categorias
+│   └── busca.py       busca booleana (e / ou / sem) e o sorteio de 15
+├── conversa/
+│   └── cerebro.py     "@Freddy toca…" → o mesmo motor do painel → resposta
+├── salas/
 │   ├── motor.py       porta fiel do MotorLocal: comandos, estado, eventos
+│   ├── fila.py        a fila
 │   └── casos_contrato.json   casos rodados pelos testes dos DOIS lados
 ├── audio/
 │   ├── pcm.py         o formato: 48 kHz, estéreo, 16 bits, quadros de 20 ms (o do Discord)
-│   ├── youtube.py     link → áudio (yt-dlp), erros em português
-│   ├── fonte_ffmpeg.py  FFmpeg decodificando um link em quadros
-│   ├── mesa.py        onde o som é montado (hoje uma camada; mixer na Fase 4)
-│   ├── saidas.py      caixa de som (sounddevice), muda; Discord na Fase 2
-│   ├── reprodutor_mesa.py   o Reprodutor de verdade
-│   └── reprodutor_falso.py  pros testes e o --sem-som
-├── bot/
-│   ├── bot.py         o bot do Discord: conecta, lista canais, entra na call
-│   ├── saida.py       a Mesa indo pra call (discord.AudioSource)
-│   └── conversa.py    "@Freddy toca…" → o mesmo Motor do painel
-├── api/
-│   ├── app.py         FastAPI: REST + /ws
-│   ├── protocolo.py   as mensagens do WebSocket (validadas)
-│   └── paineis.py     os painéis conectados (todos veem a mesma fila)
-└── dados/
-    ├── acervo.py      dataset do repositório + ajustes.json + aprendidas.json
-    ├── planilha.py    o acervo em CSV, ida e volta
-    ├── segredos.py    o token do bot (discord.json, só o dono lê)
-    └── playlists.py   playlists.json
+│   ├── mesa.py        onde o som é montado (um relógio só: o Discord ou a caixa)
+│   ├── reprodutor_mesa.py   o Reprodutor de verdade; reprodutor_falso.py pros testes
+│   ├── fontes/        youtube.py (yt-dlp), ytdlp.py (se atualiza no app), ffmpeg.py, assobio.py
+│   └── saidas/        caixa.py (sounddevice), discord.py (a call), muda.py
+├── integracoes/discord/
+│   └── bot.py         conecta, lista canais, entra na call, ouve "@Freddy"
+├── dados/
+│   ├── acervo.py      o acervo + ajustes.json + aprendidas.json (do mestre)
+│   ├── acervo_oficial.py   ler/formatar/acrescentar no acervo/musicas.json
+│   ├── planilha.py    o acervo em CSV, ida e volta
+│   ├── playlists.py   playlists.json
+│   ├── segredos.py    o token do bot (discord.json, só o dono lê)
+│   └── arquivos.py    gravar sem corromper
+└── api/
+    ├── app.py         monta as peças (app.state) e liga as rotas
+    ├── porteiro.py    só o painel entra
+    ├── ws.py          o canal de tempo real (/ws)
+    ├── protocolo.py   as mensagens do /ws (validadas)
+    ├── paineis.py     os painéis conectados (todos veem a mesma fila)
+    └── rotas/         sistema, acervo, playlists, youtube, discord
 ```
 
-**Regras:** o `motor/` não sabe de rede nem de áudio (testa com o reprodutor
-falso). O `api/` só traduz WebSocket/HTTP ↔ motor, como o `cog.py` faz com o
-Discord. Comando novo no motor = os dois motores (Python e TypeScript), a
-validação em `protocolo.py` e um caso em `casos_contrato.json`.
+**Regras:** `nucleo/` e `salas/` não sabem de rede nem de som (testam com o
+reprodutor falso). `api/` e `integracoes/` só traduzem (HTTP/WebSocket,
+Discord) pro motor e pra `conversa/`. Comando novo no motor = os dois
+motores (Python e TypeScript), a validação em `protocolo.py` e um caso em
+`casos_contrato.json`. O desenho inteiro: [`docs/ARQUITETURA.md`](../docs/ARQUITETURA.md).
 
 ## A API (porta 47824, só neste computador)
 
 | Rota | Para quê |
 |---|---|
-| `GET /saude` | o painel descobre se o Freddy está ligado |
+| `GET /saude` | o painel descobre se o Freddy está ligado (e a versão do yt-dlp) |
+| `POST /abrir` | `{url}`: abre no navegador do sistema (só Discord e o GitHub do Freddy) |
+| `GET /diagnostico` | o que está indo pra call (Discord) |
 | `WS /ws` | o motor: comandos, estado, progresso e eventos (ver `api/protocolo.py`) |
-| `GET /acervo` | `{musicas, vocabulario}`: o dataset + as faixas aprendidas |
+| `GET /acervo` | `{musicas, vocabulario}`: o acervo + os ajustes e as faixas aprendidas |
 | `POST /acervo/faixas` | `{titulo, link, temas}`: ensina faixa nova ("era essa?") |
 | `PATCH /acervo/faixas/{id}` | `{nome?, temas?, comentario?}`: corrige uma faixa (categorias recalculadas) |
 | `GET /acervo/planilha` | o acervo em CSV (`;`, com acentos certos pro Excel) |
@@ -131,23 +142,25 @@ qualquer aberto no navegador não consegue mexer no Freddy. Programas locais
 
 ## O acervo
 
-`modules/bardo/dataset/` (`musicas.json` + `vocabulario.json`) é a fonte
-única: o frontend importa os mesmos JSON (alias `@dataset` em
-`frontend/vite.config.ts`). Mover ou renomear essa pasta quebra o frontend.
+`acervo/` na raiz do repositório (`musicas.json` + `vocabulario.json`) é a
+fonte única: o backend acha por `config.PASTA_ACERVO` e o painel importa os
+mesmos JSON (alias `@acervo` em `frontend/vite.config.ts`). No app
+empacotado, o acervo vai junto do executável. Pra acrescentar uma franquia:
+a skill `chips`.
 
 O que o mestre muda fica na pasta dele (quem baixou o app não tem o
 repositório):
-- `ajustes.json`: correções nas faixas do dataset (nome, temas, comentário),
+- `ajustes.json`: correções nas faixas do acervo (nome, temas, comentário),
   feitas pelo chat (`temas`, `revisar`), pelo modo Acervo ou pela planilha.
-  Só guarda o que difere do dataset; voltar ao original apaga o ajuste.
+  Só guarda o que difere do acervo oficial; voltar ao original apaga o ajuste.
 - `aprendidas.json`: faixas novas ("era essa?" ou linha nova na planilha).
 
-As categorias sempre saem dos temas (`vocabulario.json`). Pra levar tudo pro
+As categorias sempre saem dos temas (`acervo/vocabulario.json`). Pra levar tudo pro
 acervo oficial (e os outros mestres ganharem junto na próxima versão):
 
 ```bash
-python scripts/freddy_promover.py --so-mostrar   # ver o que tem
-python scripts/freddy_promover.py                # levar, e revisar o git diff
+python scripts/acervo_promover.py --so-mostrar   # ver o que tem
+python scripts/acervo_promover.py                # levar, e revisar o git diff
 ```
 
 ## Testes
@@ -155,8 +168,7 @@ python scripts/freddy_promover.py                # levar, e revisar o git diff
 Todos os comandos rodam **de dentro de `backend/`**:
 
 ```bash
-python -m unittest discover -s modules/bardo -t .   # o Bardo
-python -m unittest discover -s freddy -t .          # o Freddy (sem internet nem caixa de som)
+python -m unittest discover -s freddy -t .   # tudo (sem internet nem caixa de som)
 ```
 
 Os testes de áudio geram um tom com o FFmpeg (pulam se ele não estiver
@@ -166,4 +178,4 @@ instalado). O GitHub roda tudo isso e mais um teste de ponta a ponta: o
 ## Discord
 
 Criar o bot, usar e como funciona (inclusive o que veio do Kenku FM):
-[`docs/discord.md`](docs/discord.md).
+[`docs/discord.md`](../docs/discord.md).

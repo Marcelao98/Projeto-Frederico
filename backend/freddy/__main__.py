@@ -81,6 +81,13 @@ def main() -> None:
             "Fedora: sudo dnf install ffmpeg-free | Windows: winget install ffmpeg"
         )
 
+    # No app instalado, o yt-dlp mais novo que já foi baixado (e procura outro
+    # em segundo plano). Tem que ser antes de qualquer import do yt_dlp.
+    if getattr(sys, "frozen", False) and not args.teste:
+        from freddy.audio.fontes import ytdlp
+
+        ytdlp.atualizar_em_segundo_plano(config.pasta, ytdlp.preparar(config.pasta))
+
     import uvicorn
 
     from freddy.api.app import criar_app

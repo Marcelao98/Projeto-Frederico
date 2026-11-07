@@ -1,9 +1,9 @@
 /**
  * Utilitários de texto compartilhados pelo núcleo.
  *
- * O Bardo é Python, e o `\b` e o `\w` do `re` do Python entendem acento.
+ * O backend é Python, e o `\b` e o `\w` do `re` do Python entendem acento.
  * Os do JavaScript não entendem, nem com a flag `u`: `/\bpõe\b/` falha em
- * "natty põe". Por isso as regex do núcleo usam `palavra()`, que monta a
+ * "freddy põe". Por isso as regex do núcleo usam `palavra()`, que monta a
  * fronteira de palavra com classes Unicode.
  */
 
@@ -13,7 +13,7 @@ export const CARACTERE_DE_PALAVRA = "\\p{L}\\p{N}_";
 const ANTES = `(?<![${CARACTERE_DE_PALAVRA}])`;
 const DEPOIS = `(?![${CARACTERE_DE_PALAVRA}])`;
 
-/** `\b(alternativas)\b` com acento: palavra("toca|põe") acha "põe" em "natty põe". */
+/** `\b(alternativas)\b` com acento: palavra("toca|põe") acha "põe" em "freddy põe". */
 export function palavra(alternativas: string, flags = "iu", capturar = false): RegExp {
   return new RegExp(`${ANTES}(${capturar ? "" : "?:"}${alternativas})${DEPOIS}`, flags);
 }

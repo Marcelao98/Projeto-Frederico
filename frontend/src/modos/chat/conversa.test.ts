@@ -64,7 +64,7 @@ describe("conversa", () => {
     expect(r2.texto).toBe("Adicionei **Link do YouTube** na fila (posição 1) 📜");
   });
 
-  it("controles respondem como o Bardo", async () => {
+  it("controles respondem como no Discord", async () => {
     const c = ctx();
     expect((await responder("pula", c)).texto).toBe("Não tem nada tocando.");
     expect((await responder("repete", c)).texto).toBe("Não tem nada tocando pra repetir.");

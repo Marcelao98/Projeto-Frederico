@@ -1,7 +1,7 @@
 /**
  * A fila: a música que toca e as que esperam. Só estado, sem tocar nada.
  *
- * Equivalente à classe Fila do Bardo, mais o que o modo Playlist precisa
+ * A mesma fila de backend/freddy/salas/fila.py, com o que o modo Playlist precisa
  * (remover, mover, tocar um item da fila, embaralhar). Imutável: cada
  * operação devolve uma fila nova, que é o que o React gosta.
  */

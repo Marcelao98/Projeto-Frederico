@@ -14,9 +14,13 @@
     </script>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦜</text></svg>" />
     <title>Freddy</title>
+    <style>
+      .ligando { font: 15px system-ui, sans-serif; color: #6b6b75; text-align: center; margin-top: 40vh; }
+    </style>
   </head>
   <body>
-    <div id="raiz"></div>
+    <!-- Enquanto o painel procura o Freddy (o React troca isso pela tela). -->
+    <div id="raiz"><p class="ligando">🐦 Ligando o Freddy…</p></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

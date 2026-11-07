@@ -11,7 +11,7 @@
 
 import type { Musica } from "../comum/tipos";
 
-export const MAX_FILA = 50; // músicas esperando, sem contar a que toca (igual ao Bardo)
+export const MAX_FILA = 50; // músicas esperando, sem contar a que toca (igual ao backend)
 
 /** Uma música na fila. O `uid` diferencia a mesma música posta duas vezes. */
 export interface ItemDaFila extends Musica {

@@ -34,12 +34,13 @@ fn freddy_ja_ligado() -> bool {
     TcpStream::connect_timeout(&endereco, Duration::from_millis(400)).is_ok()
 }
 
-fn ligar_backend(app: &AppHandle) {
+/// Liga o backend; devolve se conseguiu (aí o painel espera ele acordar).
+fn ligar_backend(app: &AppHandle) -> bool {
     let mut comando = match app.shell().sidecar("freddy-backend") {
         Ok(c) => c,
         Err(e) => {
             eprintln!("Freddy: backend não encontrado no app ({e})");
-            return;
+            return false;
         }
     };
     // O FFmpeg que vem junto (Windows) mora do lado do executável do app.
@@ -64,8 +65,12 @@ fn ligar_backend(app: &AppHandle) {
                     }
                 }
             });
+            true
         }
-        Err(e) => eprintln!("Freddy: não consegui ligar o backend ({e})"),
+        Err(e) => {
+            eprintln!("Freddy: não consegui ligar o backend ({e})");
+            false
+        }
     }
 }
 
@@ -78,13 +83,14 @@ pub fn run() {
     }
     app.setup(|app| {
         // Em desenvolvimento, quem liga o backend é você (freddy.sh / python -m freddy).
-        if !cfg!(debug_assertions) && !freddy_ja_ligado() {
-            ligar_backend(app.handle());
-        }
+        let ligou = !cfg!(debug_assertions) && !freddy_ja_ligado() && ligar_backend(app.handle());
+        // ?freddy=ligando: o painel espera o backend acordar (o executável
+        // empacotado leva uns segundos pra abrir) em vez de cair no navegador.
         let url = if cfg!(debug_assertions) {
             WebviewUrl::App("index.html".into())
         } else {
-            WebviewUrl::External(format!("http://localhost:{PORTA}").parse().expect("url local"))
+            let espera = if ligou { "/?freddy=ligando" } else { "" };
+            WebviewUrl::External(format!("http://localhost:{PORTA}{espera}").parse().expect("url local"))
         };
         WebviewWindowBuilder::new(app, "main", url)
             .title("Freddy")

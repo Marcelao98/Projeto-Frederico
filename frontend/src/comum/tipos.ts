@@ -1,4 +1,4 @@
-/** O formato do acervo: o mesmo de modules/bardo/dataset/musicas.json. */
+/** O formato do acervo: o mesmo de acervo/musicas.json. */
 
 export interface Origem {
   nome: string;

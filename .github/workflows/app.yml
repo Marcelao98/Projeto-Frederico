@@ -121,6 +121,22 @@ jobs:
             done
           fi
           ls -la ../frontend/src-tauri/binaries
+      # Liga o backend empacotado de verdade: pega módulo que o PyInstaller
+      # esqueceu e o acervo fora do lugar antes de chegar no app de alguém.
+      - name: Testar o backend empacotado
+        shell: bash
+        run: |
+          exe=backend/dist/freddy-backend; [ "$RUNNER_OS" = Windows ] && exe="$exe.exe"
+          "$exe" --teste --porta 47899 --pasta "$RUNNER_TEMP/freddy-empacotado" &
+          pid=$!
+          for i in $(seq 1 60); do curl -sf http://127.0.0.1:47899/saude && break; sleep 1; done
+          echo
+          curl -sf http://127.0.0.1:47899/saude | grep -q '"ok":true'
+          curl -sf http://127.0.0.1:47899/saude | grep -q '"ytdlp":"'
+          curl -sf http://127.0.0.1:47899/acervo | grep -q '"musicas":\[{'
+          echo "backend empacotado: ok"
+          kill $pid || true
+
       - name: FFmpeg junto (Windows)
         if: runner.os == 'Windows'
         shell: bash

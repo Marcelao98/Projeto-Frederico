@@ -1,5 +1,5 @@
 {
-  "_comentario": "Vocabulário de busca do Bardo. Cada categoria é algo que alguém numa mesa de fato pediria. 'palavras': o que as pessoas digitam e que leva à categoria (sinônimos). 'temas': temas crus do musicas.json que também colocam a faixa na categoria, mas que sozinhos são específicos demais pra puxar a categoria inteira (quem pede 'coral' quer coral, não tudo que é épico). Toda palavra também conta como tema. Depois de mexer aqui, rodar: python scripts/categorizar_musicas.py",
+  "_comentario": "Vocabulário de busca do Freddy. Cada categoria é algo que alguém numa mesa de fato pediria. 'palavras': o que as pessoas digitam e que leva à categoria (sinônimos). 'temas': temas crus do musicas.json que também colocam a faixa na categoria, mas que sozinhos são específicos demais pra puxar a categoria inteira (quem pede 'coral' quer coral, não tudo que é épico). Toda palavra também conta como tema. Depois de mexer aqui, rodar: python scripts/categorizar_musicas.py",
   "categorias": {
     "triste": {
       "palavras": ["triste", "tristeza", "melancolico", "melancolia", "tragico", "tragedia", "luto", "lamento", "despedida", "desespero", "solitario", "solidao", "choro", "chorar", "perda", "funeral", "saudade", "culpa", "drama pesado"],

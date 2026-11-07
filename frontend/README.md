@@ -89,7 +89,7 @@ em letra miúda, o que mudou fora dele (Playlist, barra do player, outra aba):
 
 **Discord** (barra lateral, com o Freddy ligado): cola o token do bot uma
 vez, convida pros servidores, escolhe o canal de voz e o bot toca a mesma
-fila do painel. Guia em `backend/docs/discord.md`.
+fila do painel. Guia em `docs/discord.md`.
 
 Mixer e Soundboard já aparecem na barra lateral como "em breve".
 
@@ -106,64 +106,64 @@ Cinco temas, um por calopsita. A ave do logo muda junto.
 | Cara-branca | escuro, cinza e branco, sem amarelo |
 
 Troca pela barra lateral ("Plumagem") ou clicando na calopsita do logo (no
-celular, é o único jeito). As cores ficam em `src/temas.css`; criar um tema
-é um bloco `[data-tema="..."]` lá e uma linha em `src/dados/temas.ts`. Dá
+celular, é o único jeito). As cores ficam em `src/estilo/temas.css`; criar um tema
+é um bloco `[data-tema="..."]` lá e uma linha em `src/estado/temas.ts`. Dá
 pra fazer de outras aves do mesmo jeito.
 
 ## Como está organizado
 
 ```
-src-tauri/      a casca desktop (Rust): janela, ícone, instalador
+src-tauri/      a casca desktop (Rust): janela, liga o backend, instalador
 src/
-├── nucleo/     lógica pura, sem React: porta do service.py do Bardo
-│   ├── pedido.ts   interpretarPedido(): "toca X", "pula", "volume 30"...
-│   ├── busca.ts    busca booleana + vocabulário (e / ou / sem, sinônimos)
-│   └── youtube.ts  links e ids de vídeo
-├── motor/      quem toca: o contrato Motor e os dois motores
+├── main.tsx    escolhe o motor (o Freddy ou o navegador) e monta a tela
+├── api/        falar com o Freddy
+│   ├── freddy.ts        as rotas (acervo, playlists, Discord...) e "o Freddy está ligado?"
+│   └── motorRemoto.ts   o motor pelo WebSocket
+├── motor/      o contrato do motor (o mesmo pros dois motores)
 │   ├── tipos.ts         Motor, EstadoMotor, Comandos, EventoMotor
-│   ├── fila.ts          a fila (imutável)
-│   ├── motorLocal.ts    Motor que roda no navegador
-│   ├── motorRemoto.ts   Motor que fala com o Freddy (WebSocket)
-│   ├── contratoCasos.ts roda os casos de backend/freddy/motor/casos_contrato.json
-│   ├── reprodutor*.ts   Reprodutor (interface) + o do YouTube
-│   └── contexto.tsx     hooks do React (useMotor, useEstadoDoMotor, useConexao...)
-├── dados/      acervo, playlists, temas, preferências; freddy.ts (API do backend e a escolha do motor)
-├── modos/      um diretório por modo + registro.tsx (a lista de modos)
+│   ├── contexto.tsx     hooks do React (useMotor, useEstadoDoMotor, useConexao...)
+│   └── contratoCasos.ts roda os casos de backend/freddy/salas/casos_contrato.json
+├── estado/     o que a tela guarda: acervo, playlists, temas, preferências
+├── modos/      uma pasta por modo (cada uma com seu .css) + registro.tsx (a lista)
 │   ├── chat/       ModoChat + conversa.ts (texto → comando → resposta),
 │   │               revisao.ts (temas pelo chat), playlistsChat.ts (playlists pelo chat),
 │   │               narrador.ts (o que mudou fora do chat)
 │   ├── acervo/     ModoAcervo (tabela editável + planilha)
-│   ├── playlist/   ModoPlaylist, PainelAcervo, PainelFila
+│   ├── playlist/   ModoPlaylist, PainelAcervo, PainelFila, editor de playlist
 │   └── mixer/      ModoEmBreve
-└── componentes/ barra do player, cartão de música, ícones, a calopsita, JanelaDiscord
+├── componentes/ barra do player, cartão de música, ícones, a calopsita, JanelaDiscord
+├── comum/      tipos (Faixa, Musica), texto, links do YouTube
+├── navegador/  o modo reserva, sem o Freddy (congelado: função nova é só pelo Freddy)
+│   ├── motorLocal.ts, fila.ts, reprodutor*.ts   tocar pelo player do YouTube
+│   └── pedido.ts, busca.ts                      portas fiéis de backend/freddy/nucleo/
+└── estilo/     base.css (comum), temas.css (plumagens), telas-menores.css (por último)
 ```
 
-**O mesmo acervo do Bardo.** O painel importa `backend/modules/bardo/dataset/*.json`
-direto (alias `@dataset` no `vite.config.ts`), sem cópia. A busca e o
-interpretador de pedidos são portas fiéis do `service.py`: os testes do
-`test_service.py` foram traduzidos, e conferi que TS e Python dão o mesmo
-resultado em buscas e pedidos de verdade. **Mudou uma regra num, muda no
-outro.** Com o Freddy ligado, o acervo vem dele (`GET /acervo`), com as
-faixas que a mesa ensinou.
+**O mesmo acervo do backend.** O painel importa `acervo/*.json` (na raiz do
+repositório) direto, pelo alias `@acervo` no `vite.config.ts`, sem cópia.
+Com o Freddy ligado, o acervo vem dele (`GET /acervo`), com os ajustes e as
+faixas que a mesa ensinou. A busca e o interpretador de pedidos do modo
+navegador são portas fiéis de `backend/freddy/nucleo/`: **mudou uma regra
+num, muda no outro.**
 
 **O contrato `Motor`** (`motor/tipos.ts`) é a costura com o backend. As telas
 só chamam `motor.executar({ tipo: "pular" })` e leem `useEstadoDoMotor()`.
-O `main.tsx` escolhe o `MotorLocal` ou o `MotorRemoto`. Os casos de
-`backend/freddy/motor/casos_contrato.json` rodam no `MotorLocal`, no Motor
-do Python e, no GitHub, no `MotorRemoto` falando com o backend de verdade
-(`contrato.remoto.test.ts`): os três se comportam igual.
+O `main.tsx` escolhe o `MotorRemoto` (o Freddy) ou o `MotorLocal` (o
+navegador). Os casos de `backend/freddy/salas/casos_contrato.json` rodam no
+`MotorLocal`, no motor do Python e, no GitHub, no `MotorRemoto` falando com o
+backend de verdade (`contrato.remoto.test.ts`): os três se comportam igual.
 
 ## Como crescer
 
-- **Modo novo** (mixer, soundboard, cenas): cria `src/modos/<nome>/`, põe uma
-  entrada em `modos/registro.tsx`. Navegação e atalho Alt+N saem sozinhos.
+- **Modo novo** (mixer, soundboard, cenas): cria `src/modos/<nome>/` (com o
+  `.css` dele, importado pelo componente), põe uma entrada em `modos/registro.tsx`. Navegação e atalho Alt+N saem sozinhos.
 - **Comando novo** (ex.: volume por camada): acrescenta em `Comandos` no
   `motor/tipos.ts`, implementa no `MotorLocal` e no motor do backend
-  (`backend/freddy/motor/motor.py` + validação em `api/protocolo.py`), e
+  (`backend/freddy/salas/motor.py` + validação em `api/protocolo.py`), e
   põe um caso em `casos_contrato.json`. O TypeScript cobra os argumentos e o
   retorno em quem chama.
-- **Fonte nova** (arquivo local, Freesound): outro `Reprodutor`.
-- **Saída nova** (mic virtual, Discord): é o backend, via `MotorRemoto`.
+- **Fonte nova** (arquivo local, Freesound) e **saída nova** (mic virtual):
+  é no backend (`backend/freddy/audio/fontes/` e `saidas/`).
 
 ## Limites de hoje
 

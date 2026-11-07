@@ -64,7 +64,7 @@ async function iniciar() {
     if (preferenciaEfetiva() === "auto") vigiarFreddy(() => freddyLigouDepois.escrever(true));
   }
 
-  // Como o Bardo avisa no canal quando a fila anda sozinha.
+  // O Freddy avisa no chat quando a fila anda sozinha.
   motor.aoEvento((evento) => registrar("freddy", falaDoEvento(evento)));
   // E o que mudou fora do chat (Playlist, barra do player, outra aba), em letra miúda.
   ligarNarrador(motor, (texto) => registrar("freddy", { texto }, true));

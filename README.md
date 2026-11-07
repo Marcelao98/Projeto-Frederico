@@ -9,9 +9,8 @@ um dos robozinhos menores que a Natty comanda, o que cuida do som.
 
 ## De onde veio
 
-O código foi roubado, com carinho e com histórico, do **Bardo**, o módulo de
-música da Natty (`backend/modules/bardo/`), com o histórico: `git log` conta
-a história desde o começo.
+O Freddy nasceu do módulo de música da Natty e veio com o histórico:
+`git log` conta a história desde o começo.
 
 **O Freddy é o áudio do Nattyverso:** a Natty não toca mais nada. Hoje ele é
 um app que você baixa e abre:
@@ -21,7 +20,7 @@ um app que você baixa e abre:
 - Chat, Playlist (com playlists salvas pra cada sessão) e Acervo (arrumar
   as tags no painel, pelo chat ou numa planilha);
 - toca na caixa de som ou numa call do Discord, pelo bot dele
-  (guia em `backend/docs/discord.md`), com `@Freddy toca...` no chat.
+  (guia em `docs/discord.md`), com `@Freddy toca...` no chat.
 
 ## Pra onde vai
 
@@ -47,8 +46,10 @@ O plano completo, fase por fase, está em [`ROADMAP.md`](ROADMAP.md); o guia pra
 ## Como o repositório está dividido
 
 ```
+acervo/     o acervo de músicas (musicas.json + vocabulario.json), lido pelos dois lados
 frontend/   o painel (React + TypeScript) e o app desktop (Tauri, em Rust)
-backend/    o Freddy (Python): fila, som, bot do Discord, acervo e as regras do Bardo
+backend/    o Freddy (Python): fila, som, bot do Discord e as regras de música
+docs/       ARQUITETURA.md (o desenho e as etapas) e discord.md (o bot)
 scripts/    versao.py: a versão do app em todos os arquivos de uma vez
 freddy.sh   pra desenvolver: liga o backend e abre o app na ordem certa
 ```
@@ -56,8 +57,9 @@ freddy.sh   pra desenvolver: liga o backend e abre o app na ordem certa
 - **Frontend** ([`frontend/README.md`](frontend/README.md)): Chat, Playlist,
   Acervo e a janela do Discord, com cinco plumagens de calopsita.
 - **Backend** ([`backend/README.md`](backend/README.md)): o servidor local
-  (`backend/freddy/`) que o app liga sozinho, e o acervo
-  (`backend/modules/bardo/dataset/`).
+  (`backend/freddy/`) que o app liga sozinho.
+- **Arquitetura** ([`docs/ARQUITETURA.md`](docs/ARQUITETURA.md)): o desenho,
+  as pastas, as regras e as próximas etapas.
 
 **Pra usar:** baixe o app na página **Releases** do GitHub e abra. Ele liga
 o Freddy sozinho, sem terminal e sem Python instalado. No Fedora, o `.rpm`;
@@ -68,7 +70,6 @@ README do backend).
 
 ```
 python3 scripts/versao.py --conferir
-cd backend && python -m unittest discover -s modules/bardo -t .
 cd backend && python -m unittest discover -s freddy -t .
 cd frontend && npm test
 ```

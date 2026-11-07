@@ -1,5 +1,5 @@
 {
-  "_comentario": "Dataset (rascunho v2, granular) para a busca booleana do Bardo. Cada entrada é uma fonte de música (link do YouTube) com tags de origem e tema. 'escopo' distingue faixa individual (a maioria) de álbum completo (hoje só o Subahibi mantém um álbum completo, como opção extra além das faixas). 'comentario_pessoal' vazio de propósito — o mestre preenche.",
+  "_comentario": "Dataset (rascunho v2, granular) para a busca booleana do Freddy. Cada entrada é uma fonte de música (link do YouTube) com tags de origem e tema. 'escopo' distingue faixa individual (a maioria) de álbum completo (hoje só o Subahibi mantém um álbum completo, como opção extra além das faixas). 'comentario_pessoal' vazio de propósito — o mestre preenche.",
   "musicas": [
     {
       "id": "elden-ring-tema-principal",

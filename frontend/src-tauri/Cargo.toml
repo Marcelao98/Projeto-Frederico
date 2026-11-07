@@ -1,6 +1,6 @@
 [package]
 name = "freddy"
-version = "0.5.5"
+version = "0.6.0"
 description = "Freddy: o som da mesa de RPG"
 authors = ["Marcelo"]
 license = "GPL-3.0-only"

@@ -2,8 +2,8 @@
  * Busca booleana no acervo: "triste e bloodborne", "boss fight sem elden ring",
  * "calmo e fire emblem ou hollow knight".
  *
- * Porta fiel de `buscar_por_tags` e do vocabulário do Bardo
- * (modules/bardo/service.py). Regras:
+ * Porta fiel de `buscar_por_tags` e do vocabulário do backend
+ * (backend/freddy/nucleo/busca.py e vocabulario.py). Regras:
  *   - "e" = E, "ou" = OU (precedência menor), "sem"/"não" na frente nega o termo;
  *   - um termo bate se aparece (sem acento) no nome, origem, temas ou
  *     categorias da faixa, OU se é sinônimo de uma categoria dela;

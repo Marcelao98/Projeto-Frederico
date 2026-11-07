@@ -829,7 +829,7 @@ dependencies = [
 
 [[package]]
 name = "freddy"
-version = "0.5.5"
+version = "0.6.0"
 dependencies = [
  "serde",
  "serde_json",

@@ -264,6 +264,13 @@ export function preferenciaEfetiva(busca = typeof location !== "undefined" ? loc
 
 /** Quantas vezes perguntar se o Freddy está ligado ao abrir (ele pode estar acabando de ligar). */
 const TENTATIVAS_AO_ABRIR = 4;
+/** Quando o app acabou de ligar o backend (?freddy=ligando): espera até uns 30 s. */
+const TENTATIVAS_LIGANDO = 50;
+
+/** O app (lib.rs) acabou de ligar o backend e avisou pela URL. */
+export function appLigandoOFreddy(busca = typeof location !== "undefined" ? location.search : ""): boolean {
+  return new URLSearchParams(busca).get("freddy") === "ligando";
+}
 const ESPERA_ENTRE_TENTATIVAS_MS = 600;
 const espera = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -276,7 +283,7 @@ const espera = (ms: number) => new Promise((r) => setTimeout(r, ms));
 export async function escolherFreddy(
   preferencia: PreferenciaDeMotor = preferenciaEfetiva(),
   api: ApiFreddy = new ApiFreddy(enderecoDoFreddy.ler()),
-  tentativas = TENTATIVAS_AO_ABRIR,
+  tentativas = appLigandoOFreddy() ? TENTATIVAS_LIGANDO : TENTATIVAS_AO_ABRIR,
   esperaMs = ESPERA_ENTRE_TENTATIVAS_MS,
 ): Promise<ApiFreddy | null> {
   if (preferencia === "navegador") return null;
