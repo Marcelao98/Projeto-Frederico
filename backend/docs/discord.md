@@ -85,7 +85,23 @@ pessoa); o chat do Discord manda na mesma fila do painel; o som vem direto do
 YouTube via yt-dlp + FFmpeg (o Kenku captura o áudio de abas de navegador);
 o bot sai sozinho da call vazia.
 
+## Testar a call
+
+Na janela do Discord do painel:
+
+- **🐦 Assobio:** o Frederico assobia só pela call (a caixa do PC fica muda
+  durante o assobio). Se você ouviu no Discord, o som está chegando.
+- **Diagnóstico** (`GET /diagnostico`): quantos quadros por segundo estão
+  indo pra call (o Discord pede 50), o volume, quanto da música já está
+  carregado e se a criptografia de ponta a ponta (DAVE) está pronta.
+
 ## Problemas comuns
+
+- **Bot na call mas ninguém ouve, sem erro nenhum:** era a criptografia de
+  ponta a ponta do Discord (DAVE). A biblioteca `davey` 0.2 mudou e o
+  discord.py 2.7 nunca fica pronto pra cifrar, então o Discord descarta o
+  som calado. Por isso o `requirements.txt` trava `davey<0.2`. O Diagnóstico
+  mostra "DAVE pronta/criptografando".
 
 - **"token inválido"**: gere outro em Bot → Reset Token e cole de novo.
 - **"o bot não tem permissão de entrar e falar"**: no Discord, dê ao cargo

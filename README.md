@@ -10,20 +10,18 @@ um dos robozinhos menores que a Natty comanda, o que cuida do som.
 ## De onde veio
 
 O código foi roubado, com carinho e com histórico, do **Bardo**, o módulo de
-música da Natty (`backend/modules/bardo/`). Ele já sabe:
+música da Natty (`backend/modules/bardo/`), com o histórico: `git log` conta
+a história desde o começo.
 
-- tocar link do YouTube ou buscar por tema no dataset (~585 faixas com tags,
-  em `backend/modules/bardo/dataset/`)
-- busca livre no YouTube com aprendizado ("era essa? me diz uns temas")
-- fila por servidor, repetir, volume, pausa, pular e reconexão automática
+**O Freddy é o áudio do Nattyverso:** a Natty não toca mais nada. Hoje ele é
+um app que você baixa e abre:
 
-Os commits do Bardo vieram junto (extraídos da natty-bot com
-`git filter-repo`), então `git log` conta a história desde o começo.
-
-**O Freddy é o áudio do Nattyverso:** a Natty não toca mais nada. Hoje ele
-já roda sozinho no PC (`python -m freddy`, em `backend/freddy/`): o painel
-manda nele, ele toca na caixa de som ou numa call do Discord, pelo bot dele
-(guia em `backend/docs/discord.md`).
+- pede música em português ("toca triste e bloodborne"), num acervo de 607
+  faixas marcadas por clima, ou busca livre no YouTube ("era essa?");
+- Chat, Playlist (com playlists salvas pra cada sessão) e Acervo (arrumar
+  as tags no painel, pelo chat ou numa planilha);
+- toca na caixa de som ou numa call do Discord, pelo bot dele
+  (guia em `backend/docs/discord.md`), com `@Freddy toca...` no chat.
 
 ## Pra onde vai
 
@@ -32,13 +30,14 @@ toca e mistura som, e o Discord é só uma das saídas:
 
 - **Mixer em camadas:** música + ambiente (loops) + efeitos (pads), com volume
   por camada e ducking (a música abaixa quando um efeito toca ou quando você fala).
-- **Microfone virtual:** soma o seu mic com o som e manda pra um cabo virtual
-  (VB-Cable). Discord, Zoom, Meet ou OBS usam como microfone, sem precisar de bot.
-- **Painel web local** (localhost) como controle remoto, com playlists e cenas salvas.
+- **Microfone virtual:** soma o seu mic com o som e manda pra um microfone
+  de mentira (no Linux o Freddy cria; no Windows, o VB-Cable). Discord, Zoom,
+  Meet ou OBS usam como microfone, sem precisar de bot.
+- **Cenas:** "Taverna" = música + ambiente + os pads, num clique.
 - **Fontes:** arquivos locais, YouTube, playlists inteiras e Freesound
   (CC0 por padrão, com os créditos guardados).
-- **Bot de Discord do Freddy**: um bot só, compartilhado pelos mestres,
-  rodando num PC de casa. O som nunca passa pela Natty.
+- **Vários mestres no mesmo Freddy:** um bot só, rodando num PC de casa,
+  cada mestre no seu servidor.
 
 Por que local: bot de música público na nuvem cai (termos do YouTube e
 bloqueio de IP de datacenter). No PC de cada um, é uso pessoal pra própria mesa.
@@ -48,25 +47,27 @@ O plano completo, fase por fase, está em [`ROADMAP.md`](ROADMAP.md); o guia pra
 ## Como o repositório está dividido
 
 ```
-frontend/   o painel: React + TypeScript, empacotado como app desktop (Tauri)
-backend/    o som: hoje o Bardo (Python, Discord), com o acervo de faixas
+frontend/   o painel (React + TypeScript) e o app desktop (Tauri, em Rust)
+backend/    o Freddy (Python): fila, som, bot do Discord, acervo e as regras do Bardo
+scripts/    versao.py: a versão do app em todos os arquivos de uma vez
+freddy.sh   pra desenvolver: liga o backend e abre o app na ordem certa
 ```
 
-- **Frontend** ([`frontend/README.md`](frontend/README.md)): modo **Chat**
-  (pedidos em português, sem comando decorado) e modo **Playlist** (monta a fila
-  e salva), com cinco plumagens de calopsita como tema. Toca pelo Freddy
-  (backend) se ele estiver ligado; senão, pelo player do YouTube.
-- **Backend** ([`backend/README.md`](backend/README.md)): o Freddy
-  (`backend/freddy/`: servidor local, fila, som), o Bardo e o acervo
-  (`backend/modules/bardo/dataset/`). O frontend lê esse mesmo acervo.
+- **Frontend** ([`frontend/README.md`](frontend/README.md)): Chat, Playlist,
+  Acervo e a janela do Discord, com cinco plumagens de calopsita.
+- **Backend** ([`backend/README.md`](backend/README.md)): o servidor local
+  (`backend/freddy/`) que o app liga sozinho, e o acervo
+  (`backend/modules/bardo/dataset/`).
 
-**Pra usar:** baixe o app pronto na página **Releases** do GitHub (Windows,
-Linux e Mac), sem compilar nada. Pra desenvolver: `cd frontend && npm install
-&& npm run app` (precisa de Node e Rust; ver o README do frontend).
+**Pra usar:** baixe o app na página **Releases** do GitHub e abra. Ele liga
+o Freddy sozinho, sem terminal e sem Python instalado. No Fedora, o `.rpm`;
+no Windows, o `-setup.exe`. **Pra desenvolver:** `./freddy.sh` (ver o
+README do backend).
 
 ## Testes
 
 ```
+python3 scripts/versao.py --conferir
 cd backend && python -m unittest discover -s modules/bardo -t .
 cd backend && python -m unittest discover -s freddy -t .
 cd frontend && npm test

@@ -4,7 +4,7 @@ O Freddy é o som da mesa de RPG: você pede a música em português, ele toca
 pro seu Discord (ou pro seu microfone), e o mestre controla tudo por um
 painel com a cara do Frederico, a calopsita de verdade.
 
-Atualizado em 31/10/2026.
+Atualizado em 07/11/2026.
 
 ## Onde estamos
 
@@ -13,9 +13,9 @@ Atualizado em 31/10/2026.
 | **Cérebro musical** (veio do Bardo: entender pedidos, buscar no acervo, fila, aprender faixa nova) | ✅ pronto, agora é do Freddy |
 | **Acervo** (607 faixas, 9 franquias, 27 climas) | ✅ pronto, curadoria contínua |
 | **Painel** (Chat, Playlist, Acervo, 5 plumagens) | ✅ pronto; toca pelo Freddy ou sozinho pelo YouTube |
-| **App desktop** (Tauri) com instaladores no GitHub (Windows, Linux, Mac) | ✅ pronto (v0.1.1), testado no Fedora |
-| **Backend próprio** (o Freddy sem a Natty) | 🟡 pronto (v0.5.0), instalado no Fedora; falta confirmar o som |
-| **Bot do Discord do Freddy** | 🟡 pronto (v0.5.0); falta o teste numa call de verdade |
+| **App desktop** (Tauri) com instaladores no GitHub (Windows, Linux, Mac) | ✅ pronto (v0.5.x): liga o backend sozinho, sem terminal |
+| **Backend próprio** (o Freddy sem a Natty) | ✅ pronto, vai dentro do app |
+| **Bot do Discord do Freddy** | ✅ toca na call desde a v0.5.2 (DAVE resolvido) |
 | **Mixer, microfone virtual, soundboard** | ⬜ só planejado (telas "em breve" no painel) |
 
 ## Como desenvolver sem sofrer
@@ -24,9 +24,11 @@ Atualizado em 31/10/2026.
   Recarrega sozinho a cada mudança. Não precisa de Rust nem de compilar.
 - **App instalado:** só quando sai versão nova. O GitHub compila
   (`.github/workflows/app.yml`) e publica em Releases. Ninguém compila no PC.
-- **Testes:** `cd frontend && npm test` e
-  `cd backend && python -m unittest discover -s modules/bardo -t .`
-  (o GitHub roda os dois antes de cada build).
+- **Backend + app na ordem certa:** `./freddy.sh` (`--sem-som` finge que toca).
+- **Testes:** `cd frontend && npm test`, `cd backend && python -m unittest
+  discover -s freddy -t .` (e `-s modules/bardo`), e `python3 scripts/versao.py
+  --conferir` (o GitHub roda tudo antes de cada build, mais o ponta a ponta).
+- **Versão nova:** `python3 scripts/versao.py 0.5.6`, commit e push.
 
 ## Fases
 
@@ -65,7 +67,7 @@ O Freddy vira um programa Python que roda sozinho, sem a Natty: `python -m fredd
 - 🟡 Marcelo instalou no Fedora (31/10); falta confirmar o som saindo (e um mestre no Windows).
 - **Pronto quando:** o painel controla uma fila que mora no backend, com o app aberto ou no navegador.
 
-### Fase 2: Bot do Discord do Freddy 🟡 (falta testar numa call de verdade)
+### Fase 2: Bot do Discord do Freddy ✅
 O som chega na call pelo Freddy. Guia e detalhes em `backend/docs/discord.md`.
 - ✅ Bot próprio dentro do `python -m freddy` (`backend/freddy/bot/`), com o
   jeito de conectar do Kenku FM: token colado no painel, lista de servidores
@@ -75,7 +77,8 @@ O som chega na call pelo Freddy. Guia e detalhes em `backend/docs/discord.md`.
 - ✅ `@Freddy toca…`, `pula`, `fila`, `volume`, playlists e `sai` no chat do
   Discord, na mesma fila do painel; avisa quando a fila anda; sai sozinho
   da call vazia depois de 5 minutos.
-- ⬜ Marcelo criar o bot, entrar numa call e tocar (confirma o som também).
+- ✅ Tocando na call (v0.5.2): a criptografia DAVE travava a call muda
+  (`davey<0.2`); player do jeito do Kenku; 🐦 assobio de teste e Diagnóstico.
 - **Pronto quando:** um mestre toca música na call pelo painel.
 
 ### Fase 3: Vários mestres no mesmo Freddy
@@ -108,7 +111,7 @@ Um Freddy ligado num PC de casa, atendendo todos os mestres.
 - Fontes: arquivos do PC e Freesound (CC0 por padrão, créditos guardados).
 
 ### Fase 6: App redondo pra outros mestres
-- ✅ O app sobe o backend sozinho (sidecar do Tauri): um programa só pra abrir, sem terminal (v0.5.3, 03/11/2026).
+- ✅ O app sobe o backend sozinho (sidecar do Tauri): um programa só pra abrir, sem terminal (v0.5.3, 03/11/2026). Falta: Mac Intel, abrir mais rápido, yt-dlp que se atualiza.
 - Ícone na bandeja, iniciar com o sistema, atualização automática.
 - Instaladores assinados (some o aviso "o Windows protegeu o computador").
 - ✅ Repositório público e licença GPL-3.0 (01/11/2026).
@@ -121,8 +124,19 @@ Um Freddy ligado num PC de casa, atendendo todos os mestres.
   Marcelo). Arte própria das outras quatro é opcional: mesmo prompt do
   Frederico no Gemini, recorte com `frontend/scripts/recortar_ave.py`.
 - **Pendências herdadas do Bardo:** loop da fila inteira, remover item pelo
-  chat, colar playlist do YouTube, sair da call quando ficar vazia, erros mais
-  claros (vídeo privado, idade), títulos com "volta"/"próxima" virando comando.
+  chat, colar playlist do YouTube, títulos com "volta"/"próxima" virando comando.
+
+## Arrumação da casa (07/11/2026)
+Revisão geral do código e da arquitetura. A **etapa A** (v0.5.5):
+- ✅ Segurança: o Porteiro (`api/porteiro.py`). Antes, qualquer site aberto
+  no navegador conseguia reescrever o acervo ou tirar o bot da call.
+- ✅ Convite do bot e Developer Portal abrem no app (`POST /abrir`).
+- ✅ Versão num comando só (`scripts/versao.py`) e conferida no GitHub.
+- ✅ Documentação em dia; `main` como branch principal; workflow em
+  qualquer branch `claude/**`.
+
+As próximas etapas (base do som, mic virtual, um cérebro só pro chat)
+dependem da proposta de arquitetura nova, em discussão.
 
 ## Decisões tomadas
 - **O Freddy é o áudio do Nattyverso.** A Natty não toca mais nada e não

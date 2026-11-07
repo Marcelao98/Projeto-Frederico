@@ -12,7 +12,13 @@ Python. Duas peças:
 - **`freddy/bot/`**: o bot do Discord do Freddy (guia em
   [`docs/discord.md`](docs/discord.md)).
 
-## Ligar o Freddy
+## Usar (sem programar)
+
+Baixe o app nas Releases e abra: ele traz este backend empacotado e liga
+sozinho, sem terminal e sem Python instalado. O log fica em `freddy.log`,
+na pasta do Freddy (abaixo).
+
+## Ligar pelo código (pra desenvolver)
 
 ### Fedora
 
@@ -29,7 +35,7 @@ espera ele responder e só então abre o app. Ctrl+C desliga tudo.
 O `ffmpeg-free` do Fedora basta: o Freddy pede áudio Opus ao YouTube, que
 ele toca sem o RPM Fusion.
 
-### Windows
+### Windows (só pra desenvolver; pra usar, é o app)
 
 Instale o Python 3.12+ (python.org, marcando "Add to PATH") e o FFmpeg
 (`winget install ffmpeg`). Depois, no PowerShell:
@@ -40,8 +46,6 @@ python -m venv .venv; .venv\Scripts\activate
 pip install -r requirements.txt
 python -m freddy
 ```
-
-(Na Fase 6 o app passa a trazer o backend junto: ninguém vai precisar disso.)
 
 ### Usando
 
@@ -118,8 +122,12 @@ validação em `protocolo.py` e um caso em `casos_contrato.json`.
 | `GET /youtube/info?link=` | título e duração de um link |
 | `POST /youtube/buscar` | `{texto}`: busca livre no YouTube |
 
-O servidor só escuta `127.0.0.1` e só aceita o painel (confere a origem):
-um site qualquer aberto no navegador não consegue mexer na fila.
+O servidor só escuta `127.0.0.1`, e o **Porteiro** (`api/porteiro.py`)
+confere todo pedido, HTTP e WebSocket: o endereço tem que ser
+`127.0.0.1:<porta>` ou `localhost:<porta>` (contra "DNS rebinding") e, se
+veio de navegador, a origem tem que ser o painel (`config.py`). Um site
+qualquer aberto no navegador não consegue mexer no Freddy. Programas locais
+(sem origem, como o `curl`) passam.
 
 ## O acervo
 

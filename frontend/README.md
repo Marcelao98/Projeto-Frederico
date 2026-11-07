@@ -3,12 +3,12 @@
 React + TypeScript + Vite, empacotado como **app desktop com Tauri**. Toca
 de dois jeitos, sem mudar as telas:
 
-- **Pelo Freddy** (o backend, `python -m freddy`): se ele estiver ligado, o
-  painel acha sozinho. A fila, o som, o acervo e as playlists moram nele;
-  dá pra abrir o app e o navegador ao mesmo tempo que os dois veem a mesma
-  fila. Ver `backend/README.md`.
-- **Pelo navegador**: com o Freddy desligado, toca sozinho pelo player do
-  YouTube embutido, como sempre.
+- **Pelo Freddy** (o backend): o app liga ele sozinho. A fila, o som, o
+  acervo e as playlists moram nele; dá pra abrir o app e o navegador ao mesmo
+  tempo que os dois veem a mesma fila. Ver `backend/README.md`.
+- **Pelo navegador**: sem o Freddy (por exemplo, `npm run dev` sem o
+  backend), toca sozinho pelo player do YouTube embutido. É o modo de
+  reserva: as funções novas são pelo Freddy.
 
 A linha "Este computador" na barra lateral mostra qual está em uso (clicar
 alterna). Pra forçar: `?motor=navegador` ou `?motor=freddy` na URL.
@@ -17,14 +17,17 @@ alterna). Pra forçar: `?motor=navegador` ou `?motor=freddy` na URL.
 
 Na página **Releases** do GitHub, baixe o arquivo do seu sistema:
 
-- **Windows:** `Freddy_..._x64-setup.exe` (ou o `.msi`)
-- **Linux:** `.AppImage` (qualquer distro) ou `.deb` (Ubuntu, Mint, Debian)
-- **Mac:** `.dmg`
+- **Windows:** `Freddy_..._x64-setup.exe` (ou o `.msi`). O FFmpeg vem junto.
+- **Fedora:** `.rpm` (`sudo dnf install ./Freddy-....rpm`; puxa ffmpeg, opus
+  e portaudio). **Ubuntu/Mint/Debian:** `.deb`. **Outras:** `.AppImage`.
+- **Mac:** `.dmg` (precisa do FFmpeg: `brew install ffmpeg`; Mac Intel ainda
+  fica sem o backend).
 
-Quem compila é o GitHub (`.github/workflows/app.yml`): a cada tag de versão
-(`v0.1.0`, `v0.2.0`...) ele roda os testes, compila os três sistemas e
-publica a Release. Pra lançar uma versão nova, ver "Lançar versão nova do
-app" no `CLAUDE.md` da raiz.
+É só abrir: o app liga o Freddy sozinho. Quem compila é o GitHub
+(`.github/workflows/app.yml`): a cada push num branch `claude/...` que mexa
+no app, ele roda os testes, empacota o backend, compila os três sistemas e
+publica a Release `v<versão>`. Pra lançar versão nova, ver "Lançar versão
+nova do app" no `CLAUDE.md` da raiz.
 
 ## Rodar a partir do código (pra desenvolver)
 
@@ -174,4 +177,6 @@ do Python e, no GitHub, no `MotorRemoto` falando com o backend de verdade
 - No app instalado, o painel é servido em `http://localhost:47823` (não no
   endereço interno do Tauri), porque o player do YouTube não toca sem uma
   origem web normal. Se outra coisa usar essa porta, o app não abre.
+- Link externo (convite do bot, Developer Portal) quem abre é o backend
+  (`POST /abrir`, só Discord e o GitHub do Freddy): o app não abre link sozinho.
 - Atalhos: Espaço pausa/continua, `/` vai pro chat, Alt+1…4 troca de modo.

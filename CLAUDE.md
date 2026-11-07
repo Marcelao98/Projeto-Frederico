@@ -70,9 +70,15 @@ Detalhes de cada lado em `frontend/README.md` e `backend/README.md`.
   DAVE pronta/criptografando).
   Aqui na nuvem não dá pra testar o Discord de verdade (o proxy bloqueia
   discord.com): teste com dublês e peça pro Marcelo testar na call.
-- **Porta do Freddy: 47824**, só em `127.0.0.1`, e o `/ws` só aceita as
-  origens de `backend/freddy/config.py` (o painel). Não abrir pra rede sem
-  login (Fase 3).
+- **Porta do Freddy: 47824**, só em `127.0.0.1`. O **Porteiro**
+  (`backend/freddy/api/porteiro.py`) confere TODO pedido, HTTP e WebSocket:
+  Host só `127.0.0.1:<porta>`/`localhost:<porta>` (DNS rebinding) e, com
+  Origin, só as origens de `backend/freddy/config.py` (o painel). Sem isso,
+  qualquer site aberto no navegador mexia no Freddy (POST "simples" não tem
+  preflight de CORS). Rota nova já nasce protegida; nos testes, o
+  `TestClient` usa `base_url="http://127.0.0.1:47824"` (e `WS` pro /ws).
+  Link externo quem abre é o backend (`POST /abrir`, lista fechada de sites).
+  Não abrir pra rede sem login (Fase 3).
 - **Dados do mestre** (playlists, `ajustes.json` com as correções de
   nome/temas, `aprendidas.json` com as faixas novas) ficam na pasta do
   usuário (`~/.local/share/Freddy`, `%APPDATA%\Freddy`), nunca no
@@ -128,13 +134,17 @@ cd frontend && npm run app
 ## Lançar versão nova do app
 
 Ninguém compila no PC: o workflow `app.yml` compila e publica em Releases.
-1. Suba `version` em `frontend/package.json`, `frontend/src-tauri/tauri.conf.json`
-   e `frontend/src-tauri/Cargo.toml` (e rode `cargo update -p freddy --offline`
-   pra atualizar o `Cargo.lock`).
-2. Commit e push. O workflow roda em push no branch de desenvolvimento que
-   mexa em `frontend/`, `backend/` ou no workflow (ver `branches:` no
-   `app.yml`; depois do merge na main, trocar pra `main`).
-3. A Release `v<versão>` é criada pelo próprio GitHub (prerelease).
+1. `python3 scripts/versao.py 0.5.6`: muda a versão nos 6 arquivos de uma
+   vez (`--conferir` mostra; o GitHub falha se algum estiver diferente).
+2. Commit e push no seu branch `claude/...`. O workflow roda em push em
+   qualquer branch `claude/**` que mexa em `frontend/`, `backend/`,
+   `scripts/` ou no workflow.
+3. A Release `v<versão>` é criada pelo próprio GitHub (prerelease). Push na
+   mesma versão só atualiza os arquivos dela.
+4. Depois, leve o `main` junto: `git push origin HEAD:main`. O `main` é o
+   branch principal do repositório (o que aparece pra quem abre o GitHub) e
+   é só o espelho do que está pronto: push nele não compila de novo. O
+   Marcelo é o único mestre e autorizou: não precisa de PR.
 
 Nas sessões do Claude na nuvem, o proxy **não deixa subir tags** (403) e o
 disparo manual do workflow só funciona com ele na branch principal: por isso
