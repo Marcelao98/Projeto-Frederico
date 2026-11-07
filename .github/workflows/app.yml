@@ -1,7 +1,8 @@
 # Compila o app do Freddy (frontend + Tauri) e publica numa Release do GitHub.
 #
-# Dispara quando sobe uma tag de versão (v0.1.0, v0.2.0...), à mão pela aba
-# Actions, ou a cada push no branch de desenvolvimento que mexa no app.
+# Dispara a cada push num branch de sessão do Claude (claude/...) que mexa no
+# app, à mão pela aba Actions (no main), ou quando sobe uma tag de versão.
+# O main é o espelho do que está pronto: push no main não compila de novo.
 # Primeiro roda os testes; só compila se passarem. A Release se chama
 # v<versão> (de frontend/src-tauri/tauri.conf.json, "version"): push na mesma
 # versão atualiza os arquivos dela; versão nova cria Release nova. Quem cria
@@ -12,10 +13,9 @@ name: App do Freddy
 on:
   push:
     tags: ["v*"]
-    # Enquanto o app vive neste branch (antes do merge na main). Depois do
-    # merge, trocar por "main".
-    branches: ["claude/wonderful-ritchie-lnqljv"]
-    paths: ["frontend/**", "backend/**", ".github/workflows/app.yml"]
+    # Qualquer sessão do Claude (cada uma tem seu branch claude/<nome>).
+    branches: ["claude/**"]
+    paths: ["frontend/**", "backend/**", "scripts/**", ".github/workflows/app.yml"]
   workflow_dispatch:
 
 permissions:
