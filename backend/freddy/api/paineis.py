@@ -12,7 +12,7 @@ import logging
 
 from fastapi import WebSocket
 
-from freddy.motor.motor import Motor
+from freddy.salas.motor import Motor
 
 log = logging.getLogger("freddy.api")
 

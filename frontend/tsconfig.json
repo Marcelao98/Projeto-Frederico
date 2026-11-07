@@ -16,8 +16,8 @@
     "types": ["youtube", "vite/client", "node"],
     "baseUrl": ".",
     "paths": {
-      "@dataset/*": ["../backend/modules/bardo/dataset/*"],
-      "@contrato/*": ["../backend/freddy/motor/*"]
+      "@acervo/*": ["../acervo/*"],
+      "@contrato/*": ["../backend/freddy/salas/*"]
     }
   },
   "include": ["src", "vite.config.ts"]

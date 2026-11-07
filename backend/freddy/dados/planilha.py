@@ -19,7 +19,7 @@ import re
 from dataclasses import dataclass, field
 
 from freddy.dados.acervo import Acervo, limpar_temas
-from modules.bardo import service
+from freddy.nucleo.texto import extrair_link_youtube, video_id
 
 COLUNAS = ("id", "nome", "franquia", "link", "temas", "categorias", "comentario")
 _SEPARADOR_DE_TEMAS = re.compile(r"\s*[,;|/]\s*")
@@ -83,24 +83,24 @@ def comparar(acervo: Acervo, texto: str) -> Resumo:
     """O que a planilha muda no acervo (sem gravar nada)."""
     linhas = _ler(texto)
     atuais = {f["id"]: f for f in acervo.faixas()}
-    videos = {service.video_id(f["link"]) for f in atuais.values()}
+    videos = {video_id(f["link"]) for f in atuais.values()}
     resumo = Resumo()
     for n, linha in enumerate(linhas, start=2):  # linha 1 é o cabeçalho
         id_ = (linha.get("id") or "").strip()
         nome = (linha.get("nome") or "").strip()
         temas = separar_temas(linha.get("temas") or "")
         if not id_:
-            link = service.extrair_link_youtube(linha.get("link") or "")
+            link = extrair_link_youtube(linha.get("link") or "")
             if not link and not nome and not temas:
                 continue  # linha em branco
             if not link:
                 resumo.ignoradas.append({"linha": n, "motivo": "sem id e sem link do YouTube"})
-            elif service.video_id(link) in videos:
+            elif video_id(link) in videos:
                 resumo.ignoradas.append({"linha": n, "motivo": "esse vídeo já está no acervo"})
             elif not nome:
                 resumo.ignoradas.append({"linha": n, "motivo": "faixa nova sem nome"})
             else:
-                videos.add(service.video_id(link))
+                videos.add(video_id(link))
                 resumo.novas.append((nome, link, temas))
             continue
         atual = atuais.get(id_)

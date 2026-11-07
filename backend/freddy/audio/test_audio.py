@@ -19,8 +19,8 @@ import numpy as np
 from freddy.audio.mesa import Mesa, aplicar_ganho
 from freddy.audio.pcm import BYTES_POR_QUADRO, SILENCIO
 from freddy.audio.reprodutor_mesa import ReprodutorMesa
-from freddy.audio.saidas import SaidaMuda
-from freddy.audio.youtube import Fonte, motivo_em_portugues
+from freddy.audio.saidas.muda import SaidaMuda
+from freddy.audio.fontes.youtube import Fonte, motivo_em_portugues
 
 TEM_FFMPEG = shutil.which("ffmpeg") is not None
 

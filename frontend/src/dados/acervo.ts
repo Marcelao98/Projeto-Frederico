@@ -6,8 +6,8 @@
  * dataset mais as faixas que a mesa ensinou. As telas só enxergam `Acervo`.
  */
 
-import musicasJson from "@dataset/musicas.json";
-import vocabularioJson from "@dataset/vocabulario.json";
+import musicasJson from "@acervo/musicas.json";
+import vocabularioJson from "@acervo/vocabulario.json";
 import { MAX_RESULTADOS_DA_BUSCA, buscarPorTags, montarVocabulario, sortear, type Vocabulario } from "../nucleo/busca";
 import { normalizar } from "../nucleo/texto";
 import type { Faixa, VocabularioBruto } from "../nucleo/tipos";

@@ -1,8 +1,8 @@
 /**
- * Roda os casos de backend/freddy/motor/casos_contrato.json num Motor.
+ * Roda os casos de backend/freddy/salas/casos_contrato.json num Motor.
  * Usado por contrato.test.ts (MotorLocal) e contrato.remoto.test.ts
  * (MotorRemoto falando com o backend de verdade). O Python roda os mesmos
- * em backend/freddy/motor/test_contrato.py.
+ * em backend/freddy/salas/test_contrato.py.
  */
 
 import casos from "@contrato/casos_contrato.json";

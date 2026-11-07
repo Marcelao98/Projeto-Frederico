@@ -1,5 +1,5 @@
 /**
- * Os casos de backend/freddy/motor/casos_contrato.json, rodados no MotorLocal.
+ * Os casos de backend/freddy/salas/casos_contrato.json, rodados no MotorLocal.
  * O backend roda os mesmos no Motor dele (test_contrato.py): os dois motores
  * se comportam igual, e o painel não sabe qual está usando.
  */

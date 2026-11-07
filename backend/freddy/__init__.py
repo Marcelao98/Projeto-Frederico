@@ -1,4 +1,4 @@
-"""O Freddy: o som da mesa rodando sozinho, sem a Natty.
+"""O Freddy: o som da mesa de RPG.
 
 `python -m freddy` sobe o servidor local (FastAPI + WebSocket) que o painel
 usa pelo MotorRemoto. Ver backend/README.md.

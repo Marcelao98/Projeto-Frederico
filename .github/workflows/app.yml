@@ -42,12 +42,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Backend (testes do Bardo e do Freddy)
+      - name: Backend (testes)
         working-directory: backend
         run: |
           sudo apt-get update && sudo apt-get install -y ffmpeg
           pip install -r requirements.txt
-          python -m unittest discover -s modules/bardo -t .
           python -m unittest discover -s freddy -t .
 
       # O painel (MotorRemoto) falando com o backend de verdade, pela rede.
@@ -107,7 +106,7 @@ jobs:
           if [ "$RUNNER_OS" = Windows ]; then ext=".exe"; sep=";"; fi
           cd backend
           pyinstaller --onefile --name freddy-backend --paths . \
-            --add-data "modules/bardo/dataset${sep}modules/bardo/dataset" \
+            --add-data "../acervo${sep}acervo" \
             --collect-submodules uvicorn --collect-all discord --collect-all davey \
             --collect-submodules yt_dlp --hidden-import sounddevice --collect-data certifi \
             freddy_backend.py

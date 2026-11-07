@@ -19,8 +19,8 @@ from typing import Callable
 
 import numpy as np
 
-from freddy.audio.assobio import quadros_do_assobio
-from freddy.audio.fonte_ffmpeg import FonteFfmpeg
+from freddy.audio.fontes.assobio import quadros_do_assobio
+from freddy.audio.fontes.ffmpeg import FonteFfmpeg
 from freddy.audio.pcm import BYTES_POR_QUADRO, QUADROS_POR_SEGUNDO, SILENCIO
 
 MAX_COPIAS = 25  # 0,5 s de folga entre o Discord e a caixa de som

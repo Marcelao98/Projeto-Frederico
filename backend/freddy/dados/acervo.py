@@ -1,13 +1,13 @@
 """O acervo que o painel enxerga: o dataset do repositório + o que o mestre mudou.
 
 Três camadas, nesta ordem:
-- o dataset (modules/bardo/dataset/musicas.json): a curadoria, versionada no git;
+- o acervo oficial (acervo/musicas.json): a curadoria, versionada no git;
 - `ajustes.json` (pasta do mestre): correções nas faixas do dataset (nome,
   temas, comentário), feitas pelo chat, pelo modo Acervo ou pela planilha;
 - `aprendidas.json` (pasta do mestre): faixas novas que a mesa ensinou.
 
 Quem baixou o app não tem o repositório, por isso o que o mestre muda fica
-na pasta dele. Pra levar pro dataset oficial: scripts/freddy_promover.py.
+na pasta dele. Pra levar pro dataset oficial: scripts/acervo_promover.py.
 As categorias sempre saem dos temas (vocabulario.json), nunca à mão.
 """
 
@@ -16,10 +16,13 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from freddy.dados.playlists import gravar_json
-from modules.bardo import service
+from freddy.dados.arquivos import gravar_json
+from freddy.config import PASTA_ACERVO
+from freddy.dados.acervo_oficial import MAX_TEMAS_DESCOBERTA, ORIGEM_DESCOBERTA, MusicaJaNoAcervo
+from freddy.nucleo.texto import slug, video_id
+from freddy.nucleo.vocabulario import NAO_CLASSIFICADO, categorias_dos_temas
 
-_DATASET = Path(service.__file__).parent / "dataset"
+_DATASET = PASTA_ACERVO
 
 CAMPOS_EDITAVEIS = ("nome", "temas", "comentario_pessoal")
 MAX_TEMAS = 12
@@ -42,20 +45,20 @@ def limpar_temas(temas: list[str]) -> list[str]:
 
 
 def com_categorias(faixa: dict) -> dict:
-    temas = faixa.get("temas") or [service.NAO_CLASSIFICADO]
-    return {**faixa, "temas": temas, "categorias": service.categorias_dos_temas(temas)}
+    temas = faixa.get("temas") or [NAO_CLASSIFICADO]
+    return {**faixa, "temas": temas, "categorias": categorias_dos_temas(temas)}
 
 
 class Acervo:
-    def __init__(self, arquivo_aprendidas: Path, pasta_dataset: Path = _DATASET, arquivo_ajustes: Path | None = None):
+    def __init__(self, arquivo_aprendidas: Path, pasta_acervo: Path = _DATASET, arquivo_ajustes: Path | None = None):
         self.arquivo_aprendidas = arquivo_aprendidas
         self.arquivo_ajustes = arquivo_ajustes or arquivo_aprendidas.with_name("ajustes.json")
-        self.pasta_dataset = pasta_dataset
+        self.pasta_acervo = pasta_acervo
 
     # --- leitura -----------------------------------------------------------
 
     def base(self) -> list[dict]:
-        return json.loads((self.pasta_dataset / "musicas.json").read_text(encoding="utf-8"))["musicas"]
+        return json.loads((self.pasta_acervo / "musicas.json").read_text(encoding="utf-8"))["musicas"]
 
     def aprendidas(self) -> list[dict]:
         if not self.arquivo_aprendidas.exists():
@@ -68,7 +71,7 @@ class Acervo:
         return json.loads(self.arquivo_ajustes.read_text(encoding="utf-8"))["faixas"]
 
     def vocabulario(self) -> dict:
-        return json.loads((self.pasta_dataset / "vocabulario.json").read_text(encoding="utf-8"))
+        return json.loads((self.pasta_acervo / "vocabulario.json").read_text(encoding="utf-8"))
 
     def faixas(self) -> list[dict]:
         ajustes = self.ajustes()
@@ -99,7 +102,7 @@ class Acervo:
         for id_, campos in mudancas.items():
             campos = {k: v for k, v in campos.items() if k in CAMPOS_EDITAVEIS and v is not None}
             if "temas" in campos:
-                campos["temas"] = limpar_temas(campos["temas"]) or [service.NAO_CLASSIFICADO]
+                campos["temas"] = limpar_temas(campos["temas"]) or [NAO_CLASSIFICADO]
             if "nome" in campos:
                 campos["nome"] = str(campos["nome"]).strip() or None
                 if campos["nome"] is None:
@@ -136,26 +139,26 @@ class Acervo:
 
     def aprender_varias(self, novas: list[tuple[str, str, list[str]]]) -> list[dict]:
         faixas = self.faixas()
-        videos = {service.video_id(f["link"]): f for f in faixas}
+        videos = {video_id(f["link"]): f for f in faixas}
         ids = {f["id"] for f in faixas}
         aprendidas = self.aprendidas()
         entradas: list[dict] = []
         for titulo, link, temas in novas:
-            video = service.video_id(link)
+            video = video_id(link)
             if video in videos:
-                raise service.MusicaJaNoDataset(videos[video])
-            base = f"{service.slug(service.ORIGEM_DESCOBERTA['nome'])}-{service.slug(titulo) or video.lower()}"
+                raise MusicaJaNoAcervo(videos[video])
+            base = f"{slug(ORIGEM_DESCOBERTA['nome'])}-{slug(titulo) or video.lower()}"
             id_, n = base, 2
             while id_ in ids:
                 id_, n = f"{base}-{n}", n + 1
-            temas = limpar_temas(temas)[: service.MAX_TEMAS_DESCOBERTA] or [service.NAO_CLASSIFICADO]
+            temas = limpar_temas(temas)[: MAX_TEMAS_DESCOBERTA] or [NAO_CLASSIFICADO]
             entrada = com_categorias(
                 {
                     "id": id_,
                     "nome": titulo,
                     "link": f"https://www.youtube.com/watch?v={video}",
                     "escopo": "faixa_individual",
-                    "origem": dict(service.ORIGEM_DESCOBERTA),
+                    "origem": dict(ORIGEM_DESCOBERTA),
                     "temas": temas,
                     "comentario_pessoal": "",
                 }

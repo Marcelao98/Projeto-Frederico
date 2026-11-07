@@ -4,7 +4,7 @@
  * Dois motores implementam: o MotorLocal (toca no navegador, via YouTube) e
  * o MotorRemoto (fala com o backend Python, `python -m freddy`, por
  * WebSocket). As telas não sabem qual é. O backend tem a porta fiel deste
- * contrato em backend/freddy/motor/; os casos de casos_contrato.json rodam
+ * contrato em backend/freddy/salas/; os casos de casos_contrato.json rodam
  * nos dois lados. Mixer, soundboard e afins entram acrescentando comandos
  * em `Comandos` e campos em `EstadoMotor`.
  */
@@ -39,7 +39,7 @@ export type Onde = "fim" | "proxima" | "agora";
 /**
  * Cada comando: os argumentos e o que ele devolve. Pra criar um comando
  * novo (ex.: "mixer.volume_camada"), acrescente aqui e implemente nos DOIS
- * motores (motorLocal.ts e backend/freddy/motor/motor.py, mais a validação
+ * motores (motorLocal.ts e backend/freddy/salas/motor.py, mais a validação
  * em backend/freddy/api/protocolo.py) e um caso em casos_contrato.json.
  */
 export interface Comandos {

@@ -12,7 +12,8 @@ from pathlib import Path
 
 from freddy.dados import planilha
 from freddy.dados.acervo import Acervo, FaixaNaoEncontrada
-from modules.bardo import service
+from freddy.config import PASTA_ACERVO
+from freddy.dados.acervo_oficial import MusicaJaNoAcervo
 
 DATASET = {
     "_comentario": "teste",
@@ -48,9 +49,9 @@ class Base(unittest.TestCase):
         dataset = self.pasta / "dataset"
         dataset.mkdir()
         (dataset / "musicas.json").write_text(json.dumps(DATASET, ensure_ascii=False), encoding="utf-8")
-        real = Path(service.__file__).parent / "dataset" / "vocabulario.json"
+        real = PASTA_ACERVO / "vocabulario.json"
         shutil.copy(real, dataset / "vocabulario.json")
-        self.acervo = Acervo(self.pasta / "mestre" / "aprendidas.json", pasta_dataset=dataset)
+        self.acervo = Acervo(self.pasta / "mestre" / "aprendidas.json", pasta_acervo=dataset)
 
     def faixa(self, id_):
         return self.acervo.faixa(id_)
@@ -91,7 +92,7 @@ class TestAjustes(Base):
         self.assertEqual(self.acervo.ajustes(), {})
 
     def test_aprender_video_repetido(self):
-        with self.assertRaises(service.MusicaJaNoDataset):
+        with self.assertRaises(MusicaJaNoAcervo):
             self.acervo.aprender("x", "https://youtu.be/green", [])
 
 

@@ -1,8 +1,8 @@
 // Os testes de busca do Bardo (modules/bardo/test_service.py), traduzidos,
 // mais a checagem do acervo real.
 import { describe, expect, it } from "vitest";
-import musicasJson from "@dataset/musicas.json";
-import vocabularioJson from "@dataset/vocabulario.json";
+import musicasJson from "@acervo/musicas.json";
+import vocabularioJson from "@acervo/vocabulario.json";
 import { buscarPorTags, categoriasDosTemas, montarVocabulario, sortear } from "./busca";
 import type { Faixa } from "./tipos";
 

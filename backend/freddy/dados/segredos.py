@@ -11,7 +11,7 @@ import json
 import os
 from pathlib import Path
 
-from freddy.dados.playlists import gravar_json
+from freddy.dados.arquivos import gravar_json
 
 VARIAVEL = "FREDDY_DISCORD_TOKEN"
 

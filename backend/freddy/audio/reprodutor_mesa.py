@@ -12,17 +12,17 @@ import logging
 import threading
 from typing import Callable
 
-from freddy.audio.fonte_ffmpeg import FonteFfmpeg
+from freddy.audio.fontes.ffmpeg import FonteFfmpeg
 from freddy.audio.mesa import Mesa
 from freddy.audio.pcm import QUADROS_POR_SEGUNDO
 from freddy.audio.reprodutor import OuvinteReprodutor
 from freddy.audio.saidas import Saida
-from freddy.audio.youtube import Fonte, motivo_em_portugues, resolver_youtube
+from freddy.audio.fontes.youtube import Fonte, motivo_em_portugues, resolver_youtube
 
 log = logging.getLogger("freddy.audio")
 
 # Música que "acaba" antes disso sem ninguém pular não tocou de verdade (o
-# YouTube às vezes recusa a URL de áudio e o FFmpeg sai sem som). Igual ao Bardo.
+# YouTube às vezes recusa a URL de áudio e o FFmpeg sai sem som).
 SEGUNDOS_PARA_FALHA_RAPIDA = 5
 
 

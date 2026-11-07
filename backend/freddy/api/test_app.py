@@ -60,7 +60,7 @@ class BotFalso:
         self.canal = None
 
     async def entrar(self, canal_id):
-        from freddy.bot.bot import ErroDoBot
+        from freddy.integracoes.discord.bot import ErroDoBot
 
         if canal_id == 404404:
             raise ErroDoBot("não achei esse canal de voz")

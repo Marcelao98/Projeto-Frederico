@@ -3,8 +3,20 @@
 from __future__ import annotations
 
 import os
+import sys
 from dataclasses import dataclass, field
 from pathlib import Path
+
+def _pasta_do_acervo() -> Path:
+    """acervo/ na raiz do repositório; no app empacotado, junto do executável."""
+    if getattr(sys, "frozen", False):
+        return Path(getattr(sys, "_MEIPASS", Path(sys.executable).parent)) / "acervo"
+    return Path(__file__).resolve().parents[2] / "acervo"
+
+
+# O acervo oficial (musicas.json + vocabulario.json): fonte única, o painel lê
+# os mesmos arquivos (alias @acervo no frontend/vite.config.ts).
+PASTA_ACERVO = _pasta_do_acervo()
 
 PORTA_PADRAO = 47824  # a do lado do painel instalado (47823)
 
