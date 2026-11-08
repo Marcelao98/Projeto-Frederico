@@ -91,4 +91,4 @@ pras tags; gírias e perfis bem feitos na etapa 1 (deixa a tag por música
 mais simples).
 
 **Etapas 1 e 2 feitas** (08/11/2026): `acervo/catalogo/` e `backend/freddy/catalogo/`.
-**Próximo passo:** etapa 3, bloco 1.
+**Etapa 3, bloco 1:** lista e script prontos (`acervo/catalogo/blocos/`); esperando o corte do Marcelo e o script rodar no Fedora.

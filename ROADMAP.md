@@ -47,9 +47,14 @@ Atualizado em 07/11/2026 (v0.6.0).
     "e depois", e 108 pedidos de ouro rodando nos testes (75 conferem
     resultado; 33 de música geral ficam pendentes até ter música).
   - O app ainda usa o `musicas.json`: nada do app mudou.
-- **Próximo passo: etapa 3, bloco 1** (500 músicas): Claude gera a lista em
-  arquivo, o Marcelo corta/acrescenta, e o script do link oficial roda no
-  Fedora dele (o YouTube bloqueia a nuvem).
+- **Etapa 3, bloco 1 começado (08/11/2026):** a lista está em
+  `acervo/catalogo/blocos/bloco-01.csv` (562 músicas, sobrando de propósito:
+  ~58% Brasil, todas as décadas) e o script que confere no MusicBrainz e acha o
+  link oficial no YouTube (`backend/scripts/catalogo_bloco.py`, testado com
+  dublês; README em `acervo/catalogo/blocos/`).
+  ⏸ **Esperando o Marcelo:** cortar/acrescentar na lista e rodar o script no
+  Fedora (comando no README dos blocos), depois commitar os dois `.csv` que ele
+  gera. **Próximo passo depois disso:** tags em lotes de 100 e entrar no catálogo.
 
 ## Como desenvolver sem sofrer
 
