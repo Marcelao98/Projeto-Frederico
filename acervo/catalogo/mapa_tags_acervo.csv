@@ -1,0 +1,227 @@
+tag_antiga;faixas;destino
+melancólico;131;clima:melancolico
+sombrio;110;clima:sombrio
+boss fight;101;ocasiao:rpg-chefe
+tenso;96;clima:tenso
+calmo;84;clima:calmo
+batalha;79;ocasiao:rpg-combate
+épico;72;clima:epico
+intenso;69;clima:empolgante|clima:tenso
+vocal;45;campo:com-voz
+dramático;44;clima:dramatico
+emocionante;40;clima:empolgante
+final;39;ocasiao:rpg-final
+não classificado;39;revisar:faixa sem tema ainda
+trágico;37;clima:triste|clima:dramatico
+mistério;34;clima:misterioso|ocasiao:rpg-misterio
+exploração;32;ocasiao:rpg-exploracao
+elegante;30;ocasiao:rpg-corte
+leve;29;clima:calmo|clima:alegre
+triste;29;clima:triste
+cotidiano;26;ocasiao:rpg-cidade|clima:calmo
+esperançoso;25;clima:esperancoso
+sereno;25;clima:calmo
+grandioso;24;clima:epico
+clímax;22;ocasiao:rpg-final
+etéreo;22;clima:sonhador
+heroico;22;clima:epico|clima:esperancoso
+nostálgico;21;clima:nostalgico
+perturbador;21;clima:assustador
+estratégia;20;clima:tenso|ocasiao:rpg-combate
+contemplativo;19;clima:contemplativo
+duelo;18;ocasiao:rpg-combate|clima:tenso
+cômico;17;clima:engracado
+coral;16;instrumento:coral
+sagrado;15;clima:sagrado
+alegre;14;clima:alegre
+atmosférico;13;clima:contemplativo|campo:sem-voz
+hub;13;ocasiao:rpg-cidade|ocasiao:rpg-descanso
+introspectivo;13;clima:contemplativo
+masmorra;13;ocasiao:rpg-masmorra
+terror;13;clima:assustador|ocasiao:rpg-terror
+animado;12;clima:animado
+bruxa;12;clima:magico|clima:sombrio
+dinâmico;12;clima:empolgante
+tema principal;12;ocasiao:rpg-abertura|campo:essencial
+urgente;12;clima:tenso|ocasiao:rpg-perseguicao
+excêntrico;11;clima:estranho|clima:engracado
+realeza;11;ocasiao:rpg-corte|cenario:castelo
+determinação;10;clima:esperancoso|clima:epico
+difícil;10;ocasiao:rpg-chefe
+místico;10;clima:magico
+grotesco;9;clima:assustador|clima:estranho
+teatral;9;clima:dramatico
+abertura;8;ocasiao:rpg-abertura
+ambiente;8;clima:calmo|campo:sem-voz
+cidade;8;ocasiao:rpg-cidade
+cósmico;8;cenario:espaco|clima:estranho
+desespero;8;clima:triste|clima:dramatico
+guerra;8;ocasiao:rpg-combate|clima:epico
+morte;8;clima:triste|tema:perda
+natureza;8;cenario:floresta|ocasiao:rpg-exploracao
+piano;8;instrumento:piano
+caótico;7;clima:tenso|clima:agressivo
+noturno;7;cenario:noite
+orquestral;7;instrumento:orquestra
+ritualístico;7;ocasiao:rpg-ritual
+acolhedor;6;clima:aconchegante
+clássico;6;genero:classica
+existencial;6;clima:contemplativo
+ruínas;6;cenario:ruinas
+solene;6;clima:sagrado
+caixinha de música;5;instrumento:caixinha-de-musica
+descanso;5;ocasiao:rpg-descanso
+frio;5;cenario:neve
+infantil;5;clima:alegre|clima:engracado
+menu;5;ocasiao:rpg-abertura
+onírico;5;clima:sonhador
+otimista;5;clima:esperancoso|clima:alegre
+solitário;5;clima:melancolico|tema:solidao
+subterrâneo;5;cenario:caverna
+tecnológico;5;clima:estranho|instrumento:sintetizador
+apocalíptico;4;clima:sombrio|clima:epico
+arcano;4;clima:magico
+castelo;4;cenario:castelo
+dragão;4;ocasiao:rpg-chefe|clima:epico
+genérico;4;descartar:sem significado
+icônico;4;campo:essencial
+imponente;4;clima:epico
+insano;4;clima:estranho|clima:assustador
+introdução;4;ocasiao:rpg-abertura
+opressivo;4;clima:tenso|clima:sombrio
+romântico;4;clima:romantico
+zombeteiro;4;clima:engracado|ocasiao:rpg-vilao
+cavaleiresco;3;clima:epico|ocasiao:rpg-corte
+chuva;3;cenario:chuva
+destruição;3;clima:agressivo|clima:sombrio
+filosófico;3;clima:contemplativo
+frenético;3;clima:empolgante|clima:tenso
+invasão;3;ocasiao:rpg-combate|clima:tenso
+inverno;3;cenario:neve
+mágico;3;clima:magico
+neve;3;cenario:neve
+nobre;3;ocasiao:rpg-corte
+perseguição;3;ocasiao:rpg-perseguicao
+presságio;3;clima:tenso|clima:misterioso
+raiva;3;clima:agressivo
+relaxante;3;clima:calmo|ocasiao:relaxar
+selvagem;3;cenario:floresta|clima:agressivo
+suspeita;3;clima:misterioso|clima:tenso
+suspense;3;clima:tenso
+vazio;3;clima:melancolico
+verão;3;ocasiao:praia|clima:alegre
+ansioso;2;clima:tenso
+baile;2;ocasiao:rpg-corte|clima:romantico
+calma;2;clima:calmo
+claustrofóbico;2;clima:tenso|cenario:caverna
+combate;2;ocasiao:rpg-combate
+decadente;2;clima:sombrio|cenario:ruinas
+despedida;2;ocasiao:rpg-drama|clima:saudade
+despertar;2;clima:esperancoso
+destino;2;clima:epico|clima:dramatico
+escola;2;ocasiao:rpg-cidade|clima:alegre
+estranho;2;clima:estranho
+experimental;2;clima:estranho
+horror cósmico;2;clima:assustador|ocasiao:rpg-terror|cenario:espaco
+intriga;2;ocasiao:rpg-misterio
+investigação;2;ocasiao:rpg-misterio
+luto;2;clima:triste|ocasiao:rpg-drama|tema:perda
+mar;2;cenario:mar
+mercado;2;ocasiao:rpg-cidade
+militar;2;clima:epico|ocasiao:rpg-combate
+rebelde;2;clima:confiante|clima:agressivo
+sedutor;2;clima:sensual
+sertanejo;2;genero:sertanejo
+sertanejo raíz;2;genero:sertanejo-raiz
+taverna;2;ocasiao:rpg-taverna
+tempestade;2;cenario:chuva
+valsa;2;ocasiao:rpg-corte|clima:romantico
+zelda;2;obra:The Legend of Zelda
+órgão;2;instrumento:orgao
+abandonado;1;cenario:ruinas|clima:melancolico
+aline barros;1;artista:Aline Barros|genero:gospel-pop
+ameaçador;1;clima:sombrio|clima:tenso
+anos 70;1;epoca:1970-1979
+antigo;1;cenario:ruinas
+aquático;1;cenario:mar
+astuto;1;clima:misterioso
+bardo;1;ocasiao:rpg-taverna
+bonita;1;clima:sonhador
+brasileira;1;campo:brasileira
+brega;1;genero:brega-romantico
+bruxaria;1;clima:magico|ocasiao:rpg-ritual
+canção;1;campo:com-voz
+caos;1;clima:tenso|clima:agressivo
+caverna;1;cenario:caverna
+caverna úmida;1;cenario:caverna
+choque;1;clima:dramatico
+confiante;1;clima:confiante
+consolo;1;clima:esperancoso|clima:melancolico
+conspiração;1;ocasiao:rpg-misterio
+culpa;1;clima:melancolico
+cura;1;clima:esperancoso|clima:calmo
+dançante;1;clima:animado
+dark souls;1;obra:Dark Souls
+decisivo;1;ocasiao:rpg-final
+depressão;1;clima:triste
+desolação;1;clima:melancolico|cenario:ruinas
+disco;1;genero:disco
+dor de cotovelo;1;tema:dor-de-cotovelo|clima:sofrido
+drama pesado;1;clima:dramatico|ocasiao:rpg-drama
+esperança;1;clima:esperancoso
+evento;1;clima:dramatico
+exótico;1;cenario:deserto
+festivo;1;clima:festivo
+furtivo;1;ocasiao:rpg-perseguicao
+gospel;1;genero:gospel
+gótico;1;clima:sombrio|cenario:castelo
+hino lgbt;1;tema:orgulho|campo:essencial
+horror;1;clima:assustador|ocasiao:rpg-terror
+igreja;1;cenario:templo|clima:sagrado
+infernal;1;clima:sombrio|cenario:vulcao
+instrumental;1;campo:sem-voz
+lamento;1;clima:triste
+lua;1;cenario:noite
+luta;1;ocasiao:rpg-combate
+majora mask;1;obra:The Legend of Zelda: Majora's Mask
+maldição;1;clima:sombrio|clima:magico
+marcha;1;clima:epico|ocasiao:rpg-combate
+melancólica;1;clima:melancolico
+monstro;1;ocasiao:rpg-chefe|clima:assustador
+motivador;1;clima:esperancoso
+mpb;1;genero:mpb
+multidão;1;ocasiao:rpg-cidade
+música brasileira;1;campo:brasileira
+música de corno;1;tema:dor-de-cotovelo|clima:sofrido
+ninar;1;ocasiao:dormir|clima:calmo
+pesadelo;1;clima:assustador|ocasiao:rpg-terror
+planejamento;1;ocasiao:rpg-misterio|clima:calmo
+plin plon plon;1;instrumento:piano|clima:melancolico
+pokemon;1;obra:Pokémon
+praia;1;cenario:mar|ocasiao:praia
+psicológico;1;clima:assustador|clima:estranho
+reviravolta;1;clima:dramatico
+sereno-macabro;1;clima:calmo|clima:sombrio
+silêncio perturbador;1;clima:assustador|clima:tenso
+sofrencia;1;genero:sofrencia|clima:sofrido
+solo de violino;1;instrumento:cordas
+soothing;1;clima:calmo
+tampe ouvidos;1;revisar:aviso de volume alto? o Marcelo confirma
+tempestade neve;1;cenario:neve|cenario:chuva
+tim maia;1;artista:Tim Maia|genero:soul-brasileiro
+tragédia;1;clima:triste|ocasiao:rpg-drama
+trails in the sky;1;obra:The Legend of Heroes: Trails in the Sky
+tranquila;1;clima:calmo
+tranquilo;1;clima:calmo
+transcendental;1;clima:sagrado|clima:sonhador
+transição;1;descartar:função de jogo, não de busca
+trio parada dura;1;artista:Trio Parada Dura|genero:sertanejo-raiz
+tundra;1;cenario:neve
+umineko;1;obra:Umineko no Naku Koro ni
+vilarejo;1;ocasiao:rpg-cidade
+vilão;1;ocasiao:rpg-vilao
+violento;1;clima:agressivo
+vulcânico;1;cenario:vulcao
+witcher 3;1;obra:The Witcher 3
+água;1;cenario:mar
+ódio;1;clima:agressivo

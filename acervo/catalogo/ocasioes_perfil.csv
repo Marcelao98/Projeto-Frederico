@@ -1,0 +1,48 @@
+ocasiao;generos_combinam;energia_min;energia_max;voz;climas_combinam;climas_evitar;nota
+churrasco;sertanejo|pagode|samba|funk-br|axe|forro|brega|pop-nacional|rock-nacional;3;5;sim;alegre|festivo|animado|saudade|sofrido;triste|assustador|sombrio|contemplativo;sofrência entra, choro não
+festa;pop|funk-br|sertanejo-universitario|pagode|axe|eletronica|black-music|reggaeton|piseiro;4;5;sim;alegre|festivo|animado|confiante|sensual;triste|melancolico|assustador|sombrio|contemplativo;
+balada;eletronica|funk-br|pop|rap-gringo|trap|reggaeton|dance-pop|edm|house;4;5;qualquer;animado|confiante|sensual|festivo;triste|melancolico|calmo|assustador;
+esquenta;funk-br|pop|trap-nacional|sertanejo-universitario|pagode|reggaeton|eletronica;3;5;sim;animado|confiante|festivo|alegre;triste|melancolico|calmo;
+barzinho;mpb|samba|pagode|sertanejo|rock-nacional|pop-rock|bossa-nova|soul-brasileiro;2;4;sim;alegre|nostalgico|saudade|romantico|sofrido;assustador|agressivo|sombrio;voz e violão
+aniversario;pop|pagode|sertanejo|axe|funk-br|black-music|pop-nacional;3;5;sim;alegre|festivo|animado;triste|sombrio|assustador|sofrido;
+casamento;pop|balada-pop|mpb|soul|disco|pagode-romantico|sertanejo-romantico|classica;2;5;sim;romantico|alegre|festivo|esperancoso;triste|sofrido|sombrio|assustador|agressivo;
+karaoke;pop|sertanejo|rock-nacional|brega|mpb|pagode|balada-pop|rock-classico;2;5;sim;alegre|sofrido|romantico|nostalgico|festivo;assustador|estranho;canta_junto pesa muito
+carnaval;axe|marchinha|samba-enredo|frevo|pagode-baiano|funk-br|samba-reggae|maracatu;4;5;sim;festivo|animado|alegre;triste|melancolico|sombrio|assustador;
+sao-joao;forro|baiao|xote|forro-pe-de-serra|quadrilha|xaxado|piseiro|musica-caipira;3;5;sim;festivo|alegre|animado|saudade;assustador|sombrio|agressivo;
+natal;pop|classica|musica-sacra|soul|jazz|gospel|mpb;1;4;qualquer;aconchegante|alegre|esperancoso|sagrado|nostalgico;assustador|agressivo|sombrio|sensual;
+reveillon;pop|axe|samba|eletronica|funk-br|disco|black-music;3;5;sim;festivo|esperancoso|alegre|animado;triste|sombrio|assustador;
+almoco-de-domingo;mpb|samba|pagode|sertanejo-raiz|sertanejo-romantico|bossa-nova|soul-brasileiro|forro;2;3;sim;alegre|aconchegante|nostalgico|saudade;agressivo|assustador|sombrio|sensual;
+jantar-romantico;bossa-nova|jazz|soul|rnb|mpb-romantica|balada-pop|neo-soul|lounge;1;3;qualquer;romantico|sensual|calmo|aconchegante;triste|agressivo|assustador|engracado|sofrido;
+treino;funk-br|rap-gringo|trap|eletronica|rock|metal|edm|drum-and-bass;4;5;qualquer;empolgante|confiante|agressivo|animado;triste|melancolico|calmo|contemplativo;
+corrida;eletronica|pop|funk-br|rock|edm|drum-and-bass|dance-pop;4;5;qualquer;empolgante|animado|confiante|esperancoso;triste|calmo|melancolico;
+faxina;pop|funk-br|pagode|axe|sertanejo|disco|black-music|forro|brega;3;5;sim;animado|alegre|festivo;triste|calmo|assustador|contemplativo;
+cozinhar;mpb|bossa-nova|jazz|soul|samba|pop|black-music;2;4;sim;alegre|aconchegante|calmo|romantico;assustador|agressivo|sombrio;
+estrada;rock-classico|sertanejo|pop-rock|rock-nacional|mpb|country|indie-rock|forro;2;4;sim;alegre|nostalgico|esperancoso|saudade|empolgante;assustador|sombrio;
+praia;reggae|axe|pop|samba|mpb|bossa-nova|reggaeton|pagode|house;2;4;sim;alegre|calmo|festivo|sensual;sombrio|assustador|triste|agressivo;
+dia-chuvoso;mpb|bossa-nova|indie-pop|jazz|lofi-hip-hop|folk|soul|classica;1;3;qualquer;melancolico|contemplativo|aconchegante|calmo|saudade;festivo|agressivo|animado;
+acordar;pop|mpb|indie-pop|soul|bossa-nova|folk|reggae;2;3;sim;alegre|esperancoso|calmo;triste|sombrio|assustador|agressivo;
+foco;lofi-hip-hop|classica|ambient|chillout|jazz|trilha-sonora|minimalismo|synthwave;1;3;nao;calmo|contemplativo|sonhador;agressivo|festivo|dramatico;letra atrapalha
+relaxar;bossa-nova|chillout|mpb|jazz|ambient|lofi-hip-hop|soul|new-age|reggae;1;2;qualquer;calmo|contemplativo|aconchegante|sonhador;agressivo|tenso|assustador|animado;
+dormir;ambient|classica|new-age|meditacao|paisagem-sonora;1;1;nao;calmo|sonhador;tenso|agressivo|assustador|animado|festivo;
+meditar;meditacao|ambient|new-age|musica-indiana|paisagem-sonora;1;1;nao;calmo|contemplativo|sagrado;tenso|agressivo|animado|festivo;
+fossa;sofrencia|sertanejo|brega|arrocha|pagode-romantico|mpb-romantica|balada-pop|bolero;1;3;sim;sofrido|triste|saudade|melancolico;festivo|animado|engracado|confiante;pra chorar
+criancas;musica-infantil|cantiga-de-roda|desenho-animado|musical|pop;2;5;sim;alegre|engracado|magico|animado;assustador|sensual|agressivo|sombrio|sofrido;sem explícita
+momento-de-fe;gospel|louvor|musica-catolica|musica-sacra|black-gospel;1;4;sim;sagrado|esperancoso|contemplativo|calmo;sensual|agressivo|assustador|engracado;
+jogar;trilha-de-jogo|eletronica|synthwave|rock|metal|chiptune|epic-music|trap;3;5;qualquer;empolgante|epico|confiante|tenso;triste|sofrido;
+rpg-taverna;medieval|celta|folk|bardcore|nordico|musica-cigana|trilha-de-jogo;2;4;qualquer;alegre|aconchegante|festivo|engracado;assustador|sombrio|tenso;
+rpg-cidade;trilha-de-jogo|trilha-de-anime|medieval|celta|classica;2;3;nao;alegre|calmo|aconchegante;assustador|agressivo|tenso;
+rpg-exploracao;trilha-de-jogo|trilha-de-filme|celta|epic-music|ambient|trilha-de-anime;2;4;nao;esperancoso|contemplativo|misterioso|epico|calmo;agressivo|festivo;
+rpg-masmorra;trilha-de-jogo|dark-ambient|ambient|trilha-de-filme;1;3;nao;sombrio|tenso|misterioso;alegre|festivo|romantico;
+rpg-combate;trilha-de-jogo|epic-music|metal|trilha-de-filme|trilha-de-anime|rock;4;5;qualquer;tenso|empolgante|epico|agressivo;calmo|alegre|romantico|aconchegante;
+rpg-chefe;trilha-de-jogo|epic-music|metal-sinfonico|musica-sacra|trilha-de-filme;5;5;qualquer;epico|tenso|sombrio|dramatico|empolgante;calmo|alegre|aconchegante|engracado;coral e órgão pesam
+rpg-vilao;trilha-de-jogo|trilha-de-filme|classica|metal-sinfonico;3;5;qualquer;sombrio|confiante|tenso|dramatico;alegre|aconchegante|engracado;
+rpg-terror;trilha-de-jogo|dark-ambient|trilha-de-filme|classica-contemporanea;1;4;nao;assustador|sombrio|tenso|estranho;alegre|festivo|romantico|aconchegante;
+rpg-misterio;trilha-de-jogo|trilha-de-filme|jazz|dark-ambient|trilha-de-anime;1;3;nao;misterioso|tenso|contemplativo;festivo|alegre|agressivo;
+rpg-corte;classica|barroco|trilha-de-jogo|trilha-de-filme|medieval;2;3;qualquer;romantico|dramatico|calmo|misterioso;agressivo|assustador|engracado;valsa, cravo
+rpg-ritual;trilha-de-jogo|musica-sacra|dark-ambient|musica-arabe|nordico;1;4;qualquer;magico|sagrado|sombrio|misterioso;alegre|festivo|engracado;
+rpg-descanso;trilha-de-jogo|celta|folk|ambient|trilha-de-anime;1;2;qualquer;calmo|aconchegante|contemplativo|nostalgico;tenso|agressivo|assustador;
+rpg-drama;trilha-de-jogo|trilha-de-filme|trilha-de-anime|classica;1;3;qualquer;triste|melancolico|dramatico|saudade;festivo|engracado|alegre;
+rpg-abertura;trilha-de-jogo|trilha-de-filme|epic-music|trilha-de-anime;2;5;qualquer;epico|esperancoso|misterioso|nostalgico;triste|engracado;
+rpg-final;trilha-de-jogo|epic-music|trilha-de-filme|musica-sacra;4;5;qualquer;epico|dramatico|empolgante|esperancoso;calmo|engracado;
+rpg-perseguicao;trilha-de-jogo|trilha-de-filme|epic-music|drum-and-bass;4;5;nao;tenso|empolgante;calmo|aconchegante|romantico;
+rpg-humor;trilha-de-jogo|trilha-de-anime|desenho-animado|swing|musica-cigana;2;4;qualquer;engracado|estranho|alegre;sombrio|triste|assustador;

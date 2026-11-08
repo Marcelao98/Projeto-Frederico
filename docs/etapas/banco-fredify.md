@@ -90,4 +90,5 @@ Um bloco por sessão; listas sempre em arquivo, nunca no chat; modelo barato
 pras tags; gírias e perfis bem feitos na etapa 1 (deixa a tag por música
 mais simples).
 
-**Próximo passo:** etapa 1.
+**Etapa 1 feita** (08/11/2026, `acervo/catalogo/`), esperando aprovação.
+**Próximo passo:** etapa 2.

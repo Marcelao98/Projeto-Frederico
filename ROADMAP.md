@@ -18,7 +18,7 @@ Atualizado em 07/11/2026 (v0.6.0).
 | **Bot do Discord do Freddy** | ✅ toca na call desde a v0.5.2 (DAVE resolvido) |
 | **Mixer, microfone virtual, soundboard** | ⬜ só planejado (telas "em breve" no painel) |
 
-## Onde paramos (07/11/2026)
+## Onde paramos (08/11/2026)
 
 - **v0.6.0 pronta** (etapa B1 da arquitetura nova). Tudo no `main`.
 - ⚠️ **O branch principal do GitHub ainda é `bardo-inicial`**: o Marcelo troca
@@ -34,8 +34,15 @@ Atualizado em 07/11/2026 (v0.6.0).
 - **Auditoria feita (08/11/2026):** `docs/etapas/auditoria-fredify-relatorio.md`
   (decisões D1–D12 ainda esperando o Marcelo). **Prioridade combinada: o banco
   de músicas** (SQLite, 5 mil músicas, público geral BR, gírias e ocasiões),
-  plano em `docs/etapas/banco-fredify.md`. **Próximo passo: etapa 1 do banco
-  (vocabulário).** A B2 fica pra depois do banco.
+  plano em `docs/etapas/banco-fredify.md`. A B2 fica pra depois do banco.
+- **Etapa 1 do banco feita (08/11/2026), esperando o Marcelo aprovar as
+  listas:** `acervo/catalogo/` (README explica): 213 gêneros em 23 famílias,
+  28 climas, 47 ocasiões com perfil (17 de RPG), 24 temas de letra, 18
+  instrumentos, 14 cenários, 558 gírias/expressões (580 ligações) e o de-para
+  das 226 tags do acervo (`mapa_tags_acervo.csv`; 2 pra ele decidir:
+  `tampe ouvidos` e `não classificado`). O app não mudou. **Próximo passo:
+  etapa 2 (banco de pé: esquema, compilador dos CSV, pedidos de ouro, as 607
+  de RPG migradas).**
 
 ## Como desenvolver sem sofrer
 

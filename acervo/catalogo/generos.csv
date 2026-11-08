@@ -1,0 +1,214 @@
+id;nome;pai;nota
+mpb;MPB;;família
+bossa-nova;Bossa nova;mpb;
+tropicalia;Tropicália;mpb;
+clube-da-esquina;Clube da Esquina;mpb;mineiro
+nova-mpb;Nova MPB;mpb;anos 2000 pra cá
+mpb-romantica;MPB romântica;mpb;baladas de rádio
+vanguarda-paulista;Vanguarda paulista;mpb;
+choro;Choro;mpb;chorinho
+samba;Samba;;família
+samba-raiz;Samba de raiz;samba;
+samba-enredo;Samba-enredo;samba;escolas de samba
+samba-de-roda;Samba de roda;samba;
+samba-rock;Samba-rock;samba;
+samba-cancao;Samba-canção;samba;
+partido-alto;Partido-alto;samba;
+pagode;Pagode;samba;
+pagode-90;Pagode anos 90;pagode;grupos de rádio
+pagode-romantico;Pagode romântico;pagode;
+pagode-de-mesa;Pagode de mesa;pagode;roda de pagode
+pagode-baiano;Pagode baiano;pagode;pagodão
+sertanejo;Sertanejo;;família
+musica-caipira;Música caipira;sertanejo;moda de viola
+sertanejo-raiz;Sertanejo raiz;sertanejo;
+sertanejo-romantico;Sertanejo romântico;sertanejo;duplas dos anos 80 e 90
+sertanejo-universitario;Sertanejo universitário;sertanejo;
+sofrencia;Sofrência;sertanejo;
+feminejo;Feminejo;sertanejo;
+agronejo;Agronejo;sertanejo;
+forro;Forró;;família
+forro-pe-de-serra;Forró pé de serra;forro;
+baiao;Baião;forro;
+xote;Xote;forro;
+xaxado;Xaxado;forro;
+forro-universitario;Forró universitário;forro;
+forro-eletronico;Forró eletrônico;forro;forró de banda
+piseiro;Piseiro;forro;pisadinha
+axe;Axé;;família
+axe-music;Axé music;axe;
+samba-reggae;Samba-reggae;axe;
+ijexa;Ijexá;axe;afoxé
+brega;Brega;;família
+brega-romantico;Brega romântico;brega;
+seresta;Seresta;brega;
+arrocha;Arrocha;brega;
+tecnobrega;Tecnobrega;brega;
+brega-calypso;Brega calypso;brega;
+brega-funk;Brega funk;brega;Recife
+regional-br;Ritmos regionais do Brasil;;família
+frevo;Frevo;regional-br;
+maracatu;Maracatu;regional-br;
+coco;Coco;regional-br;
+ciranda;Ciranda;regional-br;
+carimbo;Carimbó;regional-br;
+lambada;Lambada;regional-br;
+toada-boi-bumba;Toada de boi-bumbá;regional-br;Parintins
+musica-gaucha;Música gaúcha;regional-br;vanerão, chamamé
+marchinha;Marchinha de carnaval;regional-br;
+quadrilha;Quadrilha junina;regional-br;
+funk-br;Funk brasileiro;;família
+funk-carioca;Funk carioca;funk-br;
+funk-melody;Funk melody;funk-br;
+funk-ostentacao;Funk ostentação;funk-br;
+funk-consciente;Funk consciente;funk-br;
+funk-proibidao;Funk proibidão;funk-br;explícito
+mandelao;Mandelão;funk-br;funk paulista
+funk-150;Funk 150 BPM;funk-br;
+funk-automotivo;Funk automotivo;funk-br;montagem
+hip-hop;Hip hop e rap;;família
+rap-nacional;Rap nacional;hip-hop;
+rap-gringo;Rap internacional;hip-hop;
+boom-bap;Boom bap;hip-hop;
+trap;Trap;hip-hop;
+trap-nacional;Trap nacional;hip-hop;
+drill;Drill;hip-hop;
+lofi-hip-hop;Lo-fi hip hop;hip-hop;pra estudar
+rock;Rock;;família
+rock-and-roll;Rock and roll;rock;anos 50 e 60
+rock-classico;Rock clássico;rock;
+hard-rock;Hard rock;rock;
+rock-progressivo;Rock progressivo;rock;
+rock-psicodelico;Rock psicodélico;rock;
+soft-rock;Soft rock;rock;
+punk;Punk;rock;
+pop-punk;Pop punk;rock;
+emo;Emo;rock;
+grunge;Grunge;rock;
+indie-rock;Indie rock;rock;
+rock-alternativo;Rock alternativo;rock;
+britpop;Britpop;rock;
+new-wave;New wave;rock;
+post-punk;Pós-punk;rock;
+blues-rock;Blues rock;rock;
+rock-nacional;Rock nacional;rock;
+jovem-guarda;Jovem Guarda;rock-nacional;
+rock-brasil-80;Rock Brasil anos 80;rock-nacional;
+pop-rock-nacional;Pop rock nacional;rock-nacional;
+metal;Metal;rock;
+heavy-metal;Heavy metal;metal;
+thrash-metal;Thrash metal;metal;
+power-metal;Power metal;metal;
+metal-sinfonico;Metal sinfônico;metal;
+nu-metal;Nu metal;metal;
+metalcore;Metalcore;metal;
+black-metal;Black metal;metal;
+death-metal;Death metal;metal;
+doom-metal;Doom metal;metal;
+folk-metal;Folk metal;metal;viking, pirata
+pop;Pop;;família
+dance-pop;Dance pop;pop;
+synthpop;Synthpop;pop;
+electropop;Electropop;pop;
+teen-pop;Teen pop;pop;boy bands e afins
+pop-rock;Pop rock;pop;
+indie-pop;Indie pop;pop;
+balada-pop;Balada romântica internacional;pop;power ballad
+pop-nacional;Pop nacional;pop;
+k-pop;K-pop;pop;
+j-pop;J-pop;pop;
+city-pop;City pop;j-pop;
+anisong;Música de anime;j-pop;aberturas e encerramentos
+eletronica;Música eletrônica;;família
+house;House;eletronica;
+deep-house;Deep house;eletronica;
+techno;Techno;eletronica;
+trance;Trance;eletronica;
+psytrance;Psytrance;eletronica;
+edm;EDM;eletronica;big room, festival
+drum-and-bass;Drum and bass;eletronica;
+dubstep;Dubstep;eletronica;
+eurodance;Eurodance;eletronica;dance anos 90
+synthwave;Synthwave;eletronica;
+chillout;Chillout;eletronica;downtempo
+brazilian-bass;Brazilian bass;eletronica;
+black-music;Black music;;família: soul, R&B, funk
+soul;Soul;black-music;
+motown;Motown;soul;
+rnb;R&B;black-music;
+neo-soul;Neo soul;black-music;
+funk-americano;Funk (americano);black-music;
+disco;Disco;black-music;
+soul-brasileiro;Soul brasileiro;black-music;Tim Maia, samba-soul
+jazz-blues;Jazz e blues;;família
+jazz;Jazz;jazz-blues;
+swing;Swing e big band;jazz-blues;
+smooth-jazz;Smooth jazz;jazz-blues;
+jazz-fusion;Jazz fusion;jazz-blues;
+lounge;Lounge;jazz-blues;
+blues;Blues;jazz-blues;
+reggae;Reggae;;família
+reggae-roots;Reggae roots;reggae;
+reggae-nacional;Reggae nacional;reggae;
+ska;Ska;reggae;
+dub;Dub;reggae;
+dancehall;Dancehall;reggae;
+latina;Música latina;;família
+reggaeton;Reggaeton;latina;
+pop-latino;Pop latino;latina;
+salsa;Salsa;latina;
+bachata;Bachata;latina;
+cumbia;Cumbia;latina;
+merengue;Merengue;latina;
+tango;Tango;latina;
+bolero;Bolero;latina;
+musica-mexicana;Música mexicana;latina;mariachi
+gospel;Gospel e música cristã;;família
+louvor;Louvor e adoração;gospel;
+gospel-pop;Gospel pop;gospel;
+musica-catolica;Música católica;gospel;
+black-gospel;Black gospel;gospel;
+classica;Música clássica;;família
+barroco;Barroco;classica;
+classicismo;Classicismo;classica;Mozart, Haydn
+romantismo;Romantismo;classica;século XIX
+opera;Ópera;classica;
+musica-sacra;Música sacra e coral;classica;canto gregoriano incluso
+minimalismo;Minimalismo;classica;
+classica-contemporanea;Clássica contemporânea;classica;
+trilha-sonora;Trilha sonora;;família
+trilha-de-filme;Trilha de filme;trilha-sonora;
+trilha-de-serie;Trilha de série;trilha-sonora;
+trilha-de-novela;Trilha de novela;trilha-sonora;
+trilha-de-anime;Trilha de anime;trilha-sonora;a parte instrumental; canção vai em anisong
+trilha-de-jogo;Trilha de jogo;trilha-sonora;
+chiptune;Chiptune e 8-bit;trilha-de-jogo;
+musical;Musical;trilha-sonora;Broadway, Disney
+epic-music;Música épica;trilha-sonora;estilo trailer
+folk;Folk e country;;família
+country;Country;folk;
+folk-gringo;Folk;folk;
+americana;Americana e bluegrass;folk;
+celta;Música celta;folk;
+medieval;Música medieval;folk;e renascentista
+nordico;Música nórdica;folk;viking
+bardcore;Bardcore;folk;pop em versão medieval
+world;Músicas do mundo;;família
+afrobeats;Afrobeats;world;
+musica-africana;Música africana;world;
+musica-arabe;Música árabe;world;
+musica-indiana;Música indiana;world;
+musica-japonesa;Música japonesa tradicional;world;
+flamenco;Flamenco;world;
+fado;Fado;world;
+musica-cigana;Música cigana;world;
+ambiente;Ambiente;;família
+ambient;Ambient;ambiente;
+dark-ambient;Dark ambient;ambiente;
+new-age;New age;ambiente;
+meditacao;Música de meditação;ambiente;
+paisagem-sonora;Paisagem sonora;ambiente;chuva, floresta, cidade
+infantil;Infantil;;família
+cantiga-de-roda;Cantiga de roda;infantil;
+musica-infantil;Música infantil;infantil;
+desenho-animado;Música de desenho;infantil;

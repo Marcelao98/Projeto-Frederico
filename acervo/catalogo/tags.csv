@@ -1,0 +1,132 @@
+id;gaveta;nome;nota
+alegre;clima;Alegre;feliz, pra cima
+animado;clima;Animado;agitado, pra dançar ou pular
+festivo;clima;Festivo;cara de festa e comemoração
+empolgante;clima;Empolgante;adrenalina, emocionante
+triste;clima;Triste;pra chorar
+melancolico;clima;Melancólico;tristeza mansa, reflexiva
+saudade;clima;Saudade;falta de alguém ou de um tempo
+sofrido;clima;Sofrido;dor de cotovelo, sofrência
+nostalgico;clima;Nostálgico;lembrança boa de outra época
+romantico;clima;Romântico;amor, carinho
+sensual;clima;Sensual;sedutor, pegada
+calmo;clima;Calmo;tranquilo, relaxante
+contemplativo;clima;Contemplativo;introspectivo, pensativo
+aconchegante;clima;Aconchegante;acolhedor, de casa, de fogueira
+sonhador;clima;Sonhador;etéreo, flutuante, onírico
+esperancoso;clima;Esperançoso;inspirador, motivador
+epico;clima;Épico;grandioso, heroico, triunfante
+dramatico;clima;Dramático;tensão emocional, teatral
+tenso;clima;Tenso;suspense, ansiedade, urgência
+sombrio;clima;Sombrio;escuro, sinistro, macabro
+assustador;clima;Assustador;terror, perturbador
+misterioso;clima;Misterioso;enigma, investigação
+magico;clima;Mágico;místico, arcano, encantado
+sagrado;clima;Sagrado;solene, religioso, celestial
+engracado;clima;Engraçado;cômico, bobo, zoeira
+estranho;clima;Estranho;excêntrico, bizarro, experimental
+agressivo;clima;Agressivo;raiva, pancada, violento
+confiante;clima;Confiante;marra, poder, autoestima
+churrasco;ocasiao;Churrasco;
+festa;ocasiao;Festa em casa;
+balada;ocasiao;Balada;boate, pista
+esquenta;ocasiao;Esquenta;o pré antes de sair
+barzinho;ocasiao;Barzinho;happy hour, voz e violão
+aniversario;ocasiao;Aniversário;
+casamento;ocasiao;Casamento;
+karaoke;ocasiao;Karaokê;pra cantar junto
+carnaval;ocasiao;Carnaval;
+sao-joao;ocasiao;São João;festa junina, arraiá
+natal;ocasiao;Natal;
+reveillon;ocasiao;Réveillon;virada do ano
+almoco-de-domingo;ocasiao;Almoço de domingo;em família
+jantar-romantico;ocasiao;Jantar romântico;
+treino;ocasiao;Treino;academia, malhar
+corrida;ocasiao;Corrida;correr, pedalar
+faxina;ocasiao;Faxina;arrumar a casa
+cozinhar;ocasiao;Cozinhar;
+estrada;ocasiao;Estrada;viagem de carro
+praia;ocasiao;Praia e verão;
+dia-chuvoso;ocasiao;Dia chuvoso;
+acordar;ocasiao;Acordar;manhã, café da manhã
+foco;ocasiao;Foco;estudar, trabalhar, ler
+relaxar;ocasiao;Relaxar;descansar, fim do dia
+dormir;ocasiao;Dormir;
+meditar;ocasiao;Meditar;yoga
+fossa;ocasiao;Fossa;sofrer, chorar, coração partido
+criancas;ocasiao;Crianças;
+momento-de-fe;ocasiao;Momento de fé;culto, oração, missa
+jogar;ocasiao;Jogar videogame;
+rpg-taverna;ocasiao;RPG: taverna;estalagem, bardo
+rpg-cidade;ocasiao;RPG: cidade;vila, mercado, hub
+rpg-exploracao;ocasiao;RPG: exploração;viagem, estrada, aventura
+rpg-masmorra;ocasiao;RPG: masmorra;dungeon, caverna, ruínas
+rpg-combate;ocasiao;RPG: combate;batalha, emboscada
+rpg-chefe;ocasiao;RPG: chefe;boss fight, chefão
+rpg-vilao;ocasiao;RPG: vilão;entrada do antagonista
+rpg-terror;ocasiao;RPG: terror;horror, horror cósmico
+rpg-misterio;ocasiao;RPG: mistério;investigação, intriga
+rpg-corte;ocasiao;RPG: corte;nobreza, castelo, baile
+rpg-ritual;ocasiao;RPG: ritual e magia;templo, arcano
+rpg-descanso;ocasiao;RPG: descanso;acampamento, fogueira
+rpg-drama;ocasiao;RPG: cena triste;luto, despedida, tragédia
+rpg-abertura;ocasiao;RPG: abertura da sessão;tema principal, menu
+rpg-final;ocasiao;RPG: clímax e final;desfecho, vitória
+rpg-perseguicao;ocasiao;RPG: perseguição;fuga, furtividade
+rpg-humor;ocasiao;RPG: cena cômica;
+amor;tema;Amor;declaração, carinho
+paixao;tema;Paixão;
+dor-de-cotovelo;tema;Dor de cotovelo;corno, ser deixado
+traicao;tema;Traição;
+termino;tema;Término;separação, fim de namoro
+cachaca;tema;Bebedeira;cachaça, bar, cerveja
+curticao;tema;Curtição;festa, rolê
+pegacao;tema;Pegação;sensualidade, putaria
+danca;tema;Dança;letra que manda dançar
+amizade;tema;Amizade;
+familia;tema;Família;mãe, pai, filhos
+fe;tema;Fé;Deus, louvor
+superacao;tema;Superação;vencer, dar a volta por cima
+critica-social;tema;Crítica social;política, protesto
+quebrada;tema;Quebrada;periferia, favela
+ostentacao;tema;Ostentação;dinheiro, carro, marca
+vida-no-campo;tema;Vida no campo;roça, interior, sertão
+pe-na-estrada;tema;Pé na estrada;viagem, caminhoneiro
+infancia;tema;Infância e juventude;
+liberdade;tema;Liberdade;
+perda;tema;Perda;morte, luto
+solidao;tema;Solidão;
+zoeira;tema;Zoeira;letra engraçada
+orgulho;tema;Orgulho LGBT+;
+voz-feminina;instrumento;Voz feminina;
+coral;instrumento;Coral;
+orquestra;instrumento;Orquestra;
+piano;instrumento;Piano;
+violao;instrumento;Violão;
+guitarra;instrumento;Guitarra;
+viola-caipira;instrumento;Viola caipira;
+sanfona;instrumento;Sanfona;acordeão
+cordas;instrumento;Violino e cordas;
+cavaquinho;instrumento;Cavaquinho;
+percussao;instrumento;Percussão;tambores
+metais;instrumento;Metais;sax, trompete
+flauta;instrumento;Flauta;
+harpa;instrumento;Harpa;
+orgao;instrumento;Órgão;
+caixinha-de-musica;instrumento;Caixinha de música;
+sintetizador;instrumento;Sintetizador;
+gaita;instrumento;Gaita;
+castelo;cenario;Castelo e palácio;
+caverna;cenario;Caverna e subterrâneo;
+ruinas;cenario;Ruínas;
+floresta;cenario;Floresta;
+mar;cenario;Mar e água;
+deserto;cenario;Deserto;
+neve;cenario;Neve e gelo;inverno, tundra
+chuva;cenario;Chuva e tempestade;
+vulcao;cenario;Vulcão e fogo;
+cidade-grande;cenario;Cidade grande;
+templo;cenario;Templo e igreja;
+noite;cenario;Noite;lua
+espaco;cenario;Espaço e cosmos;
+cemiterio;cenario;Cemitério;
