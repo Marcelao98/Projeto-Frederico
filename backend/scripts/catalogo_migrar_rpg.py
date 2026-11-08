@@ -32,7 +32,6 @@ OBRAS = {
     "fire-emblem-three-houses": ("Fire Emblem: Three Houses", "jogo", 2019),
     "elden-ring": ("Elden Ring", "jogo", 2022),
     "hollow-knight": ("Hollow Knight", "jogo", 2017),
-    "subahibi": ("Subarashiki Hibi", "visual novel", 2010),
     "nier-automata": ("NieR: Automata", "jogo", 2017),
     "bloodborne": ("Bloodborne", "jogo", 2015),
     "dark-souls": ("Dark Souls", "jogo", 2011),
@@ -47,14 +46,14 @@ OBRAS = {
 }
 APELIDOS = {
     "umineko": "umineko|umineko no naku", "fire-emblem-three-houses": "fire emblem|fe3h|three houses|fe 3 houses",
-    "subahibi": "subahibi|subarashiki hibi", "nier-automata": "nier|nier automata", "dark-souls": "dark souls",
+    "nier-automata": "nier|nier automata", "dark-souls": "dark souls",
     "skyrim": "skyrim", "zelda-ocarina-of-time": "zelda|ocarina of time", "zelda-majoras-mask": "zelda|majora|majoras mask|majora mask",
     "witcher-3": "witcher|witcher 3", "trails-in-the-sky-3rd": "trails in the sky|trails", "return-of-the-obra-dinn": "obra dinn",
 }
 ORIGEM_OBRA = {
     "Umineko no Naku Koro ni": "umineko", "Fire Emblem: Three Houses": "fire-emblem-three-houses",
     "Elden Ring": "elden-ring", "Hollow Knight": "hollow-knight",
-    "Subarashiki Hibi (Subahibi)": "subahibi", "Nier: Automata": "nier-automata",
+    "Nier: Automata": "nier-automata",
     "Bloodborne": "bloodborne", "Dark Souls": "dark-souls",
 }
 # Compositor quando a trilha inteira é de uma pessoa só (só onde é certo).

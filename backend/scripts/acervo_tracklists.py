@@ -9,7 +9,6 @@ import yt_dlp
 
 PLAYLISTS = {
     "umineko": "PLWCkhGoFcFiykjjC8UtB20DoVMWgVyQIL",
-    "subahibi": "PLkxF_HGSsNJbJaTi_PYIjJJD_kokUzNiU",
     "elden_ring": "PLTmJuovQUxPuSYfrtCgpsLwQOeRXSkFzp",
     "bloodborne": "PLCLeSTzz6trY_Qn_8vMnqO9TbqesAM4x6",
     "fe3h": "PLzXrrIvqJ7v7pqgKkvzfceZBC9iY3WR5R",
