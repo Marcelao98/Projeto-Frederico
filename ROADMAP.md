@@ -31,6 +31,11 @@ Atualizado em 07/11/2026 (v0.6.0).
   pedido completo em `docs/etapas/auditoria-fredify.md`.
 - **Etapa B2** (base do som) aprovada, pedido em `docs/etapas/B2.md`, mas
   **em espera**: a auditoria diz se ela continua sendo o próximo passo.
+- **Auditoria feita (08/11/2026):** `docs/etapas/auditoria-fredify-relatorio.md`
+  (decisões D1–D12 ainda esperando o Marcelo). **Prioridade combinada: o banco
+  de músicas** (SQLite, 5 mil músicas, público geral BR, gírias e ocasiões),
+  plano em `docs/etapas/banco-fredify.md`. **Próximo passo: etapa 1 do banco
+  (vocabulário).** A B2 fica pra depois do banco.
 
 ## Como desenvolver sem sofrer
 
