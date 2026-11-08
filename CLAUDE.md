@@ -92,6 +92,12 @@ freddy.sh   pra desenvolver: liga o backend e abre o app na ordem certa
   Freddy aplica os ajustes por cima do acervo ao servir `/acervo`; o
   `backend/scripts/acervo_promover.py` leva pro `acervo/musicas.json`.
   Categorias sempre saem dos temas (`nucleo/vocabulario.py`), nunca à mão.
+- **Catálogo novo (o banco do Fredify):** fonte em CSV em `acervo/catalogo/`
+  (README lá), compilado no `catalogo.db` (fora do git) por
+  `freddy/catalogo/compilar.py`, que barra o que quebra as regras;
+  `freddy/catalogo/consulta.py` entende o pedido. Ainda não ligado no app
+  (etapa 4); até lá o app usa o `musicas.json`. Mexeu nos CSV: rodar
+  `python -m unittest freddy.catalogo.test_catalogo` (pedidos de ouro).
 - **Comandos só do painel no chat** (`temas`/`revisar` em
   `frontend/src/modos/chat/revisao.ts`; `playlists`/`toca a playlist X`/
   `salva a fila como X` em `playlistsChat.ts`) rodam antes do

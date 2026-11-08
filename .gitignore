@@ -11,3 +11,7 @@ staging/
 
 # Sons do usuário (futuro): ficam só na máquina de quem roda
 sons/
+
+# Catálogo compilado (python -m freddy.catalogo.compilar): sai dos CSV em acervo/catalogo/
+acervo/catalogo.db
+acervo/catalogo.tmp

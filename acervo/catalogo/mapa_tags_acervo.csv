@@ -11,7 +11,7 @@ vocal;45;campo:com-voz
 dramático;44;clima:dramatico
 emocionante;40;clima:empolgante
 final;39;ocasiao:rpg-final
-não classificado;39;revisar:faixa sem tema ainda
+não classificado;40;revisar:faixa sem tema ainda
 trágico;37;clima:triste|clima:dramatico
 mistério;34;clima:misterioso|ocasiao:rpg-misterio
 exploração;32;ocasiao:rpg-exploracao
@@ -56,7 +56,7 @@ ambiente;8;clima:calmo|campo:sem-voz
 cidade;8;ocasiao:rpg-cidade
 cósmico;8;cenario:espaco|clima:estranho
 desespero;8;clima:triste|clima:dramatico
-guerra;8;ocasiao:rpg-combate|clima:epico
+guerra;8;clima:epico|clima:dramatico
 morte;8;clima:triste|tema:perda
 natureza;8;cenario:floresta|ocasiao:rpg-exploracao
 piano;8;instrumento:piano
@@ -206,7 +206,6 @@ silêncio perturbador;1;clima:assustador|clima:tenso
 sofrencia;1;genero:sofrencia|clima:sofrido
 solo de violino;1;instrumento:cordas
 soothing;1;clima:calmo
-tampe ouvidos;1;revisar:aviso de volume alto? o Marcelo confirma
 tempestade neve;1;cenario:neve|cenario:chuva
 tim maia;1;artista:Tim Maia|genero:soul-brasileiro
 tragédia;1;clima:triste|ocasiao:rpg-drama

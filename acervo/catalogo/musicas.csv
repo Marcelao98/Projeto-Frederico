@@ -1,0 +1,608 @@
+id;titulo;ano;duracao;idioma;obra;energia;animacao;tem_voz;canta_junto;ao_vivo;explicita;popularidade;essencial;mbid;isrc;lote;revisar;nome_original
+elden-ring-tema-principal;Elden Ring (Tema Principal);2022;;;elden-ring;4;4;0;0;0;0;60;1;;;rpg-legado;0;Elden Ring (Tema Principal)
+elden-ring-opening;Opening;2022;;;elden-ring;4;2;0;0;0;0;30;0;;;rpg-legado;0;Opening
+elden-ring-character-creation;Character Creation;2022;;;elden-ring;2;3;0;0;0;0;30;0;;;rpg-legado;0;Character Creation
+elden-ring-limgrave;Limgrave;2022;;;elden-ring;2;4;0;0;0;0;30;0;;;rpg-legado;0;Limgrave
+elden-ring-caves;Caves;2022;;;elden-ring;2;2;0;0;0;0;30;0;;;rpg-legado;0;Caves
+elden-ring-tunnels;Tunnels;2022;;;elden-ring;2;2;0;0;0;0;30;0;;;rpg-legado;0;Tunnels
+elden-ring-stormveil-castle;Stormveil Castle;2022;;;elden-ring;3;2;0;0;0;0;30;0;;;rpg-legado;0;Stormveil Castle
+elden-ring-roundtable-hold;Roundtable Hold;2022;;;elden-ring;1;3;0;0;0;0;30;0;;;rpg-legado;0;Roundtable Hold
+elden-ring-liurnia-of-the-lakes;Liurnia of the Lakes;2022;;;elden-ring;2;3;0;0;0;0;30;0;;;rpg-legado;0;Liurnia of the Lakes
+elden-ring-great-underground-rivers;Great Underground Rivers;2022;;;elden-ring;2;3;0;0;0;0;30;0;;;rpg-legado;0;Great Underground Rivers
+elden-ring-eternal-city;Eternal City;2022;;;elden-ring;2;2;0;0;0;0;30;0;;;rpg-legado;0;Eternal City
+elden-ring-academy-of-raya-lucaria;Academy of Raya Lucaria;2022;;;elden-ring;2;3;0;0;0;0;30;0;;;rpg-legado;0;Academy of Raya Lucaria
+elden-ring-caelid;Caelid;2022;;;elden-ring;3;2;0;0;0;0;30;0;;;rpg-legado;0;Caelid
+elden-ring-old-castle;Old Castle;2022;;;elden-ring;3;2;0;0;0;0;30;0;;;rpg-legado;0;Old Castle
+elden-ring-altus-plateau;Altus Plateau;2022;;;elden-ring;2;3;0;0;0;0;30;0;;;rpg-legado;0;Altus Plateau
+elden-ring-catacombs;Catacombs;2022;;;elden-ring;3;2;0;0;0;0;30;0;;;rpg-legado;0;Catacombs
+elden-ring-leyndell-royal-capital;Leyndell, Royal Capital;2022;;;elden-ring;3;2;0;0;0;0;30;0;;;rpg-legado;0;Leyndell, Royal Capital
+elden-ring-subterranean-shunning-grounds;Subterranean Shunning-Grounds;2022;;;elden-ring;3;2;0;0;0;0;30;0;;;rpg-legado;0;Subterranean Shunning-Grounds
+elden-ring-mt-gelmir;Mt. Gelmir;2022;;;elden-ring;3;2;0;0;0;0;30;0;;;rpg-legado;0;Mt. Gelmir
+elden-ring-volcano-manor;Volcano Manor;2022;;;elden-ring;2;4;0;0;0;0;30;0;;;rpg-legado;0;Volcano Manor
+elden-ring-prison-town;Prison Town;2022;;;elden-ring;3;2;0;0;0;0;30;0;;;rpg-legado;0;Prison Town
+elden-ring-mountaintops-of-the-giants;Mountaintops of the Giants;2022;;;elden-ring;3;2;0;0;0;0;30;0;;;rpg-legado;0;Mountaintops of the Giants
+elden-ring-divine-tower;Divine Tower;2022;;;elden-ring;3;3;0;0;0;0;30;0;;;rpg-legado;0;Divine Tower
+elden-ring-crumbling-farum-azula;Crumbling Farum Azula;2022;;;elden-ring;3;3;0;0;0;0;30;0;;;rpg-legado;0;Crumbling Farum Azula
+elden-ring-consecrated-snowfield;Consecrated Snowfield;2022;;;elden-ring;2;2;0;0;0;0;30;0;;;rpg-legado;0;Consecrated Snowfield
+elden-ring-miquella-s-haligtree;Miquella's Haligtree;2022;;;elden-ring;3;3;0;0;0;0;30;0;;;rpg-legado;0;Miquella's Haligtree
+elden-ring-elphael;Elphael;2022;;;elden-ring;2;2;0;0;0;0;30;0;;;rpg-legado;0;Elphael
+elden-ring-formidable-foe-i;Formidable Foe I;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;Formidable Foe I
+elden-ring-formidable-foe-ii;Formidable Foe II;2022;;;elden-ring;5;3;0;0;0;0;30;0;;;rpg-legado;0;Formidable Foe II
+elden-ring-invader;Invader;2022;;;elden-ring;4;3;0;0;0;0;30;0;;;rpg-legado;0;Invader
+elden-ring-old-warriors;Old Warriors;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;Old Warriors
+elden-ring-erdtree-knights;Erdtree Knights;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;Erdtree Knights
+elden-ring-fallen-knights;Fallen Knights;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;Fallen Knights
+elden-ring-the-immured;The Immured;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;The Immured
+elden-ring-the-accursed;The Accursed;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;The Accursed
+elden-ring-grave-wardens;Grave Wardens;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;Grave Wardens
+elden-ring-death-s-kindred;Death's Kindred;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;Death's Kindred
+elden-ring-dragon;Dragon;2022;;;elden-ring;5;3;0;0;0;0;30;0;;;rpg-legado;0;Dragon
+elden-ring-fallingstar-beast;Fallingstar Beast;2022;;;elden-ring;5;3;0;0;0;0;30;0;;;rpg-legado;0;Fallingstar Beast
+elden-ring-red-wolf-of-radagon;Red Wolf of Radagon;2022;;;elden-ring;5;3;0;0;0;0;30;0;;;rpg-legado;0;Red Wolf of Radagon
+elden-ring-erdtree-avatar;Erdtree Avatar;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;Erdtree Avatar
+elden-ring-godskin-apostles;Godskin Apostles;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;Godskin Apostles
+elden-ring-black-knives;Black Knives;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;Black Knives
+elden-ring-margit-the-fell-omen;Margit, the Fell Omen;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;Margit, the Fell Omen
+elden-ring-omen-illusion;Omen Illusion;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;Omen Illusion
+elden-ring-lord-s-apparition;Lord's Apparition;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;Lord's Apparition
+elden-ring-regal-ancestor-spirit;Regal Ancestor Spirit;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;Regal Ancestor Spirit
+elden-ring-astel-naturalborn-of-the-void;Astel, Naturalborn of the Void;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;Astel, Naturalborn of the Void
+elden-ring-ancient-dragon-lansseax;Ancient Dragon Lansseax;2022;;;elden-ring;5;3;0;0;0;0;30;0;;;rpg-legado;0;Ancient Dragon Lansseax
+elden-ring-lichdragon-fortissax;Lichdragon Fortissax;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;Lichdragon Fortissax
+elden-ring-song-of-lament;Song of Lament;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;Song of Lament
+elden-ring-morgott-the-omen-king;Morgott, the Omen King;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;Morgott, the Omen King
+elden-ring-bloody-fingers;Bloody Fingers;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;Bloody Fingers
+elden-ring-mohg-lord-of-blood;Mohg, Lord of Blood;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;Mohg, Lord of Blood
+elden-ring-godrick-the-grafted;Godrick the Grafted;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;Godrick the Grafted
+elden-ring-malenia-blade-of-miquella;Malenia, Blade of Miquella;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;Malenia, Blade of Miquella
+elden-ring-song-of-honor;Song of Honor;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;Song of Honor
+elden-ring-starscourge-radahn;Starscourge Radahn;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;Starscourge Radahn
+elden-ring-recusants;Recusants;2022;;;elden-ring;4;3;0;0;0;0;30;0;;;rpg-legado;0;Recusants
+elden-ring-god-devouring-serpent;God-Devouring Serpent;2022;;;elden-ring;5;3;0;0;0;0;30;0;;;rpg-legado;0;God-Devouring Serpent
+elden-ring-rennala-queen-of-the-full-moon;Rennala, Queen of the Full Moon;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;Rennala, Queen of the Full Moon
+elden-ring-fire-giant;Fire Giant;2022;;;elden-ring;5;2;0;0;0;0;30;0;;;rpg-legado;0;Fire Giant
+elden-ring-beast-clergyman;Beast Clergyman;2022;;;elden-ring;5;3;0;0;0;0;30;0;;;rpg-legado;0;Beast Clergyman
+elden-ring-dragonlord-placidusax;Dragonlord Placidusax;2022;;;elden-ring;5;3;0;0;0;0;30;0;;;rpg-legado;0;Dragonlord Placidusax
+elden-ring-godfrey-first-elden-lord;Godfrey, First Elden Lord;2022;;;elden-ring;5;3;0;0;0;0;30;0;;;rpg-legado;0;Godfrey, First Elden Lord
+elden-ring-the-final-battle;The Final Battle;2022;;;elden-ring;5;3;0;0;0;0;30;0;;;rpg-legado;0;The Final Battle
+elden-ring-ending;Ending;2022;;;elden-ring;2;3;0;0;0;0;30;0;;;rpg-legado;0;Ending
+dark-souls-gwyn;Gwyn, Lord of Cinder;2011;;;dark-souls;5;2;0;0;0;0;30;0;;;rpg-legado;0;Gwyn, Lord of Cinder
+dark-souls-ornstein-smough;Ornstein and Smough;2011;;;dark-souls;5;2;0;0;0;0;30;0;;;rpg-legado;0;Ornstein and Smough
+dark-souls-sif;Great Grey Wolf Sif;2011;;;dark-souls;5;2;0;0;0;0;30;0;;;rpg-legado;0;Great Grey Wolf Sif
+bloodborne-main-menu-theme;Main Menu Theme;2015;;;bloodborne;2;3;0;0;0;0;30;0;;;rpg-legado;0;Main Menu Theme
+bloodborne-dream-refuge;Dream Refuge (Character Creation);2015;;;bloodborne;1;3;0;0;0;0;30;0;;;rpg-legado;0;Dream Refuge (Character Creation)
+bloodborne-cleric-beast;Cleric Beast;2015;;;bloodborne;5;2;0;0;0;0;30;0;;;rpg-legado;0;Cleric Beast
+bloodborne-father-gascoigne;Father Gascoigne, The Hunter;2015;;;bloodborne;5;2;0;0;0;0;30;0;;;rpg-legado;0;Father Gascoigne, The Hunter
+bloodborne-blood-starved-beast;Blood Starved Beast;2015;;;bloodborne;5;2;0;0;0;0;30;0;;;rpg-legado;0;Blood Starved Beast
+bloodborne-darkbeast;Darkbeast;2015;;;bloodborne;5;2;0;0;0;0;30;0;;;rpg-legado;0;Darkbeast
+bloodborne-hail-the-nightmare;Hail The Nightmare;2015;;;bloodborne;4;2;0;0;0;0;30;0;;;rpg-legado;0;Hail The Nightmare
+bloodborne-amygdala;Amygdala;2015;;;bloodborne;5;2;0;0;0;0;30;0;;;rpg-legado;0;Amygdala
+bloodborne-micolash;Micolash, Host of the Nightmare;2015;;;bloodborne;5;2;0;0;0;0;30;0;;;rpg-legado;0;Micolash, Host of the Nightmare
+bloodborne-moonlit-melody;Moonlit Melody;2015;;;bloodborne;5;2;0;0;0;0;30;0;;;rpg-legado;0;Moonlit Melody
+bloodborne-phumerian-line;The Phumerian Line;2015;;;bloodborne;5;2;0;0;0;0;30;0;;;rpg-legado;0;The Phumerian Line
+bloodborne-queen-of-vilebloods;Queen of Vilebloods;2015;;;bloodborne;5;2;0;0;0;0;30;0;;;rpg-legado;0;Queen of Vilebloods
+bloodborne-rom;Rom, The Vacuous Spider;2015;;;bloodborne;5;2;0;0;0;0;30;0;;;rpg-legado;0;Rom, The Vacuous Spider
+bloodborne-the-one-reborn;The One Reborn;2015;;;bloodborne;5;2;0;0;0;0;30;0;;;rpg-legado;0;The One Reborn
+bloodborne-witch-of-hemwick;The Witch of Hemwick;2015;;;bloodborne;5;2;0;0;0;0;30;0;;;rpg-legado;0;The Witch of Hemwick
+bloodborne-tema-principal;Bloodborne (Tema Principal);2015;;;bloodborne;4;2;0;0;0;0;60;1;;;rpg-legado;0;Bloodborne (Tema Principal)
+bloodborne-celestial-emissary;Celestial Emissary;2015;;;bloodborne;5;3;0;0;0;0;30;0;;;rpg-legado;0;Celestial Emissary
+bloodborne-ebrietas;Ebrietas, Daughter of The Cosmos;2015;;;bloodborne;5;2;0;0;0;0;30;0;;;rpg-legado;0;Ebrietas, Daughter of The Cosmos
+bloodborne-lullaby-for-mergo;Lullaby For Mergo;2015;;;bloodborne;2;2;1;0;0;0;30;0;;;rpg-legado;0;Lullaby For Mergo
+bloodborne-terror-chalice;Terror (Chalice Dungeon Bosses);2015;;;bloodborne;5;2;0;0;0;0;30;0;;;rpg-legado;0;Terror (Chalice Dungeon Bosses)
+bloodborne-watchers;Watchers;2015;;;bloodborne;5;2;0;0;0;0;30;0;;;rpg-legado;0;Watchers
+bloodborne-soothing-hymn;Soothing Hymn;2015;;;bloodborne;2;3;1;0;0;0;30;0;;;rpg-legado;0;Soothing Hymn
+bloodborne-gehrman;Gehrman, The First Hunter;2015;;;bloodborne;5;2;0;0;0;0;30;0;;;rpg-legado;0;Gehrman, The First Hunter
+bloodborne-moon-presence;Moon Presence;2015;;;bloodborne;5;3;0;0;0;0;30;0;;;rpg-legado;0;Moon Presence
+bloodborne-ludwig;Ludwig, The Accursed & Holy Blade (The Old Hunters);2015;;;bloodborne;5;2;0;0;0;0;30;0;;;rpg-legado;0;Ludwig, The Accursed & Holy Blade (The Old Hunters)
+bloodborne-living-failures;Living Failures (The Old Hunters);2015;;;bloodborne;5;2;0;0;0;0;30;0;;;rpg-legado;0;Living Failures (The Old Hunters)
+bloodborne-lady-maria;Lady Maria (The Old Hunters);2015;;;bloodborne;5;2;0;0;0;0;30;0;;;rpg-legado;0;Lady Maria (The Old Hunters)
+bloodborne-orphan-of-kos;Orphan of Kos (The Old Hunters);2015;;;bloodborne;5;2;0;0;0;0;30;0;;;rpg-legado;0;Orphan of Kos (The Old Hunters)
+bloodborne-laurence;Laurence, The First Vicar (The Old Hunters);2015;;;bloodborne;5;3;0;0;0;0;30;0;;;rpg-legado;0;Laurence, The First Vicar (The Old Hunters)
+fe3h-main-theme;Main Theme;2019;;;fire-emblem-three-houses;4;4;0;0;0;0;60;1;;;rpg-legado;0;Main Theme
+fe3h-main-theme-japanese-version;Main Theme (Japanese Version);2019;;;fire-emblem-three-houses;4;4;0;0;0;0;60;1;;;rpg-legado;0;Main Theme (Japanese Version)
+fe3h-the-crest-of-flames;The Crest of Flames;2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;The Crest of Flames
+fe3h-the-edge-of-dawn-seasons-of-warfare-full-version;The Edge of Dawn (Seasons of Warfare) Full version;2019;;;fire-emblem-three-houses;4;2;1;0;0;0;30;0;;;rpg-legado;0;The Edge of Dawn (Seasons of Warfare) Full version
+fe3h-the-edge-of-dawn-seasons-of-warfare-full-japanese-version;The Edge of Dawn (Seasons of Warfare) Full Japanese Version;2019;;;fire-emblem-three-houses;4;2;1;0;0;0;30;0;;;rpg-legado;0;The Edge of Dawn (Seasons of Warfare) Full Japanese Version
+fe3h-fodlan-winds-rain;Fódlan Winds (Rain);2019;;;fire-emblem-three-houses;2;2;0;0;0;0;30;0;;;rpg-legado;0;Fódlan Winds (Rain)
+fe3h-fodlan-winds-thunder;Fódlan Winds (Thunder);2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;Fódlan Winds (Thunder)
+fe3h-blue-skies-and-a-battle-rain;Blue Skies and a Battle (Rain);2019;;;fire-emblem-three-houses;4;4;0;0;0;0;30;0;;;rpg-legado;0;Blue Skies and a Battle (Rain)
+fe3h-blue-skies-and-a-battle-thunder;Blue Skies and a Battle (Thunder);2019;;;fire-emblem-three-houses;4;4;0;0;0;0;30;0;;;rpg-legado;0;Blue Skies and a Battle (Thunder)
+fe3h-tearing-through-heaven-rain;Tearing Through Heaven (Rain);2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;Tearing Through Heaven (Rain)
+fe3h-tearing-through-heaven-thunder;Tearing Through Heaven (Thunder);2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;Tearing Through Heaven (Thunder)
+fe3h-roar-of-dominion-rain;Roar of Dominion (Rain);2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;Roar of Dominion (Rain)
+fe3h-roar-of-dominion-thunder;Roar of Dominion (Thunder);2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;Roar of Dominion (Thunder)
+fe3h-chasing-daybreak-rain;Chasing Daybreak (Rain);2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;Chasing Daybreak (Rain)
+fe3h-chasing-daybreak-thunder;Chasing Daybreak (Thunder);2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;Chasing Daybreak (Thunder)
+fe3h-between-heaven-and-earth-rain;Between Heaven and Earth (Rain);2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;Between Heaven and Earth (Rain)
+fe3h-between-heaven-and-earth-thunder;Between Heaven and Earth (Thunder);2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;Between Heaven and Earth (Thunder)
+fe3h-the-long-road-rain;The Long Road (Rain);2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;The Long Road (Rain)
+fe3h-the-long-road-thunder;The Long Road (Thunder);2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;The Long Road (Thunder)
+fe3h-god-shattering-star-rain;God-Shattering Star (Rain);2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;God-Shattering Star (Rain)
+fe3h-god-shattering-star-thunder;God-Shattering Star (Thunder);2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;God-Shattering Star (Thunder)
+fe3h-a-funeral-of-flowers-rain;A Funeral of Flowers (Rain);2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;A Funeral of Flowers (Rain)
+fe3h-a-funeral-of-flowers-thunder;A Funeral of Flowers (Thunder);2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;A Funeral of Flowers (Thunder)
+fe3h-the-apex-of-the-world-rain;The Apex of the World (Rain);2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;The Apex of the World (Rain)
+fe3h-the-apex-of-the-world-thunder;The Apex of the World (Thunder);2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;The Apex of the World (Thunder)
+fe3h-dwellings-of-the-ancient-gods-rain;Dwellings of the Ancient Gods (Rain);2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;Dwellings of the Ancient Gods (Rain)
+fe3h-dwellings-of-the-ancient-gods-thunder;Dwellings of the Ancient Gods (Thunder);2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;Dwellings of the Ancient Gods (Thunder)
+fe3h-shambhala-area-17-redux-rain;Shambhala (Area 17 Redux) (Rain);2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;Shambhala (Area 17 Redux) (Rain)
+fe3h-shambhala-area-17-redux-thunder;Shambhala (Area 17 Redux) (Thunder);2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;Shambhala (Area 17 Redux) (Thunder)
+fe3h-tempest-of-seasons-rain;Tempest of Seasons (Rain);2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;Tempest of Seasons (Rain)
+fe3h-tempest-of-seasons-thunder;Tempest of Seasons (Thunder);2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;Tempest of Seasons (Thunder)
+fe3h-wrath-strike-rain;Wrath Strike (Rain);2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;Wrath Strike (Rain)
+fe3h-wrath-strike-thunder;Wrath Strike (Thunder);2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;Wrath Strike (Thunder)
+fe3h-the-verge-of-death-rain;The Verge of Death (Rain);2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;The Verge of Death (Rain)
+fe3h-the-verge-of-death-thunder;The Verge of Death (Thunder);2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;The Verge of Death (Thunder)
+fe3h-paths-that-will-never-cross-rain;Paths That Will Never Cross (Rain);2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;Paths That Will Never Cross (Rain)
+fe3h-paths-that-will-never-cross-thunder;Paths That Will Never Cross (Thunder);2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;Paths That Will Never Cross (Thunder)
+fe3h-indomitable-will-rain;Indomitable Will (Rain);2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;Indomitable Will (Rain)
+fe3h-indomitable-will-thunder;Indomitable Will (Thunder);2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;Indomitable Will (Thunder)
+fe3h-the-spirit-dais;The Spirit Dais;2019;;;fire-emblem-three-houses;2;3;0;0;0;0;30;0;;;rpg-legado;0;The Spirit Dais
+fe3h-guardian-of-starlight;Guardian of Starlight;2019;;;fire-emblem-three-houses;2;3;0;0;0;0;30;0;;;rpg-legado;0;Guardian of Starlight
+fe3h-gazing-at-sirius;Gazing at Sirius;2019;;;fire-emblem-three-houses;2;3;0;0;0;0;30;0;;;rpg-legado;0;Gazing at Sirius
+fe3h-song-of-the-nabateans;Song of the Nabateans;2019;;;fire-emblem-three-houses;2;3;1;0;0;0;30;0;;;rpg-legado;0;Song of the Nabateans
+fe3h-song-of-the-nabateans-japanese;Song of the Nabateans (Japanese);2019;;;fire-emblem-three-houses;2;3;1;0;0;0;30;0;;;rpg-legado;0;Song of the Nabateans (Japanese)
+fe3h-respite-and-sunlight;Respite and Sunlight;2019;;;fire-emblem-three-houses;2;4;0;0;0;0;30;0;;;rpg-legado;0;Respite and Sunlight
+fe3h-a-gentle-breeze;A Gentle Breeze;2019;;;fire-emblem-three-houses;2;4;0;0;0;0;30;0;;;rpg-legado;0;A Gentle Breeze
+fe3h-funny-footsteps;Funny Footsteps;2019;;;fire-emblem-three-houses;2;4;0;0;0;0;30;0;;;rpg-legado;0;Funny Footsteps
+fe3h-recollection-and-regret;Recollection and Regret;2019;;;fire-emblem-three-houses;2;2;0;0;0;0;30;0;;;rpg-legado;0;Recollection and Regret
+fe3h-somewhere-to-belong;Somewhere to Belong;2019;;;fire-emblem-three-houses;2;3;0;0;0;0;30;0;;;rpg-legado;0;Somewhere to Belong
+fe3h-calm-winds-over-gentle-waters;Calm Winds Over Gentle Waters;2019;;;fire-emblem-three-houses;2;4;0;0;0;0;30;0;;;rpg-legado;0;Calm Winds Over Gentle Waters
+fe3h-spiderweb;Spiderweb;2019;;;fire-emblem-three-houses;2;2;0;0;0;0;30;0;;;rpg-legado;0;Spiderweb
+fe3h-beyond-the-crossroads;Beyond the Crossroads;2019;;;fire-emblem-three-houses;3;2;0;0;0;0;30;0;;;rpg-legado;0;Beyond the Crossroads
+fe3h-a-lonely-figure;A Lonely Figure;2019;;;fire-emblem-three-houses;2;2;0;0;0;0;30;0;;;rpg-legado;0;A Lonely Figure
+fe3h-beneath-the-banner;Beneath the Banner;2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;Beneath the Banner
+fe3h-tactics;Tactics;2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;Tactics
+fe3h-anxiety;Anxiety;2019;;;fire-emblem-three-houses;3;2;0;0;0;0;30;0;;;rpg-legado;0;Anxiety
+fe3h-the-leader-s-path;The Leader's Path;2019;;;fire-emblem-three-houses;3;3;0;0;0;0;30;0;;;rpg-legado;0;The Leader's Path
+fe3h-the-king-of-lions;The King of Lions;2019;;;fire-emblem-three-houses;4;4;0;0;0;0;30;0;;;rpg-legado;0;The King of Lions
+fe3h-golden-deer-and-crescent-moon;Golden Deer and Crescent Moon;2019;;;fire-emblem-three-houses;2;4;0;0;0;0;30;0;;;rpg-legado;0;Golden Deer and Crescent Moon
+fe3h-a-dark-sign;A Dark Sign;2019;;;fire-emblem-three-houses;3;2;0;0;0;0;30;0;;;rpg-legado;0;A Dark Sign
+fe3h-mask-of-fire;Mask of Fire;2019;;;fire-emblem-three-houses;3;2;0;0;0;0;30;0;;;rpg-legado;0;Mask of Fire
+fe3h-those-who-sow-darkness;Those Who Sow Darkness;2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;Those Who Sow Darkness
+fe3h-dark-clouds-gather;Dark Clouds Gather;2019;;;fire-emblem-three-houses;3;2;0;0;0;0;30;0;;;rpg-legado;0;Dark Clouds Gather
+fe3h-arcana-code;Arcana Code;2019;;;fire-emblem-three-houses;3;2;0;0;0;0;30;0;;;rpg-legado;0;Arcana Code
+fe3h-farewell;Farewell;2019;;;fire-emblem-three-houses;2;2;0;0;0;0;30;0;;;rpg-legado;0;Farewell
+fe3h-a-vow-remembered;A Vow Remembered;2019;;;fire-emblem-three-houses;3;3;0;0;0;0;30;0;;;rpg-legado;0;A Vow Remembered
+fe3h-a-promise;A Promise;2019;;;fire-emblem-three-houses;3;4;0;0;0;0;30;0;;;rpg-legado;0;A Promise
+fe3h-unfulfilled;Unfulfilled;2019;;;fire-emblem-three-houses;2;2;0;0;0;0;30;0;;;rpg-legado;0;Unfulfilled
+fe3h-a-place-to-rest;A Place to Rest;2019;;;fire-emblem-three-houses;1;4;0;0;0;0;30;0;;;rpg-legado;0;A Place to Rest
+fe3h-learning-lessons;Learning Lessons;2019;;;fire-emblem-three-houses;2;4;0;0;0;0;30;0;;;rpg-legado;0;Learning Lessons
+fe3h-seeking-new-heights;Seeking New Heights;2019;;;fire-emblem-three-houses;2;4;0;0;0;0;30;0;;;rpg-legado;0;Seeking New Heights
+fe3h-hungry-march;Hungry March;2019;;;fire-emblem-three-houses;4;4;0;0;0;0;30;0;;;rpg-legado;0;Hungry March
+fe3h-teatime-joy;Teatime Joy;2019;;;fire-emblem-three-houses;2;4;0;0;0;0;30;0;;;rpg-legado;0;Teatime Joy
+fe3h-words-to-believe-in;Words to Believe In;2019;;;fire-emblem-three-houses;3;3;0;0;0;0;30;0;;;rpg-legado;0;Words to Believe In
+fe3h-hope-as-a-melody;Hope as a Melody;2019;;;fire-emblem-three-houses;3;4;0;0;0;0;30;0;;;rpg-legado;0;Hope as a Melody
+fe3h-battle-on-the-waterfront;Battle on the Waterfront;2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;Battle on the Waterfront
+fe3h-white-heron-waltz;White Heron Waltz;2019;;;fire-emblem-three-houses;2;4;0;0;0;0;30;0;;;rpg-legado;0;White Heron Waltz
+fe3h-the-land-beloved-by-the-goddess;The Land Beloved by the Goddess;2019;;;fire-emblem-three-houses;2;3;0;0;0;0;30;0;;;rpg-legado;0;The Land Beloved by the Goddess
+fe3h-three-crowns;Three Crowns;2019;;;fire-emblem-three-houses;3;2;0;0;0;0;30;0;;;rpg-legado;0;Three Crowns
+fe3h-still-horizon;Still Horizon;2019;;;fire-emblem-three-houses;2;3;0;0;0;0;30;0;;;rpg-legado;0;Still Horizon
+fe3h-a-guide-for-the-future;A Guide for the Future;2019;;;fire-emblem-three-houses;2;3;0;0;0;0;30;0;;;rpg-legado;0;A Guide for the Future
+fe3h-life-at-garreg-mach-monastery;Life at Garreg Mach Monastery;2019;;;fire-emblem-three-houses;2;4;0;0;0;0;30;0;;;rpg-legado;0;Life at Garreg Mach Monastery
+fe3h-broken-routine;Broken Routine;2019;;;fire-emblem-three-houses;2;2;0;0;0;0;30;0;;;rpg-legado;0;Broken Routine
+fe3h-scales-of-the-goddess;Scales of the Goddess;2019;;;fire-emblem-three-houses;2;3;0;0;0;0;30;0;;;rpg-legado;0;Scales of the Goddess
+fe3h-garreg-mach-cathedral;Garreg Mach Cathedral;2019;;;fire-emblem-three-houses;2;3;0;0;0;0;30;0;;;rpg-legado;0;Garreg Mach Cathedral
+fe3h-people-of-the-marketplace;People of the Marketplace;2019;;;fire-emblem-three-houses;2;4;0;0;0;0;30;0;;;rpg-legado;0;People of the Marketplace
+fe3h-as-swift-as-wind;As Swift as Wind;2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;As Swift as Wind
+fe3h-as-fierce-as-fire;As Fierce as Fire;2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;As Fierce as Fire
+fe3h-the-dream-is-over;The Dream is Over;2019;;;fire-emblem-three-houses;2;2;0;0;0;0;30;0;;;rpg-legado;0;The Dream is Over
+fe3h-a-star-in-the-morning-sky;A Star in the Morning Sky;2019;;;fire-emblem-three-houses;3;4;0;0;0;0;30;0;;;rpg-legado;0;A Star in the Morning Sky
+fe3h-the-edge-of-dawn-ending-full;The Edge of Dawn Ending Full;2019;;;fire-emblem-three-houses;3;3;1;0;0;0;30;0;;;rpg-legado;0;The Edge of Dawn Ending Full
+fe3h-the-edge-of-dawn-ending-full-japanese-version;The Edge of Dawn Ending Full (Japanese Version);2019;;;fire-emblem-three-houses;3;3;1;0;0;0;30;0;;;rpg-legado;0;The Edge of Dawn Ending Full (Japanese Version)
+fe3h-the-color-of-sunrise;The Color of Sunrise;2019;;;fire-emblem-three-houses;4;4;0;0;0;0;30;0;;;rpg-legado;0;The Color of Sunrise
+fe3h-revenge;Revenge;2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;Revenge
+fe3h-the-archbishop;The Archbishop;2019;;;fire-emblem-three-houses;3;3;0;0;0;0;30;0;;;rpg-legado;0;The Archbishop
+fe3h-the-officers-academy;The Officers Academy;2019;;;fire-emblem-three-houses;2;4;0;0;0;0;30;0;;;rpg-legado;0;The Officers Academy
+fe3h-the-night-of-the-ball;The Night of the Ball;2019;;;fire-emblem-three-houses;2;3;0;0;0;0;30;0;;;rpg-legado;0;The Night of the Ball
+fe3h-fated-death;Fated Death;2019;;;fire-emblem-three-houses;2;2;0;0;0;0;30;0;;;rpg-legado;0;Fated Death
+fe3h-awakening;Awakening;2019;;;fire-emblem-three-houses;3;3;0;0;0;0;30;0;;;rpg-legado;0;Awakening
+fe3h-descent;Descent;2019;;;fire-emblem-three-houses;3;2;0;0;0;0;30;0;;;rpg-legado;0;Descent
+fe3h-loathing;Loathing;2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;Loathing
+fe3h-rematch;Rematch;2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;Rematch
+fe3h-javelins-of-light;Javelins of Light;2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;Javelins of Light
+fe3h-the-curse;The Curse;2019;;;fire-emblem-three-houses;3;2;0;0;0;0;30;0;;;rpg-legado;0;The Curse
+fe3h-courage-and-tragedy;Courage and Tragedy;2019;;;fire-emblem-three-houses;3;2;0;0;0;0;30;0;;;rpg-legado;0;Courage and Tragedy
+fe3h-wailing;Wailing;2019;;;fire-emblem-three-houses;2;2;0;0;0;0;30;0;;;rpg-legado;0;Wailing
+fe3h-citizens-of-the-east;Citizens of the East;2019;;;fire-emblem-three-houses;2;4;0;0;0;0;30;0;;;rpg-legado;0;Citizens of the East
+fe3h-a-world-for-humanity;A World for Humanity;2019;;;fire-emblem-three-houses;4;4;0;0;0;0;30;0;;;rpg-legado;0;A World for Humanity
+fe3h-light-and-shadow;Light and Shadow;2019;;;fire-emblem-three-houses;3;2;0;0;0;0;30;0;;;rpg-legado;0;Light and Shadow
+fe3h-a-new-dawn;A New Dawn;2019;;;fire-emblem-three-houses;3;4;0;0;0;0;30;0;;;rpg-legado;0;A New Dawn
+fe3h-corridor-of-the-tempest-rain;Corridor of the Tempest (Rain);2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;Corridor of the Tempest (Rain)
+fe3h-corridor-of-the-tempest-thunder;Corridor of the Tempest (Thunder);2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;Corridor of the Tempest (Thunder)
+fe3h-steam-baths-respite;Steam Baths Respite;2019;;;fire-emblem-three-houses;1;4;0;0;0;0;30;0;;;rpg-legado;0;Steam Baths Respite
+fe3h-legend-of-the-chalice;Legend of the Chalice;2019;;;fire-emblem-three-houses;2;2;0;0;0;0;30;0;;;rpg-legado;0;Legend of the Chalice
+fe3h-the-forgotten;The Forgotten;2019;;;fire-emblem-three-houses;2;2;0;0;0;0;30;0;;;rpg-legado;0;The Forgotten
+fe3h-woven-by-fate;Woven by Fate;2019;;;fire-emblem-three-houses;3;2;0;0;0;0;30;0;;;rpg-legado;0;Woven by Fate
+fe3h-the-shackled-wolves-rain;The Shackled Wolves (Rain);2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;The Shackled Wolves (Rain)
+fe3h-the-shackled-wolves-thunder;The Shackled Wolves (Thunder);2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;The Shackled Wolves (Thunder)
+fe3h-at-what-cost-rain;At What Cost? (Rain);2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;At What Cost? (Rain)
+fe3h-at-what-cost-thunder;At What Cost? (Thunder);2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;At What Cost? (Thunder)
+fe3h-tearing-through-heaven-rain-thunder-mix;Tearing through Heaven (Rain Thunder Mix);2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;Tearing through Heaven (Rain Thunder Mix)
+fe3h-the-verge-of-death-rain-thunder-mix;The Verge of Death (Rain Thunder Mix);2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;The Verge of Death (Rain Thunder Mix)
+fe3h-funeral-of-flowers-rain-thunder-mix;Funeral of Flowers (Rain Thunder Mix);2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;Funeral of Flowers (Rain Thunder Mix)
+fe3h-the-apex-of-the-world-rain-thunder-mix;The Apex of the World (Rain Thunder Mix);2019;;;fire-emblem-three-houses;4;2;0;0;0;0;30;0;;;rpg-legado;0;The Apex of the World (Rain Thunder Mix)
+fe3h-god-shattering-star-rain-thunder-mix;God-Shattering Star (Rain Thunder Mix);2019;;;fire-emblem-three-houses;4;4;0;0;0;0;30;0;;;rpg-legado;0;God-Shattering Star (Rain Thunder Mix)
+fe3h-between-heaven-and-earth-rain-thunder-mix;Between Heaven and Earth (Rain Thunder Mix);2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;Between Heaven and Earth (Rain Thunder Mix)
+fe3h-blue-skies-and-a-battle-rain-thunder-mix;Blue Skies and a Battle (Rain Thunder Mix);2019;;;fire-emblem-three-houses;4;4;0;0;0;0;30;0;;;rpg-legado;0;Blue Skies and a Battle (Rain Thunder Mix)
+fe3h-indomitable-will-rain-thunder-mix;Indomitable Will (Rain Thunder Mix);2019;;;fire-emblem-three-houses;4;4;0;0;0;0;30;0;;;rpg-legado;0;Indomitable Will (Rain Thunder Mix)
+fe3h-chasing-daybreak-rain-thunder-mix;Chasing Daybreak (Rain Thunder Mix);2019;;;fire-emblem-three-houses;4;4;0;0;0;0;30;0;;;rpg-legado;0;Chasing Daybreak (Rain Thunder Mix)
+fe3h-dwelling-of-the-ancient-gods-rain-thunder-mix;Dwelling of the Ancient Gods (Rain Thunder Mix);2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;Dwelling of the Ancient Gods (Rain Thunder Mix)
+fe3h-tempest-of-seasons-rain-thunder-mix;Tempest of Seasons (Rain Thunder Mix);2019;;;fire-emblem-three-houses;4;4;0;0;0;0;30;0;;;rpg-legado;0;Tempest of Seasons (Rain Thunder Mix)
+fe3h-the-long-road-rain-thunder-mix;The Long Road (Rain Thunder Mix);2019;;;fire-emblem-three-houses;4;3;0;0;0;0;30;0;;;rpg-legado;0;The Long Road (Rain Thunder Mix)
+hollow-knight-city-of-tears;City of Tears;2017;;;hollow-knight;3;3;0;0;0;0;30;0;;;rpg-legado;0;City of Tears
+hollow-knight-radiance;Radiance (Final Boss);2017;;;hollow-knight;5;2;0;0;0;0;30;0;;;rpg-legado;0;Radiance (Final Boss)
+hollow-knight-greenpath;Greenpath;2017;;;hollow-knight;2;4;0;0;0;0;30;0;;;rpg-legado;0;Greenpath
+hollow-knight-dirtmouth;Dirtmouth;2017;;;hollow-knight;2;3;0;0;0;0;30;0;;;rpg-legado;0;Dirtmouth
+umineko-rose;Rose (薔薇);2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Rose (薔薇)
+umineko-umineko-no-naku-koro-ni-short-version;Umineko No Naku Koro Ni (うみねこのなく頃に) [Short Version];2007;;;umineko;3;2;1;0;0;0;60;1;;;rpg-legado;0;Umineko No Naku Koro Ni (うみねこのなく頃に) [Short Version]
+umineko-umineko-no-naku-koro-ni-full-version;Umineko No Naku Koro Ni (うみねこのなく頃に) [Full Version];2007;;;umineko;3;2;1;0;0;0;60;1;;;rpg-legado;0;Umineko No Naku Koro Ni (うみねこのなく頃に) [Full Version]
+umineko-doorway-of-summer;Doorway of Summer (夏の扉);2007;;;umineko;2;4;0;0;0;0;30;0;;;rpg-legado;0;Doorway of Summer (夏の扉)
+umineko-feathers-hane;Feathers (HANE);2007;;;umineko;2;4;0;0;0;0;30;0;;;rpg-legado;0;Feathers (HANE)
+umineko-ride-on;Ride on;2007;;;umineko;3;4;0;0;0;0;30;0;;;rpg-legado;0;Ride on
+umineko-towering-cloud-in-summer;Towering cloud in summer;2007;;;umineko;2;4;0;0;0;0;30;0;;;rpg-legado;0;Towering cloud in summer
+umineko-sea;Sea;2007;;;umineko;2;3;0;0;0;0;30;0;;;rpg-legado;0;Sea
+umineko-hour-of-darkness-dark-engraving;Hour of darkness / Dark Engraving (暗闇の刻);2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Hour of darkness / Dark Engraving (暗闇の刻)
+umineko-novelette;Novelette;2007;;;umineko;2;4;0;0;0;0;30;0;;;rpg-legado;0;Novelette
+umineko-hope;Hope;2007;;;umineko;3;4;0;0;0;0;30;0;;;rpg-legado;0;Hope
+umineko-white-shadow;White Shadow (白い影);2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;White Shadow (白い影)
+umineko-steady-pace-tekuteku;Steady Pace (Tekuteku);2007;;;umineko;2;4;0;0;0;0;30;0;;;rpg-legado;0;Steady Pace (Tekuteku)
+umineko-moonlit-night-slowmotion;Moonlit Night (Slowmotion);2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Moonlit Night (Slowmotion)
+umineko-sukashiyuri;Sukashiyuri (透百合);2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Sukashiyuri (透百合)
+umineko-at-death-s-door;At Death's Door (隣死);2007;;;umineko;3;1;0;0;0;0;30;0;;;rpg-legado;0;At Death's Door (隣死)
+umineko-corridor-of-purgatory-s-sands;Corridor of Purgatory's Sands (煉沙回廊);2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Corridor of Purgatory's Sands (煉沙回廊)
+umineko-fortitude;Fortitude;2007;;;umineko;3;3;0;0;0;0;30;0;;;rpg-legado;0;Fortitude
+umineko-witch-in-gold;Witch in gold;2007;;;umineko;2;3;0;0;0;0;30;0;;;rpg-legado;0;Witch in gold
+umineko-lure;Lure (誘い);2007;;;umineko;3;3;0;0;0;0;30;0;;;rpg-legado;0;Lure (誘い)
+umineko-fishy-aroma;Fishy Aroma (胡散の香り);2007;;;umineko;2;4;0;0;0;0;30;0;;;rpg-legado;0;Fishy Aroma (胡散の香り)
+umineko-stupefaction;Stupefaction;2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Stupefaction
+umineko-praise;Praise;2007;;;umineko;;;0;0;0;0;30;0;;;rpg-legado;1;Praise
+umineko-path-pass;Path (Pass);2007;;;umineko;;;0;0;0;0;30;0;;;rpg-legado;1;Path (Pass)
+umineko-swallowtail-butterfly-ageha;Swallowtail Butterfly (Ageha);2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Swallowtail Butterfly (Ageha)
+umineko-goldenslaughterer;goldenslaughterer;2007;;;umineko;4;3;0;0;0;0;30;0;;;rpg-legado;0;goldenslaughterer
+umineko-worldend-babypiano;Worldend (Babypiano);2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Worldend (Babypiano)
+umineko-witch-of-the-painting;Witch of the Painting (絵画の魔女);2007;;;umineko;2;3;0;0;0;0;30;0;;;rpg-legado;0;Witch of the Painting (絵画の魔女)
+umineko-suspicion;Suspicion;2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Suspicion
+umineko-scar-sound;Scar Sound (痕音);2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Scar Sound (痕音)
+umineko-core;Core;2007;;;umineko;;;0;0;0;0;30;0;;;rpg-legado;1;Core
+umineko-minute-darkness;Minute Darkness;2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Minute Darkness
+umineko-nighteyes;Nighteyes;2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Nighteyes
+umineko-closed-my-heart;Closed My Heart;2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Closed My Heart
+umineko-requiem;Requiem;2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Requiem
+umineko-mind;Mind;2007;;;umineko;;;0;0;0;0;30;0;;;rpg-legado;1;Mind
+umineko-worldend;Worldend;2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Worldend
+umineko-play;Play;2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Play
+umineko-system-zero;System Zero (システム零);2007;;;umineko;2;2;1;0;0;0;30;0;;;rpg-legado;0;System Zero (システム零)
+umineko-system-zero-no-voice;System Zero (システム零) [No Voice];2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;System Zero (システム零) [No Voice]
+umineko-voiceless;Voiceless;2007;;;umineko;;;0;0;0;0;30;0;;;rpg-legado;1;Voiceless
+umineko-dead-angle-musicbox-version;Dead Angle [Musicbox Version];2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Dead Angle [Musicbox Version]
+umineko-dead-angle-game-version;Dead Angle [Game Version];2007;;;umineko;2;3;0;0;0;0;30;0;;;rpg-legado;0;Dead Angle [Game Version]
+umineko-bring-the-fate;Bring The Fate;2007;;;umineko;4;2;0;0;0;0;30;0;;;rpg-legado;0;Bring The Fate
+umineko-string-quartet-1-in-g-major-i-allegro;String Quartet #1 in G Major - I. Allegro;2007;;;umineko;2;4;0;0;0;0;30;0;;;rpg-legado;0;String Quartet #1 in G Major - I. Allegro
+umineko-organ-short-600-million-in-c-minor;Organ Short #600 Million in C Minor;2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Organ Short #600 Million in C Minor
+umineko-prison-strip-strip;Prison Strip (牢獄STRIP);2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Prison Strip (牢獄STRIP)
+umineko-cage;Cage;2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Cage
+umineko-golden-sneer;Golden Sneer (金色の嘲笑);2007;;;umineko;3;3;0;0;0;0;30;0;;;rpg-legado;0;Golden Sneer (金色の嘲笑)
+umineko-tsurupettan-short-version;Tsurupettan (つるぺったん) [Short Version];2007;;;umineko;3;5;0;0;0;0;30;0;;;rpg-legado;0;Tsurupettan (つるぺったん) [Short Version]
+umineko-scorpion-entrails;Scorpion Entrails (サソリのハラワタ);2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Scorpion Entrails (サソリのハラワタ)
+umineko-life-s-end-verc;Life's End (終焉_VerC);2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Life's End (終焉_VerC)
+umineko-answer;Answer;2007;;;umineko;;;0;0;0;0;30;0;;;rpg-legado;1;Answer
+umineko-melody-sirabe-instrumental;Melody (Sirabe/旋律) [Instrumental];2007;;;umineko;2;3;0;0;0;0;30;0;;;rpg-legado;0;Melody (Sirabe/旋律) [Instrumental]
+umineko-red-dread;Red Dread;2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Red Dread
+umineko-moon;Moon;2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Moon
+umineko-where;Where;2007;;;umineko;;;0;0;0;0;30;0;;;rpg-legado;1;Where
+umineko-dread-of-the-grave;Dread of the grave;2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Dread of the grave
+umineko-worldenddominator;Worldenddominator;2007;;;umineko;4;3;0;0;0;0;30;0;;;rpg-legado;0;Worldenddominator
+umineko-black-lilliana;Black Lilliana (黒のリリアナ);2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Black Lilliana (黒のリリアナ)
+umineko-rest;Rest (休息);2007;;;umineko;1;4;0;0;0;0;30;0;;;rpg-legado;0;Rest (休息)
+umineko-daydream-s-end;Daydream's End (白日夢の果て);2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Daydream's End (白日夢の果て)
+umineko-melody-sirabe-vocals;Melody (Sirabe 旋律) [Vocals];2007;;;umineko;3;3;1;0;0;0;30;0;;;rpg-legado;0;Melody (Sirabe 旋律) [Vocals]
+umineko-over-the-sky;Over the sky;2007;;;umineko;4;4;0;0;0;0;30;0;;;rpg-legado;0;Over the sky
+umineko-in-the-sun-hidamari;In the Sun (ひだまり / Hidamari);2007;;;umineko;2;4;0;0;0;0;30;0;;;rpg-legado;0;In the Sun (ひだまり / Hidamari)
+umineko-the-candles-dance;The Candles Dance (ロウソクたちが踊る);2007;;;umineko;2;4;0;0;0;0;30;0;;;rpg-legado;0;The Candles Dance (ロウソクたちが踊る)
+umineko-distant-haruka;Distant (Haruka);2007;;;umineko;2;3;0;0;0;0;30;0;;;rpg-legado;0;Distant (Haruka)
+umineko-psy-chorus;Psy-Chorus;2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Psy-Chorus
+umineko-far;Far;2007;;;umineko;2;3;0;0;0;0;30;0;;;rpg-legado;0;Far
+umineko-fake-red-shoes-akaikutsu-nise;Fake Red Shoes (Akaikutsu Nise / あかいくつ偽);2007;;;umineko;3;3;0;0;0;0;30;0;;;rpg-legado;0;Fake Red Shoes (Akaikutsu Nise / あかいくつ偽)
+umineko-mother;Mother;2007;;;umineko;2;3;0;0;0;0;30;0;;;rpg-legado;0;Mother
+umineko-haze;Haze;2007;;;umineko;2;3;0;0;0;0;30;0;;;rpg-legado;0;Haze
+umineko-dancing-pipe-odoru-kiseru;Dancing Pipe (踊る煙管 / Odoru Kiseru);2007;;;umineko;3;4;0;0;0;0;30;0;;;rpg-legado;0;Dancing Pipe (踊る煙管 / Odoru Kiseru)
+umineko-dread-of-the-grave-more-fear;Dread of the Grave ~More fear~;2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Dread of the Grave ~More fear~
+umineko-organ-short-200-million-in-c-minor;Organ Short #200 Million in C Minor;2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Organ Short #200 Million in C Minor
+umineko-rhythm-changer;Rhythm-Changer;2007;;;umineko;;;0;0;0;0;30;0;;;rpg-legado;1;Rhythm-Changer
+umineko-happiness-of-marionette-short-omake;Happiness of Marionette (Short / Omake);2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Happiness of Marionette (Short / Omake)
+umineko-happiness-of-marionette;happiness of marionette;2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;happiness of marionette
+umineko-dance-of-the-moon-rabbit-tsuki-usagi-no-butou;Dance of the Moon Rabbit (月うさぎの舞踏 / Tsuki Usagi no Butou);2007;;;umineko;2;4;0;0;0;0;30;0;;;rpg-legado;0;Dance of the Moon Rabbit (月うさぎの舞踏 / Tsuki Usagi no Butou)
+umineko-melting-away;Melting Away;2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Melting Away
+umineko-soul-of-soul;Soul of Soul;2007;;;umineko;4;3;0;0;0;0;30;0;;;rpg-legado;0;Soul of Soul
+umineko-prison;Prison;2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Prison
+umineko-thanks-for-being-born-umarete-kite-kurete-arigatou;Thanks for Being Born (Umarete Kite Kurete Arigatou);2007;;;umineko;2;4;0;0;0;0;30;0;;;rpg-legado;0;Thanks for Being Born (Umarete Kite Kurete Arigatou)
+umineko-wings-tsubasa;Wings (翼 / Tsubasa);2007;;;umineko;3;3;0;0;0;0;30;0;;;rpg-legado;0;Wings (翼 / Tsubasa)
+umineko-lost-paradise-shitsu-rakuen;Lost Paradise (失楽園 / Shitsu Rakuen);2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Lost Paradise (失楽園 / Shitsu Rakuen)
+umineko-miragecoordinator;Miragecoordinator;2007;;;umineko;4;3;0;0;0;0;30;0;;;rpg-legado;0;Miragecoordinator
+umineko-dread-of-the-grave-rhythm-ver;Dread of the grave ~rhythm ver~;2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Dread of the grave ~rhythm ver~
+umineko-wingless;Wingless;2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Wingless
+umineko-active-pain-short-version;ACTIVE PAIN [Short Version];2007;;;umineko;3;3;1;0;0;0;30;0;;;rpg-legado;0;ACTIVE PAIN [Short Version]
+umineko-active-pain-full-version;ACTIVE PAIN [Full Version];2007;;;umineko;3;3;1;0;0;0;30;0;;;rpg-legado;0;ACTIVE PAIN [Full Version]
+umineko-monochrome-clock;Monochrome Clock;2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Monochrome Clock
+umineko-eternity-kuon;Eternity (久遠 / Kuon);2007;;;umineko;2;3;0;0;0;0;30;0;;;rpg-legado;0;Eternity (久遠 / Kuon)
+umineko-mystic-forest;Mystic Forest (神秘の森);2007;;;umineko;2;3;0;0;0;0;30;0;;;rpg-legado;0;Mystic Forest (神秘の森)
+umineko-apathy;Apathy;2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Apathy
+umineko-sakutarou-s-adventure;Sakutarou's Adventure;2007;;;umineko;2;4;0;0;0;0;30;0;;;rpg-legado;0;Sakutarou's Adventure
+umineko-over;Over;2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Over
+umineko-like-the-gale;Like the Gale;2007;;;umineko;4;3;0;0;0;0;30;0;;;rpg-legado;0;Like the Gale
+umineko-parallel;Parallel;2007;;;umineko;;;0;0;0;0;30;0;;;rpg-legado;1;Parallel
+umineko-surrounding;Surrounding;2007;;;umineko;;;0;0;0;0;30;0;;;rpg-legado;1;Surrounding
+umineko-599-million-ruins;599 Million Ruins;2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;599 Million Ruins
+umineko-f-style;F Style;2007;;;umineko;;;0;0;0;0;30;0;;;rpg-legado;1;F Style
+umineko-happy-maria-instrumental;Happy Maria! [Instrumental];2007;;;umineko;2;4;0;0;0;0;30;0;;;rpg-legado;0;Happy Maria! [Instrumental]
+umineko-launch-hibuta;Launch (HIBUTA);2007;;;umineko;4;3;0;0;0;0;30;0;;;rpg-legado;0;Launch (HIBUTA)
+umineko-death-from-stupefaction;Death (From Stupefaction);2007;;;umineko;3;1;0;0;0;0;30;0;;;rpg-legado;0;Death (From Stupefaction)
+umineko-mortal-stampede;Mortal Stampede;2007;;;umineko;4;3;0;0;0;0;30;0;;;rpg-legado;0;Mortal Stampede
+umineko-victima-propiciatoria;Victima Propiciatoria;2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Victima Propiciatoria
+umineko-revolt;Revolt;2007;;;umineko;4;3;0;0;0;0;30;0;;;rpg-legado;0;Revolt
+umineko-the-dark-and-crazed-requiem-of-purgatory;The Dark and Crazed Requiem of Purgatory (煉獄凶狂葬曲);2007;;;umineko;4;2;0;0;0;0;30;0;;;rpg-legado;0;The Dark and Crazed Requiem of Purgatory (煉獄凶狂葬曲)
+umineko-happy-maria-vocals;Happy Maria! [Vocals];2007;;;umineko;3;5;1;0;0;0;30;0;;;rpg-legado;0;Happy Maria! [Vocals]
+umineko-dive-to-emergency;Dive to Emergency;2007;;;umineko;4;3;0;0;0;0;30;0;;;rpg-legado;0;Dive to Emergency
+umineko-dir;Dir;2007;;;umineko;;;0;0;0;0;30;0;;;rpg-legado;1;Dir
+umineko-endless-nine;Endless Nine (エンドレスナイン);2007;;;umineko;4;3;0;0;0;0;30;0;;;rpg-legado;0;Endless Nine (エンドレスナイン)
+umineko-dreamenddischarger;dreamenddischarger;2007;;;umineko;4;3;0;0;0;0;30;0;;;rpg-legado;0;dreamenddischarger
+umineko-discode-short-version;Discode [Short Version];2007;;;umineko;3;3;1;0;0;0;30;0;;;rpg-legado;0;Discode [Short Version]
+umineko-discode-long-version;Discode [Long Version];2007;;;umineko;3;3;1;0;0;0;30;0;;;rpg-legado;0;Discode [Long Version]
+umineko-about-face-kururi;About Face (くるり / Kururi);2007;;;umineko;2;4;0;0;0;0;30;0;;;rpg-legado;0;About Face (くるり / Kururi)
+umineko-occultics-no-majo-short-version;Occultics no Majo (オカルティクスの魔女) [Short Version];2007;;;umineko;3;2;1;0;0;0;60;1;;;rpg-legado;0;Occultics no Majo (オカルティクスの魔女) [Short Version]
+umineko-occultics-no-majo-full-version;Occultics no Majo (オカルティクスの魔女) [Full Version];2007;;;umineko;3;2;1;0;0;0;60;1;;;rpg-legado;0;Occultics no Majo (オカルティクスの魔女) [Full Version]
+umineko-deep-blue-jeer;Deep Blue Jeer (蒼色の冷笑);2007;;;umineko;3;3;0;0;0;0;30;0;;;rpg-legado;0;Deep Blue Jeer (蒼色の冷笑)
+umineko-the-great-detective-knows;The Great Detective Knows;2007;;;umineko;3;4;0;0;0;0;30;0;;;rpg-legado;0;The Great Detective Knows
+umineko-smile-less-soiree;Smile-less Soiree;2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Smile-less Soiree
+umineko-one;One;2007;;;umineko;;;0;0;0;0;30;0;;;rpg-legado;1;One
+umineko-future;Future;2007;;;umineko;3;4;0;0;0;0;30;0;;;rpg-legado;0;Future
+umineko-spiral;Spiral (螺旋);2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Spiral (螺旋)
+umineko-string-trio-600-million-in-f-minor;String Trio #600 Million in F# Minor;2007;;;umineko;2;3;0;0;0;0;30;0;;;rpg-legado;0;String Trio #600 Million in F# Minor
+umineko-toten-blume;Toten Blume (トーテンブルーメ);2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Toten Blume (トーテンブルーメ)
+umineko-justice;JUSTICE;2007;;;umineko;4;3;0;0;0;0;30;0;;;rpg-legado;0;JUSTICE
+umineko-aci-l;Aci-L;2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Aci-L
+umineko-kuina-ninja-mono;Kuina (喰那 / Ninja Mono);2007;;;umineko;3;4;0;0;0;0;30;0;;;rpg-legado;0;Kuina (喰那 / Ninja Mono)
+umineko-proud-dust;Proud-Dust;2007;;;umineko;;;0;0;0;0;30;0;;;rpg-legado;1;Proud-Dust
+umineko-hello-your-dream;Hello Your Dream;2007;;;umineko;2;4;0;0;0;0;30;0;;;rpg-legado;0;Hello Your Dream
+umineko-solitary-deep-sea-fish-sinkai;Solitary Deep Sea Fish (孤独な深海魚 / Sinkai);2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Solitary Deep Sea Fish (孤独な深海魚 / Sinkai)
+umineko-the-girls-witch-hunt;The Girls' Witch Hunt (少女たちの魔女狩り);2007;;;umineko;4;2;0;0;0;0;30;0;;;rpg-legado;0;The Girls' Witch Hunt (少女たちの魔女狩り)
+umineko-patchwork-chimera;Patchwork Chimera (継接キメラ);2007;;;umineko;3;3;0;0;0;0;30;0;;;rpg-legado;0;Patchwork Chimera (継接キメラ)
+umineko-discolor;Discolor;2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Discolor
+umineko-resurrectedreplayer;Resurrectedreplayer;2007;;;umineko;4;3;0;0;0;0;30;0;;;rpg-legado;0;Resurrectedreplayer
+umineko-final-answer;Final Answer;2007;;;umineko;4;2;0;0;0;0;30;0;;;rpg-legado;0;Final Answer
+umineko-light-hikari;Light (Hikari);2007;;;umineko;3;4;0;0;0;0;30;0;;;rpg-legado;0;Light (Hikari)
+umineko-bread-of-life-inochi-no-pan;Bread of Life (命のパン / Inochi no Pan);2007;;;umineko;2;3;0;0;0;0;30;0;;;rpg-legado;0;Bread of Life (命のパン / Inochi no Pan)
+umineko-promise-yakusoku;Promise (約束 / Yakusoku);2007;;;umineko;2;3;0;0;0;0;30;0;;;rpg-legado;0;Promise (約束 / Yakusoku)
+umineko-promise-yakusoku-musicbox-ver;Promise (約束 / Yakusoku) [Musicbox Ver.];2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Promise (約束 / Yakusoku) [Musicbox Ver.]
+umineko-tomorrow;Tomorrow;2007;;;umineko;3;4;0;0;0;0;30;0;;;rpg-legado;0;Tomorrow
+umineko-wings-tsubasa-hope-version;Wings (TSUBASA) [Hope Version];2007;;;umineko;4;4;1;0;0;0;30;0;;;rpg-legado;0;Wings (TSUBASA) [Hope Version]
+umineko-wings-tsubasa-full-version;Wings (TSUBASA) [Full Version];2007;;;umineko;3;3;1;0;0;0;30;0;;;rpg-legado;0;Wings (TSUBASA) [Full Version]
+umineko-gray-empty-smile;Gray Empty Smile (鈍色の空笑);2007;;;umineko;3;3;0;0;0;0;30;0;;;rpg-legado;0;Gray Empty Smile (鈍色の空笑)
+umineko-eternal-chains;Eternal Chains (永遠の鎖);2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Eternal Chains (永遠の鎖)
+umineko-love-examination;Love Examination;2007;;;umineko;3;3;0;0;0;0;30;0;;;rpg-legado;0;Love Examination
+umineko-a-single-moment-setsuna;A Single Moment (刹那/Setsuna);2007;;;umineko;2;3;0;0;0;0;30;0;;;rpg-legado;0;A Single Moment (刹那/Setsuna)
+umineko-look-back;Look Back;2007;;;umineko;2;3;0;0;0;0;30;0;;;rpg-legado;0;Look Back
+umineko-blue-butterfly-aoi-chou;Blue Butterfly (青い蝶 / Aoi Chou);2007;;;umineko;2;3;0;0;0;0;30;0;;;rpg-legado;0;Blue Butterfly (青い蝶 / Aoi Chou)
+umineko-my-dear;My Dear;2007;;;umineko;2;4;0;0;0;0;30;0;;;rpg-legado;0;My Dear
+umineko-kina-no-kaori;Kina no Kaori (キ・ナの香り);2007;;;umineko;;;0;0;0;0;30;0;;;rpg-legado;1;Kina no Kaori (キ・ナの香り)
+umineko-rog-limitation;rog-limitation;2007;;;umineko;;;0;0;0;0;30;0;;;rpg-legado;1;rog-limitation
+umineko-waltzl-op-34;Waltzl Op.34 (ワルツ);2007;;;umineko;2;3;0;0;0;0;30;0;;;rpg-legado;0;Waltzl Op.34 (ワルツ)
+umineko-infant-queen-bee;Infant Queen Bee (嬰児クインビー);2007;;;umineko;;;0;0;0;0;30;0;;;rpg-legado;1;Infant Queen Bee (嬰児クインビー)
+umineko-engage-of-marionette;Engage of Marionette;2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Engage of Marionette
+umineko-alive;ALIVE;2007;;;umineko;3;3;0;0;0;0;30;0;;;rpg-legado;0;ALIVE
+umineko-birth-of-a-new-witch-instrumental;Birth of a New Witch (Instrumental);2007;;;umineko;3;3;0;0;0;0;30;0;;;rpg-legado;0;Birth of a New Witch (Instrumental)
+umineko-ruriair;Ruriair;2007;;;umineko;;;0;0;0;0;30;0;;;rpg-legado;1;Ruriair
+umineko-life;Life;2007;;;umineko;3;4;0;0;0;0;30;0;;;rpg-legado;0;Life
+umineko-loreley;Loreley;2007;;;umineko;2;3;0;0;0;0;30;0;;;rpg-legado;0;Loreley
+umineko-the-sin-tsumi;The Sin (罪 / Tsumi);2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;The Sin (罪 / Tsumi)
+umineko-the-first-and-the-last;The First and the Last;2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;The First and the Last
+umineko-anti-demon-sequentia;Anti-Demon Sequentia (反魔セクエソツィア);2007;;;umineko;4;3;0;0;0;0;30;0;;;rpg-legado;0;Anti-Demon Sequentia (反魔セクエソツィア)
+umineko-battle-field;Battle Field;2007;;;umineko;4;3;0;0;0;0;30;0;;;rpg-legado;0;Battle Field
+umineko-rebirth;Rebirth;2007;;;umineko;4;4;0;0;0;0;30;0;;;rpg-legado;0;Rebirth
+umineko-pathway-michi;Pathway (道 / Michi);2007;;;umineko;2;3;0;0;0;0;30;0;;;rpg-legado;0;Pathway (道 / Michi)
+umineko-liberatedliberator;Liberatedliberator;2007;;;umineko;4;3;0;0;0;0;30;0;;;rpg-legado;0;Liberatedliberator
+umineko-birth-of-a-new-witch-vocals;Birth of a New Witch [Vocals];2007;;;umineko;3;3;1;0;0;0;30;0;;;rpg-legado;0;Birth of a New Witch [Vocals]
+umineko-thanks-for-all-people;Thanks for All People;2007;;;umineko;3;4;0;0;0;0;30;0;;;rpg-legado;0;Thanks for All People
+umineko-fishy-aroma-usan-no-kaori-vocals;Fishy Aroma (ウサンノカオリ / Usan no Kaori) [Vocals];2007;;;umineko;3;3;1;0;0;0;30;0;;;rpg-legado;0;Fishy Aroma (ウサンノカオリ / Usan no Kaori) [Vocals]
+umineko-kiri-no-pithos-short-version;Kiri no Pithos (霧のピトス) [Short Version];2007;;;umineko;3;2;1;0;0;0;60;1;;;rpg-legado;0;Kiri no Pithos (霧のピトス) [Short Version]
+umineko-kiri-no-pithos-full-version;Kiri no Pithos (霧のピトス) [Full Version];2007;;;umineko;3;2;1;0;0;0;60;1;;;rpg-legado;0;Kiri no Pithos (霧のピトス) [Full Version]
+umineko-le-4-octobre;Le 4 Octobre;2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Le 4 Octobre
+umineko-l-d-circulation;L&D Circulation;2007;;;umineko;;;0;0;0;0;30;0;;;rpg-legado;1;L&D Circulation
+umineko-reflection-call;Reflection Call;2007;;;umineko;;;0;0;0;0;30;0;;;rpg-legado;1;Reflection Call
+umineko-rain;Rain;2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Rain
+umineko-7-weights;7-Weights;2007;;;umineko;;;0;0;0;0;30;0;;;rpg-legado;1;7-Weights
+umineko-fall;fall;2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;fall
+umineko-bore-ral;Bore-Ral;2007;;;umineko;;;0;0;0;0;30;0;;;rpg-legado;1;Bore-Ral
+umineko-ballade-continuer;Ballade Continuer;2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Ballade Continuer
+umineko-song-without-a-name-instrumental-ver-2007;Song Without a Name (なまえのないうた) [Instrumental Ver. 2007];2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Song Without a Name (なまえのないうた) [Instrumental Ver. 2007]
+umineko-lie-alaia;Lie Alaia;2007;;;umineko;;;0;0;0;0;30;0;;;rpg-legado;1;Lie Alaia
+umineko-far-flat;Far (Flat);2007;;;umineko;2;3;0;0;0;0;30;0;;;rpg-legado;0;Far (Flat)
+umineko-toy-box-omochabako;Toy Box (おもちゃ箱 / Omochabako);2007;;;umineko;2;4;0;0;0;0;30;0;;;rpg-legado;0;Toy Box (おもちゃ箱 / Omochabako)
+umineko-terminal-entrance;Terminal Entrance;2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Terminal Entrance
+umineko-puppet-show;Puppet Show (人形劇);2007;;;umineko;3;3;0;0;0;0;30;0;;;rpg-legado;0;Puppet Show (人形劇)
+umineko-golden-nocturne-instrumental;Golden Nocturne [Instrumental];2007;;;umineko;2;3;0;0;0;0;30;0;;;rpg-legado;0;Golden Nocturne [Instrumental]
+umineko-s-he-end;S/he End;2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;S/he End
+umineko-song-without-a-name-full-instrumental;Song Without a Name (なまえのないうた) [Full Instrumental];2007;;;umineko;2;2;0;0;0;0;30;0;;;rpg-legado;0;Song Without a Name (なまえのないうた) [Full Instrumental]
+umineko-the-end-of-the-world;The End Of The World;2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;The End Of The World
+umineko-goddess-gardena;Goddess Gardena;2007;;;umineko;3;3;0;0;0;0;30;0;;;rpg-legado;0;Goddess Gardena
+umineko-ridicule;Ridicule;2007;;;umineko;3;3;0;0;0;0;30;0;;;rpg-legado;0;Ridicule
+umineko-yomitsu-hirasaka-corruption-corruption;Yomitsu Hirasaka Corruption (黄泉津比良坂CORRUPTION);2007;;;umineko;4;2;0;0;0;0;30;0;;;rpg-legado;0;Yomitsu Hirasaka Corruption (黄泉津比良坂CORRUPTION)
+umineko-the-executioner;The Executioner;2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;The Executioner
+umineko-song-without-a-name-vocals;Song Without a Name (なまえのないうた) [Vocals];2007;;;umineko;2;2;1;0;0;0;30;0;;;rpg-legado;0;Song Without a Name (なまえのないうた) [Vocals]
+umineko-stuffed-animal;Stuffed Animal (ぬいぐるみ);2007;;;umineko;2;4;0;0;0;0;30;0;;;rpg-legado;0;Stuffed Animal (ぬいぐるみ)
+umineko-bizarre-divertimento;Bizarre Divertimento (怪奇ディヴェルティメント);2007;;;umineko;2;4;0;0;0;0;30;0;;;rpg-legado;0;Bizarre Divertimento (怪奇ディヴェルティメント)
+umineko-dread-of-the-grave-more-fear-ep-8-ver;Dread of the Grave ~More Fear~ [Ep. 8 Ver.];2007;;;umineko;3;2;0;0;0;0;30;0;;;rpg-legado;0;Dread of the Grave ~More Fear~ [Ep. 8 Ver.]
+umineko-en-counse;En Counse;2007;;;umineko;;;0;0;0;0;30;0;;;rpg-legado;1;En Counse
+umineko-lixaxil-cd-version;LixAxil [CD Version];2007;;;umineko;4;3;0;0;0;0;30;0;;;rpg-legado;0;LixAxil [CD Version]
+umineko-lixaxil-game-version;LixAxil [Game Version];2007;;;umineko;4;3;0;0;0;0;30;0;;;rpg-legado;0;LixAxil [Game Version]
+umineko-revelations-instrumental;Revelations [Instrumental];2007;;;umineko;4;3;0;0;0;0;30;0;;;rpg-legado;0;Revelations [Instrumental]
+umineko-revelations-vocals;Revelations [Vocals];2007;;;umineko;4;3;1;0;0;0;30;0;;;rpg-legado;0;Revelations [Vocals]
+umineko-soar-hishou;Soar (飛翔 / Hishou);2007;;;umineko;4;4;0;0;0;0;30;0;;;rpg-legado;0;Soar (飛翔 / Hishou)
+umineko-lastendconductor;Lastendconductor;2007;;;umineko;4;2;0;0;0;0;30;0;;;rpg-legado;0;Lastendconductor
+umineko-white-dream-cocoon-ricordando-il-passato-short;White Dream Cocoon ～Ricordando il passato～ [Short];2007;;;umineko;3;3;1;0;0;0;30;0;;;rpg-legado;0;White Dream Cocoon ～Ricordando il passato～ [Short]
+umineko-white-dream-cocoon-ricordando-il-passato-full;White Dream Cocoon ～Ricordando il passato～ [Full];2007;;;umineko;3;3;1;0;0;0;30;0;;;rpg-legado;0;White Dream Cocoon ～Ricordando il passato～ [Full]
+subahibi-yoru-no-himawari;Yoru no Himawari;2010;;;subahibi;2;2;0;0;0;0;30;0;;;rpg-legado;0;Yoru no Himawari
+subahibi-oto-ni-dekiru-koto;Oto ni Dekiru Koto;2010;;;subahibi;2;3;0;0;0;0;30;0;;;rpg-legado;0;Oto ni Dekiru Koto
+subahibi-denpa-to-denjiha-no-kankei;Denpa to Denjiha no Kankei;2010;;;subahibi;2;4;0;0;0;0;30;0;;;rpg-legado;0;Denpa to Denjiha no Kankei
+subahibi-kuuki-rikigaku-shoujo-to-shounen-no-uta;Kuuki Rikigaku Shoujo to Shounen no Uta;2010;;;subahibi;3;3;1;0;0;0;30;0;;;rpg-legado;0;Kuuki Rikigaku Shoujo to Shounen no Uta
+subahibi-tractatus-logico-philosophicus;Tractatus Logico philosophicus;2010;;;subahibi;2;3;0;0;0;0;30;0;;;rpg-legado;0;Tractatus Logico philosophicus
+subahibi-shu-yo-hito-no-nozomi-no-yorokobi-yo;Shu yo, Hito no Nozomi no Yorokobi yo;2010;;;subahibi;2;3;0;0;0;0;30;0;;;rpg-legado;0;Shu yo, Hito no Nozomi no Yorokobi yo
+subahibi-kagami-no-sekai-ni-wa-watashi-shika-inai-another-version;Kagami no Sekai ni wa Watashi shika Inai another version;2010;;;subahibi;2;2;0;0;0;0;30;0;;;rpg-legado;0;Kagami no Sekai ni wa Watashi shika Inai another version
+subahibi-norowareta-sei-shukufuku-sareta-sei;Norowareta Sei／Shukufuku Sareta Sei;2010;;;subahibi;3;2;1;0;0;0;30;0;;;rpg-legado;0;Norowareta Sei／Shukufuku Sareta Sei
+subahibi-denpa-relay-no-shousha;Denpa Relay no Shousha;2010;;;subahibi;3;4;0;0;0;0;30;0;;;rpg-legado;0;Denpa Relay no Shousha
+subahibi-kaiyuu-kiyuu-shuju-kyojin-bishoujo-nado-boshuu;Kaiyuu Kiyuu Shuju Kyojin Bishoujo nado Boshuu;2010;;;subahibi;2;4;0;0;0;0;30;0;;;rpg-legado;0;Kaiyuu Kiyuu Shuju Kyojin Bishoujo nado Boshuu
+subahibi-kumikyoku-no-yukue;Kumikyoku no Yukue;2010;;;subahibi;;;0;0;0;0;30;0;;;rpg-legado;1;Kumikyoku no Yukue
+subahibi-updowncity;updowncity;2010;;;subahibi;2;4;0;0;0;0;30;0;;;rpg-legado;0;updowncity
+subahibi-heitan-soshite-utsukushiki-nichijou;Heitan, Soshite Utsukushiki Nichijou;2010;;;subahibi;2;4;0;0;0;0;30;0;;;rpg-legado;0;Heitan, Soshite Utsukushiki Nichijou
+subahibi-kami-to-senritsu;Kami to Senritsu;2010;;;subahibi;3;3;0;0;0;0;30;0;;;rpg-legado;0;Kami to Senritsu
+subahibi-hito-yo-koufuku-ni;Hito yo, Koufuku ni!;2010;;;subahibi;4;4;0;0;0;0;30;0;;;rpg-legado;0;Hito yo, Koufuku ni!
+subahibi-chiisa-na-senritsu;Chiisa na Senritsu;2010;;;subahibi;2;3;0;0;0;0;30;0;;;rpg-legado;0;Chiisa na Senritsu
+subahibi-saihate-no-sora;Saihate no Sora;2010;;;subahibi;2;3;0;0;0;0;30;0;;;rpg-legado;0;Saihate no Sora
+subahibi-kuroi-tsubasa-no-mai;Kuroi Tsubasa no Mai;2010;;;subahibi;3;2;0;0;0;0;30;0;;;rpg-legado;0;Kuroi Tsubasa no Mai
+subahibi-happy-material;Happy Material;2010;;;subahibi;2;4;0;0;0;0;30;0;;;rpg-legado;0;Happy Material
+subahibi-naglfar-no-senjou-nite;Naglfar no Senjou nite;2010;;;subahibi;3;2;0;0;0;0;30;0;;;rpg-legado;0;Naglfar no Senjou nite
+subahibi-kawaranai-kara-koso;Kawaranai kara koso;2010;;;subahibi;2;3;0;0;0;0;30;0;;;rpg-legado;0;Kawaranai kara koso
+subahibi-shuumatsu-no-bishou;Shuumatsu no Bishou;2010;;;subahibi;3;2;1;0;0;0;30;0;;;rpg-legado;0;Shuumatsu no Bishou
+subahibi-minareta-fuukei;Minareta Fuukei;2010;;;subahibi;2;3;0;0;0;0;30;0;;;rpg-legado;0;Minareta Fuukei
+subahibi-kuuki-rikigaku-shoujo-to-shounen-no-uta-orgel-ver;Kuuki Rikigaku Shoujo to Shounen no Uta Orgel Ver.;2010;;;subahibi;2;3;0;0;0;0;30;0;;;rpg-legado;0;Kuuki Rikigaku Shoujo to Shounen no Uta Orgel Ver.
+subahibi-natsu-no-daisankaku;Natsu no Daisankaku;2010;;;subahibi;2;4;0;0;0;0;30;0;;;rpg-legado;0;Natsu no Daisankaku
+subahibi-yumemiru-sakana-erik-satie;Yumemiru Sakana Erik Satie;2010;;;subahibi;2;3;0;0;0;0;30;0;;;rpg-legado;0;Yumemiru Sakana Erik Satie
+subahibi-owari-no-senritsu;Owari no Senritsu;2010;;;subahibi;3;2;0;0;0;0;30;0;;;rpg-legado;0;Owari no Senritsu
+subahibi-noborenai-sakamichi;Noborenai Sakamichi;2010;;;subahibi;2;2;0;0;0;0;30;0;;;rpg-legado;0;Noborenai Sakamichi
+subahibi-kaze-no-fuku-oka;Kaze no Fuku Oka;2010;;;subahibi;2;3;0;0;0;0;30;0;;;rpg-legado;0;Kaze no Fuku Oka
+subahibi-piccadilly-erik-satie;Piccadilly Erik Satie;2010;;;subahibi;2;4;0;0;0;0;30;0;;;rpg-legado;0;Piccadilly Erik Satie
+subahibi-les-enfants-du-paradis;Les Enfants du Paradis;2010;;;subahibi;;;0;0;0;0;30;0;;;rpg-legado;1;Les Enfants du Paradis
+subahibi-omoshiro-music;OMOSHIRO MUSIC;2010;;;subahibi;3;4;0;0;0;0;30;0;;;rpg-legado;0;OMOSHIRO MUSIC
+subahibi-kotoba-to-senritsu;Kotoba to Senritsu;2010;;;subahibi;2;3;0;0;0;0;30;0;;;rpg-legado;0;Kotoba to Senritsu
+subahibi-fuan-no-ritsuzou;Fuan no Ritsuzou;2010;;;subahibi;3;2;0;0;0;0;30;0;;;rpg-legado;0;Fuan no Ritsuzou
+subahibi-kuuki-rikigaku-shoujo-to-shounen-no-uta-piano-vocal-ver;Kuuki Rikigaku Shoujo to Shounen no Uta Piano Vocal Ver.;2010;;;subahibi;3;3;1;0;0;0;30;0;;;rpg-legado;0;Kuuki Rikigaku Shoujo to Shounen no Uta Piano Vocal Ver.
+subahibi-onaji-sora-wa-doko-ni-mo-nai;Onaji Sora wa Doko ni mo Nai;2010;;;subahibi;2;2;0;0;0;0;30;0;;;rpg-legado;0;Onaji Sora wa Doko ni mo Nai
+subahibi-kuuki-rikigaku-shoujo-to-shounen-no-uta-piano-ver;Kuuki Rikigaku Shoujo to Shounen no Uta Piano Ver;2010;;;subahibi;2;3;0;0;0;0;30;0;;;rpg-legado;0;Kuuki Rikigaku Shoujo to Shounen no Uta Piano Ver
+subahibi-shounen-to-knife;Shounen to Knife;2010;;;subahibi;4;2;0;0;0;0;30;0;;;rpg-legado;0;Shounen to Knife
+subahibi-mado-to-hikari;Mado to Hikari;2010;;;subahibi;2;3;0;0;0;0;30;0;;;rpg-legado;0;Mado to Hikari
+subahibi-beautiful-everyday;beautiful everyday;2010;;;subahibi;2;4;0;0;0;0;30;0;;;rpg-legado;0;beautiful everyday
+subahibi-chiisa-na-kioku;Chiisa na Kioku;2010;;;subahibi;2;3;0;0;0;0;30;0;;;rpg-legado;0;Chiisa na Kioku
+subahibi-furyou-music;FURYOU MUSIC;2010;;;subahibi;4;4;0;0;0;0;30;0;;;rpg-legado;0;FURYOU MUSIC
+subahibi-living-game;Living Game;2010;;;subahibi;;;0;0;0;0;30;0;;;rpg-legado;1;Living Game
+subahibi-kaikoku;Kaikoku;2010;;;subahibi;;;0;0;0;0;30;0;;;rpg-legado;1;Kaikoku
+subahibi-naglfar-no-senjou-nite-orgel-ver;Naglfar no Senjou nite Orgel Ver.;2010;;;subahibi;2;2;0;0;0;0;30;0;;;rpg-legado;0;Naglfar no Senjou nite Orgel Ver.
+subahibi-karoyakagirls;KAROYAKAGirls;2010;;;subahibi;2;4;0;0;0;0;30;0;;;rpg-legado;0;KAROYAKAGirls
+subahibi-ost-completa;Subarashiki Hibi - Full OST;2010;;;subahibi;2;2;0;0;0;0;30;0;;;rpg-legado;0;Subarashiki Hibi - Full OST
+hollow-knight-enter-hallownest;Enter Hallownest;2017;;;hollow-knight;4;4;0;0;0;0;60;1;;;rpg-legado;0;Enter Hallownest
+hollow-knight-crossroads;Crossroads;2017;;;hollow-knight;2;3;0;0;0;0;30;0;;;rpg-legado;0;Crossroads
+hollow-knight-false-knight;False Knight;2017;;;hollow-knight;5;3;0;0;0;0;30;0;;;rpg-legado;0;False Knight
+hollow-knight-hornet;Hornet;2017;;;hollow-knight;5;3;0;0;0;0;30;0;;;rpg-legado;0;Hornet
+hollow-knight-reflection;Reflection;2017;;;hollow-knight;2;3;0;0;0;0;30;0;;;rpg-legado;0;Reflection
+hollow-knight-mantis-lords;Mantis Lords;2017;;;hollow-knight;5;3;0;0;0;0;30;0;;;rpg-legado;0;Mantis Lords
+hollow-knight-dung-defender;Dung Defender;2017;;;hollow-knight;5;4;0;0;0;0;30;0;;;rpg-legado;0;Dung Defender
+hollow-knight-crystal-peak;Crystal Peak;2017;;;hollow-knight;2;3;0;0;0;0;30;0;;;rpg-legado;0;Crystal Peak
+hollow-knight-fungal-wastes;Fungal Wastes;2017;;;hollow-knight;3;4;0;0;0;0;30;0;;;rpg-legado;0;Fungal Wastes
+hollow-knight-decisive-battle;Decisive Battle;2017;;;hollow-knight;5;3;0;0;0;0;30;0;;;rpg-legado;0;Decisive Battle
+hollow-knight-soul-sanctum;Soul Sanctum;2017;;;hollow-knight;5;2;0;0;0;0;30;0;;;rpg-legado;0;Soul Sanctum
+hollow-knight-resting-grounds;Resting Grounds;2017;;;hollow-knight;2;2;0;0;0;0;30;0;;;rpg-legado;0;Resting Grounds
+hollow-knight-queens-gardens;Queen's Gardens;2017;;;hollow-knight;2;3;0;0;0;0;30;0;;;rpg-legado;0;Queen's Gardens
+hollow-knight-the-white-lady;The White Lady;2017;;;hollow-knight;2;2;0;0;0;0;30;0;;;rpg-legado;0;The White Lady
+hollow-knight-broken-vessel;Broken Vessel;2017;;;hollow-knight;5;2;0;0;0;0;30;0;;;rpg-legado;0;Broken Vessel
+hollow-knight-kingdoms-edge;Kingdom's Edge;2017;;;hollow-knight;2;3;0;0;0;0;30;0;;;rpg-legado;0;Kingdom's Edge
+hollow-knight-nosk;Nosk;2017;;;hollow-knight;5;2;0;0;0;0;30;0;;;rpg-legado;0;Nosk
+hollow-knight-dream;Dream;2017;;;hollow-knight;2;3;0;0;0;0;30;0;;;rpg-legado;0;Dream
+hollow-knight-dream-battle;Dream Battle;2017;;;hollow-knight;5;3;0;0;0;0;30;0;;;rpg-legado;0;Dream Battle
+hollow-knight-white-palace;White Palace;2017;;;hollow-knight;2;4;0;0;0;0;30;0;;;rpg-legado;0;White Palace
+hollow-knight-sealed-vessel;Sealed Vessel;2017;;;hollow-knight;5;2;0;0;0;0;30;0;;;rpg-legado;0;Sealed Vessel
+hollow-knight-hollow-knight;Hollow Knight;2017;;;hollow-knight;2;2;0;0;0;0;60;1;;;rpg-legado;0;Hollow Knight
+hollow-knight-truth-beauty-and-hatred-hidden-dreams;Truth, Beauty and Hatred (Hollow Knight: Hidden Dreams);2017;;;hollow-knight;5;3;0;0;0;0;30;0;;;rpg-legado;0;Truth, Beauty and Hatred (Hollow Knight: Hidden Dreams)
+hollow-knight-white-defender-hidden-dreams;White Defender (Hollow Knight: Hidden Dreams);2017;;;hollow-knight;5;3;0;0;0;0;30;0;;;rpg-legado;0;White Defender (Hollow Knight: Hidden Dreams)
+hollow-knight-grimm-the-grimm-troupe;Grimm (Hollow Knight: The Grimm Troupe);2017;;;hollow-knight;5;2;0;0;0;0;30;0;;;rpg-legado;0;Grimm (Hollow Knight: The Grimm Troupe)
+hollow-knight-nightmare-king-the-grimm-troupe;Nightmare King (Hollow Knight: The Grimm Troupe);2017;;;hollow-knight;5;3;0;0;0;0;30;0;;;rpg-legado;0;Nightmare King (Hollow Knight: The Grimm Troupe)
+hollow-knight-hive-knight-gods-nightmares;Hive Knight (Hollow Knight: Gods & Nightmares);2017;;;hollow-knight;5;3;0;0;0;0;30;0;;;rpg-legado;0;Hive Knight (Hollow Knight: Gods & Nightmares)
+hollow-knight-truth-beauty-and-hatred-gods-nightmares;Truth, Beauty and Hatred (Hollow Knight: Gods & Nightmares);2017;;;hollow-knight;5;3;0;0;0;0;30;0;;;rpg-legado;0;Truth, Beauty and Hatred (Hollow Knight: Gods & Nightmares)
+hollow-knight-nightmare-lantern-interlude-gods-nightmares;Nightmare Lantern Interlude (Hollow Knight: Gods & Nightmares);2017;;;hollow-knight;3;2;0;0;0;0;30;0;;;rpg-legado;0;Nightmare Lantern Interlude (Hollow Knight: Gods & Nightmares)
+hollow-knight-the-grimm-troupe-gods-nightmares;The Grimm Troupe (Hollow Knight: Gods & Nightmares);2017;;;hollow-knight;5;2;0;0;0;0;30;0;;;rpg-legado;0;The Grimm Troupe (Hollow Knight: Gods & Nightmares)
+hollow-knight-nightmare-king-gods-nightmares;Nightmare King (Hollow Knight: Gods & Nightmares);2017;;;hollow-knight;5;3;0;0;0;0;30;0;;;rpg-legado;0;Nightmare King (Hollow Knight: Gods & Nightmares)
+hollow-knight-white-defender-gods-nightmares;White Defender (Hollow Knight: Gods & Nightmares);2017;;;hollow-knight;5;3;0;0;0;0;30;0;;;rpg-legado;0;White Defender (Hollow Knight: Gods & Nightmares)
+hollow-knight-dreamers-gods-nightmares;Dreamers (Hollow Knight: Gods & Nightmares);2017;;;hollow-knight;2;3;0;0;0;0;30;0;;;rpg-legado;0;Dreamers (Hollow Knight: Gods & Nightmares)
+hollow-knight-pale-court-gods-nightmares;Pale Court (Hollow Knight: Gods & Nightmares);2017;;;hollow-knight;3;4;0;0;0;0;30;0;;;rpg-legado;0;Pale Court (Hollow Knight: Gods & Nightmares)
+hollow-knight-gods-glory-gods-nightmares;Gods & Glory (Hollow Knight: Gods & Nightmares);2017;;;hollow-knight;5;3;0;0;0;0;30;0;;;rpg-legado;0;Gods & Glory (Hollow Knight: Gods & Nightmares)
+hollow-knight-daughter-of-hallownest-gods-nightmares;Daughter of Hallownest (Hollow Knight: Gods & Nightmares);2017;;;hollow-knight;5;2;0;0;0;0;30;0;;;rpg-legado;0;Daughter of Hallownest (Hollow Knight: Gods & Nightmares)
+hollow-knight-godhome-gods-nightmares;Godhome (Hollow Knight: Gods & Nightmares);2017;;;hollow-knight;2;3;0;0;0;0;30;0;;;rpg-legado;0;Godhome (Hollow Knight: Gods & Nightmares)
+hollow-knight-sisters-of-battle-gods-nightmares;Sisters of Battle (Hollow Knight: Gods & Nightmares);2017;;;hollow-knight;5;3;0;0;0;0;30;0;;;rpg-legado;0;Sisters of Battle (Hollow Knight: Gods & Nightmares)
+hollow-knight-haunted-foes-gods-nightmares;Haunted Foes (Hollow Knight: Gods & Nightmares);2017;;;hollow-knight;5;2;0;0;0;0;30;0;;;rpg-legado;0;Haunted Foes (Hollow Knight: Gods & Nightmares)
+hollow-knight-furious-gods-gods-nightmares;Furious Gods (Hollow Knight: Gods & Nightmares);2017;;;hollow-knight;5;3;0;0;0;0;30;0;;;rpg-legado;0;Furious Gods (Hollow Knight: Gods & Nightmares)
+hollow-knight-pure-vessel-gods-nightmares;Pure Vessel (Hollow Knight: Gods & Nightmares);2017;;;hollow-knight;5;2;0;0;0;0;30;0;;;rpg-legado;0;Pure Vessel (Hollow Knight: Gods & Nightmares)
+hollow-knight-lace-silksong-ost-sample;Lace (Silksong OST Sample);2017;;;hollow-knight;5;3;0;0;0;0;30;0;;;rpg-legado;0;Lace (Silksong OST Sample)
+hollow-knight-bonebottom-silksong-ost-sample;Bonebottom (Silksong OST Sample);2017;;;hollow-knight;1;2;0;0;0;0;30;0;;;rpg-legado;0;Bonebottom (Silksong OST Sample)
+nier-automata-significance-nothing-jnique-nicole;Significance - Nothing - J’Nique Nicole;2017;;;nier-automata;2;2;1;0;0;0;30;0;;;rpg-legado;0;Significance - Nothing - J’Nique Nicole
+nier-automata-city-ruins-rays-of-light;City Ruins - Rays of Light;2017;;;nier-automata;2;2;1;0;0;0;30;0;;;rpg-legado;0;City Ruins - Rays of Light
+nier-automata-peaceful-sleep;Peaceful Sleep;2017;;;nier-automata;1;4;1;0;0;0;30;0;;;rpg-legado;0;Peaceful Sleep
+nier-automata-memories-of-dust;Memories of Dust;2017;;;nier-automata;2;2;0;0;0;0;30;0;;;rpg-legado;0;Memories of Dust
+nier-automata-birth-of-a-wish;Birth of a Wish;2017;;;nier-automata;5;3;0;0;0;0;30;0;;;rpg-legado;0;Birth of a Wish
+nier-automata-the-color-of-depression;The Color of Depression;2017;;;nier-automata;;;0;0;0;0;30;0;;;rpg-legado;1;The Color of Depression
+nier-automata-amusement-park;Amusement Park;2017;;;nier-automata;3;4;1;0;0;0;30;0;;;rpg-legado;0;Amusement Park
+nier-automata-a-beautiful-song;A Beautiful Song;2017;;;nier-automata;5;2;1;0;0;0;30;0;;;rpg-legado;0;A Beautiful Song
+nier-automata-voice-of-no-return-guitar;Voice of no Return - Guitar;2017;;;nier-automata;2;3;0;0;0;0;30;0;;;rpg-legado;0;Voice of no Return - Guitar
+nier-automata-grandma-destruction;Grandma - Destruction;2017;;;nier-automata;5;3;1;0;0;0;30;0;;;rpg-legado;0;Grandma - Destruction
+nier-automata-faltering-prayer-dawn-breeze;Faltering Prayer - Dawn Breeze;2017;;;nier-automata;;;0;0;0;0;30;0;;;rpg-legado;1;Faltering Prayer - Dawn Breeze
+nier-automata-emils-shop;Emil's Shop;2017;;;nier-automata;2;4;0;0;0;0;30;0;;;rpg-legado;0;Emil's Shop
+nier-automata-treasured-times;Treasured Times;2017;;;nier-automata;;;0;0;0;0;30;0;;;rpg-legado;1;Treasured Times
+nier-automata-vague-hope-cold-rain;Vague Hope - Cold Rain;2017;;;nier-automata;3;2;0;0;0;0;30;0;;;rpg-legado;0;Vague Hope - Cold Rain
+nier-automata-weight-of-the-world-english-version-jnique-nicole;Weight of the World English Version - J’Nique Nicole;2017;;;nier-automata;3;3;1;0;0;0;30;0;;;rpg-legado;0;Weight of the World English Version - J’Nique Nicole
+nier-automata-significance-marina-kawano-emi-evans;Significance - Marina Kawano - Emi Evans;2017;;;nier-automata;2;2;1;0;0;0;30;0;;;rpg-legado;0;Significance - Marina Kawano - Emi Evans
+nier-automata-city-ruins-shade;City Ruins - Shade;2017;;;nier-automata;2;2;0;0;0;0;30;0;;;rpg-legado;0;City Ruins - Shade
+nier-automata-end-of-the-unknown;End of the Unknown;2017;;;nier-automata;5;3;0;0;0;0;30;0;;;rpg-legado;0;End of the Unknown
+nier-automata-voice-of-no-return-normal;Voice of no Return - Normal;2017;;;nier-automata;2;3;0;0;0;0;30;0;;;rpg-legado;0;Voice of no Return - Normal
+nier-automata-pascal;Pascal;2017;;;nier-automata;1;4;0;0;0;0;30;0;;;rpg-legado;0;Pascal
+nier-automata-forest-kingdom;Forest Kingdom;2017;;;nier-automata;4;4;0;0;0;0;30;0;;;rpg-legado;0;Forest Kingdom
+nier-automata-dark-colossus-kaiju;Dark Colossus - Kaiju;2017;;;nier-automata;5;2;0;0;0;0;30;0;;;rpg-legado;0;Dark Colossus - Kaiju
+nier-automata-copied-city;Copied City;2017;;;nier-automata;2;2;0;0;0;0;30;0;;;rpg-legado;0;Copied City
+nier-automata-wretched-weaponry-medium-dynamic;Wretched Weaponry: Medium/Dynamic;2017;;;nier-automata;5;3;0;0;0;0;30;0;;;rpg-legado;0;Wretched Weaponry: Medium/Dynamic
+nier-automata-possessed-by-disease;Possessed by Disease;2017;;;nier-automata;5;2;0;0;0;0;30;0;;;rpg-legado;0;Possessed by Disease
+nier-automata-broken-heart;Broken Heart;2017;;;nier-automata;2;2;0;0;0;0;30;0;;;rpg-legado;0;Broken Heart
+nier-automata-wretched-weaponry-quiet;Wretched Weaponry: Quiet;2017;;;nier-automata;3;2;0;0;0;0;30;0;;;rpg-legado;0;Wretched Weaponry: Quiet
+nier-automata-mourning;Mourning;2017;;;nier-automata;3;2;0;0;0;0;30;0;;;rpg-legado;0;Mourning
+nier-automata-dependent-weakling;Dependent Weakling;2017;;;nier-automata;5;2;0;0;0;0;30;0;;;rpg-legado;0;Dependent Weakling
+nier-automata-weight-of-the-world-kowaretasekainouta-marina-kawano;Weight of the World Kowaretasekainouta - Marina Kawano;2017;;;nier-automata;3;3;1;0;0;0;30;0;;;rpg-legado;0;Weight of the World Kowaretasekainouta - Marina Kawano
+nier-automata-rebirth-hope;Rebirth & Hope;2017;;;nier-automata;;;0;0;0;0;30;0;;;rpg-legado;1;Rebirth & Hope
+nier-automata-war-war;War & War;2017;;;nier-automata;;;0;0;0;0;30;0;;;rpg-legado;1;War & War
+nier-automata-crumbling-lies-front;Crumbling Lies - Front;2017;;;nier-automata;4;2;0;0;0;0;30;0;;;rpg-legado;0;Crumbling Lies - Front
+nier-automata-widespread-illness;Widespread Illness;2017;;;nier-automata;;;0;0;0;0;30;0;;;rpg-legado;1;Widespread Illness
+nier-automata-fortress-of-lies;Fortress of Lies;2017;;;nier-automata;4;3;0;0;0;0;30;0;;;rpg-legado;0;Fortress of Lies
+nier-automata-vague-hope-spring-rain;Vague Hope - Spring Rain;2017;;;nier-automata;;;0;0;0;0;30;0;;;rpg-legado;1;Vague Hope - Spring Rain
+nier-automata-song-of-the-ancients-atonement;Song of the Ancients - Atonement;2017;;;nier-automata;4;3;1;0;0;0;30;0;;;rpg-legado;0;Song of the Ancients - Atonement
+nier-automata-blissful-death;Blissful Death;2017;;;nier-automata;;;0;0;0;0;30;0;;;rpg-legado;1;Blissful Death
+nier-automata-emil-despair;Emil - Despair;2017;;;nier-automata;5;2;0;0;0;0;30;0;;;rpg-legado;0;Emil - Despair
+nier-automata-faltering-prayer-starry-sky;Faltering Prayer - Starry Sky;2017;;;nier-automata;;;0;0;0;0;30;0;;;rpg-legado;1;Faltering Prayer - Starry Sky
+nier-automata-alien-manifestation;Alien Manifestation;2017;;;nier-automata;3;3;0;0;0;0;30;0;;;rpg-legado;0;Alien Manifestation
+nier-automata-the-tower;The Tower;2017;;;nier-automata;4;2;0;0;0;0;30;0;;;rpg-legado;0;The Tower
+nier-automata-bipolar-nightmare;Bipolar Nightmare;2017;;;nier-automata;5;3;0;0;0;0;30;0;;;rpg-legado;0;Bipolar Nightmare
+nier-automata-the-sound-of-the-end;The Sound of the End;2017;;;nier-automata;5;2;0;0;0;0;30;0;;;rpg-legado;0;The Sound of the End
+nier-automata-weight-of-the-world-nouveau-fr-version-emi-evans;Weight of the World Nouveau - FR Version - Emi Evans;2017;;;nier-automata;3;3;1;0;0;0;30;0;;;rpg-legado;0;Weight of the World Nouveau - FR Version - Emi Evans
+nier-automata-weight-of-the-world-the-end-of-yorha;Weight of the World the End of YoRHa;2017;;;nier-automata;4;4;1;0;0;0;30;0;;;rpg-legado;0;Weight of the World the End of YoRHa
+descoberta-em-mesa-the-elder-scrolls-v-skyrim-ragnar-the-red-song-hd;Ragnar the Red;2011;;en;skyrim;4;4;1;0;0;0;45;0;;;rpg-legado;0;The Elder Scrolls V: Skyrim - Ragnar the Red. Song. HD
+descoberta-em-mesa-milton-nascimento-lo-borges-clube-da-esquina-n-2;Clube da Esquina nº 2;1972;;pt;;2;3;1;0;0;0;65;0;;;rpg-legado;0;Milton Nascimento, Lo Borges - Clube Da Esquina Nº2
+descoberta-em-mesa-zelda-original-soundtrack-song-of-storms;Song of Storms;1998;;;zelda-ocarina-of-time;3;4;0;0;0;0;60;0;;;rpg-legado;0;Zelda Original Soundtrack - Song of Storms
+descoberta-em-mesa-reginaldo-rossi-garcom-oficial;Garçom;1987;;pt;;2;3;1;0;0;0;80;0;;;rpg-legado;0;Reginaldo Rossi  - Garçom (Oficial)
+descoberta-em-mesa-gloria-gaynor-i-will-survive;I Will Survive;1978;;en;;4;4;1;0;0;0;95;1;;;rpg-legado;0;Gloria Gaynor - I Will Survive
+descoberta-em-mesa-trio-parada-dura-grao-de-areia;Grão de Areia;;;pt;;2;1;1;0;0;0;55;0;;;rpg-legado;0;TRIO PARADA DURA -- GRÃO DE AREIA
+descoberta-em-mesa-tim-maia-ela-partiu-official-audio;Ela Partiu;;;pt;;2;3;1;0;0;0;70;0;;;rpg-legado;0;Tim Maia – Ela Partiu (Official Audio)
+descoberta-em-mesa-gwyn-lord-of-cinder;Gwyn, Lord of Cinder;2011;;;dark-souls;2;2;0;0;0;0;60;0;;;rpg-legado;0;Gwyn, Lord of Cinder
+descoberta-em-mesa-d-d-background-music-city-town-square-day;City/Town Square - Day;;;;;4;4;0;0;0;0;20;0;;;rpg-legado;0;d&d Background Music -- [CITY/TOWN SQUARE - DAY]
+descoberta-em-mesa-frozen-tundra-arctic-ambience-1-hour-dnd;Frozen Tundra (Arctic Ambience);;;;;2;3;0;0;0;0;20;0;;;rpg-legado;0;Frozen Tundra | Arctic Ambience | 1 Hour #dnd
+descoberta-em-mesa-the-witcher-3-wild-hunt-ost-the-fields-of-ard-skellig-extended;The Fields of Ard Skellig;2015;;;witcher-3;2;4;1;0;0;0;55;0;;;rpg-legado;0;The Witcher 3: Wild Hunt OST - The Fields of Ard Skellig (Extended)
+descoberta-em-mesa-1-hour-of-dungeon-and-dragons-mystery-music-investigation-dnd-ambient-suspense-themes;Mystery Music: Investigation;;;;;2;3;0;0;0;0;20;0;;;rpg-legado;0;1 Hour of Dungeon and Dragons Mystery Music | Investigation | DnD Ambient Suspense Themes
+descoberta-em-mesa-blizzard-ambience-and-music-ambience-of-a-snow-storm-with-original-fantasy-music-ambientmusic;Blizzard Ambience and Music;;;;;2;3;0;0;0;0;20;0;;;rpg-legado;0;Blizzard Ambience and Music | ambience of a snow storm with original fantasy music #ambientmusic
+descoberta-em-mesa-d-d-ambience-damp-cave;Damp Cave;;;;;2;3;0;0;0;0;20;0;;;rpg-legado;0;D&D Ambience - Damp Cave
+descoberta-em-mesa-5e-d-d-combat-music-d-d-icewind-dale-campaign-1-hour-music;Combat Music (Icewind Dale);;;;;4;3;0;0;0;0;20;0;;;rpg-legado;0;5E D&D Combat Music  | D&D Icewind Dale Campaign  | 1 hour Music
+descoberta-em-mesa-paul-vs-gladion-pokemon-battle;Paul vs Gladion (Pokémon Battle);;;;pokemon;5;2;0;0;0;0;30;0;;;rpg-legado;0;Paul vs Gladion - Pokemon Battle
+descoberta-em-mesa-dnd-calm-fantasy-music-for-adventure-and-exploration-3-hour-mix-for-dungeons-dragons;Calm Fantasy Music for Adventure and Exploration;;;;;2;3;0;0;0;0;20;0;;;rpg-legado;0;DnD Calm Fantasy Music for Adventure and Exploration | 3 Hour Mix for Dungeons & Dragons
+descoberta-em-mesa-aline-barros-ressuscita-me-clipe-oficial-mk-music-hd;Ressuscita-me;;;pt;;2;3;1;0;0;0;75;0;;;rpg-legado;0;Aline Barros - Ressuscita-me (Clipe Oficial MK Music HD)
+descoberta-em-mesa-hope;Hope;2007;;;umineko;2;4;0;0;0;0;30;0;;;rpg-legado;0;Hope
+descoberta-em-mesa-song-of-healing-the-legend-of-zelda-majoras-mask-trifantasy;Song of Healing;2000;;;zelda-majoras-mask;2;4;0;0;0;0;50;0;;;rpg-legado;0;Song of Healing - The Legend of Zelda (Majora’s Mask) - Trifantasy
+descoberta-em-mesa-trails-in-the-sky-3rd-ost-cradle-where-feelings-rest-1-hour-extended;Cradle Where Feelings Rest;2007;;;trails-in-the-sky-3rd;2;2;0;0;0;0;30;0;;;rpg-legado;0;Trails in the Sky 3rd OST - Cradle Where Feelings Rest (1 hour extended)
+descoberta-em-mesa-trio-parada-dura-ultimo-adeus-ft-eduardo-costa;Último Adeus;;;pt;;2;3;1;0;0;0;50;0;;;rpg-legado;0;Trio Parada Dura - Último Adeus ft. Eduardo Costa
+descoberta-em-mesa-wasteland-d-d-ttrpg-music-1-hour;Wasteland;;;;;4;2;0;0;0;0;20;0;;;rpg-legado;0;Wasteland | D&D/TTRPG Music | 1 Hour
+descoberta-em-mesa-deep-waters-d-d-ttrpg-music-1-hour;Deep Waters;;;;;2;3;0;0;0;0;20;0;;;rpg-legado;0;Deep Waters | D&D/TTRPG Music | 1 Hour
+descoberta-em-mesa-pedras-escondidas;Pedras Escondidas;;;;;;;0;0;0;0;20;0;;;rpg-legado;1;Pedras Escondidas
+descoberta-em-mesa-weight-of-the-world-piano-collections-version-from-nier-automata-for-piano-solo;Weight of the World (Piano Collections);2017;;;nier-automata;3;3;0;0;0;0;60;0;;;rpg-legado;0;"Weight of the World: Piano Collections Version (From ""NieR: Automata"") (For Piano Solo)"
+descoberta-em-mesa-return-of-the-obra-dinn-soundtrack-theme;Theme;2018;;;return-of-the-obra-dinn;;;0;0;0;0;40;0;;;rpg-legado;1;Return of the Obra Dinn Soundtrack - Theme
+descoberta-em-mesa-spectral-sails-original-game-soundtrack;Spectral Sails;;;;spectral-sails;;;0;0;0;0;20;0;;;rpg-legado;1;Spectral Sails (Original Game Soundtrack)

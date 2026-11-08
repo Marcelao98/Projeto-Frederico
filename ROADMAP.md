@@ -35,14 +35,21 @@ Atualizado em 07/11/2026 (v0.6.0).
   (decisões D1–D12 ainda esperando o Marcelo). **Prioridade combinada: o banco
   de músicas** (SQLite, 5 mil músicas, público geral BR, gírias e ocasiões),
   plano em `docs/etapas/banco-fredify.md`. A B2 fica pra depois do banco.
-- **Etapa 1 do banco feita (08/11/2026), esperando o Marcelo aprovar as
-  listas:** `acervo/catalogo/` (README explica): 213 gêneros em 23 famílias,
-  28 climas, 47 ocasiões com perfil (17 de RPG), 24 temas de letra, 18
-  instrumentos, 14 cenários, 558 gírias/expressões (580 ligações) e o de-para
-  das 226 tags do acervo (`mapa_tags_acervo.csv`; 2 pra ele decidir:
-  `tampe ouvidos` e `não classificado`). O app não mudou. **Próximo passo:
-  etapa 2 (banco de pé: esquema, compilador dos CSV, pedidos de ouro, as 607
-  de RPG migradas).**
+- **Banco do Fredify, etapas 1 e 2 feitas (08/11/2026)**, tudo em
+  `acervo/catalogo/` (o README de lá explica):
+  - *Vocabulário* (etapa 1, aprovada): 213 gêneros em 23 famílias, 28 climas,
+    47 ocasiões com perfil (17 de RPG), 24 temas de letra, 18 instrumentos, 14
+    cenários, ~750 gírias/expressões e o de-para das tags do acervo.
+  - *Banco de pé* (etapa 2): esquema SQLite + FTS5 (`backend/freddy/catalogo/`),
+    compilador com as regras (`python -m freddy.catalogo.compilar`), as 607 de
+    RPG migradas (40 "não classificado" ficam marcadas pra revisar), consulta
+    protótipo que entende gíria, ocasião por perfil, época, "sem", "ou" e
+    "e depois", e 108 pedidos de ouro rodando nos testes (75 conferem
+    resultado; 33 de música geral ficam pendentes até ter música).
+  - O app ainda usa o `musicas.json`: nada do app mudou.
+- **Próximo passo: etapa 3, bloco 1** (500 músicas): Claude gera a lista em
+  arquivo, o Marcelo corta/acrescenta, e o script do link oficial roda no
+  Fedora dele (o YouTube bloqueia a nuvem).
 
 ## Como desenvolver sem sofrer
 
