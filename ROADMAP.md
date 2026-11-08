@@ -21,9 +21,7 @@ Atualizado em 07/11/2026 (v0.6.0).
 ## Onde paramos (08/11/2026)
 
 - **v0.6.0 pronta** (etapa B1 da arquitetura nova). Tudo no `main`.
-- ⚠️ **O branch principal do GitHub ainda é `bardo-inicial`**: o Marcelo troca
-  em Settings → General → Default branch → `main` (a sessão na nuvem não tem
-  permissão). Até lá, sempre começar do `main` explicitamente.
+- ✅ **O branch principal do GitHub é o `main`** (o Marcelo trocou em 08/11).
 - **Visão nova (07/11/2026): o Freddy vira o Fredify**, um tocador de música
   universal (música + efeitos sonoros; Windows, Linux, Android; toca no
   aparelho, no Discord e em outras plataformas; banco de dados pra busca).
