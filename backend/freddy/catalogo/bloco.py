@@ -96,3 +96,98 @@ def escolher_gravacao(artista: str, titulo: str, gravacoes: list[dict]) -> tuple
         return None, "não achei no MusicBrainz"
     boas.sort(key=lambda b: b[0])
     return boas[0][1], f"{len(boas)} gravações batem, a mais antiga"
+
+
+# ---------- a lista de um bloco (o que o Claude gera) ----------
+
+COLUNAS = ["artista", "titulo", "ano", "genero", "genero2", "feat", "idioma", "tem_voz", "energia",
+           "animacao", "climas", "ocasioes", "temas", "instrumentos", "popularidade", "essencial",
+           "canta_junto", "explicita", "ao_vivo", "nota"]
+IDIOMAS = {"pt", "en", "es", "it", "fr", "de", "ja", "ko", "la", "outro", ""}
+
+
+def chave_musica(artista: str, titulo: str) -> str:
+    """Pra achar repetida entre blocos: 'Chitãozinho & Xororó' + 'Evidências' -> 'chitaozinhoxororo|evidencias'."""
+    return _simples(artista) + "|" + _simples(re.sub(r"\(.*?\)", "", titulo) or titulo)
+
+
+def conferir_lista(linhas: list[dict], generos: set[str], tags: dict[str, str]) -> list[str]:
+    """Erros de uma lista de bloco (vazio = boa). tags: id -> gaveta."""
+    erros = []
+
+    def gaveta(lista: str, nome: str, onde: str, minimo: int = 0) -> None:
+        ids = [x for x in lista.split("|") if x]
+        if len(ids) < minimo:
+            erros.append(f"{onde}: precisa de pelo menos {minimo} em {nome}")
+        for x in ids:
+            if tags.get(x) != nome:
+                erros.append(f"{onde}: {nome} {x!r} não existe")
+
+    vistas: set[str] = set()
+    for i, l in enumerate(linhas, 2):
+        onde = f"linha {i} ({l.get('artista')} - {l.get('titulo')})"
+        if set(l) != set(COLUNAS) or None in l.values():
+            erros.append(f"{onde}: colunas erradas (tem ';' sobrando ou faltando?)")
+            continue
+        if not l["artista"].strip() or not l["titulo"].strip():
+            erros.append(f"{onde}: sem artista ou título")
+        k = chave_musica(l["artista"], l["titulo"])
+        if k in vistas:
+            erros.append(f"{onde}: repetida")
+        vistas.add(k)
+        if not re.fullmatch(r"\d{4}", l["ano"]) or not 1600 <= int(l["ano"]) <= 2026:
+            erros.append(f"{onde}: ano {l['ano']!r}")
+        for col in ("genero", "genero2"):
+            if (l[col] or col == "genero") and l[col] not in generos:
+                erros.append(f"{onde}: {col} {l[col]!r} não existe")
+        if l["idioma"] not in IDIOMAS:
+            erros.append(f"{onde}: idioma {l['idioma']!r}")
+        for col, lo, hi in (("energia", 1, 5), ("animacao", 1, 5), ("popularidade", 0, 100)):
+            if not re.fullmatch(r"\d{1,3}", l[col]) or not lo <= int(l[col]) <= hi:
+                erros.append(f"{onde}: {col} {l[col]!r} (de {lo} a {hi})")
+        for col in ("tem_voz", "essencial", "canta_junto", "explicita", "ao_vivo"):
+            if l[col] not in ("0", "1"):
+                erros.append(f"{onde}: {col} tem que ser 0 ou 1")
+        gaveta(l["climas"], "clima", onde, 2)
+        gaveta(l["ocasioes"], "ocasiao", onde)
+        gaveta(l["temas"], "tema", onde)
+        gaveta(l["instrumentos"], "instrumento", onde)
+    return erros
+
+
+def _main() -> int:
+    """python -m freddy.catalogo.bloco conferir <lista.csv> [outras listas.csv ...]"""
+    import csv
+    import sys
+    from pathlib import Path
+
+    from freddy.catalogo.compilar import PASTA_CATALOGO, carregar
+
+    d = carregar(PASTA_CATALOGO)
+    generos = {g["id"] for g in d["generos"]}
+    tags = {t["id"]: t["gaveta"] for t in d["tags"]}
+    arquivos = [Path(a) for a in sys.argv[2:]]
+    todas: dict[str, str] = {}
+    total_erros = 0
+    for arq in arquivos:
+        with open(arq, encoding="utf-8") as f:
+            linhas = list(csv.DictReader(f, delimiter=";"))
+        erros = conferir_lista(linhas, generos, tags)
+        for l in linhas:  # repetida entre listas diferentes
+            k = chave_musica(l.get("artista") or "", l.get("titulo") or "")
+            if k in todas and todas[k] != arq.name:
+                erros.append(f"{l['artista']} - {l['titulo']}: já está em {todas[k]}")
+            todas.setdefault(k, arq.name)
+        for e in erros[:80]:
+            print(f"{arq.name}: {e}")
+        print(f"{arq.name}: {len(linhas)} músicas, {len(erros)} erros")
+        total_erros += len(erros)
+    return 1 if total_erros else 0
+
+
+if __name__ == "__main__":
+    import sys
+
+    if len(sys.argv) >= 3 and sys.argv[1] == "conferir":
+        sys.exit(_main())
+    print(_main.__doc__)

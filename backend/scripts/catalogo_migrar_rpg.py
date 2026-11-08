@@ -129,7 +129,26 @@ def ler(nome: str) -> list[dict]:
         return list(csv.DictReader(f, delimiter=";"))
 
 
+def _de_blocos(nome: str, cabecalho: list[str]) -> list[list]:
+    """As linhas que vieram dos blocos da etapa 3 (lote bloco-NN): a migração não mexe nelas."""
+    if not (CAT / nome).exists() or nome == "obras.csv":
+        return []
+    linhas = ler(nome)
+    if nome == "musicas.csv":
+        return [[l[c] for c in cabecalho] for l in linhas if l["lote"].startswith("bloco-")]
+    if nome == "artistas.csv":
+        return [[l[c] for c in cabecalho] for l in linhas]  # junta e tira repetidos abaixo
+    de_bloco = {m["id"] for m in ler("musicas.csv") if m["lote"].startswith("bloco-")}
+    return [[l[c] for c in cabecalho] for l in linhas if l["musica"] in de_bloco]
+
+
 def escrever(nome: str, cabecalho: list[str], linhas: list[list]) -> None:
+    extra = _de_blocos(nome, cabecalho)
+    if nome == "artistas.csv":
+        ja = {l[0] for l in linhas}
+        linhas = sorted(linhas + [l for l in extra if l[0] not in ja])
+    else:
+        linhas = linhas + extra
     with open(CAT / nome, "w", encoding="utf-8", newline="") as f:
         w = csv.writer(f, delimiter=";", lineterminator="\n")
         w.writerow(cabecalho)
@@ -231,9 +250,6 @@ def main() -> None:
         tipo_fonte = "youtube" if x["escopo"] == "faixa_individual" else "youtube-album"
         fontes.append([mid, tipo_fonte, x["link"], oficial, 1, None])
 
-    escrever("musicas.csv", ["id", "titulo", "ano", "duracao", "idioma", "obra", "energia", "animacao",
-                             "tem_voz", "canta_junto", "ao_vivo", "explicita", "popularidade", "essencial",
-                             "mbid", "isrc", "lote", "revisar", "nome_original"], musicas)
     escrever("obras.csv", ["id", "nome", "tipo", "ano", "apelidos"],
              [[o, *OBRAS[o], APELIDOS.get(o, "")] for o in sorted(obras_usadas)])
     escrever("artistas.csv", ["id", "nome", "tipo", "pais", "regiao", "ano_inicio", "mbid"],
@@ -242,6 +258,9 @@ def main() -> None:
     escrever("musica_genero.csv", ["musica", "genero", "peso"], mus_gen)
     escrever("musica_tag.csv", ["musica", "tag", "peso", "quem_marcou"], mus_tag)
     escrever("fontes.csv", ["musica", "tipo", "endereco", "oficial", "viva", "conferida_em"], fontes)
+    escrever("musicas.csv", ["id", "titulo", "ano", "duracao", "idioma", "obra", "energia", "animacao",
+                             "tem_voz", "canta_junto", "ao_vivo", "explicita", "popularidade", "essencial",
+                             "mbid", "isrc", "lote", "revisar", "nome_original"], musicas)
     print(f"{len(musicas)} músicas, {len(obras_usadas)} obras, {len(artistas)} artistas, "
           f"{len(mus_tag)} marcações, {sum(m[17] for m in musicas)} pra revisar")
 

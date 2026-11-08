@@ -66,5 +66,62 @@ class TestEscolherGravacao(unittest.TestCase):
         self.assertIsNotNone(escolher_gravacao("Elis Regina & Tom Jobim", "Águas de Março", grav)[0])
 
 
+
+class TestImportar(unittest.TestCase):
+    """Um bloco pequeno, já 'conferido', passa pela importação e o catálogo compila."""
+
+    def test_bloco_conferido_entra_e_compila(self):
+        import csv
+        import shutil
+        import tempfile
+        from pathlib import Path
+
+        from freddy.catalogo.bloco import COLUNAS
+        from freddy.catalogo.compilar import PASTA_CATALOGO, compilar
+        from freddy.catalogo.importar import importar
+
+        with tempfile.TemporaryDirectory() as tmp:
+            cat = Path(tmp) / "catalogo"
+            shutil.copytree(PASTA_CATALOGO, cat, ignore=shutil.ignore_patterns("blocos"))
+            (cat / "blocos").mkdir()
+            base = dict.fromkeys(COLUNAS, "")
+            linhas = [
+                {**base, "artista": "Chitãozinho & Xororó", "titulo": "Evidências", "ano": "1989",
+                 "genero": "sertanejo-romantico", "idioma": "pt", "tem_voz": "1", "energia": "3", "animacao": "2",
+                 "climas": "sofrido|romantico", "ocasioes": "karaoke", "temas": "amor", "popularidade": "98",
+                 "essencial": "1", "canta_junto": "1", "explicita": "0", "ao_vivo": "0"},
+                {**base, "artista": "Fulano", "titulo": "Sem Link", "ano": "2001", "genero": "pop",
+                 "idioma": "pt", "tem_voz": "1", "energia": "3", "animacao": "3", "climas": "alegre|animado",
+                 "popularidade": "10", "essencial": "0", "canta_junto": "0", "explicita": "0", "ao_vivo": "0"},
+            ]
+
+            def grava(nome, cab, rows):
+                with open(cat / "blocos" / nome, "w", encoding="utf-8", newline="") as f:
+                    w = csv.DictWriter(f, fieldnames=cab, delimiter=";", lineterminator="\n")
+                    w.writeheader()
+                    w.writerows(rows)
+
+            grava("bloco-02.csv", COLUNAS, linhas)
+            grava("bloco-02.musicbrainz.csv", ["artista", "titulo", "ano_lista", "ano_mb", "confere", "mbid", "duracao", "motivo"],
+                  [{"artista": "Chitãozinho & Xororó", "titulo": "Evidências", "ano_lista": "1989", "ano_mb": "1990",
+                    "confere": "NÃO", "mbid": "abc", "duracao": "270", "motivo": ""}])
+            grava("bloco-02.youtube.csv", ["artista", "titulo", "endereco", "canal", "oficial", "duracao", "motivo"],
+                  [{"artista": "Chitãozinho & Xororó", "titulo": "Evidências", "endereco": "https://www.youtube.com/watch?v=x",
+                    "canal": "Chitãozinho & Xororó - Topic", "oficial": "1", "duracao": "270", "motivo": "Topic"},
+                   {"artista": "Fulano", "titulo": "Sem Link", "endereco": "", "canal": "", "oficial": "0",
+                    "duracao": "", "motivo": "nenhum upload oficial nos resultados"}])
+
+            rel = importar(cat)
+            self.assertEqual(rel.por_bloco["bloco-02"]["entrou"], 1)
+            self.assertEqual(len(rel.pendentes), 1)
+            self.assertEqual(len(rel.anos_corrigidos), 1)
+            r = compilar(cat, saida=Path(tmp) / "c.db")
+            self.assertEqual(r.erros, [])
+            importar(cat)  # de novo: não duplica
+            with open(cat / "musicas.csv", encoding="utf-8") as f:
+                novas = [m for m in csv.DictReader(f, delimiter=";") if m["lote"] == "bloco-02"]
+            self.assertEqual([(m["titulo"], m["ano"]) for m in novas], [("Evidências", "1990")])
+
+
 if __name__ == "__main__":
     unittest.main()
