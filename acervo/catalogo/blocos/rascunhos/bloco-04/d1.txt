@@ -1,0 +1,98 @@
+Tonico & Tinoco|Cabocla Tereza|1960|mc|55|2|2|dr,me|tc,per|u
+Tonico & Tinoco|Tristeza do Jeca|1918|mc|60|2|2|me,no|vc,sol|n=ano = composição
+Tonico & Tinoco|Rio de Lágrimas|1959|mc|60|2|2|sa,me|per,vc|u,C
+Tonico & Tinoco|Moda da Mula Preta|1950|mc|45|3|3|no,en|vc,zo|u
+Tonico & Tinoco|Casinha Pequenina|1950|mc|50|2|3|ac,no|vc,am|u
+Tião Carreiro & Pardinho|Boi Soberano|1960|sr|55|3|3|co,no|vc|u
+Tião Carreiro & Pardinho|Rei do Gado|1961|sr|65|3|3|co,no|vc|u,C
+Tião Carreiro & Pardinho|Mágoa de Boiadeiro|1960|sr|50|3|2|me,sa|vc,per|u
+Inezita Barroso|Moda da Pinga|1953|mc|60|3|4|en,al|ca,zo|C
+Cascatinha & Inhana|Índia|1952|mc|55|2|2|ro,me|am,sol|u
+Belmonte & Amaraí|Saudade da Minha Terra|1950|mc|55|2|2|sa,no|vc,sol|u
+Sérgio Reis|Coração de Papel|1967|sr|75|2|2|sa,ro|am,dc|
+Sérgio Reis|Panela Velha|1975|sr|40|3|3|no,ac|fam,vc|u
+Sérgio Reis|Comitiva Esperança|1980|sr|50|3|3|no,es|pp,vc|u
+Pena Branca & Xavantinho|Cuitelinho|1980|sr|55|2|2|sa,me|per,vc|u
+Almir Sater|Trem do Pantanal|1983|sr|50|3|3|ct,no|lib|I,u
+Almir Sater|Chalana|1980|sr|50|2|2|me,sa|per,vc|u
+Renato Teixeira|Frete|1977|sr|45|3|3|ac,no|pp|u
+Milionário & José Rico|Jogo do Amor|1975|sr|55|3|2|so,sa|dc,am|u
+Milionário & José Rico|Ainda Ontem Chorei de Saudade|1975|sr|50|2|2|sa,so|dc,sol|u
+Rick & Renner|Humilhação|1995|rm|55|3|2|so,sa|dc,am|u
+Roberta Miranda|A Majestade, o Sabiá|1989|rm|75|2|3|no,es|vc,lib|E,C
+Roberta Miranda|Vá Pro Inferno com o Seu Amor|1987|rm|60|3|3|co,so|te,dc|u
+Chitãozinho & Xororó|Galopeira|1988|rm|45|4|4|al,an|pp,vc|u
+Chitãozinho & Xororó|Meu Disfarce|1985|rm|50|3|2|so,sa|dc,am|u
+Chitãozinho & Xororó|Nuvem de Lágrimas|1982|rm|50|2|2|sa,so|dc,per|u
+Zezé Di Camargo & Luciano|Dois Corações e Uma História|1991|rm|60|2|3|ro,es|am,pa|
+Zezé Di Camargo & Luciano|Flores em Vida|1993|rm|55|2|3|ro,sa|am,fam|u
+Leandro & Leonardo|Não Aprendi Dizer Adeus|1991|rm|75|2|2|sa,so|dc,te|E,C
+Leandro & Leonardo|Temporal de Amor|1990|rm|65|3|3|ro,no|am,pa|
+Leandro & Leonardo|Eu Juro|1990|rm|60|2|2|ro,sa|am|u
+Bruno & Marrone|Vida Vazia|1999|rm|60|2|2|so,sa|dc,sol|u
+Victor & Leo|Deus e Eu no Sertão|2009|rm|80|3|3|es,no|fa,vc|C
+Victor & Leo|Fada|2002|rm|70|2|4|ro,ac|am,pa|C
+Victor & Leo|Amigo|2005|rm|60|2|3|ac,no|ami|u
+Michel Teló|Fugidinha|2011|un|75|4|4|al,fe|cu,pa|C
+Michel Teló|Humilde Residência|2012|un|65|4|4|al,an|cu,am|u
+Michel Teló|Amanhã Sei Lá|2013|un|55|4|4|al,fe|cu|u
+Michel Teló|Bara Bará Bere Berê|2012|un|75|5|5|fe,em|da,cu|C
+Michel Teló|Ei, Psiu! Beijo Me Liga|2012|un|60|4|4|al,fe|pa,cu|u
+João Lucas & Marcelo|Eu Quero Tchu, Eu Quero Tcha|2009|un|85|5|5|fe,en|da,zo|C
+Luan Santana|Sinais|2010|un|75|3|3|ro,sa|am,pa|C
+Luan Santana|Chuva de Arroz|2010|un|75|3|4|ro,al|am,pa|C
+Luan Santana|Eu, Você, O Mar e Ela|2013|un|75|3|4|ro,al|am,pa|C
+Luan Santana|Te Esperando|2012|un|70|3|3|ro,sa|am,sol|C
+Luan Santana|Escreve Aí|2012|un|70|3|4|ro,al|am,pa|C
+Luan Santana|Acordando o Prédio|2013|un|75|5|5|fe,an|cu,da|C
+Luan Santana|Quando Você Passa (Turu Turu)|2013|un|65|4|4|al,se|pa,pe|u
+Luan Santana|Sorte Que Cê Beija Bem|2013|un|60|3|4|ro,se|pa|u
+Luan Santana|Tudo Que Você Quiser|2010|un|70|3|4|ro,es|am,pa|C
+Jorge & Mateus|Sosseguei|2013|un|85|3|3|so,sa|dc,te|C
+Jorge & Mateus|Calma|2011|un|75|3|3|ro,sa|am,pa|C
+Jorge & Mateus|Tijolão|2016|un|65|4|4|an,al|cu,pa|C
+Jorge & Mateus|A Hora É Agora|2014|un|65|4|4|an,co|cu|C
+Jorge & Mateus|Amo Noite e Dia|2013|un|70|3|4|ro,al|am,pa|C
+Jorge & Mateus|Louca|2013|un|70|3|3|sa,ro|am,dc|u
+Jorge & Mateus|Lugar Perfeito|2016|un|60|3|4|ro,al|am|u
+Jorge & Mateus|Propaganda|2016|un|65|4|3|so,co|dc,te|u
+Jorge & Mateus|Querendo Te Encontrar|2012|un|60|3|3|sa,ro|am,sol|u
+Gusttavo Lima|Inventor dos Amores|2012|un|80|3|3|so,ro|am,dc|C
+Gusttavo Lima|Gatinha Assanhada|2010|un|65|4|4|al,an|pa,cu|u
+Gusttavo Lima|Apelido Carinhoso|2014|un|70|3|4|ro,al|am,pa|C
+Gusttavo Lima|Fui Fiel|2019|un|65|3|3|so,sa|dc,tc|C
+Gusttavo Lima|Zé da Recaída|2019|un|75|4|3|co,en|te,pa|C
+Gusttavo Lima|Cem Mil|2016|un|55|4|4|co,al|os,pa|u
+Henrique & Juliano|Recaídas|2019|un|80|3|2|so,sa|dc,te|C
+Henrique & Juliano|Flor e o Beija-Flor|2019|un|75|3|3|ro,sa|am,pa|C
+Henrique & Juliano|Até Você Voltar|2019|un|65|3|2|sa,so|dc,sol|u
+Henrique & Juliano|Vício|2018|un|60|3|3|ro,se|pa|u
+Henrique & Juliano|Como É Que Faz|2018|un|55|3|3|ro,sa|am|u
+Marília Mendonça|Amante Não Tem Lar|2016|so|75|3|2|so,dr|tc,dc|C
+Marília Mendonça|Eu Sei de Cor|2017|so|80|3|2|sa,so|dc,sol|C
+Marília Mendonça|De Quem É a Culpa|2016|so|70|3|2|so,dr|te,dc|u
+Marília Mendonça|Bebi Liguei|2017|so|80|4|3|so,co|ca,dc|C
+Marília Mendonça|Ciumeira|2016|so|75|3|3|co,so|tc,pa|C
+Marília Mendonça|Troca de Calçada|2019|so|70|3|3|co,so|te,tc|C
+Marília Mendonça|Bruxaria|2019|so|65|3|3|se,co|pa|u
+Marília Mendonça|Graças a Deus|2017|so|60|3|4|al,es|fa,su|u
+Maiara & Maraisa|Esqueça-me Se For Capaz|2018|fe|75|3|2|so,sa|dc,te|C
+Maiara & Maraisa|Marcas do Que Se Foi|2019|fe|60|3|2|sa,so|dc,per|u
+Simone & Simaria|Regime Fechado|2017|fe|80|4|4|co,an|pa,cu|f=Sorocaba,C
+Simone & Simaria|Meu Violão e o Nosso Cachorro|2016|fe|70|3|2|so,sa|te,dc|u,C
+Naiara Azevedo|Pode Vir Quente Que Eu Estou Fervendo|2019|fe|65|4|4|co,se|pa,pe|u
+Zé Neto & Cristiano|Seu Polícia|2017|un|65|4|4|an,en|cu,zo|u
+Cristiano Araújo|Efeito Colateral|2012|un|75|3|3|sa,ro|am,dc|C
+Cristiano Araújo|Maus Bocados|2013|un|80|3|3|so,sa|dc,te|C
+Cristiano Araújo|Caso Indefinido|2013|un|65|3|3|ro,sa|am|u
+Cristiano Araújo|Cê Que Sabe|2014|un|60|3|3|sa,ro|am,te|u
+Munhoz & Mariano|Camaro Amarelo|2012|un|70|5|5|fe,co|os,cu|C
+Marcos & Belutti|Domingo de Manhã|2011|un|70|3|4|ro,ac|am,pa|C
+Marcos & Belutti|Aquele 1%|2015|un|65|3|3|ro,sa|am|u
+Fernando & Sorocaba|Paga Pau|2011|un|60|4|4|an,al|cu,pa|u
+Felipe Araújo|Atrasadinha|2019|un|75|4|4|se,an|pa,pe|f=Ferrugem,C
+Ana Castela|Boiadeira|2022|ag|80|4|4|al,an|vc,cu|C
+Ana Castela|Solteiro Forçado|2023|ag|70|4|3|co,so|te,cu|C
+Ana Castela|Pecado Capital|2023|ag|55|3|3|se,ro|pa|u
+Simone Mendes|Erro Gostoso|2021|fe|75|4|4|se,co|pa,pe|C
+Paula Fernandes|Jura|2012|fe|55|2|3|ro,sa|am|u

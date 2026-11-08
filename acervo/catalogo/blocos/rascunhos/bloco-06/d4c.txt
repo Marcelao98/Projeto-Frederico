@@ -1,0 +1,132 @@
+Sepultura|Refuse/Resist|1993|thrash-metal|5|2|agressivo,tenso,empolgante|critica-social|68|C|treino||
+Sepultura|Territory|1993|thrash-metal|5|2|agressivo,tenso|critica-social|55|||
+Sepultura|Dead Embryonic Cells|1991|thrash-metal|5|2|agressivo,sombrio|critica-social|45|||
+Sepultura|Arise|1991|thrash-metal|5|2|agressivo,epico|critica-social|52|||
+Sepultura|Troops of Doom|1986|death-metal|5|2|agressivo,sombrio|critica-social|42|||
+Sepultura|Inner Self|1989|thrash-metal|5|2|agressivo|solidao|40|||
+Sepultura|Ratamahatta|1996|nu-metal|5|3|agressivo,tenso,empolgante|critica-social|58|||
+Sepultura|Attitude|1996|nu-metal|5|2|agressivo|liberdade|40|||
+Sepultura|Biotech Is Godzilla|1996|thrash-metal|5|2|agressivo|critica-social|40|||
+Sepultura|Slave New World|1993|thrash-metal|5|2|agressivo|critica-social|40|||
+Sepultura|Orgasmatron|1991|thrash-metal|5|2|agressivo|critica-social|30|||
+Sepultura|Policia|1996|thrash-metal|5|2|agressivo|critica-social|35|||
+Sepultura|Mass Hypnosis|1993|thrash-metal|5|2|agressivo|critica-social|25|||
+Sepultura|Choke|1996|thrash-metal|5|2|agressivo|critica-social|30|||
+Sepultura|Kaiowas|1993|thrash-metal|4|2|tenso,sombrio|critica-social|35|||
+Sarcófago|I.N.R.I.|1987|black-metal|5|1|sombrio,agressivo,assustador|fe|40|||
+Sarcófago|The Black Vomit|1987|black-metal|5|1|sombrio,agressivo|fe|25|||
+Krisiun|Ravager|2000|death-metal|5|1|agressivo,sombrio|fe|30|||
+Krisiun|Black Force Domain|1995|death-metal|5|1|agressivo,sombrio|fe|25|||
+Krisiun|Combustion Inferno|2003|death-metal|5|1|agressivo|fe|25|||
+Torture Squad|Pandemonium|1999|thrash-metal|5|2|agressivo|critica-social|20|||
+Korzus|Guerrilha|1987|thrash-metal|5|2|agressivo,tenso|critica-social|30|||
+Korzus|Mass Control|1988|thrash-metal|5|2|agressivo|critica-social|20|||
+Korzus|Ties of Blood|2001|thrash-metal|5|2|agressivo|critica-social|20|||
+Dorsal Atlântica|Antes do Fim|1986|thrash-metal|5|2|agressivo|critica-social|20|||
+Viper|Theatre of Fate|1989|power-metal|4|3|epico,dramatico|liberdade|35|||
+Viper|Rebel Maniac|1987|heavy-metal|5|4|empolgante,agressivo|liberdade|25|||
+Viper|Soldiers of Sunrise|1987|power-metal|5|3|epico,empolgante|liberdade|35|||
+Viper|At Least a Chance|1989|power-metal|4|3|epico,dramatico|liberdade|22|||
+Angra|Nova Era|1993|power-metal|4|3|epico,esperancoso,empolgante|liberdade|50|||
+Angra|Angels Cry|1993|power-metal|4|3|epico,dramatico|liberdade|55|||
+Angra|Rebirth|2001|power-metal|4|4|epico,esperancoso|superacao|50|||
+Angra|Nothing to Say|1993|power-metal|4|3|epico,dramatico|liberdade|55|||
+Angra|Lisbon|1993|power-metal|3|3|epico,melancolico,sonhador|liberdade|50|||
+Angra|Waiting Silence|1996|power-metal|4|3|epico,dramatico|solidao|35|||
+Angra|Carolina IV|1993|power-metal|4|4|epico,magico|liberdade|40|||
+Angra|Spread Your Fire|2001|power-metal|5|4|empolgante,epico|superacao|42|||
+Angra|Wishing Well|2004|power-metal|4|3|epico,esperancoso|liberdade|35|||
+Angra|Make Believe|2001|power-metal|3|3|sonhador,dramatico|liberdade|30|||
+Angra|Newborn Me|2001|power-metal|4|3|epico,esperancoso|superacao|25|||
+Angra|Running Alone|1996|power-metal|4|3|epico|solidao|30|||
+Angra|Z.I.T.O.|2004|power-metal|4|3|epico,empolgante|liberdade|20|||
+Shaman|Fairy Tale|2002|power-metal|4|3|epico,magico|liberdade|45|||
+Shaman|Over Your Head|2002|power-metal|4|3|epico,dramatico|superacao|40|||
+Shaman|Pride|2002|power-metal|4|3|epico,confiante|orgulho|25|||
+Shaman|Turn Away|2005|power-metal|4|3|epico,dramatico|termino|20|||
+Shaman|Distant Thunder|2002|power-metal|4|3|epico|liberdade|20|||
+Dr. Sin|Bad Boys|1993|hard-rock|4|4|animado,confiante|curticao|30|||
+Ratos de Porão|Crucificados pelo Sistema|1984|punk|5|2|agressivo,tenso|critica-social|30|||
+Ratos de Porão|Aids, Pop, Repressão|1986|punk|5|2|agressivo|critica-social|20|||
+Ratos de Porão|Anarkophobia|1991|punk|5|2|agressivo|critica-social|20|||
+Cólera|Quanto Vale a Liberdade|1984|punk|5|2|agressivo,tenso|liberdade|35|||
+Cólera|Medo|1984|punk|5|2|tenso|critica-social|30|||
+Inocentes|Pânico em SP|1982|punk|5|2|agressivo,tenso|critica-social|35|||
+Inocentes|Garotos do Subúrbio|1982|punk|5|2|agressivo|quebrada|35|||
+Cidade Negra|Falar a Verdade|1996|reggae-nacional|3|4|alegre,esperancoso|amor,liberdade|55|||
+Cidade Negra|A Cor do Sol|1994|reggae-nacional|3|4|calmo,alegre|praia,liberdade|58|||
+Cidade Negra|Realidade Virtual|1995|reggae-nacional|3|4|alegre|amor|40|||
+Cidade Negra|Girassol|2001|reggae-nacional|3|4|alegre,romantico|amor|55|C|||
+Cidade Negra|Sobre Todas as Coisas|1990|reggae-nacional|3|4|romantico|amor|40|||
+Cidade Negra|Pensamento|1994|reggae-nacional|3|4|alegre,esperancoso|liberdade|40|||
+Cidade Negra|Dia Especial|1996|reggae-nacional|3|4|alegre|amor|20|||
+Cidade Negra|Me Encontra|1996|reggae-nacional|3|4|romantico|amor|20|||
+Cidade Negra|Aonde Você Mora|1996|reggae-nacional|3|4|alegre|amor|20|||
+Cidade Negra|Eu Sei de Cor|2002|reggae-nacional|3|4|romantico|amor|20|||
+Cidade Negra|Que Maravilha|2000|reggae-nacional|3|4|alegre|amor|20|||
+Cidade Negra|Firmamento|1994|reggae-nacional|3|4|alegre,esperancoso|liberdade|35|||
+Natiruts|Quero Ser Feliz Também|2002|reggae-nacional|3|4|alegre,esperancoso,calmo|liberdade,amor|82|C|praia||
+Natiruts|Presente de um Beija-Flor|2002|reggae-nacional|2|4|calmo,aconchegante,romantico|amor|74|C|||
+Natiruts|Sorri, Sou Rei|2006|reggae-nacional|3|4|alegre,esperancoso|superacao|68|C|||
+Natiruts|Natiruts Reggae Power|2002|reggae-nacional|3|4|alegre,animado|liberdade|60|C|||
+Natiruts|Andar com Fé|2004|reggae-nacional|3|4|esperancoso,sagrado|fe|58|||
+Natiruts|Alegria Compartilhada|2004|reggae-nacional|3|4|alegre|amizade|40|||
+Natiruts|Minha Alma|2006|reggae-nacional|3|3|contemplativo|solidao|20|||
+Natiruts|Lamento|2006|reggae-nacional|3|3|melancolico|solidao|20|||
+Natiruts|Palco|2004|reggae-nacional|3|4|alegre|liberdade|25|||
+Ponto de Equilíbrio|Dias de Paz|2002|reggae-nacional|3|4|calmo,esperancoso|fe|50|||
+Ponto de Equilíbrio|Vem pra Cá|2002|reggae-nacional|3|4|alegre|amizade|50|||
+Ponto de Equilíbrio|Cuidado|2002|reggae-nacional|3|4|alegre|amor|20|||
+Ponto de Equilíbrio|Vagabundo|2006|reggae-nacional|3|4|alegre|liberdade|40|||
+Tribo de Jah|Bem-Vindo|2002|reggae-nacional|3|4|alegre|liberdade|40|||
+Tribo de Jah|Tenho Fé|2000|reggae-nacional|3|4|esperancoso|fe|40|||
+Tribo de Jah|Tribo de Jah|1998|reggae-nacional|3|4|alegre|fe|30|||
+Edson Gomes|Árvore|1991|reggae-nacional|3|3|contemplativo|critica-social|35|||
+Edson Gomes|Malandragem Dá um Tempo|1989|reggae-nacional|3|4|alegre|critica-social|30|||
+Edson Gomes|Acorda Maria Bonita|1990|reggae-nacional|3|3|esperancoso|critica-social|30|||
+Edson Gomes|Camaleão|1988|reggae-nacional|3|3|esperancoso|critica-social|40|||
+Gilberto Gil|Não Chore Mais|1979|reggae-nacional|3|4|esperancoso,calmo,nostalgico|liberdade,superacao|82|C|||
+Armandinho|Aquarela|1993|reggae-nacional|3|4|alegre,calmo|liberdade|40|||
+Armandinho|Desenho de Deus|2012|reggae-nacional|3|4|alegre,esperancoso|fe,liberdade|55|||
+Armandinho|Pelo Resto da Vida|2014|reggae-nacional|2|4|romantico,calmo|amor|35|||
+Armandinho|Sol de Verão|2012|reggae-nacional|3|4|alegre|praia|30|||
+Maneva|Ao Som das Ondas|2012|reggae-nacional|3|4|alegre,calmo|praia,liberdade|60|||
+Maneva|Tudo Vira Reggae|2012|reggae-nacional|3|4|alegre|liberdade|40|||
+Maneva|Me Leva|2012|reggae-nacional|3|4|alegre|amor|35|||
+Maneva|Lamento Infinito|2012|reggae-nacional|2|2|melancolico|saudade|30|||
+Planta e Raiz|Vida Louca|2008|reggae-nacional|3|4|alegre|liberdade|30|||
+Planta e Raiz|Te Amar Pra Sempre|2008|reggae-nacional|3|4|romantico|amor|30|||
+Planta e Raiz|Você Me Faz Bem|2008|reggae-nacional|3|4|alegre,romantico|amor|20|||
+Dazaranha|Cidade Maravilhosa|2002|reggae-nacional|3|4|alegre|liberdade|20|||
+Mato Seco|Lembranças|2008|reggae-nacional|3|3|nostalgico,saudade|amor|20|||
+Mato Seco|Dentro da Cabeça|2008|reggae-nacional|3|4|alegre|liberdade|20|||
+Lenine|Jack Soul Brasileiro|1999|pop-nacional|4|4|animado,alegre|danca|58|C|||
+Sandy & Junior|Dig-Dig-Joy|1993|teen-pop|4|5|alegre,animado|infancia|30|||
+Sandy & Junior|Maria Chiquinha|1992|teen-pop|4|5|alegre,engracado|infancia|40|||
+Sandy & Junior|Vamo Pulá|1996|teen-pop|4|5|alegre,animado|danca|55|||
+Sandy & Junior|Super-Herói|1997|teen-pop|4|5|alegre,animado|amor|55|C|||
+Sandy & Junior|Inesquecível|1998|teen-pop|3|4|romantico,saudade|amor|60|C|||
+Sandy & Junior|Eu Acho Que Pirei|1999|teen-pop|4|5|alegre,animado|paixao|55|C|||
+Sandy & Junior|Quando Você Passa|1999|teen-pop|3|4|alegre|paixao|35|||
+Sandy & Junior|Imortal|2001|teen-pop|3|3|romantico,dramatico|amor|50|||
+Sandy & Junior|Love Me|2001|teen-pop|4|5|alegre|amor|40|||
+Sandy & Junior|A Lenda|2002|teen-pop|4|4|alegre,esperancoso|superacao|35|||
+Sandy & Junior|As Quatro Estações|2000|teen-pop|3|4|romantico,alegre|amor|60|C|||
+Sandy & Junior|Não Dá Pra Não Dançar|1996|teen-pop|4|5|alegre,animado|danca|25|||
+Sandy & Junior|Você É D+|2000|teen-pop|4|5|alegre|amor|30|||
+Sandy & Junior|Tudo Pode Ser|2001|teen-pop|4|5|alegre|superacao|30|||
+Sandy & Junior|Segredo|2001|teen-pop|3|4|romantico|amor|35|||
+Sandy & Junior|Cinderela|2001|teen-pop|4|5|alegre|amor|20|||
+Sandy & Junior|Aprendi com o Tempo|2003|teen-pop|3|4|esperancoso|amizade|20|||
+Sandy & Junior|Enrosca|1999|teen-pop|4|5|alegre,animado|paixao|25|||
+Sandy|Areia|2007|pop-nacional|2|3|calmo,sonhador|amor|20|||
+Sandy|Quem Eu Sou|2010|pop-nacional|3|4|alegre,esperancoso|superacao|30|||
+Wanessa Camargo|Amor, Amor|2001|teen-pop|4|4|alegre,romantico|amor|60|||
+Wanessa Camargo|Sem Querer|2002|teen-pop|4|4|alegre|amor|40|||
+Wanessa Camargo|Stuck on You|2003|teen-pop|4|4|alegre|amor|20|||
+Wanessa Camargo|Largo Tudo|2001|teen-pop|4|4|alegre|liberdade|30|||
+Wanessa Camargo|DNA|2009|pop-nacional|4|4|alegre|liberdade|20|||
+Wanessa Camargo|Shake It|2009|pop-nacional|4|5|alegre,animado|danca|20|||
+Wanessa Camargo|Não Resisto a Nós Dois|2007|pop-nacional|4|4|romantico|amor|20|||
+Br'oz|Pensando em Você|2008|teen-pop|3|4|romantico|amor|30|||
+Br'oz|Vai Tchau|2009|teen-pop|4|5|alegre|zoeira|20|||

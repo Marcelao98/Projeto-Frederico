@@ -1,0 +1,100 @@
+101|tempo||pt|3|3|ro sa so|bar|dc|ca|55|
+102|livre||pt|3|4|es ro al|bar|am li|ca|58|
+103|tá es||pt|2|3|ro es ac|bar|am|ca|60|
+104|assim||pt|3|4|ro al an|bar|am|ca|62|C
+105|caraca||pt|3|4|al an ro|bar|am cu|ca|68|C
+106|até q||pt|3|2|sa so tr|fos|tm dc|ca|68|C
+107|pirat||pt|3|4|ro al se|bar|am pa|ca|65|C
+108|péssi||pt|3|3|ro so sa|fos|dc|ca|65|
+109|lapad||pt|4|4|an fe se|esq|pe cu|ca|60|C
+110|inseg||pt|3|3|ro so sa|bar|dc|ca|62|
+111|lanci||pt|3|4|al ro an|bar|am|ca|55|
+112|vem n||pt|4|5|an fe al|car|da|pc|60|C
+113|segur||pt|4|5|an fe se|car|da pe|pc|62|C
+114|dança||pt|4|5|an se fe|car|da pe|pc|55|
+115|lepo |pop-nacional|pt|4|5|en an fe|car|zo os|pc|75|C
+116|rebol||pt|4|5|an fe se|car|da|pc|60|C
+117|zona |pagode|pt|4|5|an fe cf|car|da cu|pc|75|C
+118|chico||pt|2|2|no sa me|aco|pr vc|vc|70|
+119|pagod|||3|4|al an no|est|vc|vc|50|
+120|menin||pt|2|2|no sa tr|aco|pr vc|vc|72|C
+121|tocan||pt|2|4|es co ac|est|su pj|vc vi|78|E C
+122|romar||pt|2|2|co sa me|mf|fe vc|vc|60|
+123|estra||pt|2|2|no sa so|est|pj|vc|55|C
+124|evidê||pt|2|2|sa so ro|kar fos|dc|vi|95|E C
+125|fio d||pt|2|2|sa so dr|fos|dc|vi|75|C
+126|pense||pt|2|2|sa so ro|fos kar|dc|vi|75|C
+127|entre||pt|3|3|ro dr se|fos|tc dc|vi|78|C
+128|é o a||pt|2|3|ro es ac|cas|am|vi|82|C
+129|no di||pt|2|2|sa no tr|aco|fa|vi|78|C
+130|estou||pt|2|3|ro ca ac|cas|am|vi|75|C
+131|seu a||pt|2|2|sa so ro|fos|dc|vi|50|
+132|dormi||pt|2|2|so sa tr|fos|dc bb|vi|68|C
+133|choram||pt|2|2|sa so tr|fos|dc|vi|60|
+134|borbo||pt|2|3|ro ac ca|cas|am|vi|70|C
+135|leilã||pt|3|3|ro dr so|fos|dc|vi|65|C
+136|pode ||pt|3|3|ro dr es|kar|tm|vi|68|
+137|os an||pt|3|3|ro sa so|bar|dc|vi|68|
+138|meteo||pt|3|4|ro al an|bal|pa|vi|75|C
+139|ai se|pop-nacional|pt|4|5|an fe al|bal esq|pe cu|sa|85|C
+140|balad||pt|4|5|an al fe|esq|cu|sa|85|C
+141|termi||pt|3|2|sa so ro|fos|dc|vi|65|
+142|desej||pt|2|3|ro ac ca|cas|am|vi|58|
+143|cuida||pt|2|2|sa so ro|fos|dc|vi|72|C
+144|liber||pt|3|4|al cf an|esq|cu li|vi|68|C
+145|infie||pt|3|3|dr so cf|fos|tc|vi|90|E C
+146|super||pt|3|3|cf ro es|fos|tm|vi|78|C
+147|todo ||pt|3|2|so sa dr|fos|dc|vi|82|C
+148|10%|pt|3|4|cf an al|esq|cu|vi|70|C
+149|medo |pt|2|2|ro sa so|fos|dc|vi|72|C
+150|loka|pop-nacional|pt|4|5|an fe cf|esq bal|cu pe|si|65|C
+151|50 re|pt|3|4|cf en an|esq|tc|vi|68|C
+152|notif|pt|3|4|ro al an|esq|am|vi|65|
+153|largad|pt|3|4|so cf an|fos esq|dc bb|vi|68|C
+154|que s|pt|3|3|ro dr sa|fos|dc|vi|60|
+155|batom|pt|3|4|se ro an|esq|pa|vi|75|C
+156|mal f|pt|3|2|so sa dr|fos|tc|vi|60|
+157|pipoc|pt|4|5|an fe cf|esq|cu|vi|72|C
+158|nosso|pt|2|2|sa so ro|fos|dc|vi|65|
+159|pássa|pt|2|3|ro ca ep|jan|am|vi cd|50|
+160|cobai|pt|3|3|dr cf ro|fos|dc|vi|50|
+161|asa b|pt|2|2|sa me no|saj|vc pr|sa|88|E C
+162|xote |pt|3|4|al en an|saj|cu|sa|75|C
+163|olha |pt|3|4|al ro an|saj|am|sa|70|C
+164|qui n|pt|3|3|me no sa|saj|vc|sa|48|
+165|respe|pt|3|4|no al en|saj|fa|sa|50|
+166|eu só|pt|2|3|ro no ca|saj|am|sa|65|C
+167|isso |pt|4|5|al fe an|saj|cu|sa|58|C
+168|chicl|pt|4|5|an fe en|car|zo|pc|55|
+169|de vo|pt|3|3|ro no ac|saj|am|sa|65|C
+170|banho|pt|4|5|al an fe|saj|pa|sa|58|C
+171|xote |pt|3|3|ro no al|saj|pa|sa|60|C
+172|rindo|pt|3|4|al ro an|saj|am|sa|58|C
+173|meu v|pt|4|4|ro an al|saj|am|sa|55|
+174|você |pt|3|3|so dr cf|fos|tc|sa|72|C
+175|camar|pt|4|5|an fe cf|esq|cu|si|60|C
+176|letíc|pt|4|4|ro al an|esq|pa|sa|68|C
+177|basta|pt|4|4|ro sa an|esq|dc|sa|58|
+178|recai|pt|4|4|se ro an|esq|pa|sa|60|C
+179|meu p|pt|3|4|ro se al|esq|pa|sa|80|C
+180|ama s|pt|3|3|so sa ro|fos|dc|sa|65|C
+181|não, |pt|4|4|cf an al|esq|tm|sa|65|
+182|o can|pt|4|5|an fe al|car|li|pc|65|
+183|rapun|pt|4|5|an fe se|car|da|pc|68|C
+184|sorte|pt|4|5|an fe al|car|cu|pc|68|C
+185|festa|pt|4|5|an fe al|car|cu|pc|70|C
+186|arerê|pt|4|5|an fe al|car|da|pc|68|C
+187|eva|pt|3|4|ro al sn|car|am|pc|62|C
+188|dança|pt|4|5|an fe en|car|da|pc|45|
+189|faraó|pt|4|4|ep cf an|car|cs|pc|58|
+190|beija|pt|4|5|an fe al|car|pa|pc|58|
+191|larga|pt|4|5|an fe se|car|da|pc|55|
+192|milla|pt|3|4|ro al sn|car|am|pc|55|
+193|frico|pt|4|5|an fe se|car|pe da|pc|60|C
+194|a lua|pt|3|2|so sa dr|fos|dc tc|si|50|
+195|voand|pt|4|5|an fe al|car|da|si|65|C
+196|xirle|pt|4|5|an fe cf|bal|da|si|50|
+197|vermel|pt|4|5|an fe ep|car|cu|pc|60|C
+198|chora|pt|4|5|an se fe|bal pra|pa da|pc|72|C
+199|adoci|pt|3|4|ro se al|pra|pa|pc|50|
+200|no me|pt|3|4|al an cf|est|cu|pc|40|

@@ -47,14 +47,23 @@ Atualizado em 07/11/2026 (v0.6.0).
     "e depois", e 108 pedidos de ouro rodando nos testes (75 conferem
     resultado; 33 de música geral ficam pendentes até ter música).
   - O app ainda usa o `musicas.json`: nada do app mudou.
-- **Etapa 3, bloco 1 começado (08/11/2026):** a lista está em
-  `acervo/catalogo/blocos/bloco-01.csv` (562 músicas, sobrando de propósito:
-  ~58% Brasil, todas as décadas) e o script que confere no MusicBrainz e acha o
-  link oficial no YouTube (`backend/scripts/catalogo_bloco.py`, testado com
-  dublês; README em `acervo/catalogo/blocos/`).
-  ⏸ **Esperando o Marcelo:** cortar/acrescentar na lista e rodar o script no
-  Fedora (comando no README dos blocos), depois commitar os dois `.csv` que ele
-  gera. **Próximo passo depois disso:** tags em lotes de 100 e entrar no catálogo.
+- **Etapa 3 (encher o catálogo) em andamento.** Guia completo e detalhado pra
+  continuar: **`docs/etapas/banco-fredify-etapa3.md`** (leia esse primeiro).
+  Decisão do Marcelo: tudo de uma vez (as ~5 mil já com tags, em 11 listas) e
+  ele roda um comando só no PC (`backend/scripts/catalogo_bloco.py`: confere no
+  MusicBrainz e no YouTube, importa, compila, testa, envia). O código está
+  pronto e testado. **Falta: as 11 listas finais** (`acervo/catalogo/blocos/
+  bloco-NN.csv`). Os subagentes que geravam bateram no limite de uso; os
+  rascunhos deles (~2.500 músicas, formatos variados) estão em
+  `acervo/catalogo/blocos/rascunhos/`. O `bloco-01.csv` ainda está no formato
+  antigo (sem tags): o script do PC não roda até ele ser convertido.
+- **Próximos passos:** (1) fazer as 11 listas a partir dos rascunhos,
+  divididas entre agentes (qualquer um: Claude, Codex…) pelo protocolo de
+  `acervo/catalogo/blocos/ORQUESTRACAO.md`; texto pra colar no agente em
+  `acervo/catalogo/blocos/PROMPT_AGENTE.md`; o que falta:
+  `python3 -m freddy.catalogo.bloco status`; (2) conferir tudo junto
+  e enviar pro `main`; (3) passar pro Marcelo os 2 comandos do guia; (4) ler o
+  `relatorio.md` que o script gera e arrumar. Depois: etapa 4.
 
 ## Como desenvolver sem sofrer
 

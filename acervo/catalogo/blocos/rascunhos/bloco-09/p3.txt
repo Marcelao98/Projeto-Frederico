@@ -1,0 +1,148 @@
+AC/DC|Thunderstruck|1990|hard-rock|5|4|empolgante,agressivo,confiante|85|E C o:treino
+AC/DC|You Shook Me All Night Long|1980|hard-rock|5|5|animado,sensual,festivo|82|C
+AC/DC|T.N.T.|1975|hard-rock|5|5|animado,confiante,festivo|70|C
+AC/DC|Hells Bells|1980|hard-rock|4|2|sombrio,tenso,epico|75|
+AC/DC|Dirty Deeds Done Dirt Cheap|1976|hard-rock|5|4|confiante,animado,engracado|65|
+AC/DC|It's a Long Way to the Top (If You Wanna Rock 'n' Roll)|1975|hard-rock|4|4|animado,confiante,festivo|55|i:gaita
+AC/DC|Whole Lotta Rosie|1977|hard-rock|5|4|animado,confiante,sensual|55|
+AC/DC|Shoot to Thrill|1980|hard-rock|5|4|empolgante,agressivo,confiante|65|
+AC/DC|For Those About to Rock (We Salute You)|1981|hard-rock|5|4|epico,empolgante,confiante|68|
+AC/DC|Let There Be Rock|1977|hard-rock|5|4|empolgante,confiante,animado|55|
+AC/DC|Rock 'n' Roll Train|2008|hard-rock|5|4|animado,empolgante,confiante|48|
+Kiss|I Was Made for Lovin' You|1979|disco+hard-rock|5|5|animado,sensual,festivo|78|C
+Kiss|Rock and Roll All Nite|1975|hard-rock|5|5|festivo,animado,confiante|78|C L
+Kiss|Detroit Rock City|1976|hard-rock|5|4|empolgante,animado,confiante|62|
+Kiss|Beth|1976|soft-rock|2|2|melancolico,romantico,triste|68|i:piano
+Kiss|Shout It Out Loud|1976|hard-rock|5|5|festivo,animado,confiante|48|
+Kiss|Lick It Up|1983|hard-rock|5|4|animado,confiante,empolgante|50|
+Kiss|Heaven's on Fire|1984|hard-rock|5|4|animado,empolgante,sensual|48|
+Kiss|Strutter|1974|hard-rock|4|4|confiante,animado,sensual|40|
+Queen|Under Pressure|1981|rock-classico|4|3|tenso,dramatico,esperancoso|85|E f:David_Bowie
+Queen|Somebody to Love|1976|rock-classico|3|3|dramatico,esperancoso,sofrido|82|C coral
+Queen|Killer Queen|1974|rock-classico|3|4|sensual,confiante,engracado|75|
+Queen|Radio Ga Ga|1984|rock-classico|4|4|nostalgico,animado,epico|70|C
+Queen|I Want to Break Free|1984|rock-classico|4|4|alegre,animado,esperancoso|75|C
+Queen|Crazy Little Thing Called Love|1979|rock-and-roll|4|5|alegre,animado,romantico|70|
+Queen|Fat Bottomed Girls|1978|rock-classico|4|4|animado,festivo,engracado|62|
+Queen|Bicycle Race|1978|rock-classico|4|5|alegre,engracado,animado|60|
+Queen|A Kind of Magic|1986|rock-classico|4|4|magico,alegre,epico|65|
+Queen|Who Wants to Live Forever|1986|rock-classico|2|2|dramatico,melancolico,epico|72|o:rpg-drama
+Queen|The Show Must Go On|1991|rock-classico|3|2|dramatico,epico,esperancoso|75|E
+Queen|Love of My Life|1975|soft-rock|2|2|romantico,saudade,melancolico|72|i:piano
+Queen|We Are the Champions|1977|rock-classico|3|5|epico,esperancoso,festivo|92|E C
+Queen|Hammer to Fall|1984|hard-rock|5|3|empolgante,tenso,epico|50|
+Queen|Tie Your Mother Down|1977|hard-rock|5|4|animado,confiante,empolgante|48|
+Queen|Flash|1980|rock-classico|5|5|epico,empolgante,alegre|60|o:rpg-abertura
+Queen|Innuendo|1991|rock-progressivo|4|3|epico,dramatico,misterioso|50|
+David Bowie|Heroes|1977|rock-classico|4|3|epico,esperancoso,dramatico|82|E
+David Bowie|Space Oddity|1969|rock-classico|2|2|sonhador,melancolico,misterioso|80|E o:rpg-exploracao
+David Bowie|Starman|1972|rock-classico|3|4|sonhador,esperancoso,magico|72|
+David Bowie|Let's Dance|1983|new-wave|4|5|animado,festivo,sensual|78|C
+David Bowie|Life on Mars?|1971|rock-classico|2|3|sonhador,dramatico,contemplativo|75|i:piano
+David Bowie|Ashes to Ashes|1980|new-wave|3|2|estranho,melancolico,misterioso|58|
+David Bowie|Changes|1971|rock-classico|3|4|esperancoso,alegre,contemplativo|65|
+David Bowie|China Girl|1983|new-wave|4|4|sensual,animado,confiante|58|
+David Bowie|Modern Love|1983|new-wave|5|5|animado,alegre,festivo|58|
+David Bowie|Rebel Rebel|1974|rock-classico|5|4|confiante,animado,empolgante|65|
+David Bowie|Fame|1975|funk-americano+rock-classico|4|3|confiante,estranho,sensual|58|
+David Bowie|The Man Who Sold the World|1970|rock-classico|3|2|misterioso,sombrio,estranho|55|
+David Bowie|Suffragette City|1972|rock-classico|5|4|confiante,empolgante,animado|58|
+David Bowie|Ziggy Stardust|1972|rock-classico|4|3|confiante,estranho,dramatico|60|
+David Bowie|Golden Years|1975|rock-classico|4|4|sensual,animado,confiante|45|
+Lou Reed|Walk on the Wild Side|1972|rock-classico|2|3|sensual,estranho,calmo|75|X
+Lou Reed|Perfect Day|1972|rock-classico|2|3|calmo,melancolico,romantico|68|i:piano
+The Velvet Underground|Sweet Jane|1970|rock-classico|4|4|alegre,nostalgico,animado|52|
+The Velvet Underground|Heroin|1967|rock-psicodelico|3|1|sombrio,estranho,tenso|42|
+The Velvet Underground|Pale Blue Eyes|1969|rock-classico|2|2|melancolico,romantico,saudade|45|
+Iggy Pop|Lust for Life|1977|punk|5|5|animado,empolgante,confiante|68|
+Iggy Pop|The Passenger|1977|post-punk|4|3|contemplativo,misterioso,nostalgico|65|o:estrada
+The Stooges|I Wanna Be Your Dog|1969|punk|5|3|agressivo,sensual,sombrio|50|
+Elton John|Rocket Man|1972|rock-classico|3|3|sonhador,melancolico,contemplativo|88|E C i:piano
+Elton John|Tiny Dancer|1971|rock-classico|3|3|nostalgico,romantico,sonhador|85|C i:piano
+Elton John|Bennie and the Jets|1973|rock-classico|4|4|animado,confiante,festivo|75|i:piano
+Elton John|Candle in the Wind|1973|rock-classico|2|1|triste,melancolico,saudade|85|t:perda
+Elton John|Goodbye Yellow Brick Road|1973|rock-classico|3|2|melancolico,nostalgico,saudade|70|
+Elton John|Crocodile Rock|1972|rock-and-roll|5|5|alegre,animado,festivo|68|
+Elton John|Don't Go Breaking My Heart|1976|dance-pop|4|5|alegre,romantico,animado|75|f:Kiki_Dee C
+Elton John|Sacrifice|1989|soft-rock|2|2|triste,romantico,sofrido|62|
+Elton John|Sorry Seems to Be the Hardest Word|1976|soft-rock|2|1|triste,sofrido,romantico|72|i:piano
+Elton John|Daniel|1973|soft-rock|2|2|melancolico,saudade,aconchegante|58|
+Elton John|Can You Feel the Love Tonight|1994|soft-rock|2|4|romantico,esperancoso,aconchegante|85|o:casamento
+Elton John|Circle of Life|1994|soft-rock|3|4|epico,esperancoso,sagrado|85|C
+Elton John|Saturday Night's Alright for Fighting|1973|hard-rock|5|4|agressivo,animado,confiante|55|
+Elton John|The Bitch Is Back|1974|rock-classico|5|4|confiante,animado,festivo|50|
+Elton John|Philadelphia Freedom|1975|soft-rock|4|5|alegre,animado,festivo|52|
+Elton John|Nikita|1985|soft-rock|3|3|romantico,saudade,melancolico|60|
+Billy Joel|Piano Man|1973|soft-rock|2|3|nostalgico,melancolico,aconchegante|85|E C i:piano o:barzinho t:solidao
+Billy Joel|We Didn't Start the Fire|1989|pop-rock|4|4|animado,nostalgico,confiante|75|
+Billy Joel|Uptown Girl|1983|pop-rock|4|5|alegre,romantico,animado|78|C
+Billy Joel|Just the Way You Are|1977|soft-rock|2|4|romantico,calmo,aconchegante|75|o:casamento
+Billy Joel|She's Always a Woman|1977|soft-rock|2|3|romantico,calmo,nostalgico|60|i:piano
+Billy Joel|Vienna|1977|soft-rock|2|3|contemplativo,melancolico,calmo|55|i:piano
+Billy Joel|It's Still Rock and Roll to Me|1980|pop-rock|5|5|alegre,animado,confiante|60|
+Billy Joel|Only the Good Die Young|1977|rock-classico|4|4|alegre,animado,sensual|55|
+Billy Joel|Tell Her About It|1983|pop-rock|4|5|alegre,animado,nostalgico|50|
+Billy Joel|The Longest Time|1983|soft-rock|2|4|nostalgico,alegre,romantico|58|coral
+Billy Joel|Scenes from an Italian Restaurant|1977|soft-rock|3|3|nostalgico,dramatico,saudade|45|i:piano
+Billy Joel|River of Dreams|1993|pop-rock|3|3|esperancoso,sagrado,contemplativo|52|coral
+Billy Joel|Movin' Out (Anthony's Song)|1977|soft-rock|3|3|contemplativo,nostalgico,confiante|42|
+Lynyrd Skynyrd|Sweet Home Alabama|1974|rock-classico|4|5|alegre,nostalgico,animado|88|E C
+Lynyrd Skynyrd|Free Bird|1973|rock-classico|4|3|epico,nostalgico,dramatico|82|E i:guitarra
+Lynyrd Skynyrd|Simple Man|1973|rock-classico|2|3|nostalgico,contemplativo,aconchegante|65|t:familia
+Lynyrd Skynyrd|Gimme Three Steps|1973|rock-classico|4|4|alegre,animado,engracado|42|
+The Allman Brothers Band|Ramblin' Man|1973|rock-classico|4|4|alegre,esperancoso,animado|62|o:estrada
+The Allman Brothers Band|Jessica|1973|rock-classico|4|5|alegre,animado,empolgante|55|I
+The Allman Brothers Band|Midnight Rider|1970|rock-classico|2|3|contemplativo,calmo,aconchegante|42|
+ZZ Top|La Grange|1973|blues-rock|4|4|confiante,animado,sensual|68|i:guitarra
+ZZ Top|Sharp Dressed Man|1983|rock-classico|5|5|confiante,animado,festivo|65|
+ZZ Top|Gimme All Your Lovin'|1983|rock-classico|5|4|sensual,confiante,animado|62|
+ZZ Top|Legs|1983|rock-classico|5|5|sensual,animado,festivo|62|
+ZZ Top|Tush|1975|blues-rock|4|4|confiante,sensual,animado|50|
+Boston|More Than a Feeling|1976|rock-classico|4|4|nostalgico,esperancoso,empolgante|78|E
+Boston|Peace of Mind|1976|rock-classico|4|4|esperancoso,alegre,nostalgico|50|
+Boston|Foreplay/Long Time|1976|rock-progressivo|4|4|epico,nostalgico,empolgante|45|
+Kansas|Carry On Wayward Son|1976|rock-progressivo|4|3|epico,esperancoso,empolgante|72|
+Kansas|Dust in the Wind|1977|folk-rock|1|2|melancolico,contemplativo,calmo|85|E C i:violao
+Styx|Come Sail Away|1977|rock-progressivo|3|4|epico,sonhador,esperancoso|68|
+Styx|Renegade|1979|hard-rock|5|3|tenso,empolgante,confiante|52|
+Styx|Mr. Roboto|1983|rock-progressivo|4|4|estranho,engracado,animado|60|
+Styx|Babe|1979|soft-rock|2|3|romantico,calmo,saudade|55|
+Foreigner|I Want to Know What Love Is|1984|balada-pop+soft-rock|3|3|romantico,dramatico,esperancoso|85|E coral
+Foreigner|Cold as Ice|1977|rock-classico|4|3|sombrio,confiante,dramatico|68|
+Foreigner|Juke Box Hero|1981|hard-rock|4|4|esperancoso,empolgante,confiante|60|
+Foreigner|Waiting for a Girl Like You|1981|soft-rock|2|3|romantico,calmo,saudade|62|
+Foreigner|Urgent|1981|rock-classico|5|4|sensual,animado,empolgante|58|metais
+Foreigner|Hot Blooded|1978|hard-rock|5|4|animado,sensual,confiante|60|
+Foreigner|Feels Like the First Time|1977|rock-classico|4|4|romantico,alegre,esperancoso|48|
+Journey|Open Arms|1981|balada-pop+soft-rock|2|3|romantico,calmo,saudade|75|o:casamento
+Journey|Faithfully|1983|soft-rock|3|3|romantico,saudade,dramatico|72|
+Journey|Separate Ways (Worlds Apart)|1983|hard-rock|5|3|dramatico,empolgante,tenso|70|i:sintetizador
+Journey|Any Way You Want It|1980|hard-rock|5|5|animado,festivo,confiante|65|C
+Journey|Wheel in the Sky|1978|rock-classico|4|3|esperancoso,nostalgico,empolgante|55|
+Journey|Lights|1978|soft-rock|2|3|nostalgico,saudade,romantico|50|
+Journey|Lovin', Touchin', Squeezin'|1979|soft-rock|2|3|romantico,calmo,sensual|40|
+Journey|Who's Crying Now|1981|soft-rock|2|2|sofrido,melancolico,romantico|52|
+Heart|Barracuda|1977|hard-rock|5|3|agressivo,empolgante,confiante|72|
+Heart|Alone|1987|balada-pop+soft-rock|3|2|romantico,sofrido,dramatico|78|voz-feminina o:fossa
+Heart|What About Love|1985|soft-rock|3|3|romantico,esperancoso,dramatico|62|
+Heart|These Dreams|1985|soft-rock|2|3|sonhador,romantico,calmo|58|
+Heart|Crazy on You|1975|hard-rock|4|3|dramatico,sensual,empolgante|58|i:violao
+Heart|Magic Man|1975|hard-rock|3|3|sensual,misterioso,dramatico|55|
+Heart|Never|1985|soft-rock|4|3|dramatico,empolgante,romantico|45|
+Rush|Tom Sawyer|1981|rock-progressivo|4|4|confiante,empolgante,esperancoso|70|E i:sintetizador
+Rush|Limelight|1981|rock-progressivo|4|3|contemplativo,esperancoso,nostalgico|58|
+Rush|YYZ|1981|rock-progressivo|4|4|empolgante,estranho,animado|55|I
+Rush|The Spirit of Radio|1980|rock-progressivo|5|4|alegre,empolgante,animado|62|
+Rush|Fly by Night|1975|hard-rock|4|4|esperancoso,animado,empolgante|40|
+Rush|Closer to the Heart|1977|rock-progressivo|3|4|esperancoso,calmo,contemplativo|50|
+Rush|2112 Overture|1976|rock-progressivo|5|3|epico,tenso,empolgante|52|I
+Rush|Subdivisions|1982|rock-progressivo|4|3|contemplativo,nostalgico|48|
+Rush|Red Barchetta|1981|rock-progressivo|5|4|empolgante,epico,alegre|45|
+Rush|Xanadu|1977|rock-progressivo|4|3|epico,magico,misterioso|42|
+Yes|Roundabout|1971|rock-progressivo|4|4|epico,alegre,sonhador|70|E
+Yes|Owner of a Lonely Heart|1983|rock-progressivo|5|4|empolgante,confiante,estranho|72|
+Yes|Starship Trooper|1971|rock-progressivo|4|4|epico,esperancoso,sonhador|50|
+Yes|I've Seen All Good People|1971|rock-progressivo|3|4|esperancoso,calmo,alegre|48|
+Yes|Close to the Edge|1972|rock-progressivo|4|3|epico,sonhador,misterioso|52|
+Yes|Long Distance Runaround|1971|rock-progressivo|4|4|alegre,sonhador,animado|42|
+Yes|Heart of the Sunrise|1971|rock-progressivo|4|3|epico,dramatico,sonhador|40|

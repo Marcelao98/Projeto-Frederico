@@ -1,0 +1,120 @@
+201|sinhá||pt|4|5|an fe al|car|da|pc|35|
+202|coraç||pt|2|2|so sa tr|fos|pr dc|ga|50|
+203|a pra|rock-alternativo|pt|4|4|an st cf|car|cs|pc gu|50|
+204|frevo||pt|4|5|an fe al|car|am|me|45|
+205|festa|forro|pt|4|5|an fe al|car saj|cu|sa|55|C
+206|tempo||pt|3|3|co no es|aco|li|gu|88|E C
+207|eduar||pt|3|4|ro no al|aco|am|vi|90|E C
+208|pais |mpb|pt|2|3|ro co es|aco|fa|vi|78|C
+209|que p||pt|4|3|ag cf dr|dor|cs|gu|72|C
+210|faroe||pt|3|2|dr te ep|dor|cs|gu|82|E C
+211|epitá||pt|2|3|co es ro|aco|su|vi|75|
+212|sonífe||pt|4|4|an al fe|bar|cu|gu|60|
+213|polícia||pt|4|3|ag cf te|tre|cs|gu|65|
+214|meu e||pt|4|4|an al ro|bar|am|gu|65|
+215|lanter||pt|2|3|ro co sa|aco|am|gu|60|
+216|pro d||pt|3|4|es ro al|aco|am|gu|72|C
+217|inúti||pt|4|4|en cf an|bar|cs|gu|68|C
+218|primei||pt|2|3|no es sa|aco|in|vi|65|C L
+219|envelh||pt|3|3|co me no|dor|so|gu|45|
+220|infini||pt|3|3|es co no|est|pj|gu|70|C
+221|era um||pt|3|4|no al es|bar|in|gu|65|C
+222|como e||pt|3|4|ro al an|bar|pa|si|65|C
+223|olhar||pt|4|4|an ro al|fes|pa|si|50|
+224|como u|mpb|pt|3|4|es al co|pra|li|gu|85|E C
+225|tempos||pt|4|4|an al cf|est|li|gu|50|
+226|toda f||pt|2|4|ro ac ca|cas|am|vi|68|
+227|você n||pt|4|4|an al ro|bar|dc|si|60|C
+228|mania||pt|3|4|ro se al|bar|pa|si|70|C
+229|lança||pt|4|5|an fe se|bal|pa|gu|70|C
+230|ovelha||pt|3|4|cf al es|aco|li|gu|72|C
+231|garota||pt|3|4|al ro an|pra|pa|gu|78|C
+232|vou de||pt|3|3|ro dr sa|fos|dc|gu|60|
+233|fácil||pt|4|4|al es an|est|am|gu|68|C
+234|dias m||pt|3|4|es al cf|aco|su|gu|65|C
+235|só os||pt|3|2|co sa me|fos|so|gu|75|C
+236|proibi||pt|4|4|an al cf|pra|pa|gu|82|C
+237|pelado||pt|4|5|en an fe|bar|zo pe|gu|80|C
+238|mulher||pt|4|4|an en ag|bar|zo|gu|78|C
+239|anna j||pt|3|4|al ro no|bar|pa|gu|82|C
+240|pescad||pt|3|3|co es sn|aco|li|gu|65|
+241|quando||pt|3|3|co no es|dor|pr|gu|55|
+242|me ado|rock-alternativo|pt|3|3|cf se mi|bar|pa|gu|60|
+243|razões||pt|3|2|me sa dr|fos|tm|gu|65|C
+244|um min||pt|5|3|em an ag|tre|su|gu|60|C
+245|vento ||pt|3|3|co no ro|aco|am|gu|50|
+246|liber||pt|3|4|es ca al|pra|li|vi|65|C
+247|onde v||pt|3|3|ro ca sn|pra|am|gu|70|C
+248|roots|nu-metal|en|5|3|ag em cf|tre|cs|gu|65|
+249|carry |heavy-metal|en|5|4|ep em es|tre|su|gu|50|
+250|diário||pt|3|1|dr te sm|dor|cs qu||72|E X
+251|negro |||pt|3|2|dr co ag|dor|cs qu||85|E C X
+252|vida l||pt|3|2|dr co cf|dor|qu cs||80|C X
+253|um bom||pt|3|3|co es no|aco|qu||55|
+254|amar|pop-nacional|pt|3|4|es cf al|aco|su li|vf|78|C
+255|não ex||pt|2|2|me co sa|dor|so cs|pi|65|
+256|qual |||pt|4|4|cf an al|bar|cu||60|
+257|cachim||pt|3|4|cf al en|bar|cs||58|
+258|olho d||pt|3|3|cf dr es|aco|su cs||55|X
+259|quer v|trap|pt|3|3|cf mi st|est|su os|si|75|X
+260|novo b|||pt|3|4|cf an al|esq|os||60|X
+261|desenr|||pt|5|5|an fe se|esq bal|pe da||85|C X
+262|rap da|||pt|4|3|dr cf es|est|qu cs||78|C
+263|glamur|funk-carioca|pt|4|4|se ro an|bal|pa||45|
+264|só lov||pt|3|4|ro al an|bal|am||52|
+265|fico a||pt|3|3|ro sa ac|fos|am sa||85|C
+266|cerol||pt|4|5|en an fe|car|zo da||68|C
+267|país d||pt|4|4|cf an es|est|os||50|
+268|olha a||pt|4|5|an fe se|esq|da pe||72|C
+269|chegu||pt|4|5|cf an fe|esq|os||72|C
+270|show d||pt|4|5|cf an fe|esq bal|cu|si|78|C
+271|envolv||es|4|5|se cf an|bal|pe da||82|C
+272|malan||pt|4|5|an se fe|esq|pe||75|C
+273|bum bu||pt|4|5|an fe cf|esq|da|fl|88|C
+274|galopa||pt|4|5|an fe cf|bal|da||65|
+275|k.o.||pt|4|5|cf an se|bal|or cu||68|
+276|chico||pt|3|4|se ro al|pra|pa||70|
+277|boneki||pt|4|5|cf an se|bal|cu||58|
+278|idiota||pt|3|2|dr sa so|fos|dc|pi|60|
+279|pesadão||pt|3|4|cf se al|esq|pa||70|
+280|por su||pt|3|4|se al ro|pra|pa||68|
+281|o sol||pt|3|4|al es ac|pra|li|vi|82|C
+282|festa ||pt|4|5|an fe se|esq|cu||75|C
+283|ragata||pt|4|5|an fe al|car|da||75|C
+284|as qua||pt|3|4|ro al sn|aco|am||68|C
+285|a dor ||pt|2|2|sa so ro|fos|dc||55|
+286|ilariê||pt|4|5|al fe an|cri|cu||75|C
+287|parabé||pt|4|5|al fe an|ani cri|cu||58|C
+288|superf||pt|4|5|al an ma|cri|az||55|
+289|eu vou||pt|3|3|dr ro so|fos|dc||62|
+290|prince||pt|2|3|ro sa ac|aco|am||55|
+291|eu não||pt|3|2|dr so sa|fos|dc||58|C
+292|fogo e||pt|3|4|ro se an|bar|pa||60|
+293|sandra||pt|4|5|an fe se|car|pa||58|C
+294|alma g||pt|2|3|ro ca ac|jan|am|pi|58|
+295|20 e p||pt|2|3|ro no sa|aco|am||50|
+296|porque||pt|2|2|sa so tr|fos|dc||68|C
+297|rita|||pt|3|3|ro so sa|fos|dc||58|
+298|erguei||pt|4|5|al fe es|mf|fe||60|
+299|uma no||pt|3|4|es sg ep|mf|fe||60|
+300|rarid||pt|2|3|sg es ro|mf|fe||65|
+301|arde o||pt|3|4|es sg ep|mf|fe||50|
+302|lugar |||pt|2|3|sg ca co|mf|fe||65|
+303|mamãe||pt|4|5|an fe en|car|zo||82|E C
+304|cidade||pt|4|5|an fe es|car|li||78|E C
+305|allah||pt|4|5|an fe en|car|zo||72|C
+306|me dá ||pt|4|5|en an fe|car|zo os||65|C
+307|cabele||pt|4|5|en an fe|car|zo||75|C
+308|másca||pt|3|3|ro no sa|car|am||75|
+309|histór||pt|4|4|ep cf an|car|cs||60|
+310|peguei||pt|4|5|an fe al|car|cu||60|C
+311|bachia|||3|2|me sn co|rel|||cd|50|
+312|o gua|||4|4|ep dr al|rpg-abertura|||or|40|
+313|billie||en|4|3|mi cf te||tc||me|92|E C
+314|thrill||en|4|3|as sm en|fes||si|95|E C
+315|beat i|rock-classico|en|5|3|ag cf em|tre||gu|88|C
+316|like a||en|4|4|em ep sg||fe pa|co|85|C
+317|vogue||en|4|4|cf se fe|bal|da||78|C
+318|i wann||en|5|5|an fe al|bal|da||88|E C
+319|girls ||en|4|5|al fe an|fes|cu||85|C
+320|take o||en|4|4|em al an||am|si|92|E C
