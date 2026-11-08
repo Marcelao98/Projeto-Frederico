@@ -1,0 +1,126 @@
+Led Zeppelin|Whole Lotta Love|1969|hard-rock|5|4|agressivo,sensual,empolgante|78|E
+Led Zeppelin|Immigrant Song|1970|hard-rock|5|3|epico,agressivo,empolgante|78|o:rpg-combate t:liberdade
+Led Zeppelin|Kashmir|1975|rock-progressivo|4|3|epico,misterioso,dramatico|75|o:rpg-exploracao
+Led Zeppelin|Black Dog|1971|hard-rock|5|4|confiante,sensual,empolgante|68|
+Led Zeppelin|Rock and Roll|1971|hard-rock|5|5|animado,alegre,empolgante|65|
+Led Zeppelin|Dazed and Confused|1969|blues-rock|4|2|sombrio,misterioso,tenso|65|
+Led Zeppelin|Going to California|1971|folk-rock|1|3|calmo,contemplativo,aconchegante|58|i:violao
+Led Zeppelin|Over the Hills and Far Away|1973|hard-rock|4|3|esperancoso,sonhador,epico|55|
+Led Zeppelin|Ramble On|1969|hard-rock|3|4|esperancoso,magico,nostalgico|58|o:rpg-exploracao
+Led Zeppelin|Heartbreaker|1969|hard-rock|5|4|confiante,empolgante,agressivo|58|
+Led Zeppelin|Good Times Bad Times|1969|hard-rock|4|4|confiante,empolgante,animado|55|
+Led Zeppelin|Misty Mountain Hop|1971|hard-rock|4|4|alegre,animado,estranho|45|
+Led Zeppelin|When the Levee Breaks|1971|blues-rock|4|2|sombrio,tenso,dramatico|65|
+Led Zeppelin|Since I've Been Loving You|1970|blues-rock|2|1|sofrido,triste,dramatico|55|
+Led Zeppelin|The Rain Song|1973|rock-progressivo|2|3|romantico,contemplativo,sonhador|50|
+Led Zeppelin|No Quarter|1973|rock-progressivo|3|2|sombrio,misterioso,sonhador|55|
+Pink Floyd|Comfortably Numb|1979|rock-progressivo|3|2|melancolico,dramatico,contemplativo|88|E i:guitarra
+Pink Floyd|Money|1973|rock-progressivo|4|3|confiante,estranho,misterioso|78|
+Pink Floyd|Time|1973|rock-progressivo|3|2|dramatico,contemplativo,melancolico|72|
+Pink Floyd|Us and Them|1973|rock-progressivo|2|2|melancolico,contemplativo,sonhador|65|
+Pink Floyd|Shine On You Crazy Diamond (Parts I-V)|1975|rock-progressivo|2|2|melancolico,contemplativo,sonhador|68|i:guitarra
+Pink Floyd|Hey You|1979|rock-progressivo|3|2|sombrio,dramatico,melancolico|62|
+Pink Floyd|Run Like Hell|1979|rock-progressivo|4|3|tenso,empolgante,sombrio|55|
+Pink Floyd|Echoes|1971|rock-progressivo|2|3|sonhador,misterioso,contemplativo|58|I
+Pink Floyd|See Emily Play|1967|rock-psicodelico|3|3|estranho,sonhador,magico|45|
+Pink Floyd|Brain Damage|1973|rock-progressivo|2|2|estranho,sombrio,melancolico|55|
+Pink Floyd|Mother|1979|rock-progressivo|2|2|melancolico,contemplativo,dramatico|60|
+Pink Floyd|High Hopes|1994|rock-progressivo|2|2|melancolico,contemplativo,nostalgico|50|
+Pink Floyd|Learning to Fly|1987|rock-progressivo|4|4|esperancoso,sonhador,empolgante|48|
+Pink Floyd|The Great Gig in the Sky|1973|rock-progressivo|2|2|dramatico,sonhador,sagrado|62|voz-feminina
+Pink Floyd|Careful with That Axe, Eugene|1968|rock-psicodelico|3|1|assustador,tenso,sombrio|35|I
+Deep Purple|Smoke on the Water|1972|hard-rock|4|4|confiante,empolgante,animado|85|E i:guitarra
+Deep Purple|Highway Star|1972|hard-rock|5|4|empolgante,animado,confiante|70|
+Deep Purple|Child in Time|1970|hard-rock|3|2|dramatico,epico,sombrio|62|
+Deep Purple|Black Night|1970|hard-rock|5|4|confiante,empolgante,animado|58|
+Deep Purple|Burn|1974|hard-rock|5|3|empolgante,epico,agressivo|55|
+Deep Purple|Hush|1968|rock-psicodelico|4|4|animado,confiante,alegre|45|
+Black Sabbath|Paranoid|1970|heavy-metal|5|2|tenso,agressivo,empolgante|85|E
+Black Sabbath|Iron Man|1970|heavy-metal|4|2|sombrio,epico,dramatico|85|E o:rpg-vilao
+Black Sabbath|War Pigs|1970|heavy-metal|4|2|sombrio,tenso,epico|75|t:critica-social
+Black Sabbath|Black Sabbath|1970|doom-metal|3|1|assustador,sombrio,tenso|72|o:rpg-terror
+Black Sabbath|N.I.B.|1970|heavy-metal|4|2|sombrio,misterioso,dramatico|55|
+Black Sabbath|Sweet Leaf|1971|heavy-metal|4|3|estranho,sombrio,confiante|50|
+Black Sabbath|Children of the Grave|1972|heavy-metal|5|2|sombrio,epico,empolgante|55|
+Black Sabbath|Sabbath Bloody Sabbath|1973|heavy-metal|4|2|sombrio,dramatico,misterioso|45|
+Black Sabbath|Heaven and Hell|1980|heavy-metal|4|2|epico,sombrio,dramatico|65|o:rpg-chefe
+Black Sabbath|Changes|1972|soft-rock|2|1|triste,melancolico,sofrido|55|i:piano t:termino
+Black Sabbath|Dehumanizer|1992|heavy-metal|4|2|sombrio,agressivo,tenso|30|
+Ozzy Osbourne|Crazy Train|1980|heavy-metal|5|4|empolgante,agressivo,animado|85|E i:guitarra
+Ozzy Osbourne|Mr. Crowley|1980|heavy-metal|3|2|sombrio,misterioso,dramatico|60|
+Ozzy Osbourne|Mama, I'm Coming Home|1991|balada-pop+heavy-metal|2|3|romantico,saudade,esperancoso|68|
+Ozzy Osbourne|No More Tears|1991|heavy-metal|4|2|sombrio,dramatico,tenso|58|
+Ozzy Osbourne|Bark at the Moon|1983|heavy-metal|5|3|sombrio,agressivo,empolgante|62|
+Ozzy Osbourne|Dreamer|2001|soft-rock|2|3|esperancoso,contemplativo,calmo|52|
+Ozzy Osbourne|Shot in the Dark|1986|heavy-metal|4|3|empolgante,tenso,confiante|45|
+Ozzy Osbourne|Goodbye to Romance|1980|soft-rock|2|2|melancolico,saudade,contemplativo|48|
+Ozzy Osbourne|Perry Mason|1995|heavy-metal|4|2|sombrio,tenso,misterioso|35|
+Dio|Holy Diver|1983|heavy-metal|4|3|epico,sombrio,magico|68|o:rpg-chefe
+Dio|Rainbow in the Dark|1983|heavy-metal|4|3|empolgante,misterioso,epico|62|
+Dio|We Rock|1983|heavy-metal|5|4|empolgante,confiante,animado|42|
+Dio|The Last in Line|1984|heavy-metal|4|3|epico,sombrio,dramatico|48|
+Rainbow|Stargazer|1976|heavy-metal|4|3|epico,magico,misterioso|55|o:rpg-ritual
+Rainbow|Since You Been Gone|1979|hard-rock|4|3|dramatico,empolgante,sofrido|52|
+Rainbow|Man on the Silver Mountain|1975|heavy-metal|4|3|epico,confiante,magico|50|
+Judas Priest|Breaking the Law|1980|heavy-metal|5|4|agressivo,confiante,empolgante|75|C
+Judas Priest|Painkiller|1990|heavy-metal|5|3|agressivo,epico,empolgante|72|E
+Judas Priest|You've Got Another Thing Comin'|1982|heavy-metal|5|4|confiante,empolgante,animado|68|C
+Judas Priest|Living After Midnight|1980|heavy-metal|5|4|animado,empolgante,festivo|58|
+Judas Priest|Electric Eye|1982|heavy-metal|5|3|tenso,empolgante,sombrio|48|
+Judas Priest|Turbo Lover|1986|heavy-metal|4|4|sensual,animado,confiante|45|
+Judas Priest|Victim of Changes|1976|heavy-metal|4|2|dramatico,sombrio,epico|50|
+Judas Priest|Hell Bent for Leather|1978|heavy-metal|5|4|agressivo,confiante,empolgante|50|
+Judas Priest|Hell Patrol|1990|heavy-metal|5|3|agressivo,empolgante,tenso|35|
+Motörhead|Ace of Spades|1980|heavy-metal|5|4|agressivo,empolgante,confiante|82|E X
+Motörhead|Overkill|1979|heavy-metal|5|3|agressivo,empolgante,tenso|58|
+Motörhead|Killed by Death|1984|heavy-metal|5|3|agressivo,confiante,empolgante|50|
+Motörhead|Bomber|1979|heavy-metal|5|3|agressivo,empolgante,tenso|45|
+Motörhead|Iron Fist|1982|heavy-metal|5|3|agressivo,confiante,empolgante|40|
+Iron Maiden|Fear of the Dark|1992|heavy-metal|4|2|assustador,epico,sombrio|82|E C o:rpg-terror
+Iron Maiden|Run to the Hills|1982|heavy-metal|5|3|epico,agressivo,empolgante|78|
+Iron Maiden|The Number of the Beast|1982|heavy-metal|5|2|sombrio,assustador,epico|82|E
+Iron Maiden|Aces High|1984|heavy-metal|5|4|epico,empolgante,confiante|68|
+Iron Maiden|Hallowed Be Thy Name|1982|heavy-metal|4|2|dramatico,epico,sombrio|72|E
+Iron Maiden|2 Minutes to Midnight|1984|heavy-metal|5|3|tenso,empolgante,epico|58|
+Iron Maiden|Wasted Years|1986|heavy-metal|4|4|nostalgico,empolgante,esperancoso|55|
+Iron Maiden|Powerslave|1984|heavy-metal|4|3|epico,misterioso,dramatico|58|
+Iron Maiden|Rime of the Ancient Mariner|1984|heavy-metal|4|2|epico,sombrio,dramatico|52|o:rpg-exploracao
+Iron Maiden|Can I Play with Madness|1988|heavy-metal|5|4|alegre,empolgante,estranho|52|
+Iron Maiden|Flight of Icarus|1983|heavy-metal|4|3|epico,dramatico,empolgante|52|
+Iron Maiden|Wrathchild|1981|heavy-metal|5|3|agressivo,empolgante,confiante|48|
+Iron Maiden|Phantom of the Opera|1980|heavy-metal|4|2|sombrio,dramatico,epico|55|
+Iron Maiden|The Evil That Men Do|1988|heavy-metal|4|3|sombrio,epico,empolgante|50|
+Iron Maiden|Iron Maiden|1980|heavy-metal|5|3|agressivo,confiante,empolgante|48|
+Iron Maiden|Blood Brothers|2000|heavy-metal|3|3|epico,esperancoso,nostalgico|45|
+Iron Maiden|Run Silent Run Deep|2000|heavy-metal|4|3|epico,tenso,dramatico|25|
+Iron Maiden|The Wicker Man|2000|heavy-metal|5|4|empolgante,epico,confiante|48|
+Scorpions|Still Loving You|1984|hard-rock|3|1|triste,sofrido,dramatico|75|E t:termino o:fossa
+Scorpions|Rock You Like a Hurricane|1984|hard-rock|5|4|animado,sensual,empolgante|75|C
+Scorpions|Send Me an Angel|1990|soft-rock|2|2|melancolico,romantico,saudade|60|
+Scorpions|No One Like You|1982|hard-rock|4|4|empolgante,confiante,animado|52|
+Scorpions|Big City Nights|1984|hard-rock|4|4|animado,festivo,empolgante|48|
+Scorpions|Blackout|1982|hard-rock|5|3|agressivo,empolgante,tenso|42|
+Scorpions|Humanity|2007|hard-rock|3|3|dramatico,esperancoso,epico|30|
+Van Halen|Jump|1984|hard-rock|5|5|animado,alegre,festivo|85|E C i:sintetizador
+Van Halen|Panama|1984|hard-rock|5|4|animado,sensual,confiante|68|
+Van Halen|Runnin' with the Devil|1978|hard-rock|5|4|confiante,empolgante,animado|58|
+Van Halen|Eruption|1978|hard-rock|5|4|empolgante,epico,agressivo|65|I i:guitarra
+Van Halen|Hot for Teacher|1984|hard-rock|5|5|animado,festivo,engracado|58|
+Van Halen|Why Can't This Be Love|1986|hard-rock|4|4|alegre,romantico,animado|50|
+Van Halen|Ain't Talkin' 'bout Love|1978|hard-rock|5|4|confiante,agressivo,empolgante|50|
+Van Halen|Dreams|1986|hard-rock|4|4|esperancoso,epico,empolgante|45|
+Van Halen|Right Now|1991|hard-rock|3|4|esperancoso,empolgante,contemplativo|52|
+Aerosmith|Dream On|1973|hard-rock|3|2|dramatico,melancolico,epico|82|E
+Aerosmith|Walk This Way|1975|hard-rock|5|4|confiante,animado,sensual|80|C
+Aerosmith|Sweet Emotion|1975|hard-rock|4|3|confiante,sensual,empolgante|72|
+Aerosmith|Crazy|1994|hard-rock|4|4|sensual,animado,alegre|72|
+Aerosmith|Cryin'|1993|soft-rock|3|2|sofrido,melancolico,dramatico|70|o:fossa
+Aerosmith|Amazing|1993|soft-rock|3|3|esperancoso,romantico,contemplativo|60|
+Aerosmith|Janie's Got a Gun|1989|hard-rock|3|1|tenso,sombrio,dramatico|58|
+Aerosmith|Love in an Elevator|1989|hard-rock|5|5|animado,sensual,engracado|55|X
+Aerosmith|Livin' on the Edge|1993|hard-rock|4|2|tenso,dramatico,empolgante|60|
+Aerosmith|Pink|1997|hard-rock|4|4|animado,sensual,alegre|52|
+Aerosmith|Rag Doll|1987|hard-rock|4|4|animado,festivo,alegre|42|
+Aerosmith|Angel|1987|soft-rock|3|3|romantico,dramatico,saudade|48|
+Aerosmith|Jaded|2001|hard-rock|4|4|romantico,animado,alegre|50|
+Aerosmith|Eat the Rich|1993|hard-rock|5|4|confiante,empolgante,agressivo|35|

@@ -1,0 +1,98 @@
+Skank|Jackie Tequila|1994|pop-rock-nacional|4|4|alegre,animado,sensual|pegacao,curticao|60|C|||
+Skank|É Uma Partida de Futebol|1996|pop-rock-nacional|4|4|alegre,animado,festivo|curticao,amizade|78|C|||
+Skank|Pacato Cidadão|1994|pop-rock-nacional|4|4|alegre,animado|curticao|60|C|||
+Skank|Resposta|1998|pop-rock-nacional|3|3|nostalgico,melancolico,contemplativo|amor,termino|62|C|||
+Skank|Três Lados|2003|pop-rock-nacional|3|3|romantico,contemplativo|amor|52|||
+Skank|Ainda Gosto Dela|2003|pop-rock-nacional|3|3|saudade,melancolico,romantico|amor,termino|72|C|fossa||
+Skank|Esmola|1996|pop-rock-nacional|3|3|melancolico,dramatico|critica-social|40|||
+Skank|Tanto|2008|pop-rock-nacional|3|4|romantico,alegre|amor|40|||
+Skank|Sutilmente|2003|pop-rock-nacional|2|4|romantico,calmo|amor|65|C|casamento||
+Skank|Must Be Love|2008|pop-rock-nacional|3|4|romantico,alegre|amor|42|||
+Skank|Saideira|2003|pop-rock-nacional|3|3|nostalgico,melancolico|cachaca,amizade|45|||
+Skank|Te Ver|1999|pop-rock-nacional|3|4|romantico,alegre|amor,paixao|68|C|||
+Skank|Balada do Amor Inabalável|1996|pop-rock-nacional|3|4|romantico,alegre|amor|42|||
+Jota Quest|Do Seu Lado|2002|pop-rock-nacional|3|4|romantico,esperancoso|amor|62|C|||
+Jota Quest|Sempre Assim|1999|pop-rock-nacional|3|4|alegre,esperancoso|amizade,liberdade|50|||
+Jota Quest|Encontrando Alguém|2005|pop-rock-nacional|3|4|romantico,esperancoso|amor|48|||
+Jota Quest|Amor Maior|2002|pop-rock-nacional|3|4|romantico,esperancoso|amor|50|||
+Jota Quest|Na Moral|2000|pop-rock-nacional|4|4|animado,alegre|amizade,curticao|52|||
+Jota Quest|Só Hoje|2002|pop-rock-nacional|4|4|animado,alegre,esperancoso|curticao|58|C|||
+Jota Quest|Além do Horizonte|2008|pop-rock-nacional|3|4|esperancoso,romantico|liberdade|50|||
+Pato Fu|Sobre o Tempo|1999|indie-rock/pop-rock-nacional|2|3|melancolico,contemplativo,sonhador|amor,perda|55|||
+Pato Fu|Made in Japan|1999|pop-rock-nacional|3|4|alegre,estranho,sonhador|zoeira|45|||
+Pato Fu|Canção pra Você Viver Mais|1999|pop-rock-nacional|3|4|esperancoso,aconchegante|amor|45|||
+Pato Fu|Depois|2001|pop-rock-nacional|3|3|romantico,melancolico|amor|30|||
+Pato Fu|Perdoa|2001|pop-rock-nacional|2|3|romantico,calmo|amor|30|||
+Pato Fu|Ska|1994|pop-rock-nacional|4|4|animado,alegre|curticao|50|||
+Pato Fu|Antes que Seja Tarde|1999|pop-rock-nacional|3|3|esperancoso,melancolico|amor|35|||
+Engenheiros do Hawaii|Terra de Gigantes|1987|rock-brasil-80|4|3|tenso,epico|critica-social|40|||
+Engenheiros do Hawaii|O Papa É Pop|1990|rock-brasil-80|4|4|animado,engracado|critica-social|70|C|||
+Engenheiros do Hawaii|Somos Quem Podemos Ser|1988|rock-brasil-80|3|4|esperancoso,contemplativo|liberdade|68|C|||
+Engenheiros do Hawaii|Piano Bar|1990|rock-brasil-80|2|2|melancolico,saudade,sofrido|solidao,cachaca|50|||
+Engenheiros do Hawaii|Refrão de Bolero|1991|rock-brasil-80|2|2|romantico,melancolico|amor,dor-de-cotovelo|60|||
+Engenheiros do Hawaii|Pra Ser Sincero|1999|pop-rock-nacional|3|3|romantico,contemplativo|amor|70|C|||
+Engenheiros do Hawaii|Alívio Imediato|1992|rock-brasil-80|3|3|contemplativo|solidao|45|||
+Engenheiros do Hawaii|A Revolta dos Dândis|1987|rock-brasil-80|4|3|tenso,confiante|critica-social|45|||
+Engenheiros do Hawaii|Toda Forma de Poder|1986|rock-brasil-80|4|3|tenso|critica-social|45|||
+RPM|Louras Geladas|1985|rock-brasil-80|4|4|animado,sensual,alegre|pegacao,curticao|60|||
+RPM|Rádio Pirata|1985|rock-brasil-80|4|4|animado,empolgante|liberdade,curticao|65|C|||
+RPM|Alvorada Voraz|1985|rock-brasil-80|4|3|epico,tenso|amor|52|||
+RPM|A Cruz e a Espada|1985|rock-brasil-80|3|3|dramatico,epico|fe,amor|40|||
+Lulu Santos|Um Certo Alguém|1984|pop-rock-nacional|3|4|romantico,esperancoso,alegre|amor|70|C|||
+Lulu Santos|Condição|1984|pop-rock-nacional|3|3|romantico,sensual|amor|40|||
+Lulu Santos|Adivinha o Quê?|1986|pop-rock-nacional|3|4|alegre,animado|amor|40|||
+Lulu Santos|Areias Escaldantes|1983|pop-rock-nacional|4|4|alegre,animado,sensual|praia|35|||
+Lulu Santos|Assim Caminha a Humanidade|1984|pop-rock-nacional|3|4|esperancoso,contemplativo|liberdade|45|||
+Lulu Santos|Aviso aos Navegantes|1984|pop-rock-nacional|3|3|romantico,contemplativo|amor|25|||
+Lulu Santos|Mesmo que Seja Eu|1999|pop-rock-nacional|3|3|romantico,saudade|amor|35|||
+Lulu Santos|Sábado|1986|pop-rock-nacional|3|4|romantico,alegre|amor|25|||
+Lulu Santos|Apenas Mais uma de Amor|1991|pop-rock-nacional|3|3|romantico|amor|40|||
+Lulu Santos|Certas Coisas|1984|pop-rock-nacional|3|3|romantico,saudade|amor|60|C|||
+Nenhum de Nós|Camila, Camila|1987|rock-brasil-80|3|2|melancolico,dramatico,sombrio|perda,amor|65|C|||
+Nenhum de Nós|Astronauta de Mármore|1987|rock-brasil-80|3|3|melancolico,contemplativo|solidao|50|||
+Nenhum de Nós|O Girassol|1992|rock-brasil-80|3|4|romantico,alegre|amor|10|||
+Nenhum de Nós|Chove|1989|rock-brasil-80|3|3|melancolico|solidao|10|||
+Plebe Rude|Até Quando Esperar|1986|rock-brasil-80|4|3|tenso,confiante|critica-social|55|||
+Plebe Rude|Proteção|1986|rock-brasil-80|4|3|tenso,agressivo|critica-social|30|||
+Plebe Rude|Minha Renda|1986|rock-brasil-80|4|3|confiante,tenso|critica-social|20|||
+Plebe Rude|Brasília|1986|rock-brasil-80|3|3|tenso|critica-social|20|||
+Plebe Rude|Voto em Branco|1986|rock-brasil-80|4|3|tenso|critica-social|20|||
+Biquini Cavadão|Zé Ninguém|1986|rock-brasil-80|4|3|tenso,confiante|critica-social|40|||
+Biquini Cavadão|Timidez|1985|rock-brasil-80|3|4|romantico,alegre|amor|40|||
+Biquini Cavadão|Tédio|1987|rock-brasil-80|3|3|contemplativo|solidao|20|||
+Biquini Cavadão|Vento Vendaval|1989|rock-brasil-80|3|3|melancolico,romantico|amor|35|||
+Camisa de Vênus|Eu Não Matei Joana d'Arc|1983|rock-brasil-80|4|3|tenso,confiante|critica-social|45|X||
+Camisa de Vênus|Bete Morreu|1984|rock-brasil-80|4|3|sombrio,tenso|perda|35|||
+Camisa de Vênus|Silvia|1982|rock-brasil-80|3|3|romantico|amor|35|||
+Camisa de Vênus|Controle Total|1983|rock-brasil-80|4|3|tenso|critica-social|25|||
+Camisa de Vênus|Simca Chambord|1983|rock-brasil-80|4|4|engracado,animado|zoeira|25|||
+Camisa de Vênus|Sexo e Cachaça|1983|rock-brasil-80|4|4|engracado,animado|cachaca,pegacao|25|X||
+Barão Vermelho|Exagerado|1985|rock-brasil-80|3|3|confiante,sensual|paixao|1|||
+Léo Jaime|Fórmula do Amor|1984|rock-brasil-80|4|4|alegre,animado|amor|35|||
+Léo Jaime|Sônia|1984|rock-brasil-80|4|4|alegre,engracado|amor|30|||
+Eduardo Dussek|Rock da Cachorra|1982|rock-brasil-80|4|5|engracado,animado|zoeira|55|X||
+Eduardo Dussek|Nostradamus|1983|rock-brasil-80|4|4|engracado|zoeira|35|||
+Marina Lima|Fullgás|1984|pop-nacional|4|4|animado,sensual,confiante|paixao|70|C|||
+Marina Lima|Virgem|1987|pop-nacional|3|3|sensual,melancolico|paixao|52|||
+Marina Lima|À Francesa|1987|pop-nacional|3|3|sensual,romantico|paixao|30|||
+Marina Lima|Uma Noite e Meia|1987|pop-nacional|3|3|sensual,romantico|paixao|40|||
+Cássia Eller|Malandragem|1990|pop-rock-nacional|3|4|sensual,contemplativo,alegre|amor,paixao|68|C|||
+Cássia Eller|O Segundo Sol|1999|pop-rock-nacional|3|4|esperancoso,alegre,romantico|amor|68|C|||
+Cássia Eller|Por Enquanto|2001|pop-rock-nacional|2|2|melancolico,saudade,triste|perda,amor|60|||
+Cássia Eller|E.C.T.|2001|pop-rock-nacional|3|4|alegre,animado|amor|35|||
+Cássia Eller|Gatas Extraordinárias|1999|pop-rock-nacional|3|3|sensual|paixao|25|||
+Cássia Eller|Partido Alto|1990|pop-rock-nacional|4|4|animado,alegre|danca|20|||
+Cássia Eller|Palavras ao Vento|1990|pop-rock-nacional|2|3|romantico,calmo|amor|35|||
+Cássia Eller|Relicário|1999|pop-rock-nacional|2|3|romantico,saudade|amor|10|||
+Cássia Eller|Non Ti Pago|2001|pop-rock-nacional|3|3|sensual|paixao|10|||
+Cássia Eller|Máscara|1990|pop-rock-nacional|3|3|sensual,misterioso|paixao|25|||
+Pitty|Máscara|2005|pop-rock-nacional|4|3|tenso,confiante|critica-social|68|C|||
+Pitty|Equalize|2003|pop-rock-nacional|4|3|tenso,agressivo|amor|60|||
+Pitty|Memórias|2003|pop-rock-nacional|3|3|nostalgico,melancolico|amor|50|||
+Pitty|Na Sua Estante|2005|pop-rock-nacional|4|4|animado,confiante|amor,curticao|62|C|||
+Pitty|Admirável Chip Novo|2003|pop-rock-nacional|4|3|tenso,empolgante|critica-social|72|C|||
+Pitty|Teto de Vidro|2005|pop-rock-nacional|4|3|agressivo,confiante|critica-social|60|||
+Pitty|Semana que Vem|2003|pop-rock-nacional|4|3|tenso,agressivo|critica-social|55|||
+Pitty|Anacrônico|2005|pop-rock-nacional|4|3|tenso|critica-social|45|||
+Pitty|Do Zero|2005|pop-rock-nacional|4|3|confiante|superacao|45|||
+Pitty|Desconstruindo Amélia|2009|pop-rock-nacional|4|3|confiante|critica-social|40|||

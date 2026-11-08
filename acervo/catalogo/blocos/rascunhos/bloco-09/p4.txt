@@ -1,0 +1,132 @@
+Genesis|Land of Confusion|1986|rock-progressivo|4|3|tenso,estranho,empolgante|58|
+Genesis|Invisible Touch|1986|pop-rock|4|5|alegre,animado,sensual|65|
+Genesis|I Can't Dance|1991|pop-rock|3|4|engracado,confiante,alegre|52|
+Genesis|Follow You Follow Me|1978|soft-rock|3|4|romantico,alegre,esperancoso|42|
+Genesis|Supper's Ready|1972|rock-progressivo|3|3|epico,misterioso,magico|45|
+Genesis|Mama|1983|pop-rock|3|1|sombrio,tenso,dramatico|50|
+Peter Gabriel|Sledgehammer|1986|pop-rock|5|5|animado,sensual,festivo|75|metais
+Peter Gabriel|In Your Eyes|1986|pop-rock|3|4|romantico,esperancoso,sonhador|75|o:casamento
+Peter Gabriel|Solsbury Hill|1977|rock-progressivo|3|4|esperancoso,alegre,contemplativo|62|
+Peter Gabriel|Don't Give Up|1986|soft-rock|2|2|melancolico,esperancoso,sofrido|68|f:Kate_Bush
+Peter Gabriel|Games Without Frontiers|1980|new-wave|4|3|estranho,tenso,animado|42|
+Peter Gabriel|Red Rain|1986|pop-rock|3|3|dramatico,esperancoso,misterioso|42|
+Emerson, Lake & Palmer|Lucky Man|1970|rock-progressivo|2|3|nostalgico,contemplativo,esperancoso|55|
+Emerson, Lake & Palmer|Fanfare for the Common Man|1977|rock-progressivo|4|4|epico,esperancoso,empolgante|50|I i:sintetizador
+Emerson, Lake & Palmer|Karn Evil 9: 1st Impression Part 2|1973|rock-progressivo|5|3|epico,empolgante,estranho|42|
+King Crimson|21st Century Schizoid Man|1969|rock-progressivo|5|2|agressivo,tenso,estranho|65|E
+King Crimson|In the Court of the Crimson King|1969|rock-progressivo|3|2|epico,sombrio,misterioso|62|
+King Crimson|Epitaph|1969|rock-progressivo|3|1|dramatico,sombrio,epico|52|
+King Crimson|Starless|1974|rock-progressivo|3|1|sombrio,melancolico,epico|50|
+Jethro Tull|Aqualung|1971|rock-progressivo|4|2|sombrio,dramatico,contemplativo|72|i:flauta
+Jethro Tull|Locomotive Breath|1971|rock-progressivo|5|3|tenso,empolgante,confiante|65|i:flauta
+Jethro Tull|Thick as a Brick|1972|rock-progressivo|3|3|estranho,epico,contemplativo|48|i:flauta
+Jethro Tull|Bungle in the Jungle|1974|rock-classico|4|4|alegre,engracado,animado|45|
+Jethro Tull|Living in the Past|1969|rock-progressivo|4|4|nostalgico,alegre,animado|52|i:flauta
+Jethro Tull|Songs from the Wood|1977|folk-rock|4|4|alegre,magico,festivo|42|o:rpg-taverna i:flauta
+Supertramp|The Logical Song|1979|rock-progressivo|3|3|nostalgico,contemplativo,melancolico|75|C
+Supertramp|Breakfast in America|1979|rock-progressivo|3|4|alegre,nostalgico,engracado|65|
+Supertramp|Dreamer|1974|rock-progressivo|4|4|alegre,animado,sonhador|65|
+Supertramp|Give a Little Bit|1977|soft-rock|3|4|esperancoso,alegre,aconchegante|62|
+Supertramp|Take the Long Way Home|1979|rock-progressivo|3|3|nostalgico,contemplativo,melancolico|58|
+Supertramp|It's Raining Again|1982|soft-rock|3|4|alegre,animado,nostalgico|50|
+Electric Light Orchestra|Mr. Blue Sky|1977|rock-progressivo|4|5|alegre,esperancoso,festivo|80|E C
+Electric Light Orchestra|Don't Bring Me Down|1979|rock-classico|5|4|confiante,empolgante,animado|58|
+Electric Light Orchestra|Livin' Thing|1976|rock-progressivo|4|4|alegre,nostalgico,epico|62|cordas
+Electric Light Orchestra|Evil Woman|1975|rock-classico|4|4|confiante,sensual,animado|60|
+Electric Light Orchestra|Telephone Line|1976|soft-rock|3|3|saudade,romantico,melancolico|58|
+Electric Light Orchestra|Last Train to London|1979|disco+rock-classico|4|5|alegre,animado,festivo|48|
+Electric Light Orchestra|Turn to Stone|1977|rock-classico|5|4|empolgante,animado,confiante|48|
+Electric Light Orchestra|Hold On Tight|1981|rock-classico|4|5|alegre,esperancoso,animado|45|
+Electric Light Orchestra|Xanadu|1980|disco+rock-classico|4|5|sonhador,alegre,magico|55|f:Olivia_Newton-John
+Cheap Trick|I Want You to Want Me|1977|rock-classico|4|4|alegre,animado,romantico|62|L C
+Cheap Trick|Surrender|1978|rock-classico|5|4|animado,confiante,alegre|55|
+Cheap Trick|The Flame|1988|soft-rock|3|3|romantico,dramatico,saudade|55|
+Def Leppard|Pour Some Sugar on Me|1987|hard-rock|5|5|animado,sensual,festivo|80|E C
+Def Leppard|Photograph|1983|hard-rock|5|4|empolgante,animado,confiante|68|
+Def Leppard|Love Bites|1987|soft-rock|3|2|sofrido,romantico,dramatico|65|
+Def Leppard|Hysteria|1987|hard-rock|3|3|sensual,romantico,dramatico|60|
+Def Leppard|Rock of Ages|1983|hard-rock|5|5|festivo,animado,empolgante|62|
+Def Leppard|Animal|1987|hard-rock|4|4|sensual,animado,alegre|55|
+Def Leppard|Armageddon It|1987|hard-rock|5|4|animado,confiante,festivo|50|
+Def Leppard|Let's Get Rocked|1992|hard-rock|5|5|festivo,animado,confiante|55|C
+Def Leppard|When Love & Hate Collide|1995|soft-rock|3|3|romantico,dramatico,esperancoso|45|
+Mötley Crüe|Kickstart My Heart|1989|hard-rock|5|4|empolgante,agressivo,animado|68|o:treino
+Mötley Crüe|Girls, Girls, Girls|1987|hard-rock|5|5|animado,sensual,festivo|62|X
+Mötley Crüe|Home Sweet Home|1985|soft-rock|2|3|saudade,nostalgico,esperancoso|68|i:piano
+Mötley Crüe|Dr. Feelgood|1989|hard-rock|4|3|sombrio,confiante,empolgante|65|
+Mötley Crüe|Shout at the Devil|1983|heavy-metal|5|3|sombrio,agressivo,empolgante|58|
+Mötley Crüe|Looks That Kill|1983|hard-rock|5|4|animado,sensual,confiante|45|
+Mötley Crüe|Wild Side|1987|hard-rock|5|3|agressivo,confiante,empolgante|48|
+Mötley Crüe|Live Wire|1981|hard-rock|5|4|agressivo,animado,empolgante|45|
+Mötley Crüe|Without You|1990|soft-rock|3|2|sofrido,romantico,dramatico|48|
+Poison|Every Rose Has Its Thorn|1988|soft-rock|2|2|triste,sofrido,melancolico|82|E C o:fossa t:termino
+Poison|Talk Dirty to Me|1986|hard-rock|5|5|animado,sensual,festivo|62|
+Poison|Nothin' but a Good Time|1988|hard-rock|5|5|festivo,animado,alegre|62|C
+Poison|Unskinny Bop|1990|hard-rock|4|4|animado,sensual,alegre|45|
+Poison|Fallen Angel|1988|hard-rock|4|3|dramatico,empolgante,romantico|42|
+Whitesnake|Here I Go Again|1982|hard-rock|4|3|esperancoso,dramatico,empolgante|82|E C
+Whitesnake|Is This Love|1987|soft-rock|3|3|romantico,dramatico,saudade|72|
+Whitesnake|Still of the Night|1987|hard-rock|5|3|sombrio,sensual,empolgante|68|
+Whitesnake|Fool for Your Loving|1980|hard-rock|4|3|sofrido,confiante,empolgante|48|
+Whitesnake|Love Ain't No Stranger|1984|hard-rock|3|3|romantico,dramatico,sensual|45|
+Whitesnake|Give Me All Your Love|1987|hard-rock|5|4|sensual,animado,empolgante|45|
+Skid Row|18 and Life|1989|hard-rock|3|2|dramatico,triste,sombrio|62|
+Skid Row|I Remember You|1989|soft-rock|2|2|saudade,romantico,melancolico|68|
+Skid Row|Youth Gone Wild|1989|hard-rock|5|4|agressivo,confiante,empolgante|58|C
+Skid Row|Slave to the Grind|1991|heavy-metal|5|3|agressivo,empolgante,tenso|42|
+Twisted Sister|We're Not Gonna Take It|1984|heavy-metal|5|4|confiante,empolgante,agressivo|72|E C
+Twisted Sister|I Wanna Rock|1984|heavy-metal|5|5|festivo,animado,confiante|60|
+Ratt|Round and Round|1984|hard-rock|5|4|animado,confiante,empolgante|50|
+Quiet Riot|Cum On Feel the Noize|1983|hard-rock|5|5|festivo,animado,empolgante|55|C
+Cinderella|Don't Know What You Got (Till It's Gone)|1988|soft-rock|2|2|saudade,sofrido,melancolico|58|
+Warrant|Heaven|1989|soft-rock|2|3|romantico,saudade,dramatico|58|
+Bon Jovi|You Give Love a Bad Name|1986|hard-rock|5|4|empolgante,dramatico,confiante|78|C
+Bon Jovi|Bad Medicine|1988|hard-rock|5|5|animado,sensual,festivo|68|C
+Bon Jovi|Always|1994|soft-rock|3|2|sofrido,romantico,dramatico|80|E o:fossa
+Bon Jovi|Wanted Dead or Alive|1986|hard-rock|3|3|epico,nostalgico,contemplativo|75|o:estrada
+Bon Jovi|Bed of Roses|1992|soft-rock|2|2|romantico,sofrido,melancolico|68|
+Bon Jovi|Keep the Faith|1992|hard-rock|4|4|esperancoso,empolgante,confiante|55|
+Bon Jovi|I'll Be There for You|1988|soft-rock|3|3|romantico,saudade,dramatico|65|
+Bon Jovi|Have a Nice Day|2005|pop-rock|4|5|alegre,esperancoso,animado|60|
+Bon Jovi|Blaze of Glory|1990|hard-rock|4|3|epico,confiante,empolgante|58|
+Bon Jovi|Runaway|1984|hard-rock|4|3|tenso,empolgante,dramatico|45|
+Bon Jovi|This Ain't a Love Song|1995|soft-rock|3|2|sofrido,dramatico,romantico|55|
+Bon Jovi|Lay Your Hands on Me|1988|hard-rock|5|4|sensual,empolgante,animado|45|
+Bon Jovi|Born to Be My Baby|1988|hard-rock|4|4|alegre,romantico,animado|50|
+Bon Jovi|Someday I'll Be Saturday Night|1994|hard-rock|4|4|nostalgico,esperancoso,animado|38|
+Bon Jovi|Thank You for Loving Me|2000|soft-rock|2|4|romantico,calmo,esperancoso|60|o:casamento
+Guns N' Roses|Paradise City|1987|hard-rock|5|4|empolgante,esperancoso,confiante|88|E C
+Guns N' Roses|Welcome to the Jungle|1987|hard-rock|5|3|agressivo,tenso,empolgante|85|E X
+Guns N' Roses|Patience|1988|soft-rock|2|3|romantico,calmo,saudade|82|i:violao
+Guns N' Roses|Don't Cry|1991|hard-rock|3|2|melancolico,sofrido,dramatico|78|
+Guns N' Roses|Live and Let Die|1991|hard-rock|5|4|epico,empolgante,tenso|68|
+Guns N' Roses|Knockin' on Heaven's Door|1991|hard-rock|3|2|melancolico,sagrado,contemplativo|80|C
+Guns N' Roses|You Could Be Mine|1991|hard-rock|5|3|agressivo,empolgante,tenso|75|o:treino
+Guns N' Roses|Civil War|1991|hard-rock|4|2|tenso,sombrio,dramatico|58|
+Guns N' Roses|Estranged|1991|hard-rock|3|2|melancolico,dramatico,sofrido|55|
+Guns N' Roses|Nightrain|1987|hard-rock|5|4|animado,confiante,festivo|55|
+Guns N' Roses|Mr. Brownstone|1987|hard-rock|4|3|sombrio,confiante,estranho|52|X
+Guns N' Roses|It's So Easy|1987|hard-rock|5|3|agressivo,confiante,empolgante|50|X
+Guns N' Roses|Since I Don't Have You|1993|rock-classico|2|2|saudade,melancolico,romantico|40|
+Guns N' Roses|Better|2008|hard-rock|4|3|dramatico,empolgante,sofrido|35|
+Guns N' Roses|Chinese Democracy|2008|hard-rock|5|3|agressivo,empolgante,tenso|35|
+Metallica|One|1988|thrash-metal|4|1|sombrio,dramatico,epico|82|E
+Metallica|Master of Puppets|1986|thrash-metal|5|2|agressivo,epico,tenso|85|E
+Metallica|Fade to Black|1984|thrash-metal|3|1|triste,sombrio,dramatico|75|t:perda
+Metallica|For Whom the Bell Tolls|1984|thrash-metal|4|2|sombrio,epico,tenso|68|
+Metallica|Seek & Destroy|1983|thrash-metal|5|3|agressivo,empolgante,confiante|68|
+Metallica|Fuel|1997|heavy-metal|5|3|agressivo,empolgante,confiante|65|
+Metallica|The Unforgiven|1991|heavy-metal|3|1|sombrio,sofrido,melancolico|72|
+Metallica|Sad but True|1991|heavy-metal|4|2|sombrio,agressivo,tenso|70|
+Metallica|Wherever I May Roam|1991|heavy-metal|4|3|misterioso,sombrio,confiante|58|
+Metallica|Ride the Lightning|1984|thrash-metal|5|2|sombrio,tenso,agressivo|62|
+Metallica|Battery|1986|thrash-metal|5|3|agressivo,empolgante,tenso|60|
+Metallica|Creeping Death|1984|thrash-metal|5|2|sombrio,agressivo,epico|58|
+Metallica|Whiskey in the Jar|1998|heavy-metal|4|4|alegre,animado,engracado|65|
+Metallica|Until It Sleeps|1996|heavy-metal|3|1|sombrio,sofrido,dramatico|52|
+Metallica|Hit the Lights|1983|thrash-metal|5|4|agressivo,empolgante,animado|48|
+Metallica|Blackened|1988|thrash-metal|5|2|agressivo,sombrio,tenso|52|
+Metallica|Orion|1986|thrash-metal|3|2|epico,sombrio,contemplativo|52|I
+Metallica|The Day That Never Comes|2008|heavy-metal|3|2|sofrido,dramatico,sombrio|50|
+Metallica|Moth Into Flame|2016|thrash-metal|5|3|agressivo,empolgante,tenso|45|
+Metallica|Lux Æterna|2023|thrash-metal|5|4|empolgante,agressivo,confiante|45|

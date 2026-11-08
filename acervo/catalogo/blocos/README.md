@@ -11,6 +11,8 @@ computador dele; o Claude lê o relatório e arruma o que precisar.
 | `bloco-NN.youtube.csv` | o link oficial escolhido e por quê |
 | `pendentes.csv` | as que ficaram de fora (sem upload oficial no YouTube) |
 | `relatorio.md` | o resumo da última rodada |
+| `REGRAS_PARA_GERAR.md` | como gerar uma lista (vai no pedido de cada subagente) |
+| `rascunhos/` | o que os subagentes deixaram antes de parar (ver `docs/etapas/banco-fredify-etapa3.md`) |
 
 Blocos: 01 essenciais (de tudo) · 02 MPB e soul BR · 03 samba e pagode ·
 04 sertanejo · 05 forró, axé, brega e regionais · 06 rock e pop BR ·

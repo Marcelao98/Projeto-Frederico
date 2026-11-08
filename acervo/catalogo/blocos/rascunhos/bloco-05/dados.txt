@@ -1,0 +1,718 @@
+Luiz Gonzaga|Baião|1946|baiao|4|4|alegre,festivo|sao-joao|danca|sanfona|70|E
+Luiz Gonzaga|Vozes da Seca|1953|baiao|3|2|melancolico,triste|sao-joao|vida-no-campo,critica-social|sanfona|55|
+Luiz Gonzaga|A Vida do Viajante|1953|baiao|3|3|saudade,nostalgico|sao-joao|pe-na-estrada|sanfona|60|C
+Luiz Gonzaga|Assum Preto|1950|baiao|2|2|triste,saudade,melancolico|fossa|perda,vida-no-campo|sanfona|65|
+Luiz Gonzaga|Paraíba|1950|baiao|4|4|alegre,festivo|sao-joao|vida-no-campo|sanfona|55|
+Luiz Gonzaga|O Xote das Meninas|1953|xote|3|4|alegre,festivo|sao-joao|danca|sanfona|60|
+Luiz Gonzaga|Pau de Arara|1952|baiao|3|3|nostalgico,saudade|sao-joao|pe-na-estrada,vida-no-campo|sanfona|55|
+Luiz Gonzaga|Riacho do Navio|1955|baiao|3|3|saudade,nostalgico|sao-joao|vida-no-campo|sanfona|50|
+Luiz Gonzaga|Juazeiro|1949|baiao|3|3|romantico,saudade|sao-joao|amor|sanfona|50|
+Luiz Gonzaga|Sabiá|1964|baiao|2|2|saudade,melancolico|fossa|vida-no-campo,saudade|sanfona|50|
+Luiz Gonzaga|São João do Carneirinho|1953|forro-pe-de-serra|4|5|festivo,alegre|sao-joao|curticao|sanfona|50|
+Luiz Gonzaga|Forró no Escuro|1957|forro-pe-de-serra|4|4|alegre,festivo|sao-joao|danca|sanfona|50|
+Luiz Gonzaga|Casamento Improvisado|1955|forro-pe-de-serra|4|4|alegre,engracado|sao-joao|zoeira|sanfona|40|
+Luiz Gonzaga|Cintura Fina|1950|baiao|4|4|alegre,festivo|sao-joao|danca|sanfona|45|
+Luiz Gonzaga|Baião de Dois|1950|baiao|4|4|alegre,festivo|sao-joao|danca|sanfona|40|
+Luiz Gonzaga|Lascando o Cano|1960|baiao|4|4|alegre,festivo|sao-joao|danca|sanfona|40|
+Luiz Gonzaga|Fogo Pagou|1950|baiao|4|4|alegre,animado|sao-joao|curticao|sanfona|40|
+Luiz Gonzaga|Último Pau de Arara|1956|baiao|3|2|saudade,melancolico|sao-joao|pe-na-estrada,critica-social|sanfona|45|
+Luiz Gonzaga|Meu Pajeú|1959|baiao|3|3|saudade,nostalgico|sao-joao|vida-no-campo|sanfona|40|
+Luiz Gonzaga|Xote dos Cabeludos|1967|xote|4|4|alegre,festivo|sao-joao|danca|sanfona|40|
+Luiz Gonzaga|A Volta da Asa Branca|1950|baiao|3|3|esperancoso,nostalgico|sao-joao|vida-no-campo|sanfona|50|
+Luiz Gonzaga|Ôxente, Maria|1959|baiao|3|4|alegre,festivo|sao-joao|amor|sanfona|35|
+Dominguinhos|Lamento Sertanejo|1976|baiao|2|2|melancolico,saudade|fossa|vida-no-campo,saudade|sanfona|55|
+Dominguinhos|Gostoso Demais|1976|forro-pe-de-serra|3|4|romantico,alegre|sao-joao|amor|sanfona|60|C
+Dominguinhos|De Volta pro Aconchego|1983|forro-pe-de-serra|3|3|saudade,romantico|sao-joao|amor|sanfona|45|
+Dominguinhos|Tenho Sede|1973|forro-pe-de-serra|2|3|romantico,sensual|jantar-romantico|amor,paixao|sanfona|50|
+Dominguinhos|Contrato de Separação|1980|forro-pe-de-serra|3|2|sofrido,triste|fossa|termino|sanfona|40|
+Gilberto Gil|Ainda Bem Que Eu Já Chorei|1982|forro-pe-de-serra|3|3|nostalgico,saudade|sao-joao|saudade|sanfona|40|
+Gilberto Gil|Esperando na Janela|1999|forro-pe-de-serra|4|4|romantico,alegre|sao-joao|amor|sanfona|75|CE
+Gilberto Gil|Pai Eu Quero|1982|forro-pe-de-serra|4|4|alegre,festivo|sao-joao|familia|sanfona|40|
+Gilberto Gil|São João na Roça|1976|forro-pe-de-serra|4|5|festivo,alegre|sao-joao|curticao|sanfona|40|
+Jackson do Pandeiro|Sebastiana|1953|coco|5|5|animado,festivo|carnaval,sao-joao|danca|percussao|60|C
+Jackson do Pandeiro|O Canto da Ema|1953|baiao|4|4|alegre,festivo|sao-joao|danca|percussao|55|
+Jackson do Pandeiro|Forró em Limoeiro|1959|forro-pe-de-serra|4|5|festivo,animado|sao-joao|curticao|sanfona|50|
+Jackson do Pandeiro|Um a Um|1958|forro-pe-de-serra|4|4|alegre,animado|sao-joao|danca|sanfona|40|
+Jackson do Pandeiro|Cantiga do Sapo|1954|coco|4|4|alegre,engracado|sao-joao|zoeira|percussao|45|
+Marinês|Peba na Pimenta|1960|forro-pe-de-serra|4|5|festivo,engracado|sao-joao|zoeira|sanfona|45|
+Marinês|Pisa na Fulô|1961|xote|3|4|romantico,alegre|sao-joao|amor|sanfona|45|
+Trio Nordestino|Chofer de Praça|1965|forro-pe-de-serra|4|4|alegre,engracado|sao-joao|zoeira|sanfona|45|
+Trio Nordestino|Súplica Cearense|1961|forro-pe-de-serra|2|2|sagrado,triste|momento-de-fe|fe|sanfona|40|
+Trio Nordestino|Coisa do Norte|1975|forro-pe-de-serra|4|4|alegre,festivo|sao-joao|vida-no-campo|sanfona|35|
+Sivuca|Feira de Mangaio|1969|baiao|3|4|alegre,nostalgico|sao-joao|vida-no-campo|sanfona|55|
+Sivuca|Adeus, Maria Fulô|1970|baiao|2|2|saudade,triste|fossa|saudade|sanfona|45|
+Os Três do Nordeste|Forró de Zé Antão|1965|forro-pe-de-serra|4|4|alegre,festivo|sao-joao|danca|sanfona|35|
+Genival Lacerda|Severina Xique-Xique|1975|forro-pe-de-serra|4|4|engracado,alegre|sao-joao|zoeira,pegacao|sanfona|60|CX
+Genival Lacerda|Radinho de Pilha|1982|forro-pe-de-serra|4|4|engracado,alegre|sao-joao|zoeira|sanfona|40|
+Elba Ramalho|Pavão Mysteriozo|1982|forro-pe-de-serra|3|3|misterioso,nostalgico|sao-joao|amor|sanfona|60|
+Elba Ramalho|O Que É O Que É|1981|forro-pe-de-serra|3|3|sonhador,nostalgico|sao-joao|amor|sanfona|40|
+Elba Ramalho|Chão de Giz|1982|mpb|2|2|melancolico,saudade|fossa|saudade,amor|violao|55|
+Alceu Valença|Tropicana|1982|forro-pe-de-serra|4|4|alegre,festivo|carnaval,sao-joao|curticao|sanfona|55|
+Alceu Valença|Coração Bobo|1980|forro-pe-de-serra|4|3|romantico,saudade|sao-joao|amor|sanfona|55|
+Zé Ramalho|Chão de Giz|1979|mpb|2|2|melancolico,saudade|fossa|saudade,amor|violao|65|
+Zé Ramalho|Frevo Mulher|1980|frevo|4|4|animado,festivo|carnaval|curticao|percussao|40|
+Geraldo Azevedo|Táxi Lunar|1977|mpb|3|3|sonhador,melancolico||violao|40|
+Fagner|Asa Partida|1976|baiao|2|2|saudade,melancolico|fossa|saudade|violao|45|
+Fagner|Revelação|1981|mpb-romantica|2|2|romantico,saudade|fossa|amor|violao|55|
+Fagner|Canteiros|1973|mpb|2|2|saudade,melancolico|fossa|saudade|violao|55|
+Santanna, o Cantador|Sem Contrato|1990|forro-pe-de-serra|4|4|alegre,festivo|sao-joao|danca|sanfona|35|
+Flávio José|Pé de Serra|1995|forro-pe-de-serra|3|4|alegre,nostalgico|sao-joao|vida-no-campo|sanfona|45|
+Flávio José|Espumas ao Vento|1995|forro-pe-de-serra|3|3|romantico,saudade|sao-joao|amor|sanfona|40|
+Waldonys|Forró de Vaqueiro|1996|forro-pe-de-serra|4|5|festivo,animado|sao-joao|curticao|sanfona|40|
+Adelmário Coelho|Nega Mina|1990|forro-pe-de-serra|4|4|alegre,festivo|sao-joao|danca|sanfona|35|
+Targino Gondim|Esperando Na Janela|1992|forro-pe-de-serra|3|3|romantico|sao-joao|amor|sanfona|30|
+Cesar Menotti & Fabiano|Mexe Mexe|2000|forro-pe-de-serra|4|4|alegre|sao-joao|danca|sanfona|30|
+Petrúcio Amorim|Ela Só Pensa em Beijar|2010|forro-pe-de-serra|4|4|alegre,romantico|sao-joao|paixao|sanfona|40|
+Santanna|Tô Só Esperando Você|1992|forro-pe-de-serra|3|3|romantico,saudade|sao-joao|amor|sanfona|35|
+Nando Cordel|Mãe Jurema|1988|forro-pe-de-serra|3|3|misterioso,nostalgico|sao-joao|vida-no-campo|sanfona|30|
+Xangai|Casa de Caboclo|1985|forro-pe-de-serra|2|3|nostalgico,aconchegante|sao-joao|vida-no-campo|violao|30|
+Fala Mansa|Menino de Engenho|2003|forro-universitario|4|4|alegre,nostalgico|sao-joao|infancia|sanfona|30|
+Falamansa|Xote da Alegria|1999|forro-universitario|4|4|alegre,festivo|sao-joao,festa|danca,curticao|sanfona|75|CE
+Falamansa|Deixa Eu Te Dizer|2000|forro-universitario|3|3|romantico,saudade|sao-joao|amor|sanfona|45|
+Falamansa|Sol Em Teus Olhos|2004|forro-universitario|3|3|romantico|sao-joao|amor|sanfona|35|
+Rastapé|Ainda Sou a Mesma|2009|forro-universitario|4|3|romantico,saudade|sao-joao|amor|sanfona|45|
+Rastapé|Cabelo de Fogo|2002|forro-universitario|4|4|alegre|sao-joao|paixao|sanfona|35|
+Rastapé|Flor do Cerrado|2005|forro-universitario|3|3|romantico|sao-joao|amor|sanfona|30|
+Brucelose|Cumade Brasileira|2008|forro-universitario|4|4|alegre,festivo|sao-joao|danca|sanfona|30|
+Trio Virgulino|Vem Morena|2004|forro-universitario|4|4|alegre|sao-joao|paixao|sanfona|30|
+Trio Dona Zefa|Amor de Verdade|2012|forro-universitario|3|3|romantico|sao-joao|amor|sanfona|25|
+Dorgival Dantas|Coração Cigano|1999|forro-pe-de-serra|3|3|saudade,romantico|sao-joao|amor|sanfona|45|
+Dorgival Dantas|Pensa em Mim|1999|forro-pe-de-serra|3|2|saudade,sofrido|fossa|termino|sanfona|35|
+Mastruz com Leite|Te Amo Demais|1994|forro-eletronico|3|3|romantico,saudade|sao-joao|amor|sanfona|55|
+Mastruz com Leite|Alô Porteiro|1995|forro-eletronico|4|4|alegre,animado|sao-joao|paixao|sanfona|40|
+Mastruz com Leite|Meu Vaqueiro, Meu Peão|1993|forro-eletronico|4|4|alegre,festivo|sao-joao|paixao|sanfona|60|
+Mastruz com Leite|Dama de Vermelho|1995|forro-eletronico|4|4|sensual,alegre|sao-joao|paixao|sanfona|35|
+Magníficos|Pense em Mim|1995|forro-eletronico|3|2|sofrido,saudade|fossa|termino|sanfona|30|
+Magníficos|Meu Boy|1997|forro-eletronico|4|4|alegre|sao-joao|paixao|sanfona|30|
+Cavaleiros do Forró|Cheiro de Cabelo|1996|forro-eletronico|4|4|alegre,romantico|sao-joao|paixao|sanfona|35|
+Calcinha Preta|Pela Última Vez|2002|forro-eletronico|3|2|sofrido,saudade|fossa|termino|sanfona|50|C
+Calcinha Preta|A Coisa Mais Linda|2002|forro-eletronico|3|3|romantico|sao-joao|amor|sanfona|40|
+Calcinha Preta|Nunca Deixei de Te Amar|2000|forro-eletronico|3|3|romantico,saudade|sao-joao|amor|sanfona|40|
+Calcinha Preta|Paixão Cega|2003|forro-eletronico|4|3|romantico|sao-joao|paixao|sanfona|45|
+Calcinha Preta|Ninguém Vai Te Amar Como Eu|2004|forro-eletronico|3|2|sofrido,saudade|fossa|dor-de-cotovelo|sanfona|40|
+Calcinha Preta|Você Não Vale Nada|2002|forro-eletronico|4|3|sofrido,animado|barzinho|traicao|sanfona|60|C
+Aviões do Forró|Chorando Eu Fui Embora|2008|forro-eletronico|3|2|sofrido,saudade|fossa|termino|sanfona|50|
+Aviões do Forró|Amor da Minha Vida|2008|forro-eletronico|3|3|romantico|sao-joao|amor|sanfona|40|
+Aviões do Forró|Eu Sou Assim|2008|forro-eletronico|4|4|confiante,animado|festa|curticao|sanfona|35|
+Aviões do Forró|Camarote|2011|forro-eletronico|5|5|animado,festivo|balada|curticao|sanfona|60|C
+Aviões do Forró|Sorte Que Cê Beija Bem|2010|forro-eletronico|4|4|alegre,sensual|festa|paixao|sanfona|40|
+Aviões do Forró|Seu Louco|2009|forro-eletronico|4|3|romantico|sao-joao|paixao|sanfona|30|
+Forró no Escuro|Dama de Ouro|2004|forro-eletronico|4|3|romantico,saudade|sao-joao|paixao|sanfona|30|
+Saia Rodada|Mulher Boa|2008|forro-eletronico|4|4|alegre,sensual|sao-joao|paixao|sanfona|35|
+Saia Rodada|Chuva de Prata|2007|forro-eletronico|4|4|alegre|sao-joao|danca|sanfona|30|
+Desejo de Menina|Mulher Desejada|2004|forro-eletronico|4|3|romantico|sao-joao|paixao|sanfona|30|
+Bandas de Forró|Banda Magníficos|1998|forro-eletronico|4|4|alegre|sao-joao|danca|sanfona|20|
+Xand Avião|Dei Vacilo|2012|forro-eletronico|4|3|sofrido,saudade|fossa|termino|sanfona|40|
+Xand Avião|Beijo Bom|2012|forro-eletronico|4|4|alegre,sensual|festa|paixao|sanfona|35|
+Wesley Safadão|Camarote|2013|forro-eletronico|5|5|animado,festivo|balada|curticao|sanfona|55|C
+Wesley Safadão|Ai Meu Deus|2016|forro-eletronico|4|3|romantico,saudade|barzinho|amor|sanfona|40|
+Wesley Safadão|Sou Da Pegada|2014|forro-eletronico|4|4|animado,sensual|balada|pegacao|sanfona|40|
+Wesley Safadão|Vai Trincar|2014|forro-eletronico|5|5|animado,festivo|balada|curticao|sanfona|35|
+Wesley Safadão|Camarote Remix|2013|forro-eletronico|5|5|animado|balada|curticao|sanfona|10|
+Solange Almeida|Cupido|2012|forro-eletronico|4|3|romantico,sensual|barzinho|paixao|sanfona|30|
+Tarcísio do Acordeon|Vem Pra Mim|2007|forro-eletronico|4|4|alegre|sao-joao|danca|sanfona|25|
+Limão com Mel|Tudo Que Eu Preciso|2005|forro-eletronico|4|3|romantico|sao-joao|amor|sanfona|25|
+Banda Eva|Beleza Rara|1999|axe-music|4|4|alegre,festivo|carnaval|curticao|percussao|35|
+Dorgival Dantas|Parabéns pra Você|2003|forro-pe-de-serra|4|4|alegre,festivo|aniversario|amizade|sanfona|20|
+Os Barões da Pisadinha|Estrela de Fogo|2020|piseiro|4|3|sofrido,saudade|barzinho|termino|sanfona|50|
+Os Barões da Pisadinha|Ai Que Vontade|2020|piseiro|4|4|animado,sensual|festa|paixao|sanfona|45|
+Os Barões da Pisadinha|Teu Namorado É um Chato|2020|piseiro|4|4|alegre,confiante|festa|pegacao|sanfona|40|
+Os Barões da Pisadinha|Vai Embora|2020|piseiro|4|3|sofrido|barzinho|termino|sanfona|35|
+Os Barões da Pisadinha|Cartão de Crédito|2021|piseiro|4|4|alegre,animado|festa|curticao|sanfona|40|
+Os Barões da Pisadinha|Sorte Grande|2021|piseiro|4|3|romantico|barzinho|amor|sanfona|30|
+Os Barões da Pisadinha|Se Você Tá Bem Eu Tô Ótimo|2021|piseiro|4|4|confiante|festa|superacao|sanfona|30|
+Zé Vaqueiro|Letícia|2020|piseiro|4|3|romantico,sofrido|barzinho|amor|sanfona|55|
+Zé Vaqueiro|Tanto Faz|2021|piseiro|4|3|sofrido|barzinho|termino|sanfona|40|
+Zé Vaqueiro|Coração Está Doendo|2021|piseiro|4|2|sofrido,triste|fossa|dor-de-cotovelo|sanfona|35|
+Zé Vaqueiro|Fogo Cruzado|2022|piseiro|4|4|animado,sensual|festa|paixao|sanfona|35|
+João Gomes|Esquece Que Eu Esqueci|2021|piseiro|4|3|saudade,sofrido|barzinho|termino|sanfona|45|
+João Gomes|Dengo|2021|piseiro|4|4|romantico,alegre|barzinho|amor|sanfona|60|C
+João Gomes|Pra Você Dar Futuro|2021|piseiro|3|3|romantico|barzinho|amor|sanfona|40|
+João Gomes|Eu Tenho Pressa|2022|piseiro|3|3|romantico|barzinho|amor|sanfona|35|
+João Gomes|Tá Bom Demais|2023|piseiro|4|4|alegre|festa|amor|sanfona|40|
+João Gomes|Meu Pedaço de Pecado|2021|piseiro|4|3|sensual,romantico|barzinho|paixao|sanfona|75|C
+Vitor Fernandes|Quero Te Beijar|2021|piseiro|4|4|alegre,sensual|festa|paixao|sanfona|30|
+Vitor Fernandes|Pisadinha do Vitor|2021|piseiro|4|4|alegre|festa|danca|sanfona|20|
+Nattan|Ama Sofre Chora|2021|piseiro|4|3|sofrido,saudade|barzinho|termino|sanfona|40|
+Nattan|Ela Tá no Ponto|2022|piseiro|4|4|animado,sensual|festa|pegacao|sanfona|35|
+Nattan|Camisa de Ouro|2021|piseiro|4|4|confiante,alegre|festa|ostentacao|sanfona|30|
+Mari Fernandez|Madrugada|2021|piseiro|4|3|sofrido,saudade|barzinho|termino|voz-feminina|40|
+Mari Fernandez|Pássaro|2022|piseiro|4|4|romantico,alegre|barzinho|liberdade|voz-feminina|35|
+Mari Fernandez|Sem Querer Querendo|2022|piseiro|4|4|alegre,romantico|festa|paixao|voz-feminina|35|
+Mari Fernandez|Não, Não Vou|2022|piseiro|4|4|confiante,alegre|festa|termino|voz-feminina|50|C
+Ana Castela|Boiadeira|2022|piseiro|4|4|confiante,alegre|festa|curticao|sanfona|60|C
+Pedro Sampaio|Ai Preto|2020|piseiro|5|5|animado,festivo|balada|curticao|sintetizador|30|
+Tarcísio do Acordeon|Ciumeira|2021|piseiro|4|3|sofrido|barzinho|dor-de-cotovelo|sanfona|35|
+Tarcísio do Acordeon|Baby Eu Te Amo|2021|piseiro|4|4|romantico|barzinho|amor|sanfona|30|
+Tarcísio do Acordeon|Medley da Saudade|2021|piseiro|4|3|saudade|barzinho|saudade|sanfona|20|
+Eric Land|Cheirinho de Amor|2021|piseiro|4|3|romantico|barzinho|amor|sanfona|30|
+Japa na Voz|Vai Zerar|2021|piseiro|4|4|animado|festa|curticao|sanfona|20|
+Kelvin Gomes|Falsa Princesa|2021|piseiro|4|3|sofrido|barzinho|traicao|sanfona|20|
+Xand Avião|Os Pais Tão Ligados|2021|piseiro|4|3|romantico|barzinho|amor|sanfona|25|
+Xand Avião|Pisadinha de Fogo|2021|piseiro|5|4|animado|festa|curticao|sanfona|20|
+Wesley Safadão|Coração Machucado|2019|piseiro|4|2|sofrido|fossa|dor-de-cotovelo|sanfona|25|
+Henry Freitas|Pisa Mais Forte|2021|piseiro|4|4|animado|festa|danca|sanfona|20|
+Natanzinho Lima|Fantasma|2021|piseiro|4|3|sofrido|barzinho|termino|sanfona|20|
+Raí Saia Rodada|Desce Pra Pisadinha|2021|piseiro|4|4|animado|festa|danca|sanfona|20|
+Raí Saia Rodada|Cuida Bem Dela|2022|piseiro|4|3|romantico|barzinho|amor|sanfona|20|
+Felipe Amorim|Cama de Mel|2022|piseiro|4|3|sensual,romantico|festa|paixao|sanfona|25|
+Felipe Amorim|Ela Faz|2023|piseiro|4|4|sensual|festa|pegacao|sanfona|25|
+Luan Estilizado|Rock Nacional|2022|piseiro|4|4|alegre|festa|curticao|sanfona|20|
+Matheus Fernandes|Dia Dos Namorados|2022|piseiro|4|3|romantico|barzinho|amor|sanfona|20|
+Lipe Lucena|Vai Baby|2021|piseiro|4|4|animado|festa|danca|sanfona|15|
+Daniela Mercury|Swing da Cor|1992|axe-music|5|5|animado,festivo|carnaval|danca,orgulho|percussao|60|C
+Daniela Mercury|Oba, Lá Vem Ela|1992|axe-music|5|5|animado,festivo|carnaval|danca|percussao|50|
+Daniela Mercury|Nobre Vagabundo|1996|axe-music|4|4|alegre,festivo|carnaval|curticao|percussao|45|
+Daniela Mercury|Música de Rua|1994|axe-music|5|5|animado,festivo|carnaval|curticao|percussao|40|
+Daniela Mercury|Rapunzel|1995|axe-music|5|5|animado,festivo|carnaval|danca|percussao|55|C
+Ivete Sangalo|Abalou|2002|axe-music|5|5|animado,festivo|carnaval|danca|percussao|65|C
+Ivete Sangalo|Poeira|2004|axe-music|5|5|animado,festivo|carnaval|curticao|percussao|75|CE
+Ivete Sangalo|Eva|2007|axe-music|4|4|alegre,festivo|carnaval|curticao|percussao|40|
+Ivete Sangalo|Tempo de Alegria|2005|axe-music|4|5|alegre,esperancoso|carnaval|curticao|percussao|50|
+Ivete Sangalo|Acelera Aê|2002|axe-music|5|5|animado,festivo|carnaval|danca|percussao|45|
+Ivete Sangalo|Se Eu Não Te Amasse Tanto Assim|2005|axe-music|3|3|romantico,saudade|barzinho|amor|voz-feminina|55|C
+Ivete Sangalo|Na Base do Beijo|2005|axe-music|4|4|alegre,sensual|carnaval|paixao|percussao|45|
+Ivete Sangalo|Sorte Grande|2007|axe-music|4|4|alegre,esperancoso|carnaval|curticao|percussao|50|
+Ivete Sangalo|Quando a Chuva Passar|2003|axe-music|3|3|esperancoso,romantico|barzinho|amor|voz-feminina|55|C
+Ivete Sangalo|Mercedes|2011|axe-music|5|5|animado|carnaval|curticao|percussao|35|
+Ivete Sangalo|Carro Velho|2008|axe-music|4|4|nostalgico,alegre|barzinho|infancia|voz-feminina|50|
+Ivete Sangalo|Tchau e Bença|2005|axe-music|4|3|romantico|barzinho|termino|voz-feminina|40|
+Ivete Sangalo|Alô Paixão|2003|axe-music|5|5|animado|carnaval|curticao|percussao|45|
+Ivete Sangalo|Cadê Dalila|2004|axe-music|5|5|animado,festivo|carnaval|danca|percussao|40|
+Ivete Sangalo|Festa|2000|axe-music|5|5|animado,festivo|carnaval|curticao|percussao|50|
+Ivete Sangalo|Medo de Amar|2010|axe-music|4|3|romantico|barzinho|amor|voz-feminina|35|
+Claudia Leitte|Pôr do Sol|2008|axe-music|5|5|animado,festivo|carnaval|curticao|percussao|45|
+Claudia Leitte|Famo$a|2008|axe-music|5|5|animado|carnaval|ostentacao|percussao|35|
+Claudia Leitte|Exttravasa|2012|axe-music|5|5|animado|carnaval|curticao|percussao|40|
+Claudia Leitte|Largadinho|2010|axe-music|4|4|sensual,alegre|carnaval|paixao|percussao|40|
+Claudia Leitte|Beijar na Boca|2011|axe-music|4|5|alegre,festivo|carnaval|pegacao|percussao|45|
+Claudia Leitte|Taca Taca Taca|2012|axe-music|5|5|animado|carnaval|danca|percussao|35|
+Claudia Leitte|Samba|2013|axe-music|5|5|animado,festivo|carnaval|danca|percussao|35|
+Claudia Leitte|Sorte Grande|2014|axe-music|4|4|alegre|carnaval|curticao|percussao|25|
+Claudia Leitte|Cuidado|2015|axe-music|5|5|animado|carnaval|danca|percussao|25|
+Claudia Leitte|Quer Saber|2018|axe-music|5|5|animado|carnaval|danca|percussao|25|
+Claudia Leitte|Bola de Cristal|2015|axe-music|4|4|alegre|carnaval|amor|percussao|20|
+Claudia Leitte|Ai Ai Ai|2012|axe-music|4|4|alegre|carnaval|amor|percussao|15|
+Banda Eva|Farol da Barra|1997|axe-music|4|4|alegre,festivo|carnaval,praia|curticao|percussao|50|C
+Banda Eva|Bateu a Saudade|1998|axe-music|4|3|saudade,romantico|carnaval|saudade|percussao|35|
+Banda Eva|Alô Paixão|1998|axe-music|4|4|alegre|carnaval|paixao|percussao|40|
+Banda Eva|Eva|1996|axe-music|4|4|alegre,festivo|carnaval|curticao|percussao|50|C
+Banda Eva|Levada Louca|1997|axe-music|5|5|animado|carnaval|danca|percussao|35|
+Banda Eva|Pra Que Chorar|1996|axe-music|4|4|alegre|carnaval|amor|percussao|30|
+Banda Eva|Como Eu Te Quero|1996|axe-music|4|4|romantico,alegre|carnaval|paixao|percussao|30|
+Chiclete com Banana|Camaleão|1991|axe-music|5|5|animado,festivo|carnaval|curticao|percussao|60|CE
+Chiclete com Banana|Quero Ver Você Dançar|1994|axe-music|5|5|animado|carnaval|danca|percussao|40|
+Chiclete com Banana|Beija-Flor|1990|axe-music|4|4|alegre|carnaval|paixao|percussao|30|
+Chiclete com Banana|Quem Tem Medo de Chiclete|1992|axe-music|5|5|animado|carnaval|curticao|percussao|30|
+Chiclete com Banana|Prefixo de Verão|1993|axe-music|5|5|animado,festivo|carnaval,praia|curticao|percussao|40|
+Chiclete com Banana|Sou Eu|1995|axe-music|4|4|alegre|carnaval|amor|percussao|25|
+Chiclete com Banana|Jeito Faceiro|1992|axe-music|4|4|alegre|carnaval|paixao|percussao|20|
+Netinho|Milla|1994|axe-music|5|5|animado,festivo|carnaval|curticao|percussao|40|
+Netinho|Beijo na Boca|1993|axe-music|4|4|alegre|carnaval|pegacao|percussao|30|
+Netinho|Gostar de Você|1996|axe-music|4|4|romantico|carnaval|amor|percussao|25|
+Bell Marques|Sou Fã de Você|2010|axe-music|4|4|romantico|carnaval|amor|percussao|25|
+Bell Marques|Vem Pra Cá|2012|axe-music|5|5|animado|carnaval|danca|percussao|20|
+Cheiro de Amor|Pode Ser|1998|axe-music|4|4|romantico,alegre|carnaval|amor|percussao|25|
+Cheiro de Amor|Namoradinha|1999|axe-music|4|4|romantico,alegre|carnaval|amor|percussao|30|
+Cheiro de Amor|Garota Nota 10|1999|axe-music|5|5|animado|carnaval|paixao|percussao|25|
+Cheiro de Amor|Bota a Mão na Cabeça|2000|axe-music|5|5|animado|carnaval|danca|percussao|20|
+Babado Novo|Bola de Sabão|2005|axe-music|4|4|romantico,alegre|carnaval|amor|percussao|35|
+Babado Novo|Cobaia|2001|axe-music|4|4|alegre|carnaval|curticao|percussao|20|
+Babado Novo|Sua Cara|2003|axe-music|5|5|animado|carnaval|curticao|percussao|20|
+Babado Novo|Ela Me Dá|2004|axe-music|5|5|animado|carnaval|pegacao|percussao|20|
+Babado Novo|Batom de Cereja|2002|axe-music|4|4|sensual,alegre|carnaval|paixao|percussao|20|
+Babado Novo|O Barato|2005|axe-music|4|4|alegre|carnaval|curticao|percussao|15|
+Babado Novo|Doido pra Te Ver|2008|axe-music|4|4|romantico|carnaval|amor|percussao|15|
+Babado Novo|Ao Vivo Em Salvador|2006|axe-music|4|4|alegre|carnaval|curticao|percussao|10|
+Asa de Águia|Pot-Pourri Asa de Águia|1996|axe-music|5|5|animado|carnaval|danca|percussao|25|
+Asa de Águia|Bombom|1998|axe-music|5|5|animado|carnaval|danca|percussao|25|
+Asa de Águia|Mila|1996|axe-music|5|5|animado|carnaval|danca|percussao|20|
+Asa de Águia|Vem Neném|1994|axe-music|5|5|animado|carnaval|curticao|percussao|20|
+Gerasamba|Cheia de Dengo|1996|pagode-baiano|5|5|animado|carnaval|danca|percussao|30|
+Terra Samba|Tudo Bem|1996|axe-music|4|4|alegre|carnaval|amor|percussao|20|
+Chico César|Mama África|1995|mpb|4|4|alegre,festivo|carnaval|familia|percussao|40|
+Luiz Caldas|Tieta|1989|axe-music|4|4|alegre|carnaval|curticao|percussao|30|
+Luiz Caldas|Haja Amor|1987|axe-music|4|4|alegre|carnaval|paixao|percussao|25|
+Sarajane|Ladeira do Pelô|1989|axe-music|4|4|alegre|carnaval|curticao|percussao|20|
+Margareth Menezes|Faraó (Divindade do Egito)|1987|samba-reggae|4|4|alegre,festivo|carnaval|orgulho|percussao|55|CE
+Margareth Menezes|Alegria da Cidade|1990|axe-music|4|5|alegre,festivo|carnaval|curticao|percussao|40|
+Margareth Menezes|Elegibô|1988|ijexa|3|4|alegre,sagrado|carnaval|fe|percussao|40|
+Olodum|Pelô Negro|1992|samba-reggae|4|4|alegre,festivo|carnaval|orgulho|percussao|40|
+Olodum|Madagascar Olodum|1987|samba-reggae|5|4|empolgante,festivo|carnaval|orgulho|percussao|50|
+Olodum|Revolta Olodum|1987|samba-reggae|5|4|empolgante|carnaval|critica-social|percussao|35|
+Olodum|Deus, O Olodum e a Natureza|1990|samba-reggae|4|4|alegre,festivo|carnaval|fe|percussao|30|
+Olodum|Egito Madagascar|1987|samba-reggae|5|4|empolgante|carnaval|orgulho|percussao|30|
+Olodum|Rufar dos Tambores|1991|samba-reggae|5|4|empolgante|carnaval|orgulho|percussao|30|
+Timbalada|Beija-Flor (Rapaz)|1993|axe-music|5|5|animado,festivo|carnaval|pegacao|percussao|45|
+Timbalada|Dandalunda|1993|axe-music|5|5|animado|carnaval|danca|percussao|30|
+Timbalada|Água Mineral|1996|axe-music|5|5|animado|carnaval|curticao|percussao|35|
+Timbalada|Vamo Dançar|1994|axe-music|5|5|animado|carnaval|danca|percussao|20|
+Timbalada|Sorte Grande|1999|axe-music|4|4|alegre|carnaval|curticao|percussao|15|
+Carlinhos Brown|Visão do Ciclope|1996|axe-music|4|4|alegre,festivo|carnaval|curticao|percussao|30|
+Carlinhos Brown|Adocica|1996|axe-music|3|4|romantico,sensual|carnaval|paixao|percussao|25|
+Carlinhos Brown|Maria Caipirinha|1996|axe-music|4|4|alegre|carnaval|curticao|percussao|25|
+Carlinhos Brown|Magamalabares|1996|axe-music|4|4|alegre,festivo|carnaval|curticao|percussao|25|
+Carlinhos Brown|Segue o Seco|1994|axe-music|3|4|alegre|carnaval|vida-no-campo|percussao|30|
+Gilberto Gil|Toda Menina Baiana|1979|mpb|3|4|alegre,sensual|carnaval,praia|paixao|violao|55|C
+Caetano Veloso|Atrás do Trio Elétrico|1969|tropicalia|4|5|festivo,alegre|carnaval|curticao|guitarra|60|CE
+Moraes Moreira|Chame Gente|1976|axe-music|5|5|animado,festivo|carnaval|curticao|guitarra|40|
+Moraes Moreira|Pombo Correio|1976|axe-music|4|4|alegre|carnaval|amor|guitarra|25|
+Gal Costa|Festa do Interior|1982|mpb|4|5|alegre,festivo|sao-joao|curticao|voz-feminina|55|C
+Armandinho, Dodô & Osmar|Pombo Correio|1978|axe-music|5|5|animado|carnaval|danca|guitarra|25|
+Banda Mel|Prefixo de Verão|1994|axe-music|4|4|alegre|carnaval|curticao|percussao|20|
+Leo Santana|Zona de Perigo|2018|axe-music|5|5|animado,sensual|carnaval|pegacao|percussao|65|C
+Léo Santana|Contagiou|2018|axe-music|5|5|animado|carnaval|curticao|percussao|40|
+Léo Santana|Gostosão|2017|axe-music|5|5|animado,sensual|carnaval|pegacao|percussao|45|
+Léo Santana|Lêlê|2019|axe-music|5|5|animado|carnaval|danca|percussao|30|
+Léo Santana|Sem Gelo|2018|axe-music|5|5|animado|carnaval|cachaca|percussao|30|
+Léo Santana|Pau Duro|2019|axe-music|5|5|animado|carnaval|pegacao|percussao|25|
+Xanddy Harmonia|Eva|2013|axe-music|4|4|alegre|carnaval|curticao|percussao|20|
+Harmonia do Samba|Tá Todo Mundo Louco|1996|pagode-baiano|5|5|animado|carnaval|curticao|percussao|40|
+Parangolé|Rebolation|2008|pagode-baiano|5|5|animado,sensual|carnaval|pegacao|percussao|50|C
+Parangolé|Zona Perigosa|2012|pagode-baiano|5|5|animado|carnaval|danca|percussao|30|
+Parangolé|Tomada de Mel|2015|pagode-baiano|5|5|animado|carnaval|pegacao|percussao|25|
+Parangolé|Sou Foda|2013|pagode-baiano|5|5|animado|balada|pegacao|percussao|25|
+Parangolé|Pegando Fogo|2012|pagode-baiano|5|5|animado|carnaval|danca|percussao|20|
+Psirico|Lepo Lepo|2013|axe-music|5|5|animado,engracado|carnaval|zoeira|percussao|55|C
+Psirico|Bonde da Maravilha|2011|axe-music|5|5|animado|carnaval|danca|percussao|25|
+Psirico|Rastapé|2014|axe-music|5|5|animado|carnaval|danca|percussao|20|
+Psirico|Pega Pega|2015|axe-music|5|5|animado|carnaval|danca|percussao|20|
+Bailão do Ruan|Bailão do Ruan|2021|axe-music|5|5|animado|carnaval|danca|percussao|15|
+Olodum|Rei do Pop|1999|samba-reggae|5|4|empolgante|carnaval|orgulho|percussao|15|
+Kelly Key|Baba|2001|pop-nacional|4|4|confiante,sensual|balada|pegacao|voz-feminina|50|
+Armandinho|Luz Divina|1995|axe-music|4|4|alegre|carnaval|amor|guitarra|15|
+Cláudia Leitte|Pássaro Beija-Flor|2010|axe-music|4|4|alegre|carnaval|amor|percussao|15|
+Ilê Aiyê|Que Bloco É Esse|1987|samba-reggae|4|4|alegre,festivo|carnaval|orgulho|percussao|55|CE
+Ilê Aiyê|Canto ao Negro|1980|ijexa|3|3|sagrado,esperancoso|carnaval|orgulho|percussao|35|
+Ilê Aiyê|Negrume da Noite|1987|ijexa|3|3|sagrado,esperancoso|carnaval|orgulho|percussao|45|
+Filhos de Gandhy|Ijexá|1985|ijexa|3|4|sagrado,festivo|carnaval|fe|percussao|20|
+Gilberto Gil|Filhos de Gandhy|1973|ijexa|3|4|sagrado,alegre|carnaval|fe,liberdade|percussao|55|
+Amelinha|Foi Assim|1980|brega-romantico|3|3|romantico,saudade|fossa|amor|voz-feminina|25|
+Waldick Soriano|Tortura de Amor|1960|brega-romantico|2|2|sofrido,triste|fossa|dor-de-cotovelo|violao|60|
+Waldick Soriano|Paixão de um Homem|1962|brega-romantico|2|2|sofrido,triste|fossa|paixao|violao|40|
+Waldick Soriano|Eu Não Sou Cachorro, Não|1972|brega-romantico|3|2|sofrido,dramatico|fossa|dor-de-cotovelo|violao|70|CE
+Waldick Soriano|Fim de Caso|1963|brega-romantico|2|2|triste,sofrido|fossa|termino|violao|35|
+Odair José|Pare de Tomar a Pílula|1973|brega-romantico|3|3|dramatico|barzinho|amor,familia|violao|50|
+Odair José|Uma Vida Só (Pare de Tomar a Pílula)|1973|brega-romantico|3|3|dramatico|barzinho|amor|violao|40|
+Odair José|Cadê Você|1972|brega-romantico|2|2|saudade,sofrido|fossa|saudade|violao|35|
+Odair José|Vou Tirar Você Desse Lugar|1972|brega-romantico|3|3|romantico,dramatico|barzinho|amor|violao|65|
+Odair José|A Noite Mais Linda do Mundo|1973|brega-romantico|3|3|romantico|jantar-romantico|amor|violao|30|
+Reginaldo Rossi|Garçom|1987|brega-romantico|3|2|sofrido,saudade|fossa,barzinho|cachaca,dor-de-cotovelo|violao|85|CE
+Reginaldo Rossi|O Pão|1976|brega-romantico|3|2|sofrido,saudade|fossa|dor-de-cotovelo|violao|40|
+Reginaldo Rossi|A Raposa e as Uvas|1989|brega-romantico|3|2|sofrido|fossa|termino|violao|55|
+Reginaldo Rossi|Mon Amour, Meu Bem, Ma Femme|1986|brega-romantico|3|3|romantico,saudade|barzinho|amor|violao|55|C
+Reginaldo Rossi|Em Plena Lua de Mel|1983|brega-romantico|3|2|sofrido|fossa|traicao|violao|40|
+Reginaldo Rossi|Recife, Minha Cidade|1980|brega-romantico|3|3|nostalgico,saudade|barzinho|saudade|violao|35|
+Reginaldo Rossi|Mil Vezes Te Amar|1984|brega-romantico|3|3|romantico|barzinho|amor|violao|30|
+Reginaldo Rossi|Leviana|1986|brega-romantico|3|2|sofrido|fossa|traicao|violao|45|
+Reginaldo Rossi|Um Pai Para Sempre|1990|brega-romantico|2|3|saudade,aconchegante|barzinho|familia|violao|20|
+Amado Batista|Secretaria|1980|brega-romantico|3|2|sofrido,dramatico|fossa|amor|violao|50|
+Amado Batista|Rainha da Beleza|1983|brega-romantico|3|3|romantico|barzinho|amor|violao|35|
+Amado Batista|Como Um Pássaro Ferido|1985|brega-romantico|2|2|triste,sofrido|fossa|termino|violao|35|
+Amado Batista|Meu Primeiro Amor|1986|brega-romantico|3|3|romantico,nostalgico|barzinho|amor|violao|35|
+Amado Batista|Vou Te Esquecer|1987|brega-romantico|3|2|sofrido|fossa|termino|violao|35|
+Amado Batista|Calendário Cruel|1989|brega-romantico|2|2|sofrido,triste|fossa|saudade|violao|25|
+Amado Batista|Aprendi a Chorar|1983|brega-romantico|2|2|sofrido,triste|fossa|dor-de-cotovelo|violao|30|
+Amado Batista|Vento Frio|1982|brega-romantico|2|2|triste,saudade|fossa|saudade|violao|25|
+Sidney Magal|Meu Sangue Ferve por Você|1977|brega-romantico|5|5|animado,sensual|festa|paixao|metais|65|CE
+Sidney Magal|O Amante|1978|brega-romantico|4|4|sensual,dramatico|festa|paixao|metais|40|
+Sidney Magal|Gaúcho Cabeça Dura|1979|brega-romantico|4|4|alegre,engracado|festa|zoeira|metais|25|
+Sidney Magal|Se Te Agarro com Outro Te Mato|1978|brega-romantico|4|4|dramatico,sensual|festa|traicao|metais|50|C
+Sidney Magal|Tenho Ciúme|1980|brega-romantico|4|3|dramatico|festa|paixao|metais|20|
+Wando|O Importante é Ser Fevereiro|1982|brega-romantico|3|4|sensual,alegre|festa|pegacao|violao|40|
+Wando|Moça|1981|brega-romantico|3|3|romantico,sensual|barzinho|paixao|violao|40|
+Wando|Fogo e Paixão|1987|brega-romantico|3|3|sensual|barzinho|paixao|violao|55|C
+Wando|Cada Um Cada Um|1983|brega-romantico|4|4|alegre,engracado|festa|zoeira|violao|20|
+Evaldo Braga|Sorri, Sou Rei|1972|brega-romantico|3|2|dramatico,sofrido|fossa|superacao|violao|30|
+Evaldo Braga|Meu Pai|1972|brega-romantico|2|2|triste,saudade|fossa|familia|violao|25|
+Paulo Sérgio|Última Canção|1970|brega-romantico|2|2|triste,saudade|fossa|termino|violao|30|
+Paulo Sérgio|Eu Amo Você|1969|brega-romantico|2|3|romantico|jantar-romantico|amor|violao|25|
+Nelson Ned|Tudo Passará|1971|brega-romantico|2|2|dramatico,saudade|fossa|perda|orquestra|40|
+Nelson Ned|Ontem, Hoje e Amanhã|1968|brega-romantico|3|3|romantico|jantar-romantico|amor|orquestra|20|
+Agnaldo Timóteo|Galeria do Amor|1970|brega-romantico|2|2|dramatico,sofrido|fossa|termino|orquestra|35|
+Agnaldo Timóteo|Amor Não É Brinquedo|1972|brega-romantico|3|3|romantico,dramatico|barzinho|amor|orquestra|25|
+Cauby Peixoto|Conceição|1956|seresta|2|2|nostalgico,melancolico|fossa|perda|orquestra|35|
+Cauby Peixoto|Bastidores|1980|mpb-romantica|2|2|dramatico,melancolico|fossa|termino|orquestra|40|
+Luiz Ayrão|Doce Mel|1980|brega-romantico|3|3|romantico|barzinho|amor|violao|15|
+Lindomar Castilho|Você É Doida Demais|1977|brega-romantico|3|3|romantico,alegre|barzinho|paixao|violao|35|
+Lindomar Castilho|Eu Vou Rifar Meu Coração|1977|brega-romantico|3|2|sofrido|fossa|dor-de-cotovelo|violao|40|
+Lindomar Castilho|Pecado|1978|brega-romantico|2|2|dramatico|fossa|traicao|violao|25|
+Fernando Mendes|Cadê Você|1980|brega-romantico|2|2|saudade|fossa|saudade|violao|20|
+Fernando Mendes|Mulher de Fases|1987|brega-romantico|3|2|sofrido|fossa|termino|violao|20|
+Belmonte & Amaraí|Tem Que Ser Você|1981|brega-romantico|3|3|romantico|barzinho|amor|violao|20|
+Perla|Pare de Tomar a Pílula|1974|brega-romantico|3|2|dramatico|barzinho|amor|violao|15|
+Núbia Lafayette|Pra Que Mentir|1968|seresta|2|2|nostalgico,saudade|fossa|amor|violao|25|
+Vicente Celestino|O Ébrio|1936|seresta|2|2|dramatico,sofrido|fossa|cachaca,perda|orquestra|45|
+Orlando Silva|Carinhoso|1937|seresta|2|3|romantico,nostalgico|jantar-romantico|amor|orquestra|50|
+Silvio Caldas|Chão de Estrelas|1937|seresta|2|2|nostalgico,melancolico|fossa|saudade|violao|40|
+Nelson Gonçalves|A Volta do Boêmio|1957|seresta|2|2|nostalgico,melancolico|barzinho|cachaca,saudade|orquestra|50|
+Nelson Gonçalves|Maria Bethânia|1964|seresta|2|2|saudade,romantico|fossa|saudade|violao|30|
+Nelson Gonçalves|Fogueira|1957|seresta|3|3|romantico,dramatico|barzinho|paixao|orquestra|25|
+Francisco Alves|Aquarela do Brasil|1939|samba-cancao|3|4|alegre,festivo|almoco-de-domingo|orgulho|orquestra|30|
+Dalva de Oliveira|Ave Maria no Morro|1942|seresta|2|2|nostalgico,sagrado|fossa|fe|orquestra|30|
+Dalva de Oliveira|Tudo Acabado|1950|seresta|2|1|triste,dramatico|fossa|termino|orquestra|25|
+Ângela Maria|Babalu|1954|seresta|3|3|dramatico|barzinho|paixao|orquestra|25|
+Maysa|Ne Me Quitte Pas|1960|samba-cancao|2|2|dramatico,saudade|fossa|termino|voz-feminina|45|
+Maysa|Meu Mundo Caiu|1958|samba-cancao|2|1|triste,dramatico|fossa|termino|voz-feminina|50|
+Maysa|Bom Dia Tristeza|1958|samba-cancao|2|2|melancolico,saudade|fossa|saudade|voz-feminina|40|
+Lupicínio Rodrigues|Nervos de Aço|1947|samba-cancao|2|2|sofrido,dramatico|fossa|traicao|violao|55|
+Lupicínio Rodrigues|Vingança|1951|samba-cancao|2|2|sofrido,dramatico|fossa|traicao|violao|50|
+Lupicínio Rodrigues|Cadeira Vazia|1950|samba-cancao|2|2|saudade,sofrido|fossa|perda|violao|40|
+Lupicínio Rodrigues|Felicidade|1947|samba-cancao|2|2|sofrido,melancolico|fossa|termino|violao|30|
+Gal Costa|Folhetim|1978|mpb-romantica|2|2|sensual,melancolico|jantar-romantico|amor|voz-feminina|35|
+Belchior|Como Nossos Pais|1976|mpb|3|2|melancolico,nostalgico|barzinho|critica-social|violao|50|
+Banda Calypso|Dançando Calypso|2004|brega-calypso|5|5|animado,festivo|festa|danca|sintetizador|55|C
+Banda Calypso|Dois Corações|2004|brega-calypso|4|3|romantico,saudade|barzinho|amor|sintetizador|40|
+Banda Calypso|Pra Te Esquecer|2005|brega-calypso|4|3|sofrido|barzinho|termino|sintetizador|30|
+Banda Calypso|Vendaval|2004|brega-calypso|4|4|romantico,alegre|festa|paixao|sintetizador|30|
+Banda Calypso|Escrito nas Estrelas|2006|brega-calypso|4|3|romantico|barzinho|amor|sintetizador|20|
+Banda Calypso|Pelo Seu Amor|2003|brega-calypso|4|3|romantico|barzinho|amor|sintetizador|25|
+Banda Calypso|A Lua Me Traiu|2003|brega-calypso|4|3|romantico,sofrido|barzinho|traicao|sintetizador|55|C
+Banda Calypso|Não Teve Amor|2004|brega-calypso|4|3|sofrido|barzinho|termino|sintetizador|25|
+Banda Calypso|Pai e Mãe|2005|brega-calypso|3|3|aconchegante|barzinho|familia|sintetizador|10|
+Chimbinha|Amor Perfeito|2006|brega-calypso|4|4|romantico|festa|amor|guitarra|15|
+Banda Cheiro de Amor|Pra Sempre Contigo|2001|brega-calypso|4|3|romantico|barzinho|amor|sintetizador|15|
+Joelma|Voando pro Pará|2005|brega-calypso|5|5|animado,festivo|festa|orgulho|sintetizador|60|C
+Joelma|Desatino|2016|brega-calypso|4|3|sofrido|barzinho|termino|voz-feminina|35|
+Joelma|Pára de Chorar|2018|brega-calypso|4|4|confiante|festa|superacao|voz-feminina|25|
+Joelma|Saudade Dela|2017|brega-calypso|4|3|saudade|barzinho|saudade|voz-feminina|25|
+Joelma|Chora Coração|2020|brega-calypso|4|3|sofrido|barzinho|termino|voz-feminina|20|
+Joelma|Você é Mais Eu|2015|brega-calypso|4|4|romantico|festa|amor|voz-feminina|15|
+Companhia do Calypso|Louca Paixão|2007|brega-calypso|4|3|romantico|barzinho|paixao|sintetizador|20|
+Companhia do Calypso|Noite de Sexta|2008|brega-calypso|4|4|animado|festa|curticao|sintetizador|15|
+Ximbinha|Mistério do Amor|2013|brega-calypso|4|3|romantico|barzinho|amor|guitarra|20|
+Zezé Di Camargo|Acorda Amor|2004|brega-romantico|3|3|romantico|barzinho|amor|violao|10|
+Pablo|Porque Homem Não Chora|2013|arrocha|3|2|sofrido,saudade|fossa|dor-de-cotovelo|violao|55|C
+Pablo|Ame Primeiro|2015|arrocha|3|3|romantico|barzinho|amor|violao|25|
+Pablo|Mulher Estranha|2014|arrocha|3|3|romantico,sofrido|barzinho|paixao|violao|30|
+Pablo|Não Sou de Fugir|2015|arrocha|3|2|sofrido,saudade|fossa|termino|violao|30|
+Pablo|Escolha Errada|2017|arrocha|3|2|sofrido|fossa|termino|violao|25|
+Pablo|Pensando em Voz Alta|2015|arrocha|3|2|saudade,sofrido|fossa|saudade|violao|25|
+Pablo|Dormi no Chão|2014|arrocha|3|2|sofrido|fossa|termino|violao|20|
+Pablo|O Mais Triste Dos Homens|2016|arrocha|3|2|triste|fossa|termino|violao|20|
+Pablo|O Cara Que Te Ama|2014|arrocha|3|3|romantico|barzinho|amor|violao|30|
+Pablo|A Dona da Casa|2014|arrocha|3|3|romantico|barzinho|amor|violao|20|
+Pablo|Vai Ter Que Me Engolir|2015|arrocha|3|3|confiante|barzinho|superacao|violao|15|
+Tierry|Rita|2013|arrocha|3|2|sofrido,saudade|fossa|saudade|violao|50|
+Tierry|Faço de Tudo por Você|2013|arrocha|3|3|romantico|barzinho|amor|violao|30|
+Tierry|Capricorniano|2014|arrocha|4|4|confiante|festa|curticao|violao|25|
+Tierry|Meu Peito Dói|2014|arrocha|3|2|sofrido|fossa|dor-de-cotovelo|violao|25|
+Tierry|Coração Sem Medo|2014|arrocha|3|3|romantico|barzinho|amor|violao|20|
+Tierry|Menina Solta|2015|arrocha|4|4|sensual|festa|pegacao|violao|25|
+Tierry|Perdi Você|2015|arrocha|3|2|sofrido|fossa|perda|violao|20|
+Tierry|Faltou Pouco|2016|arrocha|3|2|sofrido|fossa|termino|violao|15|
+Pedro Paulo & Alex|Cara de Pau|2001|arrocha|4|3|dramatico|barzinho|dor-de-cotovelo|violao|10|
+Nara Costa|Sabadão|2013|arrocha|4|4|alegre|festa|cachaca|violao|15|
+Pablo|Bem Mais|2016|arrocha|3|3|romantico|barzinho|amor|violao|15|
+Márcia Fellipe|Coração Sem Medo|2016|arrocha|3|2|sofrido|fossa|termino|voz-feminina|25|
+Márcia Fellipe|Se Eu Beber|2017|arrocha|4|3|sofrido|barzinho|cachaca|voz-feminina|25|
+Márcia Fellipe|Pare de Chorar|2019|arrocha|3|3|esperancoso|barzinho|superacao|voz-feminina|15|
+Pablo|Não Vou Falar Pra Você|2018|arrocha|3|2|sofrido|fossa|termino|violao|15|
+Kelvis Duran|Quem Sou Eu|2021|arrocha|3|3|romantico|barzinho|amor|violao|10|
+Pabllo Vittar|Seu Crime|2018|brega-funk|4|4|alegre,confiante|balada|orgulho|sintetizador|35|
+Mc Loma e as Gêmeas Lacração|Envolvimento|2018|brega-funk|5|5|animado|balada|pegacao|sintetizador|45|C
+Dadá Boladão|Do Jeitinho que o Diabo Gosta|2019|brega-funk|5|5|animado|balada|pegacao|sintetizador|20|
+Tati Zaqui|Dona de Mim|2019|brega-funk|5|5|animado|balada|pegacao|sintetizador|20|
+MC Loma|Aperta no Play|2019|brega-funk|5|5|animado|balada|pegacao|sintetizador|20|
+Shevchenko e Elloco|Eu Vou Largar de Ser Sua|2018|brega-funk|5|5|animado,festivo|balada|curticao|sintetizador|20|
+Mc Rebecca|Sexo Seguro|2019|brega-funk|5|4|sensual|balada|pegacao|sintetizador|15|
+MC Troia|Brega Funk do Rodolfinho|2016|brega-funk|5|5|animado|balada|danca|sintetizador|10|
+Mc Mari|Vai Que Cola|2019|brega-funk|5|5|animado|balada|curticao|sintetizador|10|
+Gaby Amarantos|Hoje Eu Tô Solteira|2012|tecnobrega|5|5|animado,confiante|festa,balada|curticao|sintetizador|45|C
+Gaby Amarantos|Ex Mai Love|2012|tecnobrega|5|5|animado,confiante|balada|termino|sintetizador|45|
+Gaby Amarantos|Xirley|2012|tecnobrega|4|4|alegre,engracado|festa|zoeira|sintetizador|35|
+Gaby Amarantos|Eu Quero Tchau|2013|tecnobrega|5|5|animado|balada|curticao|sintetizador|20|
+Gaby Amarantos|Sacode Sacode|2015|tecnobrega|5|5|animado|balada|curticao|sintetizador|15|
+Banda Uó|Shake de Amor|2012|tecnobrega|5|5|animado,festivo|balada|curticao|sintetizador|35|
+Banda Uó|Faz Gostoso|2013|tecnobrega|5|5|animado,sensual|balada|pegacao|sintetizador|30|
+Banda Uó|Gosto Doce|2012|tecnobrega|5|5|animado|balada|paixao|sintetizador|20|
+Banda Uó|Cremosa|2012|tecnobrega|5|5|animado|balada|pegacao|sintetizador|20|
+Banda Uó|Rainha do Baile|2016|tecnobrega|5|5|animado|balada|danca|sintetizador|10|
+Dona Onete|Jamburana|2012|carimbo|4|4|alegre,festivo|festa|orgulho|percussao|30|
+Dona Onete|No Meio do Pitiú|2012|carimbo|4|4|alegre,sensual|festa|pegacao|percussao|40|
+Dona Onete|Rebola Pra Mim|2016|carimbo|4|4|alegre,sensual|festa|pegacao|percussao|25|
+Dona Onete|Carimbó Chamegado|2012|carimbo|4|4|alegre,sensual|festa|paixao|percussao|25|
+Dona Onete|Banzeiro|2012|carimbo|3|3|nostalgico|festa|vida-no-campo|percussao|20|
+Pinduca|Sinhá Pureza|1973|carimbo|4|5|alegre,festivo|festa|danca|percussao|45|
+Pinduca|Mestre Camarão|1974|carimbo|4|4|alegre|festa|danca|percussao|25|
+Pinduca|Pau Brasil|1980|carimbo|4|4|alegre|festa|danca|percussao|15|
+Verequete|Chama Verequete|1976|carimbo|4|4|alegre,festivo|festa|danca|percussao|25|
+Mestre Verequete|Pássaro Louco|1978|carimbo|4|4|alegre|festa|danca|percussao|15|
+Mestre Solon|Carimbó do Mestre Solon|1970|carimbo|4|4|alegre|festa|danca|percussao|15|
+Dona Onete|Sou Eu|2016|carimbo|4|4|alegre,confiante|festa|orgulho|percussao|15|
+Ná Ozzetti|Carimbó|1990|carimbo|3|4|alegre|festa|danca|percussao|10|
+Fafá de Belém|Foi Assim|1981|mpb|3|3|romantico|barzinho|amor|voz-feminina|35|
+Fafá de Belém|Filho da Chiquita Bacana|1983|mpb|3|3|alegre|festa|amor|voz-feminina|15|
+Pinduca|Tudo Pode Acontecer|1980|carimbo|4|4|alegre|festa|danca|percussao|15|
+Beto Barbosa|Adocica|1989|lambada|5|5|animado,sensual|festa|paixao|sintetizador|55|C
+Beto Barbosa|Preta|1989|lambada|4|4|sensual,romantico|festa|paixao|sintetizador|30|
+Beto Barbosa|Dançando Lambada|1989|lambada|5|5|animado|festa|danca|sintetizador|40|
+Beto Barbosa|Lambada da Saudade|1990|lambada|4|3|saudade|festa|saudade|sintetizador|20|
+Kaoma|Lambada|1989|lambada|5|5|animado,sensual|festa|danca|sintetizador|70|CE
+Kaoma|Dançando Lambada|1989|lambada|5|5|animado|festa|danca|sintetizador|30|
+Kaoma|Melodie d'Amour|1989|lambada|4|4|romantico,sensual|festa|amor|sintetizador|30|
+Banda Djavú|Lambada Mágica|1990|lambada|4|4|alegre|festa|danca|sintetizador|15|
+Pinduca|Lambada da Marta|1980|lambada|4|4|alegre|festa|danca|percussao|10|
+Márcia Ferreira|Mal Acostumado|1989|lambada|4|3|sofrido|festa|termino|sintetizador|20|
+Grupo Cheiro Verde|Lambada de Amor|1991|lambada|4|4|sensual|festa|paixao|sintetizador|10|
+Chico Science & Nação Zumbi|Da Lama ao Caos|1994|maracatu|4|3|empolgante,estranho|rpg-cidade|critica-social|percussao|40|
+Chico Science & Nação Zumbi|A Cidade|1994|maracatu|4|3|empolgante|balada|critica-social|percussao|50|
+Chico Science & Nação Zumbi|Maracatu Atômico|1996|maracatu|5|4|empolgante,festivo|carnaval|curticao|percussao|55|
+Chico Science & Nação Zumbi|Um Passeio no Mundo Livre|1994|maracatu|4|4|alegre,empolgante|balada|liberdade|percussao|35|
+Chico Science & Nação Zumbi|Macô|1996|maracatu|4|3|estranho,empolgante|balada|critica-social|percussao|30|
+Chico Science & Nação Zumbi|Manguetown|1994|maracatu|4|3|empolgante|balada|critica-social|percussao|35|
+Chico Science & Nação Zumbi|Rios, Pontes e Overdrives|1994|maracatu|4|3|empolgante|balada|critica-social|percussao|30|
+Chico Science & Nação Zumbi|Samba Makossa|1996|maracatu|4|4|alegre|balada|danca|percussao|30|
+Nação Zumbi|Blunt of Judah|1998|maracatu|4|3|empolgante|balada|critica-social|percussao|25|
+Mundo Livre S/A|Livre Iniciativa|1994|maracatu|4|4|alegre|balada|curticao|percussao|15|
+Siba|Toda Vez Que Eu Dou um Passo o Mundo Sai do Lugar|2007|maracatu|3|3|nostalgico|barzinho|vida-no-campo|violao|20|
+Lenine|O Último Pôr do Sol|1999|mpb|3|3|contemplativo|barzinho|amor|violao|25|
+Lenine|Paciência|1999|mpb|2|3|contemplativo,esperancoso|relaxar|superacao|violao|60|C
+Lenine|Jack Soul Brasileiro|1999|mpb|4|4|alegre|barzinho|orgulho|violao|45|
+Lenine|Rosa dos Ventos|1999|mpb|3|3|contemplativo|barzinho|amor|violao|20|
+Lenine|Miragem|1997|mpb|3|3|contemplativo|barzinho|amor|violao|20|
+Nação Zumbi|Cidadão do Mundo|1996|maracatu|4|3|empolgante|balada|liberdade|percussao|20|
+Maestro Spok|Frevo Pernambucano|1998|frevo|5|5|animado,festivo|carnaval|danca|metais|20|
+Capiba|Frevo Pernambucano|1960|frevo|5|5|animado,festivo|carnaval|danca|metais|25|
+Capiba|É de Fazer Chorar|1950|frevo|4|4|alegre,festivo|carnaval|curticao|metais|35|
+Capiba|Madeira que Cupim Não Rói|1950|frevo|5|5|animado,festivo|carnaval|orgulho|metais|45|CE
+Capiba|Mulata Rendeira|1945|frevo|4|4|alegre|carnaval|paixao|metais|20|
+Nelson Ferreira|Evocação nº 1|1957|frevo|4|3|nostalgico,festivo|carnaval|saudade|metais|45|
+Nelson Ferreira|Último Dia|1955|frevo|4|4|alegre|carnaval|curticao|metais|20|
+Nelson Ferreira|Cai, Cai|1956|frevo|5|5|animado|carnaval|danca|metais|15|
+Lourival Oliveira|Vassourinhas|1909|frevo|5|5|animado,festivo|carnaval|danca|metais|65|CE
+Luiz Bandeira|Hino do Elefante|1958|frevo|4|5|festivo,alegre|carnaval|orgulho|metais|15|
+Alceu Valença|Anunciação|1983|forro-pe-de-serra|3|4|romantico,alegre|barzinho|amor|violao|15|
+Alceu Valença|Pelas Ruas que Andei|1982|frevo|4|4|alegre,nostalgico|carnaval|curticao|violao|25|
+Alceu Valença|Como Dois Animais|1982|mpb|3|3|romantico|barzinho|paixao|violao|20|
+Alceu Valença|Estação da Luz|1982|mpb|3|3|sonhador|barzinho|amor|violao|15|
+Alceu Valença|Coração Bobo|1980|mpb|4|3|romantico,saudade|barzinho|amor|violao|35|
+Alceu Valença|Girassol|1982|mpb|3|3|romantico|barzinho|amor|violao|20|
+Alceu Valença|Pavão Misterioso|1982|forro-pe-de-serra|4|4|misterioso,nostalgico|sao-joao|amor|sanfona|15|
+Alceu Valença|Espelho Cristalino|1982|mpb|3|3|romantico|barzinho|amor|violao|15|
+Alceu Valença|Belle de Jour|1986|mpb|3|3|romantico|barzinho|paixao|violao|40|
+Alceu Valença|Planetário|1982|mpb|3|3|sonhador|barzinho|amor|violao|15|
+Alceu Valença|Tropicana|1982|frevo|4|4|alegre,festivo|carnaval|curticao|percussao|35|
+Alceu Valença|Dia Branco|1983|mpb|3|3|contemplativo|relaxar|amor|violao|15|
+Alceu Valença|Bicho Maluco Beleza|1986|mpb|4|4|alegre|barzinho|liberdade|violao|20|
+Alceu Valença|Saudade|1982|mpb|3|2|saudade|fossa|saudade|violao|15|
+Alceu Valença|Pelas Ruas|1982|frevo|4|4|alegre,nostalgico|carnaval|saudade|violao|20|
+Alceu Valença|Mensagem|1980|mpb|3|3|saudade|barzinho|saudade|violao|15|
+Alceu Valença|Sol e Chuva|1982|mpb|3|3|romantico|barzinho|amor|violao|15|
+Alceu Valença|Qual É Que É|1986|mpb|3|3|alegre|barzinho|amor|violao|15|
+Alceu Valença|O Meu Samba é Esse|1983|samba|4|4|alegre|barzinho|amor|violao|10|
+Lia de Itamaracá|Ciranda da Rosa Vermelha|1977|ciranda|3|3|nostalgico,calmo|criancas|infancia|percussao|40|
+Lia de Itamaracá|Essa Ciranda Quem Me Deu Foi Lia|1977|ciranda|3|4|alegre,nostalgico|festa|danca|percussao|50|C
+Lia de Itamaracá|Eu Sou Lia|1977|ciranda|3|3|nostalgico|festa|danca|percussao|25|
+Lia de Itamaracá|Minha Ciranda|1977|ciranda|3|3|nostalgico|festa|danca|percussao|25|
+Lia de Itamaracá|Cirandeiro|1980|ciranda|3|4|alegre|festa|danca|percussao|20|
+Lia de Itamaracá|Pra Onde Foi|1990|ciranda|3|3|nostalgico|festa|danca|percussao|15|
+Antônio Nóbrega|Lenga la Lenga|1993|coco|4|4|alegre,festivo|festa|danca|percussao|25|
+Antônio Nóbrega|Madeira que Cupim Não Rói|1995|frevo|4|4|alegre|carnaval|orgulho|percussao|20|
+Antônio Nóbrega|Baião de Princesa|1994|baiao|3|3|nostalgico|barzinho|vida-no-campo|violao|15|
+Antônio Nóbrega|Sambada do Sertão|1997|coco|4|4|alegre|festa|danca|percussao|15|
+Antônio Nóbrega|O Marco do Meio-Dia|1995|baiao|3|3|nostalgico|barzinho|vida-no-campo|violao|10|
+Antônio Nóbrega|Pisa Miúdo|1994|coco|4|4|alegre|festa|danca|percussao|10|
+Antônio Nóbrega|O Rei do Baião|1998|baiao|4|4|alegre|festa|danca|sanfona|10|
+Antônio Nóbrega|Pequeno Pôr-do-sol|1998|coco|3|3|contemplativo|barzinho|amor|violao|10|
+Antônio Nóbrega|Chegança|1993|coco|4|4|alegre|festa|danca|percussao|10|
+Antônio Nóbrega|Samba do Sertão|1997|coco|4|4|alegre|festa|danca|percussao|10|
+Antônio Nóbrega|Lundu|1995|coco|3|3|nostalgico|festa|danca|percussao|10|
+Antônio Nóbrega|Mulheres do Mundo|1995|coco|3|3|alegre|festa|danca|percussao|10|
+Selma do Coco|Ô Lelê|1980|coco|4|4|alegre|festa|danca|percussao|20|
+Selma do Coco|Quem Me Ensinou a Nadar|1980|coco|4|4|alegre|festa|danca|percussao|20|
+Selma do Coco|Eu Gosto de Coco|1988|coco|4|4|alegre|festa|danca|percussao|15|
+Selma do Coco|Mulher Rendeira|1960|coco|4|4|alegre|festa|danca|percussao|15|
+Selma do Coco|Meu Coco|1990|coco|4|4|alegre|festa|danca|percussao|10|
+Mestre Ambrósio|Pé de Manga|1996|coco|4|4|alegre,festivo|festa|vida-no-campo|percussao|20|
+Mestre Ambrósio|Mestre Ambrósio|1996|maracatu|4|4|alegre|festa|danca|percussao|15|
+Ariano Suassuna|Aula Magna|1996|baiao|3|3|nostalgico|barzinho|vida-no-campo|violao|5|
+Trio Parada Dura|Ôxente|2003|coco|4|4|alegre|festa|danca|sanfona|10|
+Mestre Salustiano|Cavalo Marinho|1995|maracatu|4|4|alegre|festa|danca|percussao|10|
+Naná Vasconcelos|Maracatu Atômico|1995|maracatu|4|4|alegre|carnaval|curticao|percussao|20|
+Naná Vasconcelos|Berimbau|1972|maracatu|3|3|misterioso|rpg-ritual|fe|percussao|15|
+Gilberto Gil|Maracatu Nação|1975|maracatu|4|4|alegre|carnaval|curticao|percussao|10|
+Dorival Caymmi|Maracangalha|1956|samba-de-roda|3|4|alegre,nostalgico|praia|vida-no-campo|violao|55|
+Dorival Caymmi|O Que É Que a Baiana Tem?|1939|samba-de-roda|3|4|alegre,sensual|praia|paixao|violao|55|C
+Dorival Caymmi|É Doce Morrer no Mar|1954|samba-de-roda|2|2|melancolico,calmo|praia|perda|violao|45|
+Dorival Caymmi|Saudades da Bahia|1957|samba-de-roda|2|3|saudade,nostalgico|praia|saudade|violao|40|
+Dorival Caymmi|Quem Vem pra Beira do Mar|1957|samba-de-roda|2|3|calmo,nostalgico|praia|vida-no-campo|violao|35|
+Dorival Caymmi|Vatapá|1956|samba-de-roda|3|4|alegre,nostalgico|praia|vida-no-campo|violao|35|
+Dorival Caymmi|Samba da Minha Terra|1940|samba-de-roda|4|4|alegre|praia|orgulho|violao|40|
+Dorival Caymmi|Marina|1947|samba-cancao|2|3|romantico|barzinho|amor|violao|30|
+Dorival Caymmi|Doralice|1945|samba-de-roda|3|4|alegre|praia|amor|violao|30|
+Clara Nunes|Canto das Três Raças|1976|samba-raiz|3|2|dramatico,sagrado|momento-de-fe|critica-social|percussao|65|E
+Clara Nunes|Conto de Areia|1974|samba-raiz|3|3|misterioso,sagrado|momento-de-fe|fe|percussao|45|
+Clara Nunes|Tristeza Pé no Chão|1974|samba-raiz|3|3|nostalgico|barzinho|perda|percussao|30|
+Clara Nunes|Ê Baiana|1977|samba-raiz|4|4|alegre,festivo|carnaval|orgulho|percussao|30|
+Clara Nunes|Menino Deus|1978|samba-raiz|3|3|sagrado|momento-de-fe|fe|percussao|30|
+Clara Nunes|Guerreira|1978|samba-raiz|4|4|confiante,sagrado|barzinho|superacao|percussao|30|
+Clara Nunes|Portela na Avenida|1981|samba-enredo|4|4|alegre,festivo|carnaval|orgulho|percussao|35|
+Clara Nunes|Alvorecer|1974|samba-raiz|3|3|esperancoso|barzinho|amor|percussao|30|
+Clara Nunes|Coisa da Antiga|1977|samba-raiz|3|3|nostalgico|barzinho|saudade|percussao|30|
+Clara Nunes|Nação|1982|samba-raiz|3|3|esperancoso|barzinho|orgulho|percussao|20|
+Zé Ramalho|Beira Mar|1980|baiao|3|3|contemplativo|relaxar|vida-no-campo|violao|20|
+Zé Ramalho|Garoto de Aluguel|1980|rock-nacional|4|3|estranho|balada|critica-social|guitarra|25|
+Zé Ramalho|Vila do Sossego|1980|baiao|3|3|nostalgico|barzinho|vida-no-campo|violao|40|
+Zé Ramalho|Eternas Ondas|1980|mpb|3|3|contemplativo|barzinho|amor|violao|20|
+Zé Ramalho|Mistérios da Meia-Noite|1980|baiao|3|3|misterioso|barzinho|fe|violao|15|
+Zé Ramalho|Mulher Nova, Bonita e Carinhosa|1981|baiao|3|3|romantico|barzinho|paixao|violao|20|
+Zé Ramalho|Cidadão|1980|baiao|3|3|nostalgico|barzinho|critica-social|violao|15|
+Zé Ramalho|Entre a Serpente e a Estrela|1984|baiao|3|3|misterioso|barzinho|fe|violao|15|
+Zé Ramalho|Frevo Mulher|1979|frevo|4|4|alegre|carnaval|curticao|percussao|20|
+Zé Ramalho|A Terceira Lâmina|1981|baiao|3|3|misterioso|barzinho|fe|violao|15|
+Tim Maia|Carnaval|1975|samba-rock|4|4|alegre|carnaval|curticao|percussao|20|
+Tonico & Tinoco|Rei do Gado|1970|musica-caipira|3|3|nostalgico|barzinho|vida-no-campo|violao|15|
+Teixeirinha|Coração de Luto|1960|musica-gaucha|3|2|dramatico,sofrido|fossa|perda|violao|45|C
+Teixeirinha|Rio Grande do Sul|1967|musica-gaucha|3|3|nostalgico|churrasco|orgulho|violao|30|
+Teixeirinha|Churrasquinho de Mãe|1973|musica-gaucha|3|3|aconchegante,nostalgico|churrasco|familia|violao|35|
+Teixeirinha|Gaúcho Largado|1968|musica-gaucha|3|3|nostalgico|churrasco|vida-no-campo|violao|20|
+Teixeirinha|Mãe|1962|musica-gaucha|2|2|triste,saudade|fossa|familia,perda|violao|25|
+Teixeirinha|Carretão de Ouro|1970|musica-gaucha|3|3|nostalgico|churrasco|pe-na-estrada|violao|15|
+Teixeirinha|Brincando no Campo|1970|musica-gaucha|3|4|alegre|churrasco|vida-no-campo|violao|10|
+Teixeirinha|Ela Era Moça|1960|musica-gaucha|3|2|saudade|fossa|perda|violao|15|
+Garotos de Ouro|Gaúcho Pra Valer|1990|musica-gaucha|4|4|alegre|churrasco|vida-no-campo|gaita|15|
+Tchê Garotos|Bailão|1998|musica-gaucha|4|5|festivo,alegre|churrasco|danca|gaita|35|
+Tchê Garotos|Vou Te Buscar|1999|musica-gaucha|4|3|romantico,saudade|churrasco|amor|gaita|25|
+Tchê Garotos|Amor Antigo|2000|musica-gaucha|3|3|romantico|churrasco|amor|gaita|15|
+Tchê Garotos|Danadinha|2001|musica-gaucha|4|4|alegre|churrasco|paixao|gaita|10|
+Garotos de Ouro|Vem Dançar Comigo|1992|musica-gaucha|4|4|alegre|churrasco|danca|gaita|10|
+Grupo Rodeio|Rodeio Fandango|1996|musica-gaucha|4|4|alegre|churrasco|danca|gaita|10|
+Os Serranos|Meu Pago Querido|1980|musica-gaucha|3|3|nostalgico|churrasco|orgulho|gaita|15|
+Os Serranos|Vaneirão no Peito|1982|musica-gaucha|4|4|alegre|churrasco|vida-no-campo|gaita|15|
+Os Bertussi|Na Beira do Fogo|1975|musica-gaucha|3|3|aconchegante,nostalgico|churrasco|vida-no-campo|gaita|15|
+Luiz Marenco|Meu Pago|2002|musica-gaucha|3|3|nostalgico|churrasco|orgulho|violao|35|
+Luiz Marenco|Cordas e Voz|2002|musica-gaucha|2|2|nostalgico|churrasco|saudade|violao|30|
+Luiz Marenco|Quando o Verso Vem pras Casas|2002|musica-gaucha|2|3|nostalgico,aconchegante|churrasco|vida-no-campo|violao|50|
+Luiz Marenco|Caminhos|2002|musica-gaucha|3|3|nostalgico|churrasco|pe-na-estrada|violao|20|
+Luiz Marenco|Guitarra de Luz|2002|musica-gaucha|3|3|nostalgico|churrasco|vida-no-campo|violao|10|
+Cristiano Quevedo|Dueto de Amor|2000|musica-gaucha|3|3|romantico|churrasco|amor|violao|10|
+Joca Martins|Estrada Nova|2005|musica-gaucha|3|3|nostalgico|churrasco|pe-na-estrada|violao|10|
+Pedro Ortaça|Quem Sabe um Dia|1985|musica-gaucha|3|3|nostalgico|churrasco|saudade|gaita|10|
+Gaúcho da Fronteira|Vaneirão Pa Fronteira|1992|musica-gaucha|4|4|alegre|churrasco|danca|gaita|20|
+Gaúcho da Fronteira|Hoje Eu Vou Ficar Bem|2003|musica-gaucha|4|4|alegre|churrasco|curticao|gaita|15|
+Gaúcho da Fronteira|Dançando Bem|2000|musica-gaucha|4|4|alegre|churrasco|danca|gaita|15|
+Mercedes Sosa|Gracias a la Vida|1971|musica-gaucha|2|3|contemplativo,esperancoso|relaxar|vida-no-campo|violao|15|
+Raul Torres|Rancho Fundo|1931|musica-caipira|3|2|saudade,nostalgico|fossa|saudade|violao|10|
+Os Mirins|Mamãe Eu Quero|1937|marchinha|4|5|festivo,alegre|carnaval|zoeira|metais|70|CE
+Carmen Miranda|Mamãe Eu Quero|1937|marchinha|4|5|festivo,alegre|carnaval|zoeira|metais|75|CE
+Lamartine Babo|O Teu Cabelo Não Nega|1932|marchinha|4|5|festivo,alegre|carnaval|pegacao|metais|70|CE
+Lamartine Babo|Linda Morena|1933|marchinha|4|5|festivo,alegre|carnaval|paixao|metais|55|C
+Lamartine Babo|Até Amanhã|1934|marchinha|4|4|alegre|carnaval|amor|metais|20|
+Braguinha|Yes, Nós Temos Bananas|1938|marchinha|4|5|festivo,engracado|carnaval|zoeira|metais|55|C
+Braguinha|Touradas em Madri|1938|marchinha|4|5|festivo,alegre|carnaval|zoeira|metais|40|
+Braguinha|Carolina|1939|marchinha|4|4|alegre|carnaval|amor|metais|30|
+Braguinha|Pastorinhas|1937|marchinha|3|3|nostalgico|carnaval|amor|metais|50|
+Braguinha|Chiquita Bacana|1949|marchinha|4|5|festivo,engracado|carnaval|zoeira|metais|65|CE
+Haroldo Lobo|Allah-La-Ô|1941|marchinha|4|5|festivo,alegre|carnaval|zoeira|metais|60|C
+Haroldo Lobo|Cidade Maravilhosa|1935|marchinha|4|5|festivo,alegre|carnaval|orgulho|metais|80|CE
+Haroldo Lobo|Máscara Negra|1967|marchinha|3|3|nostalgico,dramatico|carnaval|termino|metais|60|C
+Haroldo Lobo|Alá-lá-ô|1941|marchinha|4|5|festivo|carnaval|zoeira|metais|15|
+Haroldo Lobo|Retrato do Velho|1951|marchinha|4|4|alegre|carnaval|familia|metais|15|
+Haroldo Lobo|Cachaça Não É Água|1953|marchinha|4|5|festivo,engracado|carnaval|cachaca|metais|50|C
+Haroldo Lobo|Bandeira Branca|1970|marchinha|3|4|nostalgico,alegre|carnaval|amor|metais|75|CE
+Haroldo Lobo|O Bonde São Januário|1940|samba-cancao|3|4|alegre|carnaval|zoeira|violao|30|
+Haroldo Lobo|A Jardineira|1938|marchinha|3|4|alegre,nostalgico|carnaval|amor|metais|55|C
+Marino Pinto|Sassaricando|1951|marchinha|4|5|festivo,alegre|carnaval|zoeira|metais|50|C
+Zé Keti|Marcha da Quarta-Feira de Cinzas|1957|marchinha|2|2|melancolico,nostalgico|carnaval|perda|metais|45|
+Zé Kéti|A Voz do Morro|1955|samba-raiz|3|4|alegre|barzinho|orgulho|violao|30|
+Joubert de Carvalho|Pra Você Gostar de Mim (Taí)|1930|marchinha|4|4|alegre|carnaval|amor|metais|50|C
+Ary Barroso|No Tabuleiro da Baiana|1936|samba-cancao|4|4|alegre|carnaval|orgulho|violao|40|
+Noel Rosa|Com Que Roupa?|1929|samba-cancao|4|4|alegre,engracado|carnaval|zoeira|violao|45|
+Noel Rosa|Feitiço da Vila|1934|samba-cancao|3|4|nostalgico,alegre|barzinho|orgulho|violao|40|
+Noel Rosa|Conversa de Botequim|1935|samba-cancao|3|4|alegre,engracado|barzinho|cachaca|violao|40|
+Noel Rosa|Último Desejo|1937|samba-cancao|2|2|melancolico,saudade|fossa|perda|violao|35|
+Noel Rosa|Palpite Infeliz|1935|samba-cancao|3|3|alegre|barzinho|zoeira|violao|30|
+Noel Rosa|Com Que Roupa|1929|samba-cancao|4|4|alegre|carnaval|zoeira|violao|20|
+Noel Rosa|Pierrot Apaixonado|1936|marchinha|3|4|alegre,romantico|carnaval|amor|violao|20|
+Noel Rosa|Gago Apaixonado|1930|samba-cancao|3|3|alegre,engracado|barzinho|amor|violao|15|
+Noel Rosa|Coração|1930|samba-cancao|3|3|romantico|barzinho|amor|violao|10|
+Moreira da Silva|Na Subida do Morro|1937|partido-alto|3|4|alegre,engracado|barzinho|zoeira|violao|20|
+Mário Reis|O Pessoal da Velha Guarda|1937|samba-cancao|3|4|alegre|barzinho|nostalgico|violao|10|
+Blecaute|Cabeleira do Zezé|1955|marchinha|4|5|festivo,engracado|carnaval|zoeira|metais|45|C
+Roberto Roberti|Cabeleira do Zezé|1963|marchinha|4|5|festivo,engracado|carnaval|zoeira|metais|40|
+João Roberto Kelly|Cabeleira do Zezé|1963|marchinha|4|5|festivo,engracado|carnaval|zoeira|metais|40|C
+João Roberto Kelly|Mulata Bossa Nova|1961|marchinha|4|5|festivo,alegre|carnaval|pegacao|metais|35|
+João Roberto Kelly|Maria Sapatão|1982|marchinha|4|5|festivo,engracado|carnaval|zoeira|metais|40|C
+Jorge Veiga|A Pisada é Essa|1957|marchinha|4|5|festivo|carnaval|danca|metais|15|
+Emilinha Borba|Chiquita Bacana|1949|marchinha|4|5|festivo,engracado|carnaval|zoeira|metais|40|
+Emilinha Borba|Se a Canoa Não Virar|1949|marchinha|4|5|festivo|carnaval|amor|metais|20|
+Emilinha Borba|Tem Nego Bêbo Aí|1952|marchinha|4|5|festivo,engracado|carnaval|cachaca|metais|25|
+Marlene|Lata D'Água|1952|marchinha|4|5|festivo,alegre|carnaval|zoeira|metais|45|C
+Marlene|Se Você Pensa|1962|marchinha|4|4|alegre|carnaval|amor|metais|15|
+Linda Batista|Cachorro Quente|1951|marchinha|4|5|festivo|carnaval|zoeira|metais|15|
+Carmen Miranda|Tico-Tico no Fubá|1944|choro|4|4|alegre,festivo|almoco-de-domingo|danca|metais|40|
+Carmen Miranda|South American Way|1939|samba|4|5|alegre,festivo|carnaval|danca|metais|35|
+Os Quatro Ases e Um Coringa|Ai Que Saudades da Amélia|1942|samba-cancao|3|3|nostalgico,saudade|barzinho|saudade|violao|60|
+Ataulfo Alves|Ai, Que Saudades da Amélia|1942|samba-cancao|3|3|nostalgico,saudade|barzinho|saudade|violao|70|CE
+Ataulfo Alves|Leva Meu Samba|1960|samba-cancao|3|3|nostalgico|barzinho|saudade|violao|35|
+Ataulfo Alves|Mulata Assanhada|1956|samba-cancao|4|4|alegre,sensual|barzinho|paixao|violao|35|
+Ataulfo Alves|Vai Passar Mal|1960|samba-cancao|4|4|alegre|barzinho|zoeira|violao|10|
+Tia Surica|Samba|2000|samba-raiz|3|4|alegre|barzinho|orgulho|cavaquinho|10|
+Elza Soares|A Mulher do Fim do Mundo|2015|samba|4|3|dramatico,estranho|rpg-drama|critica-social|voz-feminina|55|
+Elza Soares|Dor de Cotovelo|1990|samba|3|2|sofrido|fossa|dor-de-cotovelo|voz-feminina|30|
+Elza Soares|Beba-me|1980|samba-cancao|2|2|sensual,melancolico|jantar-romantico|amor|voz-feminina|25|
+Elza Soares|Malandro|1986|samba|3|3|confiante|barzinho|critica-social|voz-feminina|30|
+Elza Soares|Se Acaso Você Chegasse|1959|samba-cancao|4|4|alegre|barzinho|amor|voz-feminina|35|
+Elza Soares|Pra Fazer Sol Em Casa|2000|samba|3|3|esperancoso|barzinho|amor|voz-feminina|10|
+Ney Matogrosso|Rosa de Hiroshima|1973|mpb|2|2|melancolico,dramatico|rpg-drama|critica-social|voz-feminina|50|
+Ney Matogrosso|Pro Dia Nascer Feliz|1992|pop-rock-nacional|3|3|esperancoso|barzinho|amor|guitarra|30|
+Ney Matogrosso|Bandido Corrido|1989|mpb|3|3|sombrio|barzinho|critica-social|violao|10|
+Ney Matogrosso|Sangue Latino|1973|mpb|3|3|contemplativo|barzinho|liberdade|violao|50|
+Ney Matogrosso|Homem com H|1981|mpb|4|4|confiante,engracado|barzinho|orgulho|violao|55|C
+Ney Matogrosso|Bandido|1981|mpb|3|3|sensual|barzinho|paixao|violao|20|
+Ney Matogrosso|América do Sul|1975|mpb|3|3|contemplativo|barzinho|liberdade|violao|10|
+Ney Matogrosso|Pense em Mim|1987|mpb|3|3|romantico|barzinho|amor|violao|10|
+Ney Matogrosso|Sem Pecado e Sem Juízo|1984|mpb|3|3|sensual|barzinho|paixao|violao|10|
+Ney Matogrosso|Mulher Barriguda|1982|mpb|3|3|alegre|barzinho|familia|violao|10|
+Os Originais do Samba|Tá Todo Mundo Ligado|1972|samba|4|4|alegre|carnaval|danca|percussao|10|
+Banda de Ipanema|Cidade Maravilhosa|1970|marchinha|4|5|festivo|carnaval|orgulho|metais|10|
+Boi Garantido|Pássaro Garantido|1999|toada-boi-bumba|4|4|alegre,festivo|festa|orgulho|percussao|25|
+Boi Garantido|Sou Ribeirinho|2005|toada-boi-bumba|4|4|alegre,festivo|festa|vida-no-campo|percussao|20|
+Boi Caprichoso|Amazônia Selvagem|2005|toada-boi-bumba|4|4|alegre,festivo|festa|orgulho|percussao|20|
+Boi Garantido|Amor de Boi|2010|toada-boi-bumba|4|4|alegre|festa|amor|percussao|15|
+Boi Caprichoso|Evangelho da Floresta|2004|toada-boi-bumba|3|4|sagrado,esperancoso|festa|fe|percussao|15|
+Boi Garantido|Rainha do Boi|2008|toada-boi-bumba|4|4|alegre|festa|orgulho|percussao|20|
+Boi Caprichoso|Rosa dos Ventos|2007|toada-boi-bumba|4|4|alegre|festa|orgulho|percussao|10|
+Boi Garantido|Pantanal|2004|toada-boi-bumba|3|4|nostalgico|festa|vida-no-campo|percussao|10|
+Boi Garantido|Boi de Fogo|2000|toada-boi-bumba|4|4|alegre|festa|danca|percussao|10|
+Marlon Brito|Toada do Amor|2008|toada-boi-bumba|3|4|romantico|festa|amor|percussao|10|
+Fafá de Belém|Estrela do Norte|1984|mpb|3|3|romantico|barzinho|amor|voz-feminina|15|
+Fafá de Belém|Ave Maria|1990|musica-catolica|2|3|sagrado|momento-de-fe|fe|voz-feminina|35|
+Fafá de Belém|Vermelho|1998|toada-boi-bumba|4|4|alegre,festivo|festa|orgulho|percussao|30|
+Vanessa Da Mata|Amado|2007|mpb|3|3|romantico|barzinho|amor|violao|45|
+Vanessa Da Mata|Não Me Deixe Só|2004|mpb|3|3|romantico|barzinho|amor|violao|45|
+Quadrilha do Capão|Dança da Quadrilha|2008|quadrilha|4|5|festivo,alegre|sao-joao|danca|sanfona|10|
+Gilberto Gil|São João Antigo|1976|quadrilha|4|5|festivo,alegre|sao-joao|danca|sanfona|15|
+Dominguinhos|Quadrilha Dominguinhos|1977|quadrilha|4|5|festivo,alegre|sao-joao|danca|sanfona|10|
+Luiz Gonzaga|Olha pro Céu|1951|quadrilha|4|5|festivo,alegre|sao-joao|danca|sanfona|75|CE
+Luiz Gonzaga|São João na Roça|1950|quadrilha|4|5|festivo,alegre|sao-joao|danca|sanfona|60|C
+Luiz Gonzaga|Noites Brasileiras|1950|quadrilha|4|5|festivo,alegre|sao-joao|danca|sanfona|65|C
+Luiz Gonzaga|Pot-pourri Junino|1950|quadrilha|4|5|festivo,alegre|sao-joao|danca|sanfona|40|
+Luiz Gonzaga|Fogueira de São João|1950|quadrilha|4|5|festivo,alegre|sao-joao|danca|sanfona|45|
+Luiz Gonzaga|Pula a Fogueira|1950|quadrilha|4|5|festivo,alegre|sao-joao|danca|sanfona|30|
+Luiz Gonzaga|Santo Antônio|1950|quadrilha|3|4|alegre|sao-joao|fe|sanfona|20|
+Luiz Gonzaga|Vamos Pra Fogueira|1950|quadrilha|4|5|festivo,alegre|sao-joao|danca|sanfona|10|
+Elba Ramalho|Pula Fogueira|1990|quadrilha|4|5|festivo,alegre|sao-joao|danca|sanfona|40|
+Elba Ramalho|Arrasta-pé|1990|quadrilha|4|5|festivo,alegre|sao-joao|danca|sanfona|15|
+Elba Ramalho|Pot-pourri Junino|1990|quadrilha|4|5|festivo|sao-joao|danca|sanfona|10|
+Alceu Valença|Quadrilha do Alceu|1986|quadrilha|4|5|festivo|sao-joao|danca|sanfona|10|
+Mestre Vitalino|Marcha do Cangaço|1960|xaxado|4|4|alegre|sao-joao|vida-no-campo|sanfona|10|
+Luiz Gonzaga|Xaxado|1950|xaxado|4|4|alegre|sao-joao|vida-no-campo|sanfona|40|
+Luiz Gonzaga|Xote Ecológico|1989|xote|3|3|contemplativo|sao-joao|critica-social|sanfona|50|C
+Luiz Gonzaga|Mulher Rendeira|1953|xaxado|4|4|alegre|sao-joao|paixao|sanfona|55|C
+Luiz Gonzaga|Cangaceiro|1957|xaxado|4|4|alegre|sao-joao|vida-no-campo|sanfona|20|
+Luiz Gonzaga|O Cabra|1955|xaxado|4|4|alegre|sao-joao|vida-no-campo|sanfona|20|
+Luiz Gonzaga|Lampião Falou|1960|xaxado|4|4|alegre|sao-joao|vida-no-campo|sanfona|20|
+Luiz Gonzaga|Ô Véio Macho|1960|xaxado|4|4|alegre|sao-joao|vida-no-campo|sanfona|15|
+Luiz Gonzaga|Acauã|1952|baiao|3|2|melancolico|sao-joao|vida-no-campo|sanfona|35|
+Luiz Gonzaga|Légua Tirana|1952|baiao|3|3|nostalgico|sao-joao|pe-na-estrada|sanfona|25|
+Luiz Gonzaga|Samarica Parteira|1960|baiao|3|3|alegre|sao-joao|familia|sanfona|20|
+Luiz Gonzaga|Algodão|1953|baiao|3|3|nostalgico|sao-joao|vida-no-campo|sanfona|20|
+Luiz Gonzaga|Vem Morena|1950|baiao|4|4|alegre|sao-joao|paixao|sanfona|20|
+Luiz Gonzaga|Imbalança|1957|baiao|4|4|alegre|sao-joao|danca|sanfona|10|
+Luiz Gonzaga|Sanfona do Povo|1960|baiao|4|4|alegre|sao-joao|danca|sanfona|10|
+Luiz Gonzaga|Cabeça Chata|1960|baiao|4|4|alegre|sao-joao|zoeira|sanfona|10|
+Luiz Gonzaga|Quero Chá|1960|baiao|4|4|alegre|sao-joao|zoeira|sanfona|10|
+Luiz Gonzaga|Cortando Pano|1960|baiao|4|4|alegre|sao-joao|danca|sanfona|10|
+Luiz Gonzaga|Boi Bumbá|1960|baiao|4|4|alegre|sao-joao|danca|sanfona|10|

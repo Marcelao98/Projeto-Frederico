@@ -1,0 +1,267 @@
+Megadeth|Symphony of Destruction|1992|thrash-metal|4|2|sombrio,tenso,confiante|70|C
+Megadeth|Peace Sells|1986|thrash-metal|5|3|agressivo,confiante,tenso|68|
+Megadeth|Hangar 18|1990|thrash-metal|5|3|tenso,empolgante,epico|58|
+Megadeth|Tornado of Souls|1990|thrash-metal|5|2|dramatico,agressivo,epico|55|
+Megadeth|Holy Wars... The Punishment Due|1990|thrash-metal|5|3|epico,agressivo,tenso|58|
+Megadeth|A Tout le Monde|1994|heavy-metal|2|1|triste,melancolico,dramatico|58|
+Megadeth|Trust|1997|heavy-metal|4|3|sombrio,confiante,dramatico|45|
+Slayer|Raining Blood|1986|thrash-metal|5|1|agressivo,assustador,sombrio|75|E X
+Slayer|Angel of Death|1986|thrash-metal|5|1|agressivo,assustador,sombrio|68|X
+Slayer|South of Heaven|1988|thrash-metal|4|1|sombrio,assustador,tenso|55|
+Slayer|Seasons in the Abyss|1990|thrash-metal|4|1|sombrio,epico,assustador|52|
+Slayer|Dead Skin Mask|1990|thrash-metal|3|1|assustador,sombrio,tenso|48|
+Anthrax|Madhouse|1985|thrash-metal|5|4|agressivo,engracado,empolgante|50|
+Anthrax|Caught in a Mosh|1987|thrash-metal|5|3|agressivo,empolgante,tenso|50|
+Anthrax|Indians|1987|thrash-metal|5|3|agressivo,tenso,empolgante|45|
+Anthrax|I Am the Law|1987|thrash-metal|5|3|agressivo,confiante,empolgante|42|
+Testament|Over the Wall|1987|thrash-metal|5|3|agressivo,empolgante,tenso|38|
+Exodus|Bonded by Blood|1985|thrash-metal|5|2|agressivo,tenso,empolgante|32|
+Overkill|Elimination|1990|thrash-metal|5|3|agressivo,empolgante,tenso|30|
+Kreator|Flag of Hate|1986|thrash-metal|5|2|agressivo,tenso,sombrio|30|
+Pantera|Walk|1992|heavy-metal|5|3|agressivo,confiante,empolgante|75|E X
+Pantera|Cowboys from Hell|1990|heavy-metal|5|3|agressivo,confiante,empolgante|65|
+Pantera|Cemetery Gates|1990|heavy-metal|3|2|sombrio,dramatico,epico|58|
+Pantera|Mouth for War|1992|heavy-metal|5|2|agressivo,tenso,empolgante|55|
+Pantera|I'm Broken|1994|heavy-metal|5|2|agressivo,sofrido,tenso|50|
+Pantera|Fucking Hostile|1992|thrash-metal|5|2|agressivo,tenso,empolgante|48|X
+Pantera|This Love|1992|heavy-metal|4|2|sombrio,dramatico,sofrido|52|
+Pantera|Domination|1990|heavy-metal|5|3|agressivo,empolgante,tenso|42|
+Dream Theater|Pull Me Under|1992|rock-progressivo+heavy-metal|4|3|dramatico,epico,tenso|50|
+Dream Theater|Metropolis—Part 1: "The Miracle and the Sleeper"|1992|rock-progressivo+heavy-metal|4|3|epico,empolgante,dramatico|45|I
+Dream Theater|The Spirit Carries On|1999|rock-progressivo|2|2|esperancoso,dramatico,contemplativo|50|
+Dream Theater|Learning to Live|1992|rock-progressivo|3|3|epico,dramatico,esperancoso|35|
+Tool|Sober|1993|rock-alternativo+heavy-metal|3|1|sombrio,tenso,estranho|58|
+Tool|Schism|2001|rock-progressivo+heavy-metal|4|2|sombrio,tenso,misterioso|58|
+Tool|Forty Six & 2|1996|rock-alternativo+heavy-metal|4|2|sombrio,misterioso,tenso|55|
+Tool|Lateralus|2001|rock-progressivo+heavy-metal|4|3|epico,misterioso,contemplativo|55|
+Tool|The Pot|2006|rock-progressivo+heavy-metal|4|3|sombrio,confiante,agressivo|40|
+Opeth|Blackwater Park|2001|metal|3|2|sombrio,misterioso,dramatico|32|
+Opeth|The Drapery Falls|2001|metal|3|1|sombrio,triste,epico|30|
+Helloween|Eagle Fly Free|1988|power-metal|5|4|epico,empolgante,esperancoso|55|
+Helloween|I Want Out|1988|power-metal|5|4|empolgante,esperancoso,animado|60|C
+Helloween|Keeper of the Seven Keys|1988|power-metal|4|3|epico,magico,dramatico|50|
+Helloween|Future World|1987|power-metal|5|5|alegre,empolgante,esperancoso|50|
+Helloween|Dr. Stein|1988|power-metal|5|4|engracado,empolgante,estranho|42|
+Helloween|A Tale That Wasn't Right|1987|power-metal|2|2|melancolico,triste,sonhador|42|
+Blind Guardian|Valhalla|1989|power-metal|5|4|epico,empolgante,confiante|52|C
+Blind Guardian|The Bard's Song – In the Forest|1992|power-metal|2|3|aconchegante,magico,nostalgico|60|C o:rpg-taverna i:violao
+Blind Guardian|Mirror Mirror|1998|power-metal|5|3|epico,magico,empolgante|50|
+Blind Guardian|Nightfall|1998|power-metal|4|3|epico,magico,dramatico|45|
+Blind Guardian|Lord of the Rings|1995|power-metal|3|3|epico,magico,esperancoso|42|o:rpg-exploracao
+Blind Guardian|Imaginations from the Other Side|1995|power-metal|4|3|epico,dramatico,magico|40|
+Rhapsody of Fire|Emerald Sword|1998|power-metal|5|4|epico,magico,empolgante|52|o:rpg-combate
+Rhapsody of Fire|Dawn of Victory|2000|power-metal|5|4|epico,empolgante,esperancoso|45|
+Rhapsody of Fire|Holy Thunderforce|2002|power-metal|5|4|epico,empolgante,magico|40|
+Rhapsody of Fire|Wisdom of the Kings|2002|power-metal|4|3|epico,magico,esperancoso|35|
+Stratovarius|Black Diamond|1997|power-metal|5|3|epico,empolgante,dramatico|40|
+Stratovarius|Hunting High and Low|1997|power-metal|4|3|epico,dramatico,magico|35|
+Hammerfall|Hearts on Fire|2002|power-metal|5|4|epico,empolgante,esperancoso|50|C
+Hammerfall|Hammerfall|1997|power-metal|5|4|epico,empolgante,confiante|40|
+Hammerfall|Renegade|1998|power-metal|5|4|empolgante,confiante,epico|38|
+Sonata Arctica|Full Moon|2001|power-metal|5|3|empolgante,epico,dramatico|48|
+Sonata Arctica|Don't Say a Word|2001|power-metal|4|3|dramatico,epico,esperancoso|40|
+Sonata Arctica|Replica|1999|power-metal|5|3|empolgante,epico,magico|40|
+Edguy|Mysteria|2004|power-metal|5|4|magico,epico,empolgante|38|
+Gamma Ray|Rebellion in Dreamland|1995|power-metal|5|4|epico,empolgante,esperancoso|32|
+DragonForce|Through the Fire and Flames|2006|power-metal|5|4|empolgante,epico,agressivo|68|E o:rpg-combate o:jogar
+DragonForce|Fury of the Storm|2004|power-metal|5|4|empolgante,epico,agressivo|50|
+DragonForce|Cry for Eternity|2006|power-metal|3|2|epico,dramatico,triste|40|
+DragonForce|Operation Ground and Pound|2005|power-metal|5|4|empolgante,agressivo,epico|42|
+Sabaton|Primo Victoria|2005|power-metal|5|4|epico,empolgante,confiante|60|C o:rpg-combate
+Sabaton|The Last Stand|2016|power-metal|4|3|epico,dramatico,empolgante|55|
+Sabaton|Carolus Rex|2012|power-metal|5|3|epico,empolgante,dramatico|45|
+Sabaton|Swedish Pagans|2012|power-metal|5|4|epico,empolgante,confiante|40|
+Sabaton|Fields of Verdun|2008|power-metal|4|3|epico,dramatico,sombrio|42|
+Sabaton|The Lion from the North|2012|power-metal|4|3|epico,empolgante,confiante|38|
+Sabaton|Ghost Division|2008|power-metal|5|3|epico,empolgante,tenso|50|
+Sabaton|To Hell and Back|2014|power-metal|5|3|epico,empolgante,dramatico|50|
+Sabaton|Bismarck|2019|power-metal|4|3|epico,dramatico,empolgante|48|
+Sabaton|Resist and Bite|2016|power-metal|5|4|epico,empolgante,confiante|40|
+Powerwolf|Sanctified with Dynamite|2015|power-metal|5|4|sombrio,epico,empolgante|45|
+Powerwolf|We Drink Your Blood|2011|power-metal|5|4|sombrio,epico,festivo|45|
+Powerwolf|Army of the Night|2015|power-metal|5|4|sombrio,epico,empolgante|42|
+Powerwolf|Werewolves of Armenia|2011|power-metal|5|4|sombrio,epico,empolgante|45|
+Nightwish|Nemo|2004|metal-sinfonico|4|2|dramatico,epico,melancolico|68|E voz-feminina
+Nightwish|Wish I Had an Angel|2004|metal-sinfonico|5|3|dramatico,empolgante,sombrio|55|
+Nightwish|Ghost Love Score|2004|metal-sinfonico|4|2|epico,dramatico,sombrio|52|orquestra
+Nightwish|Sleeping Sun|1999|metal-sinfonico|3|1|triste,melancolico,dramatico|55|voz-feminina
+Nightwish|Ever Dream|2002|metal-sinfonico|3|2|romantico,sonhador,dramatico|50|
+Nightwish|The Phantom of the Opera|2002|metal-sinfonico|4|2|dramatico,sombrio,epico|58|f:Tarja_Turunen
+Nightwish|Storytime|2011|metal-sinfonico|5|4|epico,empolgante,magico|40|
+Nightwish|Élan|2015|metal-sinfonico|3|4|esperancoso,sonhador,epico|40|
+Nightwish|Over the Hills and Far Away|2001|metal-sinfonico|4|3|esperancoso,epico,nostalgico|45|
+Within Temptation|Ice Queen|2000|metal-sinfonico|4|2|dramatico,sombrio,epico|55|voz-feminina
+Within Temptation|Mother Earth|2001|metal-sinfonico|4|3|epico,dramatico,magico|50|
+Within Temptation|Stand My Ground|2004|metal-sinfonico|4|3|epico,dramatico,empolgante|50|
+Within Temptation|What Have You Done|2007|metal-sinfonico|5|3|dramatico,tenso,empolgante|58|f:Keith_Caputo
+Within Temptation|Faster|2011|metal-sinfonico|5|3|empolgante,tenso,dramatico|38|
+Epica|Cry for the Moon|2003|metal-sinfonico|5|2|dramatico,epico,sombrio|40|
+Epica|Consign to Oblivion|2005|metal-sinfonico|5|2|epico,dramatico,tenso|38|
+Evanescence|Bring Me to Life|2003|nu-metal+metal-sinfonico|5|2|dramatico,tenso,empolgante|92|E C f:Paul_McCoy voz-feminina
+Evanescence|My Immortal|2003|rock-alternativo|2|1|triste,melancolico,sofrido|90|E i:piano o:fossa
+Evanescence|Going Under|2003|rock-alternativo|5|2|dramatico,sombrio,empolgante|68|
+Evanescence|Everybody's Fool|2003|rock-alternativo|4|2|sombrio,dramatico,agressivo|52|
+Evanescence|Call Me When You're Sober|2006|rock-alternativo|4|2|sofrido,dramatico,agressivo|55|
+Evanescence|Lithium|2006|rock-alternativo|2|1|triste,melancolico,dramatico|55|
+Evanescence|Imaginary|2003|rock-alternativo|2|2|sonhador,melancolico,magico|45|
+Lacuna Coil|Heaven's a Lie|2005|metal-sinfonico|4|2|dramatico,sombrio,empolgante|40|
+Epica|Sensorium|2005|metal-sinfonico|5|3|epico,dramatico,empolgante|30|
+Avantasia|The Scarecrow|2008|power-metal|4|2|dramatico,epico,sombrio|32|
+Avantasia|Sign of the Cross|2013|power-metal|5|3|epico,dramatico,empolgante|30|
+Linkin Park|One Step Closer|2000|nu-metal|5|2|agressivo,tenso,empolgante|78|E C
+Linkin Park|Crawling|2000|nu-metal|4|1|sombrio,sofrido,dramatico|75|
+Linkin Park|Faint|2003|nu-metal|5|3|agressivo,tenso,empolgante|75|
+Linkin Park|Papercut|2000|nu-metal|5|2|tenso,sombrio,agressivo|68|
+Linkin Park|Somewhere I Belong|2003|nu-metal|4|2|melancolico,dramatico,sofrido|72|
+Linkin Park|What I've Done|2007|rock-alternativo|4|3|epico,esperancoso,dramatico|82|E C
+Linkin Park|Breaking the Habit|2003|rock-alternativo|3|1|sofrido,sombrio,dramatico|72|
+Linkin Park|New Divide|2009|rock-alternativo|4|3|epico,empolgante,dramatico|75|o:jogar
+Linkin Park|Bleed It Out|2007|nu-metal|5|3|agressivo,empolgante,confiante|65|
+Linkin Park|Burn It Down|2012|rock-alternativo|4|3|empolgante,tenso,dramatico|60|
+Linkin Park|Shadow of the Day|2007|rock-alternativo|3|2|melancolico,contemplativo,esperancoso|65|
+Linkin Park|Numb/Encore|2004|rap-gringo+nu-metal|4|2|sofrido,empolgante,confiante|72|f:Jay-Z
+Linkin Park|Given Up|2007|nu-metal|5|2|agressivo,tenso,empolgante|50|
+Linkin Park|Leave Out All the Rest|2007|rock-alternativo|3|2|melancolico,saudade,esperancoso|60|
+Linkin Park|Points of Authority|2000|nu-metal|5|2|agressivo,tenso,empolgante|50|
+Linkin Park|From the Inside|2003|nu-metal|4|1|sofrido,sombrio,agressivo|48|
+Linkin Park|Lost|2020|rock-alternativo|3|2|dramatico,melancolico,esperancoso|45|
+Linkin Park|The Emptiness Machine|2024|rock-alternativo|4|2|dramatico,sofrido,empolgante|62|
+Linkin Park|Heavy Is the Crown|2024|rock-alternativo|5|3|epico,agressivo,confiante|60|o:jogar
+Linkin Park|Castle of Glass|2012|rock-alternativo|3|3|esperancoso,melancolico,dramatico|68|
+Linkin Park|Waiting for the End|2010|rock-alternativo|3|3|esperancoso,dramatico,contemplativo|58|
+Linkin Park|Iridescent|2010|rock-alternativo|3|3|esperancoso,dramatico,epico|60|
+Linkin Park|Talking to Myself|2017|rock-alternativo|4|2|dramatico,sofrido,empolgante|45|
+Korn|Freak on a Leash|1998|nu-metal|4|2|agressivo,tenso,sombrio|68|
+Korn|Blind|1994|nu-metal|4|2|agressivo,sombrio,tenso|55|
+Korn|Falling Away from Me|1999|nu-metal|4|2|sombrio,sofrido,dramatico|55|
+Korn|Got the Life|1998|nu-metal|5|4|confiante,agressivo,animado|55|
+Korn|Here to Stay|2002|nu-metal|5|2|agressivo,tenso,empolgante|48|
+Korn|Coming Undone|2005|nu-metal|4|2|sombrio,agressivo,tenso|45|
+Korn|Twisted Transistor|2005|nu-metal|5|3|agressivo,estranho,empolgante|45|X
+Limp Bizkit|Break Stuff|1999|nu-metal|5|2|agressivo,confiante,tenso|72|X
+Limp Bizkit|Nookie|1999|nu-metal|5|3|agressivo,confiante,empolgante|65|X
+Limp Bizkit|Rollin'|2000|nu-metal|5|4|confiante,empolgante,agressivo|65|
+Limp Bizkit|My Way|2001|nu-metal|4|3|confiante,empolgante,agressivo|50|
+Limp Bizkit|Behind Blue Eyes|2003|nu-metal|3|2|dramatico,melancolico,agressivo|58|
+Limp Bizkit|Take a Look Around|2000|nu-metal|5|4|empolgante,tenso,confiante|58|
+Limp Bizkit|My Generation|1999|nu-metal|5|3|agressivo,confiante,empolgante|50|
+Limp Bizkit|Faith|1997|nu-metal|4|4|alegre,animado,engracado|45|
+System of a Down|Chop Suey!|2001|nu-metal|5|2|agressivo,dramatico,tenso|88|E C
+System of a Down|Toxicity|2001|nu-metal|5|3|agressivo,empolgante,estranho|82|E C
+System of a Down|B.Y.O.B.|2005|nu-metal|5|3|agressivo,empolgante,confiante|78|C t:critica-social
+System of a Down|Aerials|2001|nu-metal|4|3|estranho,dramatico,empolgante|72|
+System of a Down|Lonely Day|2005|rock-alternativo|2|1|triste,melancolico,sofrido|65|
+System of a Down|Hypnotize|2005|nu-metal|5|3|estranho,agressivo,tenso|62|
+System of a Down|Sugar|1998|nu-metal|5|3|agressivo,estranho,empolgante|58|
+System of a Down|Spiders|1998|nu-metal|4|2|sombrio,misterioso,tenso|50|
+System of a Down|Question!|2005|rock-alternativo|4|3|estranho,melancolico,empolgante|52|
+System of a Down|Needles|2001|nu-metal|5|3|estranho,agressivo,empolgante|45|
+System of a Down|Radio/Video|2005|nu-metal|5|4|empolgante,estranho,alegre|45|
+System of a Down|Prison Song|2001|nu-metal|5|2|agressivo,tenso,empolgante|50|
+Disturbed|Down with the Sickness|2000|nu-metal|5|2|agressivo,tenso,empolgante|78|E C
+Disturbed|Stricken|2005|heavy-metal|4|2|sombrio,dramatico,agressivo|58|
+Disturbed|The Sound of Silence|2015|heavy-metal|2|2|dramatico,melancolico,epico|85|E
+Disturbed|Indestructible|2008|heavy-metal|5|3|confiante,empolgante,agressivo|58|
+Disturbed|Land of Confusion|2005|heavy-metal|4|3|tenso,dramatico,empolgante|55|
+Disturbed|Inside the Fire|2008|heavy-metal|3|1|sombrio,sofrido,dramatico|48|
+Disturbed|Voices|2000|nu-metal|5|2|agressivo,tenso,empolgante|50|
+Disturbed|Ten Thousand Fists|2005|heavy-metal|5|3|agressivo,empolgante,confiante|45|
+Disturbed|Another Way to Die|2008|heavy-metal|5|3|agressivo,empolgante,tenso|40|
+Slipknot|Duality|2004|nu-metal|5|2|agressivo,tenso,empolgante|68|E X
+Slipknot|Wait and Bleed|1999|nu-metal|4|2|agressivo,sombrio,tenso|68|
+Slipknot|Psychosocial|2008|heavy-metal|5|2|agressivo,tenso,empolgante|68|X
+Slipknot|Before I Forget|2004|nu-metal|5|3|agressivo,confiante,empolgante|62|
+Slipknot|Snuff|2008|rock-alternativo|2|1|triste,sofrido,melancolico|65|
+Slipknot|Spit It Out|1999|nu-metal|5|3|agressivo,empolgante,tenso|52|X
+Slipknot|Left Behind|2001|nu-metal|5|2|agressivo,tenso,empolgante|50|X
+Slipknot|Vermilion|2004|heavy-metal|3|1|sombrio,sofrido,misterioso|52|
+Slipknot|Surfacing|1999|nu-metal|5|2|agressivo,tenso,empolgante|50|X
+Slipknot|People = Shit|2001|nu-metal|5|2|agressivo,tenso,empolgante|45|X
+Slipknot|Unsainted|2019|heavy-metal|4|2|dramatico,epico,agressivo|45|
+Rage Against the Machine|Killing in the Name|1992|nu-metal|5|2|agressivo,empolgante,confiante|85|E X C t:critica-social
+Rage Against the Machine|Bulls on Parade|1996|nu-metal|5|3|agressivo,empolgante,confiante|68|
+Rage Against the Machine|Bombtrack|1992|nu-metal|5|2|agressivo,empolgante,tenso|58|
+Rage Against the Machine|Guerrilla Radio|1999|nu-metal|5|3|agressivo,empolgante,confiante|62|
+Rage Against the Machine|Sleep Now in the Fire|1999|nu-metal|5|3|agressivo,empolgante,confiante|55|
+Rage Against the Machine|Testify|1999|nu-metal|5|3|agressivo,empolgante,tenso|52|
+Rage Against the Machine|Know Your Enemy|1992|nu-metal|5|3|agressivo,confiante,empolgante|50|
+Rage Against the Machine|Wake Up|1992|nu-metal|5|3|agressivo,tenso,empolgante|45|
+Rage Against the Machine|Freedom|1993|nu-metal|5|3|agressivo,tenso,empolgante|40|
+Papa Roach|Last Resort|2000|nu-metal|5|2|agressivo,tenso,dramatico|75|C
+Papa Roach|Between Angels and Insects|2000|nu-metal|4|3|agressivo,confiante,empolgante|45|
+Papa Roach|Scars|2004|rock-alternativo|3|2|dramatico,sofrido,esperancoso|55|
+Papa Roach|...To Be Loved|2012|rock-alternativo|4|3|esperancoso,dramatico,empolgante|45|
+Godsmack|I Stand Alone|2002|nu-metal|4|3|confiante,agressivo,empolgante|55|
+Godsmack|Voodoo|1998|nu-metal|4|2|sombrio,misterioso,tenso|50|
+Godsmack|Awake|2000|nu-metal|4|2|sombrio,tenso,agressivo|42|
+Staind|It's Been Awhile|2001|rock-alternativo|3|1|sofrido,melancolico,sombrio|68|
+Staind|Outside|2001|rock-alternativo|3|2|dramatico,melancolico,contemplativo|50|
+Three Days Grace|I Hate Everything About You|2003|rock-alternativo|4|2|agressivo,sofrido,tenso|75|C
+Three Days Grace|Animal I Have Become|2006|rock-alternativo|4|2|sombrio,tenso,agressivo|72|
+Three Days Grace|Never Too Late|2006|rock-alternativo|4|3|esperancoso,dramatico,empolgante|55|
+Three Days Grace|Pain|2006|rock-alternativo|4|2|sofrido,agressivo,tenso|62|
+Three Days Grace|Riot|2007|rock-alternativo|5|3|agressivo,empolgante,confiante|50|
+Three Days Grace|The Good Life|2006|rock-alternativo|4|3|esperancoso,dramatico,empolgante|45|
+Breaking Benjamin|The Diary of Jane|2006|rock-alternativo|4|2|sombrio,dramatico,tenso|72|
+Breaking Benjamin|So Cold|2004|rock-alternativo|3|1|sofrido,melancolico,dramatico|62|
+Breaking Benjamin|Breath|2006|rock-alternativo|4|2|dramatico,tenso,sofrido|50|
+Breaking Benjamin|Blow Me Away|2004|rock-alternativo|5|2|agressivo,tenso,empolgante|55|o:jogar
+Breaking Benjamin|Failure|2009|rock-alternativo|4|2|dramatico,sombrio,sofrido|50|
+Breaking Benjamin|I Will Not Bow|2009|rock-alternativo|5|3|agressivo,epico,empolgante|48|
+Breaking Benjamin|Dance with the Devil|2015|rock-alternativo|5|3|agressivo,sombrio,empolgante|40|
+Breaking Benjamin|Angels Fall|2015|rock-alternativo|3|2|dramatico,melancolico,epico|35|
+Skillet|Monster|2009|rock-alternativo|5|3|agressivo,tenso,empolgante|78|C
+Skillet|Hero|2009|rock-alternativo|5|3|epico,empolgante,esperancoso|60|
+Skillet|Awake and Alive|2009|rock-alternativo|5|3|agressivo,empolgante,tenso|52|
+Skillet|Feel Invincible|2016|rock-alternativo|5|4|confiante,empolgante,esperancoso|55|o:treino
+Skillet|Legendary|2016|rock-alternativo|5|4|epico,confiante,empolgante|50|
+Skillet|Comatose|2006|rock-alternativo|4|3|dramatico,empolgante,tenso|42|
+Skillet|Rise|2022|rock-alternativo|5|4|epico,confiante,esperancoso|45|
+Skillet|Stronger|2016|rock-alternativo|5|4|esperancoso,confiante,empolgante|45|
+Five Finger Death Punch|Wrong Side of Heaven|2013|heavy-metal|4|2|dramatico,sofrido,epico|65|
+Five Finger Death Punch|Jekyll and Hyde|2013|heavy-metal|5|3|agressivo,confiante,empolgante|58|
+Five Finger Death Punch|The Bleeding|2007|heavy-metal|5|2|agressivo,tenso,empolgante|58|
+Five Finger Death Punch|Under and Over It|2011|heavy-metal|5|3|agressivo,confiante,empolgante|55|
+Five Finger Death Punch|Bad Company|2014|heavy-metal|4|3|confiante,dramatico,agressivo|60|
+Five Finger Death Punch|Burn MF|2011|heavy-metal|5|3|agressivo,empolgante,tenso|50|X
+Five Finger Death Punch|Got Your Six|2015|heavy-metal|5|3|agressivo,confiante,epico|48|
+Five Finger Death Punch|I Apologize|2020|heavy-metal|3|2|sofrido,dramatico,melancolico|45|
+Five Finger Death Punch|Gone Away|2018|heavy-metal|2|1|triste,melancolico,dramatico|45|
+Avenged Sevenfold|Bat Country|2005|heavy-metal|5|3|agressivo,empolgante,estranho|75|E o:jogar
+Avenged Sevenfold|Nightmare|2010|heavy-metal|4|2|sombrio,dramatico,epico|72|E
+Avenged Sevenfold|Hail to the King|2013|heavy-metal|4|3|epico,confiante,empolgante|65|
+Avenged Sevenfold|Afterlife|2007|heavy-metal|5|2|dramatico,empolgante,epico|55|
+Avenged Sevenfold|Beast and the Harlot|2005|heavy-metal|5|3|agressivo,empolgante,confiante|65|
+Avenged Sevenfold|So Far Away|2010|heavy-metal|2|1|triste,saudade,melancolico|68|t:perda
+Avenged Sevenfold|Seize the Day|2005|heavy-metal|3|2|romantico,dramatico,sofrido|65|
+Avenged Sevenfold|Unholy Confessions|2003|heavy-metal|5|3|agressivo,empolgante,tenso|52|
+Avenged Sevenfold|Critical Acclaim|2007|heavy-metal|5|3|agressivo,confiante,empolgante|45|
+Avenged Sevenfold|Almost Easy|2007|heavy-metal|5|3|agressivo,confiante,empolgante|48|
+Avenged Sevenfold|Buried Alive|2007|heavy-metal|5|2|sombrio,tenso,agressivo|45|
+Avenged Sevenfold|Welcome to the Family|2010|heavy-metal|5|3|confiante,empolgante,agressivo|45|
+Avenged Sevenfold|Dear God|2007|heavy-metal|3|3|esperancoso,romantico,contemplativo|60|
+Avenged Sevenfold|Shepherd of Fire|2013|heavy-metal|5|3|agressivo,epico,empolgante|45|
+Bullet for My Valentine|Tears Don't Fall|2005|metalcore|5|2|dramatico,sofrido,empolgante|65|
+Bullet for My Valentine|Waking the Demon|2008|metalcore|5|2|agressivo,tenso,empolgante|52|
+Bullet for My Valentine|Your Betrayal|2010|metalcore|4|2|sofrido,dramatico,agressivo|50|
+Bullet for My Valentine|Scream Aim Fire|2008|metalcore|5|3|agressivo,empolgante,confiante|50|
+Bullet for My Valentine|Hand of Blood|2005|metalcore|5|2|agressivo,tenso,empolgante|45|
+Bullet for My Valentine|All These Things I Hate (Revolve Around Me)|2005|metalcore|5|2|sofrido,agressivo,dramatico|55|
+Bullet for My Valentine|Temper Temper|2013|metalcore|5|3|agressivo,empolgante,confiante|40|
+Trivium|Dying in Your Arms|2008|metalcore|5|2|dramatico,agressivo,epico|40|
+Trivium|In Waves|2011|metalcore|5|3|agressivo,empolgante,epico|45|
+Trivium|Down from the Sky|2008|metalcore|4|2|epico,sombrio,dramatico|40|
+Trivium|Strife|2008|metalcore|5|3|agressivo,empolgante,tenso|38|
+Trivium|Pull Harder on the Strings of Your Martyr|2005|metalcore|5|2|agressivo,tenso,empolgante|40|
+Trivium|The Heart from Your Hate|2008|metalcore|5|2|agressivo,sofrido,dramatico|35|
+Trivium|Silence in the Snow|2015|metalcore|4|2|sombrio,epico,dramatico|35|
+Trivium|Betrayer|2003|metalcore|5|3|agressivo,tenso,empolgante|30|
+Trivium|Like Light to the Flies|2005|metalcore|5|3|agressivo,empolgante,epico|42|
+Trivium|Into the Mouth of Hell We March|2011|metalcore|5|3|agressivo,empolgante,tenso|35|
+Trivium|Rain|2008|metalcore|5|2|sombrio,agressivo,tenso|32|
+Trivium|The Sin and the Sentence|2017|metalcore|5|3|agressivo,empolgante,confiante|40|
+Trivium|Amongst the Shadows and the Stones|2017|metalcore|5|3|agressivo,empolgante,sombrio|35|
+Trivium|Capsizing the Sea|2003|metalcore|5|3|agressivo,tenso,empolgante|28|
+Trivium|Torn Between Scylla and Charybdis|2011|metalcore|5|3|agressivo,epico,empolgante|28|
+Trivium|A Gunshot to the Head of Trepidation|2005|metalcore|5|3|agressivo,empolgante,tenso|42|
+Trivium|Becoming the Dragon|2008|metalcore|5|3|epico,agressivo,empolgante|35|

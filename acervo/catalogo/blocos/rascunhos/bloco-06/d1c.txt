@@ -1,0 +1,184 @@
+Roberto Carlos|Quero Que Vá Tudo pro Inferno|1965|jovem-guarda|4|4|animado,alegre,confiante|curticao,liberdade|80|EC|karaoke||
+Roberto Carlos|Parei na Contramão|1963|jovem-guarda|4|4|animado,alegre|curticao|58|||
+Roberto Carlos|O Calhambeque|1964|jovem-guarda|4|5|alegre,animado,engracado|zoeira,curticao|75|C|||Versão de Road Hog
+Roberto Carlos|Splish Splash|1963|jovem-guarda|4|5|alegre,animado,engracado|zoeira,curticao|55|||
+Roberto Carlos|Cavalgada|1977|mpb-romantica/jovem-guarda|3|4|romantico,esperancoso,alegre|amor,paixao|72|C|karaoke||
+Roberto Carlos|Amigo|1977|mpb-romantica|2|3|aconchegante,nostalgico,romantico|amizade|76|C|||
+Roberto Carlos|O Portão|1974|mpb-romantica|2|3|nostalgico,saudade,aconchegante|familia,amor|70|||
+Roberto Carlos|Outra Vez|1977|mpb-romantica|2|3|romantico,saudade,dramatico|amor,termino|66|||
+Roberto Carlos|Eu Sou Terrível|1968|jovem-guarda|4|4|confiante,animado,engracado|orgulho|52|||
+Roberto Carlos|Falando Sério|1980|mpb-romantica|2|3|romantico,calmo|amor|50|||
+Roberto Carlos|Café da Manhã|1978|mpb-romantica|2|4|aconchegante,romantico,alegre|amor|62|||
+Roberto Carlos|Força Estranha|1978|mpb-romantica|3|3|sensual,misterioso,romantico|paixao|55|||
+Erasmo Carlos|Mulher (Sexo Frágil)|1981|rock-nacional|3|3|romantico,sensual|amor|55|||
+Erasmo Carlos|Vem Quente Que Eu Estou Fervendo|1967|jovem-guarda|4|5|animado,festivo,alegre|danca,curticao|60|C|||
+Wanderléa|Pare o Casamento|1966|jovem-guarda|4|3|dramatico,animado|amor|45|||
+Wanderléa|Ternura|1965|jovem-guarda|2|3|romantico,calmo|amor|58|||
+Wanderley Cardoso|Preciso Encontrar um Amigo|1967|jovem-guarda|2|3|saudade,melancolico|amizade,solidao|30|||
+Os Incríveis|Eu Te Amo, Meu Brasil|1970|rock-nacional|3|4|esperancoso,epico,festivo|liberdade|52|C|||
+Os Incríveis|O Milionário|1966|jovem-guarda|4|4|animado,alegre,engracado|zoeira|40|||
+The Fevers|Uma Noite Quente|1972|jovem-guarda|3|4|romantico,alegre|paixao|35|||
+Renato e Seus Blue Caps|Menina Linda|1965|jovem-guarda|3|4|romantico,alegre|amor,paixao|40|||
+Ronnie Von|Meu Bem|1967|jovem-guarda|2|3|romantico,sonhador|amor|35|||
+Ronnie Von|A Misteriosa Luzinha|1967|jovem-guarda|3|3|misterioso,sonhador|amor|25|||
+Eduardo Araújo|O Bom|1966|jovem-guarda|4|4|animado,alegre,confiante|curticao|30|||
+Jerry Adriani|Doce, Doce Amor|1966|jovem-guarda|3|4|romantico,alegre|amor|35|||
+Martinha|O Garoto do Meu Pai|1966|jovem-guarda|3|4|alegre,romantico|amor,paixao|25|||
+Os Mutantes|A Minha Menina|1968|tropicalia/rock-psicodelico|4|5|alegre,animado,sonhador|amor,paixao|70|C|||
+Os Mutantes|Ando Meio Desligado|1970|rock-psicodelico|3|3|sonhador,estranho,contemplativo|liberdade|55|||
+Os Mutantes|Balada do Louco|1972|rock-nacional|3|3|estranho,melancolico,sonhador|liberdade|55|||
+Os Mutantes|Baby|1968|tropicalia|2|4|romantico,sonhador|amor|50|||
+Rita Lee|Erva Venenosa|1975|rock-nacional|4|4|confiante,sensual,animado|paixao|58|||
+Rita Lee|Flagra|1982|pop-rock-nacional|4|5|animado,alegre,festivo|curticao|50|||
+Rita Lee|Baila Comigo|1981|pop-rock-nacional|4|5|animado,alegre,festivo|danca|68|C|balada||
+Rita Lee|Desculpe o Auê|1979|rock-nacional|3|4|alegre,confiante,romantico|amor,liberdade|55|||
+Rita Lee|Bwana|1980|pop-rock-nacional|4|5|animado,festivo|curticao|40|||
+Rita Lee|Cor de Rosa Choque|1982|pop-rock-nacional|4|5|animado,alegre,sensual|pegacao,curticao|72|C|||
+Rita Lee|Banho de Espuma|1985|pop-rock-nacional|3|4|alegre,sensual,engracado|pegacao|65|||
+Rita Lee|Amor e Sexo|2003|pop-rock-nacional|3|4|sensual,alegre,contemplativo|amor,paixao|68|C|||
+Raul Seixas|Ouro de Tolo|1973|rock-nacional|3|3|contemplativo,estranho,confiante|critica-social,liberdade|75|C|||
+Raul Seixas|Sociedade Alternativa|1974|rock-nacional|3|4|estranho,alegre,esperancoso|liberdade|50|||
+Raul Seixas|Al Capone|1973|rock-nacional|4|4|animado,engracado,confiante|zoeira,critica-social|45|||
+Raul Seixas|Medo da Chuva|1974|rock-nacional|3|3|melancolico,romantico|amor,solidao|55|||
+Raul Seixas|Eu Nasci Há 10 Mil Anos Atrás|1976|rock-nacional|3|4|epico,estranho,contemplativo|liberdade|58|C|||
+Raul Seixas|Tente Outra Vez|1975|rock-nacional|3|4|esperancoso,romantico|superacao,amor|66|C|||
+Raul Seixas|Mosca na Sopa|1973|rock-nacional|3|4|estranho,engracado,animado|zoeira,liberdade|55|||
+Raul Seixas|O Dia em Que a Terra Parou|1977|rock-nacional|3|3|misterioso,estranho,contemplativo|critica-social|70|C|||
+Raul Seixas|Rock das Aranhas|1974|rock-nacional|4|4|animado,estranho,engracado|zoeira,liberdade|42|||
+Raul Seixas|Cowboy Fora da Lei|1987|rock-nacional|3|4|confiante,alegre|liberdade|58|||
+Raul Seixas|Por Quem os Sinos Dobram|1979|rock-nacional|3|3|dramatico,contemplativo|perda,liberdade|30|||
+Raul Seixas|Podes Crer, Amizade|1976|rock-nacional|3|4|alegre,esperancoso|amizade|30|||
+Raul Seixas|A Maçã|1975|rock-nacional|2|3|romantico,sonhador,contemplativo|amor|48|||
+Secos & Molhados|Sangue Latino|1973|rock-nacional|3|3|dramatico,epico,sonhador|liberdade|62|||
+Secos & Molhados|O Vira|1973|rock-nacional|4|4|animado,estranho,festivo|danca|60|C|||
+Secos & Molhados|Rosa de Hiroshima|1973|rock-nacional|2|2|melancolico,triste|perda,critica-social|58|||
+Secos & Molhados|Fala|1973|rock-nacional|3|3|estranho,dramatico|liberdade|40|||
+Novos Baianos|Preta Pretinha|1972|rock-nacional|3|4|alegre,aconchegante,sonhador|amor|52|||
+Novos Baianos|Besta é Tu|1972|rock-nacional|4|4|alegre,animado|curticao,liberdade|40|||
+Novos Baianos|Mistério do Planeta|1972|rock-nacional|4|4|animado,alegre,misterioso|liberdade|55|||
+O Terço|Hey Amigo|1970|rock-progressivo|3|3|nostalgico,contemplativo|amizade|20|||
+Casa das Máquinas|Casa de Rock|1974|hard-rock|4|4|animado,empolgante|liberdade|18|||
+Made in Brazil|Jack, o Estripador|1975|hard-rock|4|3|sombrio,empolgante|curticao|18|||
+Joelho de Porco|Mortadela Blues|1974|rock-nacional|3|3|engracado,estranho|zoeira|15|||
+Ave Sangria|Seu Waldir|1974|rock-psicodelico|4|3|estranho,sombrio|critica-social|15|||
+Sá, Rodrix & Guarabyra|Sobradinho|1977|rock-nacional|3|2|melancolico,contemplativo,saudade|critica-social,vida-no-campo|40|||
+Sá & Guarabyra|Espanhola|1974|rock-nacional|3|4|alegre,aconchegante|amor|35|||
+Terço|Casa no Campo|1973|rock-progressivo|2|4|aconchegante,esperancoso,calmo|vida-no-campo|35|||
+Zé Ramalho|Chão de Giz|1978|mpb|2|2|melancolico,dramatico,sombrio|amor,solidao|65|||
+Zé Ramalho|Admirável Gado Novo|1979|rock-nacional|3|3|dramatico,contemplativo,tenso|critica-social,vida-no-campo|60|||
+Zé Ramalho|Avohai|1978|rock-nacional|2|2|saudade,melancolico,triste|familia,perda|55|||
+Zé Ramalho|Vila do Sossego|1980|rock-nacional|3|3|contemplativo,melancolico|vida-no-campo,liberdade|35|||
+Zé Ramalho|Frevo Mulher|1979|rock-nacional|4|4|animado,festivo|danca,amor|35|||
+Zé Ramalho|Entre a Serpente e a Estrela|1979|rock-nacional|3|3|misterioso,dramatico|fe|35|||
+Zé Ramalho|Garoto de Aluguel|1980|rock-nacional|3|3|sensual,melancolico|solidao,pegacao|35|||
+Moraes Moreira|Pombo Correio|1976|rock-nacional|3|4|alegre,aconchegante|amor|25|||
+Raimundo Fagner|Borbulhas de Amor|1979|mpb-romantica|2|3|romantico,calmo|amor|55|||
+Lobão|Me Chama|1984|rock-brasil-80|4|4|animado,romantico,alegre|paixao|68|C|||
+Lobão|Vida Louca Vida|1984|rock-brasil-80|4|4|confiante,animado|liberdade|55|C|||
+Lobão|Decadence Avec Elegance|1995|rock-brasil-80|3|3|confiante,sombrio,dramatico|critica-social|45|||
+Lobão|Corações Psicodélicos|1982|rock-brasil-80|3|3|sonhador,estranho|liberdade|25|||
+Ritchie|Menina Veneno|1983|rock-brasil-80|4|5|alegre,animado,sensual|paixao|72|C|karaoke||
+Ritchie|Voo de Coração|1983|rock-brasil-80|3|4|romantico,esperancoso,sonhador|amor|50|||
+Kid Abelha|Pintura Íntima|1984|rock-brasil-80|4|4|sensual,romantico,animado|paixao|55|||
+Kid Abelha|Educação Sentimental|1985|rock-brasil-80|3|4|romantico,alegre|amor|45|||
+Kid Abelha|Fixação|1985|rock-brasil-80|3|3|romantico,sensual|paixao|35|||
+Kid Abelha|Nada Sei|1985|rock-brasil-80|3|3|melancolico,romantico|amor|30|||
+Kid Abelha|Lágrimas e Chuva|1984|rock-brasil-80|2|2|melancolico,triste,romantico|termino|50|||
+Kid Abelha|Grand Hotel|1987|rock-brasil-80|3|3|romantico,nostalgico|amor|45|||
+Kid Abelha|Eu Tive Um Sonho|1985|rock-brasil-80|3|4|sonhador,alegre|amor|20|||
+Blitz|Weekend|1982|rock-brasil-80|4|5|alegre,animado,engracado|curticao,zoeira|50|||
+Blitz|Mais Uma de Amor (Geme Geme)|1983|rock-brasil-80|4|5|alegre,sensual,engracado|pegacao,zoeira|50|||
+Blitz|A Dois Passos do Paraíso|1982|rock-brasil-80|3|4|alegre,romantico|amor|35|||
+Barão Vermelho|Bete Balanço|1984|rock-brasil-80|4|4|animado,alegre,nostalgico|paixao,curticao|65|C|||
+Barão Vermelho|Maior Abandonado|1984|rock-brasil-80|3|2|melancolico,triste,sofrido|solidao,dor-de-cotovelo|68|C|fossa||
+Barão Vermelho|Down em Mim|1984|rock-brasil-80|3|2|melancolico,sofrido|solidao|45|||
+Barão Vermelho|Por Que a Gente É Assim?|1988|rock-brasil-80|3|3|melancolico,contemplativo|solidao|55|||
+Barão Vermelho|Posso Perder Minha Mulher, Minha Mãe, Desde Que Eu Tenha O Rock And Roll|1986|rock-brasil-80|4|4|animado,confiante|liberdade|35|||
+Barão Vermelho|Todo Amor Que Houver Nessa Vida|1988|rock-brasil-80|3|3|romantico,nostalgico|amor|50|||
+Barão Vermelho|Flores do Mal|1989|rock-brasil-80|3|3|dramatico,sombrio|amor,perda|30|||
+Cazuza|Ideologia|1988|rock-brasil-80|3|3|dramatico,contemplativo|critica-social|60|||
+Cazuza|Brasil|1988|rock-brasil-80|3|2|dramatico,tenso,sombrio|critica-social|68|C|||
+Cazuza|Faz Parte do Meu Show|1988|rock-brasil-80|3|3|sensual,confiante|paixao|52|||
+Cazuza|Largado às Traças|1985|rock-brasil-80|3|2|sofrido,melancolico|solidao|40|||
+Cazuza|Só Se For a Dois|1987|rock-brasil-80|2|3|romantico,sensual|amor|40|||
+Cazuza|Blues da Piedade|1988|rock-brasil-80|2|2|melancolico,sofrido,dramatico|critica-social,dor-de-cotovelo|50|||
+Cazuza|Preciso Dizer Que Te Amo|1987|rock-brasil-80|3|3|romantico,saudade|amor|58|||
+Legião Urbana|Será|1985|rock-brasil-80|3|2|melancolico,dramatico,contemplativo|infancia,solidao|70|||
+Legião Urbana|Geração Coca-Cola|1985|rock-brasil-80|4|3|agressivo,tenso,confiante|critica-social|75|C|||
+Legião Urbana|Ainda É Cedo|1985|rock-brasil-80|3|3|esperancoso,romantico|amor,infancia|60|||
+Legião Urbana|Índios|1986|rock-brasil-80|3|2|dramatico,contemplativo,melancolico|critica-social|60|||
+Legião Urbana|Quase Sem Querer|1986|rock-brasil-80|3|3|melancolico,romantico,contemplativo|amor|68|C|||
+Legião Urbana|Há Tempos|1989|rock-brasil-80|2|3|esperancoso,contemplativo,nostalgico|amor|68|C|||
+Legião Urbana|Vento no Litoral|1989|rock-brasil-80|3|3|nostalgico,contemplativo,saudade|amor,perda|68|||
+Legião Urbana|Meninos e Meninas|1989|rock-brasil-80|3|3|romantico,nostalgico|amor,infancia|50|||
+Legião Urbana|Monte Castelo|1989|rock-brasil-80|2|3|esperancoso,sagrado,romantico|amor,fe|68|C|casamento||
+Legião Urbana|Perfeição|1993|rock-brasil-80|4|3|tenso,agressivo,dramatico|critica-social|65|C|||
+Legião Urbana|Andrea Doria|1986|rock-brasil-80|3|3|melancolico,dramatico|solidao|55|||
+Legião Urbana|Teatro dos Vampiros|1991|rock-brasil-80|3|3|sombrio,dramatico,misterioso|solidao|58|||
+Legião Urbana|Fábrica|1986|rock-brasil-80|4|2|tenso,sombrio,agressivo|critica-social|45|||
+Legião Urbana|Eu Sei|1986|rock-brasil-80|3|3|romantico,melancolico|amor|45|||
+Legião Urbana|Giz|1991|rock-brasil-80|3|3|melancolico,contemplativo|amor|42|||
+Legião Urbana|O Reggae|1987|rock-brasil-80|3|3|contemplativo,melancolico|critica-social|30|||
+Legião Urbana|Sete Cidades|1987|rock-brasil-80|3|3|contemplativo,melancolico|solidao|35|||
+Legião Urbana|Dezesseis|1986|rock-brasil-80|3|3|nostalgico,melancolico|infancia,perda|45|||
+Legião Urbana|Química|1986|rock-brasil-80|4|3|agressivo,tenso|critica-social|30|||
+Titãs|Bichos Escrotos|1986|rock-brasil-80|5|3|agressivo,confiante,engracado|critica-social|60|XC|||
+Titãs|Comida|1987|rock-brasil-80|4|4|animado,confiante,engracado|critica-social,curticao|75|C|||
+Titãs|Flores|1989|rock-brasil-80|3|3|melancolico,contemplativo,estranho|critica-social|55|||
+Titãs|Go Back|1987|rock-brasil-80|4|3|animado,confiante|critica-social|40|||
+Titãs|Cabeça Dinossauro|1986|rock-brasil-80|5|3|agressivo,tenso|critica-social|45|||
+Titãs|Diversão|1987|rock-brasil-80|4|4|animado,festivo,alegre|curticao|50|||
+Titãs|Marvin|1984|rock-brasil-80|3|3|melancolico,estranho|solidao|40|||
+Titãs|Televisão|1985|rock-brasil-80|4|3|confiante,animado|critica-social|60|C|||
+Titãs|Família|1986|rock-brasil-80|3|3|melancolico,contemplativo|familia,critica-social|55|||
+Titãs|Nome aos Bois|1987|rock-brasil-80|4|3|agressivo,tenso|critica-social|40|||
+Titãs|Miséria|1989|rock-brasil-80|3|2|tenso,sombrio|critica-social|35|||
+Titãs|É Preciso Saber Viver|1998|rock-brasil-80|2|4|esperancoso,contemplativo,aconchegante|amizade,superacao|75|C|||
+Titãs|Lugar Nenhum|1987|rock-brasil-80|3|3|contemplativo,estranho|solidao,liberdade|50|||
+Titãs|Homem Primata|1986|rock-brasil-80|4|3|agressivo,confiante|critica-social|45|||
+Titãs|Desordem|1987|rock-brasil-80|5|3|agressivo,tenso|critica-social|50|||
+Titãs|Insensível|1989|rock-brasil-80|3|2|melancolico,sofrido|termino|30|||
+Os Paralamas do Sucesso|Óculos|1984|rock-brasil-80|4|4|alegre,animado,nostalgico|paixao,amor|58|||
+Os Paralamas do Sucesso|Vital e Sua Moto|1983|rock-brasil-80|4|5|alegre,animado,engracado|zoeira,curticao|60|||
+Os Paralamas do Sucesso|Alagados|1986|rock-brasil-80|3|3|dramatico,tenso,contemplativo|critica-social,quebrada|72|C|||
+Os Paralamas do Sucesso|Melô do Marinheiro|1984|rock-brasil-80|4|5|alegre,animado,engracado|zoeira,curticao|55|||
+Os Paralamas do Sucesso|Selvagem|1986|rock-brasil-80|4|3|tenso,agressivo|critica-social|60|||
+Os Paralamas do Sucesso|Lourinha Bombril|1983|rock-brasil-80|4|5|alegre,animado,engracado|zoeira,pegacao|60|C|||
+Os Paralamas do Sucesso|Uma Brasileira|1998|rock-brasil-80|3|4|romantico,alegre,sensual|amor,paixao|68|C|||
+Os Paralamas do Sucesso|Luis Inácio (300 Picaretas)|1995|rock-brasil-80|4|4|engracado,animado|critica-social,zoeira|60|C|||
+Os Paralamas do Sucesso|Trac Trac|1995|rock-brasil-80|4|4|animado,alegre,romantico|amor|50|||
+Os Paralamas do Sucesso|Aonde Quer Que Eu Vá|1986|rock-brasil-80|3|4|romantico,saudade|amor|50|||
+Os Paralamas do Sucesso|Sul América|1992|rock-brasil-80|4|3|contemplativo,tenso|critica-social|20|||
+Os Paralamas do Sucesso|Busca Vida|1987|rock-brasil-80|4|4|animado,esperancoso|liberdade|35|||
+Os Paralamas do Sucesso|Cuide Bem do Seu Amor|1991|rock-brasil-80|3|3|romantico,contemplativo|amor|35|||
+Os Paralamas do Sucesso|Caleidoscópio|1989|rock-brasil-80|3|3|romantico,sonhador|amor|40|||
+Os Paralamas do Sucesso|Perplexo|1989|rock-brasil-80|4|3|tenso,confiante|critica-social|20|||
+Os Paralamas do Sucesso|Dos Margaritas|1986|rock-brasil-80|3|4|alegre,romantico|amor|15|||
+Os Paralamas do Sucesso|Romance Ideal|1988|rock-brasil-80|3|3|romantico|amor|30|||
+Ultraje a Rigor|Nós Vamos Invadir Sua Praia|1985|rock-brasil-80|5|4|animado,engracado,confiante|zoeira,curticao|68|C|||
+Ultraje a Rigor|Rebelde Sem Causa|1985|rock-brasil-80|4|4|engracado,confiante|zoeira|52|||
+Ultraje a Rigor|Sexo|1985|rock-brasil-80|4|4|engracado,sensual,animado|pegacao,zoeira|45|X||
+Ultraje a Rigor|Ciúme|1985|rock-brasil-80|4|3|engracado,tenso|dor-de-cotovelo|50|||
+Ultraje a Rigor|Pelado|1985|rock-brasil-80|4|4|engracado,animado|zoeira|40|||
+Ultraje a Rigor|Mim Quer Tocar|1985|rock-brasil-80|4|4|engracado,animado|zoeira|45|||
+Ultraje a Rigor|Marylou|1985|rock-brasil-80|4|4|engracado,animado|zoeira|38|||
+Ultraje a Rigor|Zós de Mi|1985|rock-brasil-80|4|4|engracado|zoeira|20|||
+Ira!|Flores em Você|1986|rock-brasil-80|4|3|melancolico,tenso,dramatico|solidao|60|||
+Ira!|Núcleo Base|1985|rock-brasil-80|4|3|agressivo,confiante|critica-social|40|||
+Ira!|Gritos na Multidão|1985|rock-brasil-80|4|3|tenso,agressivo|critica-social|32|||
+Ira!|Dias de Luta|1986|rock-brasil-80|4|4|esperancoso,confiante|superacao|35|||
+Ira!|Tolices|1986|rock-brasil-80|3|3|melancolico,nostalgico|amor|30|||
+Ira!|Pobre Paulista|1986|rock-brasil-80|4|3|confiante,tenso|critica-social|30|||
+Ira!|Girando na Garagem|1986|rock-brasil-80|4|3|tenso,agressivo|critica-social|20|||
+Capital Inicial|Fátima|1987|rock-brasil-80|4|4|alegre,animado|amor,zoeira|60|C|||
+Capital Inicial|Veraneio Vascaína|1986|rock-brasil-80|5|3|agressivo,tenso|critica-social|52|||
+Capital Inicial|Música Urbana|1986|rock-brasil-80|4|3|tenso,contemplativo|critica-social|40|||
+Capital Inicial|À Sombra de Uma Árvore|1989|rock-brasil-80|3|3|melancolico,contemplativo|solidao|20|||
+Capital Inicial|Natasha|1987|rock-brasil-80|3|3|romantico|amor|30|||
+Capital Inicial|Olhos Abertos|1999|pop-rock-nacional|3|3|contemplativo|solidao|20|||
+Capital Inicial|O Mundo|1996|pop-rock-nacional|3|3|contemplativo|solidao|20|||
+Capital Inicial|Não Olhe pra Trás|1997|pop-rock-nacional|3|3|esperancoso|superacao|20|||
+Capital Inicial|Tudo Que Vai|2002|pop-rock-nacional|3|3|melancolico,nostalgico|termino|40|||
+Capital Inicial|Tempo|2002|pop-rock-nacional|3|3|nostalgico|amor|20|||
+Capital Inicial|Aviões|2002|pop-rock-nacional|3|3|saudade|amor|20|||
+Capital Inicial|Quatro Vezes Você|2004|pop-rock-nacional|3|3|romantico|amor|35|||

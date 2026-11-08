@@ -155,6 +155,62 @@ def conferir_lista(linhas: list[dict], generos: set[str], tags: dict[str, str]) 
     return erros
 
 
+# Meta de cada bloco e o tema (docs/etapas/banco-fredify-etapa3.md).
+METAS = {
+    "bloco-01": (562, "essenciais de tudo (converter o formato antigo, manter as músicas)"),
+    "bloco-02": (400, "MPB, bossa, tropicália, nova MPB, choro, soul BR"),
+    "bloco-03": (400, "samba e pagode"),
+    "bloco-04": (450, "sertanejo (caipira → agronejo, muito 2020–2025)"),
+    "bloco-05": (450, "forró, piseiro, axé, brega, arrocha, regionais, marchinhas, São João"),
+    "bloco-06": (450, "rock nacional, metal BR, reggae nacional, pop e teen BR"),
+    "bloco-07": (500, "funk e rap/trap BR (300), gospel (130), infantil BR (70)"),
+    "bloco-08": (500, "pop internacional, latina, k-pop, anime"),
+    "bloco-09": (450, "rock internacional"),
+    "bloco-10": (450, "soul, disco, R&B, jazz, reggae, hip hop internacional"),
+    "bloco-11": (400, "eletrônica, baladas, trilhas, clássica, mundo, Natal"),
+}
+
+
+def _status() -> int:
+    """python -m freddy.catalogo.bloco status: o que falta em cada bloco (pra dividir entre agentes)."""
+    import csv
+    from datetime import datetime
+    from pathlib import Path
+
+    from freddy.catalogo.compilar import PASTA_CATALOGO, carregar
+
+    d = carregar(PASTA_CATALOGO)
+    generos = {g["id"] for g in d["generos"]}
+    tags = {t["id"]: t["gaveta"] for t in d["tags"]}
+    pasta = PASTA_CATALOGO / "blocos"
+    total, pronto = 0, 0
+    print(f"{'bloco':9} {'tem':>4} {'meta':>4} {'erros':>5}  situação")
+    for bloco, (meta, tema) in METAS.items():
+        arq = pasta / f"{bloco}.csv"
+        vez = pasta / "vez" / f"{bloco}.txt"
+        linhas, erros, situacao = [], 0, ""
+        if arq.exists():
+            with open(arq, encoding="utf-8") as f:
+                linhas = list(csv.DictReader(f, delimiter=";"))
+            if linhas and set(linhas[0]) != set(COLUNAS):
+                situacao = "FORMATO ANTIGO (converter)"
+            else:
+                erros = len(conferir_lista(linhas, generos, tags))
+        if not situacao:
+            if len(linhas) >= meta and not erros:
+                situacao, pronto = "PRONTO", pronto + 1
+            else:
+                situacao = f"falta {max(0, meta - len(linhas))}" + (" e corrigir erros" if erros else "")
+        if vez.exists():
+            idade = (datetime.now().timestamp() - vez.stat().st_mtime) / 3600
+            situacao += f"  [vez: {vez.read_text(encoding='utf-8').strip()[:40]}, há {idade:.0f} h]"
+        total += len(linhas) if not situacao.startswith("FORMATO") else 0
+        print(f"{bloco:9} {len(linhas):>4} {meta:>4} {erros:>5}  {situacao}  — {tema}")
+    print(f"\n{pronto}/{len(METAS)} blocos prontos; {total} músicas no formato novo "
+          f"(meta {sum(m for m, _ in METAS.values())}).")
+    return 0
+
+
 def _main() -> int:
     """python -m freddy.catalogo.bloco conferir <lista.csv> [outras listas.csv ...]"""
     import csv
@@ -190,4 +246,7 @@ if __name__ == "__main__":
 
     if len(sys.argv) >= 3 and sys.argv[1] == "conferir":
         sys.exit(_main())
+    if len(sys.argv) == 2 and sys.argv[1] == "status":
+        sys.exit(_status())
     print(_main.__doc__)
+    print(_status.__doc__)

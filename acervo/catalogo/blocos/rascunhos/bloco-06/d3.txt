@@ -1,0 +1,196 @@
+Charlie Brown Jr.|Zóio de Lula|2001|pop-rock-nacional|4|4|alegre,animado,confiante|liberdade,curticao|72|C|||
+Charlie Brown Jr.|Lugar ao Sol|2000|pop-rock-nacional|4|4|esperancoso,animado|superacao|78|C|||
+Charlie Brown Jr.|Não É Sério|2000|pop-rock-nacional|4|4|animado,alegre|curticao,amizade|74|C|||
+Charlie Brown Jr.|Dias de Luta, Dias de Glória|2002|pop-rock-nacional|4|3|esperancoso,confiante|superacao|68|C|||
+Charlie Brown Jr.|Céu Azul|2002|pop-rock-nacional|3|4|alegre,esperancoso,calmo|liberdade|74|C|praia||
+Charlie Brown Jr.|Rubão, o Dono do Mundo|1997|pop-rock-nacional|4|3|confiante,tenso|critica-social|58|||
+Charlie Brown Jr.|Papo Reto|2000|pop-rock-nacional|4|3|confiante|amizade|52|||
+Charlie Brown Jr.|Samba Makossa|2003|pop-rock-nacional|4|4|animado,alegre|danca|58|||
+Charlie Brown Jr.|Tudo Que Ela Gosta de Escutar|2005|pop-rock-nacional|3|4|romantico,alegre|amor|45|||
+Charlie Brown Jr.|Confisco|1997|pop-rock-nacional|4|3|tenso|critica-social|45|||
+Charlie Brown Jr.|Hoje Eu Acordei Feliz|1997|pop-rock-nacional|3|4|alegre|liberdade|42|||
+Charlie Brown Jr.|Quando a Maré Encher|2000|pop-rock-nacional|3|3|esperancoso|superacao|35|||
+Charlie Brown Jr.|Te Levar Daqui|1998|pop-rock-nacional|3|4|romantico,alegre|amor|42|||
+Charlie Brown Jr.|Pra Ser Feliz|2000|pop-rock-nacional|3|4|alegre|amor|20|||
+Charlie Brown Jr.|Meu Novo Mundo|2002|pop-rock-nacional|4|4|esperancoso|superacao|30|||
+Charlie Brown Jr.|Proibida pra Mim (Grazon)|1997|pop-rock-nacional|4|4|animado,confiante|paixao|1|||
+Charlie Brown Jr.|Uma Chance|2004|pop-rock-nacional|3|3|esperancoso|amor|20|||
+Raimundos|I Saw You Saying (That You Say That You Saw)|1994|punk|4|4|engracado,animado|zoeira|45|||
+Raimundos|Esporrei na Manivela|1994|punk|5|4|engracado,agressivo|zoeira,pegacao|55|XC|||
+Raimundos|Selim|1994|punk|5|4|engracado,agressivo|zoeira|55|X||
+Raimundos|Me Lambe|1996|punk|5|4|engracado,agressivo|pegacao|55|X||
+Raimundos|Bonitinha|1998|rock-nacional|4|4|animado,alegre|paixao|40|||
+Raimundos|Reggae do Manero|1996|rock-nacional|3|4|alegre,engracado|curticao|42|||
+Raimundos|Pitt de Pecado|1996|punk|5|3|agressivo|zoeira|20|||
+Raimundos|A Mais Pedida|1999|rock-nacional|4|4|animado|curticao|40|||
+Raimundos|Eu Quero Ver o Oco|1999|rock-nacional|4|4|animado,engracado|zoeira|30|||
+O Rappa|Minha Alma (A Paz Que Eu Não Quero)|1999|rock-nacional|4|2|tenso,dramatico,sombrio|critica-social,quebrada|80|C|||
+O Rappa|Pescador de Ilusões|1999|rock-nacional|3|3|contemplativo,melancolico|amor|75|C|||
+O Rappa|Todo Camburão Tem um Pouco de Navio Negreiro|1996|rock-nacional|4|2|tenso,sombrio|critica-social|60|||
+O Rappa|Rodando Pela Tarde|2003|rock-nacional|3|3|contemplativo|solidao|35|||
+O Rappa|Me Deixa|2003|rock-nacional|3|3|romantico,sensual|amor|40|||
+O Rappa|Lado B Lado A|1999|rock-nacional|4|3|tenso|quebrada|50|||
+O Rappa|Hoje Eu Vou Tomar Um Sorvete|1994|rock-nacional|4|4|alegre,animado|curticao|10|||
+O Rappa|Reza Vela|1996|rock-nacional|3|2|dramatico,melancolico|perda|35|||
+O Rappa|A Feira|1999|rock-nacional|4|3|tenso|quebrada|40|||
+O Rappa|O Que Sobrou do Céu|2000|rock-nacional|4|3|tenso,empolgante|critica-social|60|||
+O Rappa|Anjos (Pra Quem Tem Fé)|1999|rock-nacional|3|3|esperancoso,sagrado|fe|55|||
+O Rappa|Súplica Cearense|1996|rock-nacional|3|2|melancolico|fe|10|||
+Nando Reis|All Star|2000|pop-rock-nacional|3|4|esperancoso,alegre,romantico|amor,superacao|82|C|||
+Nando Reis|Espatódea|2000|pop-rock-nacional|3|3|romantico|amor|55|||
+Nando Reis|Relicário|2000|pop-rock-nacional|2|3|romantico,saudade|amor|58|||
+Nando Reis|Por Onde Andei|2000|pop-rock-nacional|3|3|saudade,melancolico,romantico|amor|68|C|||
+Nando Reis|Luz dos Olhos|2001|pop-rock-nacional|3|4|romantico|amor|55|||
+Nando Reis|Dias de Luta|2001|pop-rock-nacional|3|3|esperancoso|superacao|10|||
+Nando Reis|Só Posso Dizer|2001|pop-rock-nacional|3|3|romantico|amor|45|||
+Nando Reis|Driblando a Gravidade|2001|pop-rock-nacional|3|3|esperancoso|amor|10|||
+Nando Reis|Pra Você Guardei o Amor|2011|pop-rock-nacional|2|3|romantico,aconchegante|amor|80|C|casamento||
+Nando Reis|Infernal|2001|pop-rock-nacional|3|3|romantico,sensual|paixao|10|||
+Nando Reis|O Segundo Sol|2000|pop-rock-nacional|3|4|esperancoso,romantico|amor|1|||
+Nando Reis|Marvin|1999|pop-rock-nacional|3|3|melancolico|solidao|1|||
+Nando Reis|Não Vou Me Adaptar|2001|pop-rock-nacional|4|3|confiante|liberdade|1|||
+Nando Reis|Esta Manhã|2002|pop-rock-nacional|3|4|alegre|amor|10|||
+Nando Reis|Do Seu Lado|2002|pop-rock-nacional|3|4|romantico|amor|1|||
+Nando Reis|Sou Ladrão|2000|pop-rock-nacional|3|3|romantico|amor|10|||
+Nando Reis|Ei, Vê Se Me Esquece|2000|pop-rock-nacional|3|3|melancolico|termino|10|||
+Nando Reis|Prisioneiro|2000|pop-rock-nacional|3|3|melancolico|amor|10|||
+Nando Reis|Pré-Natal|2002|pop-rock-nacional|3|3|romantico|amor|5|||
+Nando Reis|Balada do Dia Seguinte|1999|pop-rock-nacional|3|3|melancolico|termino|5|||
+Los Hermanos|Anna Júlia|1999|indie-rock/pop-rock-nacional|4|4|alegre,animado,confiante|paixao,curticao|78|C|||
+Los Hermanos|Primavera|2001|indie-rock|3|3|melancolico,contemplativo|amor|60|||
+Los Hermanos|Todo Carnaval Tem Seu Fim|2001|indie-rock|3|2|melancolico,nostalgico|termino,saudade|68|C|carnaval||
+Los Hermanos|O Vencedor|2001|indie-rock|3|4|alegre,esperancoso|amor|60|C|||
+Los Hermanos|Sentimental|1999|indie-rock|3|3|romantico,melancolico|amor|50|||
+Los Hermanos|Pierrot|2001|indie-rock|3|2|melancolico,saudade|termino|45|||
+Los Hermanos|A Flor|2003|indie-rock|2|2|melancolico,calmo,nostalgico|amor|60|||
+Los Hermanos|Cara Estranho|2003|indie-rock|3|3|melancolico|solidao|35|||
+Los Hermanos|Casa Pré-Fabricada|2003|indie-rock|3|2|melancolico,contemplativo|solidao|45|||
+Los Hermanos|Último Romance|2001|indie-rock|3|3|romantico,nostalgico|amor|68|C|||
+Los Hermanos|Condicional|2001|indie-rock|3|3|melancolico|amor|45|||
+Los Hermanos|Tenho Medo|2003|indie-rock|3|3|melancolico|solidao|40|||
+Los Hermanos|Morena|2003|indie-rock|3|4|romantico,alegre|amor|40|||
+Los Hermanos|Deixa Estar|1999|indie-rock|3|3|calmo,contemplativo|amor|25|||
+Los Hermanos|Quando Vem a Noite|2003|indie-rock|3|3|melancolico|solidao|30|||
+Los Hermanos|Samba a Dois|2003|indie-rock|3|3|melancolico,romantico|amor|40|||
+Marcelo Camelo|Janeiro, Janeiro|2008|indie-rock|2|3|romantico,calmo,aconchegante|amor|52|||
+Marcelo Camelo|Sou|2008|indie-rock|2|3|romantico,calmo|amor|50|||
+Marcelo Camelo|Mais Tarde|2008|indie-rock|2|3|contemplativo|amor|25|||
+Marcelo Camelo|Menina Bordada|2009|indie-rock|2|3|romantico|amor|25|||
+Mallu Magalhães|J1|2008|indie-pop|3|4|alegre,aconchegante|amor|65|C|||
+Mallu Magalhães|Tchubaruba|2008|indie-pop|3|4|alegre,aconchegante|amor|55|||
+Mallu Magalhães|Cena|2011|indie-pop|3|4|alegre,calmo|amor|40|||
+Mallu Magalhães|Velha e Louca|2011|indie-pop|3|4|alegre|liberdade|35|||
+Mallu Magalhães|Sunflower|2011|indie-pop|3|4|alegre|amor|30|||
+Silva|Feliz e Ponto|2012|indie-pop|3|4|alegre,esperancoso|amor|58|||
+Silva|Nada Mais Importante|2018|indie-pop|3|3|romantico,contemplativo|amor|40|||
+Silva|Fica Tudo Bem|2012|indie-pop|3|4|romantico,esperancoso|amor|45|||
+Silva|Brigas Perdoadas|2016|indie-pop|3|3|romantico|amor|35|||
+Silva|Vem|2018|indie-pop|3|4|alegre,sensual|amor|30|||
+Terno Rei|Dia Perfeito|2012|indie-rock|3|3|nostalgico,sonhador|amor|35|||
+Terno Rei|Dormir de Olho Aberto|2019|indie-rock|3|3|melancolico,sonhador|solidao|25|||
+Terno Rei|Só Quero Ver Você Dançar|2022|indie-rock|3|3|melancolico,romantico|amor|30|||
+Terno Rei|Culpa|2019|indie-rock|3|2|melancolico,sombrio|termino|20|||
+Terno Rei|Nenhum de Nós|2014|indie-rock|3|3|melancolico|amor|10|||
+Scalene|Surreal|2012|rock-alternativo|4|3|tenso,empolgante|liberdade|35|||
+Scalene|Mapa-Múndi|2015|rock-alternativo|4|3|tenso,empolgante|liberdade|35|||
+Scalene|Amanhã Será Outro Dia|2015|rock-alternativo|3|3|esperancoso|superacao|25|||
+Scalene|Vícios|2018|rock-alternativo|4|3|tenso|solidao|25|||
+Scalene|Magnetite|2012|rock-alternativo|4|3|tenso|solidao|10|||
+Boogarins|Lá Vem a Morte|2013|rock-psicodelico|3|3|sonhador,estranho|perda|35|||
+Boogarins|Doce|2013|rock-psicodelico|3|3|sonhador|amor|25|||
+Boogarins|Avalanche|2015|rock-psicodelico|3|3|sonhador|solidao|15|||
+Boogarins|Foi Mal|2013|rock-psicodelico|3|3|sonhador|amor|15|||
+Vanguart|Semáforo|2007|indie-rock|3|3|melancolico,calmo|amor|50|||
+Vanguart|Cem Anos|2007|indie-rock|3|3|melancolico,romantico|amor|35|||
+Vanguart|Mi Vida Eres Tú|2007|indie-rock|3|4|romantico|amor|25|||
+Vanguart|Enquanto Isso na Sala de Justiça|2009|indie-rock|3|4|alegre,engracado|zoeira|25|||
+Vanguart|Para Onde Vamos|2007|indie-rock|3|3|contemplativo|liberdade|10|||
+Cidadão Quem|Pra Que Mentir|2008|indie-rock|3|3|melancolico|termino|5|||
+Cássia Eller|Eu Sou Neguinha|1999|pop-rock-nacional|4|4|animado,alegre|danca|20|||
+Skank|Garota Nacional Ao Vivo|1996|pop-rock-nacional|4|4|alegre|paixao|1|||
+Tulipa Ruiz|Efêmera|2010|indie-pop/nova-mpb|3|4|alegre,aconchegante|amor|60|||
+Tulipa Ruiz|Só Sei Dançar com Você|2010|indie-pop/nova-mpb|3|4|alegre,romantico,animado|danca,amor|58|||
+Tulipa Ruiz|Like This|2012|indie-pop/nova-mpb|3|4|alegre|amor|30|||
+Tulipa Ruiz|Dum Dum|2012|indie-pop/nova-mpb|3|4|alegre|amor|25|||
+Tulipa Ruiz|Pedrinhas Brilhantes|2010|indie-pop/nova-mpb|3|4|alegre|amor|30|||
+Cícero|Canção de Amor|2010|indie-pop|2|3|romantico,calmo,aconchegante|amor|40|||
+Cícero|Tempo de Pipa|2010|indie-pop|2|3|romantico,nostalgico|infancia|30|||
+Apanhador Só|Maria Fumaça|2013|indie-rock|3|3|contemplativo|amor|10|||
+Selvagens à Procura de Lei|Guerra dos Mundos|2011|rock-nacional|4|3|tenso|critica-social|10|||
+Selvagens à Procura de Lei|Morto de Frio|2017|rock-nacional|4|4|animado|curticao|10|||
+Baleia|Pequeno Rapaz|2013|indie-pop|3|3|sonhador|amor|10|||
+Lenine & O Pessoal do Ceará|Hoje Eu Quero Voltar Sozinho|2014|indie-pop|2|3|calmo,romantico|amor|10|||
+Fresno|Quando Chegar a Minha Vez|2006|emo|4|2|melancolico,tenso,dramatico|solidao,termino|62|C|||
+Fresno|Eu Nunca Disse|2008|emo|3|2|melancolico,romantico|termino|55|||
+Fresno|Onde Está|2008|emo|3|3|melancolico|solidao|20|||
+Fresno|Anos Luz|2008|emo|4|3|dramatico,romantico|amor|55|C|||
+Fresno|Infinito|2008|emo|4|3|tenso|amor|20|||
+Fresno|Alguém Que Te Faz Sorrir|2006|emo|3|4|romantico,alegre|amor|55|||
+Fresno|Sozinho|2006|emo|3|2|melancolico|solidao|20|||
+Fresno|Desde Quando Você Se Foi|2007|emo|4|2|dramatico,melancolico|termino|40|||
+Fresno|Cada Acidente É um Acidente|2009|emo|4|3|tenso|amor|10|||
+Fresno|Redenção|2010|emo|4|3|dramatico|superacao|35|||
+Fresno|Teu Nome é Só Teu|2012|emo|3|3|romantico|amor|10|||
+NX Zero|Razões e Emoções|2005|emo|4|3|dramatico,melancolico|amor|70|C|||
+NX Zero|Cedo ou Tarde|2006|emo|4|3|dramatico,esperancoso|superacao|68|C|||
+NX Zero|Só Rezo|2008|emo|4|3|dramatico,sagrado|fe,perda|55|||
+NX Zero|Pela Sombra|2007|emo|4|3|melancolico|solidao|35|||
+NX Zero|Mais Alguém|2007|emo|4|3|dramatico|amor|40|||
+NX Zero|Daqui pra Frente|2009|emo|4|4|esperancoso|superacao|45|||
+NX Zero|Bom pra Você|2005|emo|4|3|dramatico|amor|40|||
+NX Zero|Espero a Minha Vez|2005|emo|4|3|tenso|superacao|25|||
+NX Zero|Sem Limite|2008|emo|4|4|esperancoso|liberdade|35|||
+NX Zero|Além de Mim|2008|emo|4|3|dramatico|amor|10|||
+NX Zero|Agora Entendi|2005|emo|4|3|melancolico|amor|10|||
+NX Zero|Kamikaze|2009|emo|4|3|tenso|liberdade|10|||
+NX Zero|Contratempo|2009|emo|4|3|dramatico|amor|10|||
+CPM 22|Regina Let's Go|2001|pop-punk|5|4|animado,alegre|amor,curticao|60|||
+CPM 22|Desconfio|2002|pop-punk|5|3|tenso,animado|critica-social|50|||
+CPM 22|Atitude|2002|pop-punk|5|4|animado,confiante|superacao|42|||
+CPM 22|Dias Atrás|2002|pop-punk|4|3|nostalgico,melancolico|amor|45|||
+CPM 22|O Mundo Está Podre|2002|pop-punk|5|3|tenso|critica-social|20|||
+CPM 22|Irreais Noites|2001|pop-punk|4|3|nostalgico|amor|10|||
+CPM 22|Cidade Cinza|2001|pop-punk|5|3|tenso|critica-social|20|||
+CPM 22|A Fórmula do Amor|2001|pop-punk|5|4|animado,romantico|amor|10|||
+CPM 22|Tarde Demais|2002|pop-punk|4|3|melancolico|termino|10|||
+CPM 22|Anti-Herói|2004|pop-punk|5|3|tenso|liberdade|10|||
+CPM 22|Qualquer Lugar|2004|pop-punk|4|3|nostalgico|amor|10|||
+CPM 22|Um Minuto Para o Fim do Mundo Ao Vivo|2002|pop-punk|5|3|tenso|amor|1|||
+Strike|Imaginar|2006|pop-punk|4|4|alegre,esperancoso|amor|35|||
+Strike|Sozinho|2006|pop-punk|4|3|melancolico|solidao|10|||
+Pelebrós|Dias Contados|2000|pop-punk|5|3|tenso|solidao|5|||
+Restart|Recomeçar|2009|pop-punk/teen-pop|4|4|alegre,esperancoso,animado|superacao|65|C|||
+Restart|Levo Comigo|2010|pop-punk/teen-pop|4|4|alegre,esperancoso|amizade|50|||
+Restart|Pela Última Vez|2010|pop-punk/teen-pop|4|3|dramatico|amor|45|||
+Restart|Hoje Eu Tô Sozinho|2009|pop-punk/teen-pop|4|3|melancolico|solidao|20|||
+Restart|Quanto Mais Eu Te Quero|2010|pop-punk/teen-pop|4|4|alegre,romantico|amor|10|||
+Restart|Aprendendo a Amar|2010|pop-punk/teen-pop|4|4|romantico|amor|10|||
+Hori|Sentidos|2010|pop-punk|3|3|melancolico|amor|5|||
+Replace|Poesia|2011|pop-punk|4|3|dramatico|amor|5|||
+Forfun|Alegria Compartilhada|2008|rock-nacional|3|4|alegre,esperancoso|amizade|45|||
+Forfun|Vicia o Meu Tempo|2008|rock-nacional|3|4|alegre|liberdade|10|||
+Forfun|Kandinsky|2011|rock-nacional|3|3|contemplativo|amor|5|||
+Detonautas Roque Clube|Olhos Certos|2002|pop-rock-nacional|4|3|tenso,confiante|critica-social|45|||
+Detonautas Roque Clube|Quando o Sol For Embora|2002|pop-rock-nacional|3|3|melancolico|solidao|1|||
+Detonautas Roque Clube|Outro Lugar|2005|pop-rock-nacional|3|3|esperancoso|liberdade|42|||
+Detonautas Roque Clube|Perdendo a Cabeça|2002|pop-rock-nacional|4|3|tenso|solidao|40|||
+Detonautas Roque Clube|Sozinho|2005|pop-rock-nacional|3|3|melancolico|solidao|10|||
+Detonautas Roque Clube|Eu Não Sei Fingir|2007|pop-rock-nacional|3|3|dramatico|termino|10|||
+Detonautas Roque Clube|Culpa|2006|pop-rock-nacional|3|3|melancolico|termino|10|||
+Detonautas Roque Clube|O Dia que Não Terminou|2002|pop-rock-nacional|3|3|melancolico|perda|10|||
+Barão Vermelho|Bilhetinho Azul|1986|rock-brasil-80|3|3|romantico|amor|5|||
+Rouge|Ragatanga|2002|teen-pop|5|5|alegre,animado,festivo|danca,curticao|70|C|balada||
+Rouge|Brilha la Luna|2003|teen-pop|4|5|alegre,animado,festivo|danca|58|||
+Rouge|Não Dá pra Resistir|2003|teen-pop|4|5|alegre,animado|paixao|40|||
+Rouge|Vem Dançar|2002|teen-pop|4|5|alegre,animado|danca|35|||
+Rouge|Beijo Mau|2003|teen-pop|4|4|animado,sensual|paixao|35|||
+Rouge|Ainda É Cedo|2003|teen-pop|3|3|romantico|amor|20|||
+Rouge|Não Dá pra Resistir (Hey Boy)|2003|teen-pop|4|5|alegre|paixao|10|||
+Rouge|Um Anjo Veio Me Falar|2002|teen-pop|2|3|romantico,calmo|amor|40|||
+Rouge|Fantasma|2004|teen-pop|4|4|alegre|zoeira|10|||
+Rouge|Chiclete Eletrônico|2003|teen-pop|4|5|alegre,animado|danca|5|||
+Rouge|Tá Bom|2003|teen-pop|4|4|alegre|amor|5|||
+Rouge|Verão|2004|teen-pop|4|5|alegre|praia|5|||
+Rouge|Pra Sempre|2004|teen-pop|3|3|romantico|amor|5|||
+Rouge|Rouge Fantasia|2002|teen-pop|4|5|alegre|danca|5|||
+Rouge|Eu Sou Rouge|2002|teen-pop|4|5|alegre|danca|5|||

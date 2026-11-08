@@ -1,0 +1,100 @@
+1|águas||pt|3|4|al ac co|alm aco|li|vi pi|80|E C
+2|chega||pt|2|3|ro sa no|jan aco|am sa|vi|75|E
+3|the g|jazz|en|2|4|ro ca sn|pra rel|am pa|vi vf|88|E C
+4|tarde||pt|2|3|ro no sa|pra|am|vi|58|
+5|como |rock-nacional|pt|3|2|dr co me|dor|cs fa|vi|75|E
+6|o bêb||pt|3|2|dr es me|dor|cs li|vi|78|E
+7|madal||pt|3|4|al an ro|car|am|pc|50|
+8|const||pt|3|2|dr te co|dor|cs|cd|75|E
+9|cálic|rock-nacional|pt|3|2|dr te sm|dor|cs li|vi|68|
+10|a ban||pt|3|4|al fe no|car|am|me|60|C
+11|apesa||pt|3|3|dr cf es|dor|cs li|vi|72|
+12|sozin||pt|2|2|me sa ro|fos|so|vi|70|C
+13|leãoz||pt|2|4|al ro ac|aco|am|vi|68|
+14|alegr|rock-nacional|pt|4|4|al an cf|est|li cs|gu|62|
+15|você |mpb-romantica|pt|2|3|ro ac ca|jan|am|pi|60|
+16|sampa||pt|2|3|co no me|dor|cs|vi|65|
+17|andar||pt|3|4|es al ac|mf|fe|vi|68|
+18|aquel|samba|pt|4|5|an fe al|car|am|pc|65|C
+19|esper||pt|3|4|al ro ac|saj|am|sa|72|C
+20|baby||pt|3|3|ro al sn|pra|am|gu|50|
+21|panis|rock-psicodelico|pt|3|3|st sn mi|dor|cs|gu|45|
+22|maria||pt|2|3|es co sa|aco|su|vf|78|E C
+23|trave||pt|2|3|co me es|pra|am sa|vi|55|
+24|canção||pt|2|3|no co ac|rel|az|vi|65|C
+25|ocean||pt|2|3|ro sn ca|jan rel|am|vi pi|88|E C
+26|flor |mpb-romantica|pt|2|3|ro sn ca|jan|am|vi|65|
+27|sina|mpb-romantica|pt|3|4|ro al an|bar|pa|vi|65|
+28|se...||pt|2|3|ro ca sa|jan|am|vi|60|
+29|eu te||pt|3|4|se ro an|bar|pa|pc|62|
+30|o que||pt|3|4|es al co|aco|su|vi|78|E C
+31|apena||pt|3|3|co no sa|est|pj li|vi|62|
+32|divin||pt|2|2|co me dr|dor|so|vi|42|
+33|metam||pt|3|4|es al cf|aco|li|vi|75|E C
+34|malu||pt|3|4|al an en|bar|li|vi|80|C
+35|gita|rock-psicodelico|pt|3|4|an al ma|est|li|gu|70|C
+36|gosta||pt|2|2|ro sa no|fos|am sa|me|75|
+37|prima||pt|3|4|al ro ac|pra|am|me|60|C
+38|azul |mpb|pt|3|4|al ro ac|pra|am|me|68|C
+39|do le||pt|3|4|al an cf|pra|am|me|55|
+40|não q||pt|3|4|ro al se|bar|am pa|me|75|C
+41|país |samba|pt|4|5|al fe an|pra car|li|pc|85|E C
+42|mas q|samba|pt|4|5|an fe al|bal|da|pc|82|E C
+43|taj m||pt|4|4|al an cf|pra|am|vi|55|
+44|w/bra||pt|4|5|an fe cf|car|cu|pc|55|
+45|ainda||pt|3|4|ro al ac|cas|am|vi|82|C
+46|amor |nova-mpb|pt|2|3|ro ca ac|jan|am|vi|58|
+47|já se||pt|3|4|al ro an|bar|am|vi|68|C
+48|velha||pt|2|3|no ro ac|aco|am in|vi|72|C
+49|quem |pop-nacional|pt|2|2|sa so ro|fos|dc|vi pi|58|
+50|detal||pt|2|2|sa no ro|fos|am|pi og|80|E C
+51|como |jovem-guarda|pt|2|3|ro ac no|cas|am|og|75|C
+52|emoçõ||pt|3|3|ro es no|ani|am|pi|72|C
+53|jesus||pt|3|3|sg es co|mf|fe|cd|55|
+54|é pro||pt|4|4|an al no|bar|am|gu|50|
+55|senta||pt|2|2|sa me no|fos|dc|vi|55|
+56|borbu||pt|2|2|ro sa so|fos|dc|vi|50|
+57|admir||pt|3|3|dr te co|dor|cs|vi|55|
+58|avôha||pt|3|2|co me no|aco|fa pr|vi|42|
+59|anunc||pt|3|4|an al ep|saj|li|sa|45|
+60|la be||pt|3|4|an al fe|car|pa|sa|50|
+61|morena||pt|4|5|an al fe|car|pa|gu|45|
+62|preta||pt|3|4|ro al ac|pra|am|vi|58|
+63|malan||pt|3|3|se mi co|bar|pa|gu|50|
+64|o seg||pt|3|4|ro es co|aco|am|vi|68|
+65|ai, a||pt|3|4|ro al an|bal|am pa|me|68|C
+66|boa s||pt|2|3|ro ca ac|aco|tm am|vi|62|
+67|burgu|samba-rock|pt|4|4|en cf an|bal|zo|pc|62|C
+68|trevo||pt|2|3|ro ca ac|cas|am|vi|72|C
+69|amei ||pt|2|3|ro ac ca|jan|am|vi|65|
+70|meu a||pt|2|3|ro ac ca|cas|am|vi|68|
+71|começ||pt|2|3|es ro ca|aco|su|pi|50|
+72|homem||pt|3|4|al an cf|bal|or|vi|78|C
+73|sangue||pt|3|4|cf an al|est|li|gu|55|
+74|explo||pt|3|3|dr ro ep|fos|am|vi|60|
+75|exage||pt|3|4|an al cf|bar|pa|gu|78|E C
+76|o tem||pt|3|3|dr es co|aco|su li|gu|65|
+77|codin||pt|2|2|ro sa so|fos|dc|gu|55|
+78|vária||pt|2|4|ro al ac|cas|am|vi|78|
+79|então||pt|2|4|es fe ac|nat|fa|cd co|90|E C
+80|o mun||pt|2|2|me sa co|dor|su|vi|72|E
+81|as ro||pt|2|2|sa me so|fos|dc|vi|60|
+82|foi u||pt|2|2|me sa no|aco|pr|vi|50|
+83|vou f||pt|4|5|al fe an|car|cu|pc|60|C
+84|deixa||pt|3|4|al es cf|bar|su|pc|85|E C
+85|verda||pt|3|4|ro al no|bar|am|ca|55|
+86|canta||pt|4|5|al fe es|car|cu|pc|60|C
+87|não d||pt|2|3|no sa co|bar|li|vi|50|
+88|o mar||pt|2|3|sa ro sn|pra|am|vi|55|
+89|o sho||pt|3|4|es al ac|alm|su|ca|55|
+90|meu l||pt|3|4|al ac no|alm|am|ca|75|C
+91|pé na||pt|3|4|al ro ac|pra|am|ca|70|C
+92|malan||pt|3|4|en cf al|bar|cs|ca|45|
+93|trem ||pt|2|3|no co sa|aco|pj|vi|62|
+94|saudo||pt|3|4|no en al|bar|cs pr|vi|55|C
+95|aquar||pt|3|4|ep al fe|car|li|or|65|
+96|minei||pt|3|4|al ro an|bar|am|ca|45|
+97|essa t||pt|3|3|ro sa so|bar|dc|ca|50|
+98|cheia||pt|3|4|ro al an|bar alm|am|ca|75|C
+99|é tar||pt|2|3|ro no sa|bar|am|ca|82|C
+100|cilad||pt|4|4|en al an|bar|tc zo|ca|55|C

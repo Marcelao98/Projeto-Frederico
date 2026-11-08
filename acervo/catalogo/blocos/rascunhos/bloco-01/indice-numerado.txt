@@ -1,0 +1,562 @@
+1|Elis Regina & Tom Jobim|Águas de Março|1974|bossa-nova||
+2|João Gilberto|Chega de Saudade|1959|bossa-nova||
+3|Stan Getz & João Gilberto|The Girl from Ipanema|1964|bossa-nova|Astrud Gilberto|Garota de Ipanema
+4|Toquinho & Vinicius|Tarde em Itapoã|1971|mpb||
+5|Elis Regina|Como Nossos Pais|1976|mpb||
+6|Elis Regina|O Bêbado e a Equilibrista|1979|mpb||
+7|Elis Regina|Madalena|1971|mpb||
+8|Chico Buarque|Construção|1971|mpb||
+9|Chico Buarque|Cálice|1978|mpb|Milton Nascimento|
+10|Chico Buarque|A Banda|1966|mpb||
+11|Chico Buarque|Apesar de Você|1970|mpb||
+12|Caetano Veloso|Sozinho|1998|mpb-romantica||
+13|Caetano Veloso|Leãozinho|1977|mpb||
+14|Caetano Veloso|Alegria, Alegria|1967|tropicalia||
+15|Caetano Veloso|Você É Linda|1983|mpb||
+16|Caetano Veloso|Sampa|1978|mpb||
+17|Gilberto Gil|Andar com Fé|1982|mpb||
+18|Gilberto Gil|Aquele Abraço|1969|tropicalia||
+19|Gilberto Gil|Esperando na Janela|2000|forro-pe-de-serra||São João
+20|Gal Costa|Baby|1969|tropicalia||
+21|Os Mutantes|Panis et Circenses|1968|tropicalia||
+22|Milton Nascimento|Maria Maria|1978|mpb||
+23|Milton Nascimento|Travessia|1967|clube-da-esquina||
+24|Milton Nascimento|Canção da América|1980|mpb||
+25|Djavan|Oceano|1989|mpb-romantica||
+26|Djavan|Flor de Lis|1976|mpb||
+27|Djavan|Sina|1982|mpb||
+28|Djavan|Se...|1992|mpb-romantica||
+29|Djavan|Eu Te Devoro|1998|mpb||
+30|Gonzaguinha|O Que É, O Que É?|1982|mpb||
+31|Belchior|Apenas um Rapaz Latino-Americano|1976|mpb||
+32|Belchior|Divina Comédia Humana|1978|mpb||
+33|Raul Seixas|Metamorfose Ambulante|1973|rock-nacional||
+34|Raul Seixas|Maluco Beleza|1977|rock-nacional||
+35|Raul Seixas|Gita|1974|rock-nacional||
+36|Tim Maia|Gostava Tanto de Você|1973|soul-brasileiro||
+37|Tim Maia|Primavera|1970|soul-brasileiro||
+38|Tim Maia|Azul da Cor do Mar|1970|soul-brasileiro||
+39|Tim Maia|Do Leme ao Pontal|1986|soul-brasileiro||
+40|Tim Maia|Não Quero Dinheiro (Só Quero Amar)|1971|soul-brasileiro||
+41|Jorge Ben Jor|País Tropical|1969|samba-rock||
+42|Jorge Ben Jor|Mas Que Nada|1963|samba-rock||
+43|Jorge Ben Jor|Taj Mahal|1972|samba-rock||
+44|Jorge Ben Jor|W/Brasil (Chama o Síndico)|1990|samba-rock||
+45|Marisa Monte|Ainda Bem|2011|nova-mpb||
+46|Marisa Monte|Amor I Love You|2000|mpb||
+47|Tribalistas|Já Sei Namorar|2002|nova-mpb||
+48|Tribalistas|Velha Infância|2002|nova-mpb||
+49|Ana Carolina|Quem de Nós Dois|2001|mpb-romantica||
+50|Roberto Carlos|Detalhes|1971|mpb-romantica||
+51|Roberto Carlos|Como É Grande o Meu Amor por Você|1967|mpb-romantica||
+52|Roberto Carlos|Emoções|1981|mpb-romantica||
+53|Roberto Carlos|Jesus Cristo|1970|mpb-romantica||
+54|Roberto Carlos|É Proibido Fumar|1964|jovem-guarda||
+55|Erasmo Carlos|Sentado à Beira do Caminho|1969|jovem-guarda||
+56|Fagner|Borbulhas de Amor|1991|mpb-romantica||
+57|Zé Ramalho|Admirável Gado Novo|1979|mpb||
+58|Zé Ramalho|Avôhai|1978|mpb||
+59|Alceu Valença|Anunciação|1983|mpb||
+60|Alceu Valença|La Belle de Jour|1992|mpb||
+61|Alceu Valença|Morena Tropicana|1982|mpb||
+62|Novos Baianos|Preta Pretinha|1972|mpb||
+63|Cássia Eller|Malandragem|1994|pop-rock-nacional||
+64|Cássia Eller|O Segundo Sol|1999|pop-rock-nacional||
+65|Vanessa da Mata|Ai, Ai, Ai...|2005|nova-mpb||
+66|Vanessa da Mata|Boa Sorte/Good Luck|2007|nova-mpb|Ben Harper|
+67|Seu Jorge|Burguesinha|2007|samba||
+68|Anavitória|Trevo (Tu)|2016|nova-mpb|Tiago Iorc|
+69|Tiago Iorc|Amei Te Ver|2016|nova-mpb||
+70|Melim|Meu Abrigo|2017|pop-nacional||
+71|Ivan Lins|Começar de Novo|1979|mpb||
+72|Ney Matogrosso|Homem com H|1981|mpb||
+73|Secos & Molhados|Sangue Latino|1973|rock-nacional||
+74|Maria Bethânia|Explode Coração|1979|mpb||
+75|Cazuza|Exagerado|1985|rock-brasil-80||
+76|Cazuza|O Tempo Não Para|1988|rock-brasil-80||
+77|Cazuza|Codinome Beija-Flor|1985|rock-brasil-80||
+78|Gilsons|Várias Queixas|2020|nova-mpb||
+79|Simone|Então É Natal|1995|mpb||Natal
+80|Cartola|O Mundo É um Moinho|1976|samba-raiz||
+81|Cartola|As Rosas Não Falam|1976|samba-raiz||
+82|Paulinho da Viola|Foi um Rio Que Passou em Minha Vida|1970|samba-raiz||
+83|Beth Carvalho|Vou Festejar|1978|samba-raiz||
+84|Zeca Pagodinho|Deixa a Vida Me Levar|2002|samba||
+85|Zeca Pagodinho|Verdade|1996|samba||
+86|Martinho da Vila|Canta, Canta, Minha Gente|1974|samba||
+87|Alcione|Não Deixe o Samba Morrer|1975|samba||
+88|Clara Nunes|O Mar Serenou|1975|samba||
+89|Fundo de Quintal|O Show Tem Que Continuar|1988|pagode-de-mesa||
+90|Arlindo Cruz|Meu Lugar|2007|samba||
+91|Diogo Nogueira|Pé na Areia|2011|samba||
+92|Bezerra da Silva|Malandragem Dá um Tempo|1986|partido-alto||
+93|Adoniran Barbosa|Trem das Onze|1964|samba||
+94|Demônios da Garoa|Saudosa Maloca|1955|samba||
+95|Ary Barroso|Aquarela do Brasil|1939|samba||
+96|Só Pra Contrariar|Mineirinho|1997|pagode-90||
+97|Só Pra Contrariar|Essa Tal Liberdade|1994|pagode-90||
+98|Raça Negra|Cheia de Manias|1991|pagode-90||
+99|Raça Negra|É Tarde Demais|1995|pagode-90||
+100|Molejo|Cilada|1996|pagode-90||
+101|Art Popular|Temporal|1996|pagode-90||
+102|Exaltasamba|Livre pra Voar|2009|pagode-romantico||
+103|Revelação|Tá Escrito|2009|pagode-romantico||
+104|Sorriso Maroto|Assim Você Mata o Papai|2011|pagode-romantico||
+105|Thiaguinho|Caraca, Muleke!|2016|pagode-romantico||
+106|Péricles|Até Que Durou|2014|pagode-romantico||
+107|Ferrugem|Pirata e Tesouro|2018|pagode-romantico||
+108|Dilsinho|Péssimo Negócio|2017|pagode-romantico||
+109|Menos é Mais|Lapada Dela|2021|pagode-de-mesa||
+110|Pixote|Insegurança|2002|pagode-romantico||
+111|Turma do Pagode|Lancinho|2008|pagode-romantico||
+112|Harmonia do Samba|Vem Neném|1999|pagode-baiano||
+113|É o Tchan|Segura o Tchan|1995|pagode-baiano||
+114|É o Tchan|Dança do Ventre|1997|pagode-baiano||
+115|Psirico|Lepo Lepo|2014|pagode-baiano||
+116|Parangolé|Rebolation|2009|pagode-baiano||
+117|Léo Santana|Zona de Perigo|2022|pagode-baiano||
+118|Tonico & Tinoco|Chico Mineiro|1946|musica-caipira||
+119|Tião Carreiro & Pardinho|Pagode em Brasília|1960|musica-caipira||
+120|Sérgio Reis|Menino da Porteira|1973|sertanejo-raiz||
+121|Almir Sater|Tocando em Frente|1990|musica-caipira||
+122|Renato Teixeira|Romaria|1977|musica-caipira||
+123|Milionário & José Rico|Estrada da Vida|1977|sertanejo-raiz||
+124|Chitãozinho & Xororó|Evidências|1990|sertanejo-romantico||
+125|Chitãozinho & Xororó|Fio de Cabelo|1982|sertanejo-romantico||
+126|Leandro & Leonardo|Pense em Mim|1990|sertanejo-romantico||
+127|Leandro & Leonardo|Entre Tapas e Beijos|1989|sertanejo-romantico||
+128|Zezé Di Camargo & Luciano|É o Amor|1991|sertanejo-romantico||
+129|Zezé Di Camargo & Luciano|No Dia em Que Eu Saí de Casa|1996|sertanejo-romantico||
+130|João Paulo & Daniel|Estou Apaixonado|1995|sertanejo-romantico||
+131|João Mineiro & Marciano|Seu Amor Ainda É Tudo|1987|sertanejo-romantico||
+132|Bruno & Marrone|Dormi na Praça|2001|sertanejo-romantico||
+133|Bruno & Marrone|Choram as Rosas|2005|sertanejo-romantico||
+134|Victor & Leo|Borboletas|2008|sertanejo-universitario||
+135|César Menotti & Fabiano|Leilão|2006|sertanejo-universitario||
+136|Jorge & Mateus|Pode Chorar|2007|sertanejo-universitario||
+137|Jorge & Mateus|Os Anjos Cantam|2014|sertanejo-universitario||
+138|Luan Santana|Meteoro|2009|sertanejo-universitario||
+139|Michel Teló|Ai Se Eu Te Pego|2011|sertanejo-universitario||
+140|Gusttavo Lima|Balada (Tchê Tcherere Tchê Tchê)|2011|sertanejo-universitario||
+141|Gusttavo Lima|Termina Comigo Antes|2021|sofrencia||
+142|Gusttavo Lima|Desejo Imortal|2019|sertanejo-romantico||
+143|Henrique & Juliano|Cuida Bem Dela|2016|sertanejo-universitario||
+144|Henrique & Juliano|Liberdade Provisória|2018|sofrencia||
+145|Marília Mendonça|Infiel|2016|sofrencia||
+146|Marília Mendonça|Supera|2019|sofrencia||
+147|Marília Mendonça|Todo Mundo Vai Sofrer|2019|sofrencia||
+148|Maiara & Maraisa|10%|2016|feminejo||
+149|Maiara & Maraisa|Medo Bobo|2015|feminejo||
+150|Simone & Simaria|Loka|2017|feminejo|Anitta|
+151|Naiara Azevedo|50 Reais|2016|feminejo|Maiara & Maraisa|
+152|Zé Neto & Cristiano|Notificação Preferida|2018|sertanejo-universitario||
+153|Zé Neto & Cristiano|Largado às Traças|2018|sofrencia||
+154|Matheus & Kauan|Que Sorte a Nossa|2018|sertanejo-universitario||
+155|Israel & Rodolffo|Batom de Cereja|2021|sertanejo-universitario||
+156|Hugo & Guilherme|Mal Feito|2022|sofrencia|Marília Mendonça|
+157|Ana Castela|Pipoco|2022|agronejo|Melody|
+158|Ana Castela|Nosso Quadro|2023|agronejo||
+159|Paula Fernandes|Pássaro de Fogo|2009|sertanejo-romantico||
+160|Lauana Prado|Cobaia|2021|sertanejo-universitario||
+161|Luiz Gonzaga|Asa Branca|1947|baiao||São João
+162|Luiz Gonzaga|Xote das Meninas|1953|xote||São João
+163|Luiz Gonzaga|Olha pro Céu|1951|baiao||São João
+164|Luiz Gonzaga|Qui Nem Jiló|1950|baiao||
+165|Luiz Gonzaga|Respeita Januário|1950|baiao||
+166|Dominguinhos|Eu Só Quero um Xodó|1973|xote||
+167|Dominguinhos|Isso Aqui Tá Bom Demais|1985|forro||São João
+168|Jackson do Pandeiro|Chiclete com Banana|1959|coco||
+169|Elba Ramalho|De Volta pro Aconchego|1985|forro||
+170|Elba Ramalho|Banho de Cheiro|1983|forro||
+171|Falamansa|Xote dos Milagres|2000|forro-universitario||
+172|Falamansa|Rindo à Toa|2000|forro-universitario||
+173|Mastruz com Leite|Meu Vaqueiro, Meu Peão|1995|forro-eletronico||
+174|Calcinha Preta|Você Não Vale Nada|2005|forro-eletronico||
+175|Wesley Safadão|Camarote|2014|forro-eletronico||
+176|Zé Vaqueiro|Letícia|2020|piseiro||
+177|Barões da Pisadinha|Basta Você Me Ligar|2020|piseiro||
+178|Barões da Pisadinha|Recairei|2020|piseiro||
+179|João Gomes|Meu Pedaço de Pecado|2021|piseiro||
+180|Nattan|Ama Sofre Chora|2022|piseiro||
+181|Mari Fernandez|Não, Não Vou|2022|piseiro||
+182|Daniela Mercury|O Canto da Cidade|1992|axe-music||Carnaval
+183|Daniela Mercury|Rapunzel|1997|axe-music||Carnaval
+184|Ivete Sangalo|Sorte Grande (Poeira)|2003|axe-music||Carnaval
+185|Ivete Sangalo|Festa|2001|axe-music||Carnaval
+186|Ivete Sangalo|Arerê|2002|axe-music||Carnaval
+187|Banda Eva|Eva|1997|axe-music||Carnaval
+188|Asa de Águia|Dança da Manivela|1997|axe-music||Carnaval
+189|Olodum|Faraó Divindade do Egito|1987|samba-reggae||Carnaval
+190|Timbalada|Beija-Flor|1994|samba-reggae||
+191|Claudia Leitte|Largadinho|2010|axe-music||Carnaval
+192|Netinho|Milla|1996|axe-music||
+193|Luiz Caldas|Fricote|1985|axe-music||Carnaval
+194|Banda Calypso|A Lua Me Traiu|2004|brega-calypso||
+195|Joelma|Voando pro Pará|2016|brega-calypso||
+196|Gaby Amarantos|Xirley|2012|tecnobrega||
+197|Fafá de Belém|Vermelho|1996|toada-boi-bumba||
+198|Kaoma|Chorando Se Foi (Lambada)|1989|lambada||
+199|Beto Barbosa|Adocica|1988|lambada||
+200|Dona Onete|No Meio do Pitiú|2012|carimbo||
+201|Pinduca|Sinhá Pureza|1973|carimbo||
+202|Teixeirinha|Coração de Luto|1960|musica-gaucha||
+203|Chico Science & Nação Zumbi|A Praieira|1994|maracatu||
+204|Amelinha|Frevo Mulher|1979|frevo||Carnaval
+205|Gal Costa|Festa do Interior|1981|frevo||Carnaval
+206|Legião Urbana|Tempo Perdido|1986|rock-brasil-80||
+207|Legião Urbana|Eduardo e Mônica|1986|rock-brasil-80||
+208|Legião Urbana|Pais e Filhos|1989|rock-brasil-80||
+209|Legião Urbana|Que País É Este|1987|rock-brasil-80||
+210|Legião Urbana|Faroeste Caboclo|1987|rock-brasil-80||
+211|Titãs|Epitáfio|2001|pop-rock-nacional||
+212|Titãs|Sonífera Ilha|1984|rock-brasil-80||
+213|Titãs|Polícia|1986|rock-brasil-80||
+214|Os Paralamas do Sucesso|Meu Erro|1984|rock-brasil-80||
+215|Os Paralamas do Sucesso|Lanterna dos Afogados|1989|rock-brasil-80||
+216|Barão Vermelho|Pro Dia Nascer Feliz|1983|rock-brasil-80||
+217|Ultraje a Rigor|Inútil|1983|rock-brasil-80||
+218|Capital Inicial|Primeiros Erros (Chove)|2000|pop-rock-nacional||acústico
+219|Ira!|Envelheço na Cidade|1986|rock-brasil-80||
+220|Engenheiros do Hawaii|Infinita Highway|1987|rock-brasil-80||
+221|Engenheiros do Hawaii|Era um Garoto Que Como Eu Amava os Beatles e os Rolling Stones|1990|rock-brasil-80||
+222|Kid Abelha|Como Eu Quero|1984|rock-brasil-80||
+223|RPM|Olhar 43|1985|rock-brasil-80||
+224|Lulu Santos|Como uma Onda|1983|pop-rock-nacional||
+225|Lulu Santos|Tempos Modernos|1982|pop-rock-nacional||
+226|Lulu Santos|Toda Forma de Amor|1988|pop-rock-nacional||
+227|Blitz|Você Não Soube Me Amar|1982|rock-brasil-80||
+228|Rita Lee|Mania de Você|1979|rock-nacional||
+229|Rita Lee|Lança Perfume|1980|rock-nacional||
+230|Rita Lee|Ovelha Negra|1975|rock-nacional||
+231|Skank|Garota Nacional|1996|pop-rock-nacional||
+232|Skank|Vou Deixar|2003|pop-rock-nacional||
+233|Jota Quest|Fácil|2000|pop-rock-nacional||
+234|Jota Quest|Dias Melhores|2000|pop-rock-nacional||
+235|Charlie Brown Jr.|Só os Loucos Sabem|2009|pop-rock-nacional||
+236|Charlie Brown Jr.|Proibida pra Mim|1997|rock-nacional||
+237|Mamonas Assassinas|Pelados em Santos|1995|rock-nacional||
+238|Raimundos|Mulher de Fases|1999|rock-nacional||
+239|Los Hermanos|Anna Júlia|1999|rock-nacional||
+240|O Rappa|Pescador de Ilusões|1996|rock-nacional||
+241|Detonautas|Quando o Sol Se For|2002|rock-nacional||
+242|Pitty|Me Adora|2009|rock-nacional||
+243|NX Zero|Razões e Emoções|2006|emo||
+244|CPM 22|Um Minuto Para o Fim do Mundo|2005|pop-punk||
+245|Biquini Cavadão|Vento Ventania|1991|pop-rock-nacional||
+246|Natiruts|Liberdade pra Dentro da Cabeça|2002|reggae-nacional||
+247|Cidade Negra|Onde Você Mora?|1996|reggae-nacional||
+248|Sepultura|Roots Bloody Roots|1996|thrash-metal||
+249|Angra|Carry On|1993|power-metal||
+250|Racionais MC's|Diário de um Detento|1997|rap-nacional||
+251|Racionais MC's|Negro Drama|2002|rap-nacional||
+252|Racionais MC's|Vida Loka, Pt. 2|2002|rap-nacional||
+253|Sabotage|Um Bom Lugar|2001|rap-nacional||
+254|Emicida|AmarElo|2019|rap-nacional|Majur, Pabllo Vittar|
+255|Criolo|Não Existe Amor em SP|2011|rap-nacional||
+256|Marcelo D2|Qual É?|2003|rap-nacional||
+257|Gabriel o Pensador|Cachimbo da Paz|1997|rap-nacional||
+258|Djonga|Olho de Tigre|2017|rap-nacional||
+259|Matuê|Quer Voar|2020|trap-nacional||
+260|Veigh|Novo Balanço|2023|trap-nacional||
+261|L7nnon|Desenrola, Bate, Joga de Ladin|2022|funk-carioca|Os Hawaianos|
+262|Cidinho & Doca|Rap da Felicidade|1995|funk-carioca||
+263|MC Marcinho|Glamurosa|2004|funk-melody||
+264|Claudinho & Buchecha|Só Love|1997|funk-melody||
+265|Claudinho & Buchecha|Fico Assim Sem Você|2002|funk-melody||
+266|Bonde do Tigrão|Cerol na Mão|2001|funk-carioca||
+267|MC Guimê|País do Futebol|2013|funk-ostentacao|Emicida|
+268|MC Kevinho|Olha a Explosão|2016|funk-carioca||
+269|Ludmilla|Cheguei|2016|funk-carioca||
+270|Anitta|Show das Poderosas|2013|funk-carioca||
+271|Anitta|Envolver|2021|reggaeton||
+272|Dennis DJ|Malandramente|2016|funk-carioca|MC Nandinho, Nego Bam|
+273|MC Fioti|Bum Bum Tam Tam|2017|funk-carioca||
+274|Pedro Sampaio|Galopa|2021|funk-carioca||
+275|Pabllo Vittar|K.O.|2017|pop-nacional||
+276|Luísa Sonza|Chico|2023|pop-nacional||
+277|Gloria Groove|Bonekinha|2021|pop-nacional||
+278|Jão|Idiota|2021|pop-nacional||
+279|IZA|Pesadão|2017|pop-nacional|Marcelo Falcão|
+280|Marina Sena|Por Supuesto|2021|pop-nacional||
+281|Vitor Kley|O Sol|2017|pop-nacional||
+282|Latino|Festa no Apê|2004|pop-nacional||
+283|Rouge|Ragatanga|2002|teen-pop||
+284|Sandy & Junior|As Quatro Estações|1999|teen-pop||
+285|KLB|A Dor Desse Amor|2000|teen-pop||
+286|Xuxa|Ilariê|1988|musica-infantil||
+287|Xuxa|Parabéns da Xuxa|1989|musica-infantil||Aniversário
+288|Balão Mágico|Superfantástico|1983|musica-infantil||
+289|Odair José|Eu Vou Tirar Você Desse Lugar|1972|brega-romantico||
+290|Amado Batista|Princesa|1980|brega-romantico||
+291|Waldick Soriano|Eu Não Sou Cachorro Não|1972|brega-romantico||
+292|Wando|Fogo e Paixão|1988|brega-romantico||
+293|Sidney Magal|Sandra Rosa Madalena|1978|brega-romantico||
+294|Fábio Jr.|Alma Gêmea|1993|mpb-romantica||
+295|Fábio Jr.|20 e Poucos Anos|1979|mpb-romantica||
+296|Pablo|Porque Homem Não Chora|2012|arrocha||
+297|Tierry|Rita|2020|arrocha||
+298|Padre Marcelo Rossi|Erguei as Mãos|1998|musica-catolica||
+299|Fernandinho|Uma Nova História|2012|louvor||
+300|Anderson Freire|Raridade|2013|gospel-pop||
+301|Thalles Roberto|Arde Outra Vez|2011|gospel-pop||
+302|Gabriela Rocha|Lugar Secreto|2016|louvor||
+303|Jararaca e Ratinho|Mamãe Eu Quero|1937|marchinha||Carnaval
+304|Aurora Miranda|Cidade Maravilhosa|1934|marchinha||Carnaval
+305|Carlos Galhardo|Allah-La-Ô|1941|marchinha||Carnaval
+306|Moacyr Franco|Me Dá um Dinheiro Aí|1959|marchinha||Carnaval
+307|Jorge Goulart|Cabeleira do Zezé|1964|marchinha||Carnaval
+308|Dalva de Oliveira|Máscara Negra|1967|marchinha||Carnaval
+309|Estação Primeira de Mangueira|História pra Ninar Gente Grande|2019|samba-enredo||Carnaval
+310|Acadêmicos do Salgueiro|Peguei um Ita no Norte (Explode Coração)|1993|samba-enredo||Carnaval
+311|Heitor Villa-Lobos|Bachianas Brasileiras nº 5: Ária (Cantilena)|1938|classica||ano = composição
+312|Carlos Gomes|O Guarani: Abertura|1870|opera||ano = composição
+313|Michael Jackson|Billie Jean|1982|dance-pop||
+314|Michael Jackson|Thriller|1982|dance-pop||
+315|Michael Jackson|Beat It|1982|pop-rock||
+316|Madonna|Like a Prayer|1989|dance-pop||
+317|Madonna|Vogue|1990|dance-pop||
+318|Whitney Houston|I Wanna Dance with Somebody (Who Loves Me)|1987|dance-pop||
+319|Cyndi Lauper|Girls Just Want to Have Fun|1983|synthpop||
+320|a-ha|Take On Me|1984|synthpop||
+321|Tears for Fears|Everybody Wants to Rule the World|1985|synthpop||
+322|Wham!|Wake Me Up Before You Go-Go|1984|dance-pop||
+323|Rick Astley|Never Gonna Give You Up|1987|dance-pop||
+324|Prince|Kiss|1986|funk-americano||
+325|Phil Collins|In the Air Tonight|1981|soft-rock||
+326|Backstreet Boys|I Want It That Way|1999|teen-pop||
+327|Britney Spears|...Baby One More Time|1998|teen-pop||
+328|Britney Spears|Toxic|2003|dance-pop||
+329|Spice Girls|Wannabe|1996|teen-pop||
+330|*NSYNC|Bye Bye Bye|2000|teen-pop||
+331|Shakira|Hips Don't Lie|2006|pop-latino|Wyclef Jean|
+332|Shakira|Whenever, Wherever|2001|pop-latino||
+333|Beyoncé|Single Ladies (Put a Ring on It)|2008|rnb||
+334|Beyoncé|Crazy in Love|2003|rnb|Jay-Z|
+335|Rihanna|Umbrella|2007|rnb|Jay-Z|
+336|Rihanna|Diamonds|2012|electropop||
+337|Lady Gaga|Bad Romance|2009|electropop||
+338|Lady Gaga|Poker Face|2008|electropop||
+339|Lady Gaga & Bradley Cooper|Shallow|2018|balada-pop||
+340|Katy Perry|Firework|2010|dance-pop||
+341|Katy Perry|Roar|2013|pop||
+342|Taylor Swift|Shake It Off|2014|pop||
+343|Taylor Swift|Blank Space|2014|pop||
+344|Taylor Swift|Anti-Hero|2022|synthpop||
+345|Adele|Rolling in the Deep|2010|pop||
+346|Adele|Someone Like You|2011|balada-pop||
+347|Adele|Hello|2015|balada-pop||
+348|Ed Sheeran|Shape of You|2017|pop||
+349|Ed Sheeran|Perfect|2017|balada-pop||
+350|Ed Sheeran|Thinking Out Loud|2014|balada-pop||
+351|Mark Ronson|Uptown Funk|2014|funk-americano|Bruno Mars|
+352|Bruno Mars|Just the Way You Are|2010|pop||
+353|Bruno Mars|Locked Out of Heaven|2012|pop||
+354|The Weeknd|Blinding Lights|2019|synthpop||
+355|The Weeknd|Save Your Tears|2020|synthpop||
+356|Dua Lipa|Levitating|2020|dance-pop||
+357|Dua Lipa|Don't Start Now|2019|dance-pop||
+358|Harry Styles|As It Was|2022|pop||
+359|Billie Eilish|Bad Guy|2019|electropop||
+360|Billie Eilish|What Was I Made For?|2023|indie-pop||
+361|Olivia Rodrigo|Drivers License|2021|balada-pop||
+362|Miley Cyrus|Flowers|2023|pop||
+363|Sia|Chandelier|2014|electropop||
+364|Justin Bieber|Sorry|2015|dance-pop||
+365|Luis Fonsi|Despacito|2017|reggaeton|Daddy Yankee|
+366|Daddy Yankee|Gasolina|2004|reggaeton||
+367|Bad Bunny|Tití Me Preguntó|2022|reggaeton||
+368|Ricky Martin|Livin' la Vida Loca|1999|pop-latino||
+369|Enrique Iglesias|Bailando|2014|pop-latino|Descemer Bueno, Gente de Zona|
+370|Gotye|Somebody That I Used to Know|2011|indie-pop|Kimbra|
+371|BTS|Dynamite|2020|k-pop||
+372|PSY|Gangnam Style|2012|k-pop||
+373|BLACKPINK|How You Like That|2020|k-pop||
+374|Imagine Dragons|Believer|2017|pop-rock||
+375|Maroon 5|Sugar|2014|pop-rock||
+376|OneRepublic|Counting Stars|2013|pop-rock||
+377|Pharrell Williams|Happy|2013|pop||
+378|Amy Winehouse|Rehab|2006|soul||
+379|Amy Winehouse|Back to Black|2006|soul||
+380|Lana Del Rey|Summertime Sadness|2012|indie-pop||
+381|Queen|Bohemian Rhapsody|1975|rock-classico||
+382|Queen|We Will Rock You|1977|rock-classico||
+383|Queen|Don't Stop Me Now|1978|rock-classico||
+384|Queen|Another One Bites the Dust|1980|rock-classico||
+385|The Beatles|Hey Jude|1968|rock-classico||
+386|The Beatles|Let It Be|1970|rock-classico||
+387|The Beatles|Here Comes the Sun|1969|rock-classico||
+388|The Beatles|Yesterday|1965|rock-classico||
+389|The Rolling Stones|(I Can't Get No) Satisfaction|1965|rock-classico||
+390|Led Zeppelin|Stairway to Heaven|1971|hard-rock||
+391|Pink Floyd|Wish You Were Here|1975|rock-progressivo||
+392|Pink Floyd|Another Brick in the Wall, Pt. 2|1979|rock-progressivo||
+393|Eagles|Hotel California|1976|rock-classico||
+394|AC/DC|Highway to Hell|1979|hard-rock||
+395|AC/DC|Back in Black|1980|hard-rock||
+396|Guns N' Roses|Sweet Child o' Mine|1987|hard-rock||
+397|Guns N' Roses|November Rain|1991|hard-rock||
+398|Bon Jovi|Livin' on a Prayer|1986|hard-rock||
+399|Bon Jovi|It's My Life|2000|hard-rock||
+400|Aerosmith|I Don't Want to Miss a Thing|1998|hard-rock||
+401|Scorpions|Wind of Change|1990|hard-rock||
+402|Europe|The Final Countdown|1986|hard-rock||
+403|Journey|Don't Stop Believin'|1981|rock-classico||
+404|Survivor|Eye of the Tiger|1982|rock-classico||
+405|Toto|Africa|1982|soft-rock||
+406|Dire Straits|Sultans of Swing|1978|rock-classico||
+407|The Police|Every Breath You Take|1983|new-wave||
+408|U2|With or Without You|1987|rock-alternativo||
+409|Nirvana|Smells Like Teen Spirit|1991|grunge||
+410|Nirvana|Come As You Are|1991|grunge||
+411|Red Hot Chili Peppers|Californication|1999|rock-alternativo||
+412|Linkin Park|In the End|2000|nu-metal||
+413|Linkin Park|Numb|2003|nu-metal||
+414|Oasis|Wonderwall|1995|britpop||
+415|Radiohead|Creep|1992|rock-alternativo||
+416|Coldplay|Yellow|2000|rock-alternativo||
+417|Coldplay|Viva la Vida|2008|pop-rock||
+418|Coldplay|The Scientist|2002|rock-alternativo||
+419|The Killers|Mr. Brightside|2003|indie-rock||
+420|Arctic Monkeys|Do I Wanna Know?|2013|indie-rock||
+421|Green Day|Boulevard of Broken Dreams|2004|pop-punk||
+422|Metallica|Nothing Else Matters|1991|heavy-metal||
+423|Metallica|Enter Sandman|1991|heavy-metal||
+424|Iron Maiden|The Trooper|1983|heavy-metal||
+425|Elvis Presley|Can't Help Falling in Love|1961|rock-and-roll||
+426|Elvis Presley|Jailhouse Rock|1957|rock-and-roll||
+427|Chuck Berry|Johnny B. Goode|1958|rock-and-roll||
+428|Creedence Clearwater Revival|Have You Ever Seen the Rain|1970|rock-classico||
+429|John Lennon|Imagine|1971|soft-rock||
+430|Bob Dylan|Knockin' on Heaven's Door|1973|folk-gringo||
+431|Simon & Garfunkel|The Sound of Silence|1965|folk-gringo||
+432|Bee Gees|Stayin' Alive|1977|disco||
+433|ABBA|Dancing Queen|1976|disco||
+434|ABBA|Mamma Mia|1975|disco||
+435|Donna Summer|Hot Stuff|1979|disco||
+436|Earth, Wind & Fire|September|1978|funk-americano||
+437|Chic|Le Freak|1978|disco||
+438|Village People|Y.M.C.A.|1978|disco||
+439|Kool & the Gang|Celebration|1980|funk-americano||
+440|Boney M.|Rasputin|1978|disco||
+441|James Brown|I Got You (I Feel Good)|1965|funk-americano||
+442|Stevie Wonder|Superstition|1972|funk-americano||
+443|Stevie Wonder|Isn't She Lovely|1976|soul||
+444|Stevie Wonder|Happy Birthday|1980|soul||Aniversário
+445|Aretha Franklin|Respect|1967|soul||
+446|Marvin Gaye & Tammi Terrell|Ain't No Mountain High Enough|1967|motown||
+447|The Jackson 5|I Want You Back|1969|motown||
+448|Ben E. King|Stand by Me|1961|soul||
+449|Otis Redding|(Sittin' On) The Dock of the Bay|1968|soul||
+450|Ray Charles|Hit the Road Jack|1961|rnb||
+451|Lionel Richie|Hello|1984|soul||
+452|Lionel Richie|All Night Long (All Night)|1983|funk-americano||
+453|Barry White|You're the First, the Last, My Everything|1974|soul||
+454|Bob Marley & The Wailers|Is This Love|1978|reggae-roots||
+455|Bob Marley & The Wailers|Three Little Birds|1977|reggae-roots||
+456|Bob Marley & The Wailers|No Woman, No Cry|1975|reggae-roots||ao vivo
+457|UB40|Red Red Wine|1983|reggae||
+458|Frank Sinatra|Fly Me to the Moon|1964|swing||
+459|Frank Sinatra|My Way|1969|swing||
+460|Louis Armstrong|What a Wonderful World|1967|jazz||
+461|Etta James|At Last|1960|soul||
+462|Nina Simone|Feeling Good|1965|jazz||
+463|Norah Jones|Don't Know Why|2002|jazz||
+464|Whitney Houston|I Will Always Love You|1992|balada-pop||
+465|Celine Dion|My Heart Will Go On|1997|balada-pop||
+466|Bryan Adams|(Everything I Do) I Do It for You|1991|balada-pop||
+467|Elton John|Your Song|1970|soft-rock||
+468|Elton John|I'm Still Standing|1983|pop-rock||
+469|George Michael|Careless Whisper|1984|balada-pop||
+470|Roxette|It Must Have Been Love|1990|balada-pop||
+471|Richard Marx|Right Here Waiting|1989|balada-pop||
+472|Bonnie Tyler|Total Eclipse of the Heart|1983|balada-pop||
+473|Cyndi Lauper|Time After Time|1984|balada-pop||
+474|Mariah Carey|Hero|1993|balada-pop||
+475|Mariah Carey|All I Want for Christmas Is You|1994|pop||Natal
+476|Wham!|Last Christmas|1984|synthpop||Natal
+477|Bobby Helms|Jingle Bell Rock|1957|rock-and-roll||Natal
+478|José Feliciano|Feliz Navidad|1970|pop-latino||Natal
+479|Brenda Lee|Rockin' Around the Christmas Tree|1958|rock-and-roll||Natal
+480|Michael Bublé|It's Beginning to Look a Lot Like Christmas|2011|swing||Natal
+481|Eric Clapton|Tears in Heaven|1992|soft-rock||
+482|Jeff Buckley|Hallelujah|1994|folk-gringo||
+483|John Legend|All of Me|2013|balada-pop||
+484|James Blunt|You're Beautiful|2004|balada-pop||
+485|Lewis Capaldi|Someone You Loved|2018|balada-pop||
+486|Christina Perri|A Thousand Years|2011|balada-pop||
+487|Eminem|Lose Yourself|2002|rap-gringo||
+488|Eminem|Without Me|2002|rap-gringo||
+489|2Pac|California Love|1995|rap-gringo|Dr. Dre|
+490|The Notorious B.I.G.|Juicy|1994|boom-bap||
+491|Dr. Dre|Still D.R.E.|1999|rap-gringo|Snoop Dogg|
+492|Coolio|Gangsta's Paradise|1995|rap-gringo|L.V.|
+493|OutKast|Hey Ya!|2003|rap-gringo||
+494|50 Cent|In da Club|2003|rap-gringo||
+495|Kanye West|Stronger|2007|rap-gringo||
+496|Jay-Z|Empire State of Mind|2009|rap-gringo|Alicia Keys|
+497|Drake|God's Plan|2018|rap-gringo||
+498|Kendrick Lamar|HUMBLE.|2017|rap-gringo||
+499|Post Malone|Sunflower|2018|rap-gringo|Swae Lee|
+500|Travis Scott|SICKO MODE|2018|trap||
+501|The Black Eyed Peas|I Gotta Feeling|2009|dance-pop||
+502|Daft Punk|One More Time|2000|house||
+503|Daft Punk|Get Lucky|2013|disco|Pharrell Williams, Nile Rodgers|
+504|Avicii|Wake Me Up|2013|edm||
+505|Avicii|Levels|2011|edm||
+506|David Guetta|Titanium|2011|edm|Sia|
+507|Calvin Harris|Summer|2014|edm||
+508|Calvin Harris|This Is What You Came For|2016|edm|Rihanna|
+509|Swedish House Mafia|Don't You Worry Child|2012|edm|John Martin|
+510|Alok|Hear Me Now|2016|brazilian-bass|Bruno Martini, Zeeba|
+511|Eiffel 65|Blue (Da Ba Dee)|1998|eurodance||
+512|Haddaway|What Is Love|1993|eurodance||
+513|Corona|The Rhythm of the Night|1993|eurodance||
+514|Ace of Base|All That She Wants|1992|eurodance||
+515|La Bouche|Be My Lover|1995|eurodance||
+516|2 Unlimited|No Limit|1993|eurodance||
+517|Gala|Freed from Desire|1996|eurodance||
+518|Darude|Sandstorm|1999|trance||
+519|Snap!|Rhythm Is a Dancer|1992|eurodance||
+520|Modjo|Lady (Hear Me Tonight)|2000|house||
+521|Stardust|Music Sounds Better with You|1998|house||
+522|John Williams|Star Wars (Main Title)|1977|trilha-de-filme||
+523|John Williams|The Imperial March|1980|trilha-de-filme||
+524|John Williams|Hedwig's Theme|2001|trilha-de-filme||
+525|John Williams|Theme from Jurassic Park|1993|trilha-de-filme||
+526|Hans Zimmer|Time|2010|trilha-de-filme||Inception
+527|Klaus Badelt|He's a Pirate|2003|trilha-de-filme||Piratas do Caribe
+528|Howard Shore|Concerning Hobbits|2001|trilha-de-filme||O Senhor dos Anéis
+529|Ennio Morricone|The Good, the Bad and the Ugly|1966|trilha-de-filme||
+530|Vangelis|Chariots of Fire|1981|trilha-de-filme||
+531|Hans Zimmer|Now We Are Free|2000|trilha-de-filme|Lisa Gerrard|Gladiador
+532|Hans Zimmer|Cornfield Chase|2014|trilha-de-filme||Interestelar
+533|Nino Rota|Speak Softly Love (Love Theme from The Godfather)|1972|trilha-de-filme||
+534|Yann Tiersen|Comptine d'un autre été, l'après-midi|2001|trilha-de-filme||Amélie Poulain
+535|Idina Menzel|Let It Go|2013|musical||Frozen
+536|Carmen Twillie & Lebo M|Circle of Life|1994|musical||O Rei Leão
+537|Bill Medley & Jennifer Warnes|(I've Had) The Time of My Life|1987|balada-pop||Dirty Dancing
+538|Kenny Loggins|Footloose|1984|rock-classico||
+539|Ray Parker Jr.|Ghostbusters|1984|funk-americano||
+540|Ludwig van Beethoven|Für Elise|1810|classicismo||ano = composição
+541|Ludwig van Beethoven|Sinfonia nº 5: I. Allegro con brio|1808|classicismo||ano = composição
+542|Ludwig van Beethoven|Sonata ao Luar: I. Adagio sostenuto|1801|classicismo||ano = composição
+543|Wolfgang Amadeus Mozart|Eine kleine Nachtmusik: I. Allegro|1787|classicismo||ano = composição
+544|Wolfgang Amadeus Mozart|Requiem: Lacrimosa|1791|musica-sacra||ano = composição
+545|Wolfgang Amadeus Mozart|Rondo alla Turca|1783|classicismo||ano = composição
+546|Johann Sebastian Bach|Ária na Corda Sol|1730|barroco||ano = composição
+547|Johann Sebastian Bach|Tocata e Fuga em Ré Menor|1704|barroco||ano = composição
+548|Antonio Vivaldi|As Quatro Estações: Primavera|1725|barroco||ano = composição
+549|Antonio Vivaldi|As Quatro Estações: Inverno|1725|barroco||ano = composição
+550|Johann Pachelbel|Cânone em Ré|1700|barroco||ano = composição (aprox.)
+551|Piotr Ilitch Tchaikovsky|Dança da Fada Açucarada|1892|romantismo||Natal (ano = composição)
+552|Piotr Ilitch Tchaikovsky|O Lago dos Cisnes: Cena|1876|romantismo||ano = composição
+553|Claude Debussy|Clair de Lune|1905|romantismo||ano = publicação
+554|Frédéric Chopin|Noturno Op. 9 nº 2|1832|romantismo||ano = composição
+555|Edvard Grieg|Na Gruta do Rei da Montanha|1876|romantismo||ano = composição
+556|Carl Orff|O Fortuna (Carmina Burana)|1937|classica-contemporanea||ano = composição
+557|Richard Wagner|A Cavalgada das Valquírias|1870|opera||ano = estreia
+558|Giacomo Puccini|Nessun Dorma|1926|opera||ano = estreia
+559|Georges Bizet|Habanera (Carmen)|1875|opera||ano = estreia
+560|Johann Strauss II|O Danúbio Azul|1866|romantismo||ano = composição
+561|Erik Satie|Gymnopédie nº 1|1888|romantismo||ano = composição
+562|Georg Friedrich Händel|Aleluia (O Messias)|1741|musica-sacra||ano = composição
