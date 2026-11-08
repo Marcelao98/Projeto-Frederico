@@ -45,7 +45,7 @@ Atualizado em 07/11/2026 (v0.6.0).
     "e depois", e 108 pedidos de ouro rodando nos testes (75 conferem
     resultado; 33 de música geral ficam pendentes até ter música).
   - O app ainda usa o `musicas.json`: nada do app mudou.
-- **Etapa 3 (encher o catálogo) em andamento.** Guia completo e detalhado pra
+- **Etapa 3 (encher o catálogo) EM PAUSA (08/11/2026, decisão do Marcelo: gasta muito token).** Quando voltar: Guia completo e detalhado pra
   continuar: **`docs/etapas/banco-fredify-etapa3.md`** (leia esse primeiro).
   Decisão do Marcelo: tudo de uma vez (as ~5 mil já com tags, em 11 listas) e
   ele roda um comando só no PC (`backend/scripts/catalogo_bloco.py`: confere no
