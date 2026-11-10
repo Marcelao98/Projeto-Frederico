@@ -11,7 +11,7 @@ Atualizado em 07/11/2026 (v0.6.0).
 | Peça | Situação |
 |---|---|
 | **Cérebro musical** (entender pedidos, buscar no acervo, fila, aprender faixa nova) | ✅ pronto (`backend/freddy/nucleo/`) |
-| **Acervo** (607 faixas, 9 franquias, 27 climas) | ✅ pronto, curadoria contínua |
+| **Acervo** (560 faixas, 8 franquias, 27 climas; o Subahibi saiu em 08/11) | ✅ pronto, curadoria contínua |
 | **Painel** (Chat, Playlist, Acervo, 5 plumagens) | ✅ pronto; toca pelo Freddy ou sozinho pelo YouTube |
 | **App desktop** (Tauri) com instaladores no GitHub (Windows, Linux, Mac) | ✅ pronto (v0.5.x): liga o backend sozinho, sem terminal |
 | **Backend próprio** | ✅ pronto, vai dentro do app |
@@ -39,7 +39,7 @@ Atualizado em 07/11/2026 (v0.6.0).
     47 ocasiões com perfil (17 de RPG), 24 temas de letra, 18 instrumentos, 14
     cenários, ~750 gírias/expressões e o de-para das tags do acervo.
   - *Banco de pé* (etapa 2): esquema SQLite + FTS5 (`backend/freddy/catalogo/`),
-    compilador com as regras (`python -m freddy.catalogo.compilar`), as 607 de
+    compilador com as regras (`python -m freddy.catalogo.compilar`), as 607 (hoje 560) de
     RPG migradas (40 "não classificado" ficam marcadas pra revisar), consulta
     protótipo que entende gíria, ocasião por perfil, época, "sem", "ou" e
     "e depois", e 108 pedidos de ouro rodando nos testes (75 conferem

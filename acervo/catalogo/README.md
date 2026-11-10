@@ -19,13 +19,13 @@ compilador tira acento e caixa na hora de buscar).
 | `ocasioes_perfil.csv` | OCASIAO_PERFIL | a cara de cada ocasião: gêneros (a família vale pros filhos), energia 1–5, `voz` (sim/nao/qualquer), climas que combinam e que evitar |
 | `palavras.csv` | PALAVRA | o jeito que se fala: `palavra → tipo:alvo` com peso 0–1. Uma palavra pode apontar pra várias coisas (uma linha cada) |
 | `mapa_tags_acervo.csv` | (migração) | pra onde foi cada tag do `acervo/musicas.json` |
-| `musicas.csv` | MUSICA | uma linha por música; `lote` diz de onde veio (`rpg-legado` = as 607 do musicas.json), `revisar=1` = sem classificação ainda |
+| `musicas.csv` | MUSICA | uma linha por música; `lote` diz de onde veio (`rpg-legado` = as 560 do musicas.json), `revisar=1` = sem classificação ainda |
 | `obras.csv`, `artistas.csv` | OBRA, ARTISTA | `apelidos` da obra (separados por `\|`) também viram palavra |
 | `musica_genero.csv`, `musica_tag.csv`, `musica_artista.csv` | ligações | peso 0–1; `quem_marcou`: `curadoria` (o Marcelo), `claude` (inferido) |
 | `fontes.csv` | FONTE | onde tocar; `oficial`/`viva` conferidos na etapa 3 |
 | `pedidos_de_ouro.csv` | (teste) | frases reais: o que tem que entender e o que tem que (e não pode) aparecer |
 
-As 607 faixas de RPG vêm do `musicas.json` pelo `backend/scripts/catalogo_migrar_rpg.py`
+As 560 faixas de RPG vêm do `musicas.json` pelo `backend/scripts/catalogo_migrar_rpg.py`
 (roda de novo sem problema; ele reescreve os CSV de música). Até a etapa 4 o app
 continua usando o `musicas.json`.
 
