@@ -45,7 +45,11 @@ Atualizado em 07/11/2026 (v0.6.0).
     "e depois", e 108 pedidos de ouro rodando nos testes (75 conferem
     resultado; 33 de música geral ficam pendentes até ter música).
   - O app ainda usa o `musicas.json`: nada do app mudou.
-- **Etapa 3 (encher o catálogo) EM PAUSA (08/11/2026, decisão do Marcelo: gasta muito token).** Quando voltar: Guia completo e detalhado pra
+- **Etapa 3 em andamento (10/11/2026):** o Codex fez 6 de 11 blocos (3.425 músicas,
+  0 erros). Faltam: 03 (+115), 04 (+222), 07 (+400), 10 (+450), 11 (+400). Quem
+  continuar: `python3 -m freddy.catalogo.bloco status` (de `backend/`) e o
+  `acervo/catalogo/blocos/ORQUESTRACAO.md`.
+- **Etapa 3 (encher o catálogo), histórico: EM PAUSA em 08/11/2026 (gastava muito token).** Quando voltar: Guia completo e detalhado pra
   continuar: **`docs/etapas/banco-fredify-etapa3.md`** (leia esse primeiro).
   Decisão do Marcelo: tudo de uma vez (as ~5 mil já com tags, em 11 listas) e
   ele roda um comando só no PC (`backend/scripts/catalogo_bloco.py`: confere no
