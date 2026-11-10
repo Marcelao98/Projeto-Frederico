@@ -27,7 +27,7 @@ Na página **Releases** do GitHub, baixe o arquivo do seu sistema:
 (`.github/workflows/app.yml`): a cada push num branch `claude/...` que mexa
 no app, ele roda os testes, empacota o backend, compila os três sistemas e
 publica a Release `v<versão>`. Pra lançar versão nova, ver "Lançar versão
-nova do app" no `CLAUDE.md` da raiz.
+nova do app" no `AGENTS.md` da raiz.
 
 ## Rodar a partir do código (pra desenvolver)
 

@@ -41,7 +41,7 @@ toca e mistura som, e o Discord é só uma das saídas:
 Por que local: bot de música público na nuvem cai (termos do YouTube e
 bloqueio de IP de datacenter). No PC de cada um, é uso pessoal pra própria mesa.
 
-O plano completo, fase por fase, está em [`ROADMAP.md`](ROADMAP.md); o guia pra quem for mexer no código (inclusive o Claude) está em [`CLAUDE.md`](CLAUDE.md).
+O plano completo, fase por fase, está em [`ROADMAP.md`](ROADMAP.md); o guia pra quem for mexer no código (gente ou qualquer agente de IA) está em [`AGENTS.md`](AGENTS.md).
 
 ## Como o repositório está dividido
 

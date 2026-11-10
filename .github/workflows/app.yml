@@ -1,6 +1,6 @@
 # Compila o app do Freddy (frontend + Tauri) e publica numa Release do GitHub.
 #
-# Dispara a cada push num branch de sessão do Claude (claude/...) que mexa no
+# Dispara a cada push num branch de agente (claude/... ou codex/...) que mexa no
 # app, à mão pela aba Actions (no main), ou quando sobe uma tag de versão.
 # O main é o espelho do que está pronto: push no main não compila de novo.
 # Primeiro roda os testes; só compila se passarem. A Release se chama
@@ -13,8 +13,8 @@ name: App do Freddy
 on:
   push:
     tags: ["v*"]
-    # Qualquer sessão do Claude (cada uma tem seu branch claude/<nome>).
-    branches: ["claude/**"]
+    # Sessões de agente: claude/<nome> ou codex/<nome> (ver AGENTS.md).
+    branches: ["claude/**", "codex/**"]
     paths: ["frontend/**", "backend/**", "scripts/**", ".github/workflows/app.yml"]
   workflow_dispatch:
 
