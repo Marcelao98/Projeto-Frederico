@@ -175,7 +175,12 @@ class Catalogo:
         """Quanto a música m satisfaz o alvo (0 = nada)."""
         t, alvo = a.tipo, a.alvo
         if t == "genero":
-            return a.peso * m["generos"].get(alvo, 0)
+            if alvo in m["generos"]:
+                return a.peso * m["generos"][alvo]
+            # Parente próximo (mesmo pai): "modão" de 2024 não existe, mas sertanejo de 2024 sim.
+            # Vale no limite do "cumpre", e sempre perde pra quem é do gênero pedido.
+            pai = self.pai.get(alvo)
+            return a.peso * PESO_FORTE if pai and pai in m["generos"] else 0
         if t in ("clima", "tema", "instrumento", "cenario"):
             return a.peso * m["tags"].get(alvo, 0)
         if t == "ocasiao":
@@ -261,7 +266,7 @@ class Catalogo:
     def _pontuar(self, grupos: list[Grupo], livre: list[str]) -> tuple[dict[str, float], bool]:
         exigidos = [g for g in grupos if g.forte and not g.negado]
         negados = [g for g in grupos if g.negado]
-        candidatos: list[tuple[int, float, str]] = []
+        candidatos: list[tuple[float, float, str]] = []
         for mid, m in self.musicas.items():
             if livre and not self._texto_bate(mid, livre):
                 continue
@@ -274,7 +279,14 @@ class Catalogo:
                 f = max(self.forca(m, a) for a in g.alvos)
                 if f > 0:
                     pontos += f
-                    cumpridos += g in exigidos
+                    # Só "cumpre" o pedido quem bate num alvo forte do grupo: "modão" também
+                    # aponta de leve pra clima sofrido, e um pagode sofrido não é modão.
+                    if g in exigidos and f >= PESO_FORTE:
+                        cumpridos += 1
+                        # Gênero dito com todas as letras pesa mais que o resto na hora do
+                        # "não achei tudo": "lofi pra estudar" sem lofi de estudo devolve lofi.
+                        if any(a.tipo == "genero" and a.peso >= PESO_FORTE and a.alvo in m["generos"] for a in g.alvos):
+                            cumpridos += 0.5
             if not grupos and not livre:
                 continue
             pontos += 0.2 * m["popularidade"] / 100 + (1.0 if livre else 0)
@@ -287,7 +299,7 @@ class Catalogo:
         maximo = max(c[0] for c in candidatos)
         if maximo == 0:
             return {}, False
-        return {mid: p for c, p, mid in candidatos if c == maximo}, maximo == len(exigidos)
+        return {mid: p for c, p, mid in candidatos if c == maximo}, int(maximo) == len(exigidos)
 
 
 def abrir(caminho: Path | str | None = None) -> Catalogo:

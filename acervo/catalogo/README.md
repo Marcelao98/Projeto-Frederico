@@ -31,7 +31,10 @@ continua usando o `musicas.json`.
 
 **Regras** (o compilador barra): ids e referências válidos, toda ocasião com
 perfil, toda música com gênero, energia, animação, ≥ 2 climas, popularidade,
-ano e fonte oficial viva. Pro `rpg-legado`, ano e fonte oficial são aviso; música
+ano e fonte viva. A fonte é separada da música (`fontes.csv`): a oficial
+(`oficial=1`: canal do artista, VEVO, Topic, gravadora) é a preferida; sem ela, entra
+o vídeo mais visto daquela gravação com `oficial=0`, pra trocar quando aparecer a
+oficial. Pro `rpg-legado`, ano e fonte são aviso; música
 com `revisar=1` não precisa de clima nem energia.
 
 **Pedidos de ouro:** `entende` = alvos que a consulta tem que reconhecer (`!` =

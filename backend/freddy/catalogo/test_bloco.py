@@ -104,7 +104,7 @@ class TestImportar(unittest.TestCase):
             (cat / "blocos").mkdir()
             base = dict.fromkeys(COLUNAS, "")
             linhas = [
-                {**base, "artista": "Chitãozinho & Xororó", "titulo": "Evidências", "ano": "1989",
+                {**base, "artista": "Chitãozinho & Xororó", "titulo": "Evidências", "ano": "1992",
                  "genero": "sertanejo-romantico", "idioma": "pt", "tem_voz": "1", "energia": "3", "animacao": "2",
                  "climas": "sofrido|romantico", "ocasioes": "karaoke", "temas": "amor", "popularidade": "98",
                  "essencial": "1", "canta_junto": "1", "explicita": "0", "ao_vivo": "0"},
@@ -121,7 +121,7 @@ class TestImportar(unittest.TestCase):
 
             grava("bloco-02.csv", COLUNAS, linhas)
             grava("bloco-02.musicbrainz.csv", ["artista", "titulo", "ano_lista", "ano_mb", "confere", "mbid", "duracao", "motivo"],
-                  [{"artista": "Chitãozinho & Xororó", "titulo": "Evidências", "ano_lista": "1989", "ano_mb": "1990",
+                  [{"artista": "Chitãozinho & Xororó", "titulo": "Evidências", "ano_lista": "1992", "ano_mb": "1990",
                     "confere": "NÃO", "mbid": "abc", "duracao": "270", "motivo": ""}])
             grava("bloco-02.youtube.csv", ["artista", "titulo", "endereco", "canal", "oficial", "duracao", "motivo"],
                   [{"artista": "Chitãozinho & Xororó", "titulo": "Evidências", "endereco": "https://www.youtube.com/watch?v=x",

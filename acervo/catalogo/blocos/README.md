@@ -8,8 +8,8 @@ computador dele; o Claude lê o relatório e arruma o que precisar.
 |---|---|
 | `bloco-NN.csv` | a lista (o Claude gera): artista, título, ano, gênero e as tags |
 | `bloco-NN.musicbrainz.csv` | o que o MusicBrainz diz (ano de verdade, mbid, duração) |
-| `bloco-NN.youtube.csv` | o link oficial escolhido e por quê |
-| `pendentes.csv` | as que ficaram de fora (sem upload oficial no YouTube) |
+| `bloco-NN.youtube.csv` | o link escolhido, se é oficial (`oficial` 1/0) e por quê |
+| `pendentes.csv` | as que ficaram de fora (nenhum vídeo dessa gravação no YouTube) |
 | `relatorio.md` | o resumo da última rodada |
 | `REGRAS_PARA_GERAR.md` | como gerar uma lista (vai no pedido de cada subagente) |
 | `rascunhos/` | o que os subagentes deixaram antes de parar (ver `docs/etapas/banco-fredify-etapa3.md`) |
@@ -27,7 +27,7 @@ python scripts/catalogo_bloco.py
 ```
 
 Confere tudo no MusicBrainz e no YouTube (ao mesmo tempo), põe no catálogo as
-que têm link oficial (com o ano corrigido), compila, roda os pedidos de ouro,
+que têm link (oficial, ou o mais visto marcado como não oficial; com o ano corrigido), compila, roda os pedidos de ouro,
 escreve o `relatorio.md` e faz commit + push no `main`. Umas 3 horas pra 5 mil;
 pode parar e rodar de novo que continua. `--so-importar` refaz só o fim;
 `--sem-enviar` não manda pro GitHub.

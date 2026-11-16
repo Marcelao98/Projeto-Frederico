@@ -1,0 +1,383 @@
+# Relatório da conferência dos blocos
+
+| Bloco | Na lista | Entraram | Pendentes |
+|---|---|---|---|
+| bloco-01 | 562 | 557 | 5 |
+| bloco-02 | 400 | 381 | 19 |
+| bloco-03 | 483 | 470 | 13 |
+| bloco-04 | 521 | 507 | 14 |
+| bloco-05 | 450 | 299 | 151 |
+| bloco-06 | 450 | 387 | 63 |
+| bloco-07 | 552 | 539 | 13 |
+| bloco-08 | 499 | 490 | 9 |
+| bloco-09 | 450 | 448 | 2 |
+| bloco-10 | 621 | 618 | 3 |
+| bloco-11 | 471 | 359 | 112 |
+| **total** | 5459 | 5055 | 404 |
+
+- Anos corrigidos pelo MusicBrainz: 343
+- Sem resultado no MusicBrainz (ficou o ano da lista): 3129
+- Pendentes (sem link oficial): `pendentes.csv`
+- Compilação: OK
+- Pedidos de ouro: há falhas (abaixo)
+
+## Pedidos de ouro que falharam
+
+```
+FAIL: test_pedidos_de_ouro (freddy.catalogo.test_catalogo.TestCatalogo.test_pedidos_de_ouro) (pedido='g01', frase='toca um modão de 2024 pra um churrasco e depois um pagode')
+AssertionError: False is not true : menos-e-mais-coracao-partido-corazon-partio não cumpre genero:sertanejo
+FAIL: test_pedidos_de_ouro (freddy.catalogo.test_catalogo.TestCatalogo.test_pedidos_de_ouro) (pedido='g02', frase='sofrência pra chorar')
+AssertionError: False is not true : menos-e-mais-coracao-partido-corazon-partio não cumpre clima:triste
+FAIL: test_pedidos_de_ouro (freddy.catalogo.test_catalogo.TestCatalogo.test_pedidos_de_ouro) (pedido='g17', frase='lofi pra estudar')
+AssertionError: False is not true : ludovico-einaudi-nuvole-bianche não cumpre genero:lofi-hip-hop
+FAIL: test_pedidos_de_ouro (freddy.catalogo.test_catalogo.TestCatalogo.test_pedidos_de_ouro) (pedido='g27', frase='lançamentos de funk')
+AssertionError: False is not true : matheus-kauan-ana-castela-ilusao-de-otica-ao-vivo não cumpre genero:funk-br
+FAIL: test_toda_musica_do_acervo_migrou (freddy.catalogo.test_catalogo.TestCatalogo.test_toda_musica_do_acervo_migrou)
+AssertionError: Items in the second set but not the first:
+```
+
+## Anos corrigidos
+
+- Tim Maia - Do Leme ao Pontal: 1986 → 1980
+- Zé Ramalho - Avôhai: 1978 → 1976
+- Alceu Valença - La Belle de Jour: 1992 → 1991
+- Vanessa da Mata - Ai, Ai, Ai...: 2005 → 2004
+- Tiago Iorc - Amei Te Ver: 2016 → 2015
+- Maria Bethânia - Explode Coração: 1979 → 1978
+- Gilsons - Várias Queixas: 2020 → 2019
+- Exaltasamba - Livre pra Voar: 2009 → 2007
+- Thiaguinho - Caraca, Muleke!: 2016 → 2014
+- Zezé Di Camargo & Luciano - No Dia em Que Eu Saí de Casa: 1996 → 1995
+- Bruno & Marrone - Dormi na Praça: 2001 → 1994
+- César Menotti & Fabiano - Leilão: 2006 → 2005
+- Henrique & Juliano - Cuida Bem Dela: 2016 → 2014
+- Marília Mendonça - Infiel: 2016 → 2015
+- Maiara & Maraisa - 10%: 2016 → 2015
+- Matheus & Kauan - Que Sorte a Nossa: 2018 → 2015
+- Lauana Prado - Cobaia: 2021 → 2018
+- Mastruz com Leite - Meu Vaqueiro, Meu Peão: 1995 → 1993
+- Mari Fernandez - Não, Não Vou: 2022 → 2021
+- Daniela Mercury - Rapunzel: 1997 → 1996
+- Banda Eva - Eva: 1997 → 1996
+- Timbalada - Beija-Flor: 1994 → 1993
+- Joelma - Voando pro Pará: 2016 → 2015
+- Jota Quest - Fácil: 2000 → 1998
+- Cidade Negra - Onde Você Mora?: 1996 → 1994
+- Angra - Carry On: 1993 → 1992
+- Sabotage - Um Bom Lugar: 2001 → 2000
+- MC Marcinho - Glamurosa: 2004 → 2001
+- Xuxa - Parabéns da Xuxa: 1989 → 1987
+- Wando - Fogo e Paixão: 1988 → 1985
+- Fernandinho - Uma Nova História: 2012 → 2009
+- Thalles Roberto - Arde Outra Vez: 2011 → 2009
+- Shakira - Hips Don't Lie: 2006 → 2005
+- Adele - Someone Like You: 2011 → 2010
+- Adele - Hello: 2015 → 2005
+- Ed Sheeran - Shape of You: 2017 → 2015
+- The Weeknd - Save Your Tears: 2020 → 2019
+- Guns N' Roses - November Rain: 1991 → 1986
+- The Killers - Mr. Brightside: 2003 → 2001
+- Norah Jones - Don't Know Why: 2002 → 2001
+- Celine Dion - My Heart Will Go On: 1997 → 1993
+- Bryan Adams - (Everything I Do) I Do It for You: 1991 → 1988
+- 50 Cent - In da Club: 2003 → 2002
+- The Black Eyed Peas - I Gotta Feeling: 2009 → 2008
+- La Bouche - Be My Lover: 1995 → 1994
+- Hans Zimmer - Time: 2010 → 1993
+- Quarteto em Cy - Tristeza: 1965 → 1964
+- Elis Regina - Casa no Campo: 1972 → 1971
+- Elis Regina - Wave: 1974 → 1969
+- Gilberto Gil - Questão de Ordem: 1984 → 1977
+- Gal Costa - Brasil: 1988 → 1980
+- Gal Costa - Barato Total: 1981 → 1974
+- Os Mutantes - O Relógio: 1969 → 1968
+- Tom Zé - Augusta, Angélica e Consolação: 1976 → 1973
+- Tom Zé - Jimmy, Renda-se: 1976 → 1970
+- Milton Nascimento - Vera Cruz: 1969 → 1968
+- Milton Nascimento - Sentinela: 1980 → 1969
+- 14 Bis - Planeta Sonho: 1982 → 1980
+- 14 Bis - Linda Juventude: 1984 → 1982
+- Itamar Assumpção - Fico Louco: 1982 → 1981
+- Zeca Baleiro - Flor da Pele: 1998 → 1997
+- Chico Buarque - Ana de Amsterdam: 1973 → 1972
+- Maria Bethânia - Negue: 1983 → 1978
+- Maria Bethânia - Olhos nos Olhos: 1990 → 1976
+- Ivan Lins - Vitoriosa: 1987 → 1986
+- Ivan Lins - Abre Alas: 1978 → 1974
+- Fagner - Revelação: 1982 → 1978
+- Djavan - Faltando um Pedaço: 1986 → 1981
+- Djavan - Esquinas: 1992 → 1984
+- Djavan - Álibi: 1979 → 1978
+- Djavan - Nem um Dia: 1997 → 1996
+- Djavan - Asa: 1993 → 1986
+- Djavan - Vidas Pra Contar: 2016 → 2015
+- Marisa Monte - Ainda Lembro: 2000 → 1991
+- Tribalistas - Um a Um: 2017 → 2002
+- Adriana Calcanhotto - Metade: 2000 → 1994
+- Adriana Calcanhotto - Vambora: 2000 → 1998
+- Lenine - Jack Soul Brasileiro: 1999 → 1998
+- Lenine - Leão do Norte: 1997 → 1993
+- Lenine - O Último Pôr do Sol: 1999 → 1993
+- Lenine - Hoje Eu Quero Sair Só: 1999 → 1997
+- Maria Rita - Recado: 2007 → 2005
+- Vanessa da Mata - Onde Ir: 2004 → 2002
+- Vanessa da Mata - Música: 2012 → 2004
+- Vanessa da Mata - Não Me Deixe Só: 2007 → 2002
+- Ana Carolina - Garganta: 2003 → 1999
+- Ana Carolina - É Isso Aí: 2006 → 2005
+- Ana Carolina - Confesso: 2009 → 2001
+- Roberta Sá - Eu Sambo Mesmo: 2007 → 2005
+- Mallu Magalhães - Tchubaruba: 2008 → 2007
+- Mallu Magalhães - J1: 2008 → 2007
+- Silva - A Visita: 2012 → 2011
+- Rodrigo Amarante - Tuyo: 2016 → 2015
+- Céu - Malemolência: 2005 → 2003
+- Liniker e os Caramelows - Zero: 2016 → 2015
+- Zé Ramalho - Garoto de Aluguel: 1982 → 1979
+- Zé Ramalho - Frevo Mulher: 1980 → 1979
+- Geraldo Azevedo - Caravana: 1979 → 1975
+- Tim Maia - Acenda o Farol: 1982 → 1978
+- Tim Maia - Um Dia de Domingo: 1986 → 1985
+- Tim Maia - Chocolate: 1973 → 1971
+- Tim Maia - Eu Amo Você: 1984 → 1970
+- Cassiano - A Lua e Eu: 1976 → 1975
+- Hyldon - As Dores do Mundo: 1976 → 1975
+- Wilson Simonal - Meu Limão, Meu Limoeiro: 1969 → 1966
+- Seu Jorge - Tive Razão: 2004 → 2003
+- Seu Jorge - Carolina: 2004 → 2002
+- Tim Maia - Você: 1971 → 1970
+- Nelson Cavaquinho - Rugas: 1973 → 1970
+- Maysa - Adeus: 1958 → 1956
+- Clara Nunes - Ê Baiana: 1974 → 1971
+- Clara Nunes - Nação: 1982 → 1980
+- Beth Carvalho - 1800 Colinas: 1978 → 1974
+- Beth Carvalho - Coisinha do Pai: 1980 → 1979
+- Alcione - Meu Vício É Você: 1991 → 1987
+- Paulinho da Viola - Coisas do Mundo, Minha Nega: 1969 → 1968
+- Martinho da Vila - Ex-Amor: 1983 → 1981
+- Jorge Aragão - Malandro: 1986 → 1983
+- Zeca Pagodinho - Camarão Que Dorme a Onda Leva: 1986 → 1983
+- Zeca Pagodinho - Maneiras: 2003 → 1987
+- Bezerra da Silva - Saudação às Favelas: 1986 → 1985
+- Leci Brandão - Ombro Amigo: 1978 → 1977
+- Mart'nália - Cabide: 2006 → 2005
+- Mart'nália - Menino do Rio: 2006 → 2005
+- Exaltasamba - Me Apaixonei Pela Pessoa Errada: 1999 → 1998
+- Exaltasamba - Telegrama: 2005 → 1996
+- Exaltasamba - Luz do Desejo: 1999 → 1996
+- Exaltasamba - Cartão Postal: 1999 → 1998
+- Exaltasamba - 24 Horas de Amor: 2000 → 1994
+- Só Pra Contrariar - Que Se Chama Amor: 1994 → 1993
+- Raça Negra - Cigana: 1994 → 1992
+- Raça Negra - Estou Mal: 1995 → 1993
+- Raça Negra - Quando Te Encontrei: 1996 → 1993
+- Negritude Júnior - Beijo Geladinho: 1996 → 1994
+- Negritude Júnior - Tanajura: 1997 → 1996
+- Molejo - Caçamba: 1995 → 1994
+- Art Popular - Utopia: 1995 → 1993
+- Grupo Revelação - Deixa Acontecer: 2002 → 2001
+- Thiaguinho - Deixa Eu Te Fazer Feliz: 2017 → 2012
+- Péricles - Se Eu Largar o Freio: 2014 → 2013
+- Ferrugem - Eu Juro: 2018 → 2016
+- Dilsinho - Cansei de Farra: 2017 → 2016
+- Jeito Moleque - Amor Eterno: 2007 → 2005
+- Arlindo Cruz - Meu Nome é Favela: 2012 → 2011
+- Diogo Nogueira - Tô Fazendo a Minha Parte: 2009 → 2007
+- Diogo Nogueira - Fé em Deus: 2010 → 2007
+- Antônio Carlos & Jocáfi - Desacato: 1972 → 1971
+- Luiz Ayrão - Porta Aberta: 1976 → 1974
+- Clementina de Jesus - Cangoma Me Chamou: 1976 → 1966
+- Só Pra Contrariar - Domingo: 1995 → 1993
+- Exaltasamba - Valeu: 2010 → 2008
+- Exaltasamba - Viver Sem Ti: 2011 → 2010
+- Exaltasamba - Abandonado: 2009 → 2008
+- Exaltasamba - Gamei: 2003 → 1996
+- Os Travessos - Quando a Gente Ama: 1998 → 1997
+- Soweto - Refém do Coração: 1999 → 1997
+- Soweto - Antes de Dizer Adeus: 1998 → 1997
+- Karametade - Decisão: 1998 → 1997
+- Kiloucura - Pela Vida Inteira: 1999 → 1998
+- Os Morenos - Marrom Bombom: 1996 → 1994
+- Katinguelê - Recado à Minha Amada: 1997 → 1996
+- Katinguelê - Corpo Lúcido: 1995 → 1994
+- Negritude Júnior - Que Dure para Sempre: 1998 → 1997
+- Molejo - Ah! Moleque: 1998 → 1996
+- Grupo Raça - Da África à Sapucaí: 1992 → 1991
+- Grupo Revelação - Compasso do Amor: 2004 → 2000
+- Grupo Revelação - Preciso Te Amar: 2003 → 2002
+- Sorriso Maroto - Por Você: 2005 → 2003
+- Sorriso Maroto - Clichê: 2011 → 2010
+- Sorriso Maroto - Disfarça: 2009 → 2003
+- Sorriso Maroto - Adivinha o Quê: 2006 → 2005
+- Sorriso Maroto - E Agora Nós?: 2010 → 2009
+- Thiaguinho - Sou o Cara pra Você: 2013 → 2012
+- Péricles - Linguagem dos Olhos: 2013 → 2012
+- Ferrugem - Climatizar: 2016 → 2014
+- Pixote - Nem de Graça: 2019 → 2018
+- Pixote - Coisas do Amor: 2015 → 2002
+- Mumuzinho - Curto Circuito: 2013 → 2012
+- Zeca Pagodinho - Ogum: 2008 → 1991
+- Zeca Pagodinho - Ainda É Tempo pra Ser Feliz: 2010 → 1998
+- Alcione - Nem Morta: 1986 → 1985
+- Fundo de Quintal - Boca Sem Dente: 1985 → 1983
+- Fundo de Quintal - E Eu Não Fui Convidado: 1989 → 1985
+- Almir Guineto - Insensato Destino: 1986 → 1985
+- Almir Guineto - Saco Cheio: 1986 → 1981
+- Almir Sater - Trem do Pantanal: 1983 → 1982
+- Chitãozinho & Xororó - Galopeira: 1988 → 1972
+- Bruno & Marrone - Vida Vazia: 1999 → 1998
+- Victor & Leo - Deus e Eu no Sertão: 2009 → 2002
+- Victor & Leo - Amigo: 2005 → 2004
+- Michel Teló - Fugidinha: 2011 → 2010
+- Michel Teló - Humilde Residência: 2012 → 2011
+- Michel Teló - Amanhã Sei Lá: 2013 → 2009
+- Michel Teló - Ei, Psiu! Beijo Me Liga: 2012 → 2009
+- Luan Santana - Sinais: 2010 → 2009
+- Jorge & Mateus - A Hora É Agora: 2014 → 2012
+- Jorge & Mateus - Amo Noite e Dia: 2013 → 2010
+- Gusttavo Lima - Inventor dos Amores: 2012 → 2011
+- Gusttavo Lima - Fui Fiel: 2019 → 2014
+- Gusttavo Lima - Zé da Recaída: 2019 → 2018
+- Henrique & Juliano - Recaídas: 2019 → 2012
+- Henrique & Juliano - Flor e o Beija-Flor: 2019 → 2015
+- Henrique & Juliano - Até Você Voltar: 2019 → 2014
+- Marília Mendonça - Eu Sei de Cor: 2017 → 2016
+- Simone & Simaria - Regime Fechado: 2017 → 2016
+- Simone & Simaria - Meu Violão e o Nosso Cachorro: 2016 → 2015
+- Zé Neto & Cristiano - Seu Polícia: 2017 → 2015
+- Munhoz & Mariano - Camaro Amarelo: 2012 → 2011
+- Fernando & Sorocaba - Paga Pau: 2011 → 2009
+- Ana Castela - Boiadeira: 2022 → 2021
+- Chitãozinho & Xororó - Brincar de Ser Feliz: 1992 → 1991
+- Zezé Di Camargo & Luciano - Faz Mais Uma Vez Comigo: 1998 → 1993
+- Leandro & Leonardo - Desculpe, Mas Eu Vou Chorar: 1992 → 1990
+- Leandro & Leonardo - Cadê Você: 1992 → 1990
+- João Paulo & Daniel - Minha Estrela Perdida: 1997 → 1996
+- João Paulo & Daniel - Hoje Eu Sei: 1998 → 1995
+- Chrystian & Ralf - Chora Peito: 1991 → 1986
+- Chrystian & Ralf - Noite de Tortura: 1990 → 1984
+- Trio Parada Dura - Fuscão Preto: 1982 → 1981
+- Roberta Miranda - Meu Dengo: 1989 → 1986
+- Roberta Miranda - Sol da Minha Vida: 1993 → 1992
+- Victor & Leo - Amigo Apaixonado: 2006 → 2004
+- Victor & Leo - Tem Que Ser Você: 2008 → 2007
+- Luan Santana - Você de Mim Não Sai: 2013 → 2012
+- Luan Santana - Cê Topa?: 2014 → 2013
+- Henrique & Juliano - Como É Que a Gente Fica: 2016 → 2015
+- Léo Foguete - Cópia Proibida: 2025 → 2024
+- Henrique & Juliano - Romântico (Ao Vivo): 2025 → 2024
+- Zezé Di Camargo & Luciano - Sem Medo de Ser Feliz: 2001 → 1995
+- Leandro & Leonardo - Solidão: 1990 → 1987
+- João Paulo & Daniel - Só Dá Você na Minha Vida: 1996 → 1994
+- Daniel - Declaração de Amor: 1999 → 1998
+- Daniel - Eu Me Amarrei: 1998 → 1995
+- Bruno & Marrone - Favo de Mel: 2001 → 1995
+- Bruno & Marrone - Passou da Conta: 2001 → 2000
+- Bruno & Marrone - Juras de Amor: 2012 → 2011
+- Bruno & Marrone - Se Não Tivesse Ido: 2005 → 2003
+- Rionegro & Solimões - Frio da Madrugada: 1999 → 1998
+- Rionegro & Solimões - Peão Apaixonado: 1998 → 1997
+- Rionegro & Solimões - Bate o Pé: 2002 → 1999
+- Gian & Giovani - Nem Dormindo Consigo Te Esquecer: 1992 → 1990
+- Gian & Giovani - Olha Amor: 1994 → 1992
+- Eduardo Costa - Amor de Violeiro: 2007 → 2006
+- Chico Rey & Paraná - Quem Será Seu Outro Amor: 1990 → 1987
+- João Mineiro & Marciano - Esta Noite Como Lembrança: 1984 → 1981
+- João Bosco & Vinícius - Quero Provar Que Te Amo: 2006 → 2001
+- César Menotti & Fabiano - Mensagem pra Ela: 2007 → 2005
+- Fernando & Sorocaba - Bala de Prata: 2009 → 2008
+- Fernando & Sorocaba - A Casa Caiu: 2011 → 2010
+- Fernando & Sorocaba - Celebridade: 2011 → 2010
+- Jorge & Mateus - Flor: 2012 → 2009
+- Jorge & Mateus - Logo Eu: 2014 → 2013
+- Jorge & Mateus - Contrato: 2018 → 2017
+- Jorge & Mateus - Mil Anos: 2011 → 2010
+- Luan Santana - Você Não Sabe o Que É Amor: 2010 → 2009
+- Luan Santana - Nêga: 2012 → 2011
+- Gusttavo Lima - Que Mal Te Fiz Eu (Diz-me): 2016 → 2015
+- Cristiano Araújo - É com Ela Que Eu Estou: 2015 → 2014
+- Cristiano Araújo - Mente pra Mim: 2013 → 2012
+- Lucas Lucco - Mozão: 2014 → 2013
+- Thaeme & Thiago - Deserto: 2014 → 2013
+- Jads & Jadson - Com Todos Menos Comigo: 2015 → 2009
+- Humberto & Ronaldo - Só Vou Beber Mais Hoje: 2014 → 2012
+- João Carreiro & Capataz - Xique Bacanizado: 2011 → 2009
+- João Neto & Frederico - Lê Lê Lê: 2011 → 2010
+- João Neto & Frederico - Pega Fogo Cabaré: 2010 → 2007
+- Gustavo Mioto - Impressionando os Anjos: 2017 → 2016
+- Gustavo Mioto - Despedida de Casal: 2021 → 2020
+- Maiara & Maraisa - No Dia do Seu Casamento: 2015 → 2014
+- Marília Mendonça - Alô Porteiro: 2016 → 2014
+- Marília Mendonça - Como Faz com Ela: 2017 → 2016
+- Marília Mendonça - Serenata: 2020 → 2019
+- Marília Mendonça - Deprê: 2021 → 2020
+- Di Paullo & Paulino - Estrelinha: 2020 → 2018
+- Simone & Simaria - Quando o Mel É Bom: 2016 → 2015
+- Henrique & Juliano - Mais Amor e Menos Drama: 2018 → 2017
+- Henrique & Juliano - A Maior Saudade: 2022 → 2021
+- Henrique & Juliano - O Céu Explica Tudo: 2018 → 2017
+- Zé Neto & Cristiano - Bebida na Ferida: 2019 → 2018
+- Zé Neto & Cristiano - Cadeira de Aço: 2019 → 2016
+- Diego & Victor Hugo - Infarto: 2019 → 2018
+- Diego & Victor Hugo - Áudio: 2020 → 2019
+- Hugo & Guilherme - Namorada Reserva: 2019 → 2018
+- Israel & Rodolffo - Marca Evidente: 2018 → 2013
+- Israel & Rodolffo - Bombonzinho: 2023 → 2022
+- Guilherme & Benuto - 3 Batidas: 2020 → 2019
+- Guilherme & Benuto - Pulei na Piscina: 2021 → 2020
+- Guilherme & Benuto - Sigilo: 2022 → 2021
+- Murilo Huff - Uma Ex: 2021 → 2019
+- Léo & Raphael - As Menina da Pecuária: 2022 → 2021
+- Paula Fernandes - Pra Você: 2011 → 2010
+- Felipe Araújo - A Mala É Falsa: 2017 → 2015
+- Cleber & Cauan - Quase: 2018 → 2017
+- Edson & Hudson - Te Quero pra Mim: 2003 → 1997
+- Edson & Hudson - Ela Encasquetou: 2011 → 2006
+- George Henrique & Rodrigo - Receita de Amar: 2014 → 2012
+- Chiclete com Banana - Camaleão: 1991 → 1989
+- Ilê Aiyê - Que Bloco É Esse: 1987 → 1984
+- Daniela Mercury - Swing da Cor: 1992 → 1991
+- Reginaldo Rossi - Mon Amour, Meu Bem, Ma Femme: 1986 → 1972
+- Banda Calypso - Dançando Calypso: 2004 → 1999
+- Ivete Sangalo - Se Eu Não Te Amasse Tanto Assim: 2005 → 1999
+- Reginaldo Rossi - A Raposa e as Uvas: 1989 → 1982
+- Dominguinhos - Lamento Sertanejo: 1976 → 1973
+- Jackson do Pandeiro - Forró em Limoeiro: 1959 → 1955
+- Luiz Gonzaga - Sabiá: 1964 → 1959
+- Ivete Sangalo - Carro Velho: 2008 → 2004
+- Marinês - Pisa na Fulô: 1961 → 1959
+- Flávio José - Pé de Serra: 1995 → 1991
+- Claudia Leitte - Beijar na Boca: 2011 → 2008
+- Jackson do Pandeiro - Um a Um: 1958 → 1955
+- Genival Lacerda - Radinho de Pilha: 1982 → 1979
+- Calcinha Preta - A Coisa Mais Linda: 2002 → 1999
+- Reginaldo Rossi - Em Plena Lua de Mel: 1983 → 1981
+- Wando - O Importante é Ser Fevereiro: 1982 → 1973
+- Wando - Moça: 1981 → 1975
+- Nelson Ned - Tudo Passará: 1971 → 1969
+- Lindomar Castilho - Eu Vou Rifar Meu Coração: 1977 → 1973
+- Banda Calypso - Dois Corações: 2004 → 1999
+- Luiz Gonzaga - Meu Pajeú: 1959 → 1957
+- Zé Ramalho - Vila do Sossego: 1980 → 1978
+- Ivete Sangalo - Eva: 2007 → 2004
+- Claudia Leitte - Exttravasa: 2012 → 2008
+- Banda Eva - Alô Paixão: 1998 → 1994
+- Margareth Menezes - Alegria da Cidade: 1990 → 1988
+- Banda Uó - Shake de Amor: 2012 → 2011
+- Dorival Caymmi - Quem Vem pra Beira do Mar: 1957 → 1954
+- Fafá de Belém - Foi Assim: 1981 → 1977
+- Lindomar Castilho - Você É Doida Demais: 1977 → 1974
+- Banda Eva - Beleza Rara: 1999 → 1996
+- Ivete Sangalo - Medo de Amar: 2010 → 1999
+- Claudia Leitte - Samba: 2013 → 2011
+- Banda Eva - Levada Louca: 1997 → 1996
+- Clara Nunes - Menino Deus: 1978 → 1974
+- Teixeirinha - Rio Grande do Sul: 1967 → 1961
+- Chico Science & Nação Zumbi - Samba Makossa: 1996 → 1994
+- Paulo Sérgio - Última Canção: 1970 → 1968
+- Banda Calypso - Pra Te Esquecer: 2005 → 2003
+- Banda Calypso - Vendaval: 2004 → 1999
+- Wesley Safadão - Coração Machucado: 2019 → 2015
+- Teixeirinha - Mãe: 1962 → 1961
+- Luiz Gonzaga - Légua Tirana: 1952 → 1941
+- Claudia Leitte - Quer Saber: 2018 → 2013

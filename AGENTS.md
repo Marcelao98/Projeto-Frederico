@@ -42,10 +42,11 @@ topo do arquivo de onde veio.
 9. **Um assunto por agente.** Trabalho dividido entre vários agentes (encher
    o catálogo) segue `acervo/catalogo/blocos/ORQUESTRACAO.md`: cada um no
    seu arquivo, pra ninguém pisar no outro.
-10. **O que só dá no PC do Marcelo:** testar o Discord de verdade, consultar
-    MusicBrainz e YouTube pro catálogo, abrir o app. Agente na nuvem
-    geralmente não alcança esses sites (e não consegue subir tag): teste
-    com dublês e peça pro Marcelo, ou deixe pra um agente rodando no PC dele.
+10. **O que só dá no PC do Marcelo:** testar o Discord de verdade e abrir o
+    app. Agente na nuvem geralmente não alcança o Discord (e não consegue
+    subir tag): teste com dublês e peça pro Marcelo. Pro catálogo
+    (MusicBrainz e busca no YouTube), a nuvem do Claude funciona no ambiente
+    **"Projeto-Frederico"**, que libera `musicbrainz.org` e `www.youtube.com`.
 
 ## Como o repositório está dividido
 

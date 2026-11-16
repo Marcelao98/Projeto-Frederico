@@ -92,7 +92,9 @@ def importar(pasta_cat: Path = PASTA_CATALOGO, pasta_blocos: Path | None = None)
             g = mb.get(k)
             if g is None or not g.get("ano_mb"):
                 rel.sem_musicbrainz += 1
-            elif g["confere"] == "NÃO" and "ano =" not in l["nota"]:
+            elif (g["confere"] == "NÃO" and "ano =" not in l["nota"]
+                  and g["ano_mb"].isdigit() and ano.isdigit() and int(g["ano_mb"]) < int(ano)):
+                # Só corrige pra TRÁS: o MusicBrainz com ano mais novo quase sempre é relançamento.
                 rel.anos_corrigidos.append(f"{l['artista']} - {l['titulo']}: {ano} → {g['ano_mb']}")
                 ano = g["ano_mb"]
             mid = base_id = slug(f"{l['artista']} {l['titulo']}")[:80]

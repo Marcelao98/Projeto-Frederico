@@ -74,7 +74,7 @@ class TestCatalogo(unittest.TestCase):
         import json
         from freddy.catalogo.compilar import RAIZ
         antigas = {m["id"] for m in json.loads((RAIZ / "acervo" / "musicas.json").read_text("utf-8"))["musicas"]}
-        self.assertEqual(antigas, set(self.cat.musicas))
+        self.assertLessEqual(antigas, set(self.cat.musicas))  # as de RPG continuam lá, junto das dos blocos
 
     def _cumpre(self, mid: str, cond: str, minimo: float = 0.0) -> bool:
         m = self.cat.musicas[mid]

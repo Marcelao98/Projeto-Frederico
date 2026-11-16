@@ -47,7 +47,7 @@ r46;bloodborne sem terror;obra:bloodborne|!ocasiao:rpg-terror;obra:bloodborne;oc
 r47;skyrim;obra:skyrim;obra:skyrim;;
 r48;zelda;obra:zelda-ocarina-of-time|obra:zelda-majoras-mask;;;apelido de duas obras
 g01;toca um modão de 2024 pra um churrasco e depois um pagode;genero:sertanejo-raiz|epoca:2024-2024|ocasiao:churrasco > genero:pagode;genero:sertanejo|epoca:2024-2024 > genero:pagode;clima:triste > ;o pedido-meta do plano
-g02;sofrência pra chorar;genero:sofrencia|clima:triste;clima:triste;clima:festivo;
+g02;sofrência pra chorar;genero:sofrencia|clima:triste;clima:sofrido;clima:festivo;"pra chorar" = triste ou fossa: cobra o sofrido
 g03;música de corno;tema:dor-de-cotovelo|clima:sofrido;clima:sofrido;clima:festivo;
 g04;pagodão;genero:pagode-baiano;genero:pagode-baiano;;
 g05;piseiro;genero:piseiro;genero:piseiro;;
