@@ -1,6 +1,7 @@
 """Enche o catálogo do Fredify: confere TODOS os blocos e põe no catálogo. Um comando só.
 
-Roda no computador do Marcelo (a nuvem não alcança o MusicBrainz nem o YouTube).
+Roda no computador do Marcelo, ou na nuvem no ambiente "Projeto-Frederico" (que
+libera o MusicBrainz e o YouTube).
 De dentro de backend/ (só precisa do yt-dlp instalado):
 
     python scripts/catalogo_bloco.py
@@ -214,12 +215,15 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--so-importar", action="store_true", help="não confere nada, só importa/compila/testa")
     ap.add_argument("--sem-enviar", action="store_true", help="não faz commit nem push")
+    ap.add_argument("--so-conferir", action="store_true", help="só confere no MusicBrainz e no YouTube (não importa)")
     args = ap.parse_args()
     if not listas_de_blocos():
         diga(f"Nenhum bloco em {PASTA_BLOCOS}")
         return 1
     if not args.so_importar:
         conferir()
+    if args.so_conferir:
+        return 0
     diga("2. Pondo no catálogo...")
     rel = importar()
     entraram = sum(c.get("entrou", 0) for c in rel.por_bloco.values())

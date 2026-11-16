@@ -1,0 +1,472 @@
+artista;titulo;ano;genero;genero2;feat;idioma;tem_voz;energia;animacao;climas;ocasioes;temas;instrumentos;popularidade;essencial;canta_junto;explicita;ao_vivo;nota
+Aqua;Barbie Girl;1997;eurodance;dance-pop;;en;1;4;5;engracado|animado|festivo;festa|aniversario;zoeira;;88;0;1;0;0;
+Vengaboys;Boom, Boom, Boom!!;1998;eurodance;;;en;1;5;5;animado|festivo|alegre;balada|festa;curticao;;72;0;1;0;0;
+Vengaboys;We Like to Party!;1998;eurodance;;;en;1;5;5;festivo|animado|alegre;festa|balada;curticao|danca;;70;0;1;0;0;
+Culture Beat;Mr. Vain;1993;eurodance;;;en;1;4;4;animado|confiante|festivo;balada;pegacao;;70;0;1;0;0;
+Real McCoy;Another Night;1993;eurodance;;;en;1;4;4;animado|alegre|festivo;balada|festa;curticao;;62;0;1;0;0;
+Dr. Alban;It's My Life;1992;eurodance;;;en;1;4;4;animado|confiante|festivo;balada|festa;liberdade|curticao;;62;0;1;0;0;
+Technotronic;Pump Up the Jam;1989;house;eurodance;;en;1;5;5;animado|festivo|empolgante;balada|festa;danca;;68;0;1;0;0;
+Rednex;Cotton Eye Joe;1994;eurodance;;;en;1;5;5;animado|festivo|engracado;festa|balada;danca;;80;0;1;0;0;
+Scooter;How Much Is the Fish?;1998;eurodance;techno;;en;1;5;4;animado|engracado|empolgante;balada;zoeira;;45;0;0;0;0;
+Alice DJ;Better Off Alone;1999;eurodance;trance;;en;1;5;4;animado|empolgante|sonhador;balada|treino;solidao;;70;0;1;0;0;
+Basshunter;Boten Anna;2006;eurodance;;;outro;1;5;5;animado|festivo|alegre;balada|festa;amor;;52;0;1;0;0;
+Basshunter;Now You're Gone;2008;eurodance;;;en;1;5;3;animado|empolgante|melancolico;balada;termino;;60;0;1;0;0;
+Cascada;Everytime We Touch;2005;eurodance;trance;;en;1;5;4;animado|romantico|empolgante;balada|treino;amor|paixao;;72;0;1;0;0;
+Cascada;Evacuate the Dancefloor;2009;dance-pop;eurodance;;en;1;5;5;festivo|animado|empolgante;balada;danca;;62;0;1;0;0;
+Spiller;Groovejet (If This Ain't Love);2000;house;dance-pop;Sophie Ellis-Bextor;en;1;4;5;alegre|sensual|animado;balada|praia;amor;;62;0;1;0;0;
+Daft Punk;Around the World;1997;house;;;en;1;4;4;animado|estranho|alegre;balada|jogar;danca;sintetizador;68;0;1;0;0;
+Daft Punk;Harder, Better, Faster, Stronger;2001;house;;;en;1;5;4;animado|empolgante|confiante;treino|balada;danca;sintetizador;80;1;1;0;0;
+Daft Punk;Technologic;2001;house;;;en;1;5;3;estranho|agressivo|empolgante;treino|balada;danca;sintetizador;65;0;0;0;0;
+Justice;D.A.N.C.E.;2007;house;;;en;1;4;5;alegre|animado|festivo;festa|balada;danca;;55;0;1;0;0;
+Fatboy Slim;Praise You;1998;house;;;en;1;4;4;alegre|nostalgico|animado;festa;amor;;66;0;1;0;0;
+Fatboy Slim;Right Here, Right Now;1999;house;;;en;1;5;4;empolgante|animado|confiante;treino|balada;;;55;0;0;0;0;
+Fatboy Slim;Rockafeller Skank;1998;house;;;en;1;5;4;animado|empolgante|engracado;balada|treino;;;55;0;0;0;0;
+The Chemical Brothers;Galvanize;2005;techno;;Q-Tip;en;1;5;3;agressivo|empolgante|confiante;treino|jogar;;;50;0;0;0;0;
+The Chemical Brothers;Block Rockin' Beats;1997;techno;;;en;1;5;3;agressivo|empolgante|animado;treino|balada;;;45;0;0;0;0;
+The Prodigy;Firestarter;1996;techno;;;en;1;5;2;agressivo|tenso|empolgante;treino|rpg-combate;;;62;0;0;0;0;
+The Prodigy;Breathe;1996;techno;;;en;1;5;2;agressivo|tenso|sombrio;treino|rpg-combate;;;55;0;0;0;0;
+The Prodigy;Smack My Bitch Up;1997;techno;;;en;1;5;2;agressivo|tenso|empolgante;treino;;;55;0;0;1;0;
+Moby;Porcelain;1999;chillout;;;en;1;2;2;melancolico|contemplativo|sonhador;relaxar|dia-chuvoso;solidao;;60;0;0;0;0;
+Moby;Why Does My Heart Feel So Bad?;1999;chillout;;;en;1;2;2;melancolico|sagrado|contemplativo;relaxar|fossa;perda;;55;0;0;0;0;
+Moby;Natural Blues;1999;chillout;;;en;1;3;2;melancolico|saudade|contemplativo;relaxar;perda;;55;0;0;0;0;
+Faithless;Insomnia;1995;trance;house;;en;1;5;3;empolgante|tenso|animado;balada|treino;;;60;0;0;0;0;
+Robert Miles;Children;1995;trance;;;;0;3;3;sonhador|melancolico|contemplativo;estrada|foco;;piano;70;1;0;0;0;
+Sash!;Ecuador;1997;eurodance;trance;;en;1;5;5;festivo|animado|alegre;balada|festa;danca;;50;0;0;0;0;
+ATB;9 PM (Till I Come);1998;trance;;;;0;4;4;sonhador|animado|romantico;balada;;sintetizador;62;0;0;0;0;
+Armin van Buuren;Blah Blah Blah;2018;edm;;;en;1;5;4;agressivo|animado|engracado;balada|treino;;;45;0;0;1;0;
+Armin van Buuren;In and Out of Love;2008;trance;;Sharon den Adel;en;1;4;3;melancolico|romantico|empolgante;balada;amor|termino;voz-feminina;55;0;1;0;0;
+Tiësto;Adagio for Strings;2005;trance;;;;0;4;2;dramatico|epico|melancolico;balada;;orquestra;55;0;0;0;0;Remix do Adagio de Barber
+Tiësto;Red Lights;2013;edm;;;en;1;5;4;empolgante|animado|confiante;balada|treino;curticao;;55;0;1;0;0;
+Tiësto;The Business;2020;edm;;;en;1;5;4;animado|confiante|alegre;balada|treino;amor;;78;0;1;0;0;
+Kygo;Firestone;2014;edm;deep-house;Conrad Sewell;en;1;4;4;alegre|esperancoso|animado;praia|estrada;amor;;68;0;1;0;0;
+Kygo;It Ain't Me;2017;deep-house;edm;Selena Gomez;en;1;3;2;melancolico|saudade|romantico;praia|fossa;termino;;78;0;1;0;0;
+Kygo;Stole the Show;2015;deep-house;;Parson James;en;1;3;3;esperancoso|melancolico|animado;estrada;amor;;50;0;1;0;0;
+Robin Schulz;Prayer in C;2014;deep-house;;Lilly Wood & The Prick;en;1;4;4;alegre|calmo|animado;praia|estrada;amor;;72;0;1;0;0;Remix de Lilly Wood & The Prick
+Lost Frequencies;Are You with Me;2014;deep-house;;;en;1;4;4;alegre|animado|nostalgico;praia|festa;amor;;62;0;1;0;0;
+Felix Jaehn;Ain't Nobody (Loves Me Better);2015;deep-house;;Jasmine Thompson;en;1;4;4;alegre|romantico|animado;praia;amor;;65;0;1;0;0;
+Martin Garrix;Animals;2013;edm;;;;0;5;3;agressivo|empolgante|confiante;balada|treino;;;75;0;0;0;0;
+Martin Garrix;In the Name of Love;2016;edm;;Bebe Rexha;en;1;4;4;esperancoso|romantico|animado;balada|treino;amor;;62;0;1;0;0;
+Martin Garrix;Scared to Be Lonely;2016;edm;;Dua Lipa;en;1;3;2;melancolico|romantico|saudade;praia|fossa;solidao|termino;;68;0;1;0;0;
+Zedd;Clarity;2012;edm;electropop;Foxes;en;1;4;3;empolgante|dramatico|romantico;balada|treino;amor;;72;0;1;0;0;
+Zedd;Stay;2017;edm;electropop;Alessia Cara;en;1;3;3;romantico|esperancoso|animado;balada;amor;;72;0;1;0;0;
+Zedd;The Middle;2018;electropop;edm;Maren Morris, Grey;en;1;4;3;animado|romantico|confiante;balada|estrada;amor;;70;0;1;0;0;
+Marshmello;Alone;2016;edm;;;;0;4;3;melancolico|empolgante|sonhador;balada|treino;;;72;0;0;0;0;
+Marshmello;Happier;2018;edm;;Bastille;en;1;3;2;melancolico|romantico|saudade;fossa|estrada;termino;;78;0;1;0;0;
+The Chainsmokers;Closer;2016;edm;electropop;Halsey;en;1;3;3;romantico|nostalgico|melancolico;balada|festa;paixao|termino;;90;1;1;0;0;
+The Chainsmokers;Don't Let Me Down;2016;edm;;Daya;en;1;4;3;romantico|empolgante|melancolico;balada;amor;;70;0;1;0;0;
+The Chainsmokers;Something Just Like This;2017;edm;electropop;Coldplay;en;1;4;4;esperancoso|romantico|animado;estrada|balada;amor;;80;0;1;0;0;
+Major Lazer;Lean On;2015;dancehall;edm;MØ, DJ Snake;en;1;4;4;sensual|animado|alegre;balada|praia;pegacao|danca;;85;1;1;0;0;
+Major Lazer;Cold Water;2016;edm;dancehall;Justin Bieber, MØ;en;1;4;3;romantico|esperancoso|animado;balada|praia;amor;;75;0;1;0;0;
+DJ Snake;Turn Down for What;2013;edm;trap;Lil Jon;en;1;5;4;agressivo|empolgante|confiante;balada|treino;curticao;;70;0;1;1;0;
+DJ Snake;Taki Taki;2018;reggaeton;edm;Selena Gomez, Ozuna, Cardi B;en;1;4;4;sensual|animado|confiante;balada|festa;pegacao;;80;0;1;1;0;
+Skrillex;Scary Monsters and Nice Sprites;2010;dubstep;;;;0;5;3;agressivo|estranho|empolgante;treino|jogar;;;62;0;0;0;0;
+Skrillex;Where Are U Now;2015;edm;electropop;Justin Bieber, Diplo;en;1;3;3;melancolico|sonhador|romantico;balada;paixao;;76;0;1;0;0;
+Alan Walker;Faded;2015;edm;;;en;1;3;2;melancolico|saudade|sonhador;relaxar|fossa;solidao|perda;;90;1;1;0;0;
+Alan Walker;On My Way;2019;edm;;Sabrina Carpenter, Farruko;en;1;4;4;esperancoso|empolgante|animado;estrada|treino;superacao;;70;0;1;0;0;
+Clean Bandit;Rather Be;2014;dance-pop;edm;Jess Glynne;en;1;4;4;alegre|romantico|animado;balada|estrada;amor;cordas;82;0;1;0;0;
+Clean Bandit;Rockabye;2016;dance-pop;;Sean Paul, Anne-Marie;en;1;3;3;esperancoso|melancolico|aconchegante;relaxar;familia|superacao;;80;0;1;0;0;
+Disclosure;Latch;2012;house;deep-house;Sam Smith;en;1;4;4;sensual|romantico|animado;balada|festa;paixao;;76;0;1;0;0;
+Jax Jones;You Don't Know Me;2016;house;;RAYE;en;1;4;4;confiante|animado|sensual;balada|festa;pegacao;;62;0;1;0;0;
+Pitbull;Give Me Everything;2011;dance-pop;edm;Ne-Yo, Afrojack, Nayer;en;1;5;5;festivo|animado|confiante;balada|festa;curticao;;75;0;1;0;0;
+Swedish House Mafia;One;2010;house;;;;0;5;4;epico|empolgante|animado;balada;;;55;0;0;0;0;
+Swedish House Mafia;Save the World;2011;house;;;en;1;5;4;empolgante|animado|esperancoso;balada;liberdade;;58;0;1;0;0;
+Avicii;Hey Brother;2013;edm;folk-gringo;;en;1;4;4;esperancoso|aconchegante|nostalgico;estrada|churrasco;familia|amizade;violao;82;1;1;0;0;
+Avicii;The Nights;2014;edm;;;en;1;4;4;esperancoso|nostalgico|alegre;estrada|festa;familia|superacao;;82;1;1;0;0;
+Avicii;Waiting for Love;2015;edm;;;en;1;4;4;romantico|esperancoso|animado;balada|estrada;amor;;72;0;1;0;0;
+Avicii;Addicted to You;2013;edm;;;en;1;4;3;melancolico|romantico|animado;estrada|balada;paixao;;62;0;1;0;0;
+Calvin Harris;Feel So Close;2011;edm;house;;en;1;4;4;alegre|animado|romantico;balada|treino;amor;;72;0;1;0;0;
+Calvin Harris;We Found Love;2011;dance-pop;edm;Rihanna;en;1;5;4;empolgante|esperancoso|animado;balada|festa;amor;;85;1;1;0;0;
+Calvin Harris;How Deep Is Your Love;2015;house;edm;Disciples;en;1;4;3;sensual|romantico|animado;balada;paixao;;66;0;1;0;0;
+Calvin Harris;One Kiss;2018;dance-pop;house;Dua Lipa;en;1;4;4;sensual|alegre|animado;balada|festa;paixao;;82;0;1;0;0;
+David Guetta;When Love Takes Over;2009;dance-pop;edm;Kelly Rowland;en;1;4;4;esperancoso|romantico|animado;balada;amor;;70;0;1;0;0;
+David Guetta;Without You;2011;edm;;Usher;en;1;4;3;romantico|esperancoso|animado;balada;amor|termino;;60;0;1;0;0;
+David Guetta;Memories;2010;edm;;Kid Cudi;en;1;5;4;festivo|animado|nostalgico;balada|festa;curticao|cachaca;;68;0;1;0;0;
+David Guetta;Play Hard;2012;edm;;Ne-Yo, Akon;en;1;5;4;animado|confiante|festivo;balada|treino;curticao;;62;0;1;0;0;
+David Guetta;Hey Mama;2015;edm;;Nicki Minaj, Bebe Rexha, Afrojack;en;1;4;4;sensual|animado|alegre;balada;pegacao;;62;0;1;0;0;
+Kesha;TiK ToK;2009;dance-pop;electropop;;en;1;5;5;festivo|animado|engracado;balada|festa;curticao|cachaca;;86;0;1;0;0;
+Robyn;Dancing On My Own;2010;synthpop;electropop;;en;1;4;3;melancolico|empolgante|dramatico;balada|fossa;solidao|dor-de-cotovelo;;70;0;1;0;0;
+Kavinsky;Nightcall;2010;synthwave;;;en;1;3;3;sombrio|sensual|misterioso;estrada|jogar;;sintetizador;75;1;0;0;0;
+Kavinsky;Odd Look;2013;synthwave;;The Weeknd;en;1;3;3;sombrio|sensual|misterioso;estrada;;sintetizador;40;0;0;0;0;
+The Midnight;Sunset;2016;synthwave;;;en;1;3;4;nostalgico|romantico|sonhador;estrada|relaxar;;sintetizador;42;0;0;0;0;
+Carpenter Brut;Turbo Killer;2015;synthwave;;;;0;5;2;agressivo|sombrio|empolgante;treino|jogar;;sintetizador;42;0;0;0;0;
+Perturbator;Future Club;2012;synthwave;;;;0;4;2;sombrio|tenso|misterioso;jogar|foco;;sintetizador;35;0;0;0;0;
+Com Truise;Galactic Melt;2011;synthwave;chillout;;;0;3;3;sonhador|nostalgico|estranho;foco|relaxar;;sintetizador;32;0;0;0;0;
+FM-84;Running in the Night;2016;synthwave;;Ollie Wride;en;1;4;4;nostalgico|empolgante|romantico;estrada;liberdade;sintetizador;35;0;0;0;0;
+Lazerhawk;Overdrive;2010;synthwave;;;;0;4;3;nostalgico|empolgante|sonhador;estrada|jogar;;sintetizador;30;0;0;0;0;
+Alok;Big Bang;2020;brazilian-bass;;Zeeba;en;1;5;4;animado|festivo|empolgante;balada|festa;curticao;;60;0;1;0;0;
+Alok;Ocean;2019;brazilian-bass;;Zeeba, Iro;en;1;3;4;calmo|sonhador|alegre;praia|relaxar;;;55;0;1;0;0;
+Alok;All the Lies;2019;brazilian-bass;;Alan Walker, Kiddo;en;1;4;3;melancolico|romantico|animado;balada;termino;;50;0;1;0;0;
+Alok;Don't Ask Me to Forget;2020;brazilian-bass;;Bhaskar, Jess Glynne;en;1;4;3;melancolico|romantico|animado;balada;termino;;48;0;1;0;0;
+Vintage Culture;Pensando em Você;2018;brazilian-bass;;Ke$ha;pt;1;4;3;romantico|saudade|animado;balada;amor;;50;0;1;0;0;
+Vintage Culture;Fall Into My Arms;2019;brazilian-bass;;Alok;en;1;4;3;romantico|esperancoso|animado;balada;amor;;50;0;1;0;0;
+Vintage Culture;It's Over;2018;brazilian-bass;;Tom Zanetti;en;1;4;3;melancolico|animado|sensual;balada;termino;;40;0;1;0;0;
+Bruno Martini;Gone;2016;brazilian-bass;;;en;1;4;3;melancolico|animado|romantico;balada;termino;;35;0;1;0;0;
+Liu;Sailing;2021;brazilian-bass;;;en;1;3;4;calmo|sonhador|alegre;praia|relaxar;;;38;0;1;0;0;
+Dubdogz;Tell Me Why;2018;brazilian-bass;;;en;1;4;3;animado|romantico|melancolico;balada;amor;;35;0;1;0;0;
+Mari Ferrari;Meu Bem;2019;brazilian-bass;;;pt;1;4;4;animado|romantico|alegre;balada;amor;;32;0;1;0;0;
+Cat Dealers;Your Love;2017;brazilian-bass;;;en;1;4;4;romantico|animado|alegre;balada;amor;;32;0;1;0;0;
+Tom Misch;Disco Yes;2018;chillout;soul;Poppy Ajudha;en;1;3;4;calmo|sensual|alegre;relaxar|cozinhar;amor;;40;0;0;0;0;
+Zero 7;In the Waiting Line;2001;chillout;;Sia;en;1;2;2;melancolico|calmo|contemplativo;relaxar|dia-chuvoso;solidao;;42;0;0;0;0;
+Thievery Corporation;Lebanese Blonde;2002;chillout;lounge;;en;1;2;3;calmo|misterioso|sensual;relaxar|cozinhar;;;48;0;0;0;0;
+Air;La Femme d'Argent;1998;chillout;;;;0;2;3;sonhador|calmo|contemplativo;relaxar|foco;;sintetizador;45;0;0;0;0;
+Air;Sexy Boy;1998;chillout;synthpop;;en;1;3;3;sensual|sonhador|calmo;relaxar|balada;pegacao;;52;0;0;0;0;
+Massive Attack;Teardrop;1998;chillout;;Elizabeth Fraser;en;1;2;2;melancolico|misterioso|sonhador;relaxar|dia-chuvoso;amor;voz-feminina;65;1;0;0;0;Tema de House M.D.
+Portishead;Glory Box;1994;chillout;;;en;1;2;2;sensual|sombrio|melancolico;relaxar|fossa;paixao;voz-feminina;55;0;0;0;0;
+Café del Mar;Café del Mar;1993;chillout;;;;0;2;3;calmo|sonhador|contemplativo;relaxar|praia;;;38;0;0;0;0;
+Nightmares on Wax;Les Nuits;2008;chillout;;;;0;2;3;calmo|sonhador|aconchegante;relaxar|cozinhar;;;30;0;0;0;0;
+Sam Smith;Stay With Me;2014;balada-pop;soul;;en;1;2;2;triste|romantico|melancolico;fossa|casamento;solidao|termino;piano;88;1;1;0;0;
+Sam Smith;Too Good at Goodbyes;2017;balada-pop;;;en;1;2;2;triste|melancolico|romantico;fossa;termino;piano;78;0;1;0;0;
+Sam Smith;I'm Not the Only One;2014;balada-pop;soul;;en;1;2;2;triste|romantico|melancolico;fossa;traicao;;70;0;1;0;0;
+John Legend;Ordinary People;2004;balada-pop;soul;;en;1;2;3;romantico|melancolico|aconchegante;jantar-romantico;amor;piano;55;0;1;0;0;
+Ed Sheeran;Photograph;2014;balada-pop;folk-gringo;;en;1;2;3;romantico|nostalgico|saudade;jantar-romantico;amor;violao;80;0;1;0;0;
+Shawn Mendes;Señorita;2019;pop-latino;pop;Camila Cabello;en;1;3;4;sensual|romantico|animado;balada;pegacao;;90;1;1;0;0;
+Bruno Mars;When I Was Your Man;2012;balada-pop;;;en;1;2;1;triste|saudade|melancolico;fossa;termino;piano;92;1;1;0;0;
+Bruno Mars;Marry You;2010;pop;;;en;1;4;5;alegre|festivo|romantico;casamento|festa;amor|paixao;;82;0;1;0;0;
+Bruno Mars;Talking to the Moon;2010;balada-pop;;;en;1;2;1;triste|saudade|melancolico;fossa;perda|solidao;piano;80;0;1;0;0;
+Sia;Elastic Heart;2013;electropop;balada-pop;;en;1;3;2;dramatico|melancolico|empolgante;fossa;superacao|termino;;70;0;1;0;0;
+Rihanna;Unfaithful;2006;balada-pop;rnb;;en;1;2;2;triste|dramatico|melancolico;fossa;traicao;;70;0;1;0;0;
+Celine Dion;All by Myself;1996;balada-pop;;;en;1;2;1;triste|dramatico|melancolico;fossa;solidao;;82;1;1;0;0;
+Phil Collins;Against All Odds (Take a Look at Me Now);1984;balada-pop;;;en;1;2;2;triste|dramatico|melancolico;fossa;termino;piano;70;0;1;0;0;
+Phil Collins;Another Day in Paradise;1989;balada-pop;;;en;1;2;2;melancolico|contemplativo|triste;relaxar;critica-social;;75;0;1;0;0;
+Phil Collins;You'll Be in My Heart;1999;musical;balada-pop;;en;1;2;3;aconchegante|romantico|esperancoso;criancas;familia|amor;;65;0;1;0;0;Tema de Tarzan
+Air Supply;All Out of Love;1980;balada-pop;soft-rock;;en;1;2;2;romantico|melancolico|saudade;fossa;termino;;72;0;1;0;0;
+Chicago;If You Leave Me Now;1976;balada-pop;soft-rock;;en;1;2;2;triste|romantico|melancolico;fossa;termino;;70;0;1;0;0;
+Foreigner;I Don't Want to Live Without You;1987;balada-pop;soft-rock;;en;1;2;2;romantico|melancolico|dramatico;fossa;amor;;50;0;1;0;0;
+Berlin;Take My Breath Away;1986;balada-pop;synthpop;;en;1;2;3;romantico|sonhador|dramatico;jantar-romantico;amor;sintetizador;68;0;1;0;0;Tema de Top Gun
+Extreme;More Than Words;1990;balada-pop;soft-rock;;en;1;1;3;romantico|calmo|aconchegante;barzinho|casamento;amor;violao;75;0;1;0;0;
+Lady Antebellum;Need You Now;2009;country;balada-pop;;en;1;2;2;melancolico|saudade|romantico;fossa;solidao;;55;0;1;0;0;
+Passenger;Let Her Go;2012;folk-gringo;balada-pop;;en;1;2;1;triste|melancolico|saudade;fossa|estrada;perda|termino;violao;85;1;1;0;0;
+Jessie J;Flashlight;2015;balada-pop;;;en;1;3;4;esperancoso|romantico|dramatico;estrada;amor;;55;0;1;0;0;
+Dua Lipa;Be the One;2015;electropop;balada-pop;;en;1;3;3;romantico|confiante|melancolico;balada;amor;;65;0;1;0;0;
+Michael Bolton;How Am I Supposed to Live Without You;1989;balada-pop;soft-rock;;en;1;2;1;triste|dramatico|melancolico;fossa;termino;;65;0;1;0;0;
+Adele;Easy On Me;2021;balada-pop;;;en;1;2;2;melancolico|triste|romantico;fossa;termino;piano;80;0;1;0;0;
+Adele;Set Fire to the Rain;2011;balada-pop;;;en;1;3;2;dramatico|melancolico|epico;fossa;termino;;80;0;1;0;0;
+John Williams;Raiders March;1981;trilha-de-filme;;;;0;4;4;epico|animado|confiante;rpg-exploracao|rpg-abertura;;orquestra|metais;85;1;0;0;0;Indiana Jones
+John Williams;E.T. Flying Theme;1982;trilha-de-filme;;;;0;3;4;magico|sonhador|esperancoso;rpg-exploracao|criancas;;orquestra;70;0;0;0;0;
+John Williams;Duel of the Fates;1999;trilha-de-filme;epic-music;;;0;5;2;epico|dramatico|agressivo;rpg-chefe|rpg-combate;;coral|orquestra;70;0;0;0;0;Star Wars Episódio I
+John Williams;Princess Leia's Theme;1977;trilha-de-filme;;;;0;2;3;romantico|nostalgico|contemplativo;rpg-descanso|rpg-drama;;orquestra;45;0;0;0;0;
+John Williams;Superman March;1978;trilha-de-filme;;;;0;4;4;epico|confiante|esperancoso;rpg-final;;metais|orquestra;62;0;0;0;0;
+John Williams;Schindler's List Theme;1993;trilha-de-filme;;;;0;2;1;triste|dramatico|melancolico;rpg-drama;perda;cordas;68;0;0;0;0;
+John Williams;Harry's Wondrous World;2001;trilha-de-filme;;;;0;4;4;magico|epico|animado;rpg-abertura;;orquestra;45;0;0;0;0;
+Hans Zimmer;Pirates of the Caribbean: One Day;2007;trilha-de-filme;;;;0;4;3;epico|empolgante|confiante;rpg-exploracao;;orquestra;45;0;0;0;0;
+Hans Zimmer;Dream Is Collapsing;2010;trilha-de-filme;epic-music;;;0;4;2;tenso|epico|dramatico;rpg-combate|rpg-misterio;;orquestra;60;0;0;0;0;A Origem
+Hans Zimmer;Mountains;2014;trilha-de-filme;;;;0;3;2;dramatico|epico|contemplativo;rpg-drama|rpg-final;;orgao|orquestra;55;0;0;0;0;Interestelar
+Hans Zimmer;What Are You Going to Do When You Are Not Saving the World?;2013;trilha-de-filme;;;;0;3;3;esperancoso|contemplativo|epico;rpg-descanso;;orquestra;45;0;0;0;0;Homem de Aço
+Hans Zimmer;Why So Serious?;2008;trilha-de-filme;;;;0;4;1;tenso|agressivo|sombrio;rpg-vilao|rpg-perseguicao;;cordas;55;0;0;0;0;Batman: O Cavaleiro das Trevas
+Hans Zimmer;The Dark Knight;2008;trilha-de-filme;epic-music;;;0;4;2;tenso|epico|dramatico;rpg-combate;;orquestra;50;0;0;0;0;
+Hans Zimmer;Tennessee;2000;trilha-de-filme;;;;0;3;3;esperancoso|contemplativo|epico;rpg-final;;orquestra;40;0;0;0;0;Gladiador
+Howard Shore;The Bridge of Khazad-dûm;2001;trilha-de-filme;epic-music;;;0;4;2;epico|tenso|dramatico;rpg-chefe|rpg-masmorra;;coral|orquestra;55;0;0;0;0;
+Howard Shore;The Prophecy;2001;trilha-de-filme;;;;0;2;2;misterioso|magico|sombrio;rpg-misterio|rpg-ritual;;coral;40;0;0;0;0;
+Howard Shore;The Shadow of the Past;2001;trilha-de-filme;;;;0;3;2;misterioso|tenso|sombrio;rpg-misterio;;;38;0;0;0;0;
+Howard Shore;The Return of the King;2003;trilha-de-filme;;;;0;3;3;epico|esperancoso|sagrado;rpg-final;;orquestra|coral;45;0;0;0;0;
+Emiliana Torrini;Gollum's Song;2002;trilha-de-filme;;;en;1;2;1;triste|sombrio|melancolico;rpg-drama;perda|solidao;;45;0;0;0;0;
+Howard Shore;In Dreams;2001;trilha-de-filme;;Edward Ross;en;1;2;3;sonhador|calmo|magico;rpg-descanso;;coral;45;0;0;0;0;
+Howard Shore;A Journey in the Dark;2001;trilha-de-filme;;;;0;3;2;tenso|misterioso|sombrio;rpg-masmorra;;;40;0;0;0;0;
+Ramin Djawadi;Game of Thrones Main Title;2011;trilha-de-serie;epic-music;;;0;4;3;epico|dramatico|confiante;rpg-abertura|rpg-corte;;cordas|orquestra;90;1;0;0;0;
+Ramin Djawadi;Light of the Seven;2016;trilha-de-serie;;;;0;2;1;dramatico|triste|sombrio;rpg-drama|rpg-vilao;perda;piano|cordas;70;0;0;0;0;
+Ramin Djawadi;The Rains of Castamere;2011;trilha-de-serie;;;en;1;3;2;sombrio|dramatico|tenso;rpg-vilao|rpg-corte;;cordas;60;0;0;0;0;
+Ramin Djawadi;Westworld Main Title;2016;trilha-de-serie;;;;0;3;3;misterioso|estranho|melancolico;rpg-misterio;;piano;55;0;0;0;0;
+Ramin Djawadi;Winterfell;2019;trilha-de-serie;;;;0;2;2;melancolico|contemplativo|nostalgico;rpg-descanso;;cordas;40;0;0;0;0;
+Ramin Djawadi;Dragonstone;2017;trilha-de-serie;epic-music;;;0;3;3;epico|dramatico|esperancoso;rpg-exploracao|rpg-abertura;;orquestra;38;0;0;0;0;
+Bear McCreary;Prelude to War;2007;trilha-de-serie;epic-music;;;0;4;2;tenso|epico|dramatico;rpg-combate;;percussao;35;0;0;0;0;
+Danny Elfman;The Simpsons Theme;1989;trilha-de-serie;desenho-animado;;;0;4;5;engracado|alegre|animado;rpg-humor|criancas;;orquestra;90;1;1;0;0;
+Danny Elfman;This Is Halloween;1993;musical;trilha-de-filme;;en;1;4;3;sombrio|engracado|assustador;rpg-terror;;coral|orquestra;75;1;1;0;0;
+Danny Elfman;What's This?;1993;musical;trilha-de-filme;;en;1;4;5;magico|alegre|engracado;natal|criancas;;orquestra;50;0;0;0;0;Natal
+Danny Elfman;Batman Theme;1989;trilha-de-filme;;;;0;4;3;sombrio|epico|dramatico;rpg-vilao;;orquestra;60;0;0;0;0;
+Alan Silvestri;Back to the Future Theme;1985;trilha-de-filme;;;;0;4;4;epico|animado|esperancoso;rpg-exploracao;;orquestra;70;0;0;0;0;
+Alan Silvestri;The Avengers;2012;trilha-de-filme;epic-music;;;0;4;4;epico|confiante|empolgante;rpg-final|rpg-combate;;orquestra;62;0;0;0;0;
+Alan Silvestri;Forrest Gump Suite;1994;trilha-de-filme;;;;0;2;3;nostalgico|aconchegante|contemplativo;relaxar;;piano;60;0;0;0;0;
+Michael Giacchino;Married Life;2009;trilha-de-filme;;;;0;2;2;melancolico|nostalgico|romantico;fossa;amor|perda;piano|orquestra;72;1;0;0;0;Up: Altas Aventuras
+Michael Giacchino;Life and Death;2005;trilha-de-serie;;;;0;2;1;triste|dramatico|melancolico;rpg-drama;perda;piano|cordas;40;0;0;0;0;Lost
+Michael Giacchino;The Batman Main Theme;2022;trilha-de-filme;;;;0;3;1;sombrio|tenso|dramatico;rpg-vilao|rpg-misterio;;piano|orquestra;45;0;0;0;0;
+Leona Lewis;I See You (Theme from Avatar);2009;trilha-de-filme;;;en;1;3;3;romantico|magico|sonhador;rpg-exploracao;amor;voz-feminina;55;0;0;0;0;
+James Horner;Braveheart Main Theme;1995;trilha-de-filme;celta;;;0;3;2;epico|melancolico|dramatico;rpg-exploracao|rpg-drama;;orquestra;55;0;0;0;0;
+Ennio Morricone;Once Upon a Time in the West;1968;trilha-de-filme;;;;0;2;2;melancolico|dramatico|epico;rpg-drama;;voz-feminina|orquestra;60;0;0;0;0;
+Ennio Morricone;Gabriel's Oboe;1986;trilha-de-filme;;;;0;2;3;sagrado|contemplativo|esperancoso;rpg-descanso|rpg-ritual;;flauta|orquestra;55;0;0;0;0;A Missão
+Ennio Morricone;Cinema Paradiso Love Theme;1988;trilha-de-filme;;;;0;2;3;nostalgico|romantico|saudade;jantar-romantico;;cordas|piano;55;0;0;0;0;
+Ennio Morricone;The Ecstasy of Gold;1966;trilha-de-filme;epic-music;;;0;4;3;epico|tenso|dramatico;rpg-final|rpg-perseguicao;;voz-feminina|orquestra;65;1;0;0;0;
+Ennio Morricone;Il Triello;1966;trilha-de-filme;;;;0;4;2;tenso|dramatico|epico;rpg-chefe;;;40;0;0;0;0;
+Nino Rota;Love Theme from Romeo and Juliet;1968;trilha-de-filme;;;;0;2;3;romantico|nostalgico|melancolico;jantar-romantico|rpg-corte;;orquestra;40;0;0;0;0;
+Vangelis;Blade Runner (End Titles);1982;trilha-de-filme;synthwave;;;0;2;2;sonhador|melancolico|misterioso;foco|rpg-misterio;;sintetizador;50;0;0;0;0;
+Vangelis;Conquest of Paradise;1992;trilha-de-filme;epic-music;;;0;3;3;epico|esperancoso|sagrado;rpg-exploracao|rpg-final;;orquestra|coral;62;0;0;0;0;
+Rachel Portman;Chocolat Main Theme;2000;trilha-de-filme;;;;0;2;3;aconchegante|romantico|sonhador;cozinhar|relaxar;;piano;35;0;0;0;0;
+Thomas Newman;Any Other Name;1999;trilha-de-filme;minimalismo;;;0;2;2;melancolico|contemplativo|triste;foco|dia-chuvoso;;piano;55;0;0;0;0;Beleza Americana
+Hildur Guðnadóttir;Bathroom Dance;2019;trilha-de-filme;;;;0;2;1;sombrio|estranho|melancolico;rpg-terror;;cordas;35;0;0;0;0;Coringa
+Ludwig Göransson;Can You Hear the Music;2023;trilha-de-filme;;;;0;4;2;dramatico|epico|tenso;rpg-misterio;;;50;0;0;0;0;Oppenheimer
+Alexandre Desplat;Lily's Theme;2011;trilha-de-filme;;;;0;2;2;melancolico|triste|sagrado;rpg-drama;perda;piano|orquestra;55;0;0;0;0;Harry Potter e as Relíquias da Morte
+Joe Hisaishi;Merry-Go-Round of Life;2004;trilha-de-anime;;;;0;3;3;magico|nostalgico|romantico;rpg-corte|rpg-cidade;;piano|orquestra;80;1;0;0;0;O Castelo Animado
+Joe Hisaishi;One Summer's Day;2001;trilha-de-anime;;;;0;2;3;nostalgico|melancolico|sonhador;relaxar|foco;;piano;70;0;0;0;0;A Viagem de Chihiro
+Joe Hisaishi;Princess Mononoke Theme;1997;trilha-de-anime;;;;0;3;3;epico|misterioso|esperancoso;rpg-exploracao;;orquestra;55;0;0;0;0;
+Joe Hisaishi;The Path of the Wind;1988;trilha-de-anime;;;;0;2;4;nostalgico|aconchegante|sonhador;criancas|relaxar;;piano;60;0;0;0;0;Meu Amigo Totoro
+Angela Lansbury;Beauty and the Beast;1991;musical;trilha-de-filme;;en;1;2;3;romantico|aconchegante|nostalgico;casamento|criancas;amor;;80;1;1;0;0;
+Brad Kane & Lea Salonga;A Whole New World;1992;musical;;;en;1;3;4;romantico|magico|esperancoso;casamento|karaoke;amor|liberdade;;85;1;1;0;0;
+Jodi Benson;Part of Your World;1989;musical;;;en;1;2;3;sonhador|esperancoso|romantico;criancas|karaoke;liberdade;;80;1;1;0;0;
+Samuel E. Wright;Under the Sea;1989;musical;;;en;1;4;5;alegre|engracado|animado;criancas|festa;curticao;;75;0;1;0;0;
+Jerry Orbach;Be Our Guest;1991;musical;;;en;1;4;5;alegre|festivo|engracado;criancas;curticao;;70;0;1;0;0;
+Judy Kuhn;Colors of the Wind;1995;musical;;;en;1;2;3;sonhador|contemplativo|esperancoso;criancas|relaxar;liberdade;;70;0;1;0;0;
+Christina Aguilera;Reflection;1998;musical;;;en;1;2;3;sonhador|contemplativo|esperancoso;criancas;superacao;;55;0;1;0;0;
+Roger Bart;Go the Distance;1997;musical;;;en;1;3;4;esperancoso|epico|sonhador;criancas;superacao;;62;0;1;0;0;
+Kristen Bell;Do You Want to Build a Snowman?;2013;musical;;;en;1;2;3;melancolico|saudade|aconchegante;criancas;familia;;80;0;1;0;0;
+Kristen Bell & Idina Menzel;For the First Time in Forever;2013;musical;;;en;1;4;5;alegre|animado|esperancoso;criancas;liberdade;;65;0;1;0;0;
+Carolina Gaitán;We Don't Talk About Bruno;2021;musical;;;en;1;4;4;misterioso|engracado|animado;criancas|karaoke;familia;;88;1;1;0;0;Encanto
+Auliʻi Cravalho;How Far I'll Go;2016;musical;;;en;1;3;4;sonhador|esperancoso|epico;criancas|karaoke;liberdade|superacao;;75;0;1;0;0;Moana
+Dwayne Johnson;You're Welcome;2016;musical;;;en;1;4;5;engracado|confiante|animado;criancas;zoeira;;60;0;1;0;0;
+Jessica Darrow;Surface Pressure;2021;musical;;;en;1;4;3;dramatico|animado|confiante;criancas;familia|superacao;;62;0;1;0;0;
+Lin-Manuel Miranda;My Shot;2015;musical;rap-gringo;;en;1;4;4;confiante|esperancoso|empolgante;karaoke;superacao;;55;0;1;0;0;Hamilton
+Leslie Odom Jr.;Wait for It;2015;musical;;;en;1;2;2;melancolico|dramatico|esperancoso;fossa;amor|perda;;40;0;1;0;0;
+Keala Settle;This Is Me;2017;musical;;;en;1;4;4;epico|confiante|esperancoso;karaoke;superacao|orgulho;;78;1;1;0;0;O Rei do Show
+Zac Efron & Zendaya;Rewrite the Stars;2017;musical;;;en;1;3;3;romantico|dramatico|esperancoso;jantar-romantico;amor;;62;0;1;0;0;
+Ryan Gosling & Emma Stone;City of Stars;2016;musical;jazz;;en;1;2;3;romantico|sonhador|nostalgico;jantar-romantico;amor|liberdade;piano;70;0;1;0;0;La La Land
+Sarah Brightman & Michael Crawford;The Phantom of the Opera;1986;musical;;;en;1;3;2;dramatico|sombrio|epico;rpg-vilao|rpg-corte;paixao;orgao|orquestra;65;1;1;0;0;
+Elaine Paige;Memory;1981;musical;;;en;1;2;2;melancolico|nostalgico|dramatico;fossa;solidao;;55;0;1;0;0;Cats
+Anne Hathaway;I Dreamed a Dream;1980;musical;;;en;1;2;1;triste|dramatico|melancolico;fossa;perda|superacao;;62;0;1;0;0;Os Miseráveis
+Idina Menzel & Kristin Chenoweth;Defying Gravity;2003;musical;;;en;1;4;4;epico|esperancoso|confiante;karaoke;liberdade|superacao;;70;1;1;0;0;Wicked
+Leonard Bernstein;Somewhere;1957;musical;;;en;1;2;3;esperancoso|romantico|sonhador;casamento;amor;;45;0;1;0;0;West Side Story
+Julie Andrews;Do-Re-Mi;1959;musical;;;en;1;4;5;alegre|animado|engracado;criancas|karaoke;infancia;;65;0;1;0;0;
+Julie Andrews & Dick Van Dyke;Supercalifragilisticexpialidocious;1964;musical;;;en;1;4;5;alegre|engracado|animado;criancas;zoeira;;62;0;1;0;0;
+Dick Van Dyke;Chim Chim Cher-ee;1964;musical;;;en;1;3;4;aconchegante|nostalgico|alegre;criancas;;;45;0;1;0;0;
+Koji Kondo;The Legend of Zelda: Main Theme;1986;trilha-de-jogo;chiptune;;;0;4;4;epico|esperancoso|animado;rpg-abertura|rpg-exploracao|jogar;;;85;1;0;0;0;ano = lançamento do jogo
+Koji Kondo;Gerudo Valley;1998;trilha-de-jogo;;;;0;4;4;animado|misterioso|alegre;rpg-exploracao|rpg-cidade|jogar;;;62;0;0;0;0;Ocarina of Time
+Koji Kondo;Song of Storms;1998;trilha-de-jogo;;;;0;3;3;misterioso|nostalgico|dramatico;rpg-taverna|jogar;;orgao;60;0;0;0;0;
+Koji Kondo;Lost Woods;1998;trilha-de-jogo;;;;0;4;4;alegre|misterioso|magico;rpg-exploracao|jogar;;;62;0;0;0;0;
+Koji Kondo;Zelda's Lullaby;1998;trilha-de-jogo;;;;0;2;3;calmo|magico|sonhador;rpg-descanso|rpg-corte;;harpa;55;0;0;0;0;
+Koji Kondo;Hyrule Field Main Theme;1998;trilha-de-jogo;;;;0;4;4;epico|esperancoso|animado;rpg-exploracao|jogar;;;55;0;0;0;0;
+Koji Kondo;Super Mario Bros. Theme;1985;trilha-de-jogo;chiptune;;;0;4;5;alegre|animado|engracado;jogar|criancas;;;95;1;1;0;0;
+Koji Kondo;Underground Theme;1985;chiptune;trilha-de-jogo;;;0;3;3;misterioso|engracado|estranho;jogar|rpg-masmorra;;;70;0;0;0;0;Super Mario Bros.
+Koji Kondo;Ground Theme (Super Mario World);1990;trilha-de-jogo;chiptune;;;0;4;5;alegre|animado|aconchegante;jogar|criancas;;;70;0;0;0;0;
+Koji Kondo;Dire, Dire Docks;1996;trilha-de-jogo;;;;0;2;3;calmo|sonhador|aconchegante;relaxar|jogar;;;60;0;0;0;0;Super Mario 64
+Koji Kondo;Bob-omb Battlefield;1996;trilha-de-jogo;;;;0;4;4;alegre|animado|engracado;jogar|rpg-exploracao;;;45;0;0;0;0;
+Nobuo Uematsu;One-Winged Angel;1997;trilha-de-jogo;metal-sinfonico;;la;1;5;1;epico|agressivo|sombrio;rpg-chefe|rpg-vilao|jogar;;coral|orquestra;75;1;0;0;0;Final Fantasy VII
+Nobuo Uematsu;Aerith's Theme;1997;trilha-de-jogo;;;;0;2;1;triste|melancolico|sagrado;rpg-drama|jogar;perda;piano|flauta;75;1;0;0;0;
+Nobuo Uematsu;Final Fantasy Main Theme;1987;trilha-de-jogo;chiptune;;;0;3;3;epico|esperancoso|nostalgico;rpg-abertura|jogar;;harpa;60;0;0;0;0;
+Nobuo Uematsu;Terra's Theme;1994;trilha-de-jogo;;;;0;3;3;epico|esperancoso|melancolico;rpg-exploracao|jogar;;;60;0;0;0;0;Final Fantasy VI
+Nobuo Uematsu;Dancing Mad;1994;trilha-de-jogo;rock-progressivo;;;0;5;2;epico|agressivo|dramatico;rpg-chefe|jogar;;orgao|coral;50;0;0;0;0;
+Nobuo Uematsu;To Zanarkand;2001;trilha-de-jogo;;;;0;2;2;melancolico|nostalgico|contemplativo;rpg-drama|rpg-descanso|jogar;;piano;65;0;0;0;0;Final Fantasy X
+Nobuo Uematsu;Eyes on Me;1999;trilha-de-jogo;;Faye Wong;en;1;2;2;romantico|melancolico|saudade;jantar-romantico;amor;;55;0;0;0;0;Final Fantasy VIII
+Nobuo Uematsu;Liberi Fatali;1999;trilha-de-jogo;epic-music;;la;1;5;2;epico|dramatico|agressivo;rpg-chefe|jogar;;coral;50;0;0;0;0;
+Nobuo Uematsu;Victory Fanfare;1997;trilha-de-jogo;chiptune;;;0;4;5;festivo|confiante|alegre;rpg-final|jogar;;metais;55;0;0;0;0;
+Nobuo Uematsu;Chocobo Theme;1988;trilha-de-jogo;chiptune;;;0;4;5;alegre|animado|engracado;jogar|rpg-exploracao;;;50;0;0;0;0;Final Fantasy
+Yasunori Mitsuda;Corridors of Time;1995;trilha-de-jogo;;;;0;2;3;nostalgico|misterioso|contemplativo;rpg-descanso|jogar;;;50;0;0;0;0;Chrono Trigger
+Yasunori Mitsuda;Frog's Theme;1995;trilha-de-jogo;;;;0;4;4;epico|confiante|esperancoso;rpg-combate|jogar;;;45;0;0;0;0;
+Jeremy Soule;Dragonborn;2011;trilha-de-jogo;epic-music;;;0;4;3;epico|empolgante|dramatico;rpg-abertura|rpg-combate|jogar;;coral;78;1;0;0;0;Skyrim
+Jeremy Soule;Far Horizons;2011;trilha-de-jogo;;;;0;2;3;calmo|contemplativo|esperancoso;rpg-exploracao|rpg-descanso|jogar;;cordas;62;0;0;0;0;
+Jeremy Soule;Secunda;2011;trilha-de-jogo;;;;0;2;3;contemplativo|misterioso|calmo;rpg-exploracao|jogar;;;50;0;0;0;0;
+Jeremy Soule;Dawn;2011;trilha-de-jogo;;;;0;2;3;calmo|esperancoso|contemplativo;rpg-exploracao|acordar|jogar;;;50;0;0;0;0;
+Jeremy Soule;Sovngarde;2011;trilha-de-jogo;nordico;;;0;4;3;epico|sagrado|dramatico;rpg-final|jogar;;coral;55;0;0;0;0;
+Jeremy Soule;Rising Threat;2011;trilha-de-jogo;;;;0;4;2;tenso|agressivo|dramatico;rpg-combate|jogar;;percussao;40;0;0;0;0;
+Jeremy Soule;Peace of Akatosh;2011;trilha-de-jogo;;;;0;2;3;sagrado|calmo|contemplativo;rpg-descanso|jogar;;coral;40;0;0;0;0;
+Jeremy Soule;Morrowind: Nerevar Rising;2002;trilha-de-jogo;;;;0;3;3;epico|misterioso|esperancoso;rpg-abertura|rpg-exploracao|jogar;;;60;0;0;0;0;
+Jeremy Soule;Baldur's Gate II: Main Theme;2000;trilha-de-jogo;;;;0;3;3;epico|misterioso|esperancoso;rpg-abertura|jogar;;;30;0;0;0;0;
+Marty O'Donnell;Halo Theme (Gregorian Chant);2001;trilha-de-jogo;musica-sacra;;la;1;3;2;epico|sagrado|misterioso;rpg-abertura|rpg-exploracao|jogar;;coral;78;1;0;0;0;
+Marty O'Donnell;Siege of Madrigal;2004;trilha-de-jogo;epic-music;;;0;5;2;epico|agressivo|tenso;rpg-combate|jogar;;orquestra;40;0;0;0;0;Halo 2
+Marty O'Donnell;Never Forget;2001;trilha-de-jogo;;;;0;2;2;melancolico|nostalgico|contemplativo;rpg-drama|jogar;;piano|cordas;45;0;0;0;0;Halo
+Marty O'Donnell;Mjolnir Mix;2004;trilha-de-jogo;rock;;;0;5;3;agressivo|epico|empolgante;rpg-combate|jogar;;guitarra;45;0;0;0;0;
+Mick Gordon;BFG Division;2016;trilha-de-jogo;metal;;;0;5;2;agressivo|empolgante|sombrio;treino|rpg-chefe|jogar;;guitarra;60;0;0;0;0;DOOM
+Mick Gordon;At Doom's Gate;2016;trilha-de-jogo;metal;;;0;5;2;agressivo|tenso|sombrio;treino|rpg-combate|jogar;;guitarra;52;0;0;0;0;
+Garry Schyman;Rapture;2007;trilha-de-jogo;;;;0;2;2;misterioso|nostalgico|sombrio;rpg-misterio|jogar;;;30;0;0;0;0;BioShock
+Akira Yamaoka;Theme of Laura;1999;trilha-de-jogo;;;;0;2;2;melancolico|sombrio|misterioso;rpg-terror|jogar;;;40;0;0;0;0;Silent Hill 2
+Akira Yamaoka;Promise;2001;trilha-de-jogo;;;;0;2;2;melancolico|triste|nostalgico;rpg-drama|jogar;perda;;38;0;0;0;0;
+Gustavo Santaolalla;The Last of Us (Main Theme);2013;trilha-de-jogo;;;;0;2;2;melancolico|contemplativo|triste;rpg-drama|jogar;;violao;62;0;0;0;0;
+Darren Korb;Build That Wall;2011;trilha-de-jogo;;;en;1;3;3;misterioso|esperancoso|estranho;jogar;;violao;28;0;0;0;0;Bastion
+Austin Wintory;Journey: I Was Born for This;2012;trilha-de-jogo;;;;0;3;3;sonhador|epico|contemplativo;jogar|foco;;cordas;38;0;0;0;0;
+Toby Fox;Megalovania;2015;trilha-de-jogo;chiptune;;;0;5;3;empolgante|agressivo|engracado;rpg-chefe|jogar;;;78;1;0;0;0;Undertale
+Toby Fox;Spear of Justice;2015;trilha-de-jogo;chiptune;;;0;5;2;epico|empolgante|dramatico;rpg-chefe|jogar;;;38;0;0;0;0;
+Toby Fox;Hopes and Dreams;2015;trilha-de-jogo;chiptune;;;0;4;3;epico|esperancoso|dramatico;rpg-final|jogar;;;50;0;0;0;0;
+Toby Fox;Home;2015;trilha-de-jogo;chiptune;;;0;1;3;aconchegante|calmo|nostalgico;rpg-descanso|jogar;;;45;0;0;0;0;
+Yoko Shimomura;Dearly Beloved;2002;trilha-de-jogo;;;;0;2;3;nostalgico|sonhador|calmo;rpg-abertura|jogar;;piano;50;0;0;0;0;Kingdom Hearts
+Yoko Shimomura;Simple and Clean;2002;j-pop;trilha-de-jogo;Hikaru Utada;ja;1;3;3;nostalgico|esperancoso|sonhador;jogar;;;62;0;1;0;0;
+Hikaru Utada;Passion;2005;j-pop;trilha-de-jogo;;ja;1;3;3;esperancoso|nostalgico|sonhador;jogar;;;38;0;0;0;0;Kingdom Hearts II
+Grant Kirkhope;Spiral Mountain;1998;trilha-de-jogo;;;;0;3;4;alegre|aconchegante|nostalgico;jogar|criancas;;;40;0;0;0;0;Banjo-Kazooie
+David Wise;Aquatic Ambience;1994;trilha-de-jogo;ambient;;;0;1;3;calmo|sonhador|contemplativo;relaxar|dormir|jogar;;;60;0;0;0;0;Donkey Kong Country
+Yuzo Koshiro;Streets of Rage: Dreamer;1991;trilha-de-jogo;chiptune;;;0;4;4;animado|confiante|empolgante;jogar;;sintetizador;32;0;0;0;0;
+Masato Nakamura;Green Hill Zone;1991;trilha-de-jogo;chiptune;;;0;4;5;alegre|animado|esperancoso;jogar|criancas;;;80;1;0;0;0;Sonic
+Mitsuto Suzuki;Gourmet Race;1996;trilha-de-jogo;chiptune;;;0;4;5;alegre|animado|engracado;jogar;;;38;0;0;0;0;Kirby
+Keiichi Suzuki;Mother: Eight Melodies;1989;trilha-de-jogo;chiptune;;;0;1;3;nostalgico|calmo|sonhador;jogar|relaxar;;caixinha-de-musica;32;0;0;0;0;
+Kazumi Totaka;Wii Shop Channel;2006;trilha-de-jogo;;;;0;2;4;alegre|aconchegante|nostalgico;jogar|relaxar;;;50;0;0;0;0;
+Johann Sebastian Bach;Concerto de Brandemburgo nº 3: Allegro;1721;barroco;;;;0;4;4;animado|alegre|confiante;foco|rpg-corte;;cordas;45;0;0;0;0;ano = composição
+Johann Sebastian Bach;Jesus, Alegria dos Homens;1723;barroco;musica-sacra;;de;0;2;3;sagrado|calmo|esperancoso;casamento|momento-de-fe;;coral|orquestra;60;0;0;0;0;ano = composição
+Johann Sebastian Bach;Suíte Orquestral nº 3: Badinerie;1731;barroco;;;;0;4;4;alegre|animado|engracado;foco|rpg-corte;;flauta;50;0;0;0;0;ano = composição
+Johann Sebastian Bach;Prelúdio em Dó Maior (Cravo Bem Temperado);1722;barroco;;;;0;2;3;calmo|contemplativo|sonhador;foco|relaxar;;piano;62;0;0;0;0;ano = composição
+Johann Sebastian Bach;Paixão Segundo São Mateus: Erbarme dich;1727;barroco;musica-sacra;;de;1;1;1;triste|sagrado|dramatico;momento-de-fe|rpg-drama;perda;cordas;40;0;0;0;0;ano = composição
+Johann Sebastian Bach;Variações Goldberg: Ária;1741;barroco;;;;0;1;3;calmo|contemplativo|melancolico;foco|dormir|relaxar;;piano;55;0;0;0;0;ano = composição
+Johann Sebastian Bach;Cantata 147: Wachet auf;1731;barroco;musica-sacra;;de;1;2;3;sagrado|esperancoso|calmo;casamento|momento-de-fe;fe;orgao|coral;40;0;0;0;0;ano = composição
+Georg Friedrich Händel;Música Aquática: Alla Hornpipe;1717;barroco;;;;0;4;4;alegre|festivo|epico;rpg-corte;;metais|orquestra;50;0;0;0;0;ano = composição
+Georg Friedrich Händel;Música para os Fogos de Artifício Reais;1749;barroco;;;;0;4;5;festivo|epico|confiante;rpg-corte|reveillon;;metais|orquestra;45;0;0;0;0;ano = composição
+Georg Friedrich Händel;Lascia ch'io pianga;1711;opera;barroco;;it;1;1;1;triste|melancolico|sagrado;rpg-drama;liberdade|perda;voz-feminina;55;0;0;0;0;ano = composição
+Georg Friedrich Händel;Sarabande (Suíte em Ré Menor);1733;barroco;;;;0;2;2;dramatico|sombrio;rpg-corte;;cordas;55;0;0;0;0;ano = composição
+Georg Friedrich Händel;A Chegada da Rainha de Sabá;1748;barroco;;;;0;4;5;festivo|alegre|epico;rpg-corte|casamento;;orquestra;50;0;0;0;0;ano = composição
+Antonio Vivaldi;As Quatro Estações: Verão (Presto);1725;barroco;;;;0;5;2;tenso|dramatico|agressivo;rpg-combate|rpg-perseguicao;;cordas;75;1;0;0;0;ano = composição
+Antonio Vivaldi;As Quatro Estações: Outono;1725;barroco;;;;0;4;4;alegre|festivo|animado;rpg-cidade;;cordas;50;0;0;0;0;ano = composição
+Antonio Vivaldi;Gloria em Ré Maior;1715;musica-sacra;barroco;;la;1;4;4;sagrado|festivo|epico;natal|momento-de-fe;fe;coral;45;0;0;0;0;ano = composição
+Antonio Vivaldi;Concerto para Dois Violinos em Lá Menor;1711;barroco;;;;0;4;3;dramatico|animado|tenso;foco;;cordas;35;0;0;0;0;ano = composição
+Tomaso Albinoni;Adagio em Sol Menor;1958;barroco;;;;0;1;1;triste|dramatico|melancolico;rpg-drama|fossa;perda;orgao|cordas;60;0;0;0;0;ano = composição (atribuído, Giazotto)
+Henry Purcell;Quando Estiver Deitada na Terra (Lamento de Dido);1689;opera;barroco;;en;1;1;1;triste|dramatico|sagrado;rpg-drama;perda;voz-feminina;40;0;0;0;0;ano = composição
+Wolfgang Amadeus Mozart;Uma Pequena Serenata Noturna: Allegro;1787;classicismo;;;;0;4;4;alegre|animado|aconchegante;foco|almoco-de-domingo;;cordas;85;1;0;0;0;ano = composição
+Wolfgang Amadeus Mozart;Sinfonia nº 40: Molto Allegro;1788;classicismo;;;;0;4;3;dramatico|tenso|animado;foco;;orquestra;75;0;0;0;0;ano = composição
+Wolfgang Amadeus Mozart;Lacrimosa (Requiem);1791;musica-sacra;classicismo;;la;1;2;1;triste|sagrado|dramatico;rpg-drama|momento-de-fe;perda;coral|orquestra;70;1;0;0;0;ano = composição
+Wolfgang Amadeus Mozart;Sonata para Piano nº 11: Allegro;1783;classicismo;;;;0;3;4;alegre|calmo|aconchegante;foco;;piano;60;0;0;0;0;ano = composição
+Wolfgang Amadeus Mozart;Concerto para Piano nº 21: Andante;1785;classicismo;;;;0;2;3;romantico|contemplativo|sonhador;relaxar|jantar-romantico;;piano;70;0;0;0;0;ano = composição
+Wolfgang Amadeus Mozart;A Flauta Mágica: Ária da Rainha da Noite;1791;opera;classicismo;;de;1;4;3;dramatico|agressivo|magico;rpg-vilao|rpg-ritual;;voz-feminina;60;0;0;0;0;ano = composição
+Wolfgang Amadeus Mozart;As Bodas de Fígaro: Abertura;1786;opera;classicismo;;;0;5;4;animado|alegre|empolgante;rpg-corte|rpg-perseguicao;;orquestra;50;0;0;0;0;ano = composição
+Wolfgang Amadeus Mozart;Ave Verum Corpus;1791;musica-sacra;classicismo;;la;1;1;3;sagrado|calmo|contemplativo;momento-de-fe|meditar;fe;coral;50;0;0;0;0;ano = composição
+Joseph Haydn;Sinfonia nº 94: Andante (Surpresa);1791;classicismo;;;;0;2;4;alegre|engracado|aconchegante;foco;;orquestra;35;0;0;0;0;ano = composição
+Joseph Haydn;A Criação: Os Céus Proclamam;1798;musica-sacra;classicismo;;de;1;4;4;sagrado|epico|esperancoso;momento-de-fe;fe;coral;30;0;0;0;0;ano = composição
+Ludwig van Beethoven;Sinfonia nº 5: Allegro con brio;1808;classicismo;romantismo;;;0;4;2;dramatico|epico|tenso;rpg-combate|rpg-chefe;;orquestra;95;1;0;0;0;ano = composição
+Ludwig van Beethoven;Sinfonia nº 9: Ode à Alegria;1824;romantismo;musica-sacra;;de;1;4;5;epico|esperancoso|festivo;rpg-final|casamento;liberdade|amizade;coral|orquestra;90;1;1;0;0;ano = composição
+Ludwig van Beethoven;Para Elisa;1810;classicismo;romantismo;;;0;2;3;romantico|calmo|nostalgico;relaxar|foco;;piano;95;1;0;0;0;ano = composição
+Ludwig van Beethoven;Sonata ao Luar: 1º movimento;1801;romantismo;classicismo;;;0;1;2;melancolico|contemplativo|sombrio;dia-chuvoso|relaxar;;piano;90;1;0;0;0;ano = composição
+Ludwig van Beethoven;Sonata Patética: Adagio cantabile;1799;classicismo;romantismo;;;0;1;2;melancolico|romantico|contemplativo;relaxar;;piano;55;0;0;0;0;ano = composição
+Ludwig van Beethoven;Sinfonia nº 7: Allegretto;1812;romantismo;classicismo;;;0;3;2;melancolico|dramatico;rpg-drama;;orquestra;60;0;0;0;0;ano = composição
+Ludwig van Beethoven;Sonata Appassionata: 3º movimento;1805;romantismo;;;;0;5;2;agressivo|dramatico|tenso;rpg-combate;;piano;40;0;0;0;0;ano = composição
+Franz Schubert;Ave Maria;1825;romantismo;musica-sacra;;de;1;1;3;sagrado|calmo|romantico;casamento|momento-de-fe;fe;voz-feminina|piano;75;1;1;0;0;ano = composição
+Franz Schubert;Serenata (Ständchen);1828;romantismo;;;de;1;2;3;romantico|melancolico|saudade;jantar-romantico;amor;piano;45;0;0;0;0;ano = composição
+Franz Schubert;Quarteto A Morte e a Donzela;1824;romantismo;;;;0;3;1;sombrio|dramatico|tenso;rpg-drama;perda;cordas;35;0;0;0;0;ano = composição
+Frédéric Chopin;Balada nº 1 em Sol Menor;1835;romantismo;;;;0;3;2;dramatico|melancolico|epico;foco|rpg-drama;;piano;60;0;0;0;0;ano = composição
+Frédéric Chopin;Estudo Revolucionário;1831;romantismo;;;;0;5;2;agressivo|dramatico|tenso;rpg-combate;;piano;62;0;0;0;0;ano = composição
+Frédéric Chopin;Marcha Fúnebre (Sonata nº 2);1839;romantismo;;;;0;1;1;triste|sombrio;rpg-drama;perda;piano;70;0;0;0;0;ano = composição
+Frédéric Chopin;Valsa do Minuto;1847;romantismo;;;;0;4;4;alegre|animado|engracado;foco;;piano;70;0;0;0;0;ano = composição
+Frédéric Chopin;Polonaise em Lá Bemol Maior (Heróica);1842;romantismo;;;;0;4;4;epico|confiante|animado;rpg-corte;;piano;50;0;0;0;0;ano = composição
+Franz Liszt;Sonho de Amor nº 3;1850;romantismo;;;;0;2;3;romantico|sonhador|calmo;jantar-romantico;;piano;60;0;0;0;0;ano = composição
+Franz Liszt;La Campanella;1851;romantismo;;;;0;4;4;magico|animado|alegre;foco;;piano;60;0;0;0;0;ano = composição
+Franz Liszt;Rapsódia Húngara nº 2;1847;romantismo;;;;0;4;4;animado|dramatico|festivo;rpg-taverna;;piano;75;1;0;0;0;ano = composição
+Johannes Brahms;Danças Húngaras nº 5;1869;romantismo;;;;0;4;4;animado|engracado|dramatico;rpg-taverna;;cordas;62;0;0;0;0;ano = composição
+Johannes Brahms;Canção de Ninar (Wiegenlied);1868;romantismo;;;de;1;1;3;calmo|aconchegante|romantico;dormir|criancas;familia;;75;1;0;0;0;ano = composição
+Johannes Brahms;Sinfonia nº 3: Poco Allegretto;1883;romantismo;;;;0;2;2;melancolico|romantico|nostalgico;relaxar;;orquestra;40;0;0;0;0;ano = composição
+Felix Mendelssohn;Marcha Nupcial;1842;romantismo;;;;0;4;5;festivo|alegre;casamento;;orgao|orquestra;85;1;0;0;0;ano = composição
+Felix Mendelssohn;Sonho de uma Noite de Verão: Scherzo;1842;romantismo;;;;0;4;4;magico|animado|alegre;rpg-exploracao|rpg-ritual;;flauta|orquestra;45;0;0;0;0;ano = composição
+Robert Schumann;Träumerei (Cenas de Infância);1838;romantismo;;;;0;1;3;sonhador|calmo|nostalgico;dormir|relaxar;;piano;55;0;0;0;0;ano = composição
+Piotr Ilitch Tchaikovsky;Abertura 1812;1880;romantismo;;;;0;5;4;epico|festivo|empolgante;rpg-final|rpg-combate;;orquestra|percussao;85;1;0;0;0;ano = composição
+Piotr Ilitch Tchaikovsky;Concerto para Piano nº 1: Allegro;1875;romantismo;;;;0;4;3;epico|dramatico|confiante;foco|rpg-abertura;;piano;75;1;0;0;0;ano = composição
+Piotr Ilitch Tchaikovsky;Romeu e Julieta: Abertura-Fantasia;1869;romantismo;;;;0;3;2;dramatico|romantico|epico;rpg-drama|rpg-corte;;orquestra;55;0;0;0;0;ano = composição
+Piotr Ilitch Tchaikovsky;Valsa Sentimental;1882;romantismo;;;;0;2;3;romantico|nostalgico|calmo;relaxar;;cordas;35;0;0;0;0;ano = composição
+Antonín Dvořák;Sinfonia nº 9 Novo Mundo: Largo;1893;romantismo;;;;0;1;3;nostalgico|calmo|saudade;relaxar|rpg-descanso;;orquestra;62;0;0;0;0;ano = composição
+Antonín Dvořák;Danças Eslavas nº 8;1878;romantismo;;;;0;4;4;animado|alegre|dramatico;rpg-taverna;;cordas;40;0;0;0;0;ano = composição
+Bedřich Smetana;O Moldava;1874;romantismo;;;;0;3;3;contemplativo|epico|esperancoso;rpg-exploracao|foco;;orquestra;55;0;0;0;0;ano = composição
+Modest Mussorgsky;Uma Noite no Monte Calvo;1867;romantismo;;;;0;5;1;sombrio|assustador|tenso;rpg-terror|rpg-ritual;;orquestra;62;0;0;0;0;ano = composição
+Modest Mussorgsky;Quadros de uma Exposição: O Grande Portão de Kiev;1874;romantismo;;;;0;4;3;epico|esperancoso;rpg-final;;orquestra;55;0;0;0;0;ano = composição
+Nikolai Rimsky-Korsakov;O Voo do Besouro;1900;romantismo;;;;0;5;4;animado|engracado|tenso;rpg-perseguicao;;cordas;75;1;0;0;0;ano = composição
+Nikolai Rimsky-Korsakov;Scheherazade: O Mar e o Navio de Sinbad;1888;romantismo;;;;0;3;3;misterioso|epico|sonhador;rpg-exploracao;;cordas|orquestra;45;0;0;0;0;ano = composição
+Gustav Holst;Os Planetas: Marte;1914;classica-contemporanea;romantismo;;;0;5;1;agressivo|tenso|epico;rpg-combate|rpg-chefe;;orquestra|metais;65;1;0;0;0;ano = composição
+Gustav Holst;Os Planetas: Júpiter;1916;classica-contemporanea;romantismo;;;0;4;4;epico|alegre|esperancoso;rpg-final;;orquestra;55;0;0;0;0;ano = composição
+Gustav Holst;Os Planetas: Netuno;1915;classica-contemporanea;;;;0;1;3;misterioso|sonhador|magico;rpg-misterio|meditar;;coral;35;0;0;0;0;ano = composição
+Edward Elgar;Nimrod (Variações Enigma);1899;romantismo;;;;0;2;2;sagrado|melancolico;rpg-drama;;orquestra;55;0;0;0;0;ano = composição
+Edward Elgar;Pompa e Circunstância nº 1;1901;romantismo;;;;0;4;4;epico|festivo;rpg-corte;;orquestra;55;0;0;0;0;ano = composição
+Samuel Barber;Adagio para Cordas;1936;classica-contemporanea;;;;0;1;1;triste|dramatico;rpg-drama|fossa;perda;cordas;70;1;0;0;0;ano = composição
+Maurice Ravel;Bolero;1928;classica-contemporanea;;;;0;3;3;tenso|sensual|dramatico;rpg-ritual;;percussao|orquestra;78;1;0;0;0;ano = composição
+Maurice Ravel;Pavana para uma Infanta Defunta;1899;classica-contemporanea;;;;0;1;2;melancolico|nostalgico|calmo;relaxar|rpg-drama;;piano;55;0;0;0;0;ano = composição
+Claude Debussy;Arabesque nº 1;1891;classica-contemporanea;;;;0;2;3;sonhador|calmo|magico;foco;;piano;55;0;0;0;0;ano = composição
+Claude Debussy;O Mar: De l'aube à midi;1905;classica-contemporanea;;;;0;3;3;contemplativo|epico|sonhador;rpg-exploracao;;orquestra;30;0;0;0;0;ano = composição
+Camille Saint-Saëns;O Cisne;1886;romantismo;;;;0;1;2;calmo|melancolico|sonhador;relaxar|dormir;;cordas;70;0;0;0;0;ano = composição
+Camille Saint-Saëns;Dança Macabra;1874;romantismo;;;;0;4;2;sombrio|assustador|tenso;rpg-terror|rpg-ritual;;cordas;62;0;0;0;0;ano = composição
+Camille Saint-Saëns;Sinfonia nº 3 (com Órgão): Finale;1886;romantismo;;;;0;4;3;epico|sagrado|dramatico;rpg-final;;orgao|orquestra;45;0;0;0;0;ano = composição
+Gabriel Fauré;Pavane;1887;romantismo;;;;0;2;3;melancolico|sonhador|calmo;relaxar;;flauta|orquestra;35;0;0;0;0;ano = composição
+Gabriel Fauré;Requiem: In Paradisum;1887;musica-sacra;romantismo;;la;1;1;3;sagrado|calmo|sonhador;momento-de-fe|meditar;fe;coral;40;0;0;0;0;ano = composição
+Jacques Offenbach;Can-Can (Orfeu no Inferno);1858;romantismo;;;;0;5;5;festivo|alegre|engracado;festa|rpg-taverna;;orquestra;82;1;0;0;0;ano = composição
+Jules Massenet;Meditação (Thaïs);1894;romantismo;;;;0;1;3;romantico|calmo|contemplativo;relaxar|casamento;;cordas;50;0;0;0;0;ano = composição
+Giuseppe Verdi;Dies Irae (Requiem);1874;musica-sacra;opera;;la;1;5;1;dramatico|assustador|epico;rpg-chefe|rpg-terror;;coral|orquestra;70;0;0;0;0;ano = composição
+Giuseppe Verdi;La donna è mobile;1851;opera;;;it;1;4;5;alegre|engracado|confiante;karaoke;;;70;0;1;0;0;ano = composição
+Giuseppe Verdi;Coro dos Escravos Hebreus (Va, pensiero);1842;opera;;;it;1;2;2;saudade|melancolico|sagrado;rpg-drama;liberdade;coral;55;0;0;0;0;ano = composição
+Giuseppe Verdi;Brindisi (La Traviata);1853;opera;;;it;1;4;5;festivo|alegre|romantico;festa|rpg-corte;curticao|cachaca;;50;0;1;0;0;ano = composição
+Giacomo Puccini;O mio babbino caro;1918;opera;;;it;1;2;3;romantico|aconchegante|dramatico;casamento;amor|familia;voz-feminina;70;0;0;0;0;ano = composição
+Giacomo Puccini;Un bel dì, vedremo;1904;opera;;;it;1;2;2;dramatico|romantico|saudade;fossa;amor;voz-feminina;50;0;0;0;0;ano = composição
+Giacomo Puccini;Vissi d'arte;1900;opera;;;it;1;2;2;dramatico|triste;rpg-drama;fe|perda;voz-feminina;38;0;0;0;0;ano = composição
+Gioachino Rossini;Abertura de Guilherme Tell;1829;opera;romantismo;;;0;5;4;epico|empolgante|animado;rpg-perseguicao|rpg-exploracao;;orquestra;75;1;0;0;0;ano = composição
+Gioachino Rossini;Largo al factotum (O Barbeiro de Sevilha);1816;opera;;;it;1;4;5;engracado|alegre|animado;rpg-humor;zoeira;;62;0;0;0;0;ano = composição
+Pietro Mascagni;Intermezzo (Cavalleria Rusticana);1890;opera;;;;0;1;2;melancolico|romantico|sagrado;relaxar|rpg-drama;;cordas;55;0;0;0;0;ano = composição
+Ruggero Leoncavallo;Vesti la giubba;1892;opera;;;it;1;3;1;triste|dramatico|melancolico;rpg-drama;dor-de-cotovelo;;40;0;0;0;0;ano = composição
+Léo Delibes;Dueto das Flores (Lakmé);1883;opera;;;fr;1;1;3;calmo|sonhador|magico;relaxar;;voz-feminina;45;0;0;0;0;ano = composição
+Jacques Offenbach;Barcarolle (Os Contos de Hoffmann);1881;opera;;;fr;1;2;3;romantico|calmo|sensual;jantar-romantico;amor;;45;0;0;0;0;ano = composição
+Gustav Mahler;Sinfonia nº 5: Adagietto;1902;romantismo;;;;0;1;2;romantico|melancolico|sagrado;rpg-drama;amor;cordas|harpa;50;0;0;0;0;ano = composição
+Richard Strauss;Assim Falou Zaratustra: Abertura;1896;romantismo;;;;0;4;3;epico|dramatico;rpg-abertura|rpg-final;;orgao|orquestra;75;1;0;0;0;ano = composição
+Jean Sibelius;Finlândia;1899;romantismo;;;;0;4;3;epico|dramatico|esperancoso;rpg-final;liberdade;orquestra|metais;45;0;0;0;0;ano = composição
+Sergei Rachmaninoff;Concerto para Piano nº 2: Adagio sostenuto;1901;romantismo;;;;0;2;2;romantico|melancolico|dramatico;jantar-romantico|fossa;;piano;70;0;0;0;0;ano = composição
+Sergei Rachmaninoff;Rapsódia sobre um Tema de Paganini: Variação 18;1934;romantismo;;;;0;2;3;romantico|nostalgico|dramatico;jantar-romantico;;piano;55;0;0;0;0;ano = composição
+Sergei Rachmaninoff;Vocalise;1912;romantismo;;;;0;1;2;melancolico|saudade|contemplativo;relaxar;;;45;0;0;0;0;ano = composição
+Sergei Prokofiev;Montéquios e Capuletos (Dança dos Cavaleiros);1935;romantismo;classica-contemporanea;;;0;4;2;sombrio|dramatico;rpg-corte|rpg-vilao;;orquestra;70;1;0;0;0;ano = composição
+Dmitri Shostakovich;Valsa nº 2;1938;classica-contemporanea;;;;0;3;3;nostalgico|melancolico|romantico;rpg-corte;;orquestra;62;0;0;0;0;ano = composição
+Aram Khachaturian;Dança do Sabre;1942;classica-contemporanea;;;;0;5;4;empolgante|agressivo|animado;rpg-perseguicao|rpg-combate;;orquestra;62;0;0;0;0;ano = composição
+Igor Stravinsky;A Sagração da Primavera: Dança Sacrificial;1913;classica-contemporanea;;;;0;5;2;agressivo|tenso|sombrio;rpg-ritual|rpg-combate;;orquestra|percussao;45;0;0;0;0;ano = composição
+Igor Stravinsky;O Pássaro de Fogo: Dança Infernal;1910;classica-contemporanea;;;;0;5;2;magico|tenso|agressivo;rpg-ritual;;orquestra;40;0;0;0;0;ano = composição
+Aaron Copland;Fanfare for the Common Man;1942;classica-contemporanea;;;;0;4;3;epico|dramatico;rpg-abertura;;metais|percussao;50;0;0;0;0;ano = composição
+George Gershwin;Rhapsody in Blue;1924;classica-contemporanea;jazz;;;0;4;4;alegre|sonhador|nostalgico;foco;;piano;70;1;0;0;0;ano = composição
+Philip Glass;Metamorphosis Two;1988;minimalismo;;;;0;1;2;contemplativo|melancolico|estranho;foco|meditar;;piano;55;0;0;0;0;ano = composição
+Ludovico Einaudi;Nuvole Bianche;1996;classica-contemporanea;minimalismo;;;0;1;2;melancolico|contemplativo|sonhador;foco|relaxar|dia-chuvoso;;piano;75;0;0;0;0;
+Ludovico Einaudi;Experience;2013;classica-contemporanea;minimalismo;;;0;3;3;epico|esperancoso|contemplativo;foco|rpg-final;;cordas|piano;70;0;0;0;0;
+Max Richter;On the Nature of Daylight;2004;classica-contemporanea;minimalismo;;;0;1;1;melancolico|triste|contemplativo;foco|fossa;;cordas;62;0;0;0;0;
+Arvo Pärt;Spiegel im Spiegel;1978;minimalismo;;;;0;1;2;calmo|sagrado|contemplativo;meditar|foco|dormir;;piano|cordas;55;0;0;0;0;ano = composição
+Henryk Górecki;Sinfonia nº 3: Lento;1976;classica-contemporanea;;;outro;1;1;1;triste|sagrado|melancolico;rpg-drama;perda;voz-feminina|orquestra;30;0;0;0;0;ano = composição
+Gregorio Allegri;Miserere;1638;musica-sacra;barroco;;la;1;1;1;sagrado|triste;momento-de-fe|rpg-ritual;fe;coral;50;0;0;0;0;ano = composição
+Gabriel Fauré;Cantique de Jean Racine;1865;musica-sacra;romantismo;;fr;1;1;3;sagrado|calmo|esperancoso;momento-de-fe;fe;coral;30;0;0;0;0;ano = composição
+Carl Orff;Carmina Burana: In Taberna Quando Sumus;1936;classica-contemporanea;medieval;;la;1;4;4;festivo|engracado|animado;rpg-taverna;cachaca;coral;35;0;0;0;0;ano = composição
+Heitor Villa-Lobos;O Trenzinho do Caipira;1930;classica-contemporanea;;;;0;4;4;alegre|nostalgico|animado;estrada;pe-na-estrada;orquestra;62;1;0;0;0;ano = composição
+Heitor Villa-Lobos;Prelúdio nº 1 em Mi Menor;1940;classica-contemporanea;;;;0;2;2;melancolico|nostalgico|contemplativo;relaxar|foco;;violao;55;0;0;0;0;ano = composição
+Heitor Villa-Lobos;Choros nº 1;1920;choro;classica-contemporanea;;;0;3;3;nostalgico|alegre|aconchegante;relaxar;;violao;35;0;0;0;0;ano = composição
+Real McCoy;Run Away;1995;eurodance;;;en;1;4;4;animado|alegre;balada|festa;danca;;55;0;0;0;0;
+Captain Hollywood Project;More and More;1992;eurodance;;;en;1;4;4;animado|alegre;balada;danca;;50;0;0;0;0;
+Dr. Alban;Sing Hallelujah!;1993;eurodance;;;en;1;4;5;festivo|alegre|animado;festa;curticao;;50;0;0;0;0;
+Scooter;Maria (I Like It Loud);2003;techno;eurodance;;en;1;5;4;animado|agressivo|empolgante;balada|treino;curticao;;40;0;0;0;0;
+Daft Punk;Da Funk;1995;house;;;;0;5;3;estranho|animado|confiante;balada;;sintetizador;55;0;0;0;0;
+Justice;Genesis;2007;house;;;;0;5;3;agressivo|estranho|empolgante;balada|treino;;;45;0;0;0;0;
+Faithless;God Is a DJ;1998;house;;;en;1;4;4;empolgante|esperancoso|animado;balada;fe;;55;0;0;0;0;
+Paul van Dyk;For an Angel;1998;trance;;;;0;4;4;sonhador|esperancoso|empolgante;balada;;;45;0;0;0;0;
+Ferry Corsten;Punk;1999;trance;;;;0;5;3;empolgante|agressivo|tenso;balada|treino;;;40;0;0;0;0;
+Skrillex;Bangarang;2011;dubstep;;Sirah;en;1;5;3;agressivo|empolgante|confiante;treino|jogar;;;60;0;0;0;0;
+Diplo;Revolution;2013;edm;;;en;1;5;4;empolgante|animado|agressivo;balada;;;35;0;0;0;0;
+Flume;Never Be Like You;2016;edm;electropop;Kai;en;1;3;3;melancolico|sonhador|romantico;relaxar;termino;;55;0;0;0;0;
+Alan Walker;Alone;2016;edm;;;en;1;3;2;melancolico|sonhador|triste;relaxar;solidao;;62;0;0;0;0;
+Axwell /\ Ingrosso;More Than You Know;2017;edm;;;en;1;4;3;romantico|melancolico|animado;balada|praia;amor|termino;;65;0;1;0;0;
+Hardwell;Spaceman;2012;edm;;;;0;5;4;empolgante|animado|epico;balada|treino;;;52;0;0;0;0;
+Dimitri Vegas & Like Mike;Mammoth;2013;edm;;Moguai;;0;5;4;empolgante|agressivo|animado;balada|treino;;;45;0;0;0;0;
+Steve Aoki;Boneless;2014;edm;;Chris Lake, Tujamo;;0;5;4;empolgante|animado|agressivo;balada|treino;;;40;0;0;0;0;
+Cheat Codes;Sex;2016;edm;;Kris Kross Amsterdam;en;1;4;4;sensual|animado|confiante;balada;pegacao;;45;0;1;1;0;
+Duke Dumont;I Got U;2014;house;deep-house;Jax Jones;en;1;4;4;sensual|animado|alegre;balada;paixao;;55;0;1;0;0;
+Gorgon City;Ready for Your Love;2013;house;;MNEK;en;1;4;3;sensual|animado|romantico;balada;paixao;;45;0;1;0;0;
+Route 94;My Love;2014;house;deep-house;Jess Glynne;en;1;4;4;romantico|alegre|animado;balada;amor;;55;0;1;0;0;
+Tove Lo;Habits (Stay High) (Hippie Sabotage Remix);2014;electropop;;;en;1;3;2;melancolico|sonhador|sensual;balada|fossa;solidao;;60;0;1;1;0;
+Hans Zimmer;Roll Tide;2020;trilha-de-filme;;;;0;2;2;contemplativo|melancolico|sonhador;foco;;;0;0;0;0;0;
+Hans Zimmer;Journey to the Line;1998;trilha-de-filme;;;;0;3;2;dramatico|contemplativo|tenso;rpg-drama;;orquestra;38;0;0;0;0;Além da Linha Vermelha
+Hans Zimmer;Arrival of the Birds;2004;trilha-de-filme;;;;0;2;1;triste|dramatico|sagrado;rpg-drama;perda;cordas;45;0;0;0;0;
+Hans Zimmer;Tears of a Clown;2001;trilha-de-filme;;;;0;3;3;dramatico|misterioso|contemplativo;rpg-misterio;;;0;0;0;0;0;
+Hans Zimmer;The Spirit of Adventure;2009;trilha-de-filme;;;;0;3;3;esperancoso|epico|animado;rpg-exploracao;;;0;0;0;0;0;
+Howard Shore;May It Be;2001;trilha-de-filme;celta;Enya;en;1;2;3;sagrado|esperancoso|calmo;rpg-descanso;;voz-feminina;70;0;0;0;0;
+Howard Shore;Gollum's Song;2002;trilha-de-filme;;Emiliana Torrini;en;1;2;1;triste|sombrio|melancolico;rpg-drama;perda|solidao;;45;0;0;0;0;
+Bear McCreary;Starbuck on the Beach;2005;trilha-de-serie;;;;0;2;2;melancolico|sagrado|contemplativo;rpg-drama;;;32;0;0;0;0;
+James Horner;My Heart Will Go On (Titanic Instrumental);1997;trilha-de-filme;;;;0;2;2;romantico|melancolico|dramatico;fossa;;flauta|orquestra;1;0;0;0;0;
+James Horner;Hornpipe Medley;1997;trilha-de-filme;celta;;;0;4;4;alegre|animado|festivo;rpg-taverna;;cordas|flauta;30;0;0;0;0;
+James Horner;I See You (Theme from Avatar);2009;trilha-de-filme;;Leona Lewis;en;1;3;3;romantico|magico|sonhador;rpg-exploracao;amor;voz-feminina;55;0;0;0;0;
+Thomas Newman;Skyfall;2012;trilha-de-filme;;;;0;3;2;tenso|dramatico|misterioso;rpg-misterio;;;0;0;0;0;0;
+Ludwig Göransson;Kimba;2018;trilha-de-filme;;;;0;3;4;esperancoso|epico|confiante;rpg-exploracao;;percussao;30;0;0;0;0;Pantera Negra
+Patrick Doyle;Harry in Winter;2005;trilha-de-filme;;;;0;2;2;melancolico|magico|contemplativo;rpg-descanso;;orquestra;38;0;0;0;0;
+Harry Gregson-Williams;Narnia: The Battle;2005;trilha-de-filme;;;;0;5;2;epico|empolgante|agressivo;rpg-combate;;orquestra;30;0;0;0;0;
+Hisaishi Joe;Merry-Go-Round of Life;2004;trilha-de-anime;;;;0;3;3;magico|nostalgico|romantico;rpg-corte|rpg-cidade;;piano|orquestra;80;1;0;0;0;O Castelo Animado
+Hisaishi Joe;One Summer's Day;2001;trilha-de-anime;;;;0;2;3;nostalgico|melancolico|sonhador;relaxar|foco;;piano;70;0;0;0;0;A Viagem de Chihiro
+Hisaishi Joe;Princess Mononoke Theme;1997;trilha-de-anime;;;;0;3;3;epico|misterioso|esperancoso;rpg-exploracao;;orquestra;55;0;0;0;0;
+Hisaishi Joe;The Path of the Wind;1988;trilha-de-anime;;;;0;2;4;nostalgico|aconchegante|sonhador;criancas|relaxar;;piano;60;0;0;0;0;Meu Amigo Totoro
+Alan Menken;Beauty and the Beast;1991;musical;trilha-de-filme;Angela Lansbury;en;1;2;3;romantico|aconchegante|nostalgico;casamento|criancas;amor;;80;1;1;0;0;
+Alan Menken;A Whole New World;1992;musical;;Brad Kane, Lea Salonga;en;1;3;4;romantico|magico|esperancoso;casamento|karaoke;amor|liberdade;;85;1;1;0;0;
+Alan Menken;Part of Your World;1989;musical;;Jodi Benson;en;1;2;3;sonhador|esperancoso|romantico;criancas|karaoke;liberdade;;80;1;1;0;0;
+Alan Menken;Under the Sea;1989;musical;;Samuel E. Wright;en;1;4;5;alegre|engracado|animado;criancas|festa;curticao;;75;0;1;0;0;
+Alan Menken;Be Our Guest;1991;musical;;Jerry Orbach, Angela Lansbury;en;1;4;5;alegre|festivo|engracado;criancas;curticao;;70;0;1;0;0;
+Alan Menken;Colors of the Wind;1995;musical;;Judy Kuhn;en;1;2;3;sonhador|contemplativo|esperancoso;criancas|relaxar;liberdade;;70;0;1;0;0;
+Alan Menken;Reflection;1998;musical;;Lea Salonga;en;1;2;3;sonhador|contemplativo|esperancoso;criancas;superacao;;55;0;1;0;0;
+Alan Menken;Go the Distance;1997;musical;;Roger Bart;en;1;3;4;esperancoso|epico|sonhador;criancas;superacao;;62;0;1;0;0;
+Tim Rice & Elton John;Circle of Life (Instrumental);1994;musical;;;;0;3;3;epico|sagrado|esperancoso;criancas;;;1;0;0;0;0;
+Robert Lopez & Kristen Anderson-Lopez;Do You Want to Build a Snowman?;2013;musical;;Kristen Bell;en;1;2;3;melancolico|saudade|aconchegante;criancas;familia;;80;0;1;0;0;
+Robert Lopez & Kristen Anderson-Lopez;For the First Time in Forever;2013;musical;;Kristen Bell, Idina Menzel;en;1;4;5;alegre|animado|esperancoso;criancas;liberdade;;65;0;1;0;0;
+Lin-Manuel Miranda;We Don't Talk About Bruno;2021;musical;;Carolina Gaitán, Mauro Castillo;en;1;4;4;misterioso|engracado|animado;criancas|karaoke;familia;;88;1;1;0;0;Encanto
+Lin-Manuel Miranda;How Far I'll Go;2016;musical;;Auliʻi Cravalho;en;1;3;4;sonhador|esperancoso|epico;criancas|karaoke;liberdade|superacao;;75;0;1;0;0;Moana
+Lin-Manuel Miranda;You're Welcome;2016;musical;;Dwayne Johnson;en;1;4;5;engracado|confiante|animado;criancas;zoeira;;60;0;1;0;0;
+Lin-Manuel Miranda;Surface Pressure;2021;musical;;Jessica Darrow;en;1;4;3;dramatico|animado|confiante;criancas;familia|superacao;;62;0;1;0;0;
+Lin-Manuel Miranda;Wait for It;2015;musical;;Leslie Odom Jr.;en;1;2;2;melancolico|dramatico|esperancoso;fossa;amor|perda;;40;0;1;0;0;
+Pasek & Paul;This Is Me;2017;musical;;Keala Settle;en;1;4;4;epico|confiante|esperancoso;karaoke;superacao|orgulho;;78;1;1;0;0;O Rei do Show
+Pasek & Paul;A Million Dreams;2017;musical;;Ziv Zaifman, Hugh Jackman;en;1;2;4;sonhador|esperancoso|romantico;criancas;superacao|familia;;62;0;1;0;0;
+Pasek & Paul;Rewrite the Stars;2017;musical;;Zac Efron, Zendaya;en;1;3;3;romantico|dramatico|esperancoso;jantar-romantico;amor;;62;0;1;0;0;
+Benj Pasek & Justin Paul;City of Stars;2016;musical;jazz;Ryan Gosling, Emma Stone;en;1;2;3;romantico|sonhador|nostalgico;jantar-romantico;amor|liberdade;piano;70;0;1;0;0;La La Land
+Andrew Lloyd Webber;The Phantom of the Opera;1986;musical;;Michael Crawford, Sarah Brightman;en;1;3;2;dramatico|sombrio|epico;rpg-vilao|rpg-corte;paixao;orgao|orquestra;65;1;1;0;0;
+Andrew Lloyd Webber;Memory;1981;musical;;Elaine Paige;en;1;2;2;melancolico|nostalgico|dramatico;fossa;solidao;;55;0;1;0;0;Cats
+Claude-Michel Schönberg;I Dreamed a Dream;1980;musical;;Anne Hathaway;en;1;2;1;triste|dramatico|melancolico;fossa;perda|superacao;;62;0;1;0;0;Os Miseráveis
+Claude-Michel Schönberg;One Day More;1980;musical;;;en;1;4;3;epico|dramatico|esperancoso;rpg-final;liberdade;coral;45;0;1;0;0;
+Stephen Schwartz;Defying Gravity;2003;musical;;Idina Menzel, Kristin Chenoweth;en;1;4;4;epico|esperancoso|confiante;karaoke;liberdade|superacao;;70;1;1;0;0;Wicked
+Richard Rodgers;Do-Re-Mi;1959;musical;;Julie Andrews;en;1;4;5;alegre|animado|engracado;criancas|karaoke;infancia;;65;0;1;0;0;
+Mary Poppins;Supercalifragilisticexpialidocious;1964;musical;;Julie Andrews, Dick Van Dyke;en;1;4;5;alegre|engracado|animado;criancas;zoeira;;62;0;1;0;0;
+Sherman Brothers;Chim Chim Cher-ee;1964;musical;;Dick Van Dyke;en;1;3;4;aconchegante|nostalgico|alegre;criancas;;;45;0;1;0;0;
