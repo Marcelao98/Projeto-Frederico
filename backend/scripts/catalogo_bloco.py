@@ -37,7 +37,8 @@ from pathlib import Path
 
 RAIZ_BACKEND = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(RAIZ_BACKEND))
-from freddy.catalogo.bloco import chave_musica, escolher_gravacao, escolher_video  # noqa: E402
+from freddy.catalogo.bloco import (  # noqa: E402
+    chave_musica, escolher_gravacao, escolher_video, escolher_video_reserva)
 from freddy.catalogo.compilar import compilar  # noqa: E402
 from freddy.catalogo.importar import PASTA_BLOCOS, importar, listas_de_blocos  # noqa: E402
 
@@ -46,6 +47,7 @@ CAB_MB = ["artista", "titulo", "ano_lista", "ano_mb", "confere", "mbid", "duraca
 CAB_YT = ["artista", "titulo", "endereco", "canal", "oficial", "duracao", "motivo"]
 parar = threading.Event()
 trava_print = threading.Lock()
+trava_arquivo = threading.Lock()
 
 
 def diga(texto: str) -> None:
@@ -81,65 +83,98 @@ def tarefas(sufixo: str) -> list[tuple[dict, Path]]:
 
 def conferir_musicbrainz() -> None:
     fila = tarefas("musicbrainz")
-    erros_seguidos = 0
     for i, (m, saida) in enumerate(fila, 1):
         if parar.is_set():
             return
         consulta = f'recording:"{m["titulo"]}" AND artist:"{m["artista"]}"'
         url = "https://musicbrainz.org/ws/2/recording/?" + urllib.parse.urlencode(
             {"query": consulta, "fmt": "json", "limit": 25})
-        try:
-            req = urllib.request.Request(url, headers={"User-Agent": AGENTE})
-            with urllib.request.urlopen(req, timeout=30) as r:
-                gravacoes = json.load(r).get("recordings", [])
-            erros_seguidos = 0
-        except Exception as e:  # rede ou limite do MusicBrainz: espera e deixa pra próxima rodada
-            erros_seguidos += 1
-            diga(f"  MusicBrainz: erro ({e}); espero {min(60, 5 * erros_seguidos)} s")
-            time.sleep(min(60, 5 * erros_seguidos))
+        gravacoes = None
+        for tentativa in range(8):  # o MusicBrainz recusa (503) quando está cheio: insiste na mesma música
+            try:
+                req = urllib.request.Request(url, headers={"User-Agent": AGENTE})
+                with urllib.request.urlopen(req, timeout=30) as r:
+                    gravacoes = json.load(r).get("recordings", [])
+                break
+            except Exception:
+                time.sleep(1.5 + tentativa)
+        if gravacoes is None:
+            diga(f"  MusicBrainz: desisti de {m['artista']} - {m['titulo']} (fica pra próxima rodada)")
             continue
         g, motivo = escolher_gravacao(m["artista"], m["titulo"], gravacoes)
         ano_mb = (g.get("first-release-date") or "")[:4] if g else ""
         composicao = "ano =" in m.get("nota", "")
         confere = "sim" if composicao or ano_mb == m["ano"] else ("?" if not ano_mb else "NÃO")
         duracao = round(g["length"] / 1000) if g and g.get("length") else ""
-        anexar(saida, CAB_MB, [m["artista"], m["titulo"], m["ano"], ano_mb, confere,
-                               g["id"] if g else "", duracao, motivo])
-        if i % 25 == 0 or i == len(fila):
+        with trava_arquivo:
+            anexar(saida, CAB_MB, [m["artista"], m["titulo"], m["ano"], ano_mb, confere,
+                                   g["id"] if g else "", duracao, motivo])
+        if i % 100 == 0 or i == len(fila):
             diga(f"  MusicBrainz: {i}/{len(fila)}")
         time.sleep(1.1)  # o MusicBrainz pede no máximo 1 por segundo
 
 
-def conferir_youtube() -> None:
+def _buscar_youtube(ydl, consulta: str) -> list[dict] | None:
+    for tentativa in range(6):  # o YouTube recusa (403) de vez em quando: insiste
+        try:
+            return (ydl.extract_info(consulta, download=False) or {}).get("entries", []) or []
+        except Exception:
+            time.sleep(1 + tentativa)
+    return None
+
+
+def _fio_youtube(fila, total: int) -> None:
     import yt_dlp
 
-    fila = tarefas("youtube")
-    erros_seguidos = 0
-    opcoes = {"quiet": True, "no_warnings": True, "extract_flat": True, "skip_download": True}
+    opcoes = {"quiet": True, "no_warnings": True, "extract_flat": True, "skip_download": True,
+              "extractor_retries": 0, "logger": _Mudo()}
     with yt_dlp.YoutubeDL(opcoes) as ydl:
-        for i, (m, saida) in enumerate(fila, 1):
-            if parar.is_set():
-                return
+        while not parar.is_set():
             try:
-                info = ydl.extract_info(f"ytsearch8:{m['artista']} - {m['titulo']}", download=False)
-                videos = info.get("entries", []) or []
-                erros_seguidos = 0
-            except Exception as e:  # YouTube recusou ou caiu: espera mais a cada erro seguido
-                erros_seguidos += 1
-                espera = min(300, 15 * erros_seguidos)
-                diga(f"  YouTube: erro ({str(e)[:80]}); espero {espera} s")
-                time.sleep(espera)
+                i, m, saida = fila.pop()
+            except IndexError:
+                return
+            videos = _buscar_youtube(ydl, f"ytsearch10:{m['artista']} - {m['titulo']}")
+            if videos is None:
+                diga(f"  YouTube: desisti de {m['artista']} - {m['titulo']} (fica pra próxima rodada)")
                 continue
             nota = m.get("nota", "").lower()
             ao_vivo = m.get("ao_vivo") == "1" or "ao vivo" in nota or "acústico" in nota
             v, motivo = escolher_video(m["artista"], m["titulo"], videos, ao_vivo)
-            anexar(saida, CAB_YT, [
-                m["artista"], m["titulo"], f"https://www.youtube.com/watch?v={v['id']}" if v else "",
-                (v.get("channel") or v.get("uploader") or "") if v else "", 1 if v else 0,
-                int(v["duration"]) if v and v.get("duration") else "", motivo])
-            if i % 25 == 0 or i == len(fila):
-                diga(f"  YouTube: {i}/{len(fila)}")
-            time.sleep(0.5)
+            oficial = 1 if v else 0
+            if not v:  # sem oficial: tenta de novo pedindo o áudio oficial, depois aceita o mais visto
+                mais = _buscar_youtube(ydl, f"ytsearch10:{m['artista']} {m['titulo']} áudio oficial") or []
+                v, motivo = escolher_video(m["artista"], m["titulo"], mais, ao_vivo)
+                oficial = 1 if v else 0
+                if not v:
+                    v, motivo = escolher_video_reserva(m["artista"], m["titulo"], videos + mais, ao_vivo)
+            with trava_arquivo:
+                anexar(saida, CAB_YT, [
+                    m["artista"], m["titulo"], f"https://www.youtube.com/watch?v={v['id']}" if v else "",
+                    (v.get("channel") or v.get("uploader") or "") if v else "", oficial,
+                    int(v["duration"]) if v and v.get("duration") else "", motivo])
+            feitas = total - len(fila)
+            if feitas % 100 == 0:
+                diga(f"  YouTube: {feitas}/{total}")
+            time.sleep(0.3)
+
+
+class _Mudo:
+    def debug(self, _): pass
+    def warning(self, _): pass
+    def error(self, _): pass
+
+
+def conferir_youtube(fios: int = 3) -> None:
+    tarefas_yt = tarefas("youtube")
+    fila = [(i, m, saida) for i, (m, saida) in enumerate(tarefas_yt, 1)][::-1]
+    total = len(fila)
+    grupo = [threading.Thread(target=_fio_youtube, args=(fila, total), daemon=True) for _ in range(fios)]
+    for t in grupo:
+        t.start()
+    for t in grupo:
+        while t.is_alive():
+            t.join(1)
 
 
 def conferir() -> None:

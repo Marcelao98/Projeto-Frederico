@@ -1,7 +1,8 @@
 """Leva os blocos conferidos (acervo/catalogo/blocos/) pro catálogo (os CSV de música).
 
 Pra cada música da lista de um bloco:
-- sem link oficial do YouTube (ou ainda não conferida) → vai pro pendentes.csv;
+- sem link nenhum do YouTube (ou ainda não conferida) → vai pro pendentes.csv;
+  link não oficial (o mais visto dessa gravação) entra marcado oficial=0;
 - o MusicBrainz achou outro ano → fica o do MusicBrainz (menos na clássica,
   em que o ano da lista é o da composição);
 - o resto entra no catálogo com lote "bloco-NN", as tags da lista
@@ -83,7 +84,7 @@ def importar(pasta_cat: Path = PASTA_CATALOGO, pasta_blocos: Path | None = None)
                 rel.pendentes.append([l["artista"], l["titulo"], bloco, "ainda não conferida no YouTube"])
                 rel.conta(bloco, "pendente")
                 continue
-            if v["oficial"] != "1":
+            if not v["endereco"]:
                 rel.pendentes.append([l["artista"], l["titulo"], bloco, v["motivo"]])
                 rel.conta(bloco, "pendente")
                 continue
@@ -129,8 +130,11 @@ def importar(pasta_cat: Path = PASTA_CATALOGO, pasta_blocos: Path | None = None)
             for t, peso in marcas.items():
                 tabelas["musica_tag"].append({"musica": mid, "tag": t, "peso": peso, "quem_marcou": "claude"})
             tabelas["fontes"].append({"musica": mid, "tipo": "youtube", "endereco": v["endereco"],
-                                      "oficial": "1", "viva": "1", "conferida_em": hoje})
+                                      "oficial": "1" if v["oficial"] == "1" else "0", "viva": "1",
+                                      "conferida_em": hoje})
             rel.conta(bloco, "entrou")
+            if v["oficial"] != "1":
+                rel.conta(bloco, "fonte não oficial")
 
     tabelas["artistas"] = sorted(artistas.values(), key=lambda a: a["id"])
     for n, linhas in tabelas.items():

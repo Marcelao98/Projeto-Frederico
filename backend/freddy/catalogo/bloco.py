@@ -29,8 +29,18 @@ def _simples(texto: str) -> str:
 
 def _artistas(artista: str) -> list[str]:
     """'Zé Neto & Cristiano' é um artista; 'Elis Regina & Tom Jobim' são dois: guarda os três jeitos."""
-    partes = [artista] + re.split(r"\s+(?:&|e|and|x|feat\.?|part\.?)\s+", artista)
+    partes = [artista] + re.split(r"\s+(?:&|e|and|x|feat\.?|part\.?)\s+|,\s*", artista)
+    # "MC Ryan SP" aparece nos títulos como "Ryan SP"; "DJ Fulano" como "Fulano".
+    partes += [re.sub(r"^(?:mc|dj)\s+", "", p, flags=re.IGNORECASE) for p in partes]
     return [p for p in {_simples(p) for p in partes} if len(p) >= 3]
+
+
+# Gravadoras e produtoras que sobem o áudio/clipe oficial no próprio canal.
+_GRAVADORAS = (
+    "biscoitofino", "somlivre", "sonymusic", "universalmusic", "warnermusic", "deckdisc", "trama",
+    "gr6", "kondzilla", "lovefunk", "furacao2000", "workshow", "radarrecords", "atracao", "emimusic",
+    "midasmusic", "onerpm", "mkmusic", "todahmusic", "gravadora", "records", "discos",
+)
 
 
 def _titulo_bate(titulo_lista: str, titulo_achado: str) -> bool:
@@ -68,10 +78,44 @@ def escolher_video(artista: str, titulo: str, videos: list[dict], ao_vivo: bool 
             candidatos.append((2, "canal do artista, vídeo oficial", v))
         elif do_artista:
             candidatos.append((3, "canal do artista", v))
+        elif (v.get("channel_is_verified") and any(g in canal_s for g in _GRAVADORAS)
+              and any(a in _simples(nome) for a in artistas)):
+            candidatos.append((4, "canal verificado de gravadora", v))
     if not candidatos:
         return None, "nenhum upload oficial nos resultados"
     candidatos.sort(key=lambda c: c[0])
     return candidatos[0][2], candidatos[0][1]
+
+
+def escolher_video_reserva(artista: str, titulo: str, videos: list[dict], ao_vivo: bool = False) -> tuple[dict | None, str]:
+    """Quando não há upload oficial: o vídeo mais visto que é mesmo essa gravação.
+
+    Tem que ter o título e o artista (no nome do vídeo ou do canal), não ser
+    cover/karaokê/letra, não ser ao vivo (a não ser que a lista peça) e ter
+    tamanho de música (1 a 12 min: fora álbum inteiro). Entra no catálogo como
+    fonte NÃO oficial (oficial=0): toca, e troca-se quando aparecer a oficial.
+    """
+    artistas = _artistas(artista)
+    bons = []
+    for v in videos:
+        nome = v.get("title") or ""
+        canal = v.get("channel") or v.get("uploader") or ""
+        if not _titulo_bate(titulo, nome):
+            continue
+        if _NAO_OFICIAL.search(nome) and not _NAO_OFICIAL.search(titulo):
+            continue
+        if not ao_vivo and _AO_VIVO.search(nome) and not _AO_VIVO.search(titulo):
+            continue
+        if not any(a in _simples(nome + " " + canal) for a in artistas):
+            continue
+        d = v.get("duration")
+        if d and not 60 <= d <= 720:
+            continue
+        bons.append(v)
+    if not bons:
+        return None, "nenhum vídeo dessa gravação nos resultados"
+    bons.sort(key=lambda v: v.get("view_count") or 0, reverse=True)
+    return bons[0], "não oficial: o mais visto dessa gravação"
 
 
 def escolher_gravacao(artista: str, titulo: str, gravacoes: list[dict]) -> tuple[dict | None, str]:

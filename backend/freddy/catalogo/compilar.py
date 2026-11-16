@@ -4,7 +4,7 @@
     python -m freddy.catalogo.compilar --conferir # só confere, não grava
 
 Regras (docs/etapas/banco-fredify.md): toda música com gênero, energia,
-animação, ≥ 2 climas e popularidade; ano e fonte oficial viva. As faixas do
+animação, ≥ 2 climas e popularidade; ano e fonte viva (a oficial é a preferida; a não oficial entra marcada). As faixas do
 lote "rpg-legado" (vindas do musicas.json) e as marcadas "revisar" têm parte
 disso cobrado só como aviso. Erro barra a compilação; aviso só é contado.
 """
@@ -187,10 +187,10 @@ def conferir(d: dict[str, list[dict]]) -> Resultado:
         ano = _int(m["ano"])
         if ano is not None and not 1600 <= ano <= ano_max:
             err(f"{mid}: ano {ano} estranho")
-        boas = [f for f in fontes_de.get(mid, []) if f["oficial"] == "1" and f["viva"] == "1"]
+        boas = [f for f in fontes_de.get(mid, []) if f["viva"] == "1"]
         if not fontes_de.get(mid):
             err(f"{mid}: sem fonte")
-        for falta, ok in (("sem ano", ano is not None), ("sem fonte oficial viva", bool(boas))):
+        for falta, ok in (("sem ano", ano is not None), ("sem fonte viva", bool(boas))):
             if not ok:
                 if legado:
                     r.aviso(f"legado {falta}")

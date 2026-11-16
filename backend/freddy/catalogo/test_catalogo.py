@@ -54,13 +54,16 @@ class TestCatalogo(unittest.TestCase):
         d["musica_tag"] = [l for l in d["musica_tag"] if l["musica"] != mid]
         self.assertTrue(any("menos de 2 climas" in e for e in conferir(d).erros))
 
-    def test_regras_cobram_ano_e_fonte_oficial_fora_do_legado(self):
+    def test_regras_cobram_ano_e_fonte_viva_fora_do_legado(self):
         d = carregar()
         m = next(m for m in d["musicas"] if not m["ano"])
         m["lote"] = "bloco-01"
+        for f in d["fontes"]:
+            if f["musica"] == m["id"]:
+                f["viva"] = "0"
         erros = conferir(d).erros
         self.assertTrue(any(m["id"] in e and "sem ano" in e for e in erros))
-        self.assertTrue(any(m["id"] in e and "fonte oficial" in e for e in erros))
+        self.assertTrue(any(m["id"] in e and "fonte viva" in e for e in erros))
 
     def test_regras_pegam_giria_apontando_pro_nada(self):
         d = carregar()

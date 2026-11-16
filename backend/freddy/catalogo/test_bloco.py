@@ -2,7 +2,7 @@
 
 import unittest
 
-from freddy.catalogo.bloco import escolher_gravacao, escolher_video
+from freddy.catalogo.bloco import escolher_gravacao, escolher_video, escolher_video_reserva
 
 
 def v(titulo, canal, vid="x"):
@@ -31,6 +31,24 @@ class TestEscolherVideo(unittest.TestCase):
         escolhido, motivo = escolher_video("Reginaldo Rossi", "Garçom", videos)
         self.assertIsNone(escolhido)
         self.assertIn("nenhum", motivo)
+
+    def test_gravadora_verificada_vale_como_oficial(self):
+        videos = [{"title": "Construção | Chico Buarque (Vídeo Oficial)", "channel": "Biscoito Fino", "id": "bf",
+                   "channel_is_verified": True},
+                  {"title": "Chico Buarque - Construção (letra)", "channel": "MPB Legendado", "id": "x"}]
+        escolhido, motivo = escolher_video("Chico Buarque", "Construção", videos)
+        self.assertEqual(escolhido["id"], "bf")
+        self.assertIn("gravadora", motivo)
+
+    def test_reserva_pega_o_mais_visto_da_gravacao(self):
+        videos = [{"title": "Chega de saudade João Gilberto", "channel": "fulano", "id": "a", "view_count": 4000000, "duration": 200},
+                  {"title": "João Gilberto - Chega de Saudade (1959)", "channel": "arquivo", "id": "album", "view_count": 9e9, "duration": 1497},
+                  {"title": "Chega de Saudade - João Gilberto (cover)", "channel": "beltrano", "id": "c", "view_count": 9e9, "duration": 200},
+                  {"title": "Chega de Saudade", "channel": "Outra Cantora", "id": "d", "view_count": 9e9, "duration": 200}]
+        self.assertIsNone(escolher_video("João Gilberto", "Chega de Saudade", videos)[0])
+        escolhido, motivo = escolher_video_reserva("João Gilberto", "Chega de Saudade", videos)
+        self.assertEqual(escolhido["id"], "a")
+        self.assertIn("não oficial", motivo)
 
     def test_ao_vivo_so_quando_pedido(self):
         videos = [v("Primeiros Erros (Chove) - Ao Vivo", "Capital Inicial - Topic", "vivo")]
