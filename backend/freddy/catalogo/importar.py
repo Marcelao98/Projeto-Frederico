@@ -106,7 +106,8 @@ def importar(pasta_cat: Path = PASTA_CATALOGO, pasta_blocos: Path | None = None)
                 "obra": "", "energia": l["energia"], "animacao": l["animacao"], "tem_voz": l["tem_voz"],
                 "canta_junto": l["canta_junto"], "ao_vivo": l["ao_vivo"], "explicita": l["explicita"],
                 "popularidade": l["popularidade"], "essencial": l["essencial"],
-                "mbid": (g or {}).get("mbid", ""), "isrc": "", "lote": bloco, "revisar": "0", "nome_original": ""})
+                "mbid": (g or {}).get("mbid", ""), "isrc": "", "lote": bloco,
+                "revisar": "1" if v["motivo"].startswith("não confirmado") else "0", "nome_original": ""})
             nomes = [l["artista"]] + [f.strip() for f in l["feat"].split(",") if f.strip()]
             vistos = set()
             for i, nome in enumerate(nomes):

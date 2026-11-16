@@ -118,6 +118,27 @@ def escolher_video_reserva(artista: str, titulo: str, videos: list[dict], ao_viv
     return bons[0], "não oficial: o mais visto dessa gravação"
 
 
+def escolher_video_incerto(titulo: str, videos: list[dict], ao_vivo: bool = False) -> tuple[dict | None, str]:
+    """Último recurso: o 1º resultado da busca (que já levou o artista) com esse título.
+
+    Serve pra quando o nome do artista não aparece escrito igual ("Pink" × canal
+    "P!NK"). Entra como NÃO oficial e a música fica marcada pra revisar.
+    """
+    for v in videos:
+        nome = v.get("title") or ""
+        if not _titulo_bate(titulo, nome):
+            continue
+        if _NAO_OFICIAL.search(nome) and not _NAO_OFICIAL.search(titulo):
+            continue
+        if not ao_vivo and _AO_VIVO.search(nome) and not _AO_VIVO.search(titulo):
+            continue
+        d = v.get("duration")
+        if d and not 60 <= d <= 900:
+            continue
+        return v, "não confirmado: 1º resultado com esse título (revisar)"
+    return None, "nenhum vídeo dessa gravação nos resultados"
+
+
 def escolher_gravacao(artista: str, titulo: str, gravacoes: list[dict]) -> tuple[dict | None, str]:
     """Escolhe a gravação do MusicBrainz (resultado de /ws/2/recording?query=...).
 

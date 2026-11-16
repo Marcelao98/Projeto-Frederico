@@ -38,7 +38,7 @@ from pathlib import Path
 RAIZ_BACKEND = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(RAIZ_BACKEND))
 from freddy.catalogo.bloco import (  # noqa: E402
-    chave_musica, escolher_gravacao, escolher_video, escolher_video_reserva)
+    chave_musica, escolher_gravacao, escolher_video, escolher_video_incerto, escolher_video_reserva)
 from freddy.catalogo.compilar import compilar  # noqa: E402
 from freddy.catalogo.importar import PASTA_BLOCOS, importar, listas_de_blocos  # noqa: E402
 
@@ -148,6 +148,8 @@ def _fio_youtube(fila, total: int) -> None:
                 oficial = 1 if v else 0
                 if not v:
                     v, motivo = escolher_video_reserva(m["artista"], m["titulo"], videos + mais, ao_vivo)
+                if not v:
+                    v, motivo = escolher_video_incerto(m["titulo"], videos + mais, ao_vivo)
             with trava_arquivo:
                 anexar(saida, CAB_YT, [
                     m["artista"], m["titulo"], f"https://www.youtube.com/watch?v={v['id']}" if v else "",

@@ -1,563 +1,563 @@
 artista;titulo;ano;genero;genero2;feat;idioma;tem_voz;energia;animacao;climas;ocasioes;temas;instrumentos;popularidade;essencial;canta_junto;explicita;ao_vivo;nota
-Elis Regina & Tom Jobim;Águas de Março;1974;bossa-nova;;;pt;1;2;3;calmo|romantico;;;violao;72;0;0;0;0;
-João Gilberto;Chega de Saudade;1959;bossa-nova;;;pt;1;2;3;calmo|romantico;;;violao;72;0;0;0;0;
-Stan Getz & João Gilberto;The Girl from Ipanema;1964;bossa-nova;;Astrud Gilberto;pt;1;2;3;calmo|romantico;;;violao;76;0;0;0;0;Garota de Ipanema
-Toquinho & Vinicius;Tarde em Itapoã;1971;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;1;1;0;0;
-Elis Regina;Como Nossos Pais;1976;mpb;;;pt;1;3;3;calmo|contemplativo;;familia|liberdade;violao;82;1;1;0;0;
+Elis Regina & Tom Jobim;Águas de Março;1974;bossa-nova;;;pt;1;3;4;calmo|romantico;;;violao;92;1;0;0;0;
+João Gilberto;Chega de Saudade;1959;bossa-nova;;;pt;1;2;4;calmo|romantico;;;violao;78;1;0;0;0;
+Stan Getz & João Gilberto;The Girl from Ipanema;1964;bossa-nova;;Astrud Gilberto;pt;1;2;4;calmo|romantico;;;violao;80;1;0;0;0;Garota de Ipanema
+Toquinho & Vinicius;Tarde em Itapoã;1971;mpb;;;pt;1;2;4;calmo|contemplativo;;;violao;70;0;1;0;0;
+Elis Regina;Como Nossos Pais;1976;mpb;;;pt;1;3;3;calmo|contemplativo;;familia|liberdade;violao;86;1;1;0;0;
 Elis Regina;O Bêbado e a Equilibrista;1979;mpb;;;pt;1;3;3;calmo|contemplativo;;cachaca;violao;82;1;1;0;0;
-Elis Regina;Madalena;1971;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;1;1;0;0;
-Chico Buarque;Construção;1971;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;1;1;0;0;
-Chico Buarque;Cálice;1978;mpb;;Milton Nascimento;pt;1;3;3;calmo|contemplativo;;;violao;86;1;1;0;0;
-Chico Buarque;A Banda;1966;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;1;1;0;0;
-Chico Buarque;Apesar de Você;1970;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;1;1;0;0;
-Caetano Veloso;Sozinho;1998;mpb-romantica;;;pt;1;2;2;melancolico|saudade;;amor;piano;72;0;0;0;0;
-Caetano Veloso;Leãozinho;1977;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;1;1;0;0;
-Caetano Veloso;Alegria, Alegria;1967;tropicalia;;;pt;1;4;4;estranho|confiante;;;guitarra;72;0;0;0;0;
-Caetano Veloso;Você É Linda;1983;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;1;1;0;0;
-Caetano Veloso;Sampa;1978;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;1;1;0;0;
-Gilberto Gil;Andar com Fé;1982;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;1;1;0;0;
-Gilberto Gil;Aquele Abraço;1969;tropicalia;;;pt;1;4;4;estranho|confiante;;;guitarra;72;0;0;0;0;
-Gilberto Gil;Esperando na Janela;2000;forro-pe-de-serra;;;pt;1;4;4;aconchegante|animado;sao-joao;;sanfona;72;0;0;0;0;São João
-Gal Costa;Baby;1969;tropicalia;;;pt;1;4;4;estranho|confiante;;;guitarra;72;0;0;0;0;
-Os Mutantes;Panis et Circenses;1968;tropicalia;;;pt;1;4;4;estranho|confiante;;;guitarra;72;0;0;0;0;
-Milton Nascimento;Maria Maria;1978;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;1;1;0;0;
-Milton Nascimento;Travessia;1967;clube-da-esquina;;;pt;1;3;3;sonhador|melancolico;;;violao;72;0;0;0;0;
-Milton Nascimento;Canção da América;1980;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;1;1;0;0;
-Djavan;Oceano;1989;mpb-romantica;;;pt;1;2;3;romantico|saudade;;amor;piano;72;0;0;0;0;
-Djavan;Flor de Lis;1976;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;1;1;0;0;
-Djavan;Sina;1982;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;1;1;0;0;
-Djavan;Se...;1992;mpb-romantica;;;pt;1;2;3;romantico|saudade;;amor;piano;72;0;0;0;0;
-Djavan;Eu Te Devoro;1998;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;1;1;0;0;
-Gonzaguinha;O Que É, O Que É?;1982;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;1;1;0;0;
-Belchior;Apenas um Rapaz Latino-Americano;1976;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;1;1;0;0;
-Belchior;Divina Comédia Humana;1978;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;1;1;0;0;
-Raul Seixas;Metamorfose Ambulante;1973;rock-nacional;;;pt;1;4;3;romantico|aconchegante;;amor;guitarra;82;1;1;0;0;
-Raul Seixas;Maluco Beleza;1977;rock-nacional;;;pt;1;4;4;confiante|empolgante;;;guitarra;82;1;1;0;0;
-Raul Seixas;Gita;1974;rock-nacional;;;pt;1;4;4;confiante|empolgante;;;guitarra;82;1;1;0;0;
-Tim Maia;Gostava Tanto de Você;1973;soul-brasileiro;;;pt;1;4;4;sensual|romantico;;amor;metais;72;0;0;0;0;
-Tim Maia;Primavera;1970;soul-brasileiro;;;pt;1;4;4;sensual|romantico;;amor;metais;72;0;0;0;0;
-Tim Maia;Azul da Cor do Mar;1970;soul-brasileiro;;;pt;1;4;4;sensual|romantico;;amor;metais;72;0;0;0;0;
-Tim Maia;Do Leme ao Pontal;1986;soul-brasileiro;;;pt;1;4;4;sensual|romantico;;amor;metais;72;0;0;0;0;
-Tim Maia;Não Quero Dinheiro (Só Quero Amar);1971;soul-brasileiro;;;pt;1;4;4;sensual|romantico;;ostentacao|amor;metais;72;0;0;0;0;
-Jorge Ben Jor;País Tropical;1969;samba-rock;;;pt;1;4;4;animado|confiante;;liberdade;metais;72;0;0;0;0;
-Jorge Ben Jor;Mas Que Nada;1963;samba-rock;;;pt;1;4;4;animado|confiante;;;metais;72;0;0;0;0;
-Jorge Ben Jor;Taj Mahal;1972;samba-rock;;;pt;1;4;4;animado|confiante;;;metais;72;0;0;0;0;
-Jorge Ben Jor;W/Brasil (Chama o Síndico);1990;samba-rock;;;pt;1;4;4;animado|confiante;;;metais;72;0;0;0;0;
-Marisa Monte;Ainda Bem;2011;nova-mpb;;;pt;1;3;4;romantico|sonhador;;;violao;72;0;0;0;0;
-Marisa Monte;Amor I Love You;2000;mpb;;;pt;1;3;3;romantico|aconchegante;;amor;violao;82;1;1;0;0;
-Tribalistas;Já Sei Namorar;2002;nova-mpb;;;pt;1;3;3;romantico|aconchegante;;amor;violao;72;0;0;0;0;
-Tribalistas;Velha Infância;2002;nova-mpb;;;pt;1;3;4;romantico|sonhador;;;violao;72;0;0;0;0;
-Ana Carolina;Quem de Nós Dois;2001;mpb-romantica;;;pt;1;2;3;romantico|saudade;;amor;piano;72;0;0;0;0;
-Roberto Carlos;Detalhes;1971;mpb-romantica;;;pt;1;2;3;romantico|saudade;;amor;piano;72;0;0;0;0;
-Roberto Carlos;Como É Grande o Meu Amor por Você;1967;mpb-romantica;;;pt;1;2;3;romantico|aconchegante;;amor;piano;72;0;0;0;0;
-Roberto Carlos;Emoções;1981;mpb-romantica;;;pt;1;2;3;romantico|saudade;;amor;piano;72;0;0;0;0;
-Roberto Carlos;Jesus Cristo;1970;mpb-romantica;;;pt;1;2;3;romantico|saudade;;fe|amor;piano;72;0;0;0;0;
-Roberto Carlos;É Proibido Fumar;1964;jovem-guarda;;;pt;1;3;3;confiante|alegre;;;;72;0;0;0;0;
-Erasmo Carlos;Sentado à Beira do Caminho;1969;jovem-guarda;;;pt;1;3;3;confiante|alegre;;;;72;0;0;0;0;
-Fagner;Borbulhas de Amor;1991;mpb-romantica;;;pt;1;2;3;romantico|aconchegante;;amor;piano;72;0;0;0;0;
-Zé Ramalho;Admirável Gado Novo;1979;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;1;1;0;0;
-Zé Ramalho;Avôhai;1978;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;1;1;0;0;
-Alceu Valença;Anunciação;1983;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;1;1;0;0;
-Alceu Valença;La Belle de Jour;1992;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;1;1;0;0;
-Alceu Valença;Morena Tropicana;1982;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;1;1;0;0;
-Novos Baianos;Preta Pretinha;1972;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;1;1;0;0;
-Cássia Eller;Malandragem;1994;pop-rock-nacional;;;pt;1;4;4;confiante|animado;;;guitarra;72;0;0;0;0;
-Cássia Eller;O Segundo Sol;1999;pop-rock-nacional;;;pt;1;4;4;confiante|animado;;;guitarra;72;0;0;0;0;
-Vanessa da Mata;Ai, Ai, Ai...;2005;nova-mpb;;;pt;1;3;4;romantico|sonhador;;;violao;72;0;0;0;0;
-Vanessa da Mata;Boa Sorte/Good Luck;2007;nova-mpb;;Ben Harper;pt;1;3;4;romantico|sonhador;;;violao;76;0;0;0;0;
-Seu Jorge;Burguesinha;2007;samba;;;pt;1;4;4;alegre|festivo;;;percussao;82;1;1;0;0;
-Anavitória;Trevo (Tu);2016;nova-mpb;;Tiago Iorc;pt;1;3;4;romantico|sonhador;;;violao;76;0;0;0;0;
-Tiago Iorc;Amei Te Ver;2016;nova-mpb;;;pt;1;3;4;romantico|sonhador;;;violao;72;0;0;0;0;
-Melim;Meu Abrigo;2017;pop-nacional;;;pt;1;4;4;alegre|romantico;;;sintetizador;72;0;0;0;0;
-Ivan Lins;Começar de Novo;1979;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;1;1;0;0;
-Ney Matogrosso;Homem com H;1981;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;1;1;0;0;
-Secos & Molhados;Sangue Latino;1973;rock-nacional;;;pt;1;4;4;confiante|empolgante;;;guitarra;82;1;1;0;0;
-Maria Bethânia;Explode Coração;1979;mpb;;;pt;1;3;3;romantico|aconchegante;;amor|fe;violao;82;1;1;0;0;
-Cazuza;Exagerado;1985;rock-brasil-80;;;pt;1;4;4;nostalgico|confiante;;;guitarra;82;1;1;0;0;
-Cazuza;O Tempo Não Para;1988;rock-brasil-80;;;pt;1;4;4;nostalgico|confiante;;;guitarra;82;1;1;0;0;
-Cazuza;Codinome Beija-Flor;1985;rock-brasil-80;;;pt;1;4;3;romantico|aconchegante;;;guitarra;82;1;1;0;0;
-Gilsons;Várias Queixas;2020;nova-mpb;;;pt;1;3;4;romantico|sonhador;;;violao;72;0;0;0;0;
-Simone;Então É Natal;1995;mpb;;;pt;1;3;5;festivo|alegre;natal;;violao;86;1;1;0;0;Natal
-Cartola;O Mundo É um Moinho;1976;samba-raiz;;;pt;1;3;2;melancolico|saudade;;;cavaquinho;72;0;0;0;0;
-Cartola;As Rosas Não Falam;1976;samba-raiz;;;pt;1;3;3;saudade|aconchegante;;;cavaquinho;72;0;0;0;0;
-Paulinho da Viola;Foi um Rio Que Passou em Minha Vida;1970;samba-raiz;;;pt;1;3;3;saudade|aconchegante;;;cavaquinho;72;0;0;0;0;
-Beth Carvalho;Vou Festejar;1978;samba-raiz;;;pt;1;3;3;saudade|aconchegante;;;cavaquinho;72;0;0;0;0;
-Zeca Pagodinho;Deixa a Vida Me Levar;2002;samba;;;pt;1;4;4;alegre|festivo;;;percussao;82;1;1;0;0;
-Zeca Pagodinho;Verdade;1996;samba;;;pt;1;4;4;alegre|festivo;;;percussao;82;1;1;0;0;
-Martinho da Vila;Canta, Canta, Minha Gente;1974;samba;;;pt;1;4;4;alegre|festivo;;;percussao;82;1;1;0;0;
-Alcione;Não Deixe o Samba Morrer;1975;samba;;;pt;1;4;4;alegre|festivo;;;percussao;82;1;1;0;0;
-Clara Nunes;O Mar Serenou;1975;samba;;;pt;1;4;4;alegre|festivo;;;percussao;82;1;1;0;0;
-Fundo de Quintal;O Show Tem Que Continuar;1988;pagode-de-mesa;;;pt;1;4;4;alegre|festivo;;;cavaquinho;72;0;0;0;0;
-Arlindo Cruz;Meu Lugar;2007;samba;;;pt;1;4;4;alegre|festivo;;;percussao;82;1;1;0;0;
-Diogo Nogueira;Pé na Areia;2011;samba;;;pt;1;4;4;alegre|festivo;;;percussao;82;1;1;0;0;
-Bezerra da Silva;Malandragem Dá um Tempo;1986;partido-alto;;;pt;1;4;4;alegre|confiante;;;percussao;72;0;0;0;0;
-Adoniran Barbosa;Trem das Onze;1964;samba;;;pt;1;4;4;alegre|festivo;;;percussao;82;1;1;0;0;
-Demônios da Garoa;Saudosa Maloca;1955;samba;;;pt;1;4;4;alegre|festivo;;;percussao;82;1;1;0;0;
-Ary Barroso;Aquarela do Brasil;1939;samba;;;pt;1;4;4;alegre|festivo;;;percussao;82;1;1;0;0;
-Só Pra Contrariar;Mineirinho;1997;pagode-90;;;pt;1;4;4;romantico|alegre;;;cavaquinho;82;0;1;0;0;
-Só Pra Contrariar;Essa Tal Liberdade;1994;pagode-90;;;pt;1;4;4;romantico|alegre;;liberdade;cavaquinho;82;0;1;0;0;
-Raça Negra;Cheia de Manias;1991;pagode-90;;;pt;1;4;4;romantico|alegre;;;cavaquinho;82;0;1;0;0;
-Raça Negra;É Tarde Demais;1995;pagode-90;;;pt;1;4;4;romantico|alegre;;;cavaquinho;82;0;1;0;0;
-Molejo;Cilada;1996;pagode-90;;;pt;1;4;4;romantico|alegre;;;cavaquinho;82;0;1;0;0;
-Art Popular;Temporal;1996;pagode-90;;;pt;1;4;4;romantico|alegre;;;cavaquinho;82;0;1;0;0;
-Exaltasamba;Livre pra Voar;2009;pagode-romantico;;;pt;1;3;3;romantico|saudade;;amor;cavaquinho;72;0;0;0;0;
-Revelação;Tá Escrito;2009;pagode-romantico;;;pt;1;3;3;romantico|saudade;;amor;cavaquinho;72;0;0;0;0;
-Sorriso Maroto;Assim Você Mata o Papai;2011;pagode-romantico;;;pt;1;3;3;romantico|saudade;;familia|amor;cavaquinho;72;0;0;0;0;
-Thiaguinho;Caraca, Muleke!;2016;pagode-romantico;;;pt;1;3;3;romantico|saudade;;vida-no-campo|amor;cavaquinho;72;0;0;0;0;
-Péricles;Até Que Durou;2014;pagode-romantico;;;pt;1;3;3;romantico|saudade;;amor;cavaquinho;72;0;0;0;0;
-Ferrugem;Pirata e Tesouro;2018;pagode-romantico;;;pt;1;3;3;romantico|saudade;;amor;cavaquinho;72;0;0;0;0;
-Dilsinho;Péssimo Negócio;2017;pagode-romantico;;;pt;1;3;3;romantico|saudade;;amor;cavaquinho;72;0;0;0;0;
-Menos é Mais;Lapada Dela;2021;pagode-de-mesa;;;pt;1;4;4;alegre|festivo;;;cavaquinho;72;0;0;0;0;
-Pixote;Insegurança;2002;pagode-romantico;;;pt;1;3;3;romantico|saudade;;amor;cavaquinho;72;0;0;0;0;
-Turma do Pagode;Lancinho;2008;pagode-romantico;;;pt;1;3;3;romantico|saudade;;amor;cavaquinho;72;0;0;0;0;
-Harmonia do Samba;Vem Neném;1999;pagode-baiano;;;pt;1;5;5;animado|festivo;;;percussao;72;0;0;0;0;
-É o Tchan;Segura o Tchan;1995;pagode-baiano;;;pt;1;5;5;animado|festivo;;;percussao;72;0;0;0;0;
-É o Tchan;Dança do Ventre;1997;pagode-baiano;;;pt;1;5;5;animado|festivo;;danca;percussao;72;0;0;0;0;
-Psirico;Lepo Lepo;2014;pagode-baiano;;;pt;1;5;5;animado|festivo;;;percussao;72;0;0;0;0;
-Parangolé;Rebolation;2009;pagode-baiano;;;pt;1;5;5;animado|festivo;;;percussao;72;0;0;0;0;
-Léo Santana;Zona de Perigo;2022;pagode-baiano;;;pt;1;5;5;animado|festivo;;;percussao;72;0;0;0;0;
-Tonico & Tinoco;Chico Mineiro;1946;musica-caipira;;;pt;1;2;3;aconchegante|nostalgico;;;viola-caipira;72;0;0;0;0;
-Tião Carreiro & Pardinho;Pagode em Brasília;1960;musica-caipira;;;pt;1;2;3;aconchegante|nostalgico;;;viola-caipira;72;0;0;0;0;
-Sérgio Reis;Menino da Porteira;1973;sertanejo-raiz;;;pt;1;3;3;saudade|aconchegante;;;viola-caipira;72;0;0;0;0;
-Almir Sater;Tocando em Frente;1990;musica-caipira;;;pt;1;2;3;aconchegante|nostalgico;;;viola-caipira;72;0;0;0;0;
-Renato Teixeira;Romaria;1977;musica-caipira;;;pt;1;2;3;aconchegante|nostalgico;;;viola-caipira;72;0;0;0;0;
-Milionário & José Rico;Estrada da Vida;1977;sertanejo-raiz;;;pt;1;3;3;saudade|aconchegante;;pe-na-estrada;viola-caipira;72;0;0;0;0;
-Chitãozinho & Xororó;Evidências;1990;sertanejo-romantico;;;pt;1;3;3;saudade|romantico;;amor;violao;82;1;1;0;0;
-Chitãozinho & Xororó;Fio de Cabelo;1982;sertanejo-romantico;;;pt;1;3;3;saudade|romantico;;amor;violao;82;1;1;0;0;
-Leandro & Leonardo;Pense em Mim;1990;sertanejo-romantico;;;pt;1;3;3;saudade|romantico;;amor;violao;82;1;1;0;0;
-Leandro & Leonardo;Entre Tapas e Beijos;1989;sertanejo-romantico;;;pt;1;3;3;romantico|aconchegante;;amor;violao;82;1;1;0;0;
-Zezé Di Camargo & Luciano;É o Amor;1991;sertanejo-romantico;;;pt;1;3;3;romantico|aconchegante;;amor;violao;82;1;1;0;0;
-Zezé Di Camargo & Luciano;No Dia em Que Eu Saí de Casa;1996;sertanejo-romantico;;;pt;1;3;3;saudade|romantico;;amor;violao;82;1;1;0;0;
-João Paulo & Daniel;Estou Apaixonado;1995;sertanejo-romantico;;;pt;1;3;3;saudade|romantico;;familia|amor;violao;82;1;1;0;0;
-João Mineiro & Marciano;Seu Amor Ainda É Tudo;1987;sertanejo-romantico;;;pt;1;3;3;romantico|aconchegante;;amor;violao;82;1;1;0;0;
-Bruno & Marrone;Dormi na Praça;2001;sertanejo-romantico;;;pt;1;3;3;saudade|romantico;;perda|amor;violao;82;1;1;0;0;
-Bruno & Marrone;Choram as Rosas;2005;sertanejo-romantico;;;pt;1;3;3;saudade|romantico;;amor;violao;82;1;1;0;0;
-Victor & Leo;Borboletas;2008;sertanejo-universitario;;;pt;1;4;4;festivo|romantico;;;violao;72;0;0;0;0;
-César Menotti & Fabiano;Leilão;2006;sertanejo-universitario;;;pt;1;4;4;festivo|romantico;;;violao;72;0;0;0;0;
-Jorge & Mateus;Pode Chorar;2007;sertanejo-universitario;;;pt;1;3;2;melancolico|saudade;;;violao;72;0;0;0;0;
-Jorge & Mateus;Os Anjos Cantam;2014;sertanejo-universitario;;;pt;1;4;4;festivo|romantico;;;violao;72;0;0;0;0;
-Luan Santana;Meteoro;2009;sertanejo-universitario;;;pt;1;4;4;festivo|romantico;;;violao;72;0;0;0;0;
-Michel Teló;Ai Se Eu Te Pego;2011;sertanejo-universitario;;;pt;1;4;4;festivo|romantico;;;violao;72;0;0;0;0;
-Gusttavo Lima;Balada (Tchê Tcherere Tchê Tchê);2011;sertanejo-universitario;;;pt;1;4;4;festivo|romantico;;;violao;72;0;0;0;0;
-Gusttavo Lima;Termina Comigo Antes;2021;sofrencia;;;pt;1;3;2;sofrido|saudade;;;violao;72;0;0;0;0;
-Gusttavo Lima;Desejo Imortal;2019;sertanejo-romantico;;;pt;1;3;3;saudade|romantico;;amor;violao;82;1;1;0;0;
-Henrique & Juliano;Cuida Bem Dela;2016;sertanejo-universitario;;;pt;1;4;4;festivo|romantico;;;violao;72;0;0;0;0;
-Henrique & Juliano;Liberdade Provisória;2018;sofrencia;;;pt;1;3;2;sofrido|saudade;;liberdade;violao;72;0;0;0;0;
-Marília Mendonça;Infiel;2016;sofrencia;;;pt;1;3;2;sofrido|saudade;;;violao;72;0;0;0;0;
-Marília Mendonça;Supera;2019;sofrencia;;;pt;1;3;2;sofrido|saudade;;;violao;72;0;0;0;0;
-Marília Mendonça;Todo Mundo Vai Sofrer;2019;sofrencia;;;pt;1;3;2;sofrido|saudade;;;violao;72;0;0;0;0;
-Maiara & Maraisa;10%;2016;feminejo;;;pt;1;4;3;confiante|sofrido;;;violao;72;0;0;0;0;
-Maiara & Maraisa;Medo Bobo;2015;feminejo;;;pt;1;4;3;confiante|sofrido;;;violao;72;0;0;0;0;
-Simone & Simaria;Loka;2017;feminejo;;Anitta;pt;1;4;3;confiante|sofrido;;;violao;76;0;0;0;0;
-Naiara Azevedo;50 Reais;2016;feminejo;;Maiara & Maraisa;pt;1;4;3;confiante|sofrido;;;violao;76;0;0;0;0;
-Zé Neto & Cristiano;Notificação Preferida;2018;sertanejo-universitario;;;pt;1;4;4;festivo|romantico;;;violao;72;0;0;0;0;
-Zé Neto & Cristiano;Largado às Traças;2018;sofrencia;;;pt;1;3;2;sofrido|saudade;;;violao;72;0;0;0;0;
-Matheus & Kauan;Que Sorte a Nossa;2018;sertanejo-universitario;;;pt;1;4;4;festivo|romantico;;;violao;72;0;0;0;0;
-Israel & Rodolffo;Batom de Cereja;2021;sertanejo-universitario;;;pt;1;4;4;festivo|romantico;;;violao;72;0;0;0;0;
-Hugo & Guilherme;Mal Feito;2022;sofrencia;;Marília Mendonça;pt;1;3;2;sofrido|saudade;;;violao;76;0;0;0;0;
-Ana Castela;Pipoco;2022;agronejo;;Melody;pt;1;5;5;festivo|confiante;;;violao;76;0;0;0;0;
-Ana Castela;Nosso Quadro;2023;agronejo;;;pt;1;5;5;festivo|confiante;;;violao;72;0;0;0;0;
-Paula Fernandes;Pássaro de Fogo;2009;sertanejo-romantico;;;pt;1;3;3;saudade|romantico;;amor;violao;82;1;1;0;0;
-Lauana Prado;Cobaia;2021;sertanejo-universitario;;;pt;1;4;4;festivo|romantico;;;violao;72;0;0;0;0;
-Luiz Gonzaga;Asa Branca;1947;baiao;;;pt;1;4;4;animado|festivo;sao-joao;;sanfona;72;0;0;0;0;São João
-Luiz Gonzaga;Xote das Meninas;1953;xote;;;pt;1;3;3;romantico|aconchegante;sao-joao;;sanfona;72;0;0;0;0;São João
-Luiz Gonzaga;Olha pro Céu;1951;baiao;;;pt;1;4;4;animado|festivo;sao-joao;;sanfona;72;0;0;0;0;São João
-Luiz Gonzaga;Qui Nem Jiló;1950;baiao;;;pt;1;4;4;animado|festivo;;;sanfona;72;0;0;0;0;
-Luiz Gonzaga;Respeita Januário;1950;baiao;;;pt;1;4;4;animado|festivo;;;sanfona;72;0;0;0;0;
-Dominguinhos;Eu Só Quero um Xodó;1973;xote;;;pt;1;3;3;romantico|aconchegante;;;sanfona;72;0;0;0;0;
-Dominguinhos;Isso Aqui Tá Bom Demais;1985;forro;;;pt;1;4;5;animado|festivo;sao-joao;;sanfona;72;0;0;0;0;São João
-Jackson do Pandeiro;Chiclete com Banana;1959;coco;;;pt;1;4;4;festivo|animado;;;percussao;72;0;0;0;0;
-Elba Ramalho;De Volta pro Aconchego;1985;forro;;;pt;1;4;5;animado|festivo;;;sanfona;72;0;0;0;0;
-Elba Ramalho;Banho de Cheiro;1983;forro;;;pt;1;4;5;animado|festivo;;;sanfona;72;0;0;0;0;
-Falamansa;Xote dos Milagres;2000;forro-universitario;;;pt;1;4;4;romantico|animado;;;sanfona;72;0;0;0;0;
-Falamansa;Rindo à Toa;2000;forro-universitario;;;pt;1;4;4;romantico|animado;;;sanfona;72;0;0;0;0;
-Mastruz com Leite;Meu Vaqueiro, Meu Peão;1995;forro-eletronico;;;pt;1;5;5;animado|festivo;;;sanfona;72;0;0;0;0;
-Calcinha Preta;Você Não Vale Nada;2005;forro-eletronico;;;pt;1;5;5;animado|festivo;;;sanfona;72;0;0;0;0;
-Wesley Safadão;Camarote;2014;forro-eletronico;;;pt;1;5;5;animado|festivo;;;sanfona;72;0;0;0;0;
-Zé Vaqueiro;Letícia;2020;piseiro;;;pt;1;5;5;animado|festivo;;;percussao;72;0;0;0;0;
-Barões da Pisadinha;Basta Você Me Ligar;2020;piseiro;;;pt;1;5;5;animado|festivo;;;percussao;72;0;0;0;0;
-Barões da Pisadinha;Recairei;2020;piseiro;;;pt;1;5;5;animado|festivo;;;percussao;72;0;0;0;0;
-João Gomes;Meu Pedaço de Pecado;2021;piseiro;;;pt;1;5;5;animado|festivo;;;percussao;72;0;0;0;0;
-Nattan;Ama Sofre Chora;2022;piseiro;;;pt;1;5;5;animado|festivo;;;percussao;72;0;0;0;0;
-Mari Fernandez;Não, Não Vou;2022;piseiro;;;pt;1;5;5;animado|festivo;;;percussao;72;0;0;0;0;
-Daniela Mercury;O Canto da Cidade;1992;axe-music;;;pt;1;5;5;festivo|animado;carnaval;curticao;percussao;86;1;1;0;0;Carnaval
-Daniela Mercury;Rapunzel;1997;axe-music;;;pt;1;5;5;festivo|animado;carnaval;curticao;percussao;86;1;1;0;0;Carnaval
-Ivete Sangalo;Sorte Grande (Poeira);2003;axe-music;;;pt;1;5;5;festivo|animado;carnaval;curticao;percussao;86;1;1;0;0;Carnaval
-Ivete Sangalo;Festa;2001;axe-music;;;pt;1;5;5;festivo|animado;carnaval;curticao;percussao;86;1;1;0;0;Carnaval
-Ivete Sangalo;Arerê;2002;axe-music;;;pt;1;5;5;festivo|animado;carnaval;curticao;percussao;86;1;1;0;0;Carnaval
-Banda Eva;Eva;1997;axe-music;;;pt;1;5;5;festivo|animado;carnaval;curticao;percussao;86;1;1;0;0;Carnaval
-Asa de Águia;Dança da Manivela;1997;axe-music;;;pt;1;5;5;festivo|animado;carnaval;danca|curticao;percussao;86;1;1;0;0;Carnaval
-Olodum;Faraó Divindade do Egito;1987;samba-reggae;;;pt;1;5;5;festivo|animado;carnaval;curticao;percussao;76;0;0;0;0;Carnaval
-Timbalada;Beija-Flor;1994;samba-reggae;;;pt;1;4;3;romantico|aconchegante;;;percussao;72;0;0;0;0;
-Claudia Leitte;Largadinho;2010;axe-music;;;pt;1;5;5;festivo|animado;carnaval;curticao;percussao;86;1;1;0;0;Carnaval
-Netinho;Milla;1996;axe-music;;;pt;1;5;5;festivo|animado;;;percussao;82;1;1;0;0;
-Luiz Caldas;Fricote;1985;axe-music;;;pt;1;5;5;festivo|animado;carnaval;curticao;percussao;86;1;1;0;0;Carnaval
-Banda Calypso;A Lua Me Traiu;2004;brega-calypso;;;pt;1;4;4;romantico|animado;;;guitarra;72;0;0;0;0;
-Joelma;Voando pro Pará;2016;brega-calypso;;;pt;1;4;4;romantico|animado;;;guitarra;72;0;0;0;0;
-Gaby Amarantos;Xirley;2012;tecnobrega;;;pt;1;3;3;confiante|alegre;;;;72;0;0;0;0;
-Fafá de Belém;Vermelho;1996;toada-boi-bumba;;;pt;1;4;4;epico|festivo;;;percussao;72;0;0;0;0;
-Kaoma;Chorando Se Foi (Lambada);1989;lambada;;;pt;1;5;5;sensual|animado;;;metais;72;0;0;0;0;
-Beto Barbosa;Adocica;1988;lambada;;;pt;1;5;5;sensual|animado;;;metais;72;0;0;0;0;
-Dona Onete;No Meio do Pitiú;2012;carimbo;;;pt;1;4;5;alegre|festivo;;;percussao;72;0;0;0;0;
-Pinduca;Sinhá Pureza;1973;carimbo;;;pt;1;4;5;alegre|festivo;;;percussao;72;0;0;0;0;
-Teixeirinha;Coração de Luto;1960;musica-gaucha;;;pt;1;4;3;romantico|aconchegante;;amor|fe;gaita;72;0;0;0;0;
-Chico Science & Nação Zumbi;A Praieira;1994;maracatu;;;pt;1;3;3;confiante|alegre;;;;72;0;0;0;0;
-Amelinha;Frevo Mulher;1979;frevo;;;pt;1;5;5;festivo|animado;carnaval;curticao;metais;76;0;0;0;0;Carnaval
-Gal Costa;Festa do Interior;1981;frevo;;;pt;1;5;5;festivo|animado;carnaval;curticao;metais;76;0;0;0;0;Carnaval
-Legião Urbana;Tempo Perdido;1986;rock-brasil-80;;;pt;1;3;2;melancolico|saudade;;;guitarra;82;1;1;0;0;
-Legião Urbana;Eduardo e Mônica;1986;rock-brasil-80;;;pt;1;4;4;nostalgico|confiante;;;guitarra;82;1;1;0;0;
-Legião Urbana;Pais e Filhos;1989;rock-brasil-80;;;pt;1;4;4;nostalgico|confiante;;familia|liberdade;guitarra;82;1;1;0;0;
-Legião Urbana;Que País É Este;1987;rock-brasil-80;;;pt;1;4;4;nostalgico|confiante;;liberdade;guitarra;82;1;1;0;0;
-Legião Urbana;Faroeste Caboclo;1987;rock-brasil-80;;;pt;1;4;4;nostalgico|confiante;;;guitarra;82;1;1;0;0;
-Titãs;Epitáfio;2001;pop-rock-nacional;;;pt;1;4;4;confiante|animado;;;guitarra;72;0;0;0;0;
-Titãs;Sonífera Ilha;1984;rock-brasil-80;;;pt;1;4;4;nostalgico|confiante;;;guitarra;82;1;1;0;0;
-Titãs;Polícia;1986;rock-brasil-80;;;pt;1;4;4;nostalgico|confiante;;;guitarra;82;1;1;0;0;
-Os Paralamas do Sucesso;Meu Erro;1984;rock-brasil-80;;;pt;1;4;4;nostalgico|confiante;;;guitarra;82;1;1;0;0;
-Os Paralamas do Sucesso;Lanterna dos Afogados;1989;rock-brasil-80;;;pt;1;4;4;nostalgico|confiante;;;guitarra;82;1;1;0;0;
-Barão Vermelho;Pro Dia Nascer Feliz;1983;rock-brasil-80;;;pt;1;4;4;nostalgico|confiante;;;guitarra;82;1;1;0;0;
-Ultraje a Rigor;Inútil;1983;rock-brasil-80;;;pt;1;4;4;nostalgico|confiante;;;guitarra;82;1;1;0;0;
-Capital Inicial;Primeiros Erros (Chove);2000;pop-rock-nacional;;;pt;1;4;4;confiante|animado;;;guitarra;72;0;0;0;0;acústico
-Ira!;Envelheço na Cidade;1986;rock-brasil-80;;;pt;1;4;4;nostalgico|confiante;;;guitarra;82;1;1;0;0;
-Engenheiros do Hawaii;Infinita Highway;1987;rock-brasil-80;;;pt;1;4;4;nostalgico|confiante;;;guitarra;82;1;1;0;0;
-Engenheiros do Hawaii;Era um Garoto Que Como Eu Amava os Beatles e os Rolling Stones;1990;rock-brasil-80;;;pt;1;4;4;nostalgico|confiante;;;guitarra;82;1;1;0;0;
-Kid Abelha;Como Eu Quero;1984;rock-brasil-80;;;pt;1;4;4;nostalgico|confiante;;;guitarra;82;1;1;0;0;
-RPM;Olhar 43;1985;rock-brasil-80;;;pt;1;4;4;nostalgico|confiante;;;guitarra;82;1;1;0;0;
-Lulu Santos;Como uma Onda;1983;pop-rock-nacional;;;pt;1;4;4;confiante|animado;;;guitarra;72;0;0;0;0;
-Lulu Santos;Tempos Modernos;1982;pop-rock-nacional;;;pt;1;4;4;confiante|animado;;;guitarra;72;0;0;0;0;
-Lulu Santos;Toda Forma de Amor;1988;pop-rock-nacional;;;pt;1;4;3;romantico|aconchegante;;amor;guitarra;72;0;0;0;0;
-Blitz;Você Não Soube Me Amar;1982;rock-brasil-80;;;pt;1;4;4;nostalgico|confiante;;;guitarra;82;1;1;0;0;
-Rita Lee;Mania de Você;1979;rock-nacional;;;pt;1;4;4;confiante|empolgante;;;guitarra;82;1;1;0;0;
-Rita Lee;Lança Perfume;1980;rock-nacional;;;pt;1;4;4;confiante|empolgante;;;guitarra;82;1;1;0;0;
-Rita Lee;Ovelha Negra;1975;rock-nacional;;;pt;1;4;4;confiante|empolgante;;;guitarra;82;1;1;0;0;
-Skank;Garota Nacional;1996;pop-rock-nacional;;;pt;1;4;4;confiante|animado;;;guitarra;72;0;0;0;0;
-Skank;Vou Deixar;2003;pop-rock-nacional;;;pt;1;4;4;confiante|animado;;;guitarra;72;0;0;0;0;
-Jota Quest;Fácil;2000;pop-rock-nacional;;;pt;1;4;4;confiante|animado;;;guitarra;72;0;0;0;0;
-Jota Quest;Dias Melhores;2000;pop-rock-nacional;;;pt;1;4;4;confiante|animado;;;guitarra;72;0;0;0;0;
-Charlie Brown Jr.;Só os Loucos Sabem;2009;pop-rock-nacional;;;pt;1;4;4;confiante|animado;;;guitarra;72;0;0;0;0;
-Charlie Brown Jr.;Proibida pra Mim;1997;rock-nacional;;;pt;1;4;4;confiante|empolgante;;;guitarra;82;1;1;0;0;
-Mamonas Assassinas;Pelados em Santos;1995;rock-nacional;;;pt;1;4;4;confiante|empolgante;;;guitarra;82;1;1;0;0;
-Raimundos;Mulher de Fases;1999;rock-nacional;;;pt;1;4;4;confiante|empolgante;;;guitarra;82;1;1;0;0;
-Los Hermanos;Anna Júlia;1999;rock-nacional;;;pt;1;4;4;confiante|empolgante;;;guitarra;82;1;1;0;0;
-O Rappa;Pescador de Ilusões;1996;rock-nacional;;;pt;1;4;4;confiante|empolgante;;perda;guitarra;82;1;1;0;0;
-Detonautas;Quando o Sol Se For;2002;rock-nacional;;;pt;1;4;4;confiante|empolgante;;;guitarra;82;1;1;0;0;
-Pitty;Me Adora;2009;rock-nacional;;;pt;1;4;4;confiante|empolgante;;perda;guitarra;82;1;1;0;0;
-NX Zero;Razões e Emoções;2006;emo;;;en;1;4;2;melancolico|dramatico;;;guitarra;72;0;0;0;0;
-CPM 22;Um Minuto Para o Fim do Mundo;2005;pop-punk;;;en;1;5;4;animado|confiante;;;guitarra;72;0;0;0;0;
-Biquini Cavadão;Vento Ventania;1991;pop-rock-nacional;;;pt;1;4;4;confiante|animado;;;guitarra;72;0;0;0;0;
-Natiruts;Liberdade pra Dentro da Cabeça;2002;reggae-nacional;;;pt;1;3;4;calmo|romantico;;liberdade;guitarra;72;0;0;0;0;
-Cidade Negra;Onde Você Mora?;1996;reggae-nacional;;;pt;1;3;4;calmo|romantico;;;guitarra;72;0;0;0;0;
-Sepultura;Roots Bloody Roots;1996;thrash-metal;;;en;1;5;3;agressivo|tenso;;;guitarra;72;0;0;0;0;
-Angra;Carry On;1993;power-metal;;;pt;1;3;3;confiante|alegre;;;;72;0;0;0;0;
-Racionais MC's;Diário de um Detento;1997;rap-nacional;;;pt;1;4;3;confiante|dramatico;;;sintetizador;72;0;0;0;0;
-Racionais MC's;Negro Drama;2002;rap-nacional;;;pt;1;4;3;confiante|dramatico;;;sintetizador;72;0;0;0;0;
-Racionais MC's;Vida Loka, Pt. 2;2002;rap-nacional;;;pt;1;4;3;confiante|dramatico;;;sintetizador;72;0;0;0;0;
-Sabotage;Um Bom Lugar;2001;rap-nacional;;;pt;1;4;3;confiante|dramatico;;;sintetizador;72;0;0;0;0;
-Emicida;AmarElo;2019;rap-nacional;;Majur, Pabllo Vittar;pt;1;4;3;confiante|dramatico;;;sintetizador;76;0;0;0;0;
-Criolo;Não Existe Amor em SP;2011;rap-nacional;;;pt;1;4;3;romantico|aconchegante;;amor;sintetizador;72;0;0;0;0;
-Marcelo D2;Qual É?;2003;rap-nacional;;;pt;1;4;3;confiante|dramatico;;;sintetizador;72;0;0;0;0;
-Gabriel o Pensador;Cachimbo da Paz;1997;rap-nacional;;;pt;1;4;3;confiante|dramatico;;;sintetizador;72;0;0;0;0;
-Djonga;Olho de Tigre;2017;rap-nacional;;;pt;1;4;3;confiante|dramatico;;;sintetizador;72;0;0;0;0;
-Matuê;Quer Voar;2020;trap-nacional;;;pt;1;4;3;confiante|sombrio;;;sintetizador;72;0;0;0;0;
-Veigh;Novo Balanço;2023;trap-nacional;;;pt;1;4;3;confiante|sombrio;;;sintetizador;72;0;0;0;0;
-L7nnon;Desenrola, Bate, Joga de Ladin;2022;funk-carioca;;Os Hawaianos;pt;1;3;3;confiante|alegre;;;;76;0;0;0;0;
-Cidinho & Doca;Rap da Felicidade;1995;funk-carioca;;;pt;1;3;3;confiante|alegre;;;;72;0;0;0;0;
-MC Marcinho;Glamurosa;2004;funk-melody;;;pt;1;3;3;confiante|alegre;;;;72;0;0;0;0;
-Claudinho & Buchecha;Só Love;1997;funk-melody;;;pt;1;3;3;confiante|alegre;;amor;;72;0;0;0;0;
-Claudinho & Buchecha;Fico Assim Sem Você;2002;funk-melody;;;pt;1;3;3;confiante|alegre;;;;72;0;0;0;0;
-Bonde do Tigrão;Cerol na Mão;2001;funk-carioca;;;pt;1;3;3;confiante|alegre;;;;72;0;0;0;0;
-MC Guimê;País do Futebol;2013;funk-ostentacao;;Emicida;pt;1;3;3;confiante|alegre;;liberdade;;76;0;0;0;0;
-MC Kevinho;Olha a Explosão;2016;funk-carioca;;;pt;1;3;3;confiante|alegre;;;;72;0;0;0;0;
-Ludmilla;Cheguei;2016;funk-carioca;;;pt;1;3;3;confiante|alegre;;;;72;0;0;0;0;
-Anitta;Show das Poderosas;2013;funk-carioca;;;pt;1;3;3;confiante|alegre;;;;72;0;0;0;0;
-Anitta;Envolver;2021;reggaeton;;;es;1;5;4;sensual|animado;;;percussao;72;0;0;0;0;
-Dennis DJ;Malandramente;2016;funk-carioca;;MC Nandinho, Nego Bam;pt;1;3;3;confiante|alegre;;;;76;0;0;0;0;
-MC Fioti;Bum Bum Tam Tam;2017;funk-carioca;;;pt;1;3;3;confiante|alegre;;;;72;0;0;0;0;
-Pedro Sampaio;Galopa;2021;funk-carioca;;;pt;1;3;3;confiante|alegre;;;;72;0;0;0;0;
-Pabllo Vittar;K.O.;2017;pop-nacional;;;pt;1;4;4;alegre|romantico;;;sintetizador;72;0;0;0;0;
-Luísa Sonza;Chico;2023;pop-nacional;;;pt;1;4;4;alegre|romantico;;;sintetizador;72;0;0;0;0;
-Gloria Groove;Bonekinha;2021;pop-nacional;;;pt;1;4;4;alegre|romantico;;;sintetizador;72;0;0;0;0;
-Jão;Idiota;2021;pop-nacional;;;pt;1;4;4;alegre|romantico;;;sintetizador;72;0;0;0;0;
-IZA;Pesadão;2017;pop-nacional;;Marcelo Falcão;pt;1;4;4;alegre|romantico;;;sintetizador;76;0;0;0;0;
-Marina Sena;Por Supuesto;2021;pop-nacional;;;pt;1;4;4;alegre|romantico;;;sintetizador;72;0;0;0;0;
-Vitor Kley;O Sol;2017;pop-nacional;;;pt;1;4;4;alegre|romantico;;;sintetizador;72;0;0;0;0;
-Latino;Festa no Apê;2004;pop-nacional;;;pt;1;4;4;alegre|romantico;;curticao;sintetizador;72;0;0;0;0;
-Rouge;Ragatanga;2002;teen-pop;;;en;1;4;5;alegre|romantico;;;sintetizador;72;0;0;0;0;
-Sandy & Junior;As Quatro Estações;1999;teen-pop;;;en;1;4;5;alegre|romantico;;;sintetizador;72;0;0;0;0;
-KLB;A Dor Desse Amor;2000;teen-pop;;;en;1;4;3;romantico|aconchegante;;amor|perda;sintetizador;72;0;0;0;0;
-Xuxa;Ilariê;1988;musica-infantil;;;pt;1;3;5;alegre|animado;;;piano;72;0;0;0;0;
-Xuxa;Parabéns da Xuxa;1989;musica-infantil;;;pt;1;3;5;alegre|animado;aniversario;;piano;76;0;0;0;0;Aniversário
-Balão Mágico;Superfantástico;1983;musica-infantil;;;pt;1;3;5;alegre|animado;;;piano;72;0;0;0;0;
-Odair José;Eu Vou Tirar Você Desse Lugar;1972;brega-romantico;;;pt;1;3;3;confiante|alegre;;;;72;0;0;0;0;
-Amado Batista;Princesa;1980;brega-romantico;;;pt;1;3;3;confiante|alegre;;;;72;0;0;0;0;
-Waldick Soriano;Eu Não Sou Cachorro Não;1972;brega-romantico;;;pt;1;3;3;confiante|alegre;;;;72;0;0;0;0;
-Wando;Fogo e Paixão;1988;brega-romantico;;;pt;1;3;3;romantico|aconchegante;;paixao|familia;;72;0;0;0;0;
-Sidney Magal;Sandra Rosa Madalena;1978;brega-romantico;;;pt;1;3;3;confiante|alegre;;;;72;0;0;0;0;
-Fábio Jr.;Alma Gêmea;1993;mpb-romantica;;;pt;1;2;3;romantico|saudade;;amor;piano;72;0;0;0;0;
-Fábio Jr.;20 e Poucos Anos;1979;mpb-romantica;;;pt;1;2;3;romantico|saudade;;amor;piano;72;0;0;0;0;
-Pablo;Porque Homem Não Chora;2012;arrocha;;;pt;1;3;3;sofrido|romantico;;;sintetizador;72;0;0;0;0;
-Tierry;Rita;2020;arrocha;;;pt;1;3;3;sofrido|romantico;;;sintetizador;72;0;0;0;0;
-Padre Marcelo Rossi;Erguei as Mãos;1998;musica-catolica;;;pt;1;3;4;sagrado|esperancoso;;fe;coral;72;0;0;0;0;
-Fernandinho;Uma Nova História;2012;louvor;;;pt;1;3;4;sagrado|esperancoso;;fe;coral;72;0;0;0;0;
-Anderson Freire;Raridade;2013;gospel-pop;;;pt;1;4;4;sagrado|alegre;;fe;coral;72;0;0;0;0;
-Thalles Roberto;Arde Outra Vez;2011;gospel-pop;;;pt;1;4;4;sagrado|alegre;;fe;coral;72;0;0;0;0;
-Gabriela Rocha;Lugar Secreto;2016;louvor;;;pt;1;3;4;sagrado|esperancoso;;fe;coral;72;0;0;0;0;
-Jararaca e Ratinho;Mamãe Eu Quero;1937;marchinha;;;pt;1;5;5;festivo|animado;carnaval;familia|curticao;metais;76;0;1;0;0;Carnaval
-Aurora Miranda;Cidade Maravilhosa;1934;marchinha;;;pt;1;5;5;festivo|animado;carnaval;curticao;metais;76;0;1;0;0;Carnaval
-Carlos Galhardo;Allah-La-Ô;1941;marchinha;;;pt;1;5;5;festivo|animado;carnaval;curticao;metais;76;0;1;0;0;Carnaval
-Moacyr Franco;Me Dá um Dinheiro Aí;1959;marchinha;;;pt;1;5;5;festivo|animado;carnaval;curticao|ostentacao;metais;76;0;1;0;0;Carnaval
-Jorge Goulart;Cabeleira do Zezé;1964;marchinha;;;pt;1;5;5;festivo|animado;carnaval;curticao;metais;76;0;1;0;0;Carnaval
-Dalva de Oliveira;Máscara Negra;1967;marchinha;;;pt;1;5;5;festivo|animado;carnaval;curticao;metais;76;0;1;0;0;Carnaval
-Estação Primeira de Mangueira;História pra Ninar Gente Grande;2019;samba-enredo;;;pt;1;5;5;festivo|animado;carnaval;curticao;percussao;76;0;1;0;0;Carnaval
+Elis Regina;Madalena;1971;mpb;;;pt;1;3;5;calmo|contemplativo;;;violao;62;0;1;0;0;
+Chico Buarque;Construção;1971;mpb;;;pt;1;3;2;calmo|contemplativo;;;violao;86;1;1;0;0;
+Chico Buarque;Cálice;1978;mpb;;Milton Nascimento;pt;1;3;2;calmo|contemplativo;;;violao;86;1;1;0;0;
+Chico Buarque;A Banda;1966;mpb;;;pt;1;3;5;calmo|contemplativo;;;violao;90;1;1;0;0;
+Chico Buarque;Apesar de Você;1970;mpb;;;pt;1;4;4;calmo|contemplativo;;;violao;86;1;1;0;0;
+Caetano Veloso;Sozinho;1998;mpb-romantica;;;pt;1;2;2;melancolico|saudade;;amor;piano;84;1;0;0;0;
+Caetano Veloso;Leãozinho;1977;mpb;;;pt;1;2;5;calmo|contemplativo;;;violao;82;1;1;0;0;
+Caetano Veloso;Alegria, Alegria;1967;tropicalia;;;pt;1;4;4;estranho|confiante;;;guitarra;80;1;0;0;0;
+Caetano Veloso;Você É Linda;1983;mpb;;;pt;1;2;4;calmo|contemplativo;;;violao;78;0;1;0;0;
+Caetano Veloso;Sampa;1978;mpb;;;pt;1;2;3;calmo|contemplativo;;;violao;76;1;1;0;0;
+Gilberto Gil;Andar com Fé;1982;mpb;;;pt;1;3;5;calmo|contemplativo;;;violao;80;1;1;0;0;
+Gilberto Gil;Aquele Abraço;1969;tropicalia;;;pt;1;4;5;estranho|confiante;;;guitarra;82;1;0;0;0;
+Gilberto Gil;Esperando na Janela;2000;forro-pe-de-serra;;;pt;1;4;5;aconchegante|animado;sao-joao;;sanfona;82;0;0;0;0;São João
+Gal Costa;Baby;1969;tropicalia;;;pt;1;2;3;estranho|confiante;;;guitarra;72;0;0;0;0;
+Os Mutantes;Panis et Circenses;1968;tropicalia;;;pt;1;3;4;estranho|confiante;;;guitarra;60;0;0;0;0;
+Milton Nascimento;Maria Maria;1978;mpb;;;pt;1;3;4;calmo|contemplativo;;;violao;90;1;1;0;0;
+Milton Nascimento;Travessia;1967;clube-da-esquina;;;pt;1;2;3;sonhador|melancolico;;;violao;76;1;0;0;0;
+Milton Nascimento;Canção da América;1980;mpb;;;pt;1;2;3;calmo|contemplativo;;;violao;86;1;1;0;0;
+Djavan;Oceano;1989;mpb-romantica;;;pt;1;2;3;romantico|saudade;;amor;piano;90;1;0;0;0;
+Djavan;Flor de Lis;1976;mpb;;;pt;1;3;5;calmo|contemplativo;;;violao;86;1;1;0;0;
+Djavan;Sina;1982;mpb;;;pt;1;3;4;calmo|contemplativo;;;violao;82;1;1;0;0;
+Djavan;Se...;1992;mpb-romantica;;;pt;1;3;4;romantico|saudade;;amor;piano;80;0;0;0;0;
+Djavan;Eu Te Devoro;1998;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;82;0;1;0;0;
+Gonzaguinha;O Que É, O Que É?;1982;mpb;;;pt;1;4;5;calmo|contemplativo;;;violao;92;1;1;0;0;
+Belchior;Apenas um Rapaz Latino-Americano;1976;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;84;1;1;0;0;
+Belchior;Divina Comédia Humana;1978;mpb;;;pt;1;3;2;calmo|contemplativo;;;violao;76;0;1;0;0;
+Raul Seixas;Metamorfose Ambulante;1973;rock-nacional;;;pt;1;3;4;romantico|aconchegante;;amor;guitarra;84;1;1;0;0;
+Raul Seixas;Maluco Beleza;1977;rock-nacional;;;pt;1;3;5;confiante|empolgante;;;guitarra;90;1;1;0;0;
+Raul Seixas;Gita;1974;rock-nacional;;;pt;1;3;4;confiante|empolgante;;;guitarra;80;1;1;0;0;
+Tim Maia;Gostava Tanto de Você;1973;soul-brasileiro;;;pt;1;3;2;sensual|romantico;;amor;metais;94;1;0;0;0;
+Tim Maia;Primavera;1970;soul-brasileiro;;;pt;1;3;4;sensual|romantico;;amor;metais;92;1;0;0;0;
+Tim Maia;Azul da Cor do Mar;1970;soul-brasileiro;;;pt;1;2;4;sensual|romantico;;amor;metais;84;1;0;0;0;
+Tim Maia;Do Leme ao Pontal;1986;soul-brasileiro;;;pt;1;4;5;sensual|romantico;;amor;metais;84;0;0;0;0;
+Tim Maia;Não Quero Dinheiro (Só Quero Amar);1971;soul-brasileiro;;;pt;1;4;5;sensual|romantico;;ostentacao|amor;metais;86;1;0;0;0;
+Jorge Ben Jor;País Tropical;1969;samba-rock;;;pt;1;4;5;animado|confiante;;liberdade;metais;90;1;0;0;0;
+Jorge Ben Jor;Mas Que Nada;1963;samba-rock;;;pt;1;4;5;animado|confiante;;;metais;88;1;0;0;0;
+Jorge Ben Jor;Taj Mahal;1972;samba-rock;;;pt;1;4;5;animado|confiante;;;metais;80;0;0;0;0;
+Jorge Ben Jor;W/Brasil (Chama o Síndico);1990;samba-rock;;;pt;1;4;5;animado|confiante;;;metais;78;0;0;0;0;
+Marisa Monte;Ainda Bem;2011;nova-mpb;;;pt;1;3;5;romantico|sonhador;;;violao;82;0;0;0;0;
+Marisa Monte;Amor I Love You;2000;mpb;;;pt;1;2;4;romantico|aconchegante;;amor;violao;86;1;1;0;0;
+Tribalistas;Já Sei Namorar;2002;nova-mpb;;;pt;1;3;5;romantico|aconchegante;;amor;violao;86;1;0;0;0;
+Tribalistas;Velha Infância;2002;nova-mpb;;;pt;1;2;4;romantico|sonhador;;;violao;88;1;0;0;0;
+Ana Carolina;Quem de Nós Dois;2001;mpb-romantica;;;pt;1;2;2;romantico|saudade;;amor;piano;84;1;0;0;0;
+Roberto Carlos;Detalhes;1971;mpb-romantica;;;pt;1;2;2;romantico|saudade;;amor;piano;84;1;0;0;0;
+Roberto Carlos;Como É Grande o Meu Amor por Você;1967;mpb-romantica;;;pt;1;2;4;romantico|aconchegante;;amor;piano;92;1;0;0;0;
+Roberto Carlos;Emoções;1981;mpb-romantica;;;pt;1;3;4;romantico|saudade;;amor;piano;90;1;0;0;0;
+Roberto Carlos;Jesus Cristo;1970;mpb-romantica;;;pt;1;4;5;romantico|saudade;;fe|amor;piano;80;0;0;0;0;
+Roberto Carlos;É Proibido Fumar;1964;jovem-guarda;;;pt;1;4;5;confiante|alegre;;;;76;0;0;0;0;
+Erasmo Carlos;Sentado à Beira do Caminho;1969;jovem-guarda;;;pt;1;3;2;confiante|alegre;;;;72;0;0;0;0;
+Fagner;Borbulhas de Amor;1991;mpb-romantica;;;pt;1;2;4;romantico|aconchegante;;amor;piano;80;0;0;0;0;
+Zé Ramalho;Admirável Gado Novo;1979;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;84;1;1;0;0;
+Zé Ramalho;Avôhai;1978;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;72;0;1;0;0;
+Alceu Valença;Anunciação;1983;mpb;;;pt;1;3;5;calmo|contemplativo;;;violao;94;1;1;0;0;
+Alceu Valença;La Belle de Jour;1992;mpb;;;pt;1;3;4;calmo|contemplativo;;;violao;84;0;1;0;0;
+Alceu Valença;Morena Tropicana;1982;mpb;;;pt;1;4;5;calmo|contemplativo;;;violao;82;0;1;0;0;
+Novos Baianos;Preta Pretinha;1972;mpb;;;pt;1;2;4;calmo|contemplativo;;;violao;84;1;1;0;0;
+Cássia Eller;Malandragem;1994;pop-rock-nacional;;;pt;1;3;4;confiante|animado;;;guitarra;92;1;0;0;0;
+Cássia Eller;O Segundo Sol;1999;pop-rock-nacional;;;pt;1;3;4;confiante|animado;;;guitarra;88;1;0;0;0;
+Vanessa da Mata;Ai, Ai, Ai...;2005;nova-mpb;;;pt;1;3;5;romantico|sonhador;;;violao;86;0;0;0;0;
+Vanessa da Mata;Boa Sorte/Good Luck;2007;nova-mpb;;Ben Harper;pt;1;3;4;romantico|sonhador;;;violao;86;0;0;0;0;
+Seu Jorge;Burguesinha;2007;samba;;;pt;1;4;5;alegre|festivo;;;percussao;86;1;1;0;0;
+Anavitória;Trevo (Tu);2016;nova-mpb;;Tiago Iorc;pt;1;2;4;romantico|sonhador;;;violao;84;0;0;0;0;
+Tiago Iorc;Amei Te Ver;2016;nova-mpb;;;pt;1;2;4;romantico|sonhador;;;violao;80;0;0;0;0;
+Melim;Meu Abrigo;2017;pop-nacional;;;pt;1;3;5;alegre|romantico;;;sintetizador;86;0;0;0;0;
+Ivan Lins;Começar de Novo;1979;mpb;;;pt;1;3;3;calmo|contemplativo;;;violao;78;0;1;0;0;
+Ney Matogrosso;Homem com H;1981;mpb;;;pt;1;4;5;calmo|contemplativo;;;violao;86;1;1;0;0;
+Secos & Molhados;Sangue Latino;1973;rock-nacional;;;pt;1;3;3;confiante|empolgante;;;guitarra;84;1;1;0;0;
+Maria Bethânia;Explode Coração;1979;mpb;;;pt;1;3;2;romantico|aconchegante;;amor|fe;violao;80;0;1;0;0;
+Cazuza;Exagerado;1985;rock-brasil-80;;;pt;1;4;4;nostalgico|confiante;;;guitarra;94;1;1;0;0;
+Cazuza;O Tempo Não Para;1988;rock-brasil-80;;;pt;1;4;3;nostalgico|confiante;;;guitarra;90;1;1;0;0;
+Cazuza;Codinome Beija-Flor;1985;rock-brasil-80;;;pt;1;2;2;romantico|aconchegante;;;guitarra;82;0;1;0;0;
+Gilsons;Várias Queixas;2020;nova-mpb;;;pt;1;3;4;romantico|sonhador;;;violao;84;0;0;0;0;
+Simone;Então É Natal;1995;mpb;;;pt;1;2;3;festivo|alegre;natal;;violao;90;1;1;0;0;Natal
+Cartola;O Mundo É um Moinho;1976;samba-raiz;;;pt;1;2;2;melancolico|saudade;;;cavaquinho;86;1;0;0;0;
+Cartola;As Rosas Não Falam;1976;samba-raiz;;;pt;1;2;2;saudade|aconchegante;;;cavaquinho;84;1;0;0;0;
+Paulinho da Viola;Foi um Rio Que Passou em Minha Vida;1970;samba-raiz;;;pt;1;3;3;saudade|aconchegante;;;cavaquinho;82;1;0;0;0;
+Beth Carvalho;Vou Festejar;1978;samba-raiz;;;pt;1;5;5;saudade|aconchegante;;;cavaquinho;90;1;0;0;0;
+Zeca Pagodinho;Deixa a Vida Me Levar;2002;samba;;;pt;1;4;5;alegre|festivo;;;percussao;95;1;1;0;0;
+Zeca Pagodinho;Verdade;1996;samba;;;pt;1;3;4;alegre|festivo;;;percussao;88;1;1;0;0;
+Martinho da Vila;Canta, Canta, Minha Gente;1974;samba;;;pt;1;4;5;alegre|festivo;;;percussao;84;1;1;0;0;
+Alcione;Não Deixe o Samba Morrer;1975;samba;;;pt;1;3;3;alegre|festivo;;;percussao;92;1;1;0;0;
+Clara Nunes;O Mar Serenou;1975;samba;;;pt;1;4;4;alegre|festivo;;;percussao;80;1;1;0;0;
+Fundo de Quintal;O Show Tem Que Continuar;1988;pagode-de-mesa;;;pt;1;4;4;alegre|festivo;;;cavaquinho;80;1;0;0;0;
+Arlindo Cruz;Meu Lugar;2007;samba;;;pt;1;4;4;alegre|festivo;;;percussao;80;1;1;0;0;
+Diogo Nogueira;Pé na Areia;2011;samba;;;pt;1;4;5;alegre|festivo;;;percussao;78;0;1;0;0;
+Bezerra da Silva;Malandragem Dá um Tempo;1986;partido-alto;;;pt;1;4;4;alegre|confiante;;;percussao;80;1;0;0;0;
+Adoniran Barbosa;Trem das Onze;1964;samba;;;pt;1;3;3;alegre|festivo;;;percussao;92;1;1;0;0;
+Demônios da Garoa;Saudosa Maloca;1955;samba;;;pt;1;3;2;alegre|festivo;;;percussao;82;1;1;0;0;
+Ary Barroso;Aquarela do Brasil;1939;samba;;;pt;1;4;5;alegre|festivo;;;percussao;92;1;1;0;0;
+Só Pra Contrariar;Mineirinho;1997;pagode-90;;;pt;1;4;5;romantico|alegre;;;cavaquinho;88;1;1;0;0;
+Só Pra Contrariar;Essa Tal Liberdade;1994;pagode-90;;;pt;1;3;3;romantico|alegre;;liberdade;cavaquinho;88;1;1;0;0;
+Raça Negra;Cheia de Manias;1991;pagode-90;;;pt;1;3;4;romantico|alegre;;;cavaquinho;92;1;1;0;0;
+Raça Negra;É Tarde Demais;1995;pagode-90;;;pt;1;3;2;romantico|alegre;;;cavaquinho;88;1;1;0;0;
+Molejo;Cilada;1996;pagode-90;;;pt;1;4;5;romantico|alegre;;;cavaquinho;90;1;1;0;0;
+Art Popular;Temporal;1996;pagode-90;;;pt;1;3;3;romantico|alegre;;;cavaquinho;78;0;1;0;0;
+Exaltasamba;Livre pra Voar;2009;pagode-romantico;;;pt;1;3;4;romantico|saudade;;amor;cavaquinho;78;0;0;0;0;
+Revelação;Tá Escrito;2009;pagode-romantico;;;pt;1;4;5;romantico|saudade;;amor;cavaquinho;92;1;0;0;0;
+Sorriso Maroto;Assim Você Mata o Papai;2011;pagode-romantico;;;pt;1;4;5;romantico|saudade;;familia|amor;cavaquinho;86;0;0;0;0;
+Thiaguinho;Caraca, Muleke!;2016;pagode-romantico;;;pt;1;4;5;romantico|saudade;;vida-no-campo|amor;cavaquinho;84;0;0;0;0;
+Péricles;Até Que Durou;2014;pagode-romantico;;;pt;1;3;2;romantico|saudade;;amor;cavaquinho;78;0;0;0;0;
+Ferrugem;Pirata e Tesouro;2018;pagode-romantico;;;pt;1;3;4;romantico|saudade;;amor;cavaquinho;84;0;0;0;0;
+Dilsinho;Péssimo Negócio;2017;pagode-romantico;;;pt;1;3;2;romantico|saudade;;amor;cavaquinho;86;0;0;0;0;
+Menos é Mais;Lapada Dela;2021;pagode-de-mesa;;;pt;1;4;5;alegre|festivo;;;cavaquinho;92;0;0;0;0;
+Pixote;Insegurança;2002;pagode-romantico;;;pt;1;3;3;romantico|saudade;;amor;cavaquinho;78;0;0;0;0;
+Turma do Pagode;Lancinho;2008;pagode-romantico;;;pt;1;4;5;romantico|saudade;;amor;cavaquinho;80;0;0;0;0;
+Harmonia do Samba;Vem Neném;1999;pagode-baiano;;;pt;1;5;5;animado|festivo;;;percussao;84;1;0;0;0;
+É o Tchan;Segura o Tchan;1995;pagode-baiano;;;pt;1;5;5;animado|festivo;;;percussao;90;1;0;0;0;
+É o Tchan;Dança do Ventre;1997;pagode-baiano;;;pt;1;5;5;animado|festivo;;danca;percussao;78;0;0;0;0;
+Psirico;Lepo Lepo;2014;pagode-baiano;;;pt;1;5;5;animado|festivo;;;percussao;86;1;0;0;0;
+Parangolé;Rebolation;2009;pagode-baiano;;;pt;1;5;5;animado|festivo;;;percussao;86;1;0;0;0;
+Léo Santana;Zona de Perigo;2022;pagode-baiano;;;pt;1;5;5;animado|festivo;;;percussao;92;0;0;0;0;
+Tonico & Tinoco;Chico Mineiro;1946;musica-caipira;;;pt;1;2;2;aconchegante|nostalgico;;;viola-caipira;60;0;0;0;0;
+Tião Carreiro & Pardinho;Pagode em Brasília;1960;musica-caipira;;;pt;1;4;4;aconchegante|nostalgico;;;viola-caipira;66;0;0;0;0;
+Sérgio Reis;Menino da Porteira;1973;sertanejo-raiz;;;pt;1;3;2;saudade|aconchegante;;;viola-caipira;76;1;0;0;0;
+Almir Sater;Tocando em Frente;1990;musica-caipira;;;pt;1;2;3;aconchegante|nostalgico;;;viola-caipira;86;1;0;0;0;
+Renato Teixeira;Romaria;1977;musica-caipira;;;pt;1;2;3;aconchegante|nostalgico;;;viola-caipira;82;1;0;0;0;
+Milionário & José Rico;Estrada da Vida;1977;sertanejo-raiz;;;pt;1;3;4;saudade|aconchegante;;pe-na-estrada;viola-caipira;84;1;0;0;0;
+Chitãozinho & Xororó;Evidências;1990;sertanejo-romantico;;;pt;1;3;3;saudade|romantico;;amor;violao;98;1;1;0;0;
+Chitãozinho & Xororó;Fio de Cabelo;1982;sertanejo-romantico;;;pt;1;3;2;saudade|romantico;;amor;violao;84;1;1;0;0;
+Leandro & Leonardo;Pense em Mim;1990;sertanejo-romantico;;;pt;1;3;3;saudade|romantico;;amor;violao;90;1;1;0;0;
+Leandro & Leonardo;Entre Tapas e Beijos;1989;sertanejo-romantico;;;pt;1;4;4;romantico|aconchegante;;amor;violao;90;1;1;0;0;
+Zezé Di Camargo & Luciano;É o Amor;1991;sertanejo-romantico;;;pt;1;3;4;romantico|aconchegante;;amor;violao;96;1;1;0;0;
+Zezé Di Camargo & Luciano;No Dia em Que Eu Saí de Casa;1996;sertanejo-romantico;;;pt;1;3;3;saudade|romantico;;amor;violao;88;1;1;0;0;
+João Paulo & Daniel;Estou Apaixonado;1995;sertanejo-romantico;;;pt;1;3;4;saudade|romantico;;familia|amor;violao;86;1;1;0;0;
+João Mineiro & Marciano;Seu Amor Ainda É Tudo;1987;sertanejo-romantico;;;pt;1;3;2;romantico|aconchegante;;amor;violao;66;0;1;0;0;
+Bruno & Marrone;Dormi na Praça;2001;sertanejo-romantico;;;pt;1;3;2;saudade|romantico;;perda|amor;violao;92;1;1;0;0;
+Bruno & Marrone;Choram as Rosas;2005;sertanejo-romantico;;;pt;1;3;2;saudade|romantico;;amor;violao;82;0;1;0;0;
+Victor & Leo;Borboletas;2008;sertanejo-universitario;;;pt;1;3;3;festivo|romantico;;;violao;84;1;0;0;0;
+César Menotti & Fabiano;Leilão;2006;sertanejo-universitario;;;pt;1;4;3;festivo|romantico;;;violao;74;0;0;0;0;
+Jorge & Mateus;Pode Chorar;2007;sertanejo-universitario;;;pt;1;3;3;melancolico|saudade;;;violao;82;0;0;0;0;
+Jorge & Mateus;Os Anjos Cantam;2014;sertanejo-universitario;;;pt;1;3;4;festivo|romantico;;;violao;80;0;0;0;0;
+Luan Santana;Meteoro;2009;sertanejo-universitario;;;pt;1;4;5;festivo|romantico;;;violao;88;1;0;0;0;
+Michel Teló;Ai Se Eu Te Pego;2011;sertanejo-universitario;;;pt;1;5;5;festivo|romantico;;;violao;94;1;0;0;0;
+Gusttavo Lima;Balada (Tchê Tcherere Tchê Tchê);2011;sertanejo-universitario;;;pt;1;5;5;festivo|romantico;;;violao;90;1;0;0;0;
+Gusttavo Lima;Termina Comigo Antes;2021;sofrencia;;;pt;1;3;3;sofrido|saudade;;;violao;82;0;0;0;0;
+Gusttavo Lima;Desejo Imortal;2019;sertanejo-romantico;;;pt;1;3;2;saudade|romantico;;amor;violao;80;0;1;0;0;
+Henrique & Juliano;Cuida Bem Dela;2016;sertanejo-universitario;;;pt;1;3;3;festivo|romantico;;;violao;86;1;0;0;0;
+Henrique & Juliano;Liberdade Provisória;2018;sofrencia;;;pt;1;3;3;sofrido|saudade;;liberdade;violao;86;0;0;0;0;
+Marília Mendonça;Infiel;2016;sofrencia;;;pt;1;3;3;sofrido|saudade;;;violao;94;1;0;0;0;
+Marília Mendonça;Supera;2019;sofrencia;;;pt;1;3;3;sofrido|saudade;;;violao;86;0;0;0;0;
+Marília Mendonça;Todo Mundo Vai Sofrer;2019;sofrencia;;;pt;1;3;3;sofrido|saudade;;;violao;88;0;0;0;0;
+Maiara & Maraisa;10%;2016;feminejo;;;pt;1;3;3;confiante|sofrido;;;violao;86;1;0;0;0;
+Maiara & Maraisa;Medo Bobo;2015;feminejo;;;pt;1;3;3;confiante|sofrido;;;violao;84;0;0;0;0;
+Simone & Simaria;Loka;2017;feminejo;;Anitta;pt;1;4;5;confiante|sofrido;;;violao;84;0;0;0;0;
+Naiara Azevedo;50 Reais;2016;feminejo;;Maiara & Maraisa;pt;1;4;4;confiante|sofrido;;;violao;84;0;0;0;0;
+Zé Neto & Cristiano;Notificação Preferida;2018;sertanejo-universitario;;;pt;1;3;3;festivo|romantico;;;violao;82;0;0;0;0;
+Zé Neto & Cristiano;Largado às Traças;2018;sofrencia;;;pt;1;3;2;sofrido|saudade;;;violao;88;1;0;0;0;
+Matheus & Kauan;Que Sorte a Nossa;2018;sertanejo-universitario;;;pt;1;3;4;festivo|romantico;;;violao;82;0;0;0;0;
+Israel & Rodolffo;Batom de Cereja;2021;sertanejo-universitario;;;pt;1;4;5;festivo|romantico;;;violao;90;1;0;0;0;
+Hugo & Guilherme;Mal Feito;2022;sofrencia;;Marília Mendonça;pt;1;3;3;sofrido|saudade;;;violao;84;0;0;0;0;
+Ana Castela;Pipoco;2022;agronejo;;Melody;pt;1;5;5;festivo|confiante;;;violao;86;0;0;0;0;
+Ana Castela;Nosso Quadro;2023;agronejo;;;pt;1;4;4;festivo|confiante;;;violao;84;0;0;0;0;
+Paula Fernandes;Pássaro de Fogo;2009;sertanejo-romantico;;;pt;1;3;4;saudade|romantico;;amor;violao;82;1;1;0;0;
+Lauana Prado;Cobaia;2021;sertanejo-universitario;;;pt;1;3;3;festivo|romantico;;;violao;78;0;0;0;0;
+Luiz Gonzaga;Asa Branca;1947;baiao;;;pt;1;3;3;animado|festivo;sao-joao;;sanfona;94;1;0;0;0;São João
+Luiz Gonzaga;Xote das Meninas;1953;xote;;;pt;1;4;5;romantico|aconchegante;sao-joao;;sanfona;84;1;0;0;0;São João
+Luiz Gonzaga;Olha pro Céu;1951;baiao;;;pt;1;4;5;animado|festivo;sao-joao;;sanfona;84;1;0;0;0;São João
+Luiz Gonzaga;Qui Nem Jiló;1950;baiao;;;pt;1;3;4;animado|festivo;;;sanfona;72;0;0;0;0;
+Luiz Gonzaga;Respeita Januário;1950;baiao;;;pt;1;4;5;animado|festivo;;;sanfona;70;0;0;0;0;
+Dominguinhos;Eu Só Quero um Xodó;1973;xote;;;pt;1;3;4;romantico|aconchegante;;;sanfona;88;1;0;0;0;
+Dominguinhos;Isso Aqui Tá Bom Demais;1985;forro;;;pt;1;4;5;animado|festivo;sao-joao;;sanfona;82;1;0;0;0;São João
+Jackson do Pandeiro;Chiclete com Banana;1959;coco;;;pt;1;4;5;festivo|animado;;;percussao;64;0;0;0;0;
+Elba Ramalho;De Volta pro Aconchego;1985;forro;;;pt;1;3;3;animado|festivo;;;sanfona;82;1;0;0;0;
+Elba Ramalho;Banho de Cheiro;1983;forro;;;pt;1;5;5;animado|festivo;;;sanfona;80;0;0;0;0;
+Falamansa;Xote dos Milagres;2000;forro-universitario;;;pt;1;4;5;romantico|animado;;;sanfona;92;1;0;0;0;
+Falamansa;Rindo à Toa;2000;forro-universitario;;;pt;1;4;5;romantico|animado;;;sanfona;90;1;0;0;0;
+Mastruz com Leite;Meu Vaqueiro, Meu Peão;1995;forro-eletronico;;;pt;1;4;4;animado|festivo;;;sanfona;70;0;0;0;0;
+Calcinha Preta;Você Não Vale Nada;2005;forro-eletronico;;;pt;1;4;4;animado|festivo;;;sanfona;86;1;0;0;0;
+Wesley Safadão;Camarote;2014;forro-eletronico;;;pt;1;5;5;animado|festivo;;;sanfona;88;1;0;0;0;
+Zé Vaqueiro;Letícia;2020;piseiro;;;pt;1;3;4;animado|festivo;;;percussao;86;0;0;0;0;
+Barões da Pisadinha;Basta Você Me Ligar;2020;piseiro;;;pt;1;4;4;animado|festivo;;;percussao;88;1;0;0;0;
+Barões da Pisadinha;Recairei;2020;piseiro;;;pt;1;4;3;animado|festivo;;;percussao;86;0;0;0;0;
+João Gomes;Meu Pedaço de Pecado;2021;piseiro;;;pt;1;4;4;animado|festivo;;;percussao;88;1;0;0;0;
+Nattan;Ama Sofre Chora;2022;piseiro;;;pt;1;4;3;animado|festivo;;;percussao;82;0;0;0;0;
+Mari Fernandez;Não, Não Vou;2022;piseiro;;;pt;1;4;3;animado|festivo;;;percussao;84;0;0;0;0;
+Daniela Mercury;O Canto da Cidade;1992;axe-music;;;pt;1;5;5;festivo|animado;carnaval;curticao;percussao;90;1;1;0;0;Carnaval
+Daniela Mercury;Rapunzel;1997;axe-music;;;pt;1;5;5;festivo|animado;carnaval;curticao;percussao;82;0;1;0;0;Carnaval
+Ivete Sangalo;Sorte Grande (Poeira);2003;axe-music;;;pt;1;5;5;festivo|animado;carnaval;curticao;percussao;94;1;1;0;0;Carnaval
+Ivete Sangalo;Festa;2001;axe-music;;;pt;1;5;5;festivo|animado;carnaval;curticao;percussao;90;1;1;0;0;Carnaval
+Ivete Sangalo;Arerê;2002;axe-music;;;pt;1;5;5;festivo|animado;carnaval;curticao;percussao;82;0;1;0;0;Carnaval
+Banda Eva;Eva;1997;axe-music;;;pt;1;5;5;festivo|animado;carnaval;curticao;percussao;92;1;1;0;0;Carnaval
+Asa de Águia;Dança da Manivela;1997;axe-music;;;pt;1;5;5;festivo|animado;carnaval;danca|curticao;percussao;82;0;1;0;0;Carnaval
+Olodum;Faraó Divindade do Egito;1987;samba-reggae;;;pt;1;5;5;festivo|animado;carnaval;curticao;percussao;84;1;0;0;0;Carnaval
+Timbalada;Beija-Flor;1994;samba-reggae;;;pt;1;4;4;romantico|aconchegante;;;percussao;76;0;0;0;0;
+Claudia Leitte;Largadinho;2010;axe-music;;;pt;1;5;5;festivo|animado;carnaval;curticao;percussao;78;0;1;0;0;Carnaval
+Netinho;Milla;1996;axe-music;;;pt;1;4;4;festivo|animado;;;percussao;88;1;1;0;0;
+Luiz Caldas;Fricote;1985;axe-music;;;pt;1;5;5;festivo|animado;carnaval;curticao;percussao;76;0;1;0;0;Carnaval
+Banda Calypso;A Lua Me Traiu;2004;brega-calypso;;;pt;1;4;3;romantico|animado;;;guitarra;86;1;0;0;0;
+Joelma;Voando pro Pará;2016;brega-calypso;;;pt;1;4;4;romantico|animado;;;guitarra;76;0;0;0;0;
+Gaby Amarantos;Xirley;2012;tecnobrega;;;pt;1;4;5;confiante|alegre;;;;76;0;0;0;0;
+Fafá de Belém;Vermelho;1996;toada-boi-bumba;;;pt;1;4;5;epico|festivo;;;percussao;82;1;0;0;0;
+Kaoma;Chorando Se Foi (Lambada);1989;lambada;;;pt;1;5;5;sensual|animado;;;metais;88;1;0;0;0;
+Beto Barbosa;Adocica;1988;lambada;;;pt;1;5;5;sensual|animado;;;metais;80;0;0;0;0;
+Dona Onete;No Meio do Pitiú;2012;carimbo;;;pt;1;4;5;alegre|festivo;;;percussao;60;0;0;0;0;
+Pinduca;Sinhá Pureza;1973;carimbo;;;pt;1;4;5;alegre|festivo;;;percussao;58;0;0;0;0;
+Teixeirinha;Coração de Luto;1960;musica-gaucha;;;pt;1;2;1;romantico|aconchegante;;amor|fe;gaita;66;0;0;0;0;
+Chico Science & Nação Zumbi;A Praieira;1994;maracatu;;;pt;1;4;3;confiante|alegre;;;;66;0;0;0;0;
+Amelinha;Frevo Mulher;1979;frevo;;;pt;1;5;5;festivo|animado;carnaval;curticao;metais;86;1;0;0;0;Carnaval
+Gal Costa;Festa do Interior;1981;frevo;;;pt;1;5;5;festivo|animado;carnaval;curticao;metais;86;1;0;0;0;Carnaval
+Legião Urbana;Tempo Perdido;1986;rock-brasil-80;;;pt;1;4;3;melancolico|saudade;;;guitarra;92;1;1;0;0;
+Legião Urbana;Eduardo e Mônica;1986;rock-brasil-80;;;pt;1;3;4;nostalgico|confiante;;;guitarra;94;1;1;0;0;
+Legião Urbana;Pais e Filhos;1989;rock-brasil-80;;;pt;1;3;3;nostalgico|confiante;;familia|liberdade;guitarra;92;1;1;0;0;
+Legião Urbana;Que País É Este;1987;rock-brasil-80;;;pt;1;4;3;nostalgico|confiante;;liberdade;guitarra;90;1;1;0;0;
+Legião Urbana;Faroeste Caboclo;1987;rock-brasil-80;;;pt;1;4;3;nostalgico|confiante;;;guitarra;90;1;1;0;0;
+Titãs;Epitáfio;2001;pop-rock-nacional;;;pt;1;3;3;confiante|animado;;;guitarra;94;1;0;0;0;
+Titãs;Sonífera Ilha;1984;rock-brasil-80;;;pt;1;4;5;nostalgico|confiante;;;guitarra;84;1;1;0;0;
+Titãs;Polícia;1986;rock-brasil-80;;;pt;1;5;3;nostalgico|confiante;;;guitarra;82;0;1;0;0;
+Os Paralamas do Sucesso;Meu Erro;1984;rock-brasil-80;;;pt;1;4;3;nostalgico|confiante;;;guitarra;90;1;1;0;0;
+Os Paralamas do Sucesso;Lanterna dos Afogados;1989;rock-brasil-80;;;pt;1;3;2;nostalgico|confiante;;;guitarra;84;1;1;0;0;
+Barão Vermelho;Pro Dia Nascer Feliz;1983;rock-brasil-80;;;pt;1;4;5;nostalgico|confiante;;;guitarra;90;1;1;0;0;
+Ultraje a Rigor;Inútil;1983;rock-brasil-80;;;pt;1;4;4;nostalgico|confiante;;;guitarra;80;0;1;0;0;
+Capital Inicial;Primeiros Erros (Chove);2000;pop-rock-nacional;;;pt;1;4;4;confiante|animado;;;guitarra;92;1;0;0;0;acústico
+Ira!;Envelheço na Cidade;1986;rock-brasil-80;;;pt;1;4;3;nostalgico|confiante;;;guitarra;80;0;1;0;0;
+Engenheiros do Hawaii;Infinita Highway;1987;rock-brasil-80;;;pt;1;4;3;nostalgico|confiante;;;guitarra;80;1;1;0;0;
+Engenheiros do Hawaii;Era um Garoto Que Como Eu Amava os Beatles e os Rolling Stones;1990;rock-brasil-80;;;pt;1;3;3;nostalgico|confiante;;;guitarra;78;0;1;0;0;
+Kid Abelha;Como Eu Quero;1984;rock-brasil-80;;;pt;1;3;4;nostalgico|confiante;;;guitarra;86;1;1;0;0;
+RPM;Olhar 43;1985;rock-brasil-80;;;pt;1;4;4;nostalgico|confiante;;;guitarra;86;1;1;0;0;
+Lulu Santos;Como uma Onda;1983;pop-rock-nacional;;;pt;1;3;4;confiante|animado;;;guitarra;90;1;0;0;0;
+Lulu Santos;Tempos Modernos;1982;pop-rock-nacional;;;pt;1;4;5;confiante|animado;;;guitarra;88;1;0;0;0;
+Lulu Santos;Toda Forma de Amor;1988;pop-rock-nacional;;;pt;1;3;4;romantico|aconchegante;;amor;guitarra;82;0;0;0;0;
+Blitz;Você Não Soube Me Amar;1982;rock-brasil-80;;;pt;1;4;5;nostalgico|confiante;;;guitarra;80;1;1;0;0;
+Rita Lee;Mania de Você;1979;rock-nacional;;;pt;1;3;4;confiante|empolgante;;;guitarra;86;1;1;0;0;
+Rita Lee;Lança Perfume;1980;rock-nacional;;;pt;1;4;5;confiante|empolgante;;;guitarra;86;1;1;0;0;
+Rita Lee;Ovelha Negra;1975;rock-nacional;;;pt;1;3;3;confiante|empolgante;;;guitarra;88;1;1;0;0;
+Skank;Garota Nacional;1996;pop-rock-nacional;;;pt;1;4;5;confiante|animado;;;guitarra;84;1;0;0;0;
+Skank;Vou Deixar;2003;pop-rock-nacional;;;pt;1;4;5;confiante|animado;;;guitarra;88;1;0;0;0;
+Jota Quest;Fácil;2000;pop-rock-nacional;;;pt;1;3;4;confiante|animado;;;guitarra;86;0;0;0;0;
+Jota Quest;Dias Melhores;2000;pop-rock-nacional;;;pt;1;3;5;confiante|animado;;;guitarra;90;1;0;0;0;
+Charlie Brown Jr.;Só os Loucos Sabem;2009;pop-rock-nacional;;;pt;1;3;3;confiante|animado;;;guitarra;90;1;0;0;0;
+Charlie Brown Jr.;Proibida pra Mim;1997;rock-nacional;;;pt;1;4;4;confiante|empolgante;;;guitarra;88;1;1;0;0;
+Mamonas Assassinas;Pelados em Santos;1995;rock-nacional;;;pt;1;5;5;confiante|empolgante;;;guitarra;94;1;1;0;0;
+Raimundos;Mulher de Fases;1999;rock-nacional;;;pt;1;5;4;confiante|empolgante;;;guitarra;92;1;1;0;0;
+Los Hermanos;Anna Júlia;1999;rock-nacional;;;pt;1;4;4;confiante|empolgante;;;guitarra;94;1;1;0;0;
+O Rappa;Pescador de Ilusões;1996;rock-nacional;;;pt;1;3;4;confiante|empolgante;;perda;guitarra;88;1;1;0;0;
+Detonautas;Quando o Sol Se For;2002;rock-nacional;;;pt;1;3;4;confiante|empolgante;;;guitarra;84;0;1;0;0;
+Pitty;Me Adora;2009;rock-nacional;;;pt;1;4;3;confiante|empolgante;;perda;guitarra;84;1;1;0;0;
+NX Zero;Razões e Emoções;2006;emo;;;en;1;4;3;melancolico|dramatico;;;guitarra;86;1;0;0;0;
+CPM 22;Um Minuto Para o Fim do Mundo;2005;pop-punk;;;en;1;5;3;animado|confiante;;;guitarra;84;0;0;0;0;
+Biquini Cavadão;Vento Ventania;1991;pop-rock-nacional;;;pt;1;4;4;confiante|animado;;;guitarra;84;0;0;0;0;
+Natiruts;Liberdade pra Dentro da Cabeça;2002;reggae-nacional;;;pt;1;3;4;calmo|romantico;;liberdade;guitarra;88;1;0;0;0;
+Cidade Negra;Onde Você Mora?;1996;reggae-nacional;;;pt;1;3;4;calmo|romantico;;;guitarra;86;1;0;0;0;
+Sepultura;Roots Bloody Roots;1996;thrash-metal;;;en;1;5;2;agressivo|tenso;;;guitarra;70;1;0;0;0;
+Angra;Carry On;1993;power-metal;;;pt;1;5;4;confiante|alegre;;;;66;0;0;0;0;
+Racionais MC's;Diário de um Detento;1997;rap-nacional;;;pt;1;3;2;confiante|dramatico;;;sintetizador;80;1;0;0;0;
+Racionais MC's;Negro Drama;2002;rap-nacional;;;pt;1;3;2;confiante|dramatico;;;sintetizador;86;1;0;0;0;
+Racionais MC's;Vida Loka, Pt. 2;2002;rap-nacional;;;pt;1;3;3;confiante|dramatico;;;sintetizador;84;1;0;0;0;
+Sabotage;Um Bom Lugar;2001;rap-nacional;;;pt;1;3;3;confiante|dramatico;;;sintetizador;76;0;0;0;0;
+Emicida;AmarElo;2019;rap-nacional;;Majur, Pabllo Vittar;pt;1;3;4;confiante|dramatico;;;sintetizador;84;1;0;0;0;
+Criolo;Não Existe Amor em SP;2011;rap-nacional;;;pt;1;2;2;romantico|aconchegante;;amor;sintetizador;78;1;0;0;0;
+Marcelo D2;Qual É?;2003;rap-nacional;;;pt;1;4;4;confiante|dramatico;;;sintetizador;76;0;0;0;0;
+Gabriel o Pensador;Cachimbo da Paz;1997;rap-nacional;;;pt;1;3;4;confiante|dramatico;;;sintetizador;76;0;0;0;0;
+Djonga;Olho de Tigre;2017;rap-nacional;;;pt;1;4;2;confiante|dramatico;;;sintetizador;72;0;0;0;0;
+Matuê;Quer Voar;2020;trap-nacional;;;pt;1;3;4;confiante|sombrio;;;sintetizador;84;0;0;0;0;
+Veigh;Novo Balanço;2023;trap-nacional;;;pt;1;3;4;confiante|sombrio;;;sintetizador;84;0;0;0;0;
+L7nnon;Desenrola, Bate, Joga de Ladin;2022;funk-carioca;;Os Hawaianos;pt;1;5;5;confiante|alegre;;;;84;0;0;0;0;
+Cidinho & Doca;Rap da Felicidade;1995;funk-carioca;;;pt;1;3;5;confiante|alegre;;;;86;1;0;0;0;
+MC Marcinho;Glamurosa;2004;funk-melody;;;pt;1;3;4;confiante|alegre;;;;86;1;0;0;0;
+Claudinho & Buchecha;Só Love;1997;funk-melody;;;pt;1;4;5;confiante|alegre;;amor;;84;1;0;0;0;
+Claudinho & Buchecha;Fico Assim Sem Você;2002;funk-melody;;;pt;1;3;4;confiante|alegre;;;;86;1;0;0;0;
+Bonde do Tigrão;Cerol na Mão;2001;funk-carioca;;;pt;1;5;5;confiante|alegre;;;;72;0;0;0;0;
+MC Guimê;País do Futebol;2013;funk-ostentacao;;Emicida;pt;1;4;4;confiante|alegre;;liberdade;;76;0;0;0;0;
+MC Kevinho;Olha a Explosão;2016;funk-carioca;;;pt;1;5;5;confiante|alegre;;;;88;1;0;0;0;
+Ludmilla;Cheguei;2016;funk-carioca;;;pt;1;5;5;confiante|alegre;;;;80;0;0;0;0;
+Anitta;Show das Poderosas;2013;funk-carioca;;;pt;1;5;5;confiante|alegre;;;;92;1;0;0;0;
+Anitta;Envolver;2021;reggaeton;;;es;1;4;4;sensual|animado;;;percussao;88;1;0;0;0;
+Dennis DJ;Malandramente;2016;funk-carioca;;MC Nandinho, Nego Bam;pt;1;5;5;confiante|alegre;;;;84;0;0;0;0;
+MC Fioti;Bum Bum Tam Tam;2017;funk-carioca;;;pt;1;5;5;confiante|alegre;;;;88;1;0;0;0;
+Pedro Sampaio;Galopa;2021;funk-carioca;;;pt;1;5;5;confiante|alegre;;;;86;0;0;0;0;
+Pabllo Vittar;K.O.;2017;pop-nacional;;;pt;1;5;5;alegre|romantico;;;sintetizador;84;1;0;0;0;
+Luísa Sonza;Chico;2023;pop-nacional;;;pt;1;3;4;alegre|romantico;;;sintetizador;84;0;0;0;0;
+Gloria Groove;Bonekinha;2021;pop-nacional;;;pt;1;5;4;alegre|romantico;;;sintetizador;80;0;0;0;0;
+Jão;Idiota;2021;pop-nacional;;;pt;1;3;2;alegre|romantico;;;sintetizador;84;0;0;0;0;
+IZA;Pesadão;2017;pop-nacional;;Marcelo Falcão;pt;1;4;4;alegre|romantico;;;sintetizador;82;0;0;0;0;
+Marina Sena;Por Supuesto;2021;pop-nacional;;;pt;1;4;4;alegre|romantico;;;sintetizador;80;0;0;0;0;
+Vitor Kley;O Sol;2017;pop-nacional;;;pt;1;3;5;alegre|romantico;;;sintetizador;90;1;0;0;0;
+Latino;Festa no Apê;2004;pop-nacional;;;pt;1;5;5;alegre|romantico;;curticao;sintetizador;90;1;0;0;0;
+Rouge;Ragatanga;2002;teen-pop;;;en;1;5;5;alegre|romantico;;;sintetizador;92;1;0;0;0;
+Sandy & Junior;As Quatro Estações;1999;teen-pop;;;en;1;3;3;alegre|romantico;;;sintetizador;88;1;0;0;0;
+KLB;A Dor Desse Amor;2000;teen-pop;;;en;1;3;2;romantico|aconchegante;;amor|perda;sintetizador;72;0;0;0;0;
+Xuxa;Ilariê;1988;musica-infantil;;;pt;1;5;5;alegre|animado;;;piano;90;1;0;0;0;
+Xuxa;Parabéns da Xuxa;1989;musica-infantil;;;pt;1;4;5;alegre|animado;aniversario;;piano;76;0;0;0;0;Aniversário
+Balão Mágico;Superfantástico;1983;musica-infantil;;;pt;1;4;5;alegre|animado;;;piano;84;1;0;0;0;
+Odair José;Eu Vou Tirar Você Desse Lugar;1972;brega-romantico;;;pt;1;3;2;confiante|alegre;;;;70;0;0;0;0;
+Amado Batista;Princesa;1980;brega-romantico;;;pt;1;3;2;confiante|alegre;;;;76;1;0;0;0;
+Waldick Soriano;Eu Não Sou Cachorro Não;1972;brega-romantico;;;pt;1;3;3;confiante|alegre;;;;82;1;0;0;0;
+Wando;Fogo e Paixão;1988;brega-romantico;;;pt;1;3;4;romantico|aconchegante;;paixao|familia;;84;1;0;0;0;
+Sidney Magal;Sandra Rosa Madalena;1978;brega-romantico;;;pt;1;4;5;confiante|alegre;;;;82;1;0;0;0;
+Fábio Jr.;Alma Gêmea;1993;mpb-romantica;;;pt;1;2;3;romantico|saudade;;amor;piano;80;1;0;0;0;
+Fábio Jr.;20 e Poucos Anos;1979;mpb-romantica;;;pt;1;3;4;romantico|saudade;;amor;piano;78;0;0;0;0;
+Pablo;Porque Homem Não Chora;2012;arrocha;;;pt;1;3;2;sofrido|romantico;;;sintetizador;84;1;0;0;0;
+Tierry;Rita;2020;arrocha;;;pt;1;4;4;sofrido|romantico;;;sintetizador;86;0;0;0;0;
+Padre Marcelo Rossi;Erguei as Mãos;1998;musica-catolica;;;pt;1;4;5;sagrado|esperancoso;;fe;coral;84;1;0;0;0;
+Fernandinho;Uma Nova História;2012;louvor;;;pt;1;3;4;sagrado|esperancoso;;fe;coral;80;0;0;0;0;
+Anderson Freire;Raridade;2013;gospel-pop;;;pt;1;2;3;sagrado|alegre;;fe;coral;88;1;0;0;0;
+Thalles Roberto;Arde Outra Vez;2011;gospel-pop;;;pt;1;3;4;sagrado|alegre;;fe;coral;76;0;0;0;0;
+Gabriela Rocha;Lugar Secreto;2016;louvor;;;pt;1;2;3;sagrado|esperancoso;;fe;coral;88;1;0;0;0;
+Jararaca e Ratinho;Mamãe Eu Quero;1937;marchinha;;;pt;1;5;5;festivo|animado;carnaval;familia|curticao;metais;76;1;1;0;0;Carnaval
+Aurora Miranda;Cidade Maravilhosa;1934;marchinha;;;pt;1;4;5;festivo|animado;carnaval;curticao;metais;76;1;1;0;0;Carnaval
+Carlos Galhardo;Allah-La-Ô;1941;marchinha;;;pt;1;5;5;festivo|animado;carnaval;curticao;metais;74;0;1;0;0;Carnaval
+Moacyr Franco;Me Dá um Dinheiro Aí;1959;marchinha;;;pt;1;5;5;festivo|animado;carnaval;curticao|ostentacao;metais;72;0;1;0;0;Carnaval
+Jorge Goulart;Cabeleira do Zezé;1964;marchinha;;;pt;1;5;5;festivo|animado;carnaval;curticao;metais;74;0;1;0;0;Carnaval
+Dalva de Oliveira;Máscara Negra;1967;marchinha;;;pt;1;4;3;festivo|animado;carnaval;curticao;metais;72;0;1;0;0;Carnaval
+Estação Primeira de Mangueira;História pra Ninar Gente Grande;2019;samba-enredo;;;pt;1;5;4;festivo|animado;carnaval;curticao;percussao;62;0;1;0;0;Carnaval
 Acadêmicos do Salgueiro;Peguei um Ita no Norte (Explode Coração);1993;samba-enredo;;;pt;1;5;5;festivo|animado;carnaval;amor|fe;percussao;76;0;1;0;0;Carnaval
-Heitor Villa-Lobos;Bachianas Brasileiras nº 5: Ária (Cantilena);1938;classica;;;;0;2;3;contemplativo|epico;;;orquestra;72;0;0;0;0;ano = composição
-Carlos Gomes;O Guarani: Abertura;1870;opera;;;it;1;4;3;dramatico|epico;;;orquestra;72;0;0;0;0;ano = composição
-Michael Jackson;Billie Jean;1982;dance-pop;;;en;1;5;5;animado|festivo;;;sintetizador;72;0;0;0;0;
-Michael Jackson;Thriller;1982;dance-pop;;;en;1;5;5;animado|festivo;;;sintetizador;72;0;0;0;0;
-Michael Jackson;Beat It;1982;pop-rock;;;pt;1;4;4;confiante|empolgante;;;guitarra;72;0;0;0;0;
-Madonna;Like a Prayer;1989;dance-pop;;;en;1;5;5;animado|festivo;;;sintetizador;72;0;0;0;0;
-Madonna;Vogue;1990;dance-pop;;;en;1;5;5;animado|festivo;;;sintetizador;72;0;0;0;0;
-Whitney Houston;I Wanna Dance with Somebody (Who Loves Me);1987;dance-pop;;;en;1;5;5;animado|festivo;;amor;sintetizador;72;0;0;0;0;
-Cyndi Lauper;Girls Just Want to Have Fun;1983;synthpop;;;en;1;4;4;sonhador|animado;;;sintetizador;72;0;0;0;0;
-a-ha;Take On Me;1984;synthpop;;;en;1;4;4;sonhador|animado;;;sintetizador;72;0;0;0;0;
-Tears for Fears;Everybody Wants to Rule the World;1985;synthpop;;;en;1;4;4;sonhador|animado;;;sintetizador;72;0;0;0;0;
-Wham!;Wake Me Up Before You Go-Go;1984;dance-pop;;;en;1;5;5;animado|festivo;;;sintetizador;72;0;0;0;0;
-Rick Astley;Never Gonna Give You Up;1987;dance-pop;;;en;1;5;5;animado|festivo;;;sintetizador;72;0;0;0;0;
-Prince;Kiss;1986;funk-americano;;;en;1;4;4;sensual|animado;;;metais;72;0;0;0;0;
-Phil Collins;In the Air Tonight;1981;soft-rock;;;en;1;3;3;romantico|calmo;;;guitarra;72;0;0;0;0;
-Backstreet Boys;I Want It That Way;1999;teen-pop;;;en;1;4;5;alegre|romantico;;;sintetizador;72;0;0;0;0;
-Britney Spears;...Baby One More Time;1998;teen-pop;;;en;1;4;5;alegre|romantico;;;sintetizador;72;0;0;0;0;
-Britney Spears;Toxic;2003;dance-pop;;;en;1;5;5;animado|festivo;;;sintetizador;72;0;0;0;0;
-Spice Girls;Wannabe;1996;teen-pop;;;en;1;4;5;alegre|romantico;;;sintetizador;72;0;0;0;0;
-*NSYNC;Bye Bye Bye;2000;teen-pop;;;en;1;4;5;alegre|romantico;;;sintetizador;72;0;0;0;0;
-Shakira;Hips Don't Lie;2006;pop-latino;;Wyclef Jean;es;1;4;4;romantico|animado;;;metais;76;0;0;0;0;
-Shakira;Whenever, Wherever;2001;pop-latino;;;es;1;4;4;romantico|animado;;;metais;72;0;0;0;0;
-Beyoncé;Single Ladies (Put a Ring on It);2008;rnb;;;en;1;3;3;sensual|romantico;;amor;piano;72;0;0;0;0;
-Beyoncé;Crazy in Love;2003;rnb;;Jay-Z;en;1;3;3;sensual|romantico;;amor;piano;76;0;0;0;0;
-Rihanna;Umbrella;2007;rnb;;Jay-Z;en;1;3;3;sensual|romantico;;amor;piano;76;0;0;0;0;
-Rihanna;Diamonds;2012;electropop;;;en;1;4;4;animado|confiante;;;sintetizador;72;0;0;0;0;
-Lady Gaga;Bad Romance;2009;electropop;;;en;1;4;4;animado|confiante;;;sintetizador;72;0;0;0;0;
-Lady Gaga;Poker Face;2008;electropop;;;en;1;4;4;animado|confiante;;;sintetizador;72;0;0;0;0;
-Lady Gaga & Bradley Cooper;Shallow;2018;balada-pop;;;en;1;3;3;romantico|dramatico;;;piano;72;0;0;0;0;
-Katy Perry;Firework;2010;dance-pop;;;en;1;5;5;animado|festivo;;;sintetizador;72;0;0;0;0;
-Katy Perry;Roar;2013;pop;;;en;1;4;4;alegre|romantico;;;sintetizador;82;1;1;0;0;
-Taylor Swift;Shake It Off;2014;pop;;;en;1;4;4;alegre|romantico;;;sintetizador;82;1;1;0;0;
-Taylor Swift;Blank Space;2014;pop;;;en;1;4;4;alegre|romantico;;;sintetizador;82;1;1;0;0;
-Taylor Swift;Anti-Hero;2022;synthpop;;;en;1;4;4;sonhador|animado;;;sintetizador;72;0;0;0;0;
-Adele;Rolling in the Deep;2010;pop;;;en;1;4;4;alegre|romantico;;;sintetizador;82;1;1;0;0;
-Adele;Someone Like You;2011;balada-pop;;;en;1;3;3;romantico|dramatico;;;piano;72;0;0;0;0;
-Adele;Hello;2015;balada-pop;;;en;1;3;3;romantico|dramatico;;;piano;72;0;0;0;0;
-Ed Sheeran;Shape of You;2017;pop;;;en;1;4;4;alegre|romantico;;;sintetizador;82;1;1;0;0;
-Ed Sheeran;Perfect;2017;balada-pop;;;en;1;3;3;romantico|dramatico;;;piano;72;0;0;0;0;
-Ed Sheeran;Thinking Out Loud;2014;balada-pop;;;en;1;3;3;romantico|dramatico;;;piano;72;0;0;0;0;
-Mark Ronson;Uptown Funk;2014;funk-americano;;Bruno Mars;en;1;4;4;sensual|animado;;;metais;76;0;0;0;0;
-Bruno Mars;Just the Way You Are;2010;pop;;;en;1;4;4;alegre|romantico;;;sintetizador;82;1;1;0;0;
-Bruno Mars;Locked Out of Heaven;2012;pop;;;en;1;4;4;alegre|romantico;;;sintetizador;82;1;1;0;0;
-The Weeknd;Blinding Lights;2019;synthpop;;;en;1;4;4;sonhador|animado;;;sintetizador;72;0;0;0;0;
-The Weeknd;Save Your Tears;2020;synthpop;;;en;1;4;4;sonhador|animado;;;sintetizador;72;0;0;0;0;
-Dua Lipa;Levitating;2020;dance-pop;;;en;1;5;5;animado|festivo;;;sintetizador;72;0;0;0;0;
-Dua Lipa;Don't Start Now;2019;dance-pop;;;en;1;5;5;animado|festivo;;;sintetizador;72;0;0;0;0;
-Harry Styles;As It Was;2022;pop;;;en;1;4;4;alegre|romantico;;;sintetizador;82;1;1;0;0;
-Billie Eilish;Bad Guy;2019;electropop;;;en;1;4;4;animado|confiante;;;sintetizador;72;0;0;0;0;
-Billie Eilish;What Was I Made For?;2023;indie-pop;;;en;1;3;4;sonhador|alegre;;;sintetizador;72;0;0;0;0;
-Olivia Rodrigo;Drivers License;2021;balada-pop;;;en;1;3;3;romantico|dramatico;;;piano;72;0;0;0;0;
-Miley Cyrus;Flowers;2023;pop;;;en;1;4;4;alegre|romantico;;;sintetizador;82;1;1;0;0;
-Sia;Chandelier;2014;electropop;;;en;1;4;4;animado|confiante;;;sintetizador;72;0;0;0;0;
-Justin Bieber;Sorry;2015;dance-pop;;;en;1;5;5;animado|festivo;;;sintetizador;72;0;0;0;0;
-Luis Fonsi;Despacito;2017;reggaeton;;Daddy Yankee;es;1;5;4;sensual|animado;;;percussao;76;0;0;0;0;
-Daddy Yankee;Gasolina;2004;reggaeton;;;es;1;5;4;sensual|animado;;;percussao;72;0;0;0;0;
-Bad Bunny;Tití Me Preguntó;2022;reggaeton;;;es;1;5;4;sensual|animado;;;percussao;72;0;0;0;0;
-Ricky Martin;Livin' la Vida Loca;1999;pop-latino;;;es;1;4;4;romantico|animado;;;metais;72;0;0;0;0;
-Enrique Iglesias;Bailando;2014;pop-latino;;Descemer Bueno, Gente de Zona;es;1;4;4;romantico|animado;;;metais;76;0;0;0;0;
-Gotye;Somebody That I Used to Know;2011;indie-pop;;Kimbra;en;1;3;4;sonhador|alegre;;;sintetizador;76;0;0;0;0;
-BTS;Dynamite;2020;k-pop;;;ko;1;5;5;animado|alegre;;;sintetizador;72;0;0;0;0;
-PSY;Gangnam Style;2012;k-pop;;;ko;1;5;5;animado|alegre;;;sintetizador;72;0;0;0;0;
-BLACKPINK;How You Like That;2020;k-pop;;;ko;1;5;5;animado|alegre;;;sintetizador;72;0;0;0;0;
-Imagine Dragons;Believer;2017;pop-rock;;;pt;1;4;4;confiante|empolgante;;;guitarra;72;0;0;0;0;
-Maroon 5;Sugar;2014;pop-rock;;;pt;1;4;4;confiante|empolgante;;;guitarra;72;0;0;0;0;
-OneRepublic;Counting Stars;2013;pop-rock;;;pt;1;4;4;confiante|empolgante;;;guitarra;72;0;0;0;0;
-Pharrell Williams;Happy;2013;pop;;;en;1;4;4;alegre|romantico;;;sintetizador;82;1;1;0;0;
-Amy Winehouse;Rehab;2006;soul;;;en;1;4;4;sensual|romantico;;amor;metais;72;0;0;0;0;
-Amy Winehouse;Back to Black;2006;soul;;;en;1;4;4;sensual|romantico;;amor;metais;72;0;0;0;0;
-Lana Del Rey;Summertime Sadness;2012;indie-pop;;;en;1;3;4;sonhador|alegre;;;sintetizador;72;0;0;0;0;
-Queen;Bohemian Rhapsody;1975;rock-classico;;;en;1;4;4;confiante|nostalgico;;;guitarra;72;0;0;0;0;
-Queen;We Will Rock You;1977;rock-classico;;;en;1;4;4;confiante|nostalgico;;;guitarra;72;0;0;0;0;
-Queen;Don't Stop Me Now;1978;rock-classico;;;en;1;4;4;confiante|nostalgico;;;guitarra;72;0;0;0;0;
-Queen;Another One Bites the Dust;1980;rock-classico;;;en;1;4;4;confiante|nostalgico;;;guitarra;72;0;0;0;0;
-The Beatles;Hey Jude;1968;rock-classico;;;en;1;4;4;confiante|nostalgico;;;guitarra;72;0;0;0;0;
-The Beatles;Let It Be;1970;rock-classico;;;en;1;4;4;confiante|nostalgico;;;guitarra;72;0;0;0;0;
-The Beatles;Here Comes the Sun;1969;rock-classico;;;en;1;4;4;confiante|nostalgico;;;guitarra;72;0;0;0;0;
-The Beatles;Yesterday;1965;rock-classico;;;en;1;4;4;confiante|nostalgico;;;guitarra;72;0;0;0;0;
-The Rolling Stones;(I Can't Get No) Satisfaction;1965;rock-classico;;;en;1;4;4;confiante|nostalgico;;;guitarra;72;0;0;0;0;
-Led Zeppelin;Stairway to Heaven;1971;hard-rock;;;en;1;5;4;agressivo|empolgante;;;guitarra;72;0;0;0;0;
-Pink Floyd;Wish You Were Here;1975;rock-progressivo;;;pt;1;3;3;confiante|alegre;;;;72;0;0;0;0;
-Pink Floyd;Another Brick in the Wall, Pt. 2;1979;rock-progressivo;;;pt;1;3;3;confiante|alegre;;;;72;0;0;0;0;
-Eagles;Hotel California;1976;rock-classico;;;en;1;4;4;confiante|nostalgico;;;guitarra;72;0;0;0;0;
-AC/DC;Highway to Hell;1979;hard-rock;;;en;1;5;4;agressivo|empolgante;;;guitarra;72;0;0;0;0;
-AC/DC;Back in Black;1980;hard-rock;;;en;1;5;4;agressivo|empolgante;;;guitarra;72;0;0;0;0;
-Guns N' Roses;Sweet Child o' Mine;1987;hard-rock;;;en;1;5;4;agressivo|empolgante;;;guitarra;72;0;0;0;0;
-Guns N' Roses;November Rain;1991;hard-rock;;;en;1;5;4;agressivo|empolgante;;;guitarra;72;0;0;0;0;
-Bon Jovi;Livin' on a Prayer;1986;hard-rock;;;en;1;5;4;agressivo|empolgante;;;guitarra;72;0;0;0;0;
-Bon Jovi;It's My Life;2000;hard-rock;;;en;1;5;4;agressivo|empolgante;;;guitarra;72;0;0;0;0;
-Aerosmith;I Don't Want to Miss a Thing;1998;hard-rock;;;en;1;5;4;agressivo|empolgante;;;guitarra;72;0;0;0;0;
-Scorpions;Wind of Change;1990;hard-rock;;;en;1;5;4;agressivo|empolgante;;;guitarra;72;0;0;0;0;
-Europe;The Final Countdown;1986;hard-rock;;;en;1;5;4;agressivo|empolgante;;;guitarra;72;0;0;0;0;
-Journey;Don't Stop Believin';1981;rock-classico;;;en;1;4;4;confiante|nostalgico;;;guitarra;72;0;0;0;0;
-Survivor;Eye of the Tiger;1982;rock-classico;;;en;1;4;4;confiante|nostalgico;;;guitarra;72;0;0;0;0;
-Toto;Africa;1982;soft-rock;;;en;1;3;3;romantico|calmo;;;guitarra;72;0;0;0;0;
-Dire Straits;Sultans of Swing;1978;rock-classico;;;en;1;4;4;confiante|nostalgico;;;guitarra;72;0;0;0;0;
-The Police;Every Breath You Take;1983;new-wave;;;en;1;4;4;animado|nostalgico;;;sintetizador;72;0;0;0;0;
-U2;With or Without You;1987;rock-alternativo;;;en;1;4;3;sombrio|confiante;;;guitarra;72;0;0;0;0;
-Nirvana;Smells Like Teen Spirit;1991;grunge;;;en;1;4;2;sombrio|agressivo;;;guitarra;72;0;0;0;0;
-Nirvana;Come As You Are;1991;grunge;;;en;1;4;2;sombrio|agressivo;;;guitarra;72;0;0;0;0;
-Red Hot Chili Peppers;Californication;1999;rock-alternativo;;;en;1;4;3;sombrio|confiante;;;guitarra;72;0;0;0;0;
-Linkin Park;In the End;2000;nu-metal;;;en;1;5;3;agressivo|sombrio;;;guitarra;72;0;0;0;0;
-Linkin Park;Numb;2003;nu-metal;;;en;1;5;3;agressivo|sombrio;;;guitarra;72;0;0;0;0;
-Oasis;Wonderwall;1995;britpop;;;en;1;4;4;confiante|nostalgico;;;guitarra;72;0;0;0;0;
-Radiohead;Creep;1992;rock-alternativo;;;en;1;4;3;sombrio|confiante;;;guitarra;72;0;0;0;0;
-Coldplay;Yellow;2000;rock-alternativo;;;en;1;4;3;sombrio|confiante;;;guitarra;72;0;0;0;0;
-Coldplay;Viva la Vida;2008;pop-rock;;;pt;1;4;4;confiante|empolgante;;;guitarra;72;0;0;0;0;
-Coldplay;The Scientist;2002;rock-alternativo;;;en;1;4;3;sombrio|confiante;;;guitarra;72;0;0;0;0;
-The Killers;Mr. Brightside;2003;indie-rock;;;en;1;3;3;sonhador|melancolico;;;guitarra;72;0;0;0;0;
-Arctic Monkeys;Do I Wanna Know?;2013;indie-rock;;;en;1;3;3;sonhador|melancolico;;;guitarra;72;0;0;0;0;
-Green Day;Boulevard of Broken Dreams;2004;pop-punk;;;en;1;5;4;animado|confiante;;;guitarra;72;0;0;0;0;
-Metallica;Nothing Else Matters;1991;heavy-metal;;;en;1;5;4;agressivo|empolgante;;;guitarra;72;0;0;0;0;
-Metallica;Enter Sandman;1991;heavy-metal;;;en;1;5;4;agressivo|empolgante;;;guitarra;72;0;0;0;0;
-Iron Maiden;The Trooper;1983;heavy-metal;;;en;1;5;4;agressivo|empolgante;;;guitarra;72;0;0;0;0;
-Elvis Presley;Can't Help Falling in Love;1961;rock-and-roll;;;en;1;5;5;animado|confiante;;amor;guitarra;72;0;0;0;0;
-Elvis Presley;Jailhouse Rock;1957;rock-and-roll;;;en;1;5;5;animado|confiante;;;guitarra;72;0;0;0;0;
-Chuck Berry;Johnny B. Goode;1958;rock-and-roll;;;en;1;5;5;animado|confiante;;;guitarra;72;0;0;0;0;
-Creedence Clearwater Revival;Have You Ever Seen the Rain;1970;rock-classico;;;en;1;4;4;confiante|nostalgico;;;guitarra;72;0;0;0;0;
-John Lennon;Imagine;1971;soft-rock;;;en;1;3;3;romantico|calmo;;;guitarra;72;0;0;0;0;
-Bob Dylan;Knockin' on Heaven's Door;1973;folk-gringo;;;pt;1;3;3;confiante|alegre;;;;72;0;0;0;0;
-Simon & Garfunkel;The Sound of Silence;1965;folk-gringo;;;pt;1;3;3;confiante|alegre;;;;72;0;0;0;0;
-Bee Gees;Stayin' Alive;1977;disco;;;en;1;5;5;festivo|animado;;;sintetizador;72;0;0;0;0;
-ABBA;Dancing Queen;1976;disco;;;en;1;5;5;festivo|animado;;;sintetizador;72;0;0;0;0;
-ABBA;Mamma Mia;1975;disco;;;en;1;5;5;festivo|animado;;;sintetizador;72;0;0;0;0;
-Donna Summer;Hot Stuff;1979;disco;;;en;1;5;5;festivo|animado;;;sintetizador;72;0;0;0;0;
-Earth, Wind & Fire;September;1978;funk-americano;;;en;1;4;4;sensual|animado;;;metais;72;0;0;0;0;
+Heitor Villa-Lobos;Bachianas Brasileiras nº 5: Ária (Cantilena);1938;classica;;;;0;2;2;contemplativo|epico;;;orquestra;56;1;0;0;0;ano = composição
+Carlos Gomes;O Guarani: Abertura;1870;opera;;;it;1;4;4;dramatico|epico;;;orquestra;58;1;0;0;0;ano = composição
+Michael Jackson;Billie Jean;1982;dance-pop;;;en;1;5;4;animado|festivo;;;sintetizador;98;1;0;0;0;
+Michael Jackson;Thriller;1982;dance-pop;;;en;1;4;4;animado|festivo;;;sintetizador;96;1;0;0;0;
+Michael Jackson;Beat It;1982;pop-rock;;;pt;1;5;4;confiante|empolgante;;;guitarra;90;1;0;0;0;
+Madonna;Like a Prayer;1989;dance-pop;;;en;1;4;4;animado|festivo;;;sintetizador;86;1;0;0;0;
+Madonna;Vogue;1990;dance-pop;;;en;1;5;5;animado|festivo;;;sintetizador;80;0;0;0;0;
+Whitney Houston;I Wanna Dance with Somebody (Who Loves Me);1987;dance-pop;;;en;1;5;5;animado|festivo;;amor;sintetizador;88;1;0;0;0;
+Cyndi Lauper;Girls Just Want to Have Fun;1983;synthpop;;;en;1;5;5;sonhador|animado;;;sintetizador;88;1;0;0;0;
+a-ha;Take On Me;1984;synthpop;;;en;1;5;5;sonhador|animado;;;sintetizador;92;1;0;0;0;
+Tears for Fears;Everybody Wants to Rule the World;1985;synthpop;;;en;1;4;4;sonhador|animado;;;sintetizador;86;1;0;0;0;
+Wham!;Wake Me Up Before You Go-Go;1984;dance-pop;;;en;1;5;5;animado|festivo;;;sintetizador;86;0;0;0;0;
+Rick Astley;Never Gonna Give You Up;1987;dance-pop;;;en;1;5;5;animado|festivo;;;sintetizador;88;1;0;0;0;
+Prince;Kiss;1986;funk-americano;;;en;1;4;4;sensual|animado;;;metais;66;0;0;0;0;
+Phil Collins;In the Air Tonight;1981;soft-rock;;;en;1;3;2;romantico|calmo;;;guitarra;80;1;0;0;0;
+Backstreet Boys;I Want It That Way;1999;teen-pop;;;en;1;3;4;alegre|romantico;;;sintetizador;92;1;0;0;0;
+Britney Spears;...Baby One More Time;1998;teen-pop;;;en;1;4;4;alegre|romantico;;;sintetizador;90;1;0;0;0;
+Britney Spears;Toxic;2003;dance-pop;;;en;1;5;4;animado|festivo;;;sintetizador;88;1;0;0;0;
+Spice Girls;Wannabe;1996;teen-pop;;;en;1;5;5;alegre|romantico;;;sintetizador;90;1;0;0;0;
+*NSYNC;Bye Bye Bye;2000;teen-pop;;;en;1;5;4;alegre|romantico;;;sintetizador;80;0;0;0;0;
+Shakira;Hips Don't Lie;2006;pop-latino;;Wyclef Jean;es;1;5;5;romantico|animado;;;metais;92;1;0;0;0;
+Shakira;Whenever, Wherever;2001;pop-latino;;;es;1;5;5;romantico|animado;;;metais;88;1;0;0;0;
+Beyoncé;Single Ladies (Put a Ring on It);2008;rnb;;;en;1;5;5;sensual|romantico;;amor;piano;86;1;0;0;0;
+Beyoncé;Crazy in Love;2003;rnb;;Jay-Z;en;1;5;5;sensual|romantico;;amor;piano;84;1;0;0;0;
+Rihanna;Umbrella;2007;rnb;;Jay-Z;en;1;3;4;sensual|romantico;;amor;piano;84;1;0;0;0;
+Rihanna;Diamonds;2012;electropop;;;en;1;3;4;animado|confiante;;;sintetizador;80;0;0;0;0;
+Lady Gaga;Bad Romance;2009;electropop;;;en;1;5;4;animado|confiante;;;sintetizador;90;1;0;0;0;
+Lady Gaga;Poker Face;2008;electropop;;;en;1;5;4;animado|confiante;;;sintetizador;88;1;0;0;0;
+Lady Gaga & Bradley Cooper;Shallow;2018;balada-pop;;;en;1;3;2;romantico|dramatico;;;piano;88;1;0;0;0;
+Katy Perry;Firework;2010;dance-pop;;;en;1;4;5;animado|festivo;;;sintetizador;88;1;0;0;0;
+Katy Perry;Roar;2013;pop;;;en;1;4;5;alegre|romantico;;;sintetizador;86;0;1;0;0;
+Taylor Swift;Shake It Off;2014;pop;;;en;1;5;5;alegre|romantico;;;sintetizador;90;1;1;0;0;
+Taylor Swift;Blank Space;2014;pop;;;en;1;4;4;alegre|romantico;;;sintetizador;84;0;1;0;0;
+Taylor Swift;Anti-Hero;2022;synthpop;;;en;1;3;3;sonhador|animado;;;sintetizador;80;0;0;0;0;
+Adele;Rolling in the Deep;2010;pop;;;en;1;4;3;alegre|romantico;;;sintetizador;90;1;1;0;0;
+Adele;Someone Like You;2011;balada-pop;;;en;1;2;1;romantico|dramatico;;;piano;92;1;0;0;0;
+Adele;Hello;2015;balada-pop;;;en;1;3;2;romantico|dramatico;;;piano;90;1;0;0;0;
+Ed Sheeran;Shape of You;2017;pop;;;en;1;4;4;alegre|romantico;;;sintetizador;94;1;1;0;0;
+Ed Sheeran;Perfect;2017;balada-pop;;;en;1;2;4;romantico|dramatico;;;piano;92;1;0;0;0;
+Ed Sheeran;Thinking Out Loud;2014;balada-pop;;;en;1;2;4;romantico|dramatico;;;piano;88;1;0;0;0;
+Mark Ronson;Uptown Funk;2014;funk-americano;;Bruno Mars;en;1;5;5;sensual|animado;;;metais;90;1;0;0;0;
+Bruno Mars;Just the Way You Are;2010;pop;;;en;1;3;5;alegre|romantico;;;sintetizador;90;1;1;0;0;
+Bruno Mars;Locked Out of Heaven;2012;pop;;;en;1;4;5;alegre|romantico;;;sintetizador;80;0;1;0;0;
+The Weeknd;Blinding Lights;2019;synthpop;;;en;1;5;4;sonhador|animado;;;sintetizador;94;1;0;0;0;
+The Weeknd;Save Your Tears;2020;synthpop;;;en;1;4;3;sonhador|animado;;;sintetizador;86;0;0;0;0;
+Dua Lipa;Levitating;2020;dance-pop;;;en;1;5;5;animado|festivo;;;sintetizador;90;1;0;0;0;
+Dua Lipa;Don't Start Now;2019;dance-pop;;;en;1;5;5;animado|festivo;;;sintetizador;86;0;0;0;0;
+Harry Styles;As It Was;2022;pop;;;en;1;4;4;alegre|romantico;;;sintetizador;90;1;1;0;0;
+Billie Eilish;Bad Guy;2019;electropop;;;en;1;4;3;animado|confiante;;;sintetizador;86;1;0;0;0;
+Billie Eilish;What Was I Made For?;2023;indie-pop;;;en;1;1;2;sonhador|alegre;;;sintetizador;72;0;0;0;0;
+Olivia Rodrigo;Drivers License;2021;balada-pop;;;en;1;2;1;romantico|dramatico;;;piano;80;0;0;0;0;
+Miley Cyrus;Flowers;2023;pop;;;en;1;4;4;alegre|romantico;;;sintetizador;92;1;1;0;0;
+Sia;Chandelier;2014;electropop;;;en;1;4;3;animado|confiante;;;sintetizador;90;1;0;0;0;
+Justin Bieber;Sorry;2015;dance-pop;;;en;1;4;4;animado|festivo;;;sintetizador;86;0;0;0;0;
+Luis Fonsi;Despacito;2017;reggaeton;;Daddy Yankee;es;1;4;5;sensual|animado;;;percussao;96;1;0;0;0;
+Daddy Yankee;Gasolina;2004;reggaeton;;;es;1;5;5;sensual|animado;;;percussao;90;1;0;0;0;
+Bad Bunny;Tití Me Preguntó;2022;reggaeton;;;es;1;4;5;sensual|animado;;;percussao;80;0;0;0;0;
+Ricky Martin;Livin' la Vida Loca;1999;pop-latino;;;es;1;5;5;romantico|animado;;;metais;90;1;0;0;0;
+Enrique Iglesias;Bailando;2014;pop-latino;;Descemer Bueno, Gente de Zona;es;1;4;5;romantico|animado;;;metais;88;1;0;0;0;
+Gotye;Somebody That I Used to Know;2011;indie-pop;;Kimbra;en;1;3;2;sonhador|alegre;;;sintetizador;84;1;0;0;0;
+BTS;Dynamite;2020;k-pop;;;ko;1;5;5;animado|alegre;;;sintetizador;80;0;0;0;0;
+PSY;Gangnam Style;2012;k-pop;;;ko;1;5;5;animado|alegre;;;sintetizador;92;1;0;0;0;
+BLACKPINK;How You Like That;2020;k-pop;;;ko;1;5;4;animado|alegre;;;sintetizador;66;0;0;0;0;
+Imagine Dragons;Believer;2017;pop-rock;;;pt;1;5;4;confiante|empolgante;;;guitarra;86;1;0;0;0;
+Maroon 5;Sugar;2014;pop-rock;;;pt;1;4;5;confiante|empolgante;;;guitarra;88;1;0;0;0;
+OneRepublic;Counting Stars;2013;pop-rock;;;pt;1;4;4;confiante|empolgante;;;guitarra;86;1;0;0;0;
+Pharrell Williams;Happy;2013;pop;;;en;1;4;5;alegre|romantico;;;sintetizador;92;1;1;0;0;
+Amy Winehouse;Rehab;2006;soul;;;en;1;4;4;sensual|romantico;;amor;metais;80;1;0;0;0;
+Amy Winehouse;Back to Black;2006;soul;;;en;1;3;1;sensual|romantico;;amor;metais;82;1;0;0;0;
+Lana Del Rey;Summertime Sadness;2012;indie-pop;;;en;1;3;2;sonhador|alegre;;;sintetizador;78;0;0;0;0;
+Queen;Bohemian Rhapsody;1975;rock-classico;;;en;1;4;3;confiante|nostalgico;;;guitarra;96;1;0;0;0;
+Queen;We Will Rock You;1977;rock-classico;;;en;1;5;4;confiante|nostalgico;;;guitarra;92;1;0;0;0;
+Queen;Don't Stop Me Now;1978;rock-classico;;;en;1;5;5;confiante|nostalgico;;;guitarra;90;1;0;0;0;
+Queen;Another One Bites the Dust;1980;rock-classico;;;en;1;4;4;confiante|nostalgico;;;guitarra;88;1;0;0;0;
+The Beatles;Hey Jude;1968;rock-classico;;;en;1;3;4;confiante|nostalgico;;;guitarra;90;1;0;0;0;
+The Beatles;Let It Be;1970;rock-classico;;;en;1;2;3;confiante|nostalgico;;;guitarra;92;1;0;0;0;
+The Beatles;Here Comes the Sun;1969;rock-classico;;;en;1;3;5;confiante|nostalgico;;;guitarra;86;1;0;0;0;
+The Beatles;Yesterday;1965;rock-classico;;;en;1;1;2;confiante|nostalgico;;;guitarra;90;1;0;0;0;
+The Rolling Stones;(I Can't Get No) Satisfaction;1965;rock-classico;;;en;1;5;4;confiante|nostalgico;;;guitarra;86;1;0;0;0;
+Led Zeppelin;Stairway to Heaven;1971;hard-rock;;;en;1;3;3;agressivo|empolgante;;;guitarra;88;1;0;0;0;
+Pink Floyd;Wish You Were Here;1975;rock-progressivo;;;pt;1;2;2;confiante|alegre;;;;90;1;0;0;0;
+Pink Floyd;Another Brick in the Wall, Pt. 2;1979;rock-progressivo;;;pt;1;4;3;confiante|alegre;;;;90;1;0;0;0;
+Eagles;Hotel California;1976;rock-classico;;;en;1;3;3;confiante|nostalgico;;;guitarra;94;1;0;0;0;
+AC/DC;Highway to Hell;1979;hard-rock;;;en;1;5;4;agressivo|empolgante;;;guitarra;92;1;0;0;0;
+AC/DC;Back in Black;1980;hard-rock;;;en;1;5;4;agressivo|empolgante;;;guitarra;90;1;0;0;0;
+Guns N' Roses;Sweet Child o' Mine;1987;hard-rock;;;en;1;4;5;agressivo|empolgante;;;guitarra;94;1;0;0;0;
+Guns N' Roses;November Rain;1991;hard-rock;;;en;1;3;2;agressivo|empolgante;;;guitarra;90;1;0;0;0;
+Bon Jovi;Livin' on a Prayer;1986;hard-rock;;;en;1;5;5;agressivo|empolgante;;;guitarra;94;1;0;0;0;
+Bon Jovi;It's My Life;2000;hard-rock;;;en;1;5;5;agressivo|empolgante;;;guitarra;94;1;0;0;0;
+Aerosmith;I Don't Want to Miss a Thing;1998;hard-rock;;;en;1;3;3;agressivo|empolgante;;;guitarra;92;1;0;0;0;
+Scorpions;Wind of Change;1990;hard-rock;;;en;1;3;4;agressivo|empolgante;;;guitarra;92;1;0;0;0;
+Europe;The Final Countdown;1986;hard-rock;;;en;1;5;5;agressivo|empolgante;;;guitarra;86;1;0;0;0;
+Journey;Don't Stop Believin';1981;rock-classico;;;en;1;4;5;confiante|nostalgico;;;guitarra;90;1;0;0;0;
+Survivor;Eye of the Tiger;1982;rock-classico;;;en;1;5;4;confiante|nostalgico;;;guitarra;94;1;0;0;0;
+Toto;Africa;1982;soft-rock;;;en;1;3;4;romantico|calmo;;;guitarra;92;1;0;0;0;
+Dire Straits;Sultans of Swing;1978;rock-classico;;;en;1;4;4;confiante|nostalgico;;;guitarra;86;1;0;0;0;
+The Police;Every Breath You Take;1983;new-wave;;;en;1;3;3;animado|nostalgico;;;sintetizador;90;1;0;0;0;
+U2;With or Without You;1987;rock-alternativo;;;en;1;3;3;sombrio|confiante;;;guitarra;88;1;0;0;0;
+Nirvana;Smells Like Teen Spirit;1991;grunge;;;en;1;5;3;sombrio|agressivo;;;guitarra;94;1;0;0;0;
+Nirvana;Come As You Are;1991;grunge;;;en;1;4;3;sombrio|agressivo;;;guitarra;86;1;0;0;0;
+Red Hot Chili Peppers;Californication;1999;rock-alternativo;;;en;1;3;2;sombrio|confiante;;;guitarra;88;1;0;0;0;
+Linkin Park;In the End;2000;nu-metal;;;en;1;5;2;agressivo|sombrio;;;guitarra;94;1;0;0;0;
+Linkin Park;Numb;2003;nu-metal;;;en;1;4;2;agressivo|sombrio;;;guitarra;92;1;0;0;0;
+Oasis;Wonderwall;1995;britpop;;;en;1;3;3;confiante|nostalgico;;;guitarra;94;1;0;0;0;
+Radiohead;Creep;1992;rock-alternativo;;;en;1;3;1;sombrio|confiante;;;guitarra;92;1;0;0;0;
+Coldplay;Yellow;2000;rock-alternativo;;;en;1;3;4;sombrio|confiante;;;guitarra;84;1;0;0;0;
+Coldplay;Viva la Vida;2008;pop-rock;;;pt;1;4;5;confiante|empolgante;;;guitarra;92;1;0;0;0;
+Coldplay;The Scientist;2002;rock-alternativo;;;en;1;2;1;sombrio|confiante;;;guitarra;90;1;0;0;0;
+The Killers;Mr. Brightside;2003;indie-rock;;;en;1;5;4;sonhador|melancolico;;;guitarra;86;1;0;0;0;
+Arctic Monkeys;Do I Wanna Know?;2013;indie-rock;;;en;1;3;3;sonhador|melancolico;;;guitarra;84;0;0;0;0;
+Green Day;Boulevard of Broken Dreams;2004;pop-punk;;;en;1;3;2;animado|confiante;;;guitarra;90;1;0;0;0;
+Metallica;Nothing Else Matters;1991;heavy-metal;;;en;1;2;2;agressivo|empolgante;;;guitarra;92;1;0;0;0;
+Metallica;Enter Sandman;1991;heavy-metal;;;en;1;5;3;agressivo|empolgante;;;guitarra;90;1;0;0;0;
+Iron Maiden;The Trooper;1983;heavy-metal;;;en;1;5;4;agressivo|empolgante;;;guitarra;76;0;0;0;0;
+Elvis Presley;Can't Help Falling in Love;1961;rock-and-roll;;;en;1;2;4;animado|confiante;;amor;guitarra;94;1;0;0;0;
+Elvis Presley;Jailhouse Rock;1957;rock-and-roll;;;en;1;5;5;animado|confiante;;;guitarra;84;1;0;0;0;
+Chuck Berry;Johnny B. Goode;1958;rock-and-roll;;;en;1;5;5;animado|confiante;;;guitarra;84;1;0;0;0;
+Creedence Clearwater Revival;Have You Ever Seen the Rain;1970;rock-classico;;;en;1;3;4;confiante|nostalgico;;;guitarra;88;1;0;0;0;
+John Lennon;Imagine;1971;soft-rock;;;en;1;2;3;romantico|calmo;;;guitarra;94;1;0;0;0;
+Bob Dylan;Knockin' on Heaven's Door;1973;folk-gringo;;;pt;1;2;3;confiante|alegre;;;;82;1;0;0;0;
+Simon & Garfunkel;The Sound of Silence;1965;folk-gringo;;;pt;1;2;1;confiante|alegre;;;;88;1;0;0;0;
+Bee Gees;Stayin' Alive;1977;disco;;;en;1;4;4;festivo|animado;;;sintetizador;90;1;0;0;0;
+ABBA;Dancing Queen;1976;disco;;;en;1;5;5;festivo|animado;;;sintetizador;96;1;0;0;0;
+ABBA;Mamma Mia;1975;disco;;;en;1;5;5;festivo|animado;;;sintetizador;88;1;0;0;0;
+Donna Summer;Hot Stuff;1979;disco;;;en;1;5;4;festivo|animado;;;sintetizador;76;0;0;0;0;
+Earth, Wind & Fire;September;1978;funk-americano;;;en;1;4;5;sensual|animado;;;metais;90;1;0;0;0;
 Chic;Le Freak;1978;disco;;;en;1;5;5;festivo|animado;;;sintetizador;72;0;0;0;0;
-Village People;Y.M.C.A.;1978;disco;;;en;1;5;5;festivo|animado;;;sintetizador;72;0;0;0;0;
-Kool & the Gang;Celebration;1980;funk-americano;;;en;1;4;4;sensual|animado;;;metais;72;0;0;0;0;
-Boney M.;Rasputin;1978;disco;;;en;1;5;5;festivo|animado;;;sintetizador;72;0;0;0;0;
-James Brown;I Got You (I Feel Good);1965;funk-americano;;;en;1;4;4;sensual|animado;;;metais;72;0;0;0;0;
-Stevie Wonder;Superstition;1972;funk-americano;;;en;1;4;4;sensual|animado;;;metais;72;0;0;0;0;
-Stevie Wonder;Isn't She Lovely;1976;soul;;;en;1;4;4;sensual|romantico;;amor;metais;72;0;0;0;0;
-Stevie Wonder;Happy Birthday;1980;soul;;;en;1;4;4;sensual|romantico;aniversario;amor;metais;76;0;0;0;0;Aniversário
-Aretha Franklin;Respect;1967;soul;;;en;1;4;4;sensual|romantico;;amor;metais;72;0;0;0;0;
-Marvin Gaye & Tammi Terrell;Ain't No Mountain High Enough;1967;motown;;;en;1;4;4;alegre|romantico;;;metais;72;0;0;0;0;
-The Jackson 5;I Want You Back;1969;motown;;;en;1;4;4;alegre|romantico;;;metais;72;0;0;0;0;
-Ben E. King;Stand by Me;1961;soul;;;en;1;4;4;sensual|romantico;;amor;metais;72;0;0;0;0;
-Otis Redding;(Sittin' On) The Dock of the Bay;1968;soul;;;en;1;4;4;sensual|romantico;;amor;metais;72;0;0;0;0;
-Ray Charles;Hit the Road Jack;1961;rnb;;;en;1;3;3;sensual|romantico;;amor;piano;72;0;0;0;0;
-Lionel Richie;Hello;1984;soul;;;en;1;4;4;sensual|romantico;;amor;metais;72;0;0;0;0;
-Lionel Richie;All Night Long (All Night);1983;funk-americano;;;en;1;4;4;sensual|animado;;;metais;72;0;0;0;0;
-Barry White;You're the First, the Last, My Everything;1974;soul;;;en;1;4;4;sensual|romantico;;amor;metais;72;0;0;0;0;
-Bob Marley & The Wailers;Is This Love;1978;reggae-roots;;;en;1;3;4;calmo|esperancoso;;amor;guitarra;72;0;0;0;0;
-Bob Marley & The Wailers;Three Little Birds;1977;reggae-roots;;;en;1;3;4;calmo|esperancoso;;;guitarra;72;0;0;0;0;
-Bob Marley & The Wailers;No Woman, No Cry;1975;reggae-roots;;;en;1;3;4;calmo|esperancoso;;;guitarra;72;0;0;0;1;ao vivo
-UB40;Red Red Wine;1983;reggae;;;en;1;3;4;calmo|esperancoso;;;guitarra;72;0;0;0;0;
-Frank Sinatra;Fly Me to the Moon;1964;swing;;;en;1;4;4;animado|alegre;;;metais;72;0;0;0;0;
-Frank Sinatra;My Way;1969;swing;;;en;1;4;4;animado|alegre;;;metais;72;0;0;0;0;
-Louis Armstrong;What a Wonderful World;1967;jazz;;;en;1;3;3;calmo|contemplativo;;;metais;72;0;0;0;0;
-Etta James;At Last;1960;soul;;;en;1;4;4;sensual|romantico;;amor;metais;72;0;0;0;0;
-Nina Simone;Feeling Good;1965;jazz;;;en;1;3;3;calmo|contemplativo;;;metais;72;0;0;0;0;
-Norah Jones;Don't Know Why;2002;jazz;;;en;1;3;3;calmo|contemplativo;;;metais;72;0;0;0;0;
-Whitney Houston;I Will Always Love You;1992;balada-pop;;;en;1;3;3;romantico|dramatico;;amor;piano;72;0;0;0;0;
-Celine Dion;My Heart Will Go On;1997;balada-pop;;;en;1;3;3;romantico|dramatico;;;piano;72;0;0;0;0;
-Bryan Adams;(Everything I Do) I Do It for You;1991;balada-pop;;;en;1;3;3;romantico|dramatico;;;piano;72;0;0;0;0;
-Elton John;Your Song;1970;soft-rock;;;en;1;3;3;romantico|calmo;;;guitarra;72;0;0;0;0;
-Elton John;I'm Still Standing;1983;pop-rock;;;pt;1;4;4;confiante|empolgante;;;guitarra;72;0;0;0;0;
-George Michael;Careless Whisper;1984;balada-pop;;;en;1;3;3;romantico|dramatico;;;piano;72;0;0;0;0;
-Roxette;It Must Have Been Love;1990;balada-pop;;;en;1;3;3;romantico|dramatico;;amor;piano;72;0;0;0;0;
-Richard Marx;Right Here Waiting;1989;balada-pop;;;en;1;3;3;romantico|dramatico;;;piano;72;0;0;0;0;
-Bonnie Tyler;Total Eclipse of the Heart;1983;balada-pop;;;en;1;3;3;romantico|dramatico;;;piano;72;0;0;0;0;
-Cyndi Lauper;Time After Time;1984;balada-pop;;;en;1;3;3;romantico|dramatico;;;piano;72;0;0;0;0;
-Mariah Carey;Hero;1993;balada-pop;;;en;1;3;3;romantico|dramatico;;;piano;72;0;0;0;0;
-Mariah Carey;All I Want for Christmas Is You;1994;pop;;;en;1;4;5;festivo|alegre;natal;;sintetizador;86;1;1;0;0;Natal
-Wham!;Last Christmas;1984;synthpop;;;en;1;4;5;festivo|alegre;natal;;sintetizador;76;0;0;0;0;Natal
-Bobby Helms;Jingle Bell Rock;1957;rock-and-roll;;;en;1;5;5;festivo|alegre;natal;;guitarra;76;0;0;0;0;Natal
-José Feliciano;Feliz Navidad;1970;pop-latino;;;es;1;4;5;festivo|alegre;natal;;metais;76;0;0;0;0;Natal
-Brenda Lee;Rockin' Around the Christmas Tree;1958;rock-and-roll;;;en;1;5;5;festivo|alegre;natal;;guitarra;76;0;0;0;0;Natal
-Michael Bublé;It's Beginning to Look a Lot Like Christmas;2011;swing;;;en;1;4;5;festivo|alegre;natal;;metais;76;0;0;0;0;Natal
-Eric Clapton;Tears in Heaven;1992;soft-rock;;;en;1;3;3;romantico|calmo;;;guitarra;72;0;0;0;0;
-Jeff Buckley;Hallelujah;1994;folk-gringo;;;pt;1;3;3;confiante|alegre;;;;72;0;0;0;0;
-John Legend;All of Me;2013;balada-pop;;;en;1;3;3;romantico|dramatico;;;piano;72;0;0;0;0;
-James Blunt;You're Beautiful;2004;balada-pop;;;en;1;3;3;romantico|dramatico;;;piano;72;0;0;0;0;
-Lewis Capaldi;Someone You Loved;2018;balada-pop;;;en;1;3;3;romantico|dramatico;;amor;piano;72;0;0;0;0;
-Christina Perri;A Thousand Years;2011;balada-pop;;;en;1;3;3;romantico|dramatico;;;piano;72;0;0;0;0;
-Eminem;Lose Yourself;2002;rap-gringo;;;en;1;4;3;confiante|agressivo;;;sintetizador;72;0;0;0;0;
-Eminem;Without Me;2002;rap-gringo;;;en;1;4;3;confiante|agressivo;;;sintetizador;72;0;0;0;0;
-2Pac;California Love;1995;rap-gringo;;Dr. Dre;en;1;4;3;confiante|agressivo;;amor;sintetizador;76;0;0;0;0;
-The Notorious B.I.G.;Juicy;1994;boom-bap;;;en;1;3;3;confiante|nostalgico;;;sintetizador;72;0;0;0;0;
-Dr. Dre;Still D.R.E.;1999;rap-gringo;;Snoop Dogg;en;1;4;3;confiante|agressivo;;;sintetizador;76;0;0;0;0;
-Coolio;Gangsta's Paradise;1995;rap-gringo;;L.V.;en;1;4;3;confiante|agressivo;;;sintetizador;76;0;0;0;0;
-OutKast;Hey Ya!;2003;rap-gringo;;;en;1;4;3;confiante|agressivo;;;sintetizador;72;0;0;0;0;
-50 Cent;In da Club;2003;rap-gringo;;;en;1;4;3;confiante|agressivo;;;sintetizador;72;0;0;0;0;
-Kanye West;Stronger;2007;rap-gringo;;;en;1;4;3;confiante|agressivo;;;sintetizador;72;0;0;0;0;
-Jay-Z;Empire State of Mind;2009;rap-gringo;;Alicia Keys;en;1;4;3;confiante|agressivo;;;sintetizador;76;0;0;0;0;
-Drake;God's Plan;2018;rap-gringo;;;en;1;4;3;confiante|agressivo;;;sintetizador;72;0;0;0;0;
-Kendrick Lamar;HUMBLE.;2017;rap-gringo;;;en;1;4;3;confiante|agressivo;;;sintetizador;72;0;0;0;0;
-Post Malone;Sunflower;2018;rap-gringo;;Swae Lee;en;1;4;3;confiante|agressivo;;;sintetizador;76;0;0;0;0;
-Travis Scott;SICKO MODE;2018;trap;;;en;1;4;3;sombrio|confiante;;;sintetizador;72;0;0;0;0;
-The Black Eyed Peas;I Gotta Feeling;2009;dance-pop;;;en;1;5;5;animado|festivo;;;sintetizador;72;0;0;0;0;
-Daft Punk;One More Time;2000;house;;;;0;5;5;animado|festivo;;;sintetizador;72;0;0;0;0;
-Daft Punk;Get Lucky;2013;disco;;Pharrell Williams, Nile Rodgers;en;1;5;5;festivo|animado;;;sintetizador;76;0;0;0;0;
-Avicii;Wake Me Up;2013;edm;;;;0;5;5;animado|empolgante;;;sintetizador;72;0;0;0;0;
-Avicii;Levels;2011;edm;;;;0;5;5;animado|empolgante;;;sintetizador;72;0;0;0;0;
-David Guetta;Titanium;2011;edm;;Sia;;0;5;5;animado|empolgante;;;sintetizador;76;0;0;0;0;
-Calvin Harris;Summer;2014;edm;;;;0;5;5;animado|empolgante;;;sintetizador;72;0;0;0;0;
-Calvin Harris;This Is What You Came For;2016;edm;;Rihanna;;0;5;5;animado|empolgante;;;sintetizador;76;0;0;0;0;
-Swedish House Mafia;Don't You Worry Child;2012;edm;;John Martin;;0;5;5;animado|empolgante;;;sintetizador;76;0;0;0;0;
-Alok;Hear Me Now;2016;brazilian-bass;;Bruno Martini, Zeeba;;0;5;5;animado|sensual;;;sintetizador;76;0;0;0;0;
-Eiffel 65;Blue (Da Ba Dee);1998;eurodance;;;;0;5;5;animado|festivo;;;sintetizador;72;0;0;0;0;
-Haddaway;What Is Love;1993;eurodance;;;;0;5;5;animado|festivo;;amor;sintetizador;72;0;0;0;0;
-Corona;The Rhythm of the Night;1993;eurodance;;;;0;5;5;animado|festivo;;;sintetizador;72;0;0;0;0;
-Ace of Base;All That She Wants;1992;eurodance;;;;0;5;5;animado|festivo;;;sintetizador;72;0;0;0;0;
-La Bouche;Be My Lover;1995;eurodance;;;;0;5;5;animado|festivo;;amor;sintetizador;72;0;0;0;0;
-2 Unlimited;No Limit;1993;eurodance;;;;0;5;5;animado|festivo;;;sintetizador;72;0;0;0;0;
-Gala;Freed from Desire;1996;eurodance;;;;0;5;5;animado|festivo;;;sintetizador;72;0;0;0;0;
-Darude;Sandstorm;1999;trance;;;;0;5;4;sonhador|empolgante;;;sintetizador;72;0;0;0;0;
-Snap!;Rhythm Is a Dancer;1992;eurodance;;;;0;5;5;animado|festivo;;;sintetizador;72;0;0;0;0;
-Modjo;Lady (Hear Me Tonight);2000;house;;;;0;5;5;animado|festivo;;;sintetizador;72;0;0;0;0;
-Stardust;Music Sounds Better with You;1998;house;;;;0;5;5;animado|festivo;;;sintetizador;72;0;0;0;0;
-John Williams;Star Wars (Main Title);1977;trilha-de-filme;;;;0;3;3;epico|dramatico;;;orquestra;82;1;1;0;0;
-John Williams;The Imperial March;1980;trilha-de-filme;;;;0;3;3;epico|dramatico;;;orquestra;82;1;1;0;0;
-John Williams;Hedwig's Theme;2001;trilha-de-filme;;;;0;3;3;epico|dramatico;;;orquestra;82;1;1;0;0;
-John Williams;Theme from Jurassic Park;1993;trilha-de-filme;;;;0;3;3;epico|dramatico;;;orquestra;82;1;1;0;0;
-Hans Zimmer;Time;2010;trilha-de-filme;;;;0;3;3;epico|dramatico;;;orquestra;82;1;1;0;0;Inception
-Klaus Badelt;He's a Pirate;2003;trilha-de-filme;;;;0;3;3;epico|dramatico;;;orquestra;82;1;1;0;0;Piratas do Caribe
-Howard Shore;Concerning Hobbits;2001;trilha-de-filme;;;;0;3;3;epico|dramatico;;;orquestra;82;1;1;0;0;O Senhor dos Anéis
-Ennio Morricone;The Good, the Bad and the Ugly;1966;trilha-de-filme;;;;0;3;3;epico|dramatico;;;orquestra;82;1;1;0;0;
-Vangelis;Chariots of Fire;1981;trilha-de-filme;;;;0;3;3;epico|dramatico;;;orquestra;82;1;1;0;0;
-Hans Zimmer;Now We Are Free;2000;trilha-de-filme;;Lisa Gerrard;;0;3;3;epico|dramatico;;perda;orquestra;86;1;1;0;0;Gladiador
-Hans Zimmer;Cornfield Chase;2014;trilha-de-filme;;;;0;3;3;epico|dramatico;;;orquestra;82;1;1;0;0;Interestelar
-Nino Rota;Speak Softly Love (Love Theme from The Godfather);1972;trilha-de-filme;;;;0;3;3;epico|dramatico;;amor;orquestra;82;1;1;0;0;
-Yann Tiersen;Comptine d'un autre été, l'après-midi;2001;trilha-de-filme;;;;0;3;3;epico|dramatico;;;orquestra;82;1;1;0;0;Amélie Poulain
-Idina Menzel;Let It Go;2013;musical;;;en;1;4;4;dramatico|alegre;;;orquestra;72;0;0;0;0;Frozen
-Carmen Twillie & Lebo M;Circle of Life;1994;musical;;;en;1;4;4;dramatico|alegre;;;orquestra;72;0;0;0;0;O Rei Leão
-Bill Medley & Jennifer Warnes;(I've Had) The Time of My Life;1987;balada-pop;;;en;1;3;3;romantico|dramatico;;;piano;72;0;0;0;0;Dirty Dancing
-Kenny Loggins;Footloose;1984;rock-classico;;;en;1;4;4;confiante|nostalgico;;;guitarra;72;0;0;0;0;
-Ray Parker Jr.;Ghostbusters;1984;funk-americano;;;en;1;4;4;sensual|animado;;;metais;72;0;0;0;0;
-Ludwig van Beethoven;Für Elise;1810;classicismo;;;;0;2;3;contemplativo|dramatico;;;orquestra;72;0;0;0;0;ano = composição
-Ludwig van Beethoven;Sinfonia nº 5: I. Allegro con brio;1808;classicismo;;;;0;2;3;contemplativo|dramatico;;;orquestra;72;0;0;0;0;ano = composição
-Ludwig van Beethoven;Sonata ao Luar: I. Adagio sostenuto;1801;classicismo;;;;0;2;3;contemplativo|dramatico;;;orquestra;72;0;0;0;0;ano = composição
-Wolfgang Amadeus Mozart;Eine kleine Nachtmusik: I. Allegro;1787;classicismo;;;;0;2;3;contemplativo|dramatico;;;orquestra;72;0;0;0;0;ano = composição
-Wolfgang Amadeus Mozart;Requiem: Lacrimosa;1791;musica-sacra;;;la;1;2;3;sagrado|contemplativo;;fe;coral;72;0;0;0;0;ano = composição
-Wolfgang Amadeus Mozart;Rondo alla Turca;1783;classicismo;;;;0;2;3;contemplativo|dramatico;;;orquestra;72;0;0;0;0;ano = composição
-Johann Sebastian Bach;Ária na Corda Sol;1730;barroco;;;;0;3;3;dramatico|epico;;;orquestra;72;0;0;0;0;ano = composição
-Johann Sebastian Bach;Tocata e Fuga em Ré Menor;1704;barroco;;;;0;3;3;dramatico|epico;;;orquestra;72;0;0;0;0;ano = composição
-Antonio Vivaldi;As Quatro Estações: Primavera;1725;barroco;;;;0;3;3;dramatico|epico;;;orquestra;72;0;0;0;0;ano = composição
-Antonio Vivaldi;As Quatro Estações: Inverno;1725;barroco;;;;0;3;3;dramatico|epico;;;orquestra;72;0;0;0;0;ano = composição
-Johann Pachelbel;Cânone em Ré;1700;barroco;;;;0;3;3;dramatico|epico;;;orquestra;72;0;0;0;0;ano = composição (aprox.)
-Piotr Ilitch Tchaikovsky;Dança da Fada Açucarada;1892;romantismo;;;it;1;3;5;festivo|alegre;natal;danca;orquestra;72;0;0;0;0;Natal (ano = composição)
-Piotr Ilitch Tchaikovsky;O Lago dos Cisnes: Cena;1876;romantismo;;;it;1;3;3;dramatico|romantico;;;orquestra;72;0;0;0;0;ano = composição
-Claude Debussy;Clair de Lune;1905;romantismo;;;it;1;3;3;dramatico|romantico;;;orquestra;72;0;0;0;0;ano = publicação
-Frédéric Chopin;Noturno Op. 9 nº 2;1832;romantismo;;;it;1;3;3;dramatico|romantico;;;orquestra;72;0;0;0;0;ano = composição
-Edvard Grieg;Na Gruta do Rei da Montanha;1876;romantismo;;;it;1;3;3;dramatico|romantico;;;orquestra;72;0;0;0;0;ano = composição
-Carl Orff;O Fortuna (Carmina Burana);1937;classica-contemporanea;;;;0;2;3;contemplativo|sonhador;;;orquestra;72;0;0;0;0;ano = composição
-Richard Wagner;A Cavalgada das Valquírias;1870;opera;;;it;1;4;3;dramatico|epico;;;orquestra;72;0;0;0;0;ano = estreia
-Giacomo Puccini;Nessun Dorma;1926;opera;;;it;1;4;3;dramatico|epico;;perda;orquestra;72;0;0;0;0;ano = estreia
-Georges Bizet;Habanera (Carmen);1875;opera;;;it;1;4;3;dramatico|epico;;;orquestra;72;0;0;0;0;ano = estreia
-Johann Strauss II;O Danúbio Azul;1866;romantismo;;;it;1;3;3;dramatico|romantico;;;orquestra;72;0;0;0;0;ano = composição
-Erik Satie;Gymnopédie nº 1;1888;romantismo;;;it;1;3;3;dramatico|romantico;;;orquestra;72;0;0;0;0;ano = composição
-Georg Friedrich Händel;Aleluia (O Messias);1741;musica-sacra;;;la;1;2;3;sagrado|contemplativo;;fe;coral;72;0;0;0;0;ano = composição
+Village People;Y.M.C.A.;1978;disco;;;en;1;5;5;festivo|animado;;;sintetizador;90;1;0;0;0;
+Kool & the Gang;Celebration;1980;funk-americano;;;en;1;4;5;sensual|animado;;;metais;80;1;0;0;0;
+Boney M.;Rasputin;1978;disco;;;en;1;5;5;festivo|animado;;;sintetizador;76;0;0;0;0;
+James Brown;I Got You (I Feel Good);1965;funk-americano;;;en;1;5;5;sensual|animado;;;metais;84;1;0;0;0;
+Stevie Wonder;Superstition;1972;funk-americano;;;en;1;4;4;sensual|animado;;;metais;80;1;0;0;0;
+Stevie Wonder;Isn't She Lovely;1976;soul;;;en;1;3;5;sensual|romantico;;amor;metais;72;0;0;0;0;
+Stevie Wonder;Happy Birthday;1980;soul;;;en;1;4;5;sensual|romantico;aniversario;amor;metais;80;0;0;0;0;Aniversário
+Aretha Franklin;Respect;1967;soul;;;en;1;4;4;sensual|romantico;;amor;metais;80;1;0;0;0;
+Marvin Gaye & Tammi Terrell;Ain't No Mountain High Enough;1967;motown;;;en;1;4;5;alegre|romantico;;;metais;76;1;0;0;0;
+The Jackson 5;I Want You Back;1969;motown;;;en;1;4;5;alegre|romantico;;;metais;72;1;0;0;0;
+Ben E. King;Stand by Me;1961;soul;;;en;1;3;4;sensual|romantico;;amor;metais;86;1;0;0;0;
+Otis Redding;(Sittin' On) The Dock of the Bay;1968;soul;;;en;1;2;3;sensual|romantico;;amor;metais;76;1;0;0;0;
+Ray Charles;Hit the Road Jack;1961;rnb;;;en;1;4;4;sensual|romantico;;amor;piano;78;1;0;0;0;
+Lionel Richie;Hello;1984;soul;;;en;1;2;2;sensual|romantico;;amor;metais;76;1;0;0;0;
+Lionel Richie;All Night Long (All Night);1983;funk-americano;;;en;1;4;5;sensual|animado;;;metais;74;0;0;0;0;
+Barry White;You're the First, the Last, My Everything;1974;soul;;;en;1;4;5;sensual|romantico;;amor;metais;72;0;0;0;0;
+Bob Marley & The Wailers;Is This Love;1978;reggae-roots;;;en;1;3;4;calmo|esperancoso;;amor;guitarra;88;1;0;0;0;
+Bob Marley & The Wailers;Three Little Birds;1977;reggae-roots;;;en;1;3;5;calmo|esperancoso;;;guitarra;88;1;0;0;0;
+Bob Marley & The Wailers;No Woman, No Cry;1975;reggae-roots;;;en;1;2;3;calmo|esperancoso;;;guitarra;88;1;0;0;1;ao vivo
+UB40;Red Red Wine;1983;reggae;;;en;1;2;3;calmo|esperancoso;;;guitarra;76;1;0;0;0;
+Frank Sinatra;Fly Me to the Moon;1964;swing;;;en;1;3;5;animado|alegre;;;metais;84;1;0;0;0;
+Frank Sinatra;My Way;1969;swing;;;en;1;3;3;animado|alegre;;;metais;86;1;0;0;0;
+Louis Armstrong;What a Wonderful World;1967;jazz;;;en;1;1;4;calmo|contemplativo;;;metais;88;1;0;0;0;
+Etta James;At Last;1960;soul;;;en;1;2;4;sensual|romantico;;amor;metais;74;1;0;0;0;
+Nina Simone;Feeling Good;1965;jazz;;;en;1;3;4;calmo|contemplativo;;;metais;78;1;0;0;0;
+Norah Jones;Don't Know Why;2002;jazz;;;en;1;1;3;calmo|contemplativo;;;metais;72;0;0;0;0;
+Whitney Houston;I Will Always Love You;1992;balada-pop;;;en;1;3;2;romantico|dramatico;;amor;piano;92;1;0;0;0;
+Celine Dion;My Heart Will Go On;1997;balada-pop;;;en;1;3;2;romantico|dramatico;;;piano;94;1;0;0;0;
+Bryan Adams;(Everything I Do) I Do It for You;1991;balada-pop;;;en;1;2;3;romantico|dramatico;;;piano;90;1;0;0;0;
+Elton John;Your Song;1970;soft-rock;;;en;1;2;3;romantico|calmo;;;guitarra;90;1;0;0;0;
+Elton John;I'm Still Standing;1983;pop-rock;;;pt;1;5;5;confiante|empolgante;;;guitarra;86;0;0;0;0;
+George Michael;Careless Whisper;1984;balada-pop;;;en;1;3;2;romantico|dramatico;;;piano;92;1;0;0;0;
+Roxette;It Must Have Been Love;1990;balada-pop;;;en;1;3;1;romantico|dramatico;;amor;piano;90;1;0;0;0;
+Richard Marx;Right Here Waiting;1989;balada-pop;;;en;1;2;1;romantico|dramatico;;;piano;88;1;0;0;0;
+Bonnie Tyler;Total Eclipse of the Heart;1983;balada-pop;;;en;1;4;2;romantico|dramatico;;;piano;90;1;0;0;0;
+Cyndi Lauper;Time After Time;1984;balada-pop;;;en;1;2;2;romantico|dramatico;;;piano;86;1;0;0;0;
+Mariah Carey;Hero;1993;balada-pop;;;en;1;2;3;romantico|dramatico;;;piano;80;0;0;0;0;
+Mariah Carey;All I Want for Christmas Is You;1994;pop;;;en;1;4;5;festivo|alegre;natal;;sintetizador;94;1;1;0;0;Natal
+Wham!;Last Christmas;1984;synthpop;;;en;1;4;3;festivo|alegre;natal;;sintetizador;88;1;0;0;0;Natal
+Bobby Helms;Jingle Bell Rock;1957;rock-and-roll;;;en;1;4;5;festivo|alegre;natal;;guitarra;76;0;0;0;0;Natal
+José Feliciano;Feliz Navidad;1970;pop-latino;;;es;1;4;5;festivo|alegre;natal;;metais;80;1;0;0;0;Natal
+Brenda Lee;Rockin' Around the Christmas Tree;1958;rock-and-roll;;;en;1;4;4;festivo|alegre;natal;;guitarra;70;0;0;0;0;Natal
+Michael Bublé;It's Beginning to Look a Lot Like Christmas;2011;swing;;;en;1;3;4;festivo|alegre;natal;;metais;74;0;0;0;0;Natal
+Eric Clapton;Tears in Heaven;1992;soft-rock;;;en;1;1;1;romantico|calmo;;;guitarra;90;1;0;0;0;
+Jeff Buckley;Hallelujah;1994;folk-gringo;;;pt;1;1;1;confiante|alegre;;;;86;1;0;0;0;
+John Legend;All of Me;2013;balada-pop;;;en;1;2;3;romantico|dramatico;;;piano;86;1;0;0;0;
+James Blunt;You're Beautiful;2004;balada-pop;;;en;1;2;3;romantico|dramatico;;;piano;86;1;0;0;0;
+Lewis Capaldi;Someone You Loved;2018;balada-pop;;;en;1;2;1;romantico|dramatico;;amor;piano;84;0;0;0;0;
+Christina Perri;A Thousand Years;2011;balada-pop;;;en;1;2;3;romantico|dramatico;;;piano;90;1;0;0;0;
+Eminem;Lose Yourself;2002;rap-gringo;;;en;1;5;3;confiante|agressivo;;;sintetizador;90;1;0;0;0;
+Eminem;Without Me;2002;rap-gringo;;;en;1;4;4;confiante|agressivo;;;sintetizador;80;0;0;0;0;
+2Pac;California Love;1995;rap-gringo;;Dr. Dre;en;1;4;5;confiante|agressivo;;amor;sintetizador;80;1;0;0;0;
+The Notorious B.I.G.;Juicy;1994;boom-bap;;;en;1;3;4;confiante|nostalgico;;;sintetizador;72;1;0;0;0;
+Dr. Dre;Still D.R.E.;1999;rap-gringo;;Snoop Dogg;en;1;3;3;confiante|agressivo;;;sintetizador;86;1;0;0;0;
+Coolio;Gangsta's Paradise;1995;rap-gringo;;L.V.;en;1;3;2;confiante|agressivo;;;sintetizador;88;1;0;0;0;
+OutKast;Hey Ya!;2003;rap-gringo;;;en;1;5;5;confiante|agressivo;;;sintetizador;86;1;0;0;0;
+50 Cent;In da Club;2003;rap-gringo;;;en;1;4;4;confiante|agressivo;;;sintetizador;88;1;0;0;0;
+Kanye West;Stronger;2007;rap-gringo;;;en;1;5;4;confiante|agressivo;;;sintetizador;80;1;0;0;0;
+Jay-Z;Empire State of Mind;2009;rap-gringo;;Alicia Keys;en;1;4;4;confiante|agressivo;;;sintetizador;80;1;0;0;0;
+Drake;God's Plan;2018;rap-gringo;;;en;1;3;4;confiante|agressivo;;;sintetizador;80;0;0;0;0;
+Kendrick Lamar;HUMBLE.;2017;rap-gringo;;;en;1;4;3;confiante|agressivo;;;sintetizador;80;1;0;0;0;
+Post Malone;Sunflower;2018;rap-gringo;;Swae Lee;en;1;3;5;confiante|agressivo;;;sintetizador;86;0;0;0;0;
+Travis Scott;SICKO MODE;2018;trap;;;en;1;4;3;sombrio|confiante;;;sintetizador;76;0;0;0;0;
+The Black Eyed Peas;I Gotta Feeling;2009;dance-pop;;;en;1;5;5;animado|festivo;;;sintetizador;90;1;0;0;0;
+Daft Punk;One More Time;2000;house;;;;0;5;5;animado|festivo;;;sintetizador;88;1;0;0;0;
+Daft Punk;Get Lucky;2013;disco;;Pharrell Williams, Nile Rodgers;en;1;4;5;festivo|animado;;;sintetizador;86;1;0;0;0;
+Avicii;Wake Me Up;2013;edm;;;;0;5;5;animado|empolgante;;;sintetizador;90;1;0;0;0;
+Avicii;Levels;2011;edm;;;;0;5;5;animado|empolgante;;;sintetizador;84;0;0;0;0;
+David Guetta;Titanium;2011;edm;;Sia;;0;5;4;animado|empolgante;;;sintetizador;88;1;0;0;0;
+Calvin Harris;Summer;2014;edm;;;;0;5;5;animado|empolgante;;;sintetizador;86;0;0;0;0;
+Calvin Harris;This Is What You Came For;2016;edm;;Rihanna;;0;4;4;animado|empolgante;;;sintetizador;80;0;0;0;0;
+Swedish House Mafia;Don't You Worry Child;2012;edm;;John Martin;;0;5;4;animado|empolgante;;;sintetizador;82;0;0;0;0;
+Alok;Hear Me Now;2016;brazilian-bass;;Bruno Martini, Zeeba;;0;3;4;animado|sensual;;;sintetizador;90;1;0;0;0;
+Eiffel 65;Blue (Da Ba Dee);1998;eurodance;;;;0;5;5;animado|festivo;;;sintetizador;86;1;0;0;0;
+Haddaway;What Is Love;1993;eurodance;;;;0;5;4;animado|festivo;;amor;sintetizador;90;1;0;0;0;
+Corona;The Rhythm of the Night;1993;eurodance;;;;0;5;5;animado|festivo;;;sintetizador;88;1;0;0;0;
+Ace of Base;All That She Wants;1992;eurodance;;;;0;4;4;animado|festivo;;;sintetizador;82;0;0;0;0;
+La Bouche;Be My Lover;1995;eurodance;;;;0;5;4;animado|festivo;;amor;sintetizador;76;0;0;0;0;
+2 Unlimited;No Limit;1993;eurodance;;;;0;5;5;animado|festivo;;;sintetizador;74;0;0;0;0;
+Gala;Freed from Desire;1996;eurodance;;;;0;5;5;animado|festivo;;;sintetizador;84;0;0;0;0;
+Darude;Sandstorm;1999;trance;;;;0;5;4;sonhador|empolgante;;;sintetizador;78;0;0;0;0;
+Snap!;Rhythm Is a Dancer;1992;eurodance;;;;0;5;4;animado|festivo;;;sintetizador;80;0;0;0;0;
+Modjo;Lady (Hear Me Tonight);2000;house;;;;0;4;5;animado|festivo;;;sintetizador;78;0;0;0;0;
+Stardust;Music Sounds Better with You;1998;house;;;;0;4;5;animado|festivo;;;sintetizador;66;0;0;0;0;
+John Williams;Star Wars (Main Title);1977;trilha-de-filme;;;;0;5;4;epico|dramatico;;;orquestra;84;1;1;0;0;
+John Williams;The Imperial March;1980;trilha-de-filme;;;;0;4;2;epico|dramatico;;;orquestra;84;1;1;0;0;
+John Williams;Hedwig's Theme;2001;trilha-de-filme;;;;0;2;4;epico|dramatico;;;orquestra;84;1;1;0;0;
+John Williams;Theme from Jurassic Park;1993;trilha-de-filme;;;;0;3;4;epico|dramatico;;;orquestra;78;1;1;0;0;
+Hans Zimmer;Time;2010;trilha-de-filme;;;;0;2;2;epico|dramatico;;;orquestra;78;1;1;0;0;Inception
+Klaus Badelt;He's a Pirate;2003;trilha-de-filme;;;;0;5;4;epico|dramatico;;;orquestra;88;1;1;0;0;Piratas do Caribe
+Howard Shore;Concerning Hobbits;2001;trilha-de-filme;;;;0;2;5;epico|dramatico;;;orquestra;72;1;1;0;0;O Senhor dos Anéis
+Ennio Morricone;The Good, the Bad and the Ugly;1966;trilha-de-filme;;;;0;3;3;epico|dramatico;;;orquestra;78;1;1;0;0;
+Vangelis;Chariots of Fire;1981;trilha-de-filme;;;;0;3;4;epico|dramatico;;;orquestra;76;1;1;0;0;
+Hans Zimmer;Now We Are Free;2000;trilha-de-filme;;Lisa Gerrard;;0;2;2;epico|dramatico;;perda;orquestra;80;1;1;0;0;Gladiador
+Hans Zimmer;Cornfield Chase;2014;trilha-de-filme;;;;0;3;3;epico|dramatico;;;orquestra;74;0;1;0;0;Interestelar
+Nino Rota;Speak Softly Love (Love Theme from The Godfather);1972;trilha-de-filme;;;;0;2;2;epico|dramatico;;amor;orquestra;76;1;1;0;0;
+Yann Tiersen;Comptine d'un autre été, l'après-midi;2001;trilha-de-filme;;;;0;2;2;epico|dramatico;;;orquestra;74;1;1;0;0;Amélie Poulain
+Idina Menzel;Let It Go;2013;musical;;;en;1;4;4;dramatico|alegre;;;orquestra;90;1;0;0;0;Frozen
+Carmen Twillie & Lebo M;Circle of Life;1994;musical;;;en;1;4;5;dramatico|alegre;;;orquestra;90;1;0;0;0;O Rei Leão
+Bill Medley & Jennifer Warnes;(I've Had) The Time of My Life;1987;balada-pop;;;en;1;4;5;romantico|dramatico;;;piano;90;1;0;0;0;Dirty Dancing
+Kenny Loggins;Footloose;1984;rock-classico;;;en;1;5;5;confiante|nostalgico;;;guitarra;80;0;0;0;0;
+Ray Parker Jr.;Ghostbusters;1984;funk-americano;;;en;1;4;5;sensual|animado;;;metais;84;1;0;0;0;
+Ludwig van Beethoven;Für Elise;1810;classicismo;;;;0;2;3;contemplativo|dramatico;;;orquestra;86;1;0;0;0;ano = composição
+Ludwig van Beethoven;Sinfonia nº 5: I. Allegro con brio;1808;classicismo;;;;0;5;2;contemplativo|dramatico;;;orquestra;84;1;0;0;0;ano = composição
+Ludwig van Beethoven;Sonata ao Luar: I. Adagio sostenuto;1801;classicismo;;;;0;1;1;contemplativo|dramatico;;;orquestra;82;1;0;0;0;ano = composição
+Wolfgang Amadeus Mozart;Eine kleine Nachtmusik: I. Allegro;1787;classicismo;;;;0;3;5;contemplativo|dramatico;;;orquestra;78;1;0;0;0;ano = composição
+Wolfgang Amadeus Mozart;Requiem: Lacrimosa;1791;musica-sacra;;;la;1;2;1;sagrado|contemplativo;;fe;coral;70;1;0;0;0;ano = composição
+Wolfgang Amadeus Mozart;Rondo alla Turca;1783;classicismo;;;;0;4;5;contemplativo|dramatico;;;orquestra;74;1;0;0;0;ano = composição
+Johann Sebastian Bach;Ária na Corda Sol;1730;barroco;;;;0;1;4;dramatico|epico;;;orquestra;74;1;0;0;0;ano = composição
+Johann Sebastian Bach;Tocata e Fuga em Ré Menor;1704;barroco;;;;0;4;1;dramatico|epico;;;orquestra;78;1;0;0;0;ano = composição
+Antonio Vivaldi;As Quatro Estações: Primavera;1725;barroco;;;;0;3;5;dramatico|epico;;;orquestra;82;1;0;0;0;ano = composição
+Antonio Vivaldi;As Quatro Estações: Inverno;1725;barroco;;;;0;4;2;dramatico|epico;;;orquestra;74;1;0;0;0;ano = composição
+Johann Pachelbel;Cânone em Ré;1700;barroco;;;;0;1;4;dramatico|epico;;;orquestra;84;1;0;0;0;ano = composição (aprox.)
+Piotr Ilitch Tchaikovsky;Dança da Fada Açucarada;1892;romantismo;;;it;1;2;4;festivo|alegre;natal;danca;orquestra;76;1;0;0;0;Natal (ano = composição)
+Piotr Ilitch Tchaikovsky;O Lago dos Cisnes: Cena;1876;romantismo;;;it;1;3;2;dramatico|romantico;;;orquestra;72;1;0;0;0;ano = composição
+Claude Debussy;Clair de Lune;1905;romantismo;;;it;1;1;3;dramatico|romantico;;;orquestra;84;1;0;0;0;ano = publicação
+Frédéric Chopin;Noturno Op. 9 nº 2;1832;romantismo;;;it;1;1;3;dramatico|romantico;;;orquestra;78;1;0;0;0;ano = composição
+Edvard Grieg;Na Gruta do Rei da Montanha;1876;romantismo;;;it;1;4;3;dramatico|romantico;;;orquestra;78;1;0;0;0;ano = composição
+Carl Orff;O Fortuna (Carmina Burana);1937;classica-contemporanea;;;;0;5;2;contemplativo|sonhador;;;orquestra;84;1;0;0;0;ano = composição
+Richard Wagner;A Cavalgada das Valquírias;1870;opera;;;it;1;5;3;dramatico|epico;;;orquestra;80;1;0;0;0;ano = estreia
+Giacomo Puccini;Nessun Dorma;1926;opera;;;it;1;3;3;dramatico|epico;;perda;orquestra;82;1;0;0;0;ano = estreia
+Georges Bizet;Habanera (Carmen);1875;opera;;;it;1;3;4;dramatico|epico;;;orquestra;72;1;0;0;0;ano = estreia
+Johann Strauss II;O Danúbio Azul;1866;romantismo;;;it;1;3;5;dramatico|romantico;;;orquestra;78;1;0;0;0;ano = composição
+Erik Satie;Gymnopédie nº 1;1888;romantismo;;;it;1;1;2;dramatico|romantico;;;orquestra;80;1;0;0;0;ano = composição
+Georg Friedrich Händel;Aleluia (O Messias);1741;musica-sacra;;;la;1;5;5;sagrado|contemplativo;;fe;coral;80;1;0;0;0;ano = composição
