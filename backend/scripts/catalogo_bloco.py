@@ -177,14 +177,15 @@ def conferir_youtube(fios: int = 3) -> None:
             t.join(1)
 
 
-def conferir() -> None:
+def conferir(fios_youtube: int = 3) -> None:
     n_mb, n_yt = len(tarefas("musicbrainz")), len(tarefas("youtube"))
     if not n_mb and not n_yt:
         diga("1. Tudo já conferido.")
         return
     diga(f"1. Conferindo: {n_mb} no MusicBrainz e {n_yt} no YouTube (os dois juntos). "
          f"Uns {max(n_mb * 1.2, n_yt * 2.2) / 3600:.1f} h. Ctrl+C pra parar; rodando de novo, continua.")
-    fios = [threading.Thread(target=f, daemon=True) for f in (conferir_musicbrainz, conferir_youtube)]
+    fios = [threading.Thread(target=conferir_musicbrainz, daemon=True),
+            threading.Thread(target=conferir_youtube, args=(fios_youtube,), daemon=True)]
     for t in fios:
         t.start()
     try:
@@ -250,13 +251,14 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--so-importar", action="store_true", help="não confere nada, só importa/compila/testa")
     ap.add_argument("--sem-enviar", action="store_true", help="não faz commit nem push")
+    ap.add_argument("--fios", type=int, default=3, help="buscas no YouTube ao mesmo tempo (padrão 3)")
     ap.add_argument("--so-conferir", action="store_true", help="só confere no MusicBrainz e no YouTube (não importa)")
     args = ap.parse_args()
     if not listas_de_blocos():
         diga(f"Nenhum bloco em {PASTA_BLOCOS}")
         return 1
     if not args.so_importar:
-        conferir()
+        conferir(args.fios)
     if args.so_conferir:
         return 0
     diga("2. Pondo no catálogo...")
