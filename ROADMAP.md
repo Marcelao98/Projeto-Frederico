@@ -45,10 +45,22 @@ Atualizado em 07/11/2026 (v0.6.0).
     "e depois", e 108 pedidos de ouro rodando nos testes (75 conferem
     resultado; 33 de música geral ficam pendentes até ter música).
   - O app ainda usa o `musicas.json`: nada do app mudou.
-- **Etapa 3 em andamento (10/11/2026):** o Codex fez 6 de 11 blocos (3.425 músicas,
-  0 erros). Faltam: 03 (+115), 04 (+222), 07 (+400), 10 (+450), 11 (+400). Quem
-  continuar: `python3 -m freddy.catalogo.bloco status` (de `backend/`) e o
-  `acervo/catalogo/blocos/ORQUESTRACAO.md`.
+- ✅ **Etapa 3 feita (16/11/2026): o catálogo tem 5.681 músicas com link** (5.121 dos
+  11 blocos + as 560 de RPG). Música e link são coisas separadas: a música fica em
+  `acervo/catalogo/musicas.csv` e o link em `fontes.csv` (3.420 oficiais; 1.701 "não
+  oficiais", o vídeo mais visto daquela gravação, pra trocar quando aparecer o oficial;
+  153 marcadas `revisar=1` porque o artista não bateu por escrito). Compilação OK e os
+  108 pedidos de ouro passam com música de verdade.
+  - **O que falta dela:** (1) 338 sem vídeo nenhum em `blocos/pendentes.csv` (quase
+    tudo título em português de clássica, forró e marchinha antiga: arrumar o título ou
+    tirar); (2) o MusicBrainz conferiu ~2.400 das 5.460 (o resto: rodar de novo
+    `python scripts/catalogo_bloco.py --so-conferir`, continua de onde parou, e depois
+    `--so-importar`); (3) o Marcelo ouvir 50 sorteadas; (4) energia/animação ainda são
+    palpite de IA fora do bloco 01 (ideia: medir no áudio ou usar dataset real).
+  - Na nuvem do Claude isso roda no ambiente **"Projeto-Frederico"** (libera
+    `musicbrainz.org` e `www.youtube.com`). Ano do MusicBrainz só corrige pra trás.
+  - **Próxima etapa: 4 (ligar a busca nova no app)**, com o modelo de dados discutido
+    (gravação × fonte × contexto por receita; desenho em https://claude.ai/artifact/YTdQF3GSBpRW52KBi84226).
 - **Etapa 3 (encher o catálogo), histórico: EM PAUSA em 08/11/2026 (gastava muito token).** Quando voltar: Guia completo e detalhado pra
   continuar: **`docs/etapas/banco-fredify-etapa3.md`** (leia esse primeiro).
   Decisão do Marcelo: tudo de uma vez (as ~5 mil já com tags, em 11 listas) e

@@ -7,34 +7,19 @@
 | bloco-03 | 483 | 470 | 13 |
 | bloco-04 | 521 | 507 | 14 |
 | bloco-05 | 450 | 299 | 151 |
-| bloco-06 | 450 | 387 | 63 |
-| bloco-07 | 552 | 539 | 13 |
-| bloco-08 | 499 | 490 | 9 |
-| bloco-09 | 450 | 448 | 2 |
-| bloco-10 | 621 | 618 | 3 |
-| bloco-11 | 471 | 359 | 112 |
-| **total** | 5459 | 5055 | 404 |
+| bloco-06 | 450 | 396 | 54 |
+| bloco-07 | 552 | 546 | 6 |
+| bloco-08 | 499 | 497 | 2 |
+| bloco-09 | 450 | 449 | 1 |
+| bloco-10 | 621 | 620 | 1 |
+| bloco-11 | 471 | 399 | 72 |
+| **total** | 5459 | 5121 | 338 |
 
-- Anos corrigidos pelo MusicBrainz: 343
-- Sem resultado no MusicBrainz (ficou o ano da lista): 3129
+- Anos corrigidos pelo MusicBrainz: 346
+- Sem resultado no MusicBrainz (ficou o ano da lista): 3169
 - Pendentes (sem link oficial): `pendentes.csv`
 - Compilação: OK
-- Pedidos de ouro: há falhas (abaixo)
-
-## Pedidos de ouro que falharam
-
-```
-FAIL: test_pedidos_de_ouro (freddy.catalogo.test_catalogo.TestCatalogo.test_pedidos_de_ouro) (pedido='g01', frase='toca um modão de 2024 pra um churrasco e depois um pagode')
-AssertionError: False is not true : menos-e-mais-coracao-partido-corazon-partio não cumpre genero:sertanejo
-FAIL: test_pedidos_de_ouro (freddy.catalogo.test_catalogo.TestCatalogo.test_pedidos_de_ouro) (pedido='g02', frase='sofrência pra chorar')
-AssertionError: False is not true : menos-e-mais-coracao-partido-corazon-partio não cumpre clima:triste
-FAIL: test_pedidos_de_ouro (freddy.catalogo.test_catalogo.TestCatalogo.test_pedidos_de_ouro) (pedido='g17', frase='lofi pra estudar')
-AssertionError: False is not true : ludovico-einaudi-nuvole-bianche não cumpre genero:lofi-hip-hop
-FAIL: test_pedidos_de_ouro (freddy.catalogo.test_catalogo.TestCatalogo.test_pedidos_de_ouro) (pedido='g27', frase='lançamentos de funk')
-AssertionError: False is not true : matheus-kauan-ana-castela-ilusao-de-otica-ao-vivo não cumpre genero:funk-br
-FAIL: test_toda_musica_do_acervo_migrou (freddy.catalogo.test_catalogo.TestCatalogo.test_toda_musica_do_acervo_migrou)
-AssertionError: Items in the second set but not the first:
-```
+- Pedidos de ouro: todos passam
 
 ## Anos corrigidos
 
@@ -381,3 +366,6 @@ AssertionError: Items in the second set but not the first:
 - Teixeirinha - Mãe: 1962 → 1961
 - Luiz Gonzaga - Légua Tirana: 1952 → 1941
 - Claudia Leitte - Quer Saber: 2018 → 2013
+- Lenine - Miragem: 1997 → 1993
+- Ney Matogrosso - Bandido: 1981 → 1976
+- Lia de Itamaracá - Cirandeiro: 1980 → 1977
