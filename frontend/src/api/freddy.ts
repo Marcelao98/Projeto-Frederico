@@ -237,6 +237,20 @@ export class ApiFreddy {
     }
   }
 
+  /** O catálogo novo: as músicas do pedido, ou null se ele não entendeu (ou ainda não está pronto). */
+  async buscarNoCatalogo(texto: string): Promise<{ musicas: Musica[]; total: number } | null> {
+    try {
+      const r = await this.pedir<{ musicas: Musica[]; total: number }>("/catalogo/buscar", {
+        method: "POST",
+        body: JSON.stringify({ texto }),
+      });
+      return r.musicas.length ? r : null;
+    } catch (e) {
+      if (e instanceof ErroDoFreddy && (e.status === 503 || e.status === 404)) return null;
+      throw e;
+    }
+  }
+
   /** Busca livre: o melhor resultado, ou null se o YouTube não achou nada. */
   async buscarNoYoutube(texto: string): Promise<Musica | null> {
     try {

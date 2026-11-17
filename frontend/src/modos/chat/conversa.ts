@@ -34,6 +34,8 @@ export interface Contexto {
   acervo: Acervo;
   /** Descobre o título de um link colado; null se não der. */
   tituloDoLink?: (link: string) => Promise<string | null>;
+  /** O catálogo novo (só com o Freddy ligado); null se ele não entendeu o pedido inteiro. */
+  buscarNoCatalogo?: (texto: string) => Promise<{ musicas: Musica[]; total: number } | null>;
   /** Busca livre no YouTube (só com o Freddy ligado); null se não achou. */
   buscarNoYoutube?: (texto: string) => Promise<Musica | null>;
   /** Grava temas novos numa faixa (só com o Freddy ligado). */
@@ -152,17 +154,27 @@ async function executarPedido(pedido: Pedido, ctx: Contexto): Promise<RespostaFr
       if (!pedido.busca) {
         return { texto: 'Me manda o link do YouTube, ou descreve o que quer ouvir (ex: "toca triste e bloodborne").' };
       }
-      const { escolhidas, total } = acervo.sortearDaBusca(pedido.busca);
-      if (!escolhidas.length) {
-        if (ctx.buscarNoYoutube) return buscaLivre(pedido.busca, motor, ctx.buscarNoYoutube);
-        return {
-          texto:
-            `Não achei nada pra "${pedido.busca}" no acervo 😕 ` +
-            "Tenta outros termos, ou cola o link do YouTube. (Com o Freddy ligado eu procuro no YouTube também.)",
-        };
+      // 1º o catálogo novo (gênero, época, ocasião, gíria); se ele não entender o pedido
+      // inteiro, o acervo antigo (tem o que a mesa ensinou); por fim, o YouTube.
+      const doCatalogo = (await ctx.buscarNoCatalogo?.(pedido.busca).catch(() => null)) ?? null;
+      let musicas: Musica[];
+      let total: number;
+      if (doCatalogo?.musicas.length) {
+        ({ musicas, total } = doCatalogo);
+      } else {
+        const doAcervo = acervo.sortearDaBusca(pedido.busca);
+        if (!doAcervo.escolhidas.length) {
+          if (ctx.buscarNoYoutube) return buscaLivre(pedido.busca, motor, ctx.buscarNoYoutube);
+          return {
+            texto:
+              `Não achei nada pra "${pedido.busca}" no acervo 😕 ` +
+              "Tenta outros termos, ou cola o link do YouTube. (Com o Freddy ligado eu procuro no YouTube também.)",
+          };
+        }
+        musicas = doAcervo.escolhidas.map(musicaDaFaixa);
+        total = doAcervo.total;
       }
-      const musicas = escolhidas.map(musicaDaFaixa);
-      const aviso = total > escolhidas.length ? ` (achei ${total}, sorteei ${escolhidas.length})` : "";
+      const aviso = total > musicas.length ? ` (achei ${total}, sorteei ${musicas.length})` : "";
       const r = await motor.executar({ tipo: "adicionar", musicas });
       if (!r.entraram) return { texto: filaCheia() };
       const entraram = musicas.slice(0, r.entraram);

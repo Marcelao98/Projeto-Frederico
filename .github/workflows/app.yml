@@ -107,6 +107,7 @@ jobs:
           cd backend
           pyinstaller --onefile --name freddy-backend --paths . \
             --add-data "../acervo${sep}acervo" \
+            --add-data "freddy/catalogo/esquema.sql${sep}freddy/catalogo" \
             --collect-submodules uvicorn --collect-all discord --collect-all davey \
             --collect-submodules yt_dlp --hidden-import sounddevice --collect-data certifi \
             freddy_backend.py
@@ -134,6 +135,10 @@ jobs:
           curl -sf http://127.0.0.1:47899/saude | grep -q '"ok":true'
           curl -sf http://127.0.0.1:47899/saude | grep -q '"ytdlp":"'
           curl -sf http://127.0.0.1:47899/acervo | grep -q '"musicas":\[{'
+          # O catálogo novo compila sozinho ao ligar (uns segundos): espera e faz um pedido de verdade.
+          for i in $(seq 1 60); do curl -sf http://127.0.0.1:47899/catalogo | grep -q '"pronto":true' && break; sleep 1; done
+          curl -sf http://127.0.0.1:47899/catalogo
+          curl -sf -X POST -H 'Content-Type: application/json' -d '{"texto":"pagode anos 90"}' http://127.0.0.1:47899/catalogo/buscar | grep -q '"faixaId"'
           echo "backend empacotado: ok"
           kill $pid || true
 

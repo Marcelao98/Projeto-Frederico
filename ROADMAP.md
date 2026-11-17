@@ -18,9 +18,9 @@ Atualizado em 07/11/2026 (v0.6.0).
 | **Bot do Discord do Freddy** | ✅ toca na call desde a v0.5.2 (DAVE resolvido) |
 | **Mixer, microfone virtual, soundboard** | ⬜ só planejado (telas "em breve" no painel) |
 
-## Onde paramos (08/11/2026)
+## Onde paramos (17/11/2026)
 
-- **v0.6.0 pronta** (etapa B1 da arquitetura nova). Tudo no `main`.
+- **v0.7.0** (17/11/2026): o catálogo novo (5.681 músicas) ligado no app. Tudo no `main`.
 - ✅ **O branch principal do GitHub é o `main`** (o Marcelo trocou em 08/11).
 - **Visão nova (07/11/2026): o Freddy vira o Fredify**, um tocador de música
   universal (música + efeitos sonoros; Windows, Linux, Android; toca no
@@ -59,8 +59,18 @@ Atualizado em 07/11/2026 (v0.6.0).
     palpite de IA fora do bloco 01 (ideia: medir no áudio ou usar dataset real).
   - Na nuvem do Claude isso roda no ambiente **"Projeto-Frederico"** (libera
     `musicbrainz.org` e `www.youtube.com`). Ano do MusicBrainz só corrige pra trás.
-  - **Próxima etapa: 4 (ligar a busca nova no app)**, com o modelo de dados discutido
-    (gravação × fonte × contexto por receita; desenho em https://claude.ai/artifact/YTdQF3GSBpRW52KBi84226).
+- ✅ **Etapa 4 feita (17/11/2026, v0.7.0): o catálogo está ligado no app.** O backend
+  compila o `catalogo.db` ao ligar e serve `POST /catalogo/buscar`
+  (`backend/freddy/catalogo/servico.py`, `api/rotas/catalogo.py`). O chat do painel e
+  o do Discord perguntam primeiro ao catálogo; o acervo antigo e o YouTube ficam de
+  reserva. A fila recebe `{titulo, link, faixaId}` (o link sai da melhor fonte viva).
+  - **O que ainda NÃO foi feito do modelo de dados** (desenho em
+    https://claude.ai/artifact/YTdQF3GSBpRW52KBi84226): a fila e as playlists ainda
+    guardam o link junto (falta o "resolvedor" que troca o link pelo `faixaId` na hora
+    de tocar); os modos Playlist e Acervo do painel ainda mostram só o acervo antigo;
+    os ajustes do mestre (`ajustes.json`) não valem pro catálogo; composição × gravação,
+    efeitos/ambientes e histórico não existem ainda.
+  - **Próximo:** resolvedor por `faixaId` + playlists pelo catálogo, depois a B2 (base do som).
 - **Etapa 3 (encher o catálogo), histórico: EM PAUSA em 08/11/2026 (gastava muito token).** Quando voltar: Guia completo e detalhado pra
   continuar: **`docs/etapas/banco-fredify-etapa3.md`** (leia esse primeiro).
   Decisão do Marcelo: tudo de uma vez (as ~5 mil já com tags, em 11 listas) e

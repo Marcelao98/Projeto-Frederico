@@ -106,6 +106,38 @@ describe("prévia e autocompletar", () => {
     expect(termoEmDigitacao("toca ")).toBeNull();
   });
 
+  it("com o Freddy, o catálogo novo vem antes do acervo antigo", async () => {
+    const c = ctx();
+    const doCatalogo = [
+      { titulo: "Raça Negra - Cheia de Manias", link: "https://www.youtube.com/watch?v=rn1", faixaId: "raca-negra-cheia-de-manias" },
+      { titulo: "Molejo - Cilada", link: "https://www.youtube.com/watch?v=mo1", faixaId: "molejo-cilada" },
+    ];
+    const pedidos: string[] = [];
+    const buscarNoCatalogo = async (t: string) => {
+      pedidos.push(t);
+      return { musicas: doCatalogo, total: 40 };
+    };
+    const r = await responder("toca pagode anos 90", { ...c, buscarNoCatalogo });
+    expect(pedidos).toEqual(["pagode anos 90"]);
+    expect(r.texto).toBe("Tocando **Raça Negra - Cheia de Manias** 🎵, mais 1 na fila (achei 40, sorteei 2)");
+    expect(r.musicas).toEqual(doCatalogo);
+    expect(c.motor.estado().tocando?.faixaId).toBe("raca-negra-cheia-de-manias");
+  });
+
+  it("catálogo que não entendeu (ou caiu) deixa o pedido pro acervo antigo", async () => {
+    for (const buscarNoCatalogo of [
+      async () => null,
+      async () => {
+        throw new Error("fora do ar");
+      },
+    ]) {
+      const c = ctx();
+      const r = await responder("toca calmo e hollow knight", { ...c, buscarNoCatalogo });
+      expect(r.texto).toMatch(/^Tocando \*\*/);
+      expect(c.motor.estado().tocando?.origem).toBe("Hollow Knight");
+    }
+  });
+
   it("sem nada no acervo e com o Freddy: busca no YouTube e pergunta se era essa", async () => {
     const c = ctx();
     const achada = { titulo: "Taverna Medieval", link: "https://www.youtube.com/watch?v=tav" };

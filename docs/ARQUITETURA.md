@@ -128,3 +128,23 @@ freddy.sh                   pra desenvolver: backend + app na ordem certa
 - **yt-dlp atualizado em tempo de uso** (só no app instalado), do GitHub
   oficial, com SHA-256 conferido e volta pro do app se quebrar.
 - **Mac fica de lado** (Linux e Windows primeiro). Mac Intel não tem backend.
+
+## O catálogo (o banco do Fredify), desde a 0.7.0
+
+```
+acervo/catalogo/*.csv  ──compila ao ligar──▶  <pasta do mestre>/catalogo.db
+        (vem com o app)      freddy/catalogo/servico.py (CatalogoDoApp)
+                                        │
+pedido ("pagode anos 90 pro churrasco") ▼
+painel (chat) ──POST /catalogo/buscar──▶ consulta.py entende ──▶ músicas {titulo, link, faixaId}
+Discord (conversa/cerebro.py) ─────────▶   (o link é a melhor fonte viva: fontes.csv)
+```
+
+Ordem de quem responde um pedido de música: **catálogo → acervo antigo
+(`musicas.json` + o que a mesa ensinou) → busca livre no YouTube**. O catálogo
+só responde quando entende o pedido inteiro; palavra que ele não conhece
+devolve o pedido pros outros dois. Se os CSV estiverem com erro, o Freddy
+liga do mesmo jeito, sem catálogo (`GET /catalogo` diz o motivo).
+
+Música e link são coisas separadas no catálogo (`musicas.csv` × `fontes.csv`,
+com `oficial` 1/0). O que ainda falta desse desenho está no ROADMAP ("Etapa 4").

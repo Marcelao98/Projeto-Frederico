@@ -131,8 +131,17 @@ freddy.sh   pra desenvolver: liga o backend e abre o app na ordem certa
 - **Catálogo novo (o banco do Fredify):** fonte em CSV em `acervo/catalogo/`
   (README lá), compilado no `catalogo.db` (fora do git) por
   `freddy/catalogo/compilar.py`, que barra o que quebra as regras;
-  `freddy/catalogo/consulta.py` entende o pedido. Ainda não ligado no app
-  (etapa 4); até lá o app usa o `musicas.json`. Mexeu nos CSV: rodar
+  `freddy/catalogo/consulta.py` entende o pedido. **Ligado no app desde a
+  0.7.0** (`freddy/catalogo/servico.py`): o backend compila o `catalogo.db`
+  sozinho ao ligar (na pasta do mestre; refaz quando os CSV ou a versão
+  mudam) e serve `POST /catalogo/buscar`. O chat do painel e o do Discord
+  perguntam **primeiro ao catálogo**; se ele não entender o pedido inteiro,
+  vale o acervo antigo (`musicas.json` + o que a mesa ensinou) e, por fim, o
+  YouTube. Música e link são separados (`musicas.csv` × `fontes.csv`): o
+  link é escolhido na hora de pôr na fila (a melhor fonte viva, oficial
+  primeiro) e a fila guarda o `faixaId` da música junto. Sem catálogo
+  (erro nos CSV) o Freddy segue só com o acervo antigo. O `esquema.sql`
+  vai no empacotado por `--add-data` (`app.yml`). Mexeu nos CSV: rodar
   `python -m unittest freddy.catalogo.test_catalogo` (pedidos de ouro).
 - **Comandos só do painel no chat** (`temas`/`revisar` em
   `frontend/src/modos/chat/revisao.ts`; `playlists`/`toca a playlist X`/

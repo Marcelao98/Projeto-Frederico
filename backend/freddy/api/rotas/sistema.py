@@ -31,6 +31,7 @@ def saude(request: Request):
         "som": "simulado" if estado.config.sem_som else "local",
         "paineis": estado.paineis.quantos,
         "ytdlp": _versao_do_ytdlp(),
+        "catalogo": estado.catalogo.quantas,
     }
 
 

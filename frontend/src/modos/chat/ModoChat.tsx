@@ -95,6 +95,7 @@ export function ModoChat({ acervo }: { acervo: Acervo }) {
           motor,
           acervo,
           tituloDoLink: tituloComFreddy(api),
+          buscarNoCatalogo: api ? (t) => api.buscarNoCatalogo(t) : undefined,
           buscarNoYoutube: api ? (t) => api.buscarNoYoutube(t) : undefined,
           editarTemas: editarTemasCom(api),
         })),
@@ -209,7 +210,7 @@ export function ModoChat({ acervo }: { acervo: Acervo }) {
           </button>
         </div>
         <div className="chat-rodape">
-          <LinhaDePrevia previa={oQueVaiAcontecer} vazio={!texto.trim()} />
+          <LinhaDePrevia previa={oQueVaiAcontecer} vazio={!texto.trim()} comFreddy={!!api} />
           <div className="atalhos">
             {ATALHOS.map((a) => (
               <button type="button" key={a} className="chip pequeno" onClick={() => void enviar(a)}>
@@ -223,7 +224,7 @@ export function ModoChat({ acervo }: { acervo: Acervo }) {
   );
 }
 
-function LinhaDePrevia({ previa, vazio }: { previa: Previa | null; vazio: boolean }) {
+function LinhaDePrevia({ previa, vazio, comFreddy }: { previa: Previa | null; vazio: boolean; comFreddy: boolean }) {
   if (vazio) return <span className="previa apagado">↑ ↓ repete pedidos · Tab completa</span>;
   if (!previa) return <span className="previa apagado">…não parece um pedido de música ainda</span>;
   switch (previa.tipo) {
@@ -232,6 +233,11 @@ function LinhaDePrevia({ previa, vazio }: { previa: Previa | null; vazio: boolea
         <span className="previa ok">
           <Icone nome="busca" tamanho={14} /> {previa.total} faixa{previa.total > 1 ? "s" : ""} no acervo
           {previa.total > 15 && " (sorteio 15)"}
+          {comFreddy && " · o catálogo pode achar mais"}
+        </span>
+      ) : comFreddy ? (
+        <span className="previa ok">
+          <Icone nome="busca" tamanho={14} /> procuro no catálogo (e no YouTube, se precisar)
         </span>
       ) : (
         <span className="previa aviso">nada no acervo com isso</span>

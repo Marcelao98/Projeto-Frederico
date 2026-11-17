@@ -67,6 +67,20 @@ class TestConversa(Base):
         self.assertEqual(self.diz("para"), "Parei ⏹️")
         self.assertEqual(self.diz("pausa"), "Não tem nada tocando.")
 
+    def test_catalogo_novo_vem_antes_do_acervo_antigo(self):
+        from freddy.catalogo.compilar import PASTA_CATALOGO
+        from freddy.catalogo.servico import CatalogoDoApp
+
+        self.conversa.catalogo = CatalogoDoApp(PASTA_CATALOGO, self.pasta / "catalogo.db")
+        self.conversa.catalogo.preparar()
+        r = self.diz("toca pagode anos 90")
+        self.assertTrue(r.startswith("Tocando **"), r)
+        tocando = self.motor.estado()["tocando"]
+        self.assertIn("pagode", self.conversa.catalogo.cat.musicas[tocando["faixaId"]]["generos"])
+        self.assertIn(" - ", tocando["titulo"])
+        # o que o catálogo não entende inteiro continua indo pro acervo antigo e pro YouTube
+        self.assertIn("procurei no YouTube", self.diz("toca uma coisa que nao tem no acervo zzz"))
+
     def test_link_e_busca_livre(self):
         self.assertEqual(self.diz("toca https://youtu.be/abc"), "Tocando **Vídeo Colado** 🎵")
         r = self.diz("toca uma coisa que nao tem no acervo zzz")

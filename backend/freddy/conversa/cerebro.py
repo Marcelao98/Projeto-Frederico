@@ -76,6 +76,7 @@ class Conversa:
         self.acervo = acervo
         self.playlists = playlists
         self.youtube = youtube
+        self.catalogo = None  # o CatalogoDoApp, quando o servidor liga (api/app.py)
 
     async def responder(self, texto: str) -> str:
         texto = texto.strip()
@@ -160,10 +161,16 @@ class Conversa:
         return f"Adicionei {negrito(titulo)} na fila (posição {r['posicao']}) 📜"
 
     async def _tocar_busca(self, busca: str) -> str:
-        achadas, total = sortear_da_busca(busca, self.acervo.faixas())
-        if not achadas:
-            return await self._busca_livre(busca)
-        musicas = [{"titulo": f["nome"], "link": f["link"], "faixaId": f["id"], "origem": f["origem"]["nome"]} for f in achadas]
+        # 1º o catálogo novo (entende gênero, época, ocasião, gíria); se ele não entender
+        # o pedido inteiro, o acervo antigo (tem o que a mesa ensinou); por fim, o YouTube.
+        do_catalogo = self.catalogo.buscar(busca) if self.catalogo is not None and self.catalogo.pronto else None
+        if do_catalogo and do_catalogo["musicas"]:
+            musicas, total = do_catalogo["musicas"], do_catalogo["total"]
+        else:
+            achadas, total = sortear_da_busca(busca, self.acervo.faixas())
+            if not achadas:
+                return await self._busca_livre(busca)
+            musicas = [{"titulo": f["nome"], "link": f["link"], "faixaId": f["id"], "origem": f["origem"]["nome"]} for f in achadas]
         aviso = f" (achei {total}, sorteei {len(musicas)})" if total > len(musicas) else ""
         r = self._por(musicas)
         if not r["entraram"]:

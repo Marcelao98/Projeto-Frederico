@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import shutil
 import tempfile
+import time
 import unittest
 from pathlib import Path
 
@@ -279,6 +280,20 @@ class TestRest(Base):
         r = self.cliente.get("/saude").json()
         self.assertTrue(r["ok"])
         self.assertEqual(r["protocolo"], 1)
+
+    def test_catalogo_compila_ao_ligar_e_responde_pedido(self):
+        for _ in range(100):  # compila numa thread ao ligar
+            if self.cliente.get("/catalogo").json()["pronto"]:
+                break
+            time.sleep(0.1)
+        situacao = self.cliente.get("/catalogo").json()
+        self.assertTrue(situacao["pronto"], situacao)
+        self.assertGreater(self.cliente.get("/saude").json()["catalogo"], 5000)
+        r = self.cliente.post("/catalogo/buscar", json={"texto": "sertanejo pra churrasco"}).json()
+        self.assertTrue(r["musicas"])
+        self.assertTrue(all(m["link"].startswith("https://www.youtube.com/") and m["faixaId"] for m in r["musicas"]))
+        self.assertEqual(self.cliente.post("/catalogo/buscar", json={"texto": "zzzxqw"}).json()["musicas"], [])
+        self.assertEqual(self.cliente.post("/catalogo/buscar", json={"texto": ""}).status_code, 422)
 
     def test_cors_so_pro_painel(self):
         ok = self.cliente.get("/saude", headers=PAINEL)
