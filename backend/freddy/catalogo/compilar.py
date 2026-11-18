@@ -35,7 +35,7 @@ ESQUEMA = Path(__file__).with_name("esquema.sql")
 LOTES_LEGADO = {"rpg-legado"}
 GAVETAS = ("clima", "ocasiao", "tema", "instrumento", "cenario")
 CAMPOS = {"popularidade-alta", "essencial", "canta-junto", "ao-vivo", "acustico", "sem-voz",
-          "com-voz", "nao-explicita", "internacional", "brasileira"}
+          "com-voz", "nao-explicita", "internacional", "brasileira", "estavel"}
 EPOCA_RE = re.compile(r"^(\d{4}-\d{4}|ate-\d{4}|ultimos-\d+-(anos|meses))$")
 ID_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 
@@ -235,11 +235,12 @@ def gravar(d: dict[str, list[dict]], saida: Path) -> None:
                           _int(a["ano_inicio"]), n(a["mbid"])) for a in d["artistas"]])
         cols = ["id", "titulo", "ano", "duracao", "idioma", "obra", "energia", "animacao", "tem_voz",
                 "canta_junto", "ao_vivo", "explicita", "popularidade", "essencial", "mbid", "isrc",
-                "lote", "revisar", "nome_original"]
+                "lote", "revisar", "nome_original", "estavel"]
         inteiros = {"ano", "duracao", "energia", "animacao", "tem_voz", "canta_junto", "ao_vivo",
-                    "explicita", "popularidade", "essencial", "revisar"}
+                    "explicita", "popularidade", "essencial", "revisar", "estavel"}
         con.executemany(f"INSERT INTO musica VALUES ({','.join('?' * len(cols))})",
-                        [tuple(_int(m[c]) if c in inteiros else n(m[c]) for c in cols) for m in d["musicas"]])
+                        [tuple(_int(m.get(c, "")) if c in inteiros else n(m.get(c, "")) for c in cols)
+                         for m in d["musicas"]])
         con.executemany("INSERT INTO musica_artista VALUES (?,?,?)",
                         [(l["musica"], l["artista"], l["papel"]) for l in d["musica_artista"]])
         con.executemany("INSERT INTO musica_genero VALUES (?,?,?)",
@@ -253,9 +254,10 @@ def gravar(d: dict[str, list[dict]], saida: Path) -> None:
         con.executemany("INSERT INTO palavra VALUES (?,?,?,?)", palavras)
         # As automáticas não passam por cima de uma gíria escrita à mão.
         con.executemany("INSERT OR IGNORE INTO palavra VALUES (?,?,?,?)", _palavras_automaticas(d))
-        con.executemany("INSERT INTO ocasiao_perfil VALUES (?,?,?,?,?,?,?)",
+        con.executemany("INSERT INTO ocasiao_perfil VALUES (?,?,?,?,?,?,?,?)",
                         [(p["ocasiao"], p["generos_combinam"], int(p["energia_min"]), int(p["energia_max"]),
-                          p["voz"], p["climas_combinam"], p["climas_evitar"]) for p in d["ocasioes_perfil"]])
+                          p["voz"], p["climas_combinam"], p["climas_evitar"], p.get("estavel") or "qualquer")
+                         for p in d["ocasioes_perfil"]])
         con.execute("""
             INSERT INTO busca (musica, titulo, artista, obra, generos, tags)
             SELECT m.id, m.titulo || ' ' || COALESCE(m.nome_original, ''),

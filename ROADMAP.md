@@ -71,6 +71,12 @@ Atualizado em 07/11/2026 (v0.6.0).
     os ajustes do mestre (`ajustes.json`) não valem pro catálogo; composição × gravação,
     efeitos/ambientes e histórico não existem ainda.
   - **Próximo:** resolvedor por `faixaId` + playlists pelo catálogo, depois a B2 (base do som).
+- **Etapa OST em andamento (18/11/2026): +5 mil instrumentais** (jogo, anime, filme,
+  Ghibli) pra RPG e dia a dia. Pedido e regras: **`docs/etapas/catalogo-ost.md`**.
+  Pronto: vocabulário novo, coluna `estavel`, `backend/scripts/catalogo_ost.py`
+  (extrai faixas REAIS das playlists, marca, importa, confere links), 195 obras em
+  `acervo/catalogo/ost/obras.csv`, Chihiro classificada como exemplo, testes.
+  Falta: extrair e classificar o resto (vai pelo Claude local do Marcelo).
 - **Etapa 3 (encher o catálogo), histórico: EM PAUSA em 08/11/2026 (gastava muito token).** Quando voltar: Guia completo e detalhado pra
   continuar: **`docs/etapas/banco-fredify-etapa3.md`** (leia esse primeiro).
   Decisão do Marcelo: tudo de uma vez (as ~5 mil já com tags, em 11 listas) e

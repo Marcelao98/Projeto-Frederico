@@ -39,6 +39,7 @@ _ENCHIMENTO = {
     "para", "pra", "pro", "pros", "pras", "com", "no", "na", "nos", "nas", "em", "tipo", "bem",
     "muito", "mais", "clima", "cena", "hora", "estilo", "vibe", "que", "seja", "so", "aquele",
     "aquela", "aqueles", "aquelas", "esse", "essa", "isso", "lista", "playlist", "seleção", "selecao",
+    "sessao", "mesa", "momento", "parte", "galera", "jogadores", "players", "gente",
 }
 # Gêneros (famílias) que contam como "brasileira" quando a música não diz o idioma.
 _FAMILIAS_BR = {"mpb", "samba", "sertanejo", "forro", "axe", "brega", "regional-br", "funk-br",
@@ -207,6 +208,8 @@ class Catalogo:
             return 0
         if p["voz"] == "sim" and not m["tem_voz"] or p["voz"] == "nao" and m["tem_voz"]:
             return 0
+        if p.get("estavel") == "sim" and m.get("estavel") == 0:  # tem susto/pico: não serve pra fundo
+            return 0
         if any(m["tags"].get(c, 0) >= 0.8 for c in p["climas_evitar"].split("|")):
             return 0
         combina = sum(m["tags"].get(c, 0) for c in p["climas_combinam"].split("|"))
@@ -235,7 +238,7 @@ class Catalogo:
             "acustico": bool({"violao", "piano"} & set(m["tags"])),
             "sem-voz": not m["tem_voz"], "com-voz": bool(m["tem_voz"]),
             "nao-explicita": not m["explicita"], "brasileira": brasileira,
-            "internacional": not brasileira,
+            "internacional": not brasileira, "estavel": m.get("estavel") == 1,
         }.get(campo, False)
 
     # ---------- buscar ----------

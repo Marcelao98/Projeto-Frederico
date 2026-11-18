@@ -36,7 +36,8 @@ CREATE TABLE musica (
   explicita INTEGER NOT NULL DEFAULT 0,
   popularidade INTEGER NOT NULL CHECK (popularidade BETWEEN 0 AND 100),
   essencial INTEGER NOT NULL DEFAULT 0, mbid TEXT, isrc TEXT,
-  lote TEXT NOT NULL, revisar INTEGER NOT NULL DEFAULT 0, nome_original TEXT
+  lote TEXT NOT NULL, revisar INTEGER NOT NULL DEFAULT 0, nome_original TEXT,
+  estavel INTEGER CHECK (estavel IN (0,1))  -- 1 = sem susto nem pico de volume (fundo, estudo); vazio = não se sabe
 );
 
 CREATE TABLE musica_artista (
@@ -75,7 +76,8 @@ CREATE TABLE ocasiao_perfil (
   ocasiao TEXT PRIMARY KEY REFERENCES tag(id),
   generos TEXT NOT NULL, energia_min INTEGER NOT NULL, energia_max INTEGER NOT NULL,
   voz TEXT NOT NULL CHECK (voz IN ('sim','nao','qualquer')),
-  climas_combinam TEXT NOT NULL, climas_evitar TEXT NOT NULL
+  climas_combinam TEXT NOT NULL, climas_evitar TEXT NOT NULL,
+  estavel TEXT NOT NULL DEFAULT 'qualquer' CHECK (estavel IN ('sim','qualquer'))
 );
 
 CREATE VIRTUAL TABLE busca USING fts5(

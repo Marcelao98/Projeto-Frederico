@@ -40,6 +40,7 @@ class CatalogoDoApp:
         self.erro: str | None = None
         self._nomes: dict[str, str] = {}
         self._fontes: dict[str, str] = {}
+        self._obras: dict[str, str] = {}
         self._trava = threading.Lock()
 
     @property
@@ -66,7 +67,7 @@ class CatalogoDoApp:
                 carimbo, marca = self._carimbo(), self.arquivo_db.with_suffix(".carimbo")
                 memo = _JA_CARREGADO.get((str(self.pasta_csv), carimbo))
                 if memo:
-                    self.cat, self._nomes, self._fontes = memo
+                    self.cat, self._nomes, self._fontes, self._obras = memo
                     self.erro = None
                     return
                 velho = marca.read_text("utf-8") if marca.exists() else ""
@@ -76,7 +77,7 @@ class CatalogoDoApp:
                         raise ValueError(f"{len(r.erros)} erros nos CSV, o primeiro: {r.erros[0]}")
                     marca.write_text(carimbo, "utf-8")
                 self._carregar()
-                _JA_CARREGADO[(str(self.pasta_csv), carimbo)] = (self.cat, self._nomes, self._fontes)
+                _JA_CARREGADO[(str(self.pasta_csv), carimbo)] = (self.cat, self._nomes, self._fontes, self._obras)
                 self.erro = None
                 log.info("catálogo pronto: %d músicas", self.quantas)
             except Exception as e:  # noqa: BLE001 - sem catálogo o Freddy segue com o acervo antigo
@@ -101,6 +102,7 @@ class CatalogoDoApp:
         finally:
             con.close()
         self._nomes = {mid: principal.get(mid) or obra.get(m.get("obra") or "", "") for mid, m in cat.musicas.items()}
+        self._obras = obra
         self._fontes = fontes
         self.cat = cat
 
@@ -108,9 +110,13 @@ class CatalogoDoApp:
         """A música no formato da fila ({titulo, link, faixaId, origem}); None se não tem como tocar."""
         if not self.cat or mid not in self.cat.musicas or mid not in self._fontes:
             return None
-        m, de = self.cat.musicas[mid], self._nomes.get(mid, "")
-        # Música de artista vira "Artista - Título"; faixa de jogo/filme fica só com o nome.
-        titulo = f"{de} - {m['titulo']}" if de and m["artistas"] else m["titulo"]
+        m = self.cat.musicas[mid]
+        obra = self._obras.get(m.get("obra") or "")
+        if obra:  # trilha: "Greenpath (Hollow Knight)"; a origem é a obra
+            titulo, de = f"{m['titulo']} ({obra})", obra
+        else:  # música de artista: "Artista - Título"
+            de = self._nomes.get(mid, "")
+            titulo = f"{de} - {m['titulo']}" if de else m["titulo"]
         saida = {"titulo": titulo, "link": self._fontes[mid], "faixaId": mid}
         if de:
             saida["origem"] = de

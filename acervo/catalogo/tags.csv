@@ -27,6 +27,8 @@ engracado;clima;Engraçado;cômico, bobo, zoeira
 estranho;clima;Estranho;excêntrico, bizarro, experimental
 agressivo;clima;Agressivo;raiva, pancada, violento
 confiante;clima;Confiante;marra, poder, autoestima
+heroico;clima;Heroico;coragem, vitória, tema de herói
+aventureiro;clima;Aventureiro;viagem, descoberta, pé na estrada
 churrasco;ocasiao;Churrasco;
 festa;ocasiao;Festa em casa;
 balada;ocasiao;Balada;boate, pista
@@ -74,6 +76,8 @@ rpg-abertura;ocasiao;RPG: abertura da sessão;tema principal, menu
 rpg-final;ocasiao;RPG: clímax e final;desfecho, vitória
 rpg-perseguicao;ocasiao;RPG: perseguição;fuga, furtividade
 rpg-humor;ocasiao;RPG: cena cômica;
+rpg-viagem;ocasiao;RPG: viagem;estrada, cavalgada, travessia
+ler;ocasiao;Ler;leitura, sem letra
 amor;tema;Amor;declaração, carinho
 paixao;tema;Paixão;
 dor-de-cotovelo;tema;Dor de cotovelo;corno, ser deixado
@@ -130,3 +134,9 @@ templo;cenario;Templo e igreja;
 noite;cenario;Noite;lua
 espaco;cenario;Espaço e cosmos;
 cemiterio;cenario;Cemitério;
+montanha;cenario;Montanha e pico;
+pantano;cenario;Pântano e brejo;
+campo;cenario;Campo e planície;pradaria, fazenda
+vila;cenario;Vila e aldeia;
+navio;cenario;Navio e porto;
+ceu;cenario;Céu e voo;nuvens, voar, castelo no céu
