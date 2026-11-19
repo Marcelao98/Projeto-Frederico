@@ -77,6 +77,10 @@ Atualizado em 07/11/2026 (v0.6.0).
   (extrai faixas REAIS das playlists, marca, importa, confere links), 195 obras em
   `acervo/catalogo/ost/obras.csv`, Chihiro classificada como exemplo, testes.
   Falta: extrair e classificar o resto (vai pelo Claude local do Marcelo).
+- **Próxima depois das trilhas: modo Explorar** (navegar sem digitar: prateleiras
+  por uso, como estudar, ler, dormir e as cenas de RPG; filtros de voz, estável,
+  energia, clima, cenário; coleções por obra, gênero e época; cenas fixas da
+  campanha). Pedido em **`docs/etapas/explorar.md`**. Depois dele, a B2.
 - **Etapa 3 (encher o catálogo), histórico: EM PAUSA em 08/11/2026 (gastava muito token).** Quando voltar: Guia completo e detalhado pra
   continuar: **`docs/etapas/banco-fredify-etapa3.md`** (leia esse primeiro).
   Decisão do Marcelo: tudo de uma vez (as ~5 mil já com tags, em 11 listas) e
