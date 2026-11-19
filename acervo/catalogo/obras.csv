@@ -1,6 +1,9 @@
 id;nome;tipo;ano;apelidos
-bloodborne;Bloodborne;jogo;2015;
-dark-souls;Dark Souls;jogo;2011;dark souls
+bloodborne;Bloodborne;jogo;2015;souls
+dark-souls;Dark Souls;jogo;2011;dark souls|souls
+dark-souls-2;Dark Souls II;jogo;2014;dark souls 2|souls
+dark-souls-3;Dark Souls III;jogo;2016;dark souls 3|souls
+demons-souls;Demon's Souls;jogo;2020;demons souls|souls
 elden-ring;Elden Ring;jogo;2022;
 fire-emblem-three-houses;Fire Emblem: Three Houses;jogo;2019;fire emblem|fe3h|three houses|fe 3 houses
 ghibli-chihiro;A Viagem de Chihiro;filme;2001;ghibli|chihiro|spirited away
@@ -8,6 +11,7 @@ hollow-knight;Hollow Knight;jogo;2017;
 nier-automata;NieR: Automata;jogo;2017;nier|nier automata
 pokemon;Pokémon;jogo;;
 return-of-the-obra-dinn;Return of the Obra Dinn;jogo;2018;obra dinn
+sekiro;Sekiro: Shadows Die Twice;jogo;2019;sekiro|souls
 skyrim;The Elder Scrolls V: Skyrim;jogo;2011;skyrim
 spectral-sails;Spectral Sails;jogo;;
 trails-in-the-sky-3rd;The Legend of Heroes: Trails in the Sky the 3rd;jogo;2007;trails in the sky|trails

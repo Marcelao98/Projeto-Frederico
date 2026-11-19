@@ -1,200 +1,200 @@
 id;nome;tipo;ano;compositor;apelidos;grupo;meta;playlist;nota
-dark-souls;Dark Souls;jogo;2011;Motoi Sakuraba;dark souls|souls;souls;30;;
-dark-souls-2;Dark Souls II;jogo;2014;Motoi Sakuraba|Yuka Kitamura;dark souls 2|souls;souls;25;;
-dark-souls-3;Dark Souls III;jogo;2016;Yuka Kitamura|Motoi Sakuraba;dark souls 3|souls;souls;30;;
-demons-souls;Demon's Souls;jogo;2020;Shunsuke Kida;demons souls|souls;souls;20;;remake de 2020
-bloodborne;Bloodborne;jogo;2015;Ryan Amon|Yuka Kitamura;souls;souls;25;;
-sekiro;Sekiro: Shadows Die Twice;jogo;2019;Yuka Kitamura;sekiro|souls;souls;25;;
-elden-ring;Elden Ring;jogo;2022;Yuka Kitamura|Tsukasa Saitoh|Shoi Miyazawa;souls;souls;40;;
-elden-ring-shadow-of-the-erdtree;Elden Ring: Shadow of the Erdtree;jogo;2024;Yuka Kitamura|Tsukasa Saitoh;shadow of the erdtree|souls;souls;20;;
-lies-of-p;Lies of P;jogo;2023;Kim Ji-hyun;souls;souls;20;;
+dark-souls;Dark Souls;jogo;2011;Motoi Sakuraba;dark souls|souls;souls;30;https://www.youtube.com/playlist?list=PLLvRB-HVWDnhPfttHRsyLDYIpW6KBlRFI;
+dark-souls-2;Dark Souls II;jogo;2014;Motoi Sakuraba|Yuka Kitamura;dark souls 2|souls;souls;25;https://www.youtube.com/playlist?list=PLRnwItmM9-WEvPd3JvRYaHUCMlvLXT5XB;
+dark-souls-3;Dark Souls III;jogo;2016;Yuka Kitamura|Motoi Sakuraba;dark souls 3|souls;souls;30;https://www.youtube.com/playlist?list=PLRnwItmM9-WFpwLLdxhYptMOBZToEw3SL;
+demons-souls;Demon's Souls;jogo;2020;Shunsuke Kida;demons souls|souls;souls;20;https://www.youtube.com/playlist?list=PLdR7m7PFLzQ6pt-WeEi_FKfJSVd_P-vsp;remake de 2020
+bloodborne;Bloodborne;jogo;2015;Ryan Amon|Yuka Kitamura;souls;souls;25;https://www.youtube.com/playlist?list=PLMu_VPFtEvET2GC3RyKx5gxD4ng4B0YaW;
+sekiro;Sekiro: Shadows Die Twice;jogo;2019;Yuka Kitamura;sekiro|souls;souls;25;https://www.youtube.com/playlist?list=PLPfHaI9XqTnFxKoXOs30LKSLF3prWagC4;
+elden-ring;Elden Ring;jogo;2022;Yuka Kitamura|Tsukasa Saitoh|Shoi Miyazawa;souls;souls;40;https://www.youtube.com/playlist?list=PLCQUPkvDG0C9DD_qNDuW_0wx-uJY-yWw3;
+elden-ring-shadow-of-the-erdtree;Elden Ring: Shadow of the Erdtree;jogo;2024;Yuka Kitamura|Tsukasa Saitoh;shadow of the erdtree|souls;souls;20;https://www.youtube.com/playlist?list=PLbNT78Q7M14wvk7L_owzjhAW8S_aIHkSR;
+lies-of-p;Lies of P;jogo;2023;Kim Ji-hyun;souls;souls;20;https://www.youtube.com/playlist?list=PLf_Wac1Knp0XJYPUE_vLUP2unxslhHi-5;
 hollow-knight;Hollow Knight;jogo;2017;Christopher Larkin;;indie;30;https://www.youtube.com/playlist?list=PLn9UBcuEYE2JV9N1q5NyZDRrmFxXZ1k2B;
-hollow-knight-silksong;Hollow Knight: Silksong;jogo;2025;Christopher Larkin;silksong;indie;25;;
-skyrim;The Elder Scrolls V: Skyrim;jogo;2011;Jeremy Soule;skyrim|elder scrolls;rpg-ocidental;40;;
-oblivion;The Elder Scrolls IV: Oblivion;jogo;2006;Jeremy Soule;oblivion|elder scrolls;rpg-ocidental;25;;
-morrowind;The Elder Scrolls III: Morrowind;jogo;2002;Jeremy Soule;morrowind|elder scrolls;rpg-ocidental;15;;
-witcher-3;The Witcher 3: Wild Hunt;jogo;2015;Marcin Przybyłowicz|Mikolai Stroinski|Percival;witcher|witcher 3;rpg-ocidental;40;;
-baldurs-gate-3;Baldur's Gate 3;jogo;2023;Borislav Slavov;baldurs gate|bg3;rpg-ocidental;35;;
-divinity-original-sin-2;Divinity: Original Sin 2;jogo;2017;Borislav Slavov;divinity;rpg-ocidental;25;;
-dragon-age-origins;Dragon Age: Origins;jogo;2009;Inon Zur;dragon age;rpg-ocidental;20;;
-dragon-age-inquisition;Dragon Age: Inquisition;jogo;2014;Trevor Morris;dragon age;rpg-ocidental;20;;
-mass-effect;Mass Effect;jogo;2007;Jack Wall|Sam Hulick;mass effect;rpg-ocidental;20;;
-pillars-of-eternity;Pillars of Eternity;jogo;2015;Justin Bell;pillars;rpg-ocidental;20;;
-pathfinder-wrath;Pathfinder: Wrath of the Righteous;jogo;2021;Dmitry Silantyev;pathfinder;rpg-ocidental;20;;
-neverwinter-nights;Neverwinter Nights;jogo;2002;Jeremy Soule;neverwinter;rpg-ocidental;15;;
-diablo-2;Diablo II;jogo;2000;Matt Uelmen;diablo;rpg-ocidental;20;;
-diablo-4;Diablo IV;jogo;2023;Ted Reedy|Ian Dicke|Matt Uelmen;diablo;rpg-ocidental;20;;
-fallout-new-vegas;Fallout: New Vegas;jogo;2010;Inon Zur;fallout;rpg-ocidental;15;;
-kingdom-come;Kingdom Come: Deliverance;jogo;2018;Jan Valta|Adam Sporka;kingdom come;rpg-ocidental;25;;
-dragons-dogma-2;Dragon's Dogma 2;jogo;2024;Tadayoshi Makino;dragons dogma;rpg-ocidental;20;;
-final-fantasy-vi;Final Fantasy VI;jogo;1994;Nobuo Uematsu;final fantasy|ff6;jrpg;30;;
-final-fantasy-vii;Final Fantasy VII;jogo;1997;Nobuo Uematsu;final fantasy|ff7;jrpg;35;;
-final-fantasy-vii-remake;Final Fantasy VII Remake;jogo;2020;Masashi Hamauzu|Mitsuto Suzuki;final fantasy|ff7 remake;jrpg;25;;
-final-fantasy-ix;Final Fantasy IX;jogo;2000;Nobuo Uematsu;final fantasy|ff9;jrpg;30;;
-final-fantasy-x;Final Fantasy X;jogo;2001;Nobuo Uematsu|Masashi Hamauzu|Junya Nakano;final fantasy|ff10;jrpg;30;;
-final-fantasy-xii;Final Fantasy XII;jogo;2006;Hitoshi Sakimoto;final fantasy|ff12;jrpg;20;;
-final-fantasy-xiv;Final Fantasy XIV;jogo;2013;Masayoshi Soken;final fantasy|ff14;mmo;40;;
-final-fantasy-xvi;Final Fantasy XVI;jogo;2023;Masayoshi Soken;final fantasy|ff16;jrpg;25;;
-chrono-trigger;Chrono Trigger;jogo;1995;Yasunori Mitsuda|Nobuo Uematsu;chrono;jrpg;30;;
-chrono-cross;Chrono Cross;jogo;1999;Yasunori Mitsuda;chrono;jrpg;25;;
-xenogears;Xenogears;jogo;1998;Yasunori Mitsuda;xeno;jrpg;20;;
-xenoblade-chronicles;Xenoblade Chronicles;jogo;2010;Yoko Shimomura|Yasunori Mitsuda|ACE+;xenoblade;jrpg;30;;
-xenoblade-chronicles-2;Xenoblade Chronicles 2;jogo;2017;Yasunori Mitsuda|ACE|Kenji Hiramatsu|Manami Kiyota;xenoblade;jrpg;25;;
-xenoblade-chronicles-3;Xenoblade Chronicles 3;jogo;2022;Yasunori Mitsuda|ACE|Kenji Hiramatsu|Manami Kiyota;xenoblade;jrpg;25;;
-persona-5;Persona 5;jogo;2016;Shoji Meguro;persona;jrpg;25;;muita com voz
-persona-4;Persona 4;jogo;2008;Shoji Meguro;persona;jrpg;20;;muita com voz
-dragon-quest-xi;Dragon Quest XI;jogo;2017;Koichi Sugiyama;dragon quest;jrpg;25;;
-kingdom-hearts;Kingdom Hearts;jogo;2002;Yoko Shimomura;kingdom hearts;jrpg;25;;
-kingdom-hearts-2;Kingdom Hearts II;jogo;2005;Yoko Shimomura;kingdom hearts;jrpg;25;;
-nier-automata;NieR: Automata;jogo;2017;Keiichi Okabe;nier;jrpg;30;;muita com voz
-nier-replicant;NieR Replicant;jogo;2010;Keiichi Okabe;nier;jrpg;25;;muita com voz
-octopath-traveler;Octopath Traveler;jogo;2018;Yasunori Nishiki;octopath;jrpg;30;;
-octopath-traveler-2;Octopath Traveler II;jogo;2023;Yasunori Nishiki;octopath;jrpg;25;;
-tales-of-symphonia;Tales of Symphonia;jogo;2003;Motoi Sakuraba|Shinji Tamura;tales of;jrpg;20;;
-ys-viii;Ys VIII: Lacrimosa of Dana;jogo;2016;Falcom Sound Team jdk;ys;jrpg;20;;
-trails-in-the-sky;The Legend of Heroes: Trails in the Sky;jogo;2004;Falcom Sound Team jdk;trails in the sky|trails;jrpg;25;;
-trails-in-the-sky-3rd;The Legend of Heroes: Trails in the Sky the 3rd;jogo;2007;Falcom Sound Team jdk;trails in the sky|trails;jrpg;15;;
-fire-emblem-three-houses;Fire Emblem: Three Houses;jogo;2019;Takeru Kanazaki|Hiroki Morishita|Rei Kondoh;fire emblem|fe3h;jrpg;20;;
-fire-emblem-path-of-radiance;Fire Emblem: Path of Radiance;jogo;2005;Yoshito Hirano|Saki Haruyama;fire emblem;jrpg;15;;
-secret-of-mana;Secret of Mana;jogo;1993;Hiroki Kikuta;mana;jrpg;20;;
-golden-sun;Golden Sun;jogo;2001;Motoi Sakuraba;golden sun;jrpg;20;;
-earthbound;EarthBound;jogo;1994;Keiichi Suzuki|Hirokazu Tanaka;earthbound|mother;jrpg;15;;
-pokemon;Pokémon;jogo;1996;Junichi Masuda|Go Ichinose;pokemon;nintendo;30;;várias gerações: o RPG antigo já tem algumas
-zelda-ocarina-of-time;The Legend of Zelda: Ocarina of Time;jogo;1998;Koji Kondo;zelda|ocarina of time;nintendo;30;;
-zelda-majoras-mask;The Legend of Zelda: Majora's Mask;jogo;2000;Koji Kondo|Toru Minegishi;zelda|majora;nintendo;20;;
-zelda-wind-waker;The Legend of Zelda: The Wind Waker;jogo;2002;Kenta Nagata|Hajime Wakai|Toru Minegishi|Koji Kondo;zelda|wind waker;nintendo;25;;
-zelda-twilight-princess;The Legend of Zelda: Twilight Princess;jogo;2006;Toru Minegishi|Asuka Ohta;zelda|twilight princess;nintendo;25;;
-zelda-skyward-sword;The Legend of Zelda: Skyward Sword;jogo;2011;Hajime Wakai|Shiho Fujii|Mahito Yokota;zelda|skyward sword;nintendo;20;;
-zelda-breath-of-the-wild;The Legend of Zelda: Breath of the Wild;jogo;2017;Manaka Kataoka|Yasuaki Iwata|Hajime Wakai;zelda|botw|breath of the wild;nintendo;35;;
-zelda-tears-of-the-kingdom;The Legend of Zelda: Tears of the Kingdom;jogo;2023;Manaka Kataoka|Maasa Miyoshi|Tsukasa Usui;zelda|totk|tears of the kingdom;nintendo;30;;
-super-mario-galaxy;Super Mario Galaxy;jogo;2007;Mahito Yokota|Koji Kondo;mario;nintendo;20;;
-metroid-prime;Metroid Prime;jogo;2002;Kenji Yamamoto|Kouichi Kyuma;metroid;nintendo;20;;
-donkey-kong-country;Donkey Kong Country;jogo;1994;David Wise|Eveline Fischer|Robin Beanland;donkey kong;nintendo;15;;
-animal-crossing-new-horizons;Animal Crossing: New Horizons;jogo;2020;Kazumi Totaka|Yasuaki Iwata|Yumi Takahashi;animal crossing;nintendo;25;;bom pra estudar
-minecraft;Minecraft;jogo;2011;C418|Lena Raine;minecraft;indie;30;;bom pra estudar
-terraria;Terraria;jogo;2011;Scott Lloyd Shelly;terraria;indie;20;;
-stardew-valley;Stardew Valley;jogo;2016;ConcernedApe;stardew;indie;30;;bom pra estudar
-undertale;Undertale;jogo;2015;Toby Fox;undertale;indie;30;;chiptune
-deltarune;Deltarune;jogo;2018;Toby Fox;deltarune;indie;25;;chiptune
-celeste;Celeste;jogo;2018;Lena Raine;celeste;indie;20;;
-hades;Hades;jogo;2020;Darren Korb;hades;indie;30;;
-hades-2;Hades II;jogo;2025;Darren Korb;hades;indie;25;;
-bastion;Bastion;jogo;2011;Darren Korb;bastion;indie;15;;
-transistor;Transistor;jogo;2014;Darren Korb;transistor;indie;15;;
-pyre;Pyre;jogo;2017;Darren Korb;pyre;indie;15;;
-ori-blind-forest;Ori and the Blind Forest;jogo;2015;Gareth Coker;ori;indie;20;;
-ori-will-of-the-wisps;Ori and the Will of the Wisps;jogo;2020;Gareth Coker;ori;indie;25;;
-journey;Journey;jogo;2012;Austin Wintory;journey;indie;15;;
-darkest-dungeon;Darkest Dungeon;jogo;2016;Stuart Chatwood;darkest dungeon;indie;20;;
-darkest-dungeon-2;Darkest Dungeon II;jogo;2023;Stuart Chatwood;darkest dungeon;indie;15;;
-slay-the-spire;Slay the Spire;jogo;2019;Clark Aboud;slay the spire;indie;10;;
-dead-cells;Dead Cells;jogo;2018;Yoann Laulan;dead cells;indie;20;;
-outer-wilds;Outer Wilds;jogo;2019;Andrew Prahlow;outer wilds;indie;20;;
-gris;GRIS;jogo;2018;Berlinist;gris;indie;15;;
-tunic;Tunic;jogo;2022;Lifeformed|Janice Kwan;tunic;indie;20;;
-cuphead;Cuphead;jogo;2017;Kristofer Maddigan;cuphead;indie;20;;jazz e swing
-shovel-knight;Shovel Knight;jogo;2014;Jake Kaufman|Manami Matsumae;shovel knight;indie;15;;chiptune
-the-legend-of-zelda-link-to-the-past;The Legend of Zelda: A Link to the Past;jogo;1991;Koji Kondo;zelda;nintendo;15;;
-spiritfarer;Spiritfarer;jogo;2020;Max LL;spiritfarer;indie;20;;
-sea-of-stars;Sea of Stars;jogo;2023;Eric W. Brown|Yasunori Mitsuda;sea of stars;indie;25;;
-return-of-the-obra-dinn;Return of the Obra Dinn;jogo;2018;Lucas Pope;obra dinn;indie;10;;
-inscryption;Inscryption;jogo;2021;Jonah Senzel;inscryption;indie;15;;
-disco-elysium;Disco Elysium;jogo;2019;British Sea Power;disco elysium;rpg-ocidental;20;;
-pentiment;Pentiment;jogo;2022;Alkemie;pentiment;rpg-ocidental;15;;medieval
-silent-hill-2;Silent Hill 2;jogo;2001;Akira Yamaoka;silent hill;terror;25;;
-silent-hill;Silent Hill;jogo;1999;Akira Yamaoka;silent hill;terror;15;;
-resident-evil-4;Resident Evil 4;jogo;2005;Misao Senbongi|Shusaku Uchiyama;resident evil;terror;15;;
-resident-evil-village;Resident Evil Village;jogo;2021;Shusaku Uchiyama;resident evil;terror;20;;
-amnesia-the-dark-descent;Amnesia: The Dark Descent;jogo;2010;Mikko Tarmia;amnesia;terror;15;;
-dead-space;Dead Space;jogo;2008;Jason Graves;dead space;terror;15;;
-bloodborne-the-old-hunters;Bloodborne: The Old Hunters;jogo;2015;Yuka Kitamura|Tsukasa Saitoh;souls;souls;10;;
-dredge;Dredge;jogo;2023;Ben Prunty;dredge;terror;15;;
-signalis;Signalis;jogo;2022;1000 Eyes;signalis;terror;15;;
-alan-wake-2;Alan Wake 2;jogo;2023;Petri Alanko;alan wake;terror;15;;
-world-of-warcraft;World of Warcraft;jogo;2004;Jason Hayes|Tracy W. Bush|Derek Duke|Glenn Stafford;wow|warcraft;mmo;40;;
-wow-wrath-of-the-lich-king;World of Warcraft: Wrath of the Lich King;jogo;2008;Russell Brower|Derek Duke|Glenn Stafford;wow|warcraft|lich king;mmo;20;;
-guild-wars-2;Guild Wars 2;jogo;2012;Jeremy Soule|Maclaine Diemer;guild wars;mmo;25;;
-lord-of-the-rings-online;The Lord of the Rings Online;jogo;2007;Chance Thomas;lotro;mmo;20;;
-old-school-runescape;Old School RuneScape;jogo;2013;Ian Taylor;runescape;mmo;25;;
-warcraft-3;Warcraft III;jogo;2002;Jason Hayes|Tracy W. Bush|Derek Duke|Glenn Stafford;warcraft;estrategia;20;;
-age-of-empires-2;Age of Empires II;jogo;1999;Stephen Rippy|Kevin McMullan;age of empires;estrategia;15;;
-civilization-vi;Civilization VI;jogo;2016;Geoff Knorr|Phill Boucher|Christopher Tin;civilization|civ;estrategia;25;;
-heroes-of-might-and-magic-3;Heroes of Might and Magic III;jogo;1999;Paul Romero|Rob King|Steve Baca;heroes|homm3;estrategia;20;;
-starcraft-2;StarCraft II;jogo;2010;Russell Brower|Derek Duke|Glenn Stafford;starcraft;estrategia;15;;
-frostpunk;Frostpunk;jogo;2018;Piotr Musiał;frostpunk;estrategia;15;;
-total-war-warhammer-2;Total War: Warhammer II;jogo;2017;Richard Beddow;warhammer;estrategia;15;;
-red-dead-redemption-2;Red Dead Redemption 2;jogo;2018;Woody Jackson;red dead|rdr2;aventura;25;;faroeste
-red-dead-redemption;Red Dead Redemption;jogo;2010;Bill Elm|Woody Jackson;red dead;aventura;15;;faroeste
-god-of-war;God of War;jogo;2018;Bear McCreary;god of war;aventura;25;;nórdico
-god-of-war-ragnarok;God of War Ragnarök;jogo;2022;Bear McCreary;god of war;aventura;20;;nórdico
-ghost-of-tsushima;Ghost of Tsushima;jogo;2020;Ilan Eshkeri|Shigeru Umebayashi;ghost of tsushima;aventura;25;;japão feudal
-the-last-of-us;The Last of Us;jogo;2013;Gustavo Santaolalla;last of us;aventura;20;;
-horizon-zero-dawn;Horizon Zero Dawn;jogo;2017;Joris de Man|The Flight|Niels van der Leest;horizon;aventura;20;;
-shadow-of-the-colossus;Shadow of the Colossus;jogo;2005;Kow Otani;colossus;aventura;20;;
-assassins-creed-ii;Assassin's Creed II;jogo;2009;Jesper Kyd;assassins creed;aventura;15;;
-assassins-creed-valhalla;Assassin's Creed Valhalla;jogo;2020;Jesper Kyd|Sarah Schachner|Einar Selvik;assassins creed|valhalla;aventura;20;;nórdico
-hellblade;Hellblade: Senua's Sacrifice;jogo;2017;David García Díaz|Andy LaPlegua;hellblade;aventura;10;;nórdico
-monster-hunter-world;Monster Hunter: World;jogo;2018;Akihiko Narita|Zhenlan Kang|Yuko Komiyama;monster hunter;aventura;20;;
-genshin-impact;Genshin Impact;jogo;2020;Yu-Peng Chen|HOYO-MiX;genshin;aventura;40;;
-honkai-star-rail;Honkai: Star Rail;jogo;2023;HOYO-MiX;star rail;aventura;20;;
-valheim;Valheim;jogo;2021;Patrik Jarlestam;valheim;aventura;15;;nórdico
-sea-of-thieves;Sea of Thieves;jogo;2018;Robin Beanland;sea of thieves|pirata;aventura;20;;taverna de pirata
-the-banner-saga;The Banner Saga;jogo;2014;Austin Wintory;banner saga;aventura;15;;nórdico
-adrian-von-ziegler;Adrian von Ziegler;álbum;;Adrian von Ziegler;celta|medieval|fantasia;ambiente-de-mesa;30;;celta e fantasia: fundo de mesa
-derek-brandon-fiechter;Derek & Brandon Fiechter;álbum;;Derek Fiechter|Brandon Fiechter|Derek & Brandon Fiechter;medieval|fantasia|taverna;ambiente-de-mesa;40;;taverna, vila, floresta encantada, masmorra
-peter-gundry;Peter Gundry;álbum;;Peter Gundry;fantasia|sombrio;ambiente-de-mesa;20;;fantasia sombria
-brunuhville;Brunuhville;álbum;;Brunuhville;celta|fantasia;ambiente-de-mesa;20;;
-michael-ghelfi;Michael Ghelfi;álbum;;Michael Ghelfi;rpg|ambiente;ambiente-de-mesa;30;;feito pra mesa de RPG
-two-steps-from-hell;Two Steps from Hell;álbum;;Thomas Bergersen|Nick Phoenix;two steps|epica;epica;40;;música épica de trailer
+hollow-knight-silksong;Hollow Knight: Silksong;jogo;2025;Christopher Larkin;silksong;indie;25;https://www.youtube.com/playlist?list=PLgZBA0L-jo6PJH_9MF9C91fVDhYER-v2O;
+skyrim;The Elder Scrolls V: Skyrim;jogo;2011;Jeremy Soule;skyrim|elder scrolls;rpg-ocidental;40;https://www.youtube.com/playlist?list=PL4U5cVyXyHJlQbIwSdudmIG9LJjHi-HDt;
+oblivion;The Elder Scrolls IV: Oblivion;jogo;2006;Jeremy Soule;oblivion|elder scrolls;rpg-ocidental;25;https://www.youtube.com/playlist?list=PLkyE8Mq1liW38nRM6pXzj00RhEFJRqDJE;
+morrowind;The Elder Scrolls III: Morrowind;jogo;2002;Jeremy Soule;morrowind|elder scrolls;rpg-ocidental;15;https://www.youtube.com/playlist?list=PLo3x2ZmbuEatDZJxJZhmImElsYfrj_69h;
+witcher-3;The Witcher 3: Wild Hunt;jogo;2015;Marcin Przybyłowicz|Mikolai Stroinski|Percival;witcher|witcher 3;rpg-ocidental;40;https://www.youtube.com/playlist?list=PL1ij2T_0HM3TnXecXuyqMgYUB5sHyY1ri;
+baldurs-gate-3;Baldur's Gate 3;jogo;2023;Borislav Slavov;baldurs gate|bg3;rpg-ocidental;35;https://www.youtube.com/playlist?list=PLuiE5nl-czOHWZ2PxifUOKKAz4BSJbA56;
+divinity-original-sin-2;Divinity: Original Sin 2;jogo;2017;Borislav Slavov;divinity;rpg-ocidental;25;https://www.youtube.com/playlist?list=PL-qmRax74ix7nLcyoCnSvdGI1lhovPNWB;
+dragon-age-origins;Dragon Age: Origins;jogo;2009;Inon Zur;dragon age;rpg-ocidental;20;https://www.youtube.com/playlist?list=PL0smL-Kfec7SmVpV6w1-SZvrORUn_Lrmy;
+dragon-age-inquisition;Dragon Age: Inquisition;jogo;2014;Trevor Morris;dragon age;rpg-ocidental;20;https://www.youtube.com/playlist?list=PLwd8MZnXchQf1bFHraP-l4GYmskQZvy5b;
+mass-effect;Mass Effect;jogo;2007;Jack Wall|Sam Hulick;mass effect;rpg-ocidental;20;https://www.youtube.com/playlist?list=PLUlSUZtD7T6h42GjMYceRJqCdmCsZC2Om;
+pillars-of-eternity;Pillars of Eternity;jogo;2015;Justin Bell;pillars;rpg-ocidental;20;https://www.youtube.com/playlist?list=PLtStx0VRuZq1lioBFKmWRvh4-cmKsRnQe;
+pathfinder-wrath;Pathfinder: Wrath of the Righteous;jogo;2021;Dmitry Silantyev;pathfinder;rpg-ocidental;20;https://www.youtube.com/playlist?list=PLH9gcgcRlGoU;
+neverwinter-nights;Neverwinter Nights;jogo;2002;Jeremy Soule;neverwinter;rpg-ocidental;15;https://www.youtube.com/playlist?list=PLAMGM1hSRIUojpGz2TlXyBesgmgQnV3Hi;
+diablo-2;Diablo II;jogo;2000;Matt Uelmen;diablo;rpg-ocidental;20;https://www.youtube.com/playlist?list=PLDncyqgTM9PIzmAoi_rgWBUXvrtdTiKFb;
+diablo-4;Diablo IV;jogo;2023;Ted Reedy|Ian Dicke|Matt Uelmen;diablo;rpg-ocidental;20;https://www.youtube.com/playlist?list=PLQMUJxOXCUsML2ay9znNs7uO0CCmzKPyq;
+fallout-new-vegas;Fallout: New Vegas;jogo;2010;Inon Zur;fallout;rpg-ocidental;15;https://www.youtube.com/playlist?list=PLXIU9mpT9-00OIK5m6bILIWkjHwpka6a9;
+kingdom-come;Kingdom Come: Deliverance;jogo;2018;Jan Valta|Adam Sporka;kingdom come;rpg-ocidental;25;https://www.youtube.com/playlist?list=PLC-MQNsGyHQOrndX1sbaqaWfl-7lvB2bq;
+dragons-dogma-2;Dragon's Dogma 2;jogo;2024;Tadayoshi Makino;dragons dogma;rpg-ocidental;20;https://www.youtube.com/playlist?list=PLer5UtBCZiMzt3gk6UbWJ3n1cvX8eVKID;
+final-fantasy-vi;Final Fantasy VI;jogo;1994;Nobuo Uematsu;final fantasy|ff6;jrpg;30;https://www.youtube.com/playlist?list=PLW5TU1I1rhKK0cvSFsqqll7DAPv8fqxcv;
+final-fantasy-vii;Final Fantasy VII;jogo;1997;Nobuo Uematsu;final fantasy|ff7;jrpg;35;https://www.youtube.com/playlist?list=PLOLBWlPQqPkvF5Abs5eZiX_EBLaDDueMq;
+final-fantasy-vii-remake;Final Fantasy VII Remake;jogo;2020;Masashi Hamauzu|Mitsuto Suzuki;final fantasy|ff7 remake;jrpg;25;https://www.youtube.com/playlist?list=PLOLBWlPQqPkvF5Abs5eZiX_EBLaDDueMq;
+final-fantasy-ix;Final Fantasy IX;jogo;2000;Nobuo Uematsu;final fantasy|ff9;jrpg;30;https://www.youtube.com/playlist?list=PL3TBX1zaG3SCEhSKKW4iZQNlCk6-EMCtN;
+final-fantasy-x;Final Fantasy X;jogo;2001;Nobuo Uematsu|Masashi Hamauzu|Junya Nakano;final fantasy|ff10;jrpg;30;https://www.youtube.com/playlist?list=PLfz_hJVX_SSJKLAF7rjXHo6uDTnOGOUYr;
+final-fantasy-xii;Final Fantasy XII;jogo;2006;Hitoshi Sakimoto;final fantasy|ff12;jrpg;20;https://www.youtube.com/playlist?list=PLp_nLDzWK5NVlo4e-cd2HA02ts0HjtsKP;
+final-fantasy-xiv;Final Fantasy XIV;jogo;2013;Masayoshi Soken;final fantasy|ff14;mmo;40;https://www.youtube.com/playlist?list=PLOfnNkBu30bLj4AvIyeHjuhP4_YnmhpB0;
+final-fantasy-xvi;Final Fantasy XVI;jogo;2023;Masayoshi Soken;final fantasy|ff16;jrpg;25;https://www.youtube.com/playlist?list=PLOLBWlPQqPks3QoCfi_ehxbXcqvk3fpWn;
+chrono-trigger;Chrono Trigger;jogo;1995;Yasunori Mitsuda|Nobuo Uematsu;chrono;jrpg;30;https://www.youtube.com/playlist?list=PLj0xfb_D-VPQXC8afIl6oH2fs9TVCrknn;
+chrono-cross;Chrono Cross;jogo;1999;Yasunori Mitsuda;chrono;jrpg;25;https://www.youtube.com/playlist?list=PLloY2PAKSNv81uwzMLXlCZx_88DtDWnoZ;
+xenogears;Xenogears;jogo;1998;Yasunori Mitsuda;xeno;jrpg;20;https://www.youtube.com/playlist?list=PLAhS3AgXczdcpqZ8w5oty5hEoMu9xvcXv;
+xenoblade-chronicles;Xenoblade Chronicles;jogo;2010;Yoko Shimomura|Yasunori Mitsuda|ACE+;xenoblade;jrpg;30;https://www.youtube.com/playlist?list=PLtABhJ7ReUovFjjrve9V5yN11UgeeKiO7;
+xenoblade-chronicles-2;Xenoblade Chronicles 2;jogo;2017;Yasunori Mitsuda|ACE|Kenji Hiramatsu|Manami Kiyota;xenoblade;jrpg;25;https://www.youtube.com/playlist?list=PLIpqsKgkQEvMUFbngp-GbW1JwDGXnxcm9;
+xenoblade-chronicles-3;Xenoblade Chronicles 3;jogo;2022;Yasunori Mitsuda|ACE|Kenji Hiramatsu|Manami Kiyota;xenoblade;jrpg;25;https://www.youtube.com/playlist?list=PLtABhJ7ReUovFjjrve9V5yN11UgeeKiO7;
+persona-5;Persona 5;jogo;2016;Shoji Meguro;persona;jrpg;25;https://www.youtube.com/playlist?list=PLdi1k-fvyUmyYF6et3USlTdEb7IaiGccz;muita com voz
+persona-4;Persona 4;jogo;2008;Shoji Meguro;persona;jrpg;20;https://www.youtube.com/playlist?list=PLu-p0PFllCA3n-oQDF-W4oQHZaKQ_bPoP;muita com voz
+dragon-quest-xi;Dragon Quest XI;jogo;2017;Koichi Sugiyama;dragon quest;jrpg;25;https://www.youtube.com/playlist?list=PLdaHf7eG-NSw76h6nLxT4UZqX0XV9QKMT;
+kingdom-hearts;Kingdom Hearts;jogo;2002;Yoko Shimomura;kingdom hearts;jrpg;25;https://www.youtube.com/playlist?list=PLLjVQB3Zw-Mstf6WRFYsq22VmswJr-iu3;
+kingdom-hearts-2;Kingdom Hearts II;jogo;2005;Yoko Shimomura;kingdom hearts;jrpg;25;https://www.youtube.com/playlist?list=PL6F3A3948DB91919F;
+nier-automata;NieR: Automata;jogo;2017;Keiichi Okabe;nier;jrpg;30;https://www.youtube.com/playlist?list=PLOLBWlPQqPkvzIqllFjSeLunVAeJExoMB;muita com voz
+nier-replicant;NieR Replicant;jogo;2010;Keiichi Okabe;nier;jrpg;25;https://www.youtube.com/playlist?list=PLdR7m7PFLzQ644Vx63V9pWj8o8Yi70yBq;muita com voz
+octopath-traveler;Octopath Traveler;jogo;2018;Yasunori Nishiki;octopath;jrpg;30;https://www.youtube.com/playlist?list=PLf9GGFFS3CIHl3i0RyPJHEAOazNmw6oae;
+octopath-traveler-2;Octopath Traveler II;jogo;2023;Yasunori Nishiki;octopath;jrpg;25;https://www.youtube.com/playlist?list=PLBO2h-GzDvIaprNBBrVKjk-x_VMco1l7a;
+tales-of-symphonia;Tales of Symphonia;jogo;2003;Motoi Sakuraba|Shinji Tamura;tales of;jrpg;20;https://www.youtube.com/playlist?list=PLFqTvOsjFbRo7py81ctbtJ750DfgQ8MiH;
+ys-viii;Ys VIII: Lacrimosa of Dana;jogo;2016;Falcom Sound Team jdk;ys;jrpg;20;https://www.youtube.com/playlist?list=PLGmJuEjPWDj0;
+trails-in-the-sky;The Legend of Heroes: Trails in the Sky;jogo;2004;Falcom Sound Team jdk;trails in the sky|trails;jrpg;25;https://www.youtube.com/playlist?list=PLPDoxoGA-MPQX6G_praYBdPDpM4VEbvdR;
+trails-in-the-sky-3rd;The Legend of Heroes: Trails in the Sky the 3rd;jogo;2007;Falcom Sound Team jdk;trails in the sky|trails;jrpg;15;https://www.youtube.com/playlist?list=PLj7lBDtO8mPBTtn07CIN4eBtyIPGaMIq6;
+fire-emblem-three-houses;Fire Emblem: Three Houses;jogo;2019;Takeru Kanazaki|Hiroki Morishita|Rei Kondoh;fire emblem|fe3h;jrpg;20;https://www.youtube.com/playlist?list=PLQ7qfSuBLiH4;
+fire-emblem-path-of-radiance;Fire Emblem: Path of Radiance;jogo;2005;Yoshito Hirano|Saki Haruyama;fire emblem;jrpg;15;https://www.youtube.com/playlist?list=PL94B3BDBA2D03B783;
+secret-of-mana;Secret of Mana;jogo;1993;Hiroki Kikuta;mana;jrpg;20;https://www.youtube.com/playlist?list=PLKNuUcvZGX21PZw69AGVSFev37kU-F0fw;
+golden-sun;Golden Sun;jogo;2001;Motoi Sakuraba;golden sun;jrpg;20;https://www.youtube.com/playlist?list=PLCD5E70634946E090;
+earthbound;EarthBound;jogo;1994;Keiichi Suzuki|Hirokazu Tanaka;earthbound|mother;jrpg;15;https://www.youtube.com/playlist?list=PL1kU0pk5M3GCwzveqamX71sW3RmCzuXB5;
+pokemon;Pokémon;jogo;1996;Junichi Masuda|Go Ichinose;pokemon;nintendo;30;https://www.youtube.com/playlist?list=PLZ0CBSZb0p0ZxmS4x96YeuetEyekhI5oD;várias gerações: o RPG antigo já tem algumas
+zelda-ocarina-of-time;The Legend of Zelda: Ocarina of Time;jogo;1998;Koji Kondo;zelda|ocarina of time;nintendo;30;https://www.youtube.com/playlist?list=PL2uxd6YWj7PLnmN6et4PrTDwsGupC0-cI;
+zelda-majoras-mask;The Legend of Zelda: Majora's Mask;jogo;2000;Koji Kondo|Toru Minegishi;zelda|majora;nintendo;20;https://www.youtube.com/playlist?list=PLWeCcixVkuYZ9Fun16eKi3x72flKKyL1s;
+zelda-wind-waker;The Legend of Zelda: The Wind Waker;jogo;2002;Kenta Nagata|Hajime Wakai|Toru Minegishi|Koji Kondo;zelda|wind waker;nintendo;25;https://www.youtube.com/playlist?list=PLgQYCDwtVg4e6zO_OBAIlON1LJLRrXC1y;
+zelda-twilight-princess;The Legend of Zelda: Twilight Princess;jogo;2006;Toru Minegishi|Asuka Ohta;zelda|twilight princess;nintendo;25;https://www.youtube.com/playlist?list=PLnpxa8AqNfnnQpPecD43VJxfh59qGaJV9;
+zelda-skyward-sword;The Legend of Zelda: Skyward Sword;jogo;2011;Hajime Wakai|Shiho Fujii|Mahito Yokota;zelda|skyward sword;nintendo;20;https://www.youtube.com/playlist?list=PLsbeHpoCbi__ZGD3S9eY07DK2vI6m8Kbn;
+zelda-breath-of-the-wild;The Legend of Zelda: Breath of the Wild;jogo;2017;Manaka Kataoka|Yasuaki Iwata|Hajime Wakai;zelda|botw|breath of the wild;nintendo;35;https://www.youtube.com/playlist?list=PLh4Eme5gACZEAazTK1vSZn3DCYJLQ4YHH;
+zelda-tears-of-the-kingdom;The Legend of Zelda: Tears of the Kingdom;jogo;2023;Manaka Kataoka|Maasa Miyoshi|Tsukasa Usui;zelda|totk|tears of the kingdom;nintendo;30;https://www.youtube.com/playlist?list=PL2P_YMgOOlgWUTXdNw3o3UstuN110zGb2;
+super-mario-galaxy;Super Mario Galaxy;jogo;2007;Mahito Yokota|Koji Kondo;mario;nintendo;20;https://www.youtube.com/playlist?list=PLC583980D7806298E;
+metroid-prime;Metroid Prime;jogo;2002;Kenji Yamamoto|Kouichi Kyuma;metroid;nintendo;20;https://www.youtube.com/playlist?list=PLFc1QdF4waT9iB1PC_pJSTGGQgPmjuch_;
+donkey-kong-country;Donkey Kong Country;jogo;1994;David Wise|Eveline Fischer|Robin Beanland;donkey kong;nintendo;15;https://www.youtube.com/playlist?list=PL5mxANW_zapcHgzchM5V-O_ZDJbfFcwvA;
+animal-crossing-new-horizons;Animal Crossing: New Horizons;jogo;2020;Kazumi Totaka|Yasuaki Iwata|Yumi Takahashi;animal crossing;nintendo;25;https://www.youtube.com/playlist?list=PLnM4qYUiXrxzGAXHhVVDCMRekz4lfBGdY;bom pra estudar
+minecraft;Minecraft;jogo;2011;C418|Lena Raine;minecraft;indie;30;https://www.youtube.com/playlist?list=PLefKpFQ8Pvy5aCLAGHD8Zmzsdljos-t2l;bom pra estudar
+terraria;Terraria;jogo;2011;Scott Lloyd Shelly;terraria;indie;20;https://www.youtube.com/playlist?list=PLKUcDyFltysbMbHg1-zuvNsMDQxK0qDFC;
+stardew-valley;Stardew Valley;jogo;2016;ConcernedApe;stardew;indie;30;https://www.youtube.com/playlist?list=PLk4XkX-kSOCkLAU4lDxYnzXVR8Zbxffub;bom pra estudar
+undertale;Undertale;jogo;2015;Toby Fox;undertale;indie;30;https://www.youtube.com/playlist?list=PLk6GfnnReuMv-Wye8jHIx1Yh_Af4PB_Iy;chiptune
+deltarune;Deltarune;jogo;2018;Toby Fox;deltarune;indie;25;https://www.youtube.com/playlist?list=PLwjEXrvFo-2B7iCX61eOThc_oGihi84l9;chiptune
+celeste;Celeste;jogo;2018;Lena Raine;celeste;indie;20;https://www.youtube.com/playlist?list=PLjggKtuoASrKPgbzWglGPfeOy8b86DLK_;
+hades;Hades;jogo;2020;Darren Korb;hades;indie;30;https://www.youtube.com/playlist?list=PL53mjgVKFq7yeq21XhibC8izNSVlPCsNP;
+hades-2;Hades II;jogo;2025;Darren Korb;hades;indie;25;https://www.youtube.com/playlist?list=PL53mjgVKFq7yeq21XhibC8izNSVlPCsNP;
+bastion;Bastion;jogo;2011;Darren Korb;bastion;indie;15;https://www.youtube.com/playlist?list=PLsiYxyEd4qcmkfk3ulrI2BAElTggvmLA_;
+transistor;Transistor;jogo;2014;Darren Korb;transistor;indie;15;https://www.youtube.com/playlist?list=PL53mjgVKFq7x63ke-WLKrowba3mdSEJMf;
+pyre;Pyre;jogo;2017;Darren Korb;pyre;indie;15;https://www.youtube.com/playlist?list=PL-sQLdMs8wXHMydvddSqZIXCPSGndLfOR;
+ori-blind-forest;Ori and the Blind Forest;jogo;2015;Gareth Coker;ori;indie;20;https://www.youtube.com/playlist?list=PLBO2h-GzDvIZLpol2FZgsZwJ7bRDSSEMF;
+ori-will-of-the-wisps;Ori and the Will of the Wisps;jogo;2020;Gareth Coker;ori;indie;25;https://www.youtube.com/playlist?list=PLS19zOYsmnkwokOUuQC0Kw0M8HAdtWVYj;
+journey;Journey;jogo;2012;Austin Wintory;journey;indie;15;https://www.youtube.com/playlist?list=PL60408EBD7150DDA5;
+darkest-dungeon;Darkest Dungeon;jogo;2016;Stuart Chatwood;darkest dungeon;indie;20;https://www.youtube.com/playlist?list=PLku299YGCMzi0uATC0uEv7Rx-t_mz6-n-;
+darkest-dungeon-2;Darkest Dungeon II;jogo;2023;Stuart Chatwood;darkest dungeon;indie;15;https://www.youtube.com/playlist?list=PLx9r0ClhkAAHJEfAStKClnKdQzVVYxLM3;
+slay-the-spire;Slay the Spire;jogo;2019;Clark Aboud;slay the spire;indie;10;https://www.youtube.com/playlist?list=PLVvCbbOohbCB-OMFqBqJH-4GIw6RrKOBC;
+dead-cells;Dead Cells;jogo;2018;Yoann Laulan;dead cells;indie;20;https://www.youtube.com/playlist?list=PL3FTGbVzUCFDU9wpzFwK3VxP3lZKJCaQL;
+outer-wilds;Outer Wilds;jogo;2019;Andrew Prahlow;outer wilds;indie;20;https://www.youtube.com/playlist?list=PLujrFQ0JLpaq0dehvY9V5GhRy2pFGqyIg;
+gris;GRIS;jogo;2018;Berlinist;gris;indie;15;https://www.youtube.com/playlist?list=PLnB3KZ8dnRGNS-__OxqNdm28yjJ_CBAhO;
+tunic;Tunic;jogo;2022;Lifeformed|Janice Kwan;tunic;indie;20;https://www.youtube.com/playlist?list=PLjm8AqDqXtLMhO20cwAcjRIlgtyIRaCdK;
+cuphead;Cuphead;jogo;2017;Kristofer Maddigan;cuphead;indie;20;https://www.youtube.com/playlist?list=PLPCWRgFP7P_WKlNg_6mnTTRALSwTFQfmk;jazz e swing
+shovel-knight;Shovel Knight;jogo;2014;Jake Kaufman|Manami Matsumae;shovel knight;indie;15;https://www.youtube.com/playlist?list=PLtstrZsO4LfCovrvoiQhhJgXE9stZa9zk;chiptune
+the-legend-of-zelda-link-to-the-past;The Legend of Zelda: A Link to the Past;jogo;1991;Koji Kondo;zelda;nintendo;15;https://www.youtube.com/playlist?list=PLbcFKfjvYToUO0GmUgbpRnq6w2XZN22lY;
+spiritfarer;Spiritfarer;jogo;2020;Max LL;spiritfarer;indie;20;https://www.youtube.com/playlist?list=PLq4-VjR2NEWclygRC7__7Vjy_DfQTq93Z;
+sea-of-stars;Sea of Stars;jogo;2023;Eric W. Brown|Yasunori Mitsuda;sea of stars;indie;25;https://www.youtube.com/playlist?list=PLBO2h-GzDvIb6mX8Yj3GpVoDNBq32hVw1;
+return-of-the-obra-dinn;Return of the Obra Dinn;jogo;2018;Lucas Pope;obra dinn;indie;10;https://www.youtube.com/playlist?list=PL97usfYwaBEOKuTyYmcS5_7nnpWRXObXn;
+inscryption;Inscryption;jogo;2021;Jonah Senzel;inscryption;indie;15;https://www.youtube.com/playlist?list=PLBO2h-GzDvIYuKKoyWMVndHjGygoHD3dv;
+disco-elysium;Disco Elysium;jogo;2019;British Sea Power;disco elysium;rpg-ocidental;20;https://www.youtube.com/playlist?list=PLfzAS9vre2a_YQ6lLPHlS4K0sDFwIoWeD;
+pentiment;Pentiment;jogo;2022;Alkemie;pentiment;rpg-ocidental;15;https://www.youtube.com/playlist?list=PLHOSglkGLtMNzxO8Yt3-sVUkqa7qNz7Xz;medieval
+silent-hill-2;Silent Hill 2;jogo;2001;Akira Yamaoka;silent hill;terror;25;https://www.youtube.com/playlist?list=PLHO35fye-bjIhkYcPTbmzeba7R-_BAjBU;
+silent-hill;Silent Hill;jogo;1999;Akira Yamaoka;silent hill;terror;15;https://www.youtube.com/playlist?list=PLHO35fye-bjIKnBf_7XZDSS7CJZdrqH6u;
+resident-evil-4;Resident Evil 4;jogo;2005;Misao Senbongi|Shusaku Uchiyama;resident evil;terror;15;https://www.youtube.com/playlist?list=PL63IdQiB65uRItPw9rVJQMfIHIO27MMBx;
+resident-evil-village;Resident Evil Village;jogo;2021;Shusaku Uchiyama;resident evil;terror;20;https://www.youtube.com/playlist?list=PLV7OH56-78tXghIaROBitCGeXlF01pXMw;
+amnesia-the-dark-descent;Amnesia: The Dark Descent;jogo;2010;Mikko Tarmia;amnesia;terror;15;https://www.youtube.com/playlist?list=PL-6CZoECuNPpZ5TL4NuuLli61sEd_IeTr;
+dead-space;Dead Space;jogo;2008;Jason Graves;dead space;terror;15;https://www.youtube.com/playlist?list=PLeCMVq4ZruGaoKvqfg-Rl-Pg-3929JvGV;
+bloodborne-the-old-hunters;Bloodborne: The Old Hunters;jogo;2015;Yuka Kitamura|Tsukasa Saitoh;souls;souls;10;https://www.youtube.com/playlist?list=PLJbr6YOTuvohZe-TzZG6Cs7voLAxquDcq;
+dredge;Dredge;jogo;2023;Ben Prunty;dredge;terror;15;https://www.youtube.com/playlist?list=PLbiBLnLllpif-6ZD--ey4l6PN8I1hBRvh;
+signalis;Signalis;jogo;2022;1000 Eyes;signalis;terror;15;https://www.youtube.com/playlist?list=PL9amtKqWY8ahDS2-Mo_q8yDqt6KTCvdBa;
+alan-wake-2;Alan Wake 2;jogo;2023;Petri Alanko;alan wake;terror;15;https://www.youtube.com/playlist?list=PLbNT78Q7M14zJp2DiJeYCtqzCwOpxbf_V;
+world-of-warcraft;World of Warcraft;jogo;2004;Jason Hayes|Tracy W. Bush|Derek Duke|Glenn Stafford;wow|warcraft;mmo;40;https://www.youtube.com/playlist?list=PL8WyHDn4KqCkomPYpGakr9mGFJlVn4qpu;
+wow-wrath-of-the-lich-king;World of Warcraft: Wrath of the Lich King;jogo;2008;Russell Brower|Derek Duke|Glenn Stafford;wow|warcraft|lich king;mmo;20;https://www.youtube.com/playlist?list=PL6FE892C35C4D403D;
+guild-wars-2;Guild Wars 2;jogo;2012;Jeremy Soule|Maclaine Diemer;guild wars;mmo;25;https://www.youtube.com/playlist?list=PLaT-BQHYWg5Y36eWrniA0gfqB6e7yZKW9;
+lord-of-the-rings-online;The Lord of the Rings Online;jogo;2007;Chance Thomas;lotro;mmo;20;https://www.youtube.com/playlist?list=PLudL0VyqzaHeuXOrxNvT_YIIege-og_DC;
+old-school-runescape;Old School RuneScape;jogo;2013;Ian Taylor;runescape;mmo;25;https://www.youtube.com/playlist?list=PLA3CCrYGqFawo3BuPXD1ZHgINFGV76Vu3;
+warcraft-3;Warcraft III;jogo;2002;Jason Hayes|Tracy W. Bush|Derek Duke|Glenn Stafford;warcraft;estrategia;20;https://www.youtube.com/playlist?list=PLB1o-5xQel8M;
+age-of-empires-2;Age of Empires II;jogo;1999;Stephen Rippy|Kevin McMullan;age of empires;estrategia;15;https://www.youtube.com/playlist?list=PLobk6HV8x_1CYoHVgzKcdqaKkQ4PU2hbR;
+civilization-vi;Civilization VI;jogo;2016;Geoff Knorr|Phill Boucher|Christopher Tin;civilization|civ;estrategia;25;https://www.youtube.com/playlist?list=PLh4Eme5gACZGDVGh-unzj0p70NiADSdY0;
+heroes-of-might-and-magic-3;Heroes of Might and Magic III;jogo;1999;Paul Romero|Rob King|Steve Baca;heroes|homm3;estrategia;20;https://www.youtube.com/playlist?list=PL7E9321FFF8A2FDC3;
+starcraft-2;StarCraft II;jogo;2010;Russell Brower|Derek Duke|Glenn Stafford;starcraft;estrategia;15;https://www.youtube.com/playlist?list=PL96A1D3209ECD24F0;
+frostpunk;Frostpunk;jogo;2018;Piotr Musiał;frostpunk;estrategia;15;https://www.youtube.com/playlist?list=PLQOzEU-fKC9n0svophVVM1EvsKahuyXva;
+total-war-warhammer-2;Total War: Warhammer II;jogo;2017;Richard Beddow;warhammer;estrategia;15;https://www.youtube.com/playlist?list=PLh4Eme5gACZH5wSIorT9qnOllGuEXeX3c;
+red-dead-redemption-2;Red Dead Redemption 2;jogo;2018;Woody Jackson;red dead|rdr2;aventura;25;https://www.youtube.com/playlist?list=PL7e-65HqcGc8Sr1kuyVZBl9XFn5KtgX7d;faroeste
+red-dead-redemption;Red Dead Redemption;jogo;2010;Bill Elm|Woody Jackson;red dead;aventura;15;https://www.youtube.com/playlist?list=PLoZ9e3eRJ8shIBQdUTfD34VAGiUeT61mP;faroeste
+god-of-war;God of War;jogo;2018;Bear McCreary;god of war;aventura;25;https://www.youtube.com/playlist?list=PLCToLibb1EqNxRAJOxDN7wMOBi-ALO8NQ;nórdico
+god-of-war-ragnarok;God of War Ragnarök;jogo;2022;Bear McCreary;god of war;aventura;20;https://www.youtube.com/playlist?list=PLxX1gcfUWye2rvOMnFYselWIMKoxwIFE3;nórdico
+ghost-of-tsushima;Ghost of Tsushima;jogo;2020;Ilan Eshkeri|Shigeru Umebayashi;ghost of tsushima;aventura;25;https://www.youtube.com/playlist?list=PLA2C7EJHEv-UZDO3JdmDAEgLo59W9mOXz;japão feudal
+the-last-of-us;The Last of Us;jogo;2013;Gustavo Santaolalla;last of us;aventura;20;https://www.youtube.com/playlist?list=PLu2D_fJRAbnzvLrr5wQ8CXG70bAEVB29v;
+horizon-zero-dawn;Horizon Zero Dawn;jogo;2017;Joris de Man|The Flight|Niels van der Leest;horizon;aventura;20;https://www.youtube.com/playlist?list=PLRW80bBvVD3VcJUMCV95UhJdNpH53R6LI;
+shadow-of-the-colossus;Shadow of the Colossus;jogo;2005;Kow Otani;colossus;aventura;20;https://www.youtube.com/playlist?list=PL5izbl2Pj0YbfyRPjQJBJ2nLSXssrXSPF;
+assassins-creed-ii;Assassin's Creed II;jogo;2009;Jesper Kyd;assassins creed;aventura;15;https://www.youtube.com/playlist?list=PL0smL-Kfec7Q8ZbCYaK1dHQPgAv1wZlcp;
+assassins-creed-valhalla;Assassin's Creed Valhalla;jogo;2020;Jesper Kyd|Sarah Schachner|Einar Selvik;assassins creed|valhalla;aventura;20;https://www.youtube.com/playlist?list=PLDisKgcnAC4RbwywMTbJpC-uBg6mUeCsO;nórdico
+hellblade;Hellblade: Senua's Sacrifice;jogo;2017;David García Díaz|Andy LaPlegua;hellblade;aventura;10;https://www.youtube.com/playlist?list=PLwMdgSJGKnLJwaIY39j5FMCaGkGLBfpDn;nórdico
+monster-hunter-world;Monster Hunter: World;jogo;2018;Akihiko Narita|Zhenlan Kang|Yuko Komiyama;monster hunter;aventura;20;https://www.youtube.com/playlist?list=PLL5mKr-nFprKt_ja7WvvAhcbDB8ohZjZA;
+genshin-impact;Genshin Impact;jogo;2020;Yu-Peng Chen|HOYO-MiX;genshin;aventura;40;https://www.youtube.com/playlist?list=PL8fZemLM-gGfJ2001AJEY8S-_qlbKnj_s;
+honkai-star-rail;Honkai: Star Rail;jogo;2023;HOYO-MiX;star rail;aventura;20;https://www.youtube.com/playlist?list=PLf9L5TXmplp3_3ZtdYK1irvQLn74LjBxK;
+valheim;Valheim;jogo;2021;Patrik Jarlestam;valheim;aventura;15;https://www.youtube.com/playlist?list=PLW250uNvfh75P9_JeHezwbaRaJd0n_pLW;nórdico
+sea-of-thieves;Sea of Thieves;jogo;2018;Robin Beanland;sea of thieves|pirata;aventura;20;https://www.youtube.com/playlist?list=PLYAweVdxYMcox8GZhSDw45vxpdGCxZCWZ;taverna de pirata
+the-banner-saga;The Banner Saga;jogo;2014;Austin Wintory;banner saga;aventura;15;https://www.youtube.com/playlist?list=PL0sI-JeCP8WwWfzISlytHZMqlM04t6E7J;nórdico
+adrian-von-ziegler;Adrian von Ziegler;álbum;;Adrian von Ziegler;celta|medieval|fantasia;ambiente-de-mesa;30;https://www.youtube.com/playlist?list=PL01430065947B667E;celta e fantasia: fundo de mesa
+derek-brandon-fiechter;Derek & Brandon Fiechter;álbum;;Derek Fiechter|Brandon Fiechter|Derek & Brandon Fiechter;medieval|fantasia|taverna;ambiente-de-mesa;40;https://www.youtube.com/playlist?list=PLhfe7jpiJaLGoyd0oV8uUeYZPJWkd22RB;taverna, vila, floresta encantada, masmorra
+peter-gundry;Peter Gundry;álbum;;Peter Gundry;fantasia|sombrio;ambiente-de-mesa;20;https://www.youtube.com/playlist?list=PLAr02NjOde0s1oyd_FGdlKtFn7IFRBs3U;fantasia sombria
+brunuhville;Brunuhville;álbum;;Brunuhville;celta|fantasia;ambiente-de-mesa;20;https://www.youtube.com/playlist?list=PL29A5790D2C135496;
+michael-ghelfi;Michael Ghelfi;álbum;;Michael Ghelfi;rpg|ambiente;ambiente-de-mesa;30;https://www.youtube.com/playlist?list=PLbHUA-o_5dgKIcvpPs10ftV9AdaV_hNN1;feito pra mesa de RPG
+two-steps-from-hell;Two Steps from Hell;álbum;;Thomas Bergersen|Nick Phoenix;two steps|epica;epica;40;https://www.youtube.com/playlist?list=PLBdrlKJSiP50byxi4ZEcC_6cbABjBo-Ub;música épica de trailer
 audiomachine;Audiomachine;álbum;;Paul Dinletir|Kevin Rix;epica;epica;20;;
-thomas-bergersen;Thomas Bergersen;álbum;;Thomas Bergersen;epica;epica;15;;
-ghibli-nausicaa;Nausicaä do Vale do Vento;filme;1984;Joe Hisaishi;ghibli|nausicaa;ghibli;20;;
-ghibli-laputa;O Castelo no Céu;filme;1986;Joe Hisaishi;ghibli|laputa|castle in the sky;ghibli;20;;
-ghibli-totoro;Meu Amigo Totoro;filme;1988;Joe Hisaishi;ghibli|totoro;ghibli;20;;
-ghibli-kiki;O Serviço de Entregas da Kiki;filme;1989;Joe Hisaishi;ghibli|kiki;ghibli;20;;
-ghibli-porco-rosso;Porco Rosso;filme;1992;Joe Hisaishi;ghibli|porco rosso;ghibli;15;;
-ghibli-mononoke;Princesa Mononoke;filme;1997;Joe Hisaishi;ghibli|mononoke;ghibli;25;;
+thomas-bergersen;Thomas Bergersen;álbum;;Thomas Bergersen;epica;epica;15;https://www.youtube.com/playlist?list=PLDENhJWx5Ciu9yJBITdU47BQkS0EDwXEb;
+ghibli-nausicaa;Nausicaä do Vale do Vento;filme;1984;Joe Hisaishi;ghibli|nausicaa;ghibli;20;https://www.youtube.com/playlist?list=PLfEFa3hbYDEhKkq6VJTgIPpBpIJEU0rFl;
+ghibli-laputa;O Castelo no Céu;filme;1986;Joe Hisaishi;ghibli|laputa|castle in the sky;ghibli;20;https://www.youtube.com/playlist?list=PLmjLfIUZ_tnyVqmrYuYeZqAjdPk6EBDzi;
+ghibli-totoro;Meu Amigo Totoro;filme;1988;Joe Hisaishi;ghibli|totoro;ghibli;20;https://www.youtube.com/playlist?list=PL-6jp2_B-0oe5xXjxwBaA33jXL-hGBXPp;
+ghibli-kiki;O Serviço de Entregas da Kiki;filme;1989;Joe Hisaishi;ghibli|kiki;ghibli;20;https://www.youtube.com/playlist?list=PL3jhJZsPBheDzFryqvwEtEg5OJmag3pMv;
+ghibli-porco-rosso;Porco Rosso;filme;1992;Joe Hisaishi;ghibli|porco rosso;ghibli;15;https://www.youtube.com/playlist?list=PLAZoD34TPYWNI0NopvJ115RIQplRNXLVo;
+ghibli-mononoke;Princesa Mononoke;filme;1997;Joe Hisaishi;ghibli|mononoke;ghibli;25;https://www.youtube.com/playlist?list=PLRW80bBvVD3XkJSocKrHOtXnuUGvfMvsR;
 ghibli-chihiro;A Viagem de Chihiro;filme;2001;Joe Hisaishi;ghibli|chihiro|spirited away;ghibli;25;https://www.youtube.com/playlist?list=PLdR7m7PFLzQ68oVUstKMvznToccGUZHrh;
-ghibli-castelo-animado;O Castelo Animado;filme;2004;Joe Hisaishi;ghibli|howl|castelo animado;ghibli;25;;
-ghibli-ponyo;Ponyo;filme;2008;Joe Hisaishi;ghibli|ponyo;ghibli;15;;
+ghibli-castelo-animado;O Castelo Animado;filme;2004;Joe Hisaishi;ghibli|howl|castelo animado;ghibli;25;https://www.youtube.com/playlist?list=PL5A9605F5ED6E05DC;
+ghibli-ponyo;Ponyo;filme;2008;Joe Hisaishi;ghibli|ponyo;ghibli;15;https://www.youtube.com/playlist?list=PLCtJ7CknVEk_H8Fo1TbLFR4N2H-vcq62Q;
 ghibli-vidas-ao-vento;Vidas ao Vento;filme;2013;Joe Hisaishi;ghibli|vidas ao vento;ghibli;15;;
-ghibli-o-menino-e-a-garca;O Menino e a Garça;filme;2023;Joe Hisaishi;ghibli|menino e a garca;ghibli;15;;
-ghibli-arrietty;O Mundo dos Pequeninos;filme;2010;Cécile Corbel;ghibli|arrietty;ghibli;15;;harpa celta
-ghibli-sussurros;Sussurros do Coração;filme;1995;Yuji Nomi;ghibli;ghibli;10;;
-ghibli-as-memorias-de-marnie;As Memórias de Marnie;filme;2014;Takatsugu Muramatsu;ghibli|marnie;ghibli;10;;
-ghibli-contos-de-terramar;Contos de Terramar;filme;2006;Tamiya Terashima;ghibli|terramar;ghibli;10;;
+ghibli-o-menino-e-a-garca;O Menino e a Garça;filme;2023;Joe Hisaishi;ghibli|menino e a garca;ghibli;15;https://www.youtube.com/playlist?list=PL6WsdT2bMVwDnwQAwVv2pNHWpCYFfKHHc;
+ghibli-arrietty;O Mundo dos Pequeninos;filme;2010;Cécile Corbel;ghibli|arrietty;ghibli;15;https://www.youtube.com/playlist?list=PLfS0OxLD-ypBrLWpVxjoVFngKQ0E0Eyjt;harpa celta
+ghibli-sussurros;Sussurros do Coração;filme;1995;Yuji Nomi;ghibli;ghibli;10;https://www.youtube.com/playlist?list=PL2QESdlf78HwrHQuJIo2nDF1W2mqh91rx;
+ghibli-as-memorias-de-marnie;As Memórias de Marnie;filme;2014;Takatsugu Muramatsu;ghibli|marnie;ghibli;10;https://www.youtube.com/playlist?list=PLSJ8pd8U8kPTO4HKUFBJ-Co5lEMeSbOSI;
+ghibli-contos-de-terramar;Contos de Terramar;filme;2006;Tamiya Terashima;ghibli|terramar;ghibli;10;https://www.youtube.com/playlist?list=PLASp4DfuzptDKps4VAlAmCRU7hww_6xsk;
 ghibli-o-reino-dos-gatos;O Reino dos Gatos;filme;2002;Yuji Nomi;ghibli;ghibli;10;;
-joe-hisaishi-concertos;Joe Hisaishi (concertos e piano);álbum;;Joe Hisaishi;ghibli|hisaishi;ghibli;20;;arranjos de concerto: piano e orquestra
+joe-hisaishi-concertos;Joe Hisaishi (concertos e piano);álbum;;Joe Hisaishi;ghibli|hisaishi;ghibli;20;https://www.youtube.com/playlist?list=PLXSVa_yr70xnTQR1CuskdrEHtHuV6sUrr;arranjos de concerto: piano e orquestra
 frieren;Frieren;anime;2023;Evan Call;frieren;anime;25;https://www.youtube.com/playlist?list=PL3AWLSHWPV5U931JiuKv3twblRTib82ZV;
-made-in-abyss;Made in Abyss;anime;2017;Kevin Penkin;made in abyss;anime;20;;
-attack-on-titan;Attack on Titan;anime;2013;Hiroyuki Sawano;shingeki|attack on titan|aot;anime;25;;muita com voz
-berserk-1997;Berserk (1997);anime;1997;Susumu Hirasawa;berserk;anime;15;;
-violet-evergarden;Violet Evergarden;anime;2018;Evan Call;violet evergarden;anime;20;;
-mushishi;Mushishi;anime;2005;Toshio Masuda;mushishi;anime;15;;
-fullmetal-alchemist-brotherhood;Fullmetal Alchemist: Brotherhood;anime;2009;Akira Senju;fullmetal|fma;anime;20;;
-demon-slayer;Demon Slayer;anime;2019;Yuki Kajiura|Go Shiina;kimetsu|demon slayer;anime;20;;
-vinland-saga;Vinland Saga;anime;2019;Yutaka Yamada;vinland;anime;20;;nórdico
-cowboy-bebop;Cowboy Bebop;anime;1998;Yoko Kanno;cowboy bebop;anime;20;;jazz
-spice-and-wolf;Spice and Wolf;anime;2008;Yuuji Yoshino;spice and wolf;anime;15;;medieval
-dungeon-meshi;Delicious in Dungeon;anime;2024;Yasunori Mitsuda;dungeon meshi;anime;20;;
-mob-psycho-100;Mob Psycho 100;anime;2016;Kenji Kawai;mob psycho;anime;10;;
-naruto;Naruto;anime;2002;Toshio Masuda|Musashi Project;naruto;anime;20;;
-senhor-dos-aneis;O Senhor dos Anéis;filme;2001;Howard Shore;senhor dos aneis|lotr|tolkien;filme-serie;40;;
-o-hobbit;O Hobbit;filme;2012;Howard Shore;hobbit|tolkien;filme-serie;20;;
-game-of-thrones;Game of Thrones;série;2011;Ramin Djawadi;got|game of thrones;filme-serie;35;;
-house-of-the-dragon;A Casa do Dragão;série;2022;Ramin Djawadi;house of the dragon|got;filme-serie;15;;
+made-in-abyss;Made in Abyss;anime;2017;Kevin Penkin;made in abyss;anime;20;https://www.youtube.com/playlist?list=PLdR7m7PFLzQ5uOyE0psTM3pCleLxeKaCj;
+attack-on-titan;Attack on Titan;anime;2013;Hiroyuki Sawano;shingeki|attack on titan|aot;anime;25;https://www.youtube.com/playlist?list=PLiAz4k39REUhGXeoD6kOEio5d0bd8j3ed;muita com voz
+berserk-1997;Berserk (1997);anime;1997;Susumu Hirasawa;berserk;anime;15;https://www.youtube.com/playlist?list=PLRW80bBvVD3X151fKj996nT2vSv6p8pT3;
+violet-evergarden;Violet Evergarden;anime;2018;Evan Call;violet evergarden;anime;20;https://www.youtube.com/playlist?list=PLhOBfuPgcpJbErKOcdcC_mcptcRYeWohc;
+mushishi;Mushishi;anime;2005;Toshio Masuda;mushishi;anime;15;https://www.youtube.com/playlist?list=PL_u66A8ZZHLnX4fwGLLScg0tdaoFS4Ta6;
+fullmetal-alchemist-brotherhood;Fullmetal Alchemist: Brotherhood;anime;2009;Akira Senju;fullmetal|fma;anime;20;https://www.youtube.com/playlist?list=PLE36689FDB43CE335;
+demon-slayer;Demon Slayer;anime;2019;Yuki Kajiura|Go Shiina;kimetsu|demon slayer;anime;20;https://www.youtube.com/playlist?list=PL8fowZ7iog9bJi-z6YyQTomziFLpp4Yi_;
+vinland-saga;Vinland Saga;anime;2019;Yutaka Yamada;vinland;anime;20;https://www.youtube.com/playlist?list=PLBO2h-GzDvIYLCUVMScz0VUcAu0exxPe6;nórdico
+cowboy-bebop;Cowboy Bebop;anime;1998;Yoko Kanno;cowboy bebop;anime;20;https://www.youtube.com/playlist?list=PLqqbIIJ0YzpRGs-HrYd8-lRF53ZqWw6qf;jazz
+spice-and-wolf;Spice and Wolf;anime;2008;Yuuji Yoshino;spice and wolf;anime;15;https://www.youtube.com/playlist?list=PLBO2h-GzDvIYTyqAbH2sJK-m-R5r3XUsC;medieval
+dungeon-meshi;Delicious in Dungeon;anime;2024;Yasunori Mitsuda;dungeon meshi;anime;20;https://www.youtube.com/playlist?list=PLl-vhnGPY7courGxq8SGLiz8OE1QalA34;
+mob-psycho-100;Mob Psycho 100;anime;2016;Kenji Kawai;mob psycho;anime;10;https://www.youtube.com/playlist?list=PLfc2oa_p89Cqgu8Nq-dnQ5nW5eTsH8Inj;
+naruto;Naruto;anime;2002;Toshio Masuda|Musashi Project;naruto;anime;20;https://www.youtube.com/playlist?list=PLF7A13C44809B5893;
+senhor-dos-aneis;O Senhor dos Anéis;filme;2001;Howard Shore;senhor dos aneis|lotr|tolkien;filme-serie;40;https://www.youtube.com/playlist?list=PLc4d9s7ul6imJCN5n0KOL03lucBE5IZV0;
+o-hobbit;O Hobbit;filme;2012;Howard Shore;hobbit|tolkien;filme-serie;20;https://www.youtube.com/playlist?list=PL6UgLZV2ukYv--0dswmfjZrPSejHZwEkW;
+game-of-thrones;Game of Thrones;série;2011;Ramin Djawadi;got|game of thrones;filme-serie;35;https://www.youtube.com/playlist?list=PLsNZSmkIbJbiGQNVSqa9xYFSXpBAhyQpL;
+house-of-the-dragon;A Casa do Dragão;série;2022;Ramin Djawadi;house of the dragon|got;filme-serie;15;https://www.youtube.com/playlist?list=PLfGfsfH9Hz_Aku1zsb-YG75gAoG1Ol9Yo;
 the-witcher-serie;The Witcher (série);série;2019;Sonya Belousova|Giona Ostinelli;witcher;filme-serie;15;;
-harry-potter;Harry Potter;filme;2001;John Williams|Patrick Doyle|Nicholas Hooper|Alexandre Desplat;harry potter|hogwarts;filme-serie;40;;
-as-cronicas-de-narnia;As Crônicas de Nárnia;filme;2005;Harry Gregson-Williams;narnia;filme-serie;20;;
-piratas-do-caribe;Piratas do Caribe;filme;2003;Klaus Badelt|Hans Zimmer;piratas do caribe|pirata;filme-serie;25;;
-como-treinar-seu-dragao;Como Treinar o Seu Dragão;filme;2010;John Powell;como treinar seu dragao|httyd;filme-serie;20;;
-conan-o-barbaro;Conan, o Bárbaro;filme;1982;Basil Poledouris;conan;filme-serie;15;;
-gladiador;Gladiador;filme;2000;Hans Zimmer|Lisa Gerrard;gladiador;filme-serie;15;;
-coracao-valente;Coração Valente;filme;1995;James Horner;coracao valente|braveheart;filme-serie;15;;celta
-interestelar;Interestelar;filme;2014;Hans Zimmer;interestelar;filme-serie;15;;bom pra estudar
-duna;Duna;filme;2021;Hans Zimmer;duna|dune;filme-serie;20;;
-vikings;Vikings;série;2013;Trevor Morris;vikings;filme-serie;15;;nórdico
-arcane;Arcane;série;2021;Alexander Temple|Alex Seaver;arcane;filme-serie;15;;
-avatar-a-lenda-de-aang;Avatar: A Lenda de Aang;série;2005;Jeremy Zuckerman;avatar|aang;filme-serie;15;;
-stranger-things;Stranger Things;série;2016;Kyle Dixon|Michael Stein;stranger things;filme-serie;15;;synthwave
-twin-peaks;Twin Peaks;série;1990;Angelo Badalamenti;twin peaks;filme-serie;10;;mistério
+harry-potter;Harry Potter;filme;2001;John Williams|Patrick Doyle|Nicholas Hooper|Alexandre Desplat;harry potter|hogwarts;filme-serie;40;https://www.youtube.com/playlist?list=PLYXfr3Na3Iuf8Kg__C6Fll5bapkVOXp9b;
+as-cronicas-de-narnia;As Crônicas de Nárnia;filme;2005;Harry Gregson-Williams;narnia;filme-serie;20;https://www.youtube.com/playlist?list=PLEGw_rPdjjVMWnP_CreOwr12K9VBBn5L_;
+piratas-do-caribe;Piratas do Caribe;filme;2003;Klaus Badelt|Hans Zimmer;piratas do caribe|pirata;filme-serie;25;https://www.youtube.com/playlist?list=PL664352D55BA0FAA4;
+como-treinar-seu-dragao;Como Treinar o Seu Dragão;filme;2010;John Powell;como treinar seu dragao|httyd;filme-serie;20;https://www.youtube.com/playlist?list=PLeT0d4djZ_GDnp-pBPE8MY34L-s_GjT2W;
+conan-o-barbaro;Conan, o Bárbaro;filme;1982;Basil Poledouris;conan;filme-serie;15;https://www.youtube.com/playlist?list=PL6559658E698E288D;
+gladiador;Gladiador;filme;2000;Hans Zimmer|Lisa Gerrard;gladiador;filme-serie;15;https://www.youtube.com/playlist?list=PLb5XSLoaB0gw;
+coracao-valente;Coração Valente;filme;1995;James Horner;coracao valente|braveheart;filme-serie;15;https://www.youtube.com/playlist?list=PL89A9814EEABFED2A;celta
+interestelar;Interestelar;filme;2014;Hans Zimmer;interestelar;filme-serie;15;https://www.youtube.com/playlist?list=PL8yt67ynr-p6BcsR4Idnd4aUEyXQ7f27N;bom pra estudar
+duna;Duna;filme;2021;Hans Zimmer;duna|dune;filme-serie;20;https://www.youtube.com/playlist?list=PLBKadB95sF44EGq9wIjIKVr_kFPyqlCHY;
+vikings;Vikings;série;2013;Trevor Morris;vikings;filme-serie;15;https://www.youtube.com/playlist?list=PLRW80bBvVD3XyKz-jhjHfy9Mgphm_2OQo;nórdico
+arcane;Arcane;série;2021;Alexander Temple|Alex Seaver;arcane;filme-serie;15;https://www.youtube.com/playlist?list=PLJP5_qSxMbkI7B5W8uo_FLAtmSKwhxXLt;
+avatar-a-lenda-de-aang;Avatar: A Lenda de Aang;série;2005;Jeremy Zuckerman;avatar|aang;filme-serie;15;https://www.youtube.com/playlist?list=PLdCwM0LA8vqRpvuZBwiXSfsHdhIHX_imX;
+stranger-things;Stranger Things;série;2016;Kyle Dixon|Michael Stein;stranger things;filme-serie;15;https://www.youtube.com/playlist?list=PLYdTWkbT0aUO3CZPJiv_pmAZk_6Phv6yG;synthwave
+twin-peaks;Twin Peaks;série;1990;Angelo Badalamenti;twin peaks;filme-serie;10;https://www.youtube.com/playlist?list=PL7sq1kx5RgKjIP-fON22SXQ8ubrUMiseu;mistério
