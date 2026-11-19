@@ -25,9 +25,9 @@ ordem;titulo;link;duracao;canal;oficial;fora;uso;cenarios;climas;energia;animaca
 24;BALDURS GATE 3 Camp Ambient Instrumental Music 2;https://www.youtube.com/watch?v=191QZiOnBQw;260;Slow Walkthroughs;0;0;rpg-descanso;campo|noite;aconchegante|calmo|melancolico;1;3;0;1;violao|cordas;ler|relaxar|dormir|foco;70;0;o acampamento
 25;Down By The River (Classical);https://www.youtube.com/watch?v=JgY07-SRnis;70;Slow Walkthroughs;0;1;;;;;;;;;;;;
 26;Unreleased Version;https://www.youtube.com/watch?v=DRpa5we-wIc;240;Slow Walkthroughs;0;1;;;;;;;;;;;;
-27;BALDURS GATE 3 Blighted Village Ambient Music 1;https://www.youtube.com/watch?v=2dx5A2Bxk00;180;Slow Walkthroughs;0;0;;;;;;0;0;X;;;0;excesso
+27;BALDURS GATE 3 Blighted Village Ambient Music 1;https://www.youtube.com/watch?v=2dx5A2Bxk00;180;Slow Walkthroughs;0;1;;;;;;0;0;;;;0;excesso
 28;BALDURS GATE 3 Blighted Village Ambient Music 2;https://www.youtube.com/watch?v=fd6uU9cSTYg;180;Slow Walkthroughs;0;1;;;;;;;;;;;;
-29;BALDURS GATE 3 Blighted Village Cave Music 1;https://www.youtube.com/watch?v=AgBAVVjYlWU;195;Slow Walkthroughs;0;0;;;;;;0;0;X;;;0;excesso
+29;BALDURS GATE 3 Blighted Village Cave Music 1;https://www.youtube.com/watch?v=AgBAVVjYlWU;195;Slow Walkthroughs;0;1;;;;;;0;0;;;;0;excesso
 30;BALDURS GATE 3 Blighted Village Cave Music 2;https://www.youtube.com/watch?v=gj6bMdkIYSA;155;Slow Walkthroughs;0;1;;;;;;;;;;;;
 31;BALDUR'S GATE 3 Goblin Camp Party Music;https://www.youtube.com/watch?v=WEuwBzgfy9A;215;Slow Walkthroughs;0;0;rpg-taverna|rpg-humor;ruinas;festivo|agressivo|engracado;4;4;0;0;percussao|cordas;;55;0;a festa dos goblins
 32;BALDUR'S GATE 3 Goblin Camp Ambient Music;https://www.youtube.com/watch?v=lb7v_D3hiDU;220;Slow Walkthroughs;0;1;;;;;;;;;;;;
@@ -46,13 +46,13 @@ ordem;titulo;link;duracao;canal;oficial;fora;uso;cenarios;climas;energia;animaca
 45;BALDUR'S GATE 3 Mountain Pass Exploration Music;https://www.youtube.com/watch?v=GT3othsUIm4;355;Slow Walkthroughs;0;0;rpg-viagem|rpg-exploracao;montanha;aventureiro|epico|contemplativo;2;3;0;1;cordas|orquestra;foco|ler;50;0;
 46;BALDUR'S GATE 3 Mountain Pass Shadow Cursed Lands Music;https://www.youtube.com/watch?v=-9Ojop7eUnY;350;Slow Walkthroughs;0;0;rpg-terror|rpg-exploracao;pantano|noite;sombrio|assustador|melancolico;2;1;0;1;cordas;ler;60;0;as terras amaldiçoadas
 47;BALDUR'S GATE 3 Rosymorn Monastery Music;https://www.youtube.com/watch?v=C1yt53HoZOw;350;Slow Walkthroughs;0;0;rpg-masmorra;templo|montanha;misterioso|sagrado|sombrio;2;2;0;1;cordas|coral;foco;45;0;
-48;BALDURS GATE 3 Creche Ambient Music 1;https://www.youtube.com/watch?v=9AruNEpmXkg;355;Slow Walkthroughs;0;0;;;;;;0;0;X;;;0;excesso
+48;BALDURS GATE 3 Creche Ambient Music 1;https://www.youtube.com/watch?v=9AruNEpmXkg;355;Slow Walkthroughs;0;1;;;;;;0;0;;;;0;excesso
 49;BALDURS GATE 3 Creche Ambient Music 2;https://www.youtube.com/watch?v=WTX93uNCVUQ;350;Slow Walkthroughs;0;1;;;;;;;;;;;;
 50;BALDURS GATE 3 Creche Hatchery Music;https://www.youtube.com/watch?v=aH1Cd7FBE5Q;340;Slow Walkthroughs;0;1;;;;;;;;;;;;
 51;BALDURS GATE 3 Queen Vlaakith Talk Music;https://www.youtube.com/watch?v=sbYFznMt0So;390;Slow Walkthroughs;0;1;;;;;;;;;;;;
 52;BALDURS GATE 3 Astral Prism Music;https://www.youtube.com/watch?v=walhMwoAR6o;300;Slow Walkthroughs;0;1;;;;;;;;;;;;
 53;BALDUR'S GATE 3 Underdark Exploration Music 1;https://www.youtube.com/watch?v=Cyao-R4iL3o;155;Slow Walkthroughs;0;0;rpg-exploracao;caverna;misterioso|magico|sonhador;2;2;0;1;cordas|harpa;foco|ler;60;0;o Subterrâneo
-54;BALDUR'S GATE 3 Underdark Exploration Music 2;https://www.youtube.com/watch?v=eCWFy2heCYE;195;Slow Walkthroughs;0;0;;;;;;0;0;X;;;0;excesso
+54;BALDUR'S GATE 3 Underdark Exploration Music 2;https://www.youtube.com/watch?v=eCWFy2heCYE;195;Slow Walkthroughs;0;1;;;;;;0;0;;;;0;excesso
 55;BALDUR'S GATE 3 Underdark Exploration Music 3;https://www.youtube.com/watch?v=98in6DVnN48;205;Slow Walkthroughs;0;1;;;;;;;;;;;;
 56;BALDUR'S GATE 3 Myconid Colony Theme;https://www.youtube.com/watch?v=49ra8Kzdj6A;185;Slow Walkthroughs;0;0;rpg-cidade;caverna;estranho|calmo|magico;1;3;0;1;cordas|percussao;foco|ler;50;0;
 57;BALDUR'S GATE 3 Myconid Colony Camp Theme;https://www.youtube.com/watch?v=Zgi02PdGTJI;245;Slow Walkthroughs;0;1;;;;;;;;;;;;
@@ -100,7 +100,7 @@ ordem;titulo;link;duracao;canal;oficial;fora;uso;cenarios;climas;energia;animaca
 99;BALDUR'S GATE 3 Astral Plane Orpheus Attack;https://www.youtube.com/watch?v=hRQI5hf4tik;115;Slow Walkthroughs;0;1;;;;;;;;;;;;
 100;BALDUR'S GATE 3 Astral Plane Ambient Music;https://www.youtube.com/watch?v=nxLkVC96nb8;150;Slow Walkthroughs;0;1;;;;;;;;;;;;
 101;BALDUR'S GATE 3 The Emperor's Theme;https://www.youtube.com/watch?v=DURsduMIIZA;190;Slow Walkthroughs;0;0;rpg-misterio|rpg-vilao;espaco;misterioso|sombrio|estranho;3;2;0;1;cordas|orquestra;ler;55;0;
-102;BALDUR'S GATE 3 Rivington Ambient Music 1;https://www.youtube.com/watch?v=uU5TwC0vj7s;235;Slow Walkthroughs;0;0;;;;;;0;0;X;;;0;excesso
+102;BALDUR'S GATE 3 Rivington Ambient Music 1;https://www.youtube.com/watch?v=uU5TwC0vj7s;235;Slow Walkthroughs;0;1;;;;;;0;0;;;;0;excesso
 103;BALDUR'S GATE 3 Rivington Ambient Music 2;https://www.youtube.com/watch?v=g68n6fNUweY;190;Slow Walkthroughs;0;1;;;;;;;;;;;;
 104;BALDUR'S GATE 3 Rivington Ambient Music 3;https://www.youtube.com/watch?v=9mB_LL2Qi2Q;250;Slow Walkthroughs;0;1;;;;;;;;;;;;
 105;BALDUR'S GATE 3 Rivington Ambient Music 4;https://www.youtube.com/watch?v=esbXmjFiBK4;175;Slow Walkthroughs;0;1;;;;;;;;;;;;
@@ -119,7 +119,7 @@ ordem;titulo;link;duracao;canal;oficial;fora;uso;cenarios;climas;energia;animaca
 118;BALDUR'S GATE 3 City Music;https://www.youtube.com/watch?v=2zb7qbuHyE4;160;Slow Walkthroughs;0;0;rpg-cidade;cidade-grande;epico|aconchegante|aventureiro;2;3;0;1;cordas|orquestra;foco;50;0;
 119;BALDUR'S GATE 3 City Music 2;https://www.youtube.com/watch?v=9vlGwJNgdLU;265;Slow Walkthroughs;0;1;;;;;;;;;;;;
 120;BALDUR'S GATE 3 Elfsong Tavern Music 1;https://www.youtube.com/watch?v=FHud184wzQc;155;Slow Walkthroughs;0;0;rpg-taverna;cidade-grande;aconchegante|alegre|festivo;3;4;0;1;violao|flauta|percussao;ler|relaxar;70;0;a taverna da Canção Élfica
-121;BALDUR'S GATE 3 Elfsong Tavern Music 2;https://www.youtube.com/watch?v=5QkapxVtE5o;140;Slow Walkthroughs;0;0;;;;;;0;0;X;;;0;excesso
+121;BALDUR'S GATE 3 Elfsong Tavern Music 2;https://www.youtube.com/watch?v=5QkapxVtE5o;140;Slow Walkthroughs;0;1;;;;;;0;0;;;;0;excesso
 122;BALDUR'S GATE 3 Elfsong Tavern Camp Music 1;https://www.youtube.com/watch?v=Ulk1adfuxyQ;80;Slow Walkthroughs;0;1;;;;;;;;;;;;
 123;BALDUR'S GATE 3 Elfsong Tavern Camp Music 2;https://www.youtube.com/watch?v=vbZ5EC1ijWc;190;Slow Walkthroughs;0;1;;;;;;;;;;;;
 124;BALDUR'S GATE 3 Emperor's Hideout Music;https://www.youtube.com/watch?v=FAj9pmH_EaM;245;Slow Walkthroughs;0;1;;;;;;;;;;;;
