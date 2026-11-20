@@ -83,10 +83,10 @@ Atualizado em 07/11/2026 (v0.6.0).
     (link do Marcelo, o image album); e as que não tinham (Vidas ao Vento, Reino dos
     Gatos, Witcher série, Audiomachine).
   - **Pra o Marcelo conferir:** (1) Mass Effect, Metroid Prime e Slay the Spire usam a trilha de
-    outro jogo da série (anotado na nota de cada faixa); RE4 é o Remake; (3) as 9 obras
+    outro jogo da série (anotado na nota de cada faixa); RE4 é o Remake; (2) as 9 obras
     de compositor (álbum) ganharam ano aproximado no `obras.csv` (nota "conferir");
-    (4) pedidos de ouro `r05` e `r32`: "fire emblem" e "nier" agora valem pra série;
-    (5) tirado o apelido `taverna` do Fiechter (puxava a obra inteira); (6) os
+    (3) pedidos de ouro `r05` e `r32`: "fire emblem" e "nier" agora valem pra série;
+    (4) tirado o apelido `taverna` do Fiechter (puxava a obra inteira); (5) os
     compositores de ambiente (Fiechter, Adrian, OSRS, GW2, Genshin, WoW, Civ VI…)
     passaram de 1,2× a meta pra fechar 5.000 (a soma das metas dava ~4.830).
   - Corrigido no `importar`: refazer o lote não apaga mais o resultado do `links`.
