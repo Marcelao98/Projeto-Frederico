@@ -1,4 +1,5 @@
 id;nome;tipo;ano;apelidos
+animal-crossing-new-horizons;Animal Crossing: New Horizons;jogo;2020;animal crossing
 baldurs-gate-3;Baldur's Gate 3;jogo;2023;baldurs gate|bg3
 bloodborne;Bloodborne;jogo;2015;souls
 chrono-cross;Chrono Cross;jogo;1999;chrono
@@ -10,6 +11,7 @@ demons-souls;Demon's Souls;jogo;2020;demons souls|souls
 diablo-2;Diablo II;jogo;2000;diablo
 diablo-4;Diablo IV;jogo;2023;diablo
 divinity-original-sin-2;Divinity: Original Sin 2;jogo;2017;divinity
+donkey-kong-country;Donkey Kong Country;jogo;1994;donkey kong
 dragon-age-inquisition;Dragon Age: Inquisition;jogo;2014;dragon age
 dragon-age-origins;Dragon Age: Origins;jogo;2009;dragon age
 dragon-quest-xi;Dragon Quest XI;jogo;2017;dragon quest
@@ -39,6 +41,7 @@ kingdom-hearts;Kingdom Hearts;jogo;2002;kingdom hearts
 kingdom-hearts-2;Kingdom Hearts II;jogo;2005;kingdom hearts
 lies-of-p;Lies of P;jogo;2023;souls
 mass-effect;Mass Effect;jogo;2007;mass effect
+metroid-prime;Metroid Prime;jogo;2002;metroid
 morrowind;The Elder Scrolls III: Morrowind;jogo;2002;morrowind|elder scrolls
 neverwinter-nights;Neverwinter Nights;jogo;2002;neverwinter
 nier-automata;NieR: Automata;jogo;2017;nier|nier automata
@@ -56,6 +59,7 @@ secret-of-mana;Secret of Mana;jogo;1993;mana
 sekiro;Sekiro: Shadows Die Twice;jogo;2019;sekiro|souls
 skyrim;The Elder Scrolls V: Skyrim;jogo;2011;skyrim|elder scrolls
 spectral-sails;Spectral Sails;jogo;;
+super-mario-galaxy;Super Mario Galaxy;jogo;2007;mario
 tales-of-symphonia;Tales of Symphonia;jogo;2003;tales of
 the-witcher-serie;The Witcher (série);série;2019;witcher
 trails-in-the-sky;The Legend of Heroes: Trails in the Sky;jogo;2004;trails in the sky|trails
