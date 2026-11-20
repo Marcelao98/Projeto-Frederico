@@ -17,6 +17,7 @@ celeste;Celeste;jogo;2018;celeste
 chrono-cross;Chrono Cross;jogo;1999;chrono
 chrono-trigger;Chrono Trigger;jogo;1995;chrono
 civilization-vi;Civilization VI;jogo;2016;civilization|civ
+cowboy-bebop;Cowboy Bebop;anime;1998;cowboy bebop
 cuphead;Cuphead;jogo;2017;cuphead
 dark-souls;Dark Souls;jogo;2011;dark souls|souls
 dark-souls-2;Dark Souls II;jogo;2014;dark souls 2|souls
@@ -39,6 +40,7 @@ dragon-age-origins;Dragon Age: Origins;jogo;2009;dragon age
 dragon-quest-xi;Dragon Quest XI;jogo;2017;dragon quest
 dragons-dogma-2;Dragon's Dogma 2;jogo;2024;dragons dogma
 dredge;Dredge;jogo;2023;dredge
+dungeon-meshi;Delicious in Dungeon;anime;2024;dungeon meshi
 earthbound;EarthBound;jogo;1994;earthbound|mother
 elden-ring;Elden Ring;jogo;2022;souls
 elden-ring-shadow-of-the-erdtree;Elden Ring: Shadow of the Erdtree;jogo;2024;shadow of the erdtree|souls
@@ -99,9 +101,11 @@ mass-effect;Mass Effect;jogo;2007;mass effect
 metroid-prime;Metroid Prime;jogo;2002;metroid
 michael-ghelfi;Michael Ghelfi;álbum;2016;rpg|ambiente
 minecraft;Minecraft;jogo;2011;minecraft
+mob-psycho-100;Mob Psycho 100;anime;2016;mob psycho
 monster-hunter-world;Monster Hunter: World;jogo;2018;monster hunter
 morrowind;The Elder Scrolls III: Morrowind;jogo;2002;morrowind|elder scrolls
 mushishi;Mushishi;anime;2005;mushishi
+naruto;Naruto;anime;2002;naruto
 neverwinter-nights;Neverwinter Nights;jogo;2002;neverwinter
 nier-automata;NieR: Automata;jogo;2017;nier|nier automata
 nier-replicant;NieR Replicant;jogo;2010;nier
@@ -137,6 +141,7 @@ silent-hill-2;Silent Hill 2;jogo;2001;silent hill
 skyrim;The Elder Scrolls V: Skyrim;jogo;2011;skyrim|elder scrolls
 slay-the-spire;Slay the Spire;jogo;2019;slay the spire
 spectral-sails;Spectral Sails;jogo;;
+spice-and-wolf;Spice and Wolf;anime;2008;spice and wolf
 spiritfarer;Spiritfarer;jogo;2020;spiritfarer
 starcraft-2;StarCraft II;jogo;2010;starcraft
 stardew-valley;Stardew Valley;jogo;2016;stardew
