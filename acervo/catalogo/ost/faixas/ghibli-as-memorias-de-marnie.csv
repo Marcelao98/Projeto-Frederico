@@ -1,10 +1,10 @@
 ordem;titulo;link;duracao;canal;oficial;fora;uso;cenarios;climas;energia;animacao;tem_voz;estavel;instrumentos;ocasioes;popularidade;essencial;nota
-1;Hagaki wo Dashi ni;https://www.youtube.com/watch?v=ab0C_v_iE30;143;Rolelush;0;;;;;;;;;;;;;
-2;When Marnie Was There - The place where you are;https://www.youtube.com/watch?v=vTv1q4qoavk;291;khaled abdu;0;;;;;;;;;;;;;
-3;'Anna' from 'When Marnie was There', for Violin & Piano Duet;https://www.youtube.com/watch?v=zSc5sN5zLAM;284;daigoro789;0;;;;;;;;;;;;;
-4;'Fine on the Outside', from 'When Marnie was There', Flute & Piano Duet;https://www.youtube.com/watch?v=bpeDqnSVBMY;242;daigoro789;0;;;;;;;;;;;;;
-5;'Fine on the Outside' from 'When Marnie was There', for Violin & Piano Duet;https://www.youtube.com/watch?v=_Zu1Gu1aArU;242;daigoro789;0;;;;;;;;;;;;;
-6;'Anna', from 'When Marnie was There', Flute & Piano Duet;https://www.youtube.com/watch?v=yKxm4UgGPIM;284;daigoro789;0;;;;;;;;;;;;;
-7;Marnie II;https://www.youtube.com/watch?v=4i8P-djLmiQ;120;Spiros Z;0;;;;;;;;;;;;;
-8;Ana Vidovic plays Recuerdos de la Alhambra by Francisco Tárrega on a Jim Redgate classical guitar;https://www.youtube.com/watch?v=fwjX-m4LkYk;311;SiccasGuitars;0;;;;;;;;;;;;;
-9;Recuerdos de la Alhambra (Quando c'era Marnie);https://www.youtube.com/watch?v=AMbf-eu6oxs;308;Orkestrani;0;;;;;;;;;;;;;
+1;Hagaki wo Dashi ni;https://www.youtube.com/watch?v=ab0C_v_iE30;143;Rolelush;0;0;rpg-viagem|rpg-drama;mar|vila;nostalgico|calmo|melancolico;1;3;0;1;piano|cordas;ler|relaxar;45;0;
+2;When Marnie Was There - The place where you are;https://www.youtube.com/watch?v=vTv1q4qoavk;291;khaled abdu;0;0;rpg-final|rpg-drama;mar;nostalgico|melancolico|sonhador;2;3;1;0;voz-feminina|violao;;60;0;
+3;'Anna' from 'When Marnie was There', for Violin & Piano Duet;https://www.youtube.com/watch?v=zSc5sN5zLAM;284;daigoro789;0;1;;;;;;;;;;;;
+4;'Fine on the Outside', from 'When Marnie was There', Flute & Piano Duet;https://www.youtube.com/watch?v=bpeDqnSVBMY;242;daigoro789;0;1;;;;;;;;;;;;
+5;'Fine on the Outside' from 'When Marnie was There', for Violin & Piano Duet;https://www.youtube.com/watch?v=_Zu1Gu1aArU;242;daigoro789;0;1;;;;;;;;;;;;
+6;'Anna', from 'When Marnie was There', Flute & Piano Duet;https://www.youtube.com/watch?v=yKxm4UgGPIM;284;daigoro789;0;1;;;;;;;;;;;;
+7;Marnie II;https://www.youtube.com/watch?v=4i8P-djLmiQ;120;Spiros Z;0;0;rpg-drama|rpg-misterio;mar|noite;melancolico|misterioso|sonhador;1;2;0;1;piano|cordas;ler|relaxar;40;0;
+8;Ana Vidovic plays Recuerdos de la Alhambra by Francisco Tárrega on a Jim Redgate classical guitar;https://www.youtube.com/watch?v=fwjX-m4LkYk;311;SiccasGuitars;0;1;;;;;;;;;;;;
+9;Recuerdos de la Alhambra (Quando c'era Marnie);https://www.youtube.com/watch?v=AMbf-eu6oxs;308;Orkestrani;0;1;;;;;;;;;;;;
