@@ -71,18 +71,18 @@ Atualizado em 07/11/2026 (v0.6.0).
     os ajustes do mestre (`ajustes.json`) não valem pro catálogo; composição × gravação,
     efeitos/ambientes e histórico não existem ainda.
   - **Próximo:** resolvedor por `faixaId` + playlists pelo catálogo, depois a B2 (base do som).
-- ✅ **Etapa OST feita (20/11/2026): 5.005 instrumentais** (4.445 de trilhas de jogo,
+- ✅ **Etapa OST feita (20/11/2026): 5.014 instrumentais** (4.454 de trilhas de jogo,
   anime, filme, Ghibli e compositores de ambiente + as 560 do RPG antigo). Pedido e
   regras: **`docs/etapas/catalogo-ost.md`**. As 196 obras estão extraídas e classificadas
   (`acervo/catalogo/ost/faixas/`), importadas no catálogo; compilação OK, pedidos de ouro
-  OK. Todos os 10.056 links conferidos com `links`: as 49 faixas de OST com vídeo caído
+  OK. Todos os links conferidos com `links`: as 50 faixas de OST com vídeo caído
   ou sem incorporação ficaram de fora (`fora=1`, motivo na nota).
   - **Playlists trocadas** (a achada era de outra coisa): FF VII, Xenoblade 1, Octopath 1
     e 2, Fallout NV, DKC, Undertale (era o Yellow), Hades, God of War, AoE II, Totoro,
-    Mononoke, Terramar, Arrietty, Marnie, Piratas, Interestelar; e as que não tinham
-    (Vidas ao Vento, Reino dos Gatos, Witcher série, Audiomachine).
-  - **Pra o Marcelo conferir:** (1) *Sussurros do Coração* continua com playlist errada
-    (pop): 0 faixas; (2) Mass Effect, Metroid Prime e Slay the Spire usam a trilha de
+    Mononoke, Terramar, Arrietty, Marnie, Piratas, Interestelar, Sussurros do Coração
+    (link do Marcelo, o image album); e as que não tinham (Vidas ao Vento, Reino dos
+    Gatos, Witcher série, Audiomachine).
+  - **Pra o Marcelo conferir:** (1) Mass Effect, Metroid Prime e Slay the Spire usam a trilha de
     outro jogo da série (anotado na nota de cada faixa); RE4 é o Remake; (3) as 9 obras
     de compositor (álbum) ganharam ano aproximado no `obras.csv` (nota "conferir");
     (4) pedidos de ouro `r05` e `r32`: "fire emblem" e "nier" agora valem pra série;
