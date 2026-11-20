@@ -1,6 +1,8 @@
 id;nome;tipo;ano;apelidos
 baldurs-gate-3;Baldur's Gate 3;jogo;2023;baldurs gate|bg3
 bloodborne;Bloodborne;jogo;2015;souls
+chrono-cross;Chrono Cross;jogo;1999;chrono
+chrono-trigger;Chrono Trigger;jogo;1995;chrono
 dark-souls;Dark Souls;jogo;2011;dark souls|souls
 dark-souls-2;Dark Souls II;jogo;2014;dark souls 2|souls
 dark-souls-3;Dark Souls III;jogo;2016;dark souls 3|souls
@@ -18,6 +20,8 @@ final-fantasy-vi;Final Fantasy VI;jogo;1994;final fantasy|ff6
 final-fantasy-vii-remake;Final Fantasy VII Remake;jogo;2020;final fantasy|ff7 remake
 final-fantasy-x;Final Fantasy X;jogo;2001;final fantasy|ff10
 final-fantasy-xii;Final Fantasy XII;jogo;2006;final fantasy|ff12
+final-fantasy-xiv;Final Fantasy XIV;jogo;2013;final fantasy|ff14
+final-fantasy-xvi;Final Fantasy XVI;jogo;2023;final fantasy|ff16
 fire-emblem-three-houses;Fire Emblem: Three Houses;jogo;2019;fire emblem|fe3h|three houses|fe 3 houses
 ghibli-chihiro;A Viagem de Chihiro;filme;2001;ghibli|chihiro|spirited away
 hollow-knight;Hollow Knight;jogo;2017;
