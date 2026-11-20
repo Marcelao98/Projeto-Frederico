@@ -1,13 +1,13 @@
 ordem;titulo;link;duracao;canal;oficial;fora;uso;cenarios;climas;energia;animacao;tem_voz;estavel;instrumentos;ocasioes;popularidade;essencial;nota
-1;Cry for me, cry for you Opening version;https://www.youtube.com/watch?v=IeLU33uj-6Y;121;Falcom Sound Team jdk - Topic;1;;;;;;;;;;;;;
-2;Fighting Right On;https://www.youtube.com/watch?v=oAbNuRdW160;113;Falcom Sound Team jdk - Topic;1;;;;;;;;;;;;;
-3;Determination of Fight;https://www.youtube.com/watch?v=SuHQK1aZ5Og;134;Falcom Sound Team jdk - Topic;1;;;;;;;;;;;;;
-4;The Crimson Stigma;https://www.youtube.com/watch?v=6t8u8zr4Eaw;105;Falcom Sound Team jdk - Topic;1;;;;;;;;;;;;;
-5;Masquerade of Lies;https://www.youtube.com/watch?v=vuvqrLxxKZw;202;Falcom Sound Team jdk - Topic;1;;;;;;;;;;;;;
-6;Overdosing Heavenly bliss;https://www.youtube.com/watch?v=NAcfl0aU1AU;141;Falcom Sound Team jdk - Topic;1;;;;;;;;;;;;;
-7;幻影城 《Phantasmagoria》;https://www.youtube.com/watch?v=DDXiwyphJXY;320;Falcom Sound Team jdk - Topic;1;;;;;;;;;;;;;
-8;Cry for your Eternity;https://www.youtube.com/watch?v=N8jHOhDPqcU;151;Falcom Sound Team jdk - Topic;1;;;;;;;;;;;;;
-9;Banquet of frenzy;https://www.youtube.com/watch?v=YFsjzML5jlM;243;Falcom Sound Team jdk - Topic;1;;;;;;;;;;;;;
-10;空を見上げて Ending version;https://www.youtube.com/watch?v=eHlP_BTaIUw;368;Falcom Sound Team jdk - Topic;1;;;;;;;;;;;;;
-11;Till the Night of Glory;https://www.youtube.com/watch?v=p9A9faRExFw;128;Falcom Sound Team jdk - Topic;1;;;;;;;;;;;;;
-12;Cry for me, cry for you;https://www.youtube.com/watch?v=GOMrW3km0ag;264;Falcom Sound Team jdk - Topic;1;;;;;;;;;;;;;
+1;Cry for me, cry for you Opening version;https://www.youtube.com/watch?v=IeLU33uj-6Y;121;Falcom Sound Team jdk - Topic;1;1;;;;;;;;;;;;
+2;Fighting Right On;https://www.youtube.com/watch?v=oAbNuRdW160;113;Falcom Sound Team jdk - Topic;1;0;rpg-combate;ruinas;empolgante|heroico|tenso;5;4;0;0;guitarra|sintetizador;;50;0;
+3;Determination of Fight;https://www.youtube.com/watch?v=SuHQK1aZ5Og;134;Falcom Sound Team jdk - Topic;1;0;rpg-chefe;ruinas;epico|tenso|agressivo;5;3;0;0;guitarra|orquestra;;45;0;
+4;The Crimson Stigma;https://www.youtube.com/watch?v=6t8u8zr4Eaw;105;Falcom Sound Team jdk - Topic;1;1;;;;;;;;;;;;
+5;Masquerade of Lies;https://www.youtube.com/watch?v=vuvqrLxxKZw;202;Falcom Sound Team jdk - Topic;1;0;rpg-vilao|rpg-masmorra;castelo;misterioso|sombrio|tenso;3;2;0;1;orquestra|piano;foco;40;0;
+6;Overdosing Heavenly bliss;https://www.youtube.com/watch?v=NAcfl0aU1AU;141;Falcom Sound Team jdk - Topic;1;1;;;;;;;;;;;;
+7;幻影城 《Phantasmagoria》;https://www.youtube.com/watch?v=DDXiwyphJXY;320;Falcom Sound Team jdk - Topic;1;0;rpg-masmorra|rpg-final;castelo;misterioso|epico|sombrio;3;2;0;1;orquestra|coral;foco;45;0;
+8;Cry for your Eternity;https://www.youtube.com/watch?v=N8jHOhDPqcU;151;Falcom Sound Team jdk - Topic;1;1;;;;;;;;;;;;
+9;Banquet of frenzy;https://www.youtube.com/watch?v=YFsjzML5jlM;243;Falcom Sound Team jdk - Topic;1;1;;;;;;;;;;;;
+10;空を見上げて Ending version;https://www.youtube.com/watch?v=eHlP_BTaIUw;368;Falcom Sound Team jdk - Topic;1;1;;;;;;;;;;;;
+11;Till the Night of Glory;https://www.youtube.com/watch?v=p9A9faRExFw;128;Falcom Sound Team jdk - Topic;1;1;;;;;;;;;;;;
+12;Cry for me, cry for you;https://www.youtube.com/watch?v=GOMrW3km0ag;264;Falcom Sound Team jdk - Topic;1;0;rpg-final|rpg-drama;ceu;melancolico|dramatico|esperancoso;3;3;1;0;voz-feminina|guitarra;;55;0;

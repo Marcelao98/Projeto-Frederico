@@ -3,7 +3,7 @@ r01;toca triste e bloodborne;clima:triste|obra:bloodborne;obra:bloodborne|clima:
 r02;boss fight elden ring;ocasiao:rpg-chefe|obra:elden-ring;obra:elden-ring|ocasiao:rpg-chefe;clima:calmo;
 r03;boss fight e elden ring ou hollow knight;ocasiao:rpg-chefe|obra:elden-ring|obra:hollow-knight;;;o "ou" separa ramos
 r04;música de taverna;ocasiao:rpg-taverna;ocasiao:rpg-taverna;clima:assustador;
-r05;calmo e fire emblem sem batalha;clima:calmo|obra:fire-emblem-three-houses|!ocasiao:rpg-combate;obra:fire-emblem-three-houses|clima:calmo;ocasiao:rpg-combate;
+r05;calmo e fire emblem sem batalha;clima:calmo|obra:fire-emblem-three-houses|!ocasiao:rpg-combate;clima:calmo;ocasiao:rpg-combate;"fire emblem" vale pra série
 r06;chefão;ocasiao:rpg-chefe;ocasiao:rpg-chefe;clima:calmo;
 r07;luta épica;ocasiao:rpg-combate|clima:epico;ocasiao:rpg-combate;clima:calmo;
 r08;dungeon sombria;ocasiao:rpg-masmorra|clima:sombrio;clima:sombrio;clima:alegre;
