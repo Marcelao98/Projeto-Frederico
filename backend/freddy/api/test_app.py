@@ -295,6 +295,18 @@ class TestRest(Base):
         self.assertEqual(self.cliente.post("/catalogo/buscar", json={"texto": "zzzxqw"}).json()["musicas"], [])
         self.assertEqual(self.cliente.post("/catalogo/buscar", json={"texto": ""}).status_code, 422)
 
+    def test_acervo_traz_tambem_as_musicas_do_catalogo(self):
+        # o /acervo espera o catálogo ficar pronto: os modos Acervo e Playlist mostram tudo
+        faixas = self.cliente.get("/acervo").json()["musicas"]
+        self.assertGreater(len(faixas), 9000)
+        ids = [f["id"] for f in faixas]
+        self.assertEqual(len(ids), len(set(ids)), "faixa repetida")
+        elden = next(f for f in faixas if f["id"] == "elden-ring-tsukasa-saitoh-elden-ring-main-theme")
+        self.assertEqual(elden["origem"], {"nome": "Elden Ring", "tipo": "jogo"})
+        self.assertIn("epico", elden["categorias"])
+        self.assertTrue(elden["link"].startswith("https://www.youtube.com/"))
+        self.assertTrue(all(f["link"] and f["origem"]["nome"] is not None for f in faixas))
+
     def test_cors_so_pro_painel(self):
         ok = self.cliente.get("/saude", headers=PAINEL)
         self.assertEqual(ok.headers.get("access-control-allow-origin"), "http://localhost:5173")

@@ -28,6 +28,26 @@ MAX_POR_PEDIDO = 15  # igual ao acervo antigo (nucleo/busca.MAX_RESULTADOS_DA_BU
 FOLGA_DE_PONTOS = 0.35  # quem fica até isso abaixo da melhor entra no sorteio
 TAMANHO_DO_SORTEIO = 60
 
+# Tag do catálogo -> categoria do acervo antigo (vocabulario.json), pros filtros do painel.
+CATEGORIA_DA_TAG = {
+    "triste": "triste", "melancolico": "triste", "calmo": "calmo", "contemplativo": "calmo",
+    "aconchegante": "calmo", "tenso": "tenso", "epico": "epico", "heroico": "epico",
+    "empolgante": "emocionante", "aventureiro": "emocionante", "sombrio": "sombrio",
+    "assustador": "terror", "misterioso": "misterio", "magico": "magico", "sonhador": "magico",
+    "sagrado": "sagrado", "alegre": "alegre", "festivo": "alegre", "esperancoso": "esperancoso",
+    "engracado": "engracado", "dramatico": "dramatico", "romantico": "romantico",
+    "nostalgico": "nostalgico", "saudade": "nostalgico",
+    "rpg-combate": "combate", "rpg-perseguicao": "combate", "rpg-chefe": "chefe",
+    "rpg-terror": "terror", "rpg-misterio": "misterio", "rpg-corte": "nobreza",
+    "rpg-cidade": "cidade", "rpg-taverna": "cidade", "rpg-exploracao": "exploracao",
+    "rpg-viagem": "exploracao", "rpg-masmorra": "masmorra", "rpg-descanso": "descanso",
+    "rpg-vilao": "vilao", "rpg-final": "final", "rpg-abertura": "abertura",
+    "rpg-ritual": "sagrado", "rpg-humor": "engracado", "rpg-drama": "dramatico",
+    "floresta": "natureza", "campo": "natureza", "montanha": "natureza", "mar": "natureza",
+    "pantano": "natureza", "ceu": "natureza", "neve": "natureza",
+    "castelo": "nobreza", "caverna": "masmorra", "cemiterio": "terror",
+}
+
 # Catálogo já carregado neste processo (mesmos CSV, mesma versão): não recompila.
 _JA_CARREGADO: dict[tuple[str, str], tuple] = {}
 
@@ -42,6 +62,8 @@ class CatalogoDoApp:
         self._fontes: dict[str, str] = {}
         self._obras: dict[str, str] = {}
         self._trava = threading.Lock()
+        self._faixas: list[dict] | None = None
+        self._rotulos: dict[str, dict[str, str]] = {}
 
     @property
     def pronto(self) -> bool:
@@ -67,7 +89,8 @@ class CatalogoDoApp:
                 carimbo, marca = self._carimbo(), self.arquivo_db.with_suffix(".carimbo")
                 memo = _JA_CARREGADO.get((str(self.pasta_csv), carimbo))
                 if memo:
-                    self.cat, self._nomes, self._fontes, self._obras = memo
+                    self.cat, self._nomes, self._fontes, self._obras, self._rotulos = memo
+                    self._faixas = None
                     self.erro = None
                     return
                 velho = marca.read_text("utf-8") if marca.exists() else ""
@@ -77,7 +100,8 @@ class CatalogoDoApp:
                         raise ValueError(f"{len(r.erros)} erros nos CSV, o primeiro: {r.erros[0]}")
                     marca.write_text(carimbo, "utf-8")
                 self._carregar()
-                _JA_CARREGADO[(str(self.pasta_csv), carimbo)] = (self.cat, self._nomes, self._fontes, self._obras)
+                self._faixas = None
+                _JA_CARREGADO[(str(self.pasta_csv), carimbo)] = (self.cat, self._nomes, self._fontes, self._obras, self._rotulos)
                 self.erro = None
                 log.info("catálogo pronto: %d músicas", self.quantas)
             except Exception as e:  # noqa: BLE001 - sem catálogo o Freddy segue com o acervo antigo
@@ -90,6 +114,15 @@ class CatalogoDoApp:
         try:
             artista = dict(con.execute("SELECT id, nome FROM artista"))
             obra = dict(con.execute("SELECT id, nome FROM obra"))
+            apelidos: dict[str, list[str]] = {}
+            for palavra, alvo in con.execute("SELECT palavra, alvo FROM palavra WHERE tipo = 'obra'"):
+                apelidos.setdefault(alvo, []).append(palavra)
+            self._rotulos = {
+                "tag": {i: n.lower() for i, n in con.execute("SELECT id, nome FROM tag")},
+                "genero": {i: n.lower() for i, n in con.execute("SELECT id, nome FROM genero")},
+                "tipo_obra": dict(con.execute("SELECT id, tipo FROM obra")),
+                "apelidos": apelidos,
+            }
             principal: dict[str, str] = {}
             for musica, aid in con.execute(
                     "SELECT musica, artista FROM musica_artista ORDER BY papel = 'principal' DESC"):
@@ -105,6 +138,43 @@ class CatalogoDoApp:
         self._obras = obra
         self._fontes = fontes
         self.cat = cat
+
+    def faixas_para_acervo(self, ja_tem: set[str] = frozenset()) -> list[dict]:
+        """As músicas do catálogo no formato de faixa do acervo (o que os modos Acervo e
+        Playlist do painel mostram). Fora: as do RPG antigo (já estão no acervo) e as sem
+        link vivo. Temas = os nomes das tags, gêneros e a década; as categorias vêm das
+        tags (mesmos nomes do vocabulário do acervo)."""
+        if not self.cat:
+            return []
+        if self._faixas is None:
+            self._faixas = self._montar_faixas()
+        return [f for f in self._faixas if f["id"] not in ja_tem]
+
+    def _montar_faixas(self) -> list[dict]:
+        nome_tag, nome_genero = self._rotulos["tag"], self._rotulos["genero"]
+        tipo_obra = self._rotulos["tipo_obra"]
+        faixas = []
+        for mid, m in self.cat.musicas.items():
+            if m.get("lote") == "rpg-legado":
+                continue
+            fila = self.musica(mid)
+            if not fila:
+                continue
+            tags = list(m.get("tags") or {})
+            temas = [nome_tag.get(t, t) for t in tags] + [nome_genero.get(g, g) for g in (m.get("generos") or {})]
+            if m.get("ano"):
+                temas.append(f"anos {str(m['ano'])[2]}0" if m["ano"] < 2000 else f"anos {m['ano'] // 10 * 10}")
+            temas += self._rotulos["apelidos"].get(m.get("obra") or "", [])
+            if m.get("tem_voz") == 0:
+                temas.append("instrumental")
+            categorias = sorted({c for t in tags for c in [CATEGORIA_DA_TAG.get(t)] if c})
+            obra = m.get("obra")
+            faixas.append({
+                "id": mid, "nome": fila["titulo"], "link": fila["link"], "escopo": "faixa_individual",
+                "origem": {"nome": fila.get("origem", ""), "tipo": tipo_obra.get(obra, "jogo") if obra else "artista"},
+                "temas": list(dict.fromkeys(temas)), "categorias": categorias,
+            })
+        return faixas
 
     def musica(self, mid: str) -> dict | None:
         """A música no formato da fila ({titulo, link, faixaId, origem}); None se não tem como tocar."""

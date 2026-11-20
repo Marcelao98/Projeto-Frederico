@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import asyncio
 from csv import Error as ErroDeCsv
 from datetime import date
 
@@ -32,9 +33,20 @@ def _nome_da_planilha() -> str:
 
 
 @rotas.get("")
-def ler_acervo(request: Request):
+async def ler_acervo(request: Request):
+    """O acervo antigo (com o que a mesa ensinou) + as músicas do catálogo novo, no mesmo
+    formato: os modos Acervo e Playlist do painel mostram tudo sem mudar nada."""
     acervo = request.app.state.acervo
-    return {"musicas": acervo.faixas(), "vocabulario": acervo.vocabulario()}
+    faixas = await asyncio.to_thread(acervo.faixas)
+    catalogo = getattr(request.app.state, "catalogo", None)
+    if catalogo is not None:
+        for _ in range(60):  # ligando agora: o catálogo leva uns segundos pra ficar pronto
+            if catalogo.pronto or catalogo.erro:
+                break
+            await asyncio.sleep(0.5)
+        ja_tem = {f["id"] for f in faixas}
+        faixas = faixas + await asyncio.to_thread(catalogo.faixas_para_acervo, ja_tem)
+    return {"musicas": faixas, "vocabulario": acervo.vocabulario()}
 
 
 @rotas.post("/faixas", status_code=201)

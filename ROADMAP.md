@@ -90,6 +90,14 @@ Atualizado em 07/11/2026 (v0.6.0).
     compositores de ambiente (Fiechter, Adrian, OSRS, GW2, Genshin, WoW, Civ VI…)
     passaram de 1,2× a meta pra fechar 5.000 (a soma das metas dava ~4.830).
   - Corrigido no `importar`: refazer o lote não apaga mais o resultado do `links`.
+- **v0.7.2 / v0.7.3 (20/11/2026):** (1) o app instalado no Linux voltou a tocar: o FFmpeg
+  herdava as bibliotecas do pacote (PyInstaller) e morria; agora roda com o ambiente do
+  sistema (`audio/fontes/ffmpeg.py`, `ambiente_do_sistema`). (2) Os modos **Acervo e
+  Playlist** mostram as ~10 mil músicas: o `GET /acervo` junta o acervo antigo com o
+  catálogo no mesmo formato de faixa (`catalogo/servico.py`, `faixas_para_acervo`: temas =
+  tags, gêneros, década, apelidos da obra e "instrumental"; categorias pelo
+  `CATEGORIA_DA_TAG`). As telas não mudaram. Falta: editar faixa do catálogo pelo painel
+  (o PATCH só vale pro acervo antigo) e filtros por artista/ano/gênero na tela.
 - **Próxima depois das trilhas: modo Explorar** (navegar sem digitar: prateleiras
   por uso, como estudar, ler, dormir e as cenas de RPG; filtros de voz, estável,
   energia, clima, cenário; coleções por obra, gênero e época; cenas fixas da
