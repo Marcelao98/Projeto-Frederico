@@ -6362,6 +6362,22 @@ diablo-4-diabloiv-game-login-screen-music-track3;DiabloIV Game Login Screen Musi
 diablo-4-diabloiv-ambient-music-the-tree-of-whispers-track1;DiabloIV Ambient Music The Tree Of Whispers Track1;2023;174;;diablo-4;2;1;0;0;0;0;45;0;;;ost;0;;1
 diablo-4-diabloiv-ambient-hawezar-track16;DiabloIV Ambient Hawezar Track16;2023;218;;diablo-4;2;1;0;0;0;0;35;0;;;ost;0;;1
 diablo-4-diabloiv-ambient-drysteppes-track38;DiabloIV Ambient - DrySteppes Track38;2023;193;;diablo-4;2;2;0;0;0;0;35;0;;;ost;0;;1
+fallout-new-vegas-main-title;Main Title;2010;128;;fallout-new-vegas;2;2;0;0;0;0;70;1;;;ost;0;;1
+fallout-new-vegas-howdy-pardner;Howdy Pardner;2010;237;;fallout-new-vegas;2;2;0;0;0;0;45;0;;;ost;0;;1
+fallout-new-vegas-wasteland-justice;Wasteland Justice;2010;137;;fallout-new-vegas;4;2;0;0;0;0;40;0;;;ost;0;;0
+fallout-new-vegas-no-rest-for-these-bones;No Rest for These Bones;2010;249;;fallout-new-vegas;2;2;0;0;0;0;40;0;;;ost;0;;1
+fallout-new-vegas-primm-and-proper;Primm and Proper;2010;244;;fallout-new-vegas;1;2;0;0;0;0;40;0;;;ost;0;;1
+fallout-new-vegas-mountaintop-movement;Mountaintop Movement;2010;246;;fallout-new-vegas;1;2;0;0;0;0;40;0;;;ost;0;;1
+fallout-new-vegas-beneath-the-streets;Beneath the Streets;2010;233;;fallout-new-vegas;2;2;0;0;0;0;40;0;;;ost;0;;1
+fallout-new-vegas-the-courier-walks-softly;The Courier Walks Softly;2010;246;;fallout-new-vegas;1;2;0;0;0;0;45;0;;;ost;0;;1
+fallout-new-vegas-under-the-stars;Under the Stars;2010;244;;fallout-new-vegas;1;3;0;0;0;0;45;0;;;ost;0;;1
+fallout-new-vegas-tcb-in-freeside;Tcb in Freeside;2010;250;;fallout-new-vegas;2;2;0;0;0;0;40;0;;;ost;0;;1
+fallout-new-vegas-rubble-of-the-forgotten;Rubble of the Forgotten;2010;236;;fallout-new-vegas;2;2;0;0;0;0;40;0;;;ost;0;;1
+fallout-new-vegas-battle-for-the-city;Battle for the City;2010;140;;fallout-new-vegas;5;2;0;0;0;0;40;0;;;ost;0;;0
+fallout-new-vegas-hail-caesar;Hail Caesar;2010;263;;fallout-new-vegas;4;2;0;0;0;0;45;0;;;ost;0;;0
+fallout-new-vegas-righteous-republic;Righteous Republic;2010;246;;fallout-new-vegas;3;3;0;0;0;0;40;0;;;ost;0;;1
+fallout-new-vegas-monsters-of-the-mojave;Monsters of the Mojave;2010;258;;fallout-new-vegas;3;1;0;0;0;0;40;0;;;ost;0;;1
+fallout-new-vegas-dam-nation;Dam Nation;2010;246;;fallout-new-vegas;4;2;0;0;0;0;45;0;;;ost;0;;0
 kingdom-come-skalitz-1403;Skalitz 1403;2018;141;;kingdom-come;2;3;0;0;0;0;75;1;;;ost;0;;1
 kingdom-come-people-of-the-land;People of the Land;2018;121;;kingdom-come;1;3;0;0;0;0;55;0;;;ost;0;;1
 kingdom-come-beer-and-women;Beer and Women;2018;111;;kingdom-come;3;5;0;0;0;0;55;0;;;ost;0;;1
@@ -6452,6 +6468,41 @@ final-fantasy-vi-dark-world-final-fantasy-vi;Dark World [FINAL FANTASY VI];1994;
 final-fantasy-vi-searching-for-friends-final-fantasy-vi;Searching for Friends [FINAL FANTASY VI];1994;180;;final-fantasy-vi;2;2;0;0;0;0;45;0;;;ost;0;;1
 final-fantasy-vi-epitaph-final-fantasy-vi;Epitaph [FINAL FANTASY VI];1994;173;;final-fantasy-vi;1;2;0;0;0;0;40;0;;;ost;0;;1
 final-fantasy-vi-kefkas-tower-final-fantasy-vi;Kefka's Tower [FINAL FANTASY VI];1994;172;;final-fantasy-vi;4;2;0;0;0;0;55;0;;;ost;0;;1
+final-fantasy-vii-the-prelude-final-fantasy-vii;The Prelude [FINAL FANTASY VII];1997;174;;final-fantasy-vii;2;3;0;0;0;0;65;0;;;ost;0;;1
+final-fantasy-vii-opening-bombing-missionfinal-fantasy-vii;Opening - Bombing MissionFINAL FANTASY VII];1997;240;;final-fantasy-vii;4;3;0;0;0;0;75;0;;;ost;0;;0
+final-fantasy-vii-mako-reactor-final-fantasy-vii;Mako Reactor [FINAL FANTASY VII];1997;202;;final-fantasy-vii;2;2;0;0;0;0;50;0;;;ost;0;;1
+final-fantasy-vii-tifas-theme-final-fantasy-vii;Tifa's Theme [FINAL FANTASY VII];1997;308;;final-fantasy-vii;2;3;0;0;0;0;70;0;;;ost;0;;1
+final-fantasy-vii-barrets-theme-final-fantasy-vii;Barret's Theme [FINAL FANTASY VII];1997;210;;final-fantasy-vii;3;3;0;0;0;0;50;0;;;ost;0;;0
+final-fantasy-vii-lurking-in-the-darkness-final-fantasy-vii;Lurking in the Darkness [FINAL FANTASY VII];1997;156;;final-fantasy-vii;2;2;0;0;0;0;45;0;;;ost;0;;1
+final-fantasy-vii-let-the-battles-begin-final-fantasy-vii;Let the Battles Begin ! [FINAL FANTASY VII];1997;169;;final-fantasy-vii;5;3;0;0;0;0;80;0;;;ost;0;;0
+final-fantasy-vii-flowers-blooming-in-the-church-final-fantasy-vii;Flowers Blooming in the Church [FINAL FANTASY VII];1997;302;;final-fantasy-vii;1;3;0;0;0;0;60;0;;;ost;0;;1
+final-fantasy-vii-turks-theme-final-fantasy-vii;Turks' Theme [FINAL FANTASY VII];1997;142;;final-fantasy-vii;3;3;0;0;0;0;55;0;;;ost;0;;1
+final-fantasy-vii-fight-on-final-fantasy-vii;Fight On ! [FINAL FANTASY VII];1997;215;;final-fantasy-vii;5;3;0;0;0;0;65;0;;;ost;0;;0
+final-fantasy-vii-dear-to-the-heart-final-fantasy-vii;Dear to the Heart [FINAL FANTASY VII];1997;138;;final-fantasy-vii;1;3;0;0;0;0;45;0;;;ost;0;;1
+final-fantasy-vii-main-theme-of-final-fantasy-vii-final-fantasy-vii;Main Theme of FINAL FANTASY VII [FINAL FANTASY VII];1997;391;;final-fantasy-vii;3;3;0;0;0;0;90;1;;;ost;0;;1
+final-fantasy-vii-on-that-day-five-years-ago-final-fantasy-vii;On That Day, Five Years Ago... [FINAL FANTASY VII];1997;196;;final-fantasy-vii;3;2;0;0;0;0;55;0;;;ost;0;;1
+final-fantasy-vii-fort-condor-final-fantasy-vii;Fort Condor [FINAL FANTASY VII];1997;243;;final-fantasy-vii;2;3;0;0;0;0;45;0;;;ost;0;;1
+final-fantasy-vii-trail-of-blood-final-fantasy-vii;Trail of Blood [FINAL FANTASY VII];1997;255;;final-fantasy-vii;2;1;0;0;0;0;45;0;;;ost;0;;1
+final-fantasy-vii-jenova-final-fantasy-vii;JENOVA [FINAL FANTASY VII];1997;155;;final-fantasy-vii;5;2;0;0;0;0;65;0;;;ost;0;;0
+final-fantasy-vii-costa-del-sol-final-fantasy-vii;Costa del Sol [FINAL FANTASY VII];1997;150;;final-fantasy-vii;2;4;0;0;0;0;50;0;;;ost;0;;1
+final-fantasy-vii-gold-saucer-final-fantasy-vii;Gold Saucer [FINAL FANTASY VII];1997;120;;final-fantasy-vii;4;5;0;0;0;0;50;0;;;ost;0;;0
+final-fantasy-vii-desert-wasteland-final-fantasy-vii;Desert Wasteland [FINAL FANTASY VII];1997;337;;final-fantasy-vii;2;2;0;0;0;0;40;0;;;ost;0;;1
+final-fantasy-vii-cosmo-canyon-final-fantasy-vii;Cosmo Canyon [FINAL FANTASY VII];1997;217;;final-fantasy-vii;1;3;0;0;0;0;70;0;;;ost;0;;1
+final-fantasy-vii-the-great-warrior-final-fantasy-vii;The Great Warrior [FINAL FANTASY VII];1997;206;;final-fantasy-vii;3;2;0;0;0;0;45;0;;;ost;0;;0
+final-fantasy-vii-descendant-of-shinobi-final-fantasy-vii;Descendant of Shinobi [FINAL FANTASY VII];1997;168;;final-fantasy-vii;2;3;0;0;0;0;40;0;;;ost;0;;1
+final-fantasy-vii-the-nightmare-begins-final-fantasy-vii;The Nightmare Begins [FINAL FANTASY VII];1997;181;;final-fantasy-vii;2;1;0;0;0;0;50;0;;;ost;0;;1
+final-fantasy-vii-wutai-final-fantasy-vii;Wutai [FINAL FANTASY VII];1997;272;;final-fantasy-vii;1;3;0;0;0;0;45;0;;;ost;0;;1
+final-fantasy-vii-forested-temple-final-fantasy-vii;Forested Temple [FINAL FANTASY VII];1997;234;;final-fantasy-vii;3;2;0;0;0;0;45;0;;;ost;0;;1
+final-fantasy-vii-listen-to-the-cries-of-the-planet-final-fantasy-vii;Listen to the Cries of the Planet [FINAL FANTASY VII];1997;223;;final-fantasy-vii;2;2;0;0;0;0;45;0;;;ost;0;;1
+final-fantasy-vii-buried-in-show-final-fantasy-vii;Buried in Show [FINAL FANTASY VII];1997;293;;final-fantasy-vii;1;3;0;0;0;0;55;0;;;ost;0;;1
+final-fantasy-vii-the-north-cave-final-fantasy-vii;The North Cave [FINAL FANTASY VII];1997;368;;final-fantasy-vii;3;2;0;0;0;0;50;0;;;ost;0;;1
+final-fantasy-vii-the-highwind-takes-to-the-skies-final-fantasy-vii;The Highwind Takes to the Skies [FINAL FANTASY VII];1997;217;;final-fantasy-vii;3;4;0;0;0;0;60;0;;;ost;0;;1
+final-fantasy-vii-secret-of-the-deep-sea-final-fantasy-vii;Secret of the Deep Sea [FINAL FANTASY VII];1997;259;;final-fantasy-vii;1;3;0;0;0;0;40;0;;;ost;0;;1
+final-fantasy-vii-from-the-edge-of-despair-final-fantasy-vii;From the Edge of Despair [FINAL FANTASY VII];1997;258;;final-fantasy-vii;1;1;0;0;0;0;50;0;;;ost;0;;1
+final-fantasy-vii-other-side-of-the-mountain-final-fantasy-vii;Other Side of the Mountain [FINAL FANTASY VII];1997;158;;final-fantasy-vii;1;3;0;0;0;0;40;0;;;ost;0;;1
+final-fantasy-vii-birth-of-a-god-final-fantasy-vii;Birth of a God [FINAL FANTASY VII];1997;254;;final-fantasy-vii;5;2;0;0;0;0;55;0;;;ost;0;;0
+final-fantasy-vii-one-winged-angel-final-fantasy-vii;One Winged Angel [FINAL FANTASY VII];1997;441;;final-fantasy-vii;5;2;1;0;0;0;100;1;;;ost;0;;0
+final-fantasy-vii-ending-credits-final-fantasy-vii;Ending Credits [FINAL FANTASY VII];1997;413;;final-fantasy-vii;3;3;0;0;0;0;60;0;;;ost;0;;1
 final-fantasy-vii-remake-ffvii-remake-the-prelude-reunion;FFVII REMAKE: The Prelude - Reunion;2020;205;;final-fantasy-vii-remake;2;3;0;0;0;0;70;0;;;ost;0;;1
 final-fantasy-vii-remake-ffvii-remake-midgar-city-of-mako;FFVII REMAKE: Midgar, City of Mako;2020;267;;final-fantasy-vii-remake;4;2;0;0;0;0;70;0;;;ost;0;;0
 final-fantasy-vii-remake-ffvii-remake-bombing-mission;FFVII REMAKE: Bombing Mission;2020;207;;final-fantasy-vii-remake;4;3;0;0;0;0;65;0;;;ost;0;;0
@@ -6722,6 +6773,38 @@ xenogears-pray-for-the-peoples-joy;Pray for the People's Joy;1998;207;;xenogears
 xenogears-one-who-bares-fangs-at-god;One Who Bares Fangs at God;1998;367;;xenogears;5;2;1;0;0;0;55;0;;;ost;0;;0
 xenogears-the-beginning-and-the-end;The Beginning and the End;1998;276;;xenogears;3;3;0;0;0;0;50;0;;;ost;0;;1
 xenogears-small-two-of-pieces-restored-pieces;Small Two of Pieces - Restored Pieces;1998;381;;xenogears;2;3;1;0;0;0;75;1;;;ost;0;;0
+xenoblade-chronicles-main-theme;Main Theme;2010;224;;xenoblade-chronicles;3;3;0;0;0;0;75;1;;;ost;0;;1
+xenoblade-chronicles-everyday-life;Everyday Life;2010;265;;xenoblade-chronicles;1;4;0;0;0;0;50;0;;;ost;0;;1
+xenoblade-chronicles-engage-the-enemy;Engage the Enemy;2010;234;;xenoblade-chronicles;5;3;0;0;0;0;55;0;;;ost;0;;0
+xenoblade-chronicles-reminiscence;Reminiscence;2010;375;;xenoblade-chronicles;1;2;0;0;0;0;45;0;;;ost;0;;1
+xenoblade-chronicles-riki-the-legendary-heropon;Riki The Legendary Heropon;2010;307;;xenoblade-chronicles;3;5;0;0;0;0;45;0;;;ost;0;;1
+xenoblade-chronicles-shulk-and-fiora;Shulk and Fiora;2010;375;;xenoblade-chronicles;1;3;0;0;0;0;45;0;;;ost;0;;1
+xenoblade-chronicles-hope;Hope;2010;410;;xenoblade-chronicles;3;3;0;0;0;0;50;0;;;ost;0;;1
+xenoblade-chronicles-the-battle-is-upon-us;The Battle is Upon Us;2010;420;;xenoblade-chronicles;5;3;0;0;0;0;50;0;;;ost;0;;0
+xenoblade-chronicles-zanza-the-divine;Zanza the Divine;2010;291;;xenoblade-chronicles;4;2;1;0;0;0;45;0;;;ost;0;;0
+xenoblade-chronicles-once-we-part-ways;Once We Part Ways;2010;418;;xenoblade-chronicles;1;2;0;0;0;0;45;0;;;ost;0;;1
+xenoblade-chronicles-beyond-the-sky;Beyond the Sky;2010;271;;xenoblade-chronicles;2;3;1;0;0;0;60;0;;;ost;0;;0
+xenoblade-chronicles-colony-9;Colony 9;2010;313;;xenoblade-chronicles;2;4;0;0;0;0;55;0;;;ost;0;;1
+xenoblade-chronicles-colony-9-night;Colony 9 (Night);2010;384;;xenoblade-chronicles;1;3;0;0;0;0;45;0;;;ost;0;;1
+xenoblade-chronicles-time-to-fight;Time to Fight!;2010;273;;xenoblade-chronicles;5;4;0;0;0;0;60;0;;;ost;0;;0
+xenoblade-chronicles-tephra-cave;Tephra Cave;2010;329;;xenoblade-chronicles;2;2;0;0;0;0;40;0;;;ost;0;;1
+xenoblade-chronicles-gaur-plain;Gaur Plain;2010;490;;xenoblade-chronicles;3;4;0;0;0;0;90;1;;;ost;0;;1
+xenoblade-chronicles-gaur-plain-night;Gaur Plain (Night);2010;365;;xenoblade-chronicles;1;3;0;0;0;0;55;0;;;ost;0;;1
+xenoblade-chronicles-satorl-marsh;Satorl Marsh;2010;271;;xenoblade-chronicles;2;2;0;0;0;0;45;0;;;ost;0;;1
+xenoblade-chronicles-satorl-marsh-night;Satorl Marsh (Night);2010;301;;xenoblade-chronicles;1;3;0;0;0;0;55;0;;;ost;0;;1
+xenoblade-chronicles-forest-of-the-nopon;Forest of the Nopon;2010;246;;xenoblade-chronicles;2;4;0;0;0;0;45;0;;;ost;0;;1
+xenoblade-chronicles-frontier-village;Frontier Village;2010;339;;xenoblade-chronicles;2;4;0;0;0;0;50;0;;;ost;0;;1
+xenoblade-chronicles-eryth-sea;Eryth Sea;2010;341;;xenoblade-chronicles;2;3;0;0;0;0;50;0;;;ost;0;;1
+xenoblade-chronicles-alcamoth-imperial-capital;Alcamoth, Imperial Capital;2010;301;;xenoblade-chronicles;1;3;0;0;0;0;50;0;;;ost;0;;1
+xenoblade-chronicles-where-the-ancestors-sleep;Where the Ancestors Sleep;2010;339;;xenoblade-chronicles;2;2;0;0;0;0;40;0;;;ost;0;;1
+xenoblade-chronicles-prison-island;Prison Island;2010;335;;xenoblade-chronicles;3;3;0;0;0;0;45;0;;;ost;0;;1
+xenoblade-chronicles-valak-mountain;Valak Mountain;2010;460;;xenoblade-chronicles;1;3;0;0;0;0;55;0;;;ost;0;;1
+xenoblade-chronicles-sword-valley;Sword Valley;2010;265;;xenoblade-chronicles;4;3;0;0;0;0;50;0;;;ost;0;;1
+xenoblade-chronicles-you-will-know-our-names;You Will Know Our Names;2010;281;;xenoblade-chronicles;5;4;0;0;0;0;75;0;;;ost;0;;0
+xenoblade-chronicles-the-fallen-land;The Fallen Land;2010;363;;xenoblade-chronicles;2;2;0;0;0;0;40;0;;;ost;0;;1
+xenoblade-chronicles-mechonis-field;Mechonis Field;2010;422;;xenoblade-chronicles;3;3;0;0;0;0;40;0;;;ost;0;;1
+xenoblade-chronicles-agniratha-mechonis-capital;Agniratha, Mechonis Capital;2010;426;;xenoblade-chronicles;2;2;0;0;0;0;45;0;;;ost;0;;1
+xenoblade-chronicles-roar-from-beyond-final-boss;Roar from Beyond (Final Boss);2010;490;;xenoblade-chronicles;5;2;1;0;0;0;50;0;;;ost;0;;0
 xenoblade-chronicles-2-xenoblade-ii-where-it-all-began;Xenoblade II - Where It All Began;2017;82;;xenoblade-chronicles-2;2;3;0;0;0;0;60;0;;;ost;0;;1
 xenoblade-chronicles-2-where-we-used-to-be-title-screen;Where We Used To Be (Title Screen);2017;190;;xenoblade-chronicles-2;1;3;0;0;0;0;55;0;;;ost;0;;1
 xenoblade-chronicles-2-sea-of-clouds;Sea of Clouds;2017;224;;xenoblade-chronicles-2;2;3;0;0;0;0;45;0;;;ost;0;;1
@@ -6859,6 +6942,60 @@ dragon-quest-xi-dragon-quest-xi-symphonic-heavenly-flight-iii;Dragon Quest XI [S
 dragon-quest-xi-dragon-quest-xi-symphonic-supernatural-evil-castle;Dragon Quest XI [Symphonic] - Supernatural Evil Castle;2017;331;;dragon-quest-xi;3;2;0;0;0;0;45;0;;;ost;0;;1
 dragon-quest-xi-dragon-quest-xi-symphonic-bringer-of-the-doom;Dragon Quest XI [Symphonic] - Bringer of the Doom;2017;338;;dragon-quest-xi;5;2;0;0;0;0;50;0;;;ost;0;;0
 dragon-quest-xi-dragon-quest-xi-symphonic-stake-my-life-on-it;Dragon Quest XI [Symphonic] - Stake my Life on it;2017;311;;dragon-quest-xi;5;3;0;0;0;0;50;0;;;ost;0;;0
+kingdom-hearts-dearly-beloved;Dearly Beloved;2002;73;;kingdom-hearts;1;3;0;0;0;0;95;1;;;ost;0;;1
+kingdom-hearts-dive-into-the-heart-destati;Dive into the Heart -Destati;2002;298;;kingdom-hearts;3;2;1;0;0;0;80;0;;;ost;0;;0
+kingdom-hearts-destiny-islands;Destiny Islands;2002;111;;kingdom-hearts;1;4;0;0;0;0;65;0;;;ost;0;;1
+kingdom-hearts-bustin-up-on-the-beach;Bustin' Up on the Beach;2002;123;;kingdom-hearts;4;5;0;0;0;0;45;0;;;ost;0;;0
+kingdom-hearts-a-walk-in-andante;A Walk in Andante;2002;80;;kingdom-hearts;1;4;0;0;0;0;50;0;;;ost;0;;1
+kingdom-hearts-night-of-fate;Night of Fate;2002;129;;kingdom-hearts;4;2;0;0;0;0;45;0;;;ost;0;;0
+kingdom-hearts-destinys-force;Destiny's Force;2002;171;;kingdom-hearts;5;2;0;0;0;0;55;0;;;ost;0;;0
+kingdom-hearts-traverse-town;Traverse Town;2002;83;;kingdom-hearts;2;3;0;0;0;0;70;0;;;ost;0;;1
+kingdom-hearts-shrouding-dark-cloud;Shrouding Dark Cloud;2002;136;;kingdom-hearts;4;3;0;0;0;0;50;0;;;ost;0;;0
+kingdom-hearts-welcome-to-wonderland;Welcome to Wonderland;2002;115;;kingdom-hearts;2;4;0;0;0;0;45;0;;;ost;0;;1
+kingdom-hearts-olympus-coliseum;Olympus Coliseum;2002;130;;kingdom-hearts;3;4;0;0;0;0;45;0;;;ost;0;;1
+kingdom-hearts-deep-jungle;Deep Jungle;2002;181;;kingdom-hearts;2;4;0;0;0;0;45;0;;;ost;0;;1
+kingdom-hearts-hand-in-hand;Hand in Hand;2002;147;;kingdom-hearts;3;4;0;0;0;0;50;0;;;ost;0;;1
+kingdom-hearts-merlins-magical-house;Merlin's Magical House;2002;107;;kingdom-hearts;2;4;0;0;0;0;40;0;;;ost;0;;1
+kingdom-hearts-winnie-the-pooh;Winnie the Pooh;2002;149;;kingdom-hearts;1;4;0;0;0;0;50;0;;;ost;0;;1
+kingdom-hearts-a-day-in-agrabah;A Day in Agrabah;2002;144;;kingdom-hearts;3;4;0;0;0;0;45;0;;;ost;0;;1
+kingdom-hearts-a-very-small-wish;A Very Small Wish;2002;137;;kingdom-hearts;1;3;0;0;0;0;40;0;;;ost;0;;1
+kingdom-hearts-under-the-sea;Under the Sea;2002;116;;kingdom-hearts;3;5;0;0;0;0;50;0;;;ost;0;;1
+kingdom-hearts-spooks-of-halloween-town;Spooks of Halloween Town;2002;135;;kingdom-hearts;3;3;0;0;0;0;50;0;;;ost;0;;0
+kingdom-hearts-captain-hooks-pirate-ship;Captain Hook's Pirate Ship;2002;127;;kingdom-hearts;3;4;0;0;0;0;45;0;;;ost;0;;1
+kingdom-hearts-hollow-bastion;Hollow Bastion;2002;148;;kingdom-hearts;3;2;0;0;0;0;55;0;;;ost;0;;1
+kingdom-hearts-scherzo-di-notte;Scherzo Di Notte;2002;111;;kingdom-hearts;4;2;0;0;0;0;50;0;;;ost;0;;0
+kingdom-hearts-forze-del-male;Forze Del Male;2002;219;;kingdom-hearts;5;2;0;0;0;0;55;0;;;ost;0;;0
+kingdom-hearts-end-of-the-world;End of the World;2002;195;;kingdom-hearts;3;2;0;0;0;0;45;0;;;ost;0;;1
+kingdom-hearts-a-night-on-the-bare-mountain;A Night on the Bare Mountain;2002;247;;kingdom-hearts;5;1;0;0;0;0;40;0;;;ost;0;;0
+kingdom-hearts-guardando-nel-buio;Guardando nel buio;2002;266;;kingdom-hearts;5;2;1;0;0;0;55;0;;;ost;0;;0
+kingdom-hearts-beyond-the-door;Beyond the Door;2002;69;;kingdom-hearts;1;3;0;0;0;0;40;0;;;ost;0;;1
+kingdom-hearts-2-kingdom-hearts-ii-ost-cd-1-track-02-passion-kingdom-orchestra-instrumenta;Kingdom Hearts II OST CD 1 Track 02 - Passion -KINGDOM Orchestra Instrumental Version;2005;222;;kingdom-hearts-2;3;3;0;0;0;0;70;0;;;ost;0;;1
+kingdom-hearts-2-sanctuary-opening-bonus-track;Sanctuary (Opening) (Bonus Track);2005;266;;kingdom-hearts-2;3;4;1;0;0;0;70;0;;;ost;0;;0
+kingdom-hearts-2-kingdom-hearts-ii-music-twilight-town-roxas;Kingdom Hearts II Music - Twilight Town (Roxas);2005;192;;kingdom-hearts-2;1;3;0;0;0;0;85;1;;;ost;0;;1
+kingdom-hearts-2-sinister-sundown;Sinister Sundown;2005;129;;kingdom-hearts-2;2;3;0;0;0;0;55;0;;;ost;0;;1
+kingdom-hearts-2-missing-you;Missing You;2005;213;;kingdom-hearts-2;1;2;0;0;0;0;50;0;;;ost;0;;1
+kingdom-hearts-2-the-13th-struggle;The 13th Struggle;2005;193;;kingdom-hearts-2;5;2;0;0;0;0;75;0;;;ost;0;;0
+kingdom-hearts-2-roxas;Roxas;2005;147;;kingdom-hearts-2;2;2;0;0;0;0;60;0;;;ost;0;;1
+kingdom-hearts-2-sora;Sora;2005;143;;kingdom-hearts-2;2;4;0;0;0;0;55;0;;;ost;0;;1
+kingdom-hearts-2-the-afternoon-streets;The Afternoon Streets;2005;179;;kingdom-hearts-2;2;4;0;0;0;0;50;0;;;ost;0;;1
+kingdom-hearts-2-reviving-hollow-bastion;Reviving Hollow Bastion;2005;207;;kingdom-hearts-2;1;3;0;0;0;0;50;0;;;ost;0;;1
+kingdom-hearts-2-kingdom-hearts-ii-music-desire-for-all-that-is-lost;Kingdom Hearts II Music - Desire For All That is Lost;2005;154;;kingdom-hearts-2;2;2;0;0;0;0;50;0;;;ost;0;;1
+kingdom-hearts-2-organization;Organization ⅩⅢ;2005;153;;kingdom-hearts-2;4;2;0;0;0;0;60;0;;;ost;0;;0
+kingdom-hearts-2-waltz-of-the-damned;Waltz of the Damned;2005;127;;kingdom-hearts-2;3;2;0;0;0;0;45;0;;;ost;0;;1
+kingdom-hearts-2-the-home-of-dragons;The Home of Dragons;2005;167;;kingdom-hearts-2;3;4;0;0;0;0;45;0;;;ost;0;;1
+kingdom-hearts-2-fields-of-honor;Fields of Honor;2005;139;;kingdom-hearts-2;5;3;0;0;0;0;40;0;;;ost;0;;0
+kingdom-hearts-2-the-underworld;The Underworld;2005;145;;kingdom-hearts-2;3;2;0;0;0;0;40;0;;;ost;0;;1
+kingdom-hearts-2-monochrome-dreams;Monochrome Dreams;2005;109;;kingdom-hearts-2;2;4;0;0;0;0;40;0;;;ost;0;;1
+kingdom-hearts-2-nights-of-the-cursed;Nights of the Cursed;2005;221;;kingdom-hearts-2;3;2;0;0;0;0;50;0;;;ost;0;;1
+kingdom-hearts-2-adventures-in-the-savannah;Adventures in the Savannah;2005;183;;kingdom-hearts-2;3;5;0;0;0;0;45;0;;;ost;0;;1
+kingdom-hearts-2-space-paranoids;Space Paranoids;2005;193;;kingdom-hearts-2;3;3;0;0;0;0;40;0;;;ost;0;;1
+kingdom-hearts-2-the-13th-dilemma;The 13th Dilemma;2005;215;;kingdom-hearts-2;5;2;0;0;0;0;55;0;;;ost;0;;0
+kingdom-hearts-2-kingdom-hearts-ii-music-vs-sephiroth;Kingdom Hearts II Music - Vs Sephiroth;2005;229;;kingdom-hearts-2;5;2;1;0;0;0;60;0;;;ost;0;;0
+kingdom-hearts-2-kingdom-hearts-2-final-mix-the-13th-reflection;Kingdom Hearts 2 Final Mix The 13th Reflection;2005;227;;kingdom-hearts-2;5;2;0;0;0;0;60;0;;;ost;0;;0
+kingdom-hearts-2-kingdom-hearts-2-final-mix-the-other-promise;Kingdom Hearts 2 Final Mix The Other Promise;2005;278;;kingdom-hearts-2;5;2;0;0;0;0;70;0;;;ost;0;;0
+kingdom-hearts-2-sacred-moon;Sacred Moon;2005;228;;kingdom-hearts-2;3;2;0;0;0;0;50;0;;;ost;0;;1
+kingdom-hearts-2-riku;Riku;2005;132;;kingdom-hearts-2;2;3;0;0;0;0;50;0;;;ost;0;;1
+kingdom-hearts-2-darkness-of-the-unknown;Darkness of the Unknown;2005;471;;kingdom-hearts-2;5;2;1;0;0;0;55;0;;;ost;0;;0
 nier-replicant-ver;喪失/Ver. ピアノ;2010;160;;nier-replicant;1;2;0;0;0;0;50;0;;;ost;0;;1
 nier-replicant-ver-1;ヨナ/Ver. 弦その1;2010;159;;nier-replicant;1;2;0;0;0;0;45;0;;;ost;0;;1
 nier-replicant-ashes-of-dreams-english-version;Ashes of Dreams / English Version;2010;378;;nier-replicant;2;2;1;0;0;0;70;1;;;ost;0;;0
@@ -6866,6 +7003,69 @@ nier-replicant-echo-nier;echo-: NieR 休息;2010;388;;nier-replicant;1;2;0;0;0;0
 nier-replicant-snow-in-summer;Snow in Summer;2010;289;;nier-replicant;2;2;1;0;0;0;60;0;;;ost;0;;1
 nier-replicant-kaine;Kainé;2010;257;;nier-replicant;3;2;1;0;0;0;70;0;;;ost;0;;0
 nier-replicant-fleeting-words;"""泡沫ノ言葉／Fleeting Words";2010;295;;nier-replicant;2;2;1;0;0;0;55;0;;;ost;0;;1
+octopath-traveler-main-theme;Main Theme;2018;155;;octopath-traveler;3;4;0;0;0;0;80;1;;;ost;0;;1
+octopath-traveler-ophilia-the-cleric;Ophilia, the Cleric;2018;200;;octopath-traveler;1;3;0;0;0;0;50;0;;;ost;0;;1
+octopath-traveler-olberic-the-warrior;Olberic, the Warrior;2018;163;;octopath-traveler;3;3;0;0;0;0;50;0;;;ost;0;;1
+octopath-traveler-primrose-the-dancer;Primrose, the Dancer;2018;163;;octopath-traveler;2;2;0;0;0;0;50;0;;;ost;0;;1
+octopath-traveler-therion-the-thief;Therion, the Thief;2018;143;;octopath-traveler;3;3;0;0;0;0;45;0;;;ost;0;;1
+octopath-traveler-the-frostlands;The Frostlands;2018;260;;octopath-traveler;1;3;0;0;0;0;55;0;;;ost;0;;1
+octopath-traveler-the-flatlands;The Flatlands;2018;187;;octopath-traveler;2;4;0;0;0;0;50;0;;;ost;0;;1
+octopath-traveler-the-coastlands;The Coastlands;2018;197;;octopath-traveler;2;4;0;0;0;0;45;0;;;ost;0;;1
+octopath-traveler-the-highlands;The Highlands;2018;263;;octopath-traveler;3;3;0;0;0;0;45;0;;;ost;0;;1
+octopath-traveler-the-sunlands;The Sunlands;2018;193;;octopath-traveler;2;3;0;0;0;0;40;0;;;ost;0;;1
+octopath-traveler-the-riverlands;The Riverlands;2018;273;;octopath-traveler;1;4;0;0;0;0;50;0;;;ost;0;;1
+octopath-traveler-the-woodlands;The Woodlands;2018;226;;octopath-traveler;2;3;0;0;0;0;45;0;;;ost;0;;1
+octopath-traveler-melancholy;Melancholy;2018;195;;octopath-traveler;1;2;0;0;0;0;50;0;;;ost;0;;1
+octopath-traveler-tranquil-days;Tranquil Days;2018;176;;octopath-traveler;1;4;0;0;0;0;50;0;;;ost;0;;1
+octopath-traveler-cobbleston-nestled-in-the-hills;Cobbleston, Nestled in the Hills;2018;194;;octopath-traveler;1;4;0;0;0;0;45;0;;;ost;0;;1
+octopath-traveler-tension;Tension;2018;198;;octopath-traveler;3;2;0;0;0;0;40;0;;;ost;0;;1
+octopath-traveler-dark-caverns;Dark Caverns;2018;227;;octopath-traveler;2;2;0;0;0;0;45;0;;;ost;0;;1
+octopath-traveler-battle-i;Battle I;2018;199;;octopath-traveler;5;4;0;0;0;0;65;0;;;ost;0;;0
+octopath-traveler-sunshade-city-of-pleasures;Sunshade, City of Pleasures;2018;207;;octopath-traveler;3;3;0;0;0;0;45;0;;;ost;0;;1
+octopath-traveler-on-a-knifes-edge;On a Knife's Edge;2018;242;;octopath-traveler;4;2;0;0;0;0;40;0;;;ost;0;;0
+octopath-traveler-creeping-dread;Creeping Dread;2018;196;;octopath-traveler;2;1;0;0;0;0;40;0;;;ost;0;;1
+octopath-traveler-decisive-battle-i;Decisive Battle I;2018;267;;octopath-traveler;5;3;0;0;0;0;65;0;;;ost;0;;0
+octopath-traveler-battle-ii;Battle II;2018;178;;octopath-traveler;5;3;0;0;0;0;50;0;;;ost;0;;0
+octopath-traveler-town-veiled-in-white;Town Veiled in White;2018;195;;octopath-traveler;1;3;0;0;0;0;45;0;;;ost;0;;1
+octopath-traveler-sorrow;Sorrow;2018;192;;octopath-traveler;1;1;0;0;0;0;45;0;;;ost;0;;1
+octopath-traveler-decisive-battle-ii;Decisive Battle II;2018;207;;octopath-traveler;5;3;0;0;0;0;55;0;;;ost;0;;0
+octopath-traveler-river-of-life;River of Life;2018;214;;octopath-traveler;1;4;0;0;0;0;45;0;;;ost;0;;1
+octopath-traveler-forbidding-corridors;Forbidding Corridors;2018;222;;octopath-traveler;3;2;0;0;0;0;40;0;;;ost;0;;1
+octopath-traveler-battle-at-journeys-end;Battle at Journey's End;2018;241;;octopath-traveler;5;3;1;0;0;0;60;0;;;ost;0;;0
+octopath-traveler-daughter-of-the-dark-god;Daughter of the Dark God;2018;286;;octopath-traveler;5;1;1;0;0;0;55;0;;;ost;0;;0
+octopath-traveler-ending-theme;Ending Theme;2018;480;;octopath-traveler;2;3;0;0;0;0;55;0;;;ost;0;;1
+octopath-traveler-2-octopath-traveler-2-title-screen-main-theme-day;Octopath Traveler 2 - Title screen (Main Theme Day);2023;192;;octopath-traveler-2;3;4;0;0;0;0;80;1;;;ost;0;;1
+octopath-traveler-2-octopath-traveler-2-title-screen-night-main-theme-night;Octopath Traveler 2 - Title Screen Night (Main Theme Night);2023;165;;octopath-traveler-2;1;3;0;0;0;0;60;0;;;ost;0;;1
+octopath-traveler-2-octopath-traveler-2-totohaha-day;Octopath Traveler 2 - Toto'haha Day;2023;215;;octopath-traveler-2;2;4;0;0;0;0;45;0;;;ost;0;;1
+octopath-traveler-2-octopath-traveler-2-the-harborlands-day;Octopath Traveler 2 - The Harborlands Day;2023;232;;octopath-traveler-2;2;4;0;0;0;0;50;0;;;ost;0;;1
+octopath-traveler-2-octopath-traveler-2-boss-fight-critical-clash-i;Octopath Traveler 2 - Boss Fight! (Critical Clash I);2023;324;;octopath-traveler-2;5;3;0;0;0;0;70;0;;;ost;0;;0
+octopath-traveler-2-octopath-traveler-boss-battle-critical-clash-ii;Octopath Traveler - Boss Battle! (Critical Clash II);2023;372;;octopath-traveler-2;5;3;0;0;0;0;60;0;;;ost;0;;0
+octopath-traveler-2-octopath-traveler-2-the-brightlands-day;Octopath Traveler 2 - The Brightlands Day;2023;230;;octopath-traveler-2;2;4;0;0;0;0;45;0;;;ost;0;;1
+octopath-traveler-2-octopath-traveler-2-the-crestlands-day;Octopath Traveler 2 - The Crestlands Day;2023;233;;octopath-traveler-2;2;3;0;0;0;0;45;0;;;ost;0;;1
+octopath-traveler-2-octopath-traveler-2-the-leaflands-day;Octopath Traveler 2 - The Leaflands Day;2023;205;;octopath-traveler-2;1;4;0;0;0;0;45;0;;;ost;0;;1
+octopath-traveler-2-octopath-traveler-2-the-wildlands-day;Octopath Traveler 2 - The Wildlands Day;2023;190;;octopath-traveler-2;3;3;0;0;0;0;40;0;;;ost;0;;1
+octopath-traveler-2-octopath-traveler-2-the-winterlands-day;Octopath Traveler 2 - The Winterlands Day;2023;245;;octopath-traveler-2;1;3;0;0;0;0;50;0;;;ost;0;;1
+octopath-traveler-2-octopath-traveler-2-hinoeuma-day;Octopath Traveler 2 - Hinoeuma Day;2023;271;;octopath-traveler-2;2;3;0;0;0;0;45;0;;;ost;0;;1
+octopath-traveler-2-octopath-traveler-2-the-sundering-sea-day;Octopath Traveler 2 - The Sundering Sea Day;2023;215;;octopath-traveler-2;2;4;0;0;0;0;50;0;;;ost;0;;1
+octopath-traveler-2-octopath-traveler-2-battle-on-the-sea;Octopath Traveler 2 - Battle on the Sea!;2023;194;;octopath-traveler-2;5;4;0;0;0;0;45;0;;;ost;0;;0
+octopath-traveler-2-octopath-traveler-2-carefree-days;Octopath Traveler 2 - Carefree Days;2023;168;;octopath-traveler-2;1;4;0;0;0;0;50;0;;;ost;0;;1
+octopath-traveler-2-octopath-traveler-2-hope;Octopath Traveler 2 - Hope;2023;235;;octopath-traveler-2;2;3;0;0;0;0;50;0;;;ost;0;;1
+octopath-traveler-2-octopath-traveler-2-empty-memories;Octopath Traveler 2 - Empty Memories;2023;234;;octopath-traveler-2;1;2;0;0;0;0;45;0;;;ost;0;;1
+octopath-traveler-2-octopath-traveler-2-a-sensational-city-day;Octopath Traveler 2 - A Sensational City Day;2023;170;;octopath-traveler-2;3;4;0;0;0;0;45;0;;;ost;0;;1
+octopath-traveler-2-octopath-traveler-2-a-sensational-city-night;Octopath Traveler 2 - A Sensational City Night;2023;300;;octopath-traveler-2;2;4;0;0;0;0;45;0;;;ost;0;;1
+octopath-traveler-2-octopath-traveler-2-gloomy-grotto;Octopath Traveler 2 - Gloomy Grotto;2023;209;;octopath-traveler-2;2;2;0;0;0;0;40;0;;;ost;0;;1
+octopath-traveler-2-octopath-traveler-2-normal-battle-i;Octopath Traveler 2 - Normal Battle I;2023;278;;octopath-traveler-2;5;4;0;0;0;0;60;0;;;ost;0;;0
+octopath-traveler-2-octopath-traveler-2-cropdale-village-at-peace-day;Octopath Traveler 2 - Cropdale, Village at Peace Day;2023;173;;octopath-traveler-2;1;4;0;0;0;0;45;0;;;ost;0;;1
+octopath-traveler-2-octopath-traveler-2-flamechurch-sacred-light-day;Octopath Traveler 2 - Flamechurch, Sacred Light Day;2023;270;;octopath-traveler-2;2;3;0;0;0;0;45;0;;;ost;0;;1
+octopath-traveler-2-octopath-traveler-2-stillness-underground;Octopath Traveler 2 - Stillness Underground;2023;215;;octopath-traveler-2;2;2;0;0;0;0;40;0;;;ost;0;;1
+octopath-traveler-2-octopath-traveler-2-normal-battle-ii;Octopath Traveler 2 - Normal Battle II;2023;256;;octopath-traveler-2;5;3;0;0;0;0;50;0;;;ost;0;;0
+octopath-traveler-2-octopath-traveler-2-snowswept-town-day;Octopath Traveler 2 - Snowswept Town Day;2023;195;;octopath-traveler-2;1;3;0;0;0;0;45;0;;;ost;0;;1
+octopath-traveler-2-octopath-traveler-2-forest-of-mystery;Octopath Traveler 2 - Forest of Mystery;2023;208;;octopath-traveler-2;2;2;0;0;0;0;40;0;;;ost;0;;1
+octopath-traveler-2-octopath-traveler-2-ruins-immemorial;Octopath Traveler 2 - Ruins Immemorial;2023;273;;octopath-traveler-2;3;2;0;0;0;0;40;0;;;ost;0;;1
+octopath-traveler-2-octopath-traveler-2-fierce-confrontation;Octopath Traveler 2 - Fierce Confrontation;2023;361;;octopath-traveler-2;5;2;0;0;0;0;55;0;;;ost;0;;0
+octopath-traveler-2-octopath-traveler-2-vide-the-wicked;Octopath Traveler 2 - Vide, the Wicked;2023;391;;octopath-traveler-2;5;2;1;0;0;0;55;0;;;ost;0;;0
+octopath-traveler-2-octopath-traveler-2-those-who-deny-the-dawn;Octopath Traveler 2 - Those Who Deny the Dawn;2023;384;;octopath-traveler-2;5;3;1;0;0;0;60;0;;;ost;0;;0
+octopath-traveler-2-octopath-traveler-2-ending-theme;Octopath Traveler 2 - Ending Theme;2023;506;;octopath-traveler-2;2;3;0;0;0;0;55;0;;;ost;0;;1
 ghibli-chihiro-nighttime-coming-yoru-kitaru;Nighttime Coming (Yoru Kitaru);2001;113;;ghibli-chihiro;2;2;0;0;0;0;55;0;;;ost;0;;1
 ghibli-chihiro-the-dragon-boy-ryuu-no-shounen;The Dragon Boy (Ryuu no Shounen);2001;132;;ghibli-chihiro;2;3;0;0;0;0;60;0;;;ost;0;;1
 ghibli-chihiro-sootballs-boiler-mushi;Sootballs (Boiler Mushi);2001;153;;ghibli-chihiro;3;4;0;0;0;0;50;0;;;ost;0;;0
@@ -6881,3 +7081,26 @@ ghibli-chihiro-the-house-at-swamp-bottom-numa-no-soko-no-le;The House at Swamp B
 ghibli-chihiro-always-with-me-itsumo-nando-demo;Always With Me (Itsumo Nando Demo);2001;196;;ghibli-chihiro;2;3;1;0;0;0;80;0;;;ost;0;;1
 ghibli-chihiro-spirited-away-reprise-waltz-of-chihiro-j-hisaishi;Spirited Away Reprise & Waltz Of Chihiro - J Hisaishi;2001;311;;ghibli-chihiro;3;3;0;0;0;0;65;0;;;ost;0;;1
 ghibli-chihiro-one-summers-day-ano-natsu-e;One Summer's Day (Ano Natsu e);2001;242;;ghibli-chihiro;2;3;0;0;0;0;90;1;;;ost;0;;1
+ghibli-vidas-ao-vento-a-journey-joe-hisaishi;a journey - joe hisaishi;2013;222;;ghibli-vidas-ao-vento;2;3;0;0;0;0;60;0;;;ost;0;;1
+ghibli-vidas-ao-vento-joe-hisaishi-naoko-meguriai;Joe Hisaishi Naoko Meguriai;2013;184;;ghibli-vidas-ao-vento;1;3;0;0;0;0;60;0;;;ost;0;;1
+ghibli-vidas-ao-vento-paper-aeroplanes;Paper Aeroplanes;2013;349;;ghibli-vidas-ao-vento;2;4;0;0;0;0;55;0;;;ost;0;;1
+ghibli-o-reino-dos-gatos-waltz-katzen-blut-hd-1;Waltz Katzen Blut HD 1;2002;98;;ghibli-o-reino-dos-gatos;2;4;0;0;0;0;45;0;;;ost;0;;1
+ghibli-o-reino-dos-gatos-neko-to-ohanashi;Neko to Ohanashi;2002;100;;ghibli-o-reino-dos-gatos;1;4;0;0;0;0;40;0;;;ost;0;;1
+the-witcher-serie-geralt-of-rivia;Geralt of Rivia;2019;113;;the-witcher-serie;3;2;0;0;0;0;70;1;;;ost;0;;0
+the-witcher-serie-toss-a-coin-to-your-witcher;Toss A Coin To Your Witcher;2019;191;;the-witcher-serie;4;5;1;0;0;0;95;0;;;ost;0;;0
+the-witcher-serie-happy-childhoods-make-for-dull-company;Happy Childhoods Make For Dull Company;2019;197;;the-witcher-serie;2;2;0;0;0;0;40;0;;;ost;0;;1
+the-witcher-serie-the-time-of-axe-and-sword-is-now;The Time of Axe and Sword Is Now;2019;297;;the-witcher-serie;4;2;0;0;0;0;45;0;;;ost;0;;0
+the-witcher-serie-the-knight-who-was-taught-to-save-dragons;The Knight Who Was Taught to Save Dragons;2019;306;;the-witcher-serie;3;2;0;0;0;0;40;0;;;ost;0;;1
+the-witcher-serie-you-will-rule-this-land-someday;You Will Rule This Land Someday;2019;272;;the-witcher-serie;2;2;0;0;0;0;40;0;;;ost;0;;1
+the-witcher-serie-blaviken-inn;Blaviken Inn;2019;95;;the-witcher-serie;3;4;0;0;0;0;45;0;;;ost;0;;1
+the-witcher-serie-the-great-cleansing;The Great Cleansing;2019;245;;the-witcher-serie;4;1;0;0;0;0;45;0;;;ost;0;;0
+the-witcher-serie-battle-of-marnadal;Battle of Marnadal;2019;258;;the-witcher-serie;5;2;0;0;0;0;40;0;;;ost;0;;0
+the-witcher-serie-bonfire;Bonfire;2019;135;;the-witcher-serie;1;3;0;0;0;0;40;0;;;ost;0;;1
+the-witcher-serie-the-pensive-dragon-inn;The Pensive Dragon Inn;2019;89;;the-witcher-serie;3;4;0;0;0;0;40;0;;;ost;0;;1
+the-witcher-serie-youre-in-brokilon-forest;You're in Brokilon Forest;2019;162;;the-witcher-serie;2;2;0;0;0;0;45;0;;;ost;0;;1
+the-witcher-serie-blame-destiny;Blame Destiny;2019;285;;the-witcher-serie;2;2;0;0;0;0;40;0;;;ost;0;;1
+the-witcher-serie-yennefer-of-vengerberg;Yennefer of Vengerberg;2019;191;;the-witcher-serie;3;2;0;0;0;0;50;0;;;ost;0;;1
+the-witcher-serie-youll-have-to-fight-it-until-dawn;You'll Have to Fight It Until Dawn;2019;545;;the-witcher-serie;4;1;0;0;0;0;40;0;;;ost;0;;0
+the-witcher-serie-the-curse-of-the-black-sun;The Curse of the Black Sun;2019;411;;the-witcher-serie;3;2;0;0;0;0;40;0;;;ost;0;;1
+the-witcher-serie-battle-of-sodden;Battle of Sodden;2019;242;;the-witcher-serie;5;2;1;0;0;0;50;0;;;ost;0;;0
+the-witcher-serie-the-song-of-the-white-wolf;The Song of the White Wolf;2019;226;;the-witcher-serie;2;3;1;0;0;0;55;0;;;ost;0;;0

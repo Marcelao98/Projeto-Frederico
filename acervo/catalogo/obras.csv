@@ -16,8 +16,10 @@ dragon-quest-xi;Dragon Quest XI;jogo;2017;dragon quest
 dragons-dogma-2;Dragon's Dogma 2;jogo;2024;dragons dogma
 elden-ring;Elden Ring;jogo;2022;souls
 elden-ring-shadow-of-the-erdtree;Elden Ring: Shadow of the Erdtree;jogo;2024;shadow of the erdtree|souls
+fallout-new-vegas;Fallout: New Vegas;jogo;2010;fallout
 final-fantasy-ix;Final Fantasy IX;jogo;2000;final fantasy|ff9
 final-fantasy-vi;Final Fantasy VI;jogo;1994;final fantasy|ff6
+final-fantasy-vii;Final Fantasy VII;jogo;1997;final fantasy|ff7
 final-fantasy-vii-remake;Final Fantasy VII Remake;jogo;2020;final fantasy|ff7 remake
 final-fantasy-x;Final Fantasy X;jogo;2001;final fantasy|ff10
 final-fantasy-xii;Final Fantasy XII;jogo;2006;final fantasy|ff12
@@ -25,9 +27,13 @@ final-fantasy-xiv;Final Fantasy XIV;jogo;2013;final fantasy|ff14
 final-fantasy-xvi;Final Fantasy XVI;jogo;2023;final fantasy|ff16
 fire-emblem-three-houses;Fire Emblem: Three Houses;jogo;2019;fire emblem|fe3h|three houses|fe 3 houses
 ghibli-chihiro;A Viagem de Chihiro;filme;2001;ghibli|chihiro|spirited away
+ghibli-o-reino-dos-gatos;O Reino dos Gatos;filme;2002;ghibli
+ghibli-vidas-ao-vento;Vidas ao Vento;filme;2013;ghibli|vidas ao vento
 hollow-knight;Hollow Knight;jogo;2017;
 hollow-knight-silksong;Hollow Knight: Silksong;jogo;2025;silksong
 kingdom-come;Kingdom Come: Deliverance;jogo;2018;kingdom come
+kingdom-hearts;Kingdom Hearts;jogo;2002;kingdom hearts
+kingdom-hearts-2;Kingdom Hearts II;jogo;2005;kingdom hearts
 lies-of-p;Lies of P;jogo;2023;souls
 mass-effect;Mass Effect;jogo;2007;mass effect
 morrowind;The Elder Scrolls III: Morrowind;jogo;2002;morrowind|elder scrolls
@@ -35,6 +41,8 @@ neverwinter-nights;Neverwinter Nights;jogo;2002;neverwinter
 nier-automata;NieR: Automata;jogo;2017;nier|nier automata
 nier-replicant;NieR Replicant;jogo;2010;nier
 oblivion;The Elder Scrolls IV: Oblivion;jogo;2006;oblivion|elder scrolls
+octopath-traveler;Octopath Traveler;jogo;2018;octopath
+octopath-traveler-2;Octopath Traveler II;jogo;2023;octopath
 pathfinder-wrath;Pathfinder: Wrath of the Righteous;jogo;2021;pathfinder
 persona-4;Persona 4;jogo;2008;persona
 persona-5;Persona 5;jogo;2016;persona
@@ -44,9 +52,11 @@ return-of-the-obra-dinn;Return of the Obra Dinn;jogo;2018;obra dinn
 sekiro;Sekiro: Shadows Die Twice;jogo;2019;sekiro|souls
 skyrim;The Elder Scrolls V: Skyrim;jogo;2011;skyrim|elder scrolls
 spectral-sails;Spectral Sails;jogo;;
+the-witcher-serie;The Witcher (série);série;2019;witcher
 trails-in-the-sky-3rd;The Legend of Heroes: Trails in the Sky the 3rd;jogo;2007;trails in the sky|trails
 umineko;Umineko no Naku Koro ni;visual novel;2007;umineko|umineko no naku
 witcher-3;The Witcher 3: Wild Hunt;jogo;2015;witcher|witcher 3
+xenoblade-chronicles;Xenoblade Chronicles;jogo;2010;xenoblade
 xenoblade-chronicles-2;Xenoblade Chronicles 2;jogo;2017;xenoblade
 xenoblade-chronicles-3;Xenoblade Chronicles 3;jogo;2022;xenoblade
 xenogears;Xenogears;jogo;1998;xeno
