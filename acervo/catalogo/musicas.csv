@@ -8192,10 +8192,14 @@ world-of-warcraft-tavern-human;Tavern (Human);2004;483;;world-of-warcraft;2;4;0;
 world-of-warcraft-tavern-tauren;Tavern (Tauren);2004;540;;world-of-warcraft;2;3;0;0;0;0;60;0;;;ost;0;;1
 world-of-warcraft-tavern-orc;Tavern (Orc);2004;534;;world-of-warcraft;3;4;0;0;0;0;55;0;;;ost;0;;1
 world-of-warcraft-tavern-undead;Tavern (Undead);2004;483;;world-of-warcraft;2;2;0;0;0;0;60;0;;;ost;0;;1
+world-of-warcraft-sacred-world-of-warcraft-music;Sacred - World of Warcraft [music];2004;72;;world-of-warcraft;1;3;0;0;0;0;35;0;;;ost;0;;1
+world-of-warcraft-temple-world-of-warcraft-music;Temple - World of Warcraft [music];2004;64;;world-of-warcraft;1;3;0;0;0;0;35;0;;;ost;0;;1
+world-of-warcraft-ruins-world-of-warcraft-music;Ruins - World of Warcraft [music];2004;77;;world-of-warcraft;1;2;0;0;0;0;35;0;;;ost;0;;1
 world-of-warcraft-teldrassil-world-of-warcraft-music;Teldrassil - World of Warcraft [music];2004;237;;world-of-warcraft;1;3;0;0;0;0;65;0;;;ost;0;;1
 world-of-warcraft-tanaris-world-of-warcraft-music;Tanaris - World of Warcraft [music];2004;152;;world-of-warcraft;2;3;0;0;0;0;45;0;;;ost;0;;1
 world-of-warcraft-stranglethorn-vale-world-of-warcraft-music;Stranglethorn Vale - World of Warcraft [music];2004;254;;world-of-warcraft;3;3;0;0;0;0;60;0;;;ost;0;;1
 world-of-warcraft-felwood-world-of-warcraft-music;Felwood - World of Warcraft [music];2004;159;;world-of-warcraft;2;2;0;0;0;0;45;0;;;ost;0;;1
+world-of-warcraft-shimmering-flats-world-of-warcraft-music;Shimmering Flats - World of Warcraft [music];2004;248;;world-of-warcraft;2;4;0;0;0;0;35;0;;;ost;0;;1
 world-of-warcraft-burning-steppes-world-of-warcraft-music;Burning Steppes - World of Warcraft [music];2004;149;;world-of-warcraft;3;2;0;0;0;0;45;0;;;ost;0;;1
 world-of-warcraft-dun-morogh-world-of-warcraft-music;Dun Morogh - World of Warcraft [music];2004;452;;world-of-warcraft;2;3;0;0;0;0;55;0;;;ost;0;;1
 world-of-warcraft-duskwood-world-of-warcraft-music;Duskwood - World of Warcraft [music];2004;363;;world-of-warcraft;2;1;0;0;0;0;70;0;;;ost;0;;1
@@ -8206,33 +8210,56 @@ world-of-warcraft-thunder-bluff-world-of-warcraft-music;Thunder Bluff - World of
 world-of-warcraft-the-undercity-world-of-warcraft-music;The Undercity - World of Warcraft [music];2004;149;;world-of-warcraft;2;1;0;0;0;0;55;0;;;ost;0;;1
 world-of-warcraft-orgrimmar-world-of-warcraft-music;Orgrimmar - World of Warcraft [music];2004;136;;world-of-warcraft;3;3;0;0;0;0;55;0;;;ost;0;;1
 world-of-warcraft-stormwind-world-of-warcraft-music;Stormwind - World of Warcraft [music];2004;136;;world-of-warcraft;3;3;0;0;0;0;75;0;;;ost;0;;1
+world-of-warcraft-seasons-of-war-world-of-warcraft-music;Seasons of War - World of Warcraft [music];2004;178;;world-of-warcraft;4;3;1;0;0;0;40;0;;;ost;0;;0
+world-of-warcraft-a-call-to-arms-world-of-warcraft-music;A Call to Arms - World of Warcraft [music];2004;140;;world-of-warcraft;4;3;0;0;0;0;40;0;;;ost;0;;0
 world-of-warcraft-main-title-legends-of-azeroth-world-of-warcraft-music;Main Title ~ Legends of Azeroth - World of Warcraft [music];2004;161;;world-of-warcraft;4;3;1;0;0;0;75;0;;;ost;0;;0
 world-of-warcraft-temple-of-the-moon;Temple of the Moon;2004;233;;world-of-warcraft;1;3;1;0;0;0;50;0;;;ost;0;;1
 world-of-warcraft-ahnqiraj-interior-music;Ahn'Qiraj Interior Music;2004;561;;world-of-warcraft;3;2;0;0;0;0;45;0;;;ost;0;;1
 world-of-warcraft-enchanted-forest;Enchanted Forest;2004;484;;world-of-warcraft;1;3;0;0;0;0;50;0;;;ost;0;;1
+world-of-warcraft-exclusive-track-song-of-elune-world-of-warcraft-music;Exclusive Track ~ Song of Elune - World of Warcraft [music];2004;136;;world-of-warcraft;1;2;1;0;0;0;45;0;;;ost;0;;1
 world-of-warcraft-mountain-night;Mountain [Night];2004;261;;world-of-warcraft;1;3;0;0;0;0;45;0;;;ost;0;;1
+world-of-warcraft-mountain-day;Mountain [Day];2004;268;;world-of-warcraft;2;3;0;0;0;0;35;0;;;ost;0;;1
 world-of-warcraft-forest-day;Forest [Day];2004;194;;world-of-warcraft;1;3;0;0;0;0;45;0;;;ost;0;;1
+world-of-warcraft-forest-night;Forest [Night];2004;211;;world-of-warcraft;1;3;0;0;0;0;35;0;;;ost;0;;1
 world-of-warcraft-desert-night;Desert [Night];2004;199;;world-of-warcraft;1;3;0;0;0;0;40;0;;;ost;0;;1
+world-of-warcraft-desert-day;Desert [Day];2004;202;;world-of-warcraft;2;3;0;0;0;0;35;0;;;ost;0;;1
+world-of-warcraft-the-barrens-night;The Barrens [Night];2004;156;;world-of-warcraft;1;3;0;0;0;0;35;0;;;ost;0;;1
 world-of-warcraft-the-barrens-day;The Barrens [Day];2004;184;;world-of-warcraft;2;3;0;0;0;0;50;0;;;ost;0;;1
+world-of-warcraft-jungle-night;Jungle [Night];2004;198;;world-of-warcraft;1;2;0;0;0;0;35;0;;;ost;0;;1
 world-of-warcraft-jungle-day;Jungle [Day];2004;194;;world-of-warcraft;2;3;0;0;0;0;40;0;;;ost;0;;1
 world-of-warcraft-cursed-land;Cursed Land;2004;415;;world-of-warcraft;2;1;0;0;0;0;45;0;;;ost;0;;1
+world-of-warcraft-evil-forest-day;Evil Forest [Day];2004;214;;world-of-warcraft;2;2;0;0;0;0;35;0;;;ost;0;;1
+world-of-warcraft-plains-day;Plains [Day];2004;131;;world-of-warcraft;1;4;0;0;0;0;35;0;;;ost;0;;1
+world-of-warcraft-volcanic-day;Volcanic [Day];2004;161;;world-of-warcraft;3;2;0;0;0;0;35;0;;;ost;0;;1
 world-of-warcraft-soggy-place;Soggy Place;2004;446;;world-of-warcraft;2;2;0;0;0;0;40;0;;;ost;0;;1
+world-of-warcraft-ahnqiraj-exterior;Ahn'Qiraj [Exterior];2004;270;;world-of-warcraft;3;2;0;0;0;0;40;0;;;ost;0;;1
 world-of-warcraft-naxxramas-walking;Naxxramas [Walking];2004;543;;world-of-warcraft;3;1;0;0;0;0;55;0;;;ost;0;;1
 world-of-warcraft-stratholme-1-dungeon-music;Stratholme 1 - Dungeon Music;2004;211;;world-of-warcraft;3;1;0;0;0;0;40;0;;;ost;0;;1
 world-of-warcraft-music-from-tirisfal-glades;Music from Tirisfal Glades;2004;151;;world-of-warcraft;1;2;0;0;0;0;50;0;;;ost;0;;1
 world-of-warcraft-feralas-original-wow-music;Feralas - Original Wow Music;2004;237;;world-of-warcraft;2;3;0;0;0;0;40;0;;;ost;0;;1
+world-of-warcraft-darkshore-original-wow-music-pictures;Darkshore - Original Wow Music & Pictures;2004;210;;world-of-warcraft;1;3;0;0;0;0;35;0;;;ost;0;;1
 world-of-warcraft-winterspring-original-wow-music;Winterspring - Original Wow Music;2004;217;;world-of-warcraft;1;3;0;0;0;0;45;0;;;ost;0;;1
 world-of-warcraft-wow-music-lullaby-of-whisperwind;WoW Music-Lullaby of Whisperwind;2004;312;;world-of-warcraft;1;2;0;0;0;0;50;0;;;ost;0;;1
+world-of-warcraft-durotar-original-wow-music;Durotar - Original Wow Music;2004;199;;world-of-warcraft;2;3;0;0;0;0;35;0;;;ost;0;;1
+world-of-warcraft-ruins-of-auberdine;Ruins of Auberdine;2004;422;;world-of-warcraft;1;2;0;0;0;0;40;0;;;ost;0;;1
+world-of-warcraft-moonglade-original-wow-music;Moonglade - Original Wow Music;2004;124;;world-of-warcraft;1;3;0;0;0;0;35;0;;;ost;0;;1
 world-of-warcraft-brewfest-horde-world-of-warcraft-music;Brewfest Horde - World of Warcraft Music;2004;280;;world-of-warcraft;3;5;0;0;0;0;50;0;;;ost;0;;1
+world-of-warcraft-the-hinterlands-original-wow-music;The Hinterlands - Original Wow Music;2004;121;;world-of-warcraft;1;3;0;0;0;0;35;0;;;ost;0;;1
 world-of-warcraft-the-deadmines-1-redux-dungeon-music;The Deadmines 1 (REDUX) - Dungeon Music;2004;166;;world-of-warcraft;3;2;0;0;0;0;50;0;;;ost;0;;1
 world-of-warcraft-auchindoun;Auchindoun;2004;391;;world-of-warcraft;2;2;0;0;0;0;40;0;;;ost;0;;1
+world-of-warcraft-azuremyst-draenei-part-1;Azuremyst (Draenei - Part 1);2004;775;;world-of-warcraft;1;3;0;0;0;0;40;0;;;ost;0;;1
+world-of-warcraft-battle-for-mount-hyjal;Battle for Mount Hyjal;2004;737;;world-of-warcraft;5;2;1;0;0;0;40;0;;;ost;0;;0
 world-of-warcraft-black-temple-illidan;Black Temple (Illidan);2004;558;;world-of-warcraft;5;2;1;0;0;0;65;0;;;ost;0;;0
+world-of-warcraft-black-temple-sanctuary;Black Temple (Sanctuary);2004;564;;world-of-warcraft;2;2;0;0;0;0;35;0;;;ost;0;;1
 world-of-warcraft-eversong-day;Eversong (Day);2004;751;;world-of-warcraft;1;3;0;0;0;0;50;0;;;ost;0;;1
 world-of-warcraft-ghostlands-day;Ghostlands (Day);2004;895;;world-of-warcraft;1;2;0;0;0;0;45;0;;;ost;0;;1
+world-of-warcraft-hellfire-peninsula;Hellfire Peninsula;2004;498;;world-of-warcraft;3;2;0;0;0;0;35;0;;;ost;0;;1
 world-of-warcraft-karazhan-walking;Karazhan (Walking);2004;785;;world-of-warcraft;2;2;0;0;0;0;60;0;;;ost;0;;1
 world-of-warcraft-lament-of-the-highborne;Lament of the Highborne;2004;172;;world-of-warcraft;1;1;1;0;0;0;70;0;;;ost;0;;1
 world-of-warcraft-nagrand-night;Nagrand (Night);2004;335;;world-of-warcraft;1;3;0;0;0;0;60;0;;;ost;0;;1
 world-of-warcraft-shattrath;Shattrath;2004;668;;world-of-warcraft;1;3;0;0;0;0;50;0;;;ost;0;;1
+world-of-warcraft-silvermoon-day;Silvermoon (Day);2004;342;;world-of-warcraft;2;3;0;0;0;0;35;0;;;ost;0;;1
+world-of-warcraft-tavern-alliance-revisited;Tavern (Alliance - Revisited);2004;143;;world-of-warcraft;2;4;0;0;0;0;45;0;;;ost;0;;1
 wow-wrath-of-the-lich-king-wrath-of-the-lich-king-main-title;Wrath Of The Lich King (Main Title);2008;537;;wow-wrath-of-the-lich-king;3;2;1;0;0;0;85;1;;;ost;0;;0
 wow-wrath-of-the-lich-king-dragons-rest;Dragons' Rest;2008;188;;wow-wrath-of-the-lich-king;1;2;0;0;0;0;55;0;;;ost;0;;1
 wow-wrath-of-the-lich-king-arthas-my-son-cinematic-intro;Arthas, My Son (Cinematic Intro);2008;193;;wow-wrath-of-the-lich-king;3;1;1;0;0;0;60;0;;;ost;0;;0
@@ -8250,28 +8277,58 @@ wow-wrath-of-the-lich-king-borean-tundra-exclusive-track;Borean Tundra (Exclusiv
 wow-wrath-of-the-lich-king-the-wrath-gate-cutscene-event-exclusive-track;"The Wrath Gate (Cutscene Event; Exclusive Track)";2008;234;;wow-wrath-of-the-lich-king;4;2;1;0;0;0;55;0;;;ost;0;;0
 wow-wrath-of-the-lich-king-angrathars-shadow;Angrathar's Shadow;2008;176;;wow-wrath-of-the-lich-king;3;2;0;0;0;0;40;0;;;ost;0;;1
 guild-wars-2-overture;Overture;2012;90;;guild-wars-2;3;3;0;0;0;0;60;0;;;ost;0;;1
+guild-wars-2-the-seraph;The Seraph;2012;188;;guild-wars-2;3;3;0;0;0;0;40;0;;;ost;0;;1
 guild-wars-2-bears-spirit;Bear's Spirit;2012;266;;guild-wars-2;2;3;0;0;0;0;50;0;;;ost;0;;1
+guild-wars-2-call-of-the-raven;Call of the Raven;2012;174;;guild-wars-2;2;3;0;0;0;0;40;0;;;ost;0;;1
+guild-wars-2-out-of-the-dream;Out of the Dream;2012;140;;guild-wars-2;2;2;0;0;0;0;35;0;;;ost;0;;1
 guild-wars-2-heritage-of-humanity;Heritage of Humanity;2012;118;;guild-wars-2;2;3;0;0;0;0;45;0;;;ost;0;;1
+guild-wars-2-snaffs-workshop;Snaff's Workshop;2012;140;;guild-wars-2;2;4;0;0;0;0;35;0;;;ost;0;;1
+guild-wars-2-eirs-solitude;Eir's Solitude;2012;130;;guild-wars-2;2;2;0;0;0;0;35;0;;;ost;0;;1
+guild-wars-2-the-walls-of-ebonhawke;The Walls of Ebonhawke;2012;141;;guild-wars-2;4;3;0;0;0;0;35;0;;;ost;0;;0
 guild-wars-2-the-sea-of-sorrows;The Sea of Sorrows;2012;146;;guild-wars-2;2;2;0;0;0;0;45;0;;;ost;0;;1
+guild-wars-2-the-vigil-goes-to-war;The Vigil Goes to War;2012;160;;guild-wars-2;4;3;0;0;0;0;35;0;;;ost;0;;0
+guild-wars-2-mepis-ranch;Mepi's Ranch;2012;129;;guild-wars-2;1;4;0;0;0;0;35;0;;;ost;0;;1
 guild-wars-2-ruins-of-an-empire;Ruins of an Empire;2012;127;;guild-wars-2;2;2;0;0;0;0;45;0;;;ost;0;;1
 guild-wars-2-ventaris-legacy;Ventari's Legacy;2012;115;;guild-wars-2;1;3;0;0;0;0;50;0;;;ost;0;;1
 guild-wars-2-tears-of-stars;Tears of Stars;2012;71;;guild-wars-2;1;2;0;0;0;0;45;0;;;ost;0;;1
+guild-wars-2-logans-journey;Logan's Journey;2012;152;;guild-wars-2;2;3;0;0;0;0;35;0;;;ost;0;;1
 guild-wars-2-tyria-reborn;Tyria Reborn;2012;252;;guild-wars-2;3;3;0;0;0;0;55;0;;;ost;0;;1
 guild-wars-2-tyria-awaits;Tyria Awaits;2012;183;;guild-wars-2;3;4;0;0;0;0;50;0;;;ost;0;;1
+guild-wars-2-farahr;Farahr;2012;162;;guild-wars-2;2;3;0;0;0;0;35;0;;;ost;0;;1
+guild-wars-2-the-tengu-wall;The Tengu Wall;2012;132;;guild-wars-2;2;3;0;0;0;0;35;0;;;ost;0;;1
 guild-wars-2-zhaitan;Zhaitan;2012;149;;guild-wars-2;4;1;1;0;0;0;50;0;;;ost;0;;0
+guild-wars-2-lornars-pass;Lornar's Pass;2012;161;;guild-wars-2;2;3;0;0;0;0;35;0;;;ost;0;;1
 guild-wars-2-dawn-in-shaemoor;Dawn in Shaemoor;2012;158;;guild-wars-2;1;4;0;0;0;0;55;0;;;ost;0;;1
+guild-wars-2-straits-of-devastation;Straits of Devastation;2012;198;;guild-wars-2;3;2;0;0;0;0;35;0;;;ost;0;;1
+guild-wars-2-kormirs-whispers;Kormir's Whispers;2012;114;;guild-wars-2;1;3;0;0;0;0;35;0;;;ost;0;;1
+guild-wars-2-michoti-battle-march;Michoti Battle March;2012;135;;guild-wars-2;4;3;0;0;0;0;35;0;;;ost;0;;0
 guild-wars-2-a-land-restored;A Land Restored;2012;157;;guild-wars-2;1;3;0;0;0;0;45;0;;;ost;0;;1
+guild-wars-2-explorers-and-artifacts;Explorers and Artifacts;2012;133;;guild-wars-2;2;3;0;0;0;0;35;0;;;ost;0;;1
 guild-wars-2-the-shiverpeaks;The Shiverpeaks;2012;253;;guild-wars-2;2;3;0;0;0;0;55;0;;;ost;0;;1
 guild-wars-2-plains-of-ashford;Plains of Ashford;2012;135;;guild-wars-2;2;3;0;0;0;0;45;0;;;ost;0;;1
+guild-wars-2-sunrise-over-astorea;Sunrise Over Astorea;2012;130;;guild-wars-2;1;3;0;0;0;0;35;0;;;ost;0;;1
+guild-wars-2-blighted-battleground;Blighted Battleground;2012;137;;guild-wars-2;4;2;0;0;0;0;35;0;;;ost;0;;0
+guild-wars-2-heros-canton;Hero's Canton;2012;167;;guild-wars-2;2;3;0;0;0;0;35;0;;;ost;0;;1
 guild-wars-2-journey-through-caledon;Journey Through Caledon;2012;132;;guild-wars-2;1;3;0;0;0;0;45;0;;;ost;0;;1
 guild-wars-2-melandrus-calm;Melandru's Calm;2012;128;;guild-wars-2;1;3;0;0;0;0;45;0;;;ost;0;;1
+guild-wars-2-the-stars-shine-on-kryta;The Stars Shine on Kryta;2012;96;;guild-wars-2;1;3;0;0;0;0;35;0;;;ost;0;;1
 guild-wars-2-the-saga-of-the-norn;The Saga of the Norn;2012;146;;guild-wars-2;3;4;0;0;0;0;45;0;;;ost;0;;1
 guild-wars-2-the-last-great-city-of-men;The Last Great City of Men;2012;167;;guild-wars-2;2;3;0;0;0;0;45;0;;;ost;0;;1
 guild-wars-2-the-great-wall-has-fallen;The Great Wall Has Fallen;2012;276;;guild-wars-2;4;2;0;0;0;0;45;0;;;ost;0;;0
 guild-wars-2-gendarran-fields;Gendarran Fields;2012;160;;guild-wars-2;1;4;0;0;0;0;45;0;;;ost;0;;1
+guild-wars-2-bandits-expanse;Bandits' Expanse;2012;139;;guild-wars-2;2;3;0;0;0;0;35;0;;;ost;0;;1
+guild-wars-2-battle-of-the-vanguard;Battle of the Vanguard;2012;141;;guild-wars-2;5;3;0;0;0;0;35;0;;;ost;0;;0
 guild-wars-2-promenade-of-the-gods;Promenade of the Gods;2012;183;;guild-wars-2;2;3;0;0;0;0;45;0;;;ost;0;;1
+guild-wars-2-hope-falls;Hope Falls;2012;157;;guild-wars-2;2;2;0;0;0;0;35;0;;;ost;0;;1
+guild-wars-2-the-vaults-of-the-priory;The Vaults of the Priory;2012;124;;guild-wars-2;2;2;0;0;0;0;35;0;;;ost;0;;1
+guild-wars-2-the-orders-unite;The Orders Unite;2012;190;;guild-wars-2;3;3;0;0;0;0;35;0;;;ost;0;;1
+guild-wars-2-journey-to-the-mists;Journey to the Mists;2012;137;;guild-wars-2;2;3;0;0;0;0;35;0;;;ost;0;;1
 guild-wars-2-of-tides-and-quaggan;Of Tides and Quaggan;2012;132;;guild-wars-2;2;4;0;0;0;0;40;0;;;ost;0;;1
+guild-wars-2-whispers-in-the-dark;Whispers in the Dark;2012;98;;guild-wars-2;2;2;0;0;0;0;35;0;;;ost;0;;1
+guild-wars-2-adelberns-ghost;Adelbern's Ghost;2012;144;;guild-wars-2;2;2;0;0;0;0;35;0;;;ost;0;;1
+guild-wars-2-malchors-leap;Malchor's Leap;2012;129;;guild-wars-2;2;3;0;0;0;0;35;0;;;ost;0;;1
 guild-wars-2-sparkfly-fen;Sparkfly Fen;2012;208;;guild-wars-2;2;2;0;0;0;0;40;0;;;ost;0;;1
+guild-wars-2-march-of-the-legions;March of the Legions;2012;163;;guild-wars-2;5;3;0;0;0;0;35;0;;;ost;0;;0
 guild-wars-2-here-be-dragons-game-version;Here be Dragons (Game Version);2012;282;;guild-wars-2;5;2;1;0;0;0;50;0;;;ost;0;;0
 lord-of-the-rings-online-lotro-10th-anniversary-the-house-of-tom-bombadil-4k;LotRO: 10th Anniversary - The House of Tom Bombadil - 4K;2007;97;;lord-of-the-rings-online;2;4;0;0;0;0;50;0;;;ost;0;;1
 lord-of-the-rings-online-lotro-10th-anniversary-moria-4k;LotRO: 10th Anniversary - Moria - 4K;2007;125;;lord-of-the-rings-online;3;2;0;0;0;0;55;0;;;ost;0;;1
@@ -8690,44 +8747,74 @@ genshin-impact-a-storm-a-spire-and-a-sanctum-dvalins-nest;A Storm, A Spire, and 
 genshin-impact-caelestinum-finale-termini;Caelestinum Finale Termini;2020;208;;genshin-impact;5;3;1;0;0;0;50;0;;;ost;0;;0
 genshin-impact-a-day-in-mondstadt;A Day in Mondstadt;2020;60;;genshin-impact;2;4;0;0;0;0;55;0;;;ost;0;;1
 genshin-impact-dream-aria-genshin-impact-main-theme-var;Dream Aria (Genshin Impact Main Theme Var.);2020;99;;genshin-impact;1;3;0;0;0;0;50;0;;;ost;0;;1
+genshin-impact-pure-sky;Pure Sky;2020;66;;genshin-impact;1;4;0;0;0;0;35;0;;;ost;0;;1
 genshin-impact-the-edge-of-the-prairie;The Edge of the Prairie;2020;71;;genshin-impact;1;4;0;0;0;0;55;0;;;ost;0;;1
 genshin-impact-rite-of-battle;Rite of Battle;2020;260;;genshin-impact;4;3;0;0;0;0;50;0;;;ost;0;;0
+genshin-impact-knighthood-excellence;Knighthood Excellence;2020;94;;genshin-impact;3;3;0;0;0;0;35;0;;;ost;0;;1
+genshin-impact-happy-journey;Happy Journey;2020;153;;genshin-impact;2;4;0;0;0;0;35;0;;;ost;0;;1
 genshin-impact-the-outlander-who-caught-the-wind;The Outlander Who Caught the Wind;2020;109;;genshin-impact;3;4;0;0;0;0;50;0;;;ost;0;;1
+genshin-impact-twilight-serenity-genshin-impact-main-theme-var;Twilight Serenity (Genshin Impact Main Theme Var.);2020;102;;genshin-impact;1;3;0;0;0;0;40;0;;;ost;0;;1
 genshin-impact-legend-of-the-wind;Legend of the Wind;2020;87;;genshin-impact;1;4;0;0;0;0;45;0;;;ost;0;;1
 genshin-impact-the-city-favored-by-wind;The City Favored by Wind;2020;64;;genshin-impact;2;4;0;0;0;0;50;0;;;ost;0;;1
 genshin-impact-bustling-afternoon-in-mondstadt;Bustling Afternoon in Mondstadt;2020;109;;genshin-impact;2;4;0;0;0;0;45;0;;;ost;0;;1
 genshin-impact-dusk-in-mondstadt;Dusk in Mondstadt;2020;109;;genshin-impact;1;3;0;0;0;0;45;0;;;ost;0;;1
 genshin-impact-mondstadt-starlit;Mondstadt Starlit;2020;61;;genshin-impact;1;3;0;0;0;0;50;0;;;ost;0;;1
+genshin-impact-moonlight-in-mondstadt;Moonlight in Mondstadt;2020;50;;genshin-impact;1;3;0;0;0;0;35;0;;;ost;0;;1
+genshin-impact-another-day-in-mondstadt;Another Day in Mondstadt;2020;53;;genshin-impact;1;4;0;0;0;0;35;0;;;ost;0;;1
 genshin-impact-windborne-hymn;Windborne Hymn;2020;109;;genshin-impact;1;3;0;0;0;0;40;0;;;ost;0;;1
+genshin-impact-knights-of-favonius;Knights of Favonius;2020;76;;genshin-impact;2;3;0;0;0;0;35;0;;;ost;0;;1
 genshin-impact-angels-share;Angel's Share;2020;114;;genshin-impact;2;4;0;0;0;0;60;0;;;ost;0;;1
+genshin-impact-perilous-path;Perilous Path;2020;140;;genshin-impact;3;2;0;0;0;0;35;0;;;ost;0;;1
+genshin-impact-a-familiar-sight-and-leisure;A Familiar Sight and Leisure;2020;68;;genshin-impact;1;3;0;0;0;0;35;0;;;ost;0;;1
 genshin-impact-cold-night;Cold Night;2020;68;;genshin-impact;1;3;0;0;0;0;40;0;;;ost;0;;1
 genshin-impact-whispering-plain;Whispering Plain;2020;70;;genshin-impact;1;3;0;0;0;0;40;0;;;ost;0;;1
+genshin-impact-statue-of-the-seven;Statue of The Seven;2020;85;;genshin-impact;1;3;0;0;0;0;35;0;;;ost;0;;1
+genshin-impact-stealing-words-of-the-moon;Stealing Words of the Moon;2020;85;;genshin-impact;1;3;0;0;0;0;35;0;;;ost;0;;1
 genshin-impact-wayfarers-peace;Wayfarer's Peace;2020;88;;genshin-impact;1;3;0;0;0;0;45;0;;;ost;0;;1
+genshin-impact-wind-washed-mountains;Wind-Washed Mountains;2020;41;;genshin-impact;1;3;0;0;0;0;35;0;;;ost;0;;1
+genshin-impact-the-horizon;The Horizon;2020;73;;genshin-impact;1;3;0;0;0;0;35;0;;;ost;0;;1
+genshin-impact-awaiting-the-future;Awaiting the Future;2020;86;;genshin-impact;1;3;0;0;0;0;35;0;;;ost;0;;1
 genshin-impact-moonlit-wilderness;Moonlit Wilderness;2020;77;;genshin-impact;1;3;0;0;0;0;40;0;;;ost;0;;1
 genshin-impact-a-new-day-with-hope;A New Day with Hope;2020;104;;genshin-impact;1;4;0;0;0;0;45;0;;;ost;0;;1
+genshin-impact-midday-prospects;Midday Prospects;2020;99;;genshin-impact;1;4;0;0;0;0;35;0;;;ost;0;;1
 genshin-impact-photon-of-fluctuation;Photon of Fluctuation;2020;195;;genshin-impact;4;3;0;0;0;0;40;0;;;ost;0;;0
 genshin-impact-his-resolution;His Resolution;2020;284;;genshin-impact;5;2;0;0;0;0;40;0;;;ost;0;;0
 genshin-impact-rhythm-from-ancient-times;Rhythm from Ancient Times;2020;221;;genshin-impact;4;3;0;0;0;0;40;0;;;ost;0;;0
+genshin-impact-endless-echoes;Endless Echoes;2020;253;;genshin-impact;4;3;0;0;0;0;35;0;;;ost;0;;0
 genshin-impact-charge-fearless-warriors;Charge! Fearless Warriors;2020;239;;genshin-impact;5;4;0;0;0;0;40;0;;;ost;0;;0
+genshin-impact-beats-of-water-drops;Beats of Water Drops;2020;244;;genshin-impact;4;3;0;0;0;0;35;0;;;ost;0;;0
 genshin-impact-against-all-odds;Against All Odds;2020;322;;genshin-impact;5;2;0;0;0;0;45;0;;;ost;0;;0
+genshin-impact-perpetual-motion-of-wind;Perpetual Motion of Wind;2020;213;;genshin-impact;4;3;0;0;0;0;35;0;;;ost;0;;0
 genshin-impact-symphony-of-boreal-wind;Symphony of Boreal Wind;2020;291;;genshin-impact;4;3;0;0;0;0;40;0;;;ost;0;;0
 genshin-impact-liyue;Liyue;2020;277;;genshin-impact;2;4;0;0;0;0;70;1;;;ost;0;;1
 genshin-impact-moon-in-ones-cup;Moon in One's Cup;2020;118;;genshin-impact;1;3;0;0;0;0;45;0;;;ost;0;;1
 genshin-impact-relaxation-in-liyue;Relaxation in Liyue;2020;68;;genshin-impact;1;4;0;0;0;0;45;0;;;ost;0;;1
+genshin-impact-maidens-longing;Maiden's Longing;2020;79;;genshin-impact;1;3;0;0;0;0;35;0;;;ost;0;;1
+genshin-impact-sun-rises-in-liyue;Sun Rises in Liyue;2020;103;;genshin-impact;2;4;0;0;0;0;35;0;;;ost;0;;1
 genshin-impact-good-night-liyue;Good Night, Liyue;2020;89;;genshin-impact;1;3;0;0;0;0;45;0;;;ost;0;;1
+genshin-impact-clear-sky-over-liyue;Clear Sky over Liyue;2020;83;;genshin-impact;1;4;0;0;0;0;35;0;;;ost;0;;1
+genshin-impact-treasury-from-the-northland;Treasury from the Northland;2020;78;;genshin-impact;1;4;0;0;0;0;35;0;;;ost;0;;1
 genshin-impact-sojourners-sweet-dream-wangshu-night;Sojourner's Sweet Dream (Wangshu Night);2020;97;;genshin-impact;1;3;0;0;0;0;45;0;;;ost;0;;1
 genshin-impact-winding-river;Winding River;2020;64;;genshin-impact;1;3;0;0;0;0;40;0;;;ost;0;;1
+genshin-impact-rhythm-amidst-the-reeds;Rhythm Amidst the Reeds;2020;61;;genshin-impact;1;3;0;0;0;0;35;0;;;ost;0;;1
 genshin-impact-blossoms-across-the-valley;Blossoms Across the Valley;2020;69;;genshin-impact;1;4;0;0;0;0;40;0;;;ost;0;;1
+genshin-impact-flow-of-mildness;Flow of Mildness;2020;80;;genshin-impact;1;3;0;0;0;0;35;0;;;ost;0;;1
 genshin-impact-gentle-rain;Gentle Rain;2020;60;;genshin-impact;1;3;0;0;0;0;45;0;;;ost;0;;1
+genshin-impact-joy-of-returning;Joy of Returning;2020;73;;genshin-impact;1;4;0;0;0;0;35;0;;;ost;0;;1
 genshin-impact-plain-of-nostalgia;Plain of Nostalgia;2020;80;;genshin-impact;1;3;0;0;0;0;40;0;;;ost;0;;1
+genshin-impact-another-hopeful-tomorrow;Another Hopeful Tomorrow;2020;86;;genshin-impact;1;4;0;0;0;0;35;0;;;ost;0;;1
 genshin-impact-hazy-light;Hazy Light;2020;145;;genshin-impact;1;2;0;0;0;0;40;0;;;ost;0;;1
 genshin-impact-peaceful-hike-qingce-daytime;Peaceful Hike (Qingce Daytime);2020;131;;genshin-impact;1;3;0;0;0;0;45;0;;;ost;0;;1
 genshin-impact-the-fading-stories-qingce-night;The Fading Stories (Qingce Night);2020;130;;genshin-impact;1;2;0;0;0;0;45;0;;;ost;0;;1
+genshin-impact-idle-away-from-mountains;Idle Away from Mountains;2020;75;;genshin-impact;1;3;0;0;0;0;35;0;;;ost;0;;1
 genshin-impact-above-the-sea-of-clouds;Above the Sea of Clouds;2020;58;;genshin-impact;1;3;0;0;0;0;40;0;;;ost;0;;1
 genshin-impact-freedom-of-crane;Freedom of Crane;2020;83;;genshin-impact;1;3;0;0;0;0;40;0;;;ost;0;;1
+genshin-impact-rays-of-sunlight;Rays of Sunlight;2020;80;;genshin-impact;1;3;0;0;0;0;35;0;;;ost;0;;1
 genshin-impact-spring-in-clouds;Spring in Clouds;2020;112;;genshin-impact;1;3;0;0;0;0;40;0;;;ost;0;;1
 genshin-impact-adeptus-solace;Adeptus' Solace;2020;108;;genshin-impact;1;3;0;0;0;0;40;0;;;ost;0;;1
+genshin-impact-emerging-clouds;Emerging Clouds;2020;74;;genshin-impact;1;3;0;0;0;0;35;0;;;ost;0;;1
 genshin-impact-secluded-sanctuary;Secluded Sanctuary;2020;94;;genshin-impact;1;3;0;0;0;0;40;0;;;ost;0;;1
+genshin-impact-flickering-petals;Flickering Petals;2020;85;;genshin-impact;1;3;0;0;0;0;35;0;;;ost;0;;1
 honkai-star-rail-star-rail-main-theme-login-menu-bgm;Star Rail · Main Theme (Login Menu BGM);2023;197;;honkai-star-rail;3;4;0;0;0;0;70;1;;;ost;0;;1
 honkai-star-rail-herta-space-station-base-zone-prologue;Herta Space Station · Base Zone (Prologue);2023;124;;honkai-star-rail;2;3;0;0;0;0;45;0;;;ost;0;;1
 honkai-star-rail-herta-space-station-battle-theme-1-prologue;Herta Space Station · Battle Theme 1 (Prologue);2023;84;;honkai-star-rail;4;4;0;0;0;0;50;0;;;ost;0;;0
