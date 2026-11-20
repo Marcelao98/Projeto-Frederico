@@ -1,4 +1,5 @@
 id;nome;tipo;ano;apelidos
+amnesia-the-dark-descent;Amnesia: The Dark Descent;jogo;2010;amnesia
 animal-crossing-new-horizons;Animal Crossing: New Horizons;jogo;2020;animal crossing
 baldurs-gate-3;Baldur's Gate 3;jogo;2023;baldurs gate|bg3
 bastion;Bastion;jogo;2011;bastion
@@ -73,11 +74,14 @@ persona-5;Persona 5;jogo;2016;persona
 pillars-of-eternity;Pillars of Eternity;jogo;2015;pillars
 pokemon;Pokémon;jogo;;pokemon
 pyre;Pyre;jogo;2017;pyre
+resident-evil-4;Resident Evil 4;jogo;2005;resident evil
 return-of-the-obra-dinn;Return of the Obra Dinn;jogo;2018;obra dinn
 sea-of-stars;Sea of Stars;jogo;2023;sea of stars
 secret-of-mana;Secret of Mana;jogo;1993;mana
 sekiro;Sekiro: Shadows Die Twice;jogo;2019;sekiro|souls
 shovel-knight;Shovel Knight;jogo;2014;shovel knight
+silent-hill;Silent Hill;jogo;1999;silent hill
+silent-hill-2;Silent Hill 2;jogo;2001;silent hill
 skyrim;The Elder Scrolls V: Skyrim;jogo;2011;skyrim|elder scrolls
 slay-the-spire;Slay the Spire;jogo;2019;slay the spire
 spectral-sails;Spectral Sails;jogo;;
