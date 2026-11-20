@@ -1,4 +1,5 @@
 id;nome;tipo;ano;apelidos
+age-of-empires-2;Age of Empires II;jogo;1999;age of empires
 alan-wake-2;Alan Wake 2;jogo;2023;alan wake
 amnesia-the-dark-descent;Amnesia: The Dark Descent;jogo;2010;amnesia
 animal-crossing-new-horizons;Animal Crossing: New Horizons;jogo;2020;animal crossing
@@ -43,6 +44,7 @@ final-fantasy-xiv;Final Fantasy XIV;jogo;2013;final fantasy|ff14
 final-fantasy-xvi;Final Fantasy XVI;jogo;2023;final fantasy|ff16
 fire-emblem-path-of-radiance;Fire Emblem: Path of Radiance;jogo;2005;fire emblem
 fire-emblem-three-houses;Fire Emblem: Three Houses;jogo;2019;fire emblem|fe3h|three houses|fe 3 houses
+frostpunk;Frostpunk;jogo;2018;frostpunk
 ghibli-chihiro;A Viagem de Chihiro;filme;2001;ghibli|chihiro|spirited away
 ghibli-o-reino-dos-gatos;O Reino dos Gatos;filme;2002;ghibli
 ghibli-vidas-ao-vento;Vidas ao Vento;filme;2013;ghibli|vidas ao vento
@@ -51,6 +53,7 @@ gris;GRIS;jogo;2018;gris
 guild-wars-2;Guild Wars 2;jogo;2012;guild wars
 hades;Hades;jogo;2020;hades
 hades-2;Hades II;jogo;2025;hades
+heroes-of-might-and-magic-3;Heroes of Might and Magic III;jogo;1999;heroes|homm3
 hollow-knight;Hollow Knight;jogo;2017;
 hollow-knight-silksong;Hollow Knight: Silksong;jogo;2025;silksong
 inscryption;Inscryption;jogo;2021;inscryption
@@ -95,6 +98,7 @@ skyrim;The Elder Scrolls V: Skyrim;jogo;2011;skyrim|elder scrolls
 slay-the-spire;Slay the Spire;jogo;2019;slay the spire
 spectral-sails;Spectral Sails;jogo;;
 spiritfarer;Spiritfarer;jogo;2020;spiritfarer
+starcraft-2;StarCraft II;jogo;2010;starcraft
 stardew-valley;Stardew Valley;jogo;2016;stardew
 super-mario-galaxy;Super Mario Galaxy;jogo;2007;mario
 tales-of-symphonia;Tales of Symphonia;jogo;2003;tales of
@@ -107,6 +111,7 @@ transistor;Transistor;jogo;2014;transistor
 tunic;Tunic;jogo;2022;tunic
 umineko;Umineko no Naku Koro ni;visual novel;2007;umineko|umineko no naku
 undertale;Undertale;jogo;2015;undertale
+warcraft-3;Warcraft III;jogo;2002;warcraft
 witcher-3;The Witcher 3: Wild Hunt;jogo;2015;witcher|witcher 3
 world-of-warcraft;World of Warcraft;jogo;2004;wow|warcraft
 wow-wrath-of-the-lich-king;World of Warcraft: Wrath of the Lich King;jogo;2008;wow|warcraft|lich king
