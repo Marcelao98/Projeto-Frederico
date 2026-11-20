@@ -1,5 +1,5 @@
 id;nome;tipo;ano;apelidos
-adrian-von-ziegler;Adrian von Ziegler;álbum;;celta|medieval|fantasia
+adrian-von-ziegler;Adrian von Ziegler;álbum;2011;celta|medieval|fantasia
 age-of-empires-2;Age of Empires II;jogo;1999;age of empires
 alan-wake-2;Alan Wake 2;jogo;2023;alan wake
 amnesia-the-dark-descent;Amnesia: The Dark Descent;jogo;2010;amnesia
@@ -53,7 +53,11 @@ fire-emblem-three-houses;Fire Emblem: Three Houses;jogo;2019;fire emblem|fe3h|th
 frostpunk;Frostpunk;jogo;2018;frostpunk
 genshin-impact;Genshin Impact;jogo;2020;genshin
 ghibli-chihiro;A Viagem de Chihiro;filme;2001;ghibli|chihiro|spirited away
+ghibli-kiki;O Serviço de Entregas da Kiki;filme;1989;ghibli|kiki
+ghibli-laputa;O Castelo no Céu;filme;1986;ghibli|laputa|castle in the sky
+ghibli-nausicaa;Nausicaä do Vale do Vento;filme;1984;ghibli|nausicaa
 ghibli-o-reino-dos-gatos;O Reino dos Gatos;filme;2002;ghibli
+ghibli-porco-rosso;Porco Rosso;filme;1992;ghibli|porco rosso
 ghibli-vidas-ao-vento;Vidas ao Vento;filme;2013;ghibli|vidas ao vento
 ghost-of-tsushima;Ghost of Tsushima;jogo;2020;ghost of tsushima
 god-of-war;God of War;jogo;2018;god of war
