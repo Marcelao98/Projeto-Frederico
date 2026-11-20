@@ -24,9 +24,9 @@ ordem;titulo;link;duracao;canal;oficial;fora;uso;cenarios;climas;energia;animaca
 23;The First Hunter;https://www.youtube.com/watch?v=IDS95r99JRM;312;Ninjabox;0;0;rpg-chefe|rpg-final;campo|noite;melancolico|dramatico|epico;4;2;1;0;orquestra|coral|cordas;;90;1;Gehrman
 24;Moon Presence;https://www.youtube.com/watch?v=66vffqcIqGU;165;Ninjabox;0;0;rpg-chefe|rpg-final;campo|noite;estranho|assustador|sombrio;4;1;1;0;coral|orquestra;;55;0;
 25;Bloodborne (Credits Theme);https://www.youtube.com/watch?v=oWsloPyze6E;159;Ninjabox;0;0;rpg-final;noite;melancolico|triste|contemplativo;1;2;0;1;cordas|piano;ler|relaxar;50;0;créditos
-26;Ludwig, the Holy Blade;https://www.youtube.com/watch?v=oTBi7aHWMbw;249;Ninjabox;0;0;rpg-chefe;templo|noite;epico|heroico|dramatico;5;2;1;0;orquestra|coral;;90;1;DLC
-27;Laurence, the First Vicar;https://www.youtube.com/watch?v=MNjf4EeXGtc;298;Ninjabox;0;0;rpg-chefe;templo|vulcao;epico|sombrio|agressivo;5;2;1;0;orquestra|coral;;65;0;DLC
-28;Living Failures;https://www.youtube.com/watch?v=MwwaMD8BaCo;235;Ninjabox;0;0;rpg-chefe;ruinas|noite;tenso|estranho|assustador;4;1;1;0;orquestra|coral;;55;0;DLC
-29;Lady Maria of the Astral Clocktower;https://www.youtube.com/watch?v=bpVkn3Lv0v0;288;Ninjabox;0;0;rpg-chefe;castelo|noite;dramatico|melancolico|epico;5;2;1;0;orquestra|coral|cordas;;85;0;DLC
-30;Orphan of Kos;https://www.youtube.com/watch?v=EsCANuDgtmw;262;Ninjabox;0;0;rpg-chefe;mar|noite;assustador|agressivo|epico;5;1;1;0;orquestra|coral;;85;0;DLC
+26;Ludwig, the Holy Blade;https://www.youtube.com/watch?v=oTBi7aHWMbw;249;Ninjabox;0;1;;;;;;0;0;;;;0;fica no Old Hunters (DLC)
+27;Laurence, the First Vicar;https://www.youtube.com/watch?v=MNjf4EeXGtc;298;Ninjabox;0;1;;;;;;0;0;;;;0;fica no Old Hunters (DLC)
+28;Living Failures;https://www.youtube.com/watch?v=MwwaMD8BaCo;235;Ninjabox;0;1;;;;;;0;0;;;;0;fica no Old Hunters (DLC)
+29;Lady Maria of the Astral Clocktower;https://www.youtube.com/watch?v=bpVkn3Lv0v0;288;Ninjabox;0;1;;;;;;0;0;;;;0;fica no Old Hunters (DLC)
+30;Orphan of Kos;https://www.youtube.com/watch?v=EsCANuDgtmw;262;Ninjabox;0;1;;;;;;0;0;;;;0;fica no Old Hunters (DLC)
 31;False God's Hymn;https://www.youtube.com/watch?v=BKxSUfmXyOE;69;Ninjabox;0;1;;;;;;;;;;;;

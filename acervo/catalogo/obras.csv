@@ -1,9 +1,11 @@
 id;nome;tipo;ano;apelidos
+alan-wake-2;Alan Wake 2;jogo;2023;alan wake
 amnesia-the-dark-descent;Amnesia: The Dark Descent;jogo;2010;amnesia
 animal-crossing-new-horizons;Animal Crossing: New Horizons;jogo;2020;animal crossing
 baldurs-gate-3;Baldur's Gate 3;jogo;2023;baldurs gate|bg3
 bastion;Bastion;jogo;2011;bastion
 bloodborne;Bloodborne;jogo;2015;souls
+bloodborne-the-old-hunters;Bloodborne: The Old Hunters;jogo;2015;souls
 celeste;Celeste;jogo;2018;celeste
 chrono-cross;Chrono Cross;jogo;1999;chrono
 chrono-trigger;Chrono Trigger;jogo;1995;chrono
@@ -14,6 +16,7 @@ dark-souls-3;Dark Souls III;jogo;2016;dark souls 3|souls
 darkest-dungeon;Darkest Dungeon;jogo;2016;darkest dungeon
 darkest-dungeon-2;Darkest Dungeon II;jogo;2023;darkest dungeon
 dead-cells;Dead Cells;jogo;2018;dead cells
+dead-space;Dead Space;jogo;2008;dead space
 deltarune;Deltarune;jogo;2018;deltarune
 demons-souls;Demon's Souls;jogo;2020;demons souls|souls
 diablo-2;Diablo II;jogo;2000;diablo
@@ -25,6 +28,7 @@ dragon-age-inquisition;Dragon Age: Inquisition;jogo;2014;dragon age
 dragon-age-origins;Dragon Age: Origins;jogo;2009;dragon age
 dragon-quest-xi;Dragon Quest XI;jogo;2017;dragon quest
 dragons-dogma-2;Dragon's Dogma 2;jogo;2024;dragons dogma
+dredge;Dredge;jogo;2023;dredge
 earthbound;EarthBound;jogo;1994;earthbound|mother
 elden-ring;Elden Ring;jogo;2022;souls
 elden-ring-shadow-of-the-erdtree;Elden Ring: Shadow of the Erdtree;jogo;2024;shadow of the erdtree|souls
@@ -75,11 +79,13 @@ pillars-of-eternity;Pillars of Eternity;jogo;2015;pillars
 pokemon;Pokémon;jogo;;pokemon
 pyre;Pyre;jogo;2017;pyre
 resident-evil-4;Resident Evil 4;jogo;2005;resident evil
+resident-evil-village;Resident Evil Village;jogo;2021;resident evil
 return-of-the-obra-dinn;Return of the Obra Dinn;jogo;2018;obra dinn
 sea-of-stars;Sea of Stars;jogo;2023;sea of stars
 secret-of-mana;Secret of Mana;jogo;1993;mana
 sekiro;Sekiro: Shadows Die Twice;jogo;2019;sekiro|souls
 shovel-knight;Shovel Knight;jogo;2014;shovel knight
+signalis;Signalis;jogo;2022;signalis
 silent-hill;Silent Hill;jogo;1999;silent hill
 silent-hill-2;Silent Hill 2;jogo;2001;silent hill
 skyrim;The Elder Scrolls V: Skyrim;jogo;2011;skyrim|elder scrolls
