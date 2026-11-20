@@ -166,5 +166,20 @@ class TestReprodutorMesa(unittest.TestCase):
         self.assertEqual(r.mesa.ler(), SILENCIO)
 
 
+class TestAmbienteDoFfmpeg(unittest.TestCase):
+    """Empacotado, o FFmpeg não pode herdar as bibliotecas do pacote (não tocava nada)."""
+
+    def test_volta_o_ld_library_path_de_antes(self):
+        from freddy.audio.fontes.ffmpeg import ambiente_do_sistema
+        amb = ambiente_do_sistema({"LD_LIBRARY_PATH": "/tmp/_MEI123", "LD_LIBRARY_PATH_ORIG": "/opt/lib", "PATH": "/bin"})
+        self.assertEqual(amb["LD_LIBRARY_PATH"], "/opt/lib")
+        self.assertNotIn("LD_LIBRARY_PATH_ORIG", amb)
+        self.assertEqual(amb["PATH"], "/bin")
+
+    def test_fora_do_pacote_nao_mexe(self):
+        from freddy.audio.fontes.ffmpeg import ambiente_do_sistema
+        self.assertEqual(ambiente_do_sistema({"LD_LIBRARY_PATH": "/opt/lib"}), {"LD_LIBRARY_PATH": "/opt/lib"})
+
+
 if __name__ == "__main__":
     unittest.main()

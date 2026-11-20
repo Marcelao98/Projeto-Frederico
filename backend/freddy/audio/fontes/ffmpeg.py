@@ -7,6 +7,7 @@ da música = abrir outra fonte com `inicio` (o -ss do FFmpeg).
 
 from __future__ import annotations
 
+import os
 import queue
 import subprocess
 import sys
@@ -31,6 +32,23 @@ def comando_ffmpeg(url: str, http_headers: dict[str, str] | None = None, inicio:
     return cmd
 
 
+def ambiente_do_sistema(ambiente: dict[str, str] | None = None) -> dict[str, str]:
+    """O ambiente pra chamar um programa do sistema (o FFmpeg).
+
+    Empacotado (PyInstaller), o Freddy põe a pasta das bibliotecas dele no
+    LD_LIBRARY_PATH; o FFmpeg do Linux herdava isso, carregava a libssl e a
+    libstdc++ velhas do pacote e morria ("version OPENSSL_3.2.0 not found"):
+    nenhuma música tocava. Aqui volta o valor de antes (o PyInstaller guarda
+    em LD_LIBRARY_PATH_ORIG) ou tira a variável.
+    """
+    amb = dict(os.environ if ambiente is None else ambiente)
+    if "LD_LIBRARY_PATH_ORIG" in amb:
+        amb["LD_LIBRARY_PATH"] = amb.pop("LD_LIBRARY_PATH_ORIG")
+    elif getattr(sys, "frozen", False):
+        amb.pop("LD_LIBRARY_PATH", None)
+    return amb
+
+
 class FonteFfmpeg:
     def __init__(self, url: str, http_headers: dict[str, str] | None = None, inicio: float = 0.0, ffmpeg: str = "ffmpeg"):
         self.cmd = comando_ffmpeg(url, http_headers, inicio, ffmpeg)
@@ -46,7 +64,8 @@ class FonteFfmpeg:
         extras = {}
         if sys.platform == "win32":
             extras["creationflags"] = subprocess.CREATE_NO_WINDOW  # sem janela preta piscando
-        self._proc = subprocess.Popen(self.cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.DEVNULL, **extras)
+        self._proc = subprocess.Popen(self.cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.DEVNULL,
+                                      env=ambiente_do_sistema(), **extras)
         threading.Thread(target=self._ler_saida, name="ffmpeg-saida", daemon=True).start()
         threading.Thread(target=self._ler_erros, name="ffmpeg-erros", daemon=True).start()
 
