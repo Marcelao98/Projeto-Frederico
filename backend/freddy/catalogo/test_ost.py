@@ -91,6 +91,17 @@ class TestMarcarEImportar(unittest.TestCase):
         self.assertIn({"musica": g["id"], "genero": "trilha-de-jogo", "peso": "1.0"}, d["musica_genero"])
         self.assertTrue(any(o["id"] == "jogo-teste" for o in d["obras"]))
 
+    def test_importar_de_novo_mantem_a_conferencia_dos_links(self):
+        ost.importar(self.cat, self.ost)
+        caminho = self.cat / "fontes.csv"
+        fontes = ost.ler(caminho)
+        alvo = next(f for f in fontes if f["musica"].startswith("jogo-teste"))
+        alvo["viva"], alvo["conferida_em"] = "0", "2026-11-20"
+        ost.gravar(caminho, list(fontes[0].keys()), fontes)
+        ost.importar(self.cat, self.ost)
+        depois = next(f for f in ost.ler(caminho) if f["endereco"] == alvo["endereco"])
+        self.assertEqual((depois["viva"], depois["conferida_em"]), ("0", "2026-11-20"))
+
 
 if __name__ == "__main__":
     unittest.main()

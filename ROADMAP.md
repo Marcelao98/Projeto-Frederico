@@ -18,7 +18,7 @@ Atualizado em 07/11/2026 (v0.6.0).
 | **Bot do Discord do Freddy** | ✅ toca na call desde a v0.5.2 (DAVE resolvido) |
 | **Mixer, microfone virtual, soundboard** | ⬜ só planejado (telas "em breve" no painel) |
 
-## Onde paramos (17/11/2026)
+## Onde paramos (20/11/2026)
 
 - **v0.7.0** (17/11/2026): o catálogo novo (5.681 músicas) ligado no app. Tudo no `main`.
 - ✅ **O branch principal do GitHub é o `main`** (o Marcelo trocou em 08/11).
@@ -71,12 +71,25 @@ Atualizado em 07/11/2026 (v0.6.0).
     os ajustes do mestre (`ajustes.json`) não valem pro catálogo; composição × gravação,
     efeitos/ambientes e histórico não existem ainda.
   - **Próximo:** resolvedor por `faixaId` + playlists pelo catálogo, depois a B2 (base do som).
-- **Etapa OST em andamento (18/11/2026): +5 mil instrumentais** (jogo, anime, filme,
-  Ghibli) pra RPG e dia a dia. Pedido e regras: **`docs/etapas/catalogo-ost.md`**.
-  Pronto: vocabulário novo, coluna `estavel`, `backend/scripts/catalogo_ost.py`
-  (extrai faixas REAIS das playlists, marca, importa, confere links), 195 obras em
-  `acervo/catalogo/ost/obras.csv`, Chihiro classificada como exemplo, testes.
-  Falta: extrair e classificar o resto (vai pelo Claude local do Marcelo).
+- ✅ **Etapa OST feita (20/11/2026): 5.005 instrumentais** (4.445 de trilhas de jogo,
+  anime, filme, Ghibli e compositores de ambiente + as 560 do RPG antigo). Pedido e
+  regras: **`docs/etapas/catalogo-ost.md`**. As 196 obras estão extraídas e classificadas
+  (`acervo/catalogo/ost/faixas/`), importadas no catálogo; compilação OK, pedidos de ouro
+  OK. Todos os 10.056 links conferidos com `links`: as 49 faixas de OST com vídeo caído
+  ou sem incorporação ficaram de fora (`fora=1`, motivo na nota).
+  - **Playlists trocadas** (a achada era de outra coisa): FF VII, Xenoblade 1, Octopath 1
+    e 2, Fallout NV, DKC, Undertale (era o Yellow), Hades, God of War, AoE II, Totoro,
+    Mononoke, Terramar, Arrietty, Marnie, Piratas, Interestelar; e as que não tinham
+    (Vidas ao Vento, Reino dos Gatos, Witcher série, Audiomachine).
+  - **Pra o Marcelo conferir:** (1) *Sussurros do Coração* continua com playlist errada
+    (pop): 0 faixas; (2) Mass Effect, Metroid Prime e Slay the Spire usam a trilha de
+    outro jogo da série (anotado na nota de cada faixa); RE4 é o Remake; (3) as 9 obras
+    de compositor (álbum) ganharam ano aproximado no `obras.csv` (nota "conferir");
+    (4) pedidos de ouro `r05` e `r32`: "fire emblem" e "nier" agora valem pra série;
+    (5) tirado o apelido `taverna` do Fiechter (puxava a obra inteira); (6) os
+    compositores de ambiente (Fiechter, Adrian, OSRS, GW2, Genshin, WoW, Civ VI…)
+    passaram de 1,2× a meta pra fechar 5.000 (a soma das metas dava ~4.830).
+  - Corrigido no `importar`: refazer o lote não apaga mais o resultado do `links`.
 - **Próxima depois das trilhas: modo Explorar** (navegar sem digitar: prateleiras
   por uso, como estudar, ler, dormir e as cenas de RPG; filtros de voz, estável,
   energia, clima, cenário; coleções por obra, gênero e época; cenas fixas da

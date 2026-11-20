@@ -241,6 +241,9 @@ def importar(pasta_cat: Path, pasta_ost: Path = PASTA_OST) -> Importacao:
     t = {n: ler(pasta_cat / f"{n}.csv") for n in nomes}
     cab = {n: list(t[n][0].keys()) for n in nomes}
     velhas = {m["id"] for m in t["musicas"] if m["lote"] == LOTE}
+    # O 'links' já conferiu esses vídeos: refazer o lote não pode apagar isso.
+    conferidas = {(f["musica"], f["endereco"]): (f["viva"], f["conferida_em"])
+                  for f in t["fontes"] if f["musica"] in velhas and f.get("conferida_em")}
     for n in ("musica_artista", "musica_genero", "musica_tag", "fontes"):
         t[n] = [l for l in t[n] if l["musica"] not in velhas]
     t["musicas"] = [m for m in t["musicas"] if m["lote"] != LOTE]
@@ -302,8 +305,9 @@ def importar(pasta_cat: Path, pasta_ost: Path = PASTA_OST) -> Importacao:
                     marcas.setdefault(x, "0.9")
             t["musica_tag"] += [{"musica": mid, "tag": tg, "peso": p, "quem_marcou": "claude"}
                                 for tg, p in marcas.items()]
+            viva, quando = conferidas.get((mid, f["link"]), ("1", ""))
             t["fontes"].append({"musica": mid, "tipo": "youtube", "endereco": f["link"],
-                                "oficial": f["oficial"] or "0", "viva": "1", "conferida_em": ""})
+                                "oficial": f["oficial"] or "0", "viva": viva, "conferida_em": quando})
             rel.entraram += 1
     t["obras"] = sorted(obras_cat.values(), key=lambda x: x["id"])
     t["artistas"] = sorted(artistas.values(), key=lambda x: x["id"])
